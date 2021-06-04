@@ -3,3 +3,4 @@
 _build
 **/*.pyc
 /Instructor_notes/01_Notes_From_DH_context.md
+/venv/*

@@ -1,5 +1,9 @@
 # DCC guides
-Here we document things we need to know how to do or be aware of. The content can potentially be shared with other colleagues and community members.
+Here we document things we need to know how to do or be aware of. The content can potentially be shared with other colleagues and community members. 
+
+## The Audience
+
+TU Delft Research community (researchers, and support staff working closeley with researcher, data stewards, data manager, RSEs, etc.)
 
 ## Contribute
 ### Reproducing the repository locally
