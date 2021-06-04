@@ -17,5 +17,7 @@ jupyter-book build ${REPO}
 
 # Launch static website
 cd ${REPO}/_build/html
+
+# This works only in windows!
 # start index.html
 # echo "Opened static website in browser"
