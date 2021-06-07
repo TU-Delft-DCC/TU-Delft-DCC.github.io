@@ -1,19 +1,21 @@
-file: index
+file: README
 sections:
-- file: README
-- file: chapter
-- file: how-to/README
+- file: 02_Data/README
+- file: 03_Software/README
+- file: 01_Infrastructure /01_README
   sections:
-  - file: how-to/how-to1
-- file: linux-tips/README
+  - file: 01_Infrastructure /README
+  - file: 01_Infrastructure /host_key_verification_failed
+  - file: 01_Infrastructure /php_rhel8
+  - file: 01_Infrastructure /podman
+  - file: 01_Infrastructure /selinux
+  - file: 01_Infrastructure /ssh
+  - file: 01_Infrastructure /winscp
+- file: 01_how-to/README
   sections:
-  - file: linux-tips/host_key_verification_failed
-  - file: linux-tips/php_rhel8
-  - file: linux-tips/podman
-  - file: linux-tips/selinux
-  - file: linux-tips/ssh
-  - file: linux-tips/filetransfer/winscp
+  - file: 01_how-to/how-to1
 - file: explanation/README
   sections:
   - file: explanation/explanation1
   - file: explanation/explanation2
+- file: 04_DCC_support/README

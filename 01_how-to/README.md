@@ -1,6 +1,6 @@
-# How to Guides
+# Contributing to DCC guides
 
-## What to Include
+## What to Include in a "How to guide"
 Guides that take the reader thru the steps required to solve a ** speficic-common problem**. How to guides are problem oriented.
 
 For example:
