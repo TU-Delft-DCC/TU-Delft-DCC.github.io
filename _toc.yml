@@ -1,1 +1,14 @@
-file: README
+# Table of content
+- file: index
+
+- part: How to Guides
+  chapters:
+    - file: how-to/how-to1
+
+- part: Explanations
+  chapters:
+    - file: explanation/explanation1
+    - file: explanation/explanation2
+
+
+

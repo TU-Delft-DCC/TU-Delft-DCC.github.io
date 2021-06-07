@@ -1,6 +1,6 @@
 # in _config.yml
 title: "TU Delft DCC guides"
-logo: images/logo.png
+logo: img/logo.png
 author: TU Delft DCC
 execute:
   execute_notebooks: "off"
