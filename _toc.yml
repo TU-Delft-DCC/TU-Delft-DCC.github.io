@@ -1,21 +1,22 @@
-file: README
-sections:
-- file: 02_Data/README
-- file: 03_Software/README
+root: README
+entries:
+- file: 01_how-to/how-to1
+  entries:
+  - file: 01_how-to/README
 - file: 01_Infrastructure /01_README
-  sections:
-  - file: 01_Infrastructure /README
+  entries:
   - file: 01_Infrastructure /host_key_verification_failed
   - file: 01_Infrastructure /php_rhel8
   - file: 01_Infrastructure /podman
+  - file: 01_Infrastructure /README
   - file: 01_Infrastructure /selinux
   - file: 01_Infrastructure /ssh
   - file: 01_Infrastructure /winscp
-- file: 01_how-to/README
-  sections:
-  - file: 01_how-to/how-to1
-- file: explanation/README
-  sections:
-  - file: explanation/explanation1
-  - file: explanation/explanation2
+- file: 02_Data/README
+- file: 03_Software/README
 - file: 04_DCC_support/README
+- file: explanation/explanation1
+  entries:
+  - file: explanation/explanation2
+  - file: explanation/README
+
