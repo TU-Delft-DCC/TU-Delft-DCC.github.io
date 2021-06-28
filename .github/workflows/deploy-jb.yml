@@ -32,4 +32,5 @@ jobs:
       
       - name: publish to gh-pages
         run: |
+          cd docs
           bash publish.sh
