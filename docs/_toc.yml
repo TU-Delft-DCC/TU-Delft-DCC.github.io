@@ -1,8 +1,5 @@
 root: README
 entries:
-- file: 01_how-to/how-to1
-  entries:
-  - file: 01_how-to/README
 - file: 01_Infrastructure /01_README
   entries:
   - file: 01_Infrastructure /host_key_verification_failed
@@ -13,7 +10,13 @@ entries:
   - file: 01_Infrastructure /ssh
   - file: 01_Infrastructure /winscp
 - file: 02_Data/README
-- file: 03_Software/README
+- file: 03_Software/00_README
+  entries:
+  - file: 03_Software/01_Intro/0_README
+  - file: 03_Software/02_Project_Setup/0_Project_Setup
+  - file: 03_Software/03_Code_quality/README
+  - file: 03_Software/04_Documentation/README
+  - file: 03_Software/05_Reproducibility/README
 - file: 04_DCC_support/README
 - file: explanation/explanation1
   entries:
