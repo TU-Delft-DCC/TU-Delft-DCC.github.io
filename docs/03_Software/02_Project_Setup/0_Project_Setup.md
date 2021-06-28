@@ -1,4 +1,4 @@
-# Project Management
+# Software Management
 
 This section covers the following topics:
 * Setting up a folder structure
