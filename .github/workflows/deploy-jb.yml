@@ -27,6 +27,7 @@ jobs:
       
       - name: Build table of contents
         run: | 
+          cd docs
           bash build.sh
       
       - name: publish to gh-pages
