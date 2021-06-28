@@ -1,13 +1,16 @@
 # Research software guides
 ## About this guide
-This guide aims to give you a quick overview of research software concepts and best practices.
+This guide aims to give you a quick overview of research software concepts and best practices. After reading these materials you will be able to produce FAIR enough software in the context of your research.
+![Research software](../../img/rs_intro.jpg) 
 ## What is research software?
 > Research software engineering is the use of software engineering practices in research applications. The term was proposed in a research paper in 2010 in response to an empirical survey on tools used for software development in research projects. It started to be used in United Kingdom in 2012, when it was needed to define the type of software development needed in research. **This focuses on reproducibility, reusability, and accuracy of data analysis and applications created for research**. [Read more...](https://en.wikipedia.org/wiki/Research_software_engineering).
 
 > “Software that is used to generate, process or analyse results that you intend to appear in a publication [Read more...](https://zenodo.org/record/14809#.YNnss-gzZPY) 
 
-### Examples of research software results
-These are examples of what research software can be from simple to more complex projects:
+Think of it as software applied in research, in contrast to research applied in industrial or business applications.
+
+### Examples of research software outputs
+Research software projects can be simple or more complex:
 - A simple script or set of scripts where you show how an analysis is done.
 - A simple jupyter-notebook or series of jupyter notebooks where you deliver text, plots and code-snippets related to a research task or result.
 - Packages that you use in your research (Numpy, Pandas or your own custom package )
