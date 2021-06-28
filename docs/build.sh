@@ -4,11 +4,10 @@
 
 REPO=$(pwd)
 
-# cd ..
-echo "Changed directory to: $(pwd)" 
 if test -f "_toc.yml"; then
     rm "_toc.yml"
 fi
+
 # Build table of contents website
 jupyter-book toc from-project "${REPO}" > _toc.yml
 
@@ -17,3 +16,6 @@ if test -f "_build"; then
 fi
 # Build html
 jupyter-book build ${REPO}
+
+# Copy slides inside _build/html
+cp -R ../slides ./_build/html
