@@ -1,0 +1,33 @@
+# This worfklows builds a jupyter book and publishes it in the gh-pages branch
+
+name: Deploy website on push in master
+
+on: 
+  push:
+    branches: [ master ]
+  commit:
+    branches: master
+
+jobs:
+  build:
+    name: Deploy jupyter book
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/chekout@v2
+      - uses: actions/setup-python@v2
+        with: 
+          python-version: '3'
+          architecture: 'x64'
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install jupyter-book
+      
+      - name: Build table of contents
+        run: | 
+          bash build.sh
+      
+      - name: publish to gh-pages
+        run: |
+          bash publish.sh
