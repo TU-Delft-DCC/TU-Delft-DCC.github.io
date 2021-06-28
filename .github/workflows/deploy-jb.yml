@@ -12,8 +12,9 @@ jobs:
     name: Deploy jupyter book
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/chekout@v2
-      - uses: actions/setup-python@v2
+      - uses: actions/checkout@v2
+      - name: Setup Python
+        uses: actions/setup-python@v2
         with: 
           python-version: '3'
           architecture: 'x64'
