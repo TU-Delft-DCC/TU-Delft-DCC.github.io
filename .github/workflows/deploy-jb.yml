@@ -1,4 +1,5 @@
-# This worfklows builds a jupyter book and publishes it in the gh-pages branch
+# This worfklows builds a jupyter book in the cloud
+# and publishes it in the gh-pages branch automatically
 
 name: Deploy website on push in master
 
