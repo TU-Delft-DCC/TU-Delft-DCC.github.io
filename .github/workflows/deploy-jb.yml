@@ -5,8 +5,7 @@ name: Deploy website on push in master
 on: 
   push:
     branches: [ master ]
-  commit:
-    branches: master
+  
 
 jobs:
   build:
