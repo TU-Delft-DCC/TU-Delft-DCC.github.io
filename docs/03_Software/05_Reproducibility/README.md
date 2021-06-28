@@ -20,10 +20,10 @@ vembedr::embed_url("https://vimeo.com/464028630")
 ``` -->
 
 ### Slides
-<iframe src="../slides/slides_reproducibility.html#3" width="100%" height="400px">
+<iframe src="../../slides/slides_reproducibility.html#3" width="100%" height="400px">
 </iframe>
 <!-- ```{r}
-knitr::include_url("../slides/slides_reproducibility.html#3")
+knitr::include_url("../../slides/slides_reproducibility.html#3")
 ``` -->
 
 
@@ -79,10 +79,10 @@ vembedr::embed_url("https://vimeo.com/463947879")
 ``` -->
 
 ### Slides
-<iframe src="../slides/slides_reproducibility.html#7" width="100%" height="400px">
+<iframe src="../../slides/slides_reproducibility.html#7" width="100%" height="400px">
 </iframe>
 <!-- ```{r}
-knitr::include_url("../slides/slides_reproducibility.html#7")
+knitr::include_url("../../slides/slides_reproducibility.html#7")
 ``` -->
 
 ### Exercise (optional)

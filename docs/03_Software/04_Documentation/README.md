@@ -20,10 +20,10 @@ vembedr::embed_url("https://vimeo.com/463992354")
 ``` -->
 
 ### Slides
-<iframe src="../slides/slides_documentation.html#4" width="100%" height="400px">
+<iframe src="../../slides/slides_documentation.html#4" width="100%" height="400px">
 </iframe>
 <!-- ```{r}
-knitr::include_url("../slides/slides_documentation.html#4")
+knitr::include_url("../../slides/slides_documentation.html#4")
 ``` -->
 
 ### Exercise
@@ -46,10 +46,10 @@ vembedr::embed_url("https://vimeo.com/464027978")
 ``` -->
 
 ### Slides
-<iframe src="../slides/slides_documentation.html#16" width="100%" height="400px">
+<iframe src="../../slides/slides_documentation.html#16" width="100%" height="400px">
 </iframe>
 <!-- ```{r}
-knitr::include_url("../slides/slides_documentation.html#16")
+knitr::include_url("../../slides/slides_documentation.html#16")
 ``` -->
 
 
