@@ -1,19 +1,19 @@
 # Research software guides
 ## About this guide
 This guide aims to give you a quick overview of research software concepts and best practices.
-## What is research software and why should you care?
+## What is research software?
 > Research software engineering is the use of software engineering practices in research applications. The term was proposed in a research paper in 2010 in response to an empirical survey on tools used for software development in research projects. It started to be used in United Kingdom in 2012, when it was needed to define the type of software development needed in research. **This focuses on reproducibility, reusability, and accuracy of data analysis and applications created for research**. [Read more...](https://en.wikipedia.org/wiki/Research_software_engineering).
 
 > “Software that is used to generate, process or analyse results that you intend to appear in a publication [Read more...](https://zenodo.org/record/14809#.YNnss-gzZPY) 
 
-### Research software is software used or produced to do research by researchers and research software engineers
+### Examples of research software results
 These are examples of what research software can be from simple to more complex projects:
 - A simple script or set of scripts where you show how an analysis is done.
 - A simple jupyter-notebook or series of jupyter notebooks where you deliver text, plots and code-snippets related to a research task or result.
 - Packages that you use in your research (Numpy, Pandas or your own custom package )
 - Research infrastructure, tools and stacks(spyder, jupyter hub, jupyter notebooks, jupyter lab, docker, python, etc.)
 
-### There are several reasons why research software is relevant to researchers and research groups
+### Why should you care about research software?
 - Scientific software packages and tools allow researchers to make use of computing and data to ask new research questions and approach research from a computational standpoint.
 - The emergence of open source tools and the adoption of software best practices in all science domains have changed the way in which researchers collaborate and produce science.
 - Research software empowers researchers with tools, practices and culture.
