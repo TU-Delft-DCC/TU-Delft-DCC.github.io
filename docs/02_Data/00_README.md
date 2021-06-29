@@ -3,15 +3,9 @@
 This guide aims to give you a quick overview of research data management concepts and best practices. After reading these materials you will be able to produce FAIR enough data in the context of your research within TU Delft.
 ![Research software](../img/rd_intro.jpg) 
 
-<!-- ## Research data management explained
-- What is research data?
-- What is research data?
-- Why manage research data?
-- Research data lifecycle
-- Research data is any information that has been collected, observed, generated or created to validate original research findings. -->
 
 Although usually digital, research data also includes non-digital formats such as laboratory notebooks and diaries.
-# What is research data 
+## What is research data 
 Research data is any information that has been collected, observed, generated or created to validate original research findings.Although usually digital, research data also includes non-digital formats such as laboratory notebooks and diaries.
 
 ### Examples of research data

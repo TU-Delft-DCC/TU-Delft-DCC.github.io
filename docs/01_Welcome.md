@@ -1,16 +1,16 @@
-# Welcome
-Here we document things we need to know how to do or be aware of. The content can potentially be shared with other colleagues and community members. 
+# Welcome!
+The (TU Delft) DCC guides aims to provide a low threshold and comprehensive entrypoint to get yu started with Research Computing, Research Data and Research Software at TU Delft. 
 
-## The Audience
+**The guides are split into three main topics:**
+Computing, data and software
 
-TU Delft Research community (researchers, and support staff working closeley with researcher, data stewards, data manager, RSEs, etc.)
+**We also provide guidance on how to:**
+- [Get support from the DCC](./04_About/04_About_DCC.html#how-we-work-and-support-our-community)
+- [Participate and contribute to address issues you and other colleagues might have with regard to Computing, Data and Software]()
 
-## Contribute
-### Reproducing the repository locally
-- In order to reproduce this code you need to have [jupyter book](https://jupyterbook.org/intro.html) installed.
-- You can use jupyter cli to make changes, but we also provide some bash scripts make this step less tedious, in order to be able to use this scripts you need a unix shell as is written in bash.
-- Simply run `bash build-jb.sh`, this should automatically build a new table of contents and open the static website on your browser.
-- To publish easily run `bash publish.sh`
-
-### Making a change request
-- Simply open a branch from draft
+**Our mission is to provide hands on knowledge transfer, support and contributions that enable research with better data and software practices**.
+In order for us to help you and others we work towards more:
+- Openness
+- FAIR data
+- Open source research software
+- Collaboration and community driven progress

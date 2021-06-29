@@ -3,7 +3,7 @@ entries:
 - file: 01_Infrastructure /01_README
   entries:
   - file: 01_Infrastructure /02_Getting_started
-- file: 02_Data/README
+- file: 02_Data/00_README
   entries:
   - file: 02_Data/01_Intro/README
   - file: 02_Data/02_Data_Management_Planning/README
@@ -15,9 +15,6 @@ entries:
   - file: 03_Software/03_Code_quality/README
   - file: 03_Software/04_Documentation/README
   - file: 03_Software/05_Reproducibility/README
-- file: 04_DCC_support/README
-- file: explanation/explanation1
-  entries:
-  - file: explanation/explanation2
-  - file: explanation/README
+- file: 04_About/04_About_DCC
+- file: 05_Trainings/05_Trainings
 
