@@ -1,4 +1,4 @@
-# DCC guides
+# Welcome
 Here we document things we need to know how to do or be aware of. The content can potentially be shared with other colleagues and community members. 
 
 ## The Audience
