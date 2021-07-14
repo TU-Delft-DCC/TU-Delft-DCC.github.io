@@ -3,6 +3,7 @@ entries:
 - file: 01_Infrastructure /01_README
   entries:
   - file: 01_Infrastructure /02_Getting_started
+  - file: 01_Infrastructure /03_SSL_Certs
 - file: 02_Data/00_README
   entries:
   - file: 02_Data/01_Intro/README
