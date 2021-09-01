@@ -11,7 +11,7 @@ exclude_patterns: [ /images/**.*,./**/*.py, ./**/*.jpg, LICENSE.md ]
 
 # Information about where the book exists on the web
 repository:
-  url  : git@github.com:TU-Delft-DCC/TU-Delft-DCC.github.io.git
+  url  : TU-Delft-DCC/TU-Delft-DCC.github.io.git
 
 html:
   use_repository_button: true
