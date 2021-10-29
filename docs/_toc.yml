@@ -11,20 +11,20 @@ entries:
     - file: 01_Computing/02_Working_with_servers/04_GivingSudoPrivilege
     - file: 01_Computing/02_Working_with_servers/06_SSL_Certs
     - file: 01_Computing/02_Working_with_servers/07_ApacheWebServer
-- file: 02_Data/00_Getting_started
+- file: 02_Data/00_README
   entries:
-  - file: 02_Data/00_README
+  - file: 02_Data/01_Getting_started
   - file: 02_Data/01_Obtain
   - file: 02_Data/02_Scrub
   - file: 02_Data/03_Explore
   - file: 02_Data/04_Model
   - file: 02_Data/05_Interpret
   - file: 02_Data/Glossary
-  - file: 02_Data/03_Storage/01_ProjectDrive_request
+  - file: 02_Data/03_Storage/00_README
     entries:
+    - file: 02_Data/03_Storage/01_ProjectDrive_request
     - file: 02_Data/03_Storage/02_Sync_Unison
     - file: 02_Data/03_Storage/03_Mount_ProjectDrive
-    - file: 02_Data/03_Storage/README
 - file: 03_Software/00_README
   entries:
   - file: 03_Software/01_Intro/0_README
