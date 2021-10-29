@@ -4,16 +4,19 @@
 
 REPO=$(pwd)
 
-# if test -f "_toc.yml"; then
-#     rm -f "_toc.yml"
-# fi
+if test -f "_toc.yml"; then
+    rm -f "_toc.yml"
+fi
 
 # Build table of contents website
 jupyter-book toc from-project "${REPO}" > _toc.yml
 
-# if test -f "./_build"; then
-#     rm -r -f "./_build"
-# fi
+if test -f "./_build"; then
+    rm -r -f "./_build"
+fi
+
+mkdir _build/
+
 # Build html
 jupyter-book build ${REPO}
 
