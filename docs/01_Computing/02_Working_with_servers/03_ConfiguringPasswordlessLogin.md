@@ -1,3 +1,5 @@
+# Configuring passwordless login
+
 ## Background
 
 In general, when you ssh to your server, it asks you to enter your password. This process benefits symmetric encryption. There is another way to secure the access to the digital systems which is called asymmetric encryption. Let's elaborate each of those encryption methods. In the symmetric encryption, we use a key (or an algorithm or password) that can be used for both encryption and decryption of a message:

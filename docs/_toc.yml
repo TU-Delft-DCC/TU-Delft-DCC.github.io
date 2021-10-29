@@ -1,19 +1,39 @@
 root: 01_Welcome
 entries:
-- file: 01_Infrastructure /01_README
+- file: 01_Computing/01_README
   entries:
-  - file: 01_Infrastructure /02_Getting_started
-  - file: 01_Infrastructure /03_SSL_Certs
-- file: 02_Data/00_README
+  - file: 01_Computing/02_Getting_started
+  - file: 01_Computing/02_Working_with_servers/01_Servers
+    entries:
+    - file: 01_Computing/02_Working_with_servers/01_VPS_request
+    - file: 01_Computing/02_Working_with_servers/02_VPS_SSHconnect
+    - file: 01_Computing/02_Working_with_servers/03_ConfiguringPasswordlessLogin
+    - file: 01_Computing/02_Working_with_servers/04_GivingSudoPrivilege
+    - file: 01_Computing/02_Working_with_servers/06_SSL_Certs
+    - file: 01_Computing/02_Working_with_servers/07_ApacheWebServer
+- file: 02_Data/00_Getting_started
   entries:
-  - file: 02_Data/01_Intro/README
-  - file: 02_Data/02_Data_Management_Planning/README
-  - file: 02_Data/03_Storage/README
+  - file: 02_Data/00_README
+  - file: 02_Data/01_Obtain
+  - file: 02_Data/02_Scrub
+  - file: 02_Data/03_Explore
+  - file: 02_Data/04_Model
+  - file: 02_Data/05_Interpret
+  - file: 02_Data/Glossary
+  - file: 02_Data/03_Storage/01_ProjectDrive_request
+    entries:
+    - file: 02_Data/03_Storage/02_Sync_Unison
+    - file: 02_Data/03_Storage/03_Mount_ProjectDrive
+    - file: 02_Data/03_Storage/README
 - file: 03_Software/00_README
   entries:
   - file: 03_Software/01_Intro/0_README
   - file: 03_Software/02_Project_Setup/0_Project_Setup
-  - file: 03_Software/03_Code_quality/README
+    entries:
+    - file: 03_Software/02_Project_Setup/02_GitlabGroupArrangement
+  - file: 03_Software/03_Code_quality/01_CI_GitLab_Docker
+    entries:
+    - file: 03_Software/03_Code_quality/README
   - file: 03_Software/04_Documentation/README
   - file: 03_Software/05_Reproducibility/README
 - file: 04_About/04_About_DCC

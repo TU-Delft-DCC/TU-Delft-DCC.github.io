@@ -1,6 +1,10 @@
 # Research software guides
 ## About this guide
-This guide aims to give you a quick overview of research software concepts and best practices. After reading these materials you will be able to produce FAIR enough software in the context of your research.
+This guide aims to give you a quick overview of research software concepts and best practices. After reading these materials you will be able to produce FAIR enough software in the context of your research. 
+
+Bare in mind that even though data analysis involves scripting, and writing code, in the "Research data guides" we focus on the processes of working with data, while in these guides our focus will be on the quality of the scripts you right. Once you code regularly and in different projects, you will feel the need of managing your software as much as your data. Things like reusability, reproducibility and readability will become increasinly important to save you and others time.
+
+
 ![Research software](../img/rs_intro.jpg) 
 ## What is research software 
 > Research software engineering is the use of software engineering practices in research applications. The term was proposed in a research paper in 2010 in response to an empirical survey on tools used for software development in research projects. It started to be used in United Kingdom in 2012, when it was needed to define the type of software development needed in research. **This focuses on reproducibility, reusability, and accuracy of data analysis and applications created for research**. [Read more...](https://en.wikipedia.org/wiki/Research_software_engineering).
@@ -33,9 +37,9 @@ Research software projects can be simple or more complex:
 - Adopting best practices in your own research software projects enable you to be more productive, effective, get feedback fasterm, collaborate with others and refine your workflows with automation. 
 
 ### Who does research software?
-**Essentially researchers and/or RSEs.** 
+**Essentially researchers and/or RSEs, Data managers.** 
 
-### The 
+### The RSE role
 ```{note}
 The role of Research Software Engineers (RSEs) emerged within research groups where some members were doing mostly software development for the research group. In this context the need for more advanced support and setup of research infrastructure, adoption of best practices or dedicated development work is taken care by researchers that adopted a software development culture. Therefore a research software engineer has not only a technical background, but also a scientific and research culture. Bare in mind that there are also many researchers that have a software engineering and can also be doing intensive research software engineering. Another case could be that someone with a computer science background joins a research group and embeds into a knowledge domain for a period of time and contributes with this background to the research groups.
 ```

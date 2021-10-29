@@ -1,6 +1,6 @@
 # Research data guides
 ## About this guide
-This guide aims to give you a quick overview of research data management concepts and best practices. After reading these materials you will be able to produce FAIR enough data in the context of your research within TU Delft.
+This guide aims to give you a quick overview of research data management concepts and best practices. After reading these materials you will be able to understand how to better work with data and produce FAIR enough data in the context of your research within TU Delft.
 ![Research software](../img/rd_intro.jpg) 
 
 
