@@ -6,11 +6,14 @@ entries:
   - file: 01_Computing/02_Working_with_servers/01_Servers
     entries:
     - file: 01_Computing/02_Working_with_servers/01_VPS_request
-    - file: 01_Computing/02_Working_with_servers/02_VPS_SSHconnect
+    - file: 01_Computing/02_Working_with_servers/02_VPS_SSH
     - file: 01_Computing/02_Working_with_servers/03_ConfiguringPasswordlessLogin
     - file: 01_Computing/02_Working_with_servers/04_GivingSudoPrivilege
     - file: 01_Computing/02_Working_with_servers/06_SSL_Certs
     - file: 01_Computing/02_Working_with_servers/07_ApacheWebServer
+  - file: 01_Computing/03_Containerization/01_Containers
+    entries:
+    - file: 01_Computing/03_Containerization/02_podman
 - file: 02_Data/00_README
   entries:
   - file: 02_Data/01_Getting_started
@@ -29,13 +32,14 @@ entries:
   entries:
   - file: 03_Software/01_Intro/0_README
   - file: 03_Software/02_Project_Setup/0_Project_Setup
-    entries:
-    - file: 03_Software/02_Project_Setup/02_GitlabGroupArrangement
-  - file: 03_Software/03_Code_quality/01_CI_GitLab_Docker
-    entries:
-    - file: 03_Software/03_Code_quality/README
+  - file: 03_Software/03_Code_quality/00_README
   - file: 03_Software/04_Documentation/README
   - file: 03_Software/05_Reproducibility/README
+  - file: 03_Software/06_Advanced code management/00_Testing
+    entries:
+    - file: 03_Software/06_Advanced code management/01_CI_CD_devops
+    - file: 03_Software/06_Advanced code management/02_CI_GitLab_Docker
+    - file: 03_Software/06_Advanced code management/02_GitlabGroupArrangement
 - file: 04_About/04_About_DCC
 - file: 05_Trainings/05_Trainings
 

@@ -1,7 +1,10 @@
-# Continuous Integration with GitLab runner
+# Continuous Integration with a GitLab runner
 
 ## Background
+If you happen to be working with TU Delft Gitlab instance and you want to implement DevOps or CI/CD pipelines, then you need to install a gitlab runner on your own. This should runner should be in a server, responding to changes such as commits or pull requests in your Gitlab repository.  
+![](https://i.stack.imgur.com/o9y6Z.png)
 
+## Quick overview of how it works
 In order to be ready to run CI/CD pipeline, a gitlab-runner Docker container is running on the server all the time. When a new commit is made in the GitLab repository, this triggers the CI/CD process to run a job (e.g., unit test) based on the pipeline defined in the .gitlab-ci.yml file in the repository. The container used to carry out the CI/CD tests is defined in the .gitlab-ci.yml file in the first line, and spawned from within the continuously running gitlab-runner container. In our example, we define `image:python:3.7.3` so every time a commit is made in the repository, a new container based on the python:3.7.3 Docker image is started and used to run tests on the python scripts and generate artifacts as defined in the .gitlab-ci.yml file.
 
 ![Untitled_Document__31_](https://gitlab.tudelft.nl/acryan/data-management-for-researchers/-/wikis/uploads/711ac593ec886bd9216dff0591a82e6f/Untitled_Document__31_.png)
