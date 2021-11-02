@@ -1,7 +1,11 @@
-# Deploy Apache Web Server
+# Setting up a web server with Apache     
+
 
 ## Background
-Apache Web Server is a software package that turns a computer into an HTTP server. That is, it sends web pages – stored as HTML files – to people on the internet who request them. It is open-source software, which means it can be used and modified freely.
+If you want to host a website for your lab, or a web application of some sort, you are going to need to work with a webserver. Apache Web Server is a software package that turns a computer into an HTTP server. That is, it sends web pages – stored as HTML files – to people on the internet who request them. It is open-source software, which means it can be used and modified freely.
+
+> The job of a web server is to serve websites on the internet. To achieve that goal, it acts as a middleman between the server and client machines. It pulls content from the server on each user request and delivers it to the web.....One of the most popular web servers, Apache allows you to run a secure website without too much of a headache. It is free and open-source, making it a frequent choice of solopreneurs and small businesses who want a presence on the web.....The way Apache HTTP server works is that it will accept requests from the web browser, such as Google Chrome and Microsoft Edge, and turn programming scripts into web pages which contents are visible by the visitors. 
+
 
 ## What this documentation will help achieve
 This guide will help you install the Apache web server on Ubuntu Linux 18.04 and configure a HTTPS secure connection for all incoming web traffic.
@@ -195,3 +199,7 @@ Add in apache conf:
 
 ## Notes and Next Steps
 Test that your web server is secured by HTTPS by typing the Fully Qualified Domain Name (FQDN) of your server in a web browser. If HTTPS is enabled, the URL should begin with it - if it still says HTTP, something will need to be reconfigured.
+
+## References
+[1]“What is Apache? An In-Depth Overview of Apache Web Server,” Hostinger Tutorials, Jun. 20, 2018. https://www.hostinger.com/tutorials/what-is-apache (accessed Nov. 02, 2021).
+

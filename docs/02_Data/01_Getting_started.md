@@ -43,10 +43,8 @@ Results: what will our model output look like and how can we put it to use?
 
 > If we can provide well thought out answers to the first three questions, and provide a plan and conditions for success for the last three, we are setting ourselves up for a quick and effective workflow.
 
-::: info
-
-This is also a great start for a data management plan by the way 
-
+:::{note}
+This is approach can be also a great start for a data management plan.
 :::
 
 ### OSEMN

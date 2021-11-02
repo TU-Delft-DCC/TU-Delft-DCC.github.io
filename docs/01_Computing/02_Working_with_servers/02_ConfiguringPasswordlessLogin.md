@@ -1,4 +1,4 @@
-# Configuring passwordless login
+# Secure login with ssh
 
 ## Background
 

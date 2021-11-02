@@ -13,3 +13,4 @@
 
 # Run a http python server
 python -m http.server
+python -m http.server --directory <dir-path>

@@ -14,8 +14,10 @@ Now during the exploration phase, we try to understand what patterns and values 
 - Experimental Design
 - Data Visualization
 
+```{note}
 Tip: Have your “spidey senses” tingling when doing analysis. Have the sense to spot weird patterns or trends.
 Design consideration: Most of the time people just go straight to the visual “lets get it done”. It’s all about the end user who will be interpreting it. Focus on your audience.
+```
 
 Visualizing, clustering, performing dimensionality reduction: these are all part of `looking at data.’ These tasks are sometimes described as “exploratory” in that no hypothesis is being tested, no predictions are attempted. Wolfgang Pauli would call these techniques “not even wrong,” though they are hugely useful for getting to know your data. Often such methods inspire predictive analysis methods used later. Tricks to know:
 

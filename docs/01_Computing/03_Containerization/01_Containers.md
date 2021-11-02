@@ -1,4 +1,4 @@
-# Why and when to use containers
+# Working with containers
 Containers and more, specifically docker containers are all over the place, just like git repositories. Containers make our lives easy when it comes to reproducing computational environments, testing someone else's software efficiently, deploying software and services securely, but also scaling software and maintaining it. 
 
 If you happen to have an open source software and you want to facilitate that others can run it, test it, assess it or even contribute to it. Having a some `Dockerfile`, or `docker-compose.yml` file within your source code can be of great help. Specially when you are developing a complex application.
