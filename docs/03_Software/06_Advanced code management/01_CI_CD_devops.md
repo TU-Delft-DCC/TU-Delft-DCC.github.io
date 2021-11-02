@@ -1,4 +1,4 @@
-# Advanced social coding and devops
+# Advanced code management
 Assume that you are working with a group on a research software code base. At this point your codebase is considerably big, dozens of scripts, it has a good amount of dependencies and there are people that depend on your code to work. When your code becomes more relevant to yourself and your community you inmediately will feel the urge to have more control on the quality of contributions, the easiness to upgrade and maintain the code, but also automating the process of packaging and publishing your code, instead of doing it manually everytime. 
 
 **There are a set of practices that come very handy when being in such a situation:**
