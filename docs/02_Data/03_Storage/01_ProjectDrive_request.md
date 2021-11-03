@@ -4,7 +4,7 @@
 TU Delft offers several options for researchers to store their data. One of the most commonly recommended options is the Project Drive (Project Data, U:) for its large storage capacity and secure backups from the University. 
 
 ## What this documentation will help achieve
-This documentation will walk through the steps needed to request Project Drive storage from TU Delft ICT. This storage can then be accessed directly through [webdata.tudelft.nl](https://webdata.tudelft.nl/) (uses WebDAV protocol), through a client like [WebDrive](https://webdata.tudelft.nl/) on your local machine (click on the link and then the WebDrive heading to download and install this software for your operating system), or mounted to a TU Delft Virtual Private Server following the instructions here ___. 
+This documentation will walk through the steps needed to request Project Drive storage from TU Delft ICT. This storage can then be accessed directly through [webdata.tudelft.nl](https://webdata.tudelft.nl/) (uses WebDAV protocol), through a client like [WebDrive](https://webdata.tudelft.nl/) on your local machine (click on the link and then the WebDrive heading to download and install this software for your operating system), or mounted to a TU Delft Virtual Private Server following the instructions [here](../../01_Computing/02_Working_with_servers/01_VPS_request). 
 
 ## Prerequisites
 * TU Delft netID
