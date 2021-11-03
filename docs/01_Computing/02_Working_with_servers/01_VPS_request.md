@@ -12,7 +12,7 @@ This page describes the essentials for requesting and setting up a TU Delft mana
 * Mounting storage drive
 
 ## What this documentation will help achieve
-This documentation helps researchers to request a VPS and data storage on the Project Drive. There are other forms of storage available, (see here _____) but Project Drive storage is often recommended for expandable and secure data preservation.
+This documentation helps researchers to request a VPS and data storage on the Project Drive. There are other forms of storage available, but Project Drive storage is often recommended for expandable and secure data preservation.
 
 ## Prerequisites
 * TU Delft netID
