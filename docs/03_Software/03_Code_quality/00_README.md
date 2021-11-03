@@ -1,5 +1,7 @@
 # Code Quality
-
+```{note}
+ The following content have been copied as is from the utrech university github repository called ["Best practices in Writing reproducible code](https://utrechtuniversity.github.io/workshop-computational-reproducibility/docs/index.html)
+```
 Let's start making our code readable and reusable!
 
 This section covers the following topics:
