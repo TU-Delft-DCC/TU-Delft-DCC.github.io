@@ -1,6 +1,6 @@
 # Accessibility & Reproducibility
 ```{note}
- The following content have been copied as is from the utrech university github repository called ["Best practices in Writing reproducible code](https://utrechtuniversity.github.io/workshop-computational-reproducibility/docs/index.html)
+ The following content have been copied as is from the utrecht university github repository called ["Best practices in Writing reproducible code](https://utrechtuniversity.github.io/workshop-computational-reproducibility/docs/index.html)
 ```
 Last but not least, let's make our code accessible for others! 
 

@@ -1,5 +1,9 @@
 # Welcome!
-The (TU Delft) DCC guides aims to provide a low threshold and comprehensive entrypoint to get yu started with Research Computing, Research Data and Research Software at TU Delft. 
+The (TU Delft) DCC guides aims to provide a low threshold and comprehensive entrypoint to get you started with Research Computing, Research Data and Research Software at TU Delft. 
+
+```{note}
+The content in these guides is a compilation of relevant resources, and documents produced by colleagues inside and outside TU Delft. Many of it is borrowed, sometimes remixed. This is not an official TU Delft website, but rather a place where we keep note of things we find important and useful to share.
+```
 
 **The guides are split into three main topics:**
 Computing, data and software

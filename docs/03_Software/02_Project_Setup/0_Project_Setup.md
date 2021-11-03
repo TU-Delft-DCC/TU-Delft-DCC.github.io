@@ -1,6 +1,6 @@
 # Software Management
 ```{note}
- The following content have been copied as is from the utrech university github repository called ["Best practices in Writing reproducible code](https://utrechtuniversity.github.io/workshop-computational-reproducibility/docs/index.html)
+ The following content have been copied as is from the utrecht university github repository called ["Best practices in Writing reproducible code](https://utrechtuniversity.github.io/workshop-computational-reproducibility/docs/index.html)
 ```
 This section covers the following topics:
 * Setting up a folder structure
