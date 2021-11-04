@@ -1,6 +1,6 @@
 # Getting started
 ```{note}
- The following content have been copied as is from Susan Branchett's blogpost: ["How can the TU Delft support your research computing needs?"](https://www.tudelft.nl/en/ict-innovation/articles/how-can-the-tu-delft-support-your-research-computing-needs)
+ The following content has been copied from Susan Branchett’s March 2020 blogpost: “How can the TU Delft support your research computing needs?”["How can the TU Delft support your research computing needs?"](https://www.tudelft.nl/en/ict-innovation/articles/how-can-the-tu-delft-support-your-research-computing-needs)
 ```
 
 **The laptop can’t keep up with your research needs? Try these resources…**
