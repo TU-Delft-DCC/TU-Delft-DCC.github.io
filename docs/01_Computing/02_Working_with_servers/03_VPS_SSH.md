@@ -9,7 +9,7 @@ To connect to a remote host, TU Delft uses a *proxy server*, know as  **bastion*
 
 ```bash 
 Host <host-nickname>
-    Hostname <target-host>
+    HostName <target-host>
     User <target-username>
     ProxyCommand ssh <bastion-username>@linux-bastion-ex.tudelft.nl -W %h:%p 
 ```
