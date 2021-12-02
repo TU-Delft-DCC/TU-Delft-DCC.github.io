@@ -39,13 +39,20 @@ For the mount point, add a space followed by the location in your VPS where you 
 
 The full new record in the fstab file should be formatted like this: 
 
-`<your_netID>@sftp.tudelft.nl:/staff-umbrella/<Project_Drive_space>  /media/<server_mount_point> fuse.sshfs  rw,noauto,users,_netdev  0  0`
+```
+<your_netID>@sftp.tudelft.nl:/staff-umbrella/<Project_Drive_space>  /media/<server_mount_point> fuse.sshfs  rw,noauto,users,_netdev  0  0
+```
+If that throws a permissions error, try: 
+
+```
+//tudelft.net/staff-umbrella/ODCOR/ /media/odcor cifs username=acryan,noauto,uid=549192,gid=5004,forcegid,rw,_netdev
+```
 
 ### Step 6. Save the fstab file
 Use Control+C followed by `:wq` to save the file and close it to get back to your terminal.
 
 ### Step 7. Mounting the project drive
-To mount the project drive use the `mount /media/<server_mount_point>` command. You can also unmount it using `fusermount -u /media/<server_mount_point>`.
+To mount the project drive use the `sudo mount /media/<server_mount_point>` command. You can also unmount it using `fusermount -u /media/<server_mount_point>`.
 
 ## Notes and next steps
 The project drive will not mount automatically, so you will need to mount it manually each time you start the server. To do so, from the home (`/`) directory in your server run `mount /media/<server_mount_point>`. You should now be able to `cd /media/<server_mount_point>` and view your files stored on the project drive using `ls`.
