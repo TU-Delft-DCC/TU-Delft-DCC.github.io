@@ -8,6 +8,12 @@ on:
     branches: [ master ]
   pull_request: 
     branches: [ master ]
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: Tag for manually deploying the jupyterbook
+        required: False
+        default: ''
 
 jobs:
   build:
