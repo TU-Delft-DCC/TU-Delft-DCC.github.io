@@ -1,14 +1,6 @@
-# FAIR for research software guide
+# FAIR for research software guidelines
 
-## References
-
-For a full overview of the principles behind FAIR software, please have a look at the following resources:
-
-* [FAIR software checklist](https://fair-software.nl/) - five recommendations for FAIR (scientific) software 
-* [Towards FAIR principles for research software](https://content.iospress.com/articles/data-science/ds190026) - publication on the translation of FAIR principles for data to FAIR principles for software.
-* [Guide for Reproducible Research](https://the-turing-way.netlify.app/reproducible-research/reproducible-research.html) - general guide to reproducible research
-* [The Zen of Scientific Computing](https://scicomp.aalto.fi/scicomp/zen-of-scicomp/#) - Scientific computing tips from Aalto University
-* [From FAIR research data toward FAIR and open research software](https://doi.org/10.1515/itit-2019-0040)
+To ensure your research software is findable and usable by other researchers, we have compiled a checklist to improve its FAIRness (Findable, Accessible, Interoperable, Reproducible).
 
 
 ## Checklist
@@ -87,6 +79,16 @@ _Recommended_
 
     
 
-### Example repositories
-* [matchms from the eScience Center](https://github.com/matchms/matchms) - Matchms is an open-source Python package to import, process, clean, and compare mass spectrometry data.
+## Example repositories
+* [eScience Center - matchms](https://github.com/matchms/matchms) - Matchms is an open-source Python package to import, process, clean, and compare mass spectrometry data.
+* [TU Delft - Transposonmapper](https://github.com/SATAY-LL/Transposonmapper) - Transposonmapper is an open-source python package and Docker image for mapping transposons from sequencing data.
 
+## References
+
+For a full overview of the principles behind FAIR software, please have a look at the following resources:
+
+* [FAIR software checklist](https://fair-software.nl/) - five recommendations for FAIR (scientific) software 
+* [Towards FAIR principles for research software](https://content.iospress.com/articles/data-science/ds190026) - publication on the translation of FAIR principles for data to FAIR principles for software.
+* [Guide for Reproducible Research](https://the-turing-way.netlify.app/reproducible-research/reproducible-research.html) - general guide to reproducible research
+* [The Zen of Scientific Computing](https://scicomp.aalto.fi/scicomp/zen-of-scicomp/#) - Scientific computing tips from Aalto University
+* [From FAIR research data toward FAIR and open research software](https://doi.org/10.1515/itit-2019-0040)
