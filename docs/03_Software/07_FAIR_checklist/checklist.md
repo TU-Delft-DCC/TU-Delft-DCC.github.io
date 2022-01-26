@@ -1,6 +1,6 @@
 # FAIR for research software guidelines
 
-To ensure your research software is findable and usable by other researchers, we have compiled a checklist to improve its FAIRness (Findable, Accessible, Interoperable, Reproducible).
+To ensure your research software is findable and usable by other researchers, we have compiled a checklist to improve its FAIRness (Findable, Accessible, Interoperable, Reusable).
 
 
 ## Checklist
@@ -47,10 +47,9 @@ _Recommended_
 #### Testing
 _Recommended_  
 - [ ] [Defensive programming](https://swcarpentry.github.io/python-novice-inflammation/10-defensive/index.html)
-- [ ] Integration or build test
+- [ ] Test your software with [integration tests](https://the-turing-way.netlify.app/reproducible-research/testing/testing-integrationtest.html) and [unit tests](https://the-turing-way.netlify.app/reproducible-research/testing/testing-unittest.html)
 - [ ] User installation test
-- [ ] Unit tests (coverage >70%)
-- [ ] Continuous integration (GitHub Actions)
+- [ ] Make use of [Continuous Integration](https://the-turing-way.netlify.app/reproducible-research/ci/ci-options.html)
 - [ ] Code coverage check ([Codecov](https://about.codecov.io/), [Sonarcloud](https://sonarcloud.io/), [Travis](https://www.travis-ci.com/))
 
 
@@ -75,7 +74,7 @@ _Recommended_
 - [ ] Follow [PEP8 guidelines](https://realpython.com/python-pep8/)
 - [ ] Use linter (e.g. [pylint](https://pypi.org/project/pylint/), [flake8](https://pypi.org/project/flake8/))
 - [ ] Use a formatter (e.g. [black](https://github.com/psf/black), [yapf](https://github.com/google/yapf))
-- [ ] Follow [best coding practices](https://alan-turing-institute.github.io/rse-course/html/index.html)
+- [ ] Follow [best coding practices](https://alan-turing-institute.github.io/rse-course/html/module07_construction_and_design/index.html)
 
     
 
