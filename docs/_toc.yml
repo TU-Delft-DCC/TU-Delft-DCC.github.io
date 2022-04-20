@@ -1,43 +1,59 @@
-root: 01_Welcome
-entries:
-  - file: 01_Computing/01_README
-    entries:
-      - file: 01_Computing/02_Getting_started
-      - file: 01_Computing/02_Working_with_servers/01_Servers
-        entries:
-          - file: 01_Computing/02_Working_with_servers/01_VPS_request
-          - file: 01_Computing/02_Working_with_servers/02_ConfiguringPasswordlessLogin
-          - file: 01_Computing/02_Working_with_servers/03_VPS_SSH
-          - file: 01_Computing/02_Working_with_servers/04_GivingSudoPrivilege
-          - file: 01_Computing/02_Working_with_servers/06_SSL_Certs
-          - file: 01_Computing/02_Working_with_servers/07_ApacheWebServer
-      - file: 01_Computing/03_Containerization/01_Containers
-        entries:
-          - file: 01_Computing/03_Containerization/02_podman
-  - file: 02_Data/00_README
-    entries:
-      - file: 02_Data/01_Getting_started
-      - file: 02_Data/01_Obtain
-      - file: 02_Data/02_Scrub
-      - file: 02_Data/03_Explore
-      - file: 02_Data/04_Model
-      - file: 02_Data/05_Interpret
-      - file: 02_Data/03_Storage/00_README
-        entries:
-          - file: 02_Data/03_Storage/01_ProjectDrive_request
-          - file: 02_Data/03_Storage/02_Sync_Unison
-          - file: 02_Data/03_Storage/03_Mount_ProjectDrive
-  - file: 03_Software/00_README
-    entries:
-      - file: 03_Software/01_Intro/0_README
-      - file: 03_Software/02_Project_Setup/0_Project_Setup
-      - file: 03_Software/03_Code_quality/00_README
-      - file: 03_Software/04_Documentation/README
-      - file: 03_Software/05_Reproducibility/README
-      - file: 03_Software/07_FAIR_checklist/checklist
-      - file: 03_Software/06_Advanced code management/01_CI_CD_devops
-        entries:
-          - file: 03_Software/06_Advanced code management/02_CI_GitLab_Docker
-          - file: 03_Software/06_Advanced code management/02_GitlabGroupArrangement
-  - file: 04_About/04_About_DCC
-  - file: 05_Trainings/05_Trainings
+format: jb-book
+root: welcome
+parts:
+  - caption: Computing infrastructure
+    chapters:
+      - file: infrastructure/overview
+        title: Getting started
+      - file: infrastructure/intro_servers
+        sections:
+          - file: infrastructure/VPS_request
+          - file: infrastructure/VPS_SSH
+          - file: infrastructure/VPS_SSL_Certs
+      - file: gitlab/gitlab_intro
+        sections:
+          - file: gitlab/gitlab_groups
+          - file: gitlab/gitlab_docker
+          - file: gitlab/runner_python
+          - file: gitlab/runner_matlab
+          - file: gitlab/runner_docker
+
+  - caption: Data management
+    chapters:
+      - file: data_storage/intro
+        title: TU Delft storage
+        sections:
+          - file: data_storage/project_drive_request
+          - file: data_storage/mount_project_drive
+          - file: data_storage/sync_unison
+
+  - caption: Research software
+    chapters:
+      - file: software/fair
+        sections:
+          - file: software/checklist
+      - file: testing/intro
+        sections:
+          - file: testing/python
+          - file: testing/matlab
+      - file: git/intro
+        sections:
+          - file: git/branch_management
+      - file: containers/intro
+        sections:
+          - file: containers/docker_users
+      - file: software/management_plan
+
+  - caption: Resources
+    chapters:
+      - file: resources/curriculum
+        title: Research software curriculum
+      - file: resources/courses
+
+  - caption: Community
+    chapters:
+      - file: community/dcc
+      - file: community/tudelft
+      - file: community/code_of_conduct
+      - file: community/contributing
+      - file: community/authors
