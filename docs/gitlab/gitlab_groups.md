@@ -1,4 +1,4 @@
-# Setting up groups and assigning contributors to the projects with the Gitlab
+# Creating GitLab groups
 
 ## Background
 Groups and subgroups are similar to directories in the operating systems. In windows or Mac, we create directories to organise files or other directories. For example, imagine a scenario where you want to keep your photos in an organised manner. To this end, you may organise your photos on multiple levels. In the first level, perhaps you broadly classify them and then in the next levels you narrow it down to more specific subjects. Similarly, in the Gitlab, a group is used as a binder to put together projects or even other groups. For example, if three themes are researched in a lab, each of those themes could be a group, and all the research in a certain theme fall into its corresponding group. Sometimes there are also sub-themes. For every sub-theme you can create a subgroup (within the group corresponding to the broader theme) and assign the research close to the sub-theme there. 

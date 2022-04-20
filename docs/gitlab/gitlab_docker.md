@@ -1,4 +1,4 @@
-# Continuous Integration with a GitLab runner
+# Continuous Integration with Gitlab
 
 ## Background
 If you happen to be working with TU Delft Gitlab instance and you want to implement DevOps or CI/CD pipelines, then you need to install a gitlab runner on your own. This should runner should be in a server, responding to changes such as commits or pull requests in your Gitlab repository.  
@@ -16,7 +16,7 @@ The documentation below will help you deploy GitLab runner in a Docker container
 
 **Docker:** We use a Docker container to run the Gitlab runner and initialise the CI/CD pipeline. 
 
-**Gitlab runner:** (from GitLab documentation) "Runners are the agents that run the CI/CD jobs that come from GitLab. When you register a runner, you are setting up communication between your GitLab instance and the machine where GitLab Runner is installed. Runners usually process jobs on the same machine where you installed GitLab Runner." [Link](doc.gitlab.com)
+**Gitlab runner:** (from GitLab documentation) "Runners are the agents that run the CI/CD jobs that come from GitLab. When you register a runner, you are setting up communication between your GitLab instance and the machine where GitLab Runner is installed. Runners usually process jobs on the same machine where you installed GitLab Runner." [Link](https://doc.gitlab.com)
 
 **GitLab repository:** A remote repository that can store your code and keeps track of your project development. You're on one right now! :) If you haven’t already, you use your netID and password to login to TU Delft’s GitLab instance at gitlab.tudelft.nl and create a repository containing your project code.
 
