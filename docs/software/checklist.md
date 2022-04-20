@@ -1,4 +1,4 @@
-# FAIR for research software guidelines
+# FAIR software checklist
 
 To ensure your research software is findable and usable by other researchers, we have compiled a checklist to improve its FAIRness (Findable, Accessible, Interoperable, Reusable).
 
@@ -7,7 +7,7 @@ To ensure your research software is findable and usable by other researchers, we
 
 The checklist below is in part based on the checklist provided by the [eScience Center](https://guide.esciencecenter.nl/#/nlesc_specific/checklist_matrix), licensed under CC BY 4.0.
 
-#### Version Control  
+### Version Control  
 _Essential_  
 - [ ] Use [git](https://www.atlassian.com/git) as a version control system 
 - [ ] Upload your project on [GitHub](https://github.com/) or [TU Delft GitLab](https://gitlab.tudelft.nl/)
@@ -19,7 +19,7 @@ _Recommended_
 - [ ] [Meaningful commit messages](https://www.git-scm.com/book/en/v2/Distributed-Git-Contributing-to-a-Project#_commit_guidelines)
 
 
-#### Documentation - Repository
+### Documentation - Repository
 _Essential_  
 - [ ] [README](https://github.com/18F/open-source-guide/blob/18f-pages/pages/making-readmes-readable.md)
 - [ ] [LICENSE](https://doi.org/10.5281/zenodo.4629662)
@@ -31,7 +31,7 @@ _Recommended_
 - [ ] Contribution [guidelines](https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contributions/setting-guidelines-for-repository-contributors)
 - [ ] [Code of conduct](https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contributions/adding-a-code-of-conduct-to-your-project)
 
-#### Documentation - Software
+### Documentation - Software
 _Essential_  
 - [ ] Source code documentation ([docstrings](https://numpydoc.readthedocs.io/en/latest/format.html))
 - [ ] Installation instructions
@@ -44,7 +44,7 @@ _Recommended_
 - [ ] Build [API reference](https://developer.lsst.io/python/numpydoc.html) from docstrings
 
 
-#### Testing
+### Testing
 _Recommended_  
 - [ ] [Defensive programming](https://swcarpentry.github.io/python-novice-inflammation/10-defensive/index.html)
 - [ ] Test your software with [integration tests](https://the-turing-way.netlify.app/reproducible-research/testing/testing-integrationtest.html) and [unit tests](https://the-turing-way.netlify.app/reproducible-research/testing/testing-unittest.html)
@@ -53,7 +53,7 @@ _Recommended_
 - [ ] Code coverage check ([Codecov](https://about.codecov.io/), [Sonarcloud](https://sonarcloud.io/), [Travis](https://www.travis-ci.com/))
 
 
-#### Releases
+### Releases
 _Essential_  
 - [ ] Obtain a DOI ([Zenodo](https://zenodo.org/) or [4TU.ResearchData](https://data.4tu.nl/info/en/))
 
@@ -65,7 +65,7 @@ _Recommended_
 - [ ] [Release guide](https://docs.github.com/en/repositories/releasing-projects-on-github/managing-releases-in-a-repository)
 - [ ] Continuous Integration for build and release
 
-#### Code quality
+### Code quality
 _Essential_
 - [ ] Project [organisation](https://coderefinery.github.io/reproducible-research/02-organizing-projects/)
 - [ ] Record [software dependencies](https://coderefinery.github.io/reproducible-research/03-dependencies/)
