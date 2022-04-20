@@ -1,4 +1,3 @@
-[index](README.md)
 # SSH Tunneling
 
 To connect to a remote host, TU Delft uses a *proxy server*, know as  **bastion**. Thefore, to reach a remote host, a user has to connect first to the **bastion** and from there to the remote host, e.g., *my-vm.tudelft.nl*. However, a user can connect directly to the remote host using *ssh tunneling*.

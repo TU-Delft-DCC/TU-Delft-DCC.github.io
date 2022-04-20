@@ -1,4 +1,12 @@
-# Getting started
+---
+section: infrastructure
+title: Susan blog
+author_1: Susan Branchett
+author_2:
+---
+
+# How can the TU Delft support your research computing needs?
+
 ```{note}
  The following content has been copied from Susan Branchett’s March 2020 blogpost:["How can the TU Delft support your research computing needs?"](https://www.tudelft.nl/en/ict-innovation/articles/how-can-the-tu-delft-support-your-research-computing-needs)
 ```
