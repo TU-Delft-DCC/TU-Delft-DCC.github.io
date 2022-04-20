@@ -33,7 +33,7 @@ The fstab file is where you can list the addresses of external file systems you 
 
 Basically you need to add one line to this file. This line consists of four parts: (i) filesystem, (ii) mount point, (iii) type, and (iv) options. The filesystem refers to the project drive address which is specified in the ICT email. The mount point is where you want to mount the project drive in the VPS. The third part determines the type of the filesystem and in the last part you specify some options such as privileges. 
 
-To add the filesystem, open the /etc/fstab file with the sudo privilage and switch to the insert mode (hit "i" to switch to insert mode and be able to type), and write `//tudelft.net/` and paste the latter half of the URL you copied from the WebDav links. The full URL should be in this format: //tudelft.net/staff-umbrella/yourprojectname. 
+To add the filesystem, open the /etc/fstab file with the sudo privilage and switch to the insert mode (hit "i" to switch to insert mode and be able to type), and write `//tudelft.net/` and paste the latter half of the URL you copied from the WebDav links. The full URL should be in this format: `//tudelft.net/staff-umbrella/yourprojectname`. 
 
 For the mount point, add a space followed by the location in your VPS where you want to mount the Project Drive storage (where you created the folder previously, e.g., `/media/<server_mount_point>` ).
 
