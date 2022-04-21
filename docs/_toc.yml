@@ -14,9 +14,7 @@ parts:
         sections:
           - file: gitlab/gitlab_groups
           - file: gitlab/gitlab_docker
-          - file: gitlab/runner_python
           - file: gitlab/runner_matlab
-          - file: gitlab/runner_docker
 
   - caption: Data management
     chapters:
@@ -34,7 +32,6 @@ parts:
           - file: software/checklist
       - file: testing/intro
         sections:
-          - file: testing/python
           - file: testing/matlab
       - file: git/intro
         sections:
@@ -56,4 +53,5 @@ parts:
       - file: community/tudelft
       - file: community/code_of_conduct
       - file: community/contributing
-      - file: community/authors
+        sections:
+          - file: community/maintainers
