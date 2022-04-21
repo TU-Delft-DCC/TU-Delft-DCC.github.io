@@ -1,0 +1,7 @@
+numpy
+pandas
+tabulate
+jupyter-book
+linkify
+sphinx-tabs
+sphinx_inline_tabs
