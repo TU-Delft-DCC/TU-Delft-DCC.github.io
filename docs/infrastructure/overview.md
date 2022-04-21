@@ -1,8 +1,8 @@
 ---
 section: infrastructure
-title: Susan blog
-author_1: Susan Branchett
-author_2:
+title: Overview
+author_1: 
+author_2: Susan Branchett
 ---
 
 # How can the TU Delft support your research computing needs?

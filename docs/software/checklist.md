@@ -1,3 +1,10 @@
+---
+section: software
+title: FAIR checklist
+author_1: Maurits Kok
+author_2: 
+---
+
 # FAIR software checklist
 
 To ensure your research software is findable and usable by other researchers, we have compiled a checklist to improve its FAIRness (Findable, Accessible, Interoperable, Reusable).
