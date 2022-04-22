@@ -31,9 +31,9 @@ jobs:
           pip install -r requirements.txt
           pip install sphinx-book-theme --upgrade
 
-      - name: Build table of contents
+      - name: Build documentation
         run: |
-          jupyter-book build ./docs
+          bash build.sh
 
       # Push the book's HTML to github-pages
       - name: GitHub Pages action
