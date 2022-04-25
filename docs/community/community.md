@@ -16,7 +16,7 @@
 
 - [ICT Innovation](https://www.tudelft.nl/ict-innovation)
 
-- 
+- [Statistical Helpdesk](https://www.tudelft.nl/ewi/over-de-faculteit/afdelingen/applied-mathematics/statistics/statistical-helpdesk)
 
 ## 4TU.ResearchData
 
