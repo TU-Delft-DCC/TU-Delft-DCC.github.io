@@ -1,3 +1,10 @@
+---
+section: infrastructure
+title: Request VPS
+author_1: Ashley Cryan
+author_2:
+---
+
 # Request a Virtual Private Server
 
 ## Background

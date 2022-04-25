@@ -1,3 +1,10 @@
+---
+section: gitlab
+title: CI with Gitlab 
+author_1: Ashley Cryan
+author_2: Maurits Kok
+---
+
 # Continuous Integration with Gitlab
 
 ## Background

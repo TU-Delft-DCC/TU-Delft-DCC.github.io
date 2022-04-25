@@ -1,5 +1,11 @@
+---
+section: infrastructure
+title: Request SSL Certificate
+author_1: Ashley Cryan
+author_2:
+---
+
 # Setup SSL certificates
-Request an SSL certificate for your VPS from TU Delft ICT
 
 ## Background
 It is common practice to have web servers serving content over HTTPS, which is the secure version of HTTP. In order to do this and make the connection secure, you need an SSL certificate from a certificate signing authority.
