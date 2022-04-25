@@ -1,20 +1,27 @@
 # Welcome to the DCC Guides!
-The (TU Delft) DCC guides aims to provide a low threshold and comprehensive entrypoint to get you started with Research Computing, Research Data and Research Software at TU Delft. 
+These guides are an initiative from the TU Delft [Digital Competence Center](community/dcc.md) and aim to provide a comprehensive entrypoint to get you started with Research Computing, Research Data and Research Software at the TU Delft. 
 
-```{note}
-The content in these guides is a compilation of relevant resources, and documents produced by colleagues inside and outside TU Delft. Many of it is borrowed, sometimes remixed. This is not an official TU Delft website, but rather a place where we keep note of things we find important and useful to share.
+```{admonition} Disclaimer
+:class: note
+The guides are under active development and mainly in use as a useful resource for the support provided by the DCC. The content is a compilation of developed solutions, relevant links and resources, and documents produced by colleagues inside and outside TU Delft. This is not an official TU Delft website, but rather a place where we keep note of things we find important and useful to share.
 ```
 
-**The guides are split into three main topics:**
-Computing, data and software
+The guides are split into a few major sections:
+- **Computing Infrastructure** contains information and guides on the TU Delft ICT infrastructure.
+- **Data Management** contains information and guides on using TU Delft data storage options and best-practices for FAIR data. 
+- **Research Software** contains information for creating FAIR research software.
+- **Resources** contain a collection of workshops and references.
 
-**We also provide guidance on how to:**
-- [Get support from the DCC](./04_About/04_About_DCC.html#how-we-work-and-support-our-community)
-- [Participate and contribute to address issues you and other colleagues might have with regard to Computing, Data and Software](https://github.com/TU-Delft-DCC/TU-Delft-DCC.github.io/discussions/1)
 
-**Our mission is to provide hands on knowledge transfer, support and contributions that enable research with better data and software practices**.
-In order for us to help you and others we work towards more:
-- Openness
-- FAIR data
-- Open source research software
-- Collaboration and community driven progress
+:::{admonition} Learn more and get involved
+:class: tip full-width
+
+💡 [Open an issue](https://github.com/TU-Delft-DCC/TU-Delft-DCC.github.io/issues/new/choose)
+: We track enhancement requests, bug-reports, and to-do items via GitHub issues.
+
+💬 [Join the discussion](https://github.com/TU-Delft-DCC/TU-Delft-DCC.github.io/discussions)
+: We have community discussions, talk about ideas, share general questions and develop solutions and feedback in our [community forum](https://github.com/TU-Delft-DCC/TU-Delft-DCC.github.io/discussions).
+
+🙌 [Join the community](community/contribute.md)
+: We welcome anyone to join us in improving our guides. To join, check out our [contributing guide](community/contribute.md).
+:::
