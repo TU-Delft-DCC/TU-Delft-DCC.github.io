@@ -1,10 +1,3 @@
----
-section: testing
-title: Intro
-author_1:
-author_2: 
----
-
 # Software testing
 
 >_“Before relying on a new experimental device, an experimental scientist always establishes its accuracy. A new detector is calibrated when the scientist observes its responses to known input signals. The results of this calibration are compared against the expected response.”_
