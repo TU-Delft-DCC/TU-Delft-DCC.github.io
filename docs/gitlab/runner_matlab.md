@@ -146,10 +146,10 @@ WORKDIR /home/matlab
 CMD ["bash"]
 ```
 
-To build a Docker image with the name `matlab-gitlab`, run the following command in the folder containing the Dockerfile:
+To build a Docker image with the name `matlab-gitlab` and the version reference `r2021b`, run the following command in the folder containing the Dockerfile:
 
 ```{code-block} bash
-sudo docker build . -t matlab-gitlab:latest
+sudo docker build . -t matlab-gitlab:r2021b
 ```
 
 You can verify the presence of the image with
@@ -179,7 +179,7 @@ sudo docker run --rm -it -v /srv/gitlab-runner/config:/etc/gitlab-runner gitlab/
   --url "https://gitlab.tudelft.nl/" \
   --registration-token "REPOSITORY_TOKEN" \
   --executor "docker" \
-  --docker-image matlab-pvmd:r2021b \
+  --docker-image matlab-gitlab:r2021b \
   --description "matlab-runner" \
   --tag-list "matlab" \
   --docker-privileged=true \
@@ -221,7 +221,7 @@ check_interval = 0
     [runners.cache.azure]
   [runners.docker]
     tls_verify = false
-    image = "matlab-gitlab:latest"
+    image = "matlab-gitlab:r2021b"
     privileged = true
     disable_entrypoint_overwrite = false
     cap_add = ["NET_ADMIN"]
@@ -319,7 +319,7 @@ If you need to update the Matlab version of the Docker container, you will need 
 
 1. Update the Matlab version in the Dockerfile
 1. Build the docker image with
-   `sudo docker build . -t matlab-pvmd:<version>`
+   `sudo docker build . -t matlab-gitlab:<version>`
 1. Download a new `license.lic` file (see step 5 of this guide)
 1. Update the CI Variable `MATLAB_LICENSE` with the new license content
 1. Update the image names (not the tags) in `.gitlab-ci.yml` to use the new image.
