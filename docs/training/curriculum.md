@@ -5,7 +5,7 @@ author_1: Ashley Cryan
 author_2: Maurits Kok
 ---
 
-# How to use this curriculum
+# Research Software Curriculum
 These materials represent a curated curriculum designed to help you develop and maintain your repository and code base. All of the resources listed below are free to access and use, and supplementary material like video lessons has been added where possible and relevant.
 
 ## Bash
