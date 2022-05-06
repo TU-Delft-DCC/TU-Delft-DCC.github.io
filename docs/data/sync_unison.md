@@ -1,5 +1,5 @@
 ---
-section: infrastructure
+section: data
 title: Sync with Unison
 author_1: Ashley Cryan
 author_2:
