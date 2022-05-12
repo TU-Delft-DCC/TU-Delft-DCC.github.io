@@ -16,7 +16,7 @@ exclude_patterns: [/images/**.*, ./**/*.py, ./**/*.jpg, LICENSE.md]
 
 # Information about where the book exists on the web
 repository:
-  url: https://github.com/mwakok/TU-Delft-DCC.github.io.git
+  url: https://github.com/TU-Delft-DCC/TU-Delft-DCC.github.io
   branch: master
   path_to_book: docs
 
@@ -41,8 +41,6 @@ parse:
 sphinx:
   config:
     html_show_copyright: false
-
   extra_extensions:
-    - sphinx_tabs.tabs
     - sphinx_inline_tabs
     - sphinx_togglebutton

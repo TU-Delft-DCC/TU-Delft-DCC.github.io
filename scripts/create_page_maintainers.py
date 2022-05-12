@@ -1,8 +1,16 @@
 import os, sys
 import frontmatter
 import pandas as pd
-
+import logging
 from typing import List
+
+# Set up logger
+FORMATTER = logging.Formatter("%(levelname)s : %(message)s")
+log = logging.getLogger(__name__)
+log.setLevel(logging.INFO)
+handler = logging.StreamHandler(sys.stdout)
+handler.setFormatter(FORMATTER)
+log.addHandler(handler)
 
 
 def create_page_maintainers(path: str = './docs'):
@@ -14,6 +22,7 @@ def create_page_maintainers(path: str = './docs'):
         directory of the jupyter book, by default "./docs"
     
     """
+
     files = get_filenames_in_toc(path)
     df = get_metadata(files)
     write_authors_page(df, path)
@@ -63,8 +72,9 @@ def get_metadata(files: List) -> pd.DataFrame:
             post = frontmatter.load(file)
             details = [post["section"], post["title"], post["author_1"], post["author_2"]]
             entries.append(details)
+            log.info(f"Added metadata found in {file}")
         except:
-            print(f"Warning: No metadata found in {file}")
+            log.debug(f"No metadata found in {file}")        
     
     return pd.DataFrame(entries, columns = ["Section", "Title", "Lead maintainer", "Backup maintainer"])    
 

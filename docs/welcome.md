@@ -10,18 +10,18 @@ The guides are split into a few major sections:
 - **Computing Infrastructure** contains information and guides on the TU Delft ICT infrastructure.
 - **Data Management** contains information and guides on using TU Delft data storage options and best-practices for FAIR data. 
 - **Research Software** contains information for creating FAIR research software.
-- **Training** contains a collection of courses, workshops, and references.
+- **Resources** contains a collection of courses, workshops, and references.
 
 
 :::{admonition} Learn more and get involved
 :class: tip full-width
 
-💡 [**Open an issue**](https://github.com/TU-Delft-DCC/TU-Delft-DCC.github.io/issues/new/choose)  
-We track topic requests and bug-reports via GitHub issues.
+🙌 [**Join the community**](community/contribute.md)  
+We welcome anyone to join us in improving our guides. To join, check out our [contributing guide](community/contribute.md).
 
 💬 [**Join the discussion**](https://github.com/TU-Delft-DCC/TU-Delft-DCC.github.io/discussions)  
 We have community discussions, talk about ideas, share general questions and develop solutions and feedback in our [community forum](https://github.com/TU-Delft-DCC/TU-Delft-DCC.github.io/discussions).
 
-🙌 [**Join the community**](community/contribute.md)  
-We welcome anyone to join us in improving our guides. To join, check out our [contributing guide](community/contribute.md).
+💡 [**Open an issue**](https://github.com/TU-Delft-DCC/TU-Delft-DCC.github.io/issues/new/choose)  
+We track topic requests and bug-reports via GitHub issues.
 :::
