@@ -7,7 +7,7 @@ author_2:
 
 # Testing with MATLAB
 
-In this guide, we will discuss writing and running tests with Matlab. See the [documentation from Matlab](https://nl.mathworks.com/help/matlab/matlab-unit-test-framework.html) for more information
+In this guide, we will discuss writing and running tests with Matlab. See the [documentation from Matlab](https://nl.mathworks.com/help/matlab/matlab-unit-test-framework.html) for more information.
 
 ## Writing tests
 
@@ -90,7 +90,7 @@ end
 
 
 ## Executing tests
-We make use of a test function called `run_testsuite.m`. This function allow the creation of test reports and selectively running test through TestTags. In the example above, we added the tag 'Unit'.
+We will create a Matlab script called `run_testsuite.m` in the folder `tests/`. This function can run the tests present in the folder `tests/` and can create test reports.
 
 ````{toggle}
 ```matlab
@@ -288,8 +288,18 @@ function printCoverage(coverageFile)
 ```
 ````
 
-You can then call the function in the MATLAB command window to run all tests with the tag 'Unit' with
+
+Additionally, we can selectively run test by defining TestTags. In the example above, we added the tag 'Unit'. You can then call the function in the MATLAB command window to run all tests with the tag 'Unit' with
 
 ```matlab
 result = run_testsuite('TestTag', 'Unit')
 ```
+
+````{tip}
+If you want to quickly check whether your tests pass without having to start up Matlab, you can also call `run_testsuite` from the terminal. In the folder containing the function, execute
+
+```bash
+matlab -batch "run_testsuite('TestTag', 'Unit')"
+```
+
+````

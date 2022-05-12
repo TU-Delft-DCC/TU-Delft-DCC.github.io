@@ -1,1 +1,6 @@
-# FAIR for Research Software
+# FAIR Software
+🏗️ Under construction
+
+## Table of contents
+```{tableofcontents}
+```
