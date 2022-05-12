@@ -1,2 +1,7 @@
-jupyter-book==0.11.1
-ghp-import==2.0.1
+numpy
+pandas
+tabulate
+jupyter-book
+linkify
+sphinx-tabs
+sphinx_inline_tabs

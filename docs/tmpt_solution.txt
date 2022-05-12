@@ -1,4 +1,0 @@
-:::{admonition} See Solution
-:class: tip, dropdown
-
-:::
