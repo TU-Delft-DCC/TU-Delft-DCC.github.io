@@ -8,7 +8,7 @@ TU Delft Research community (researchers, and support staff working closeley wit
 > Originally we started this website to capture learnings to make our lives easier at the DCC. But the content is meant for any researcher at TU Delft that wants to get a quick orientation on fundamental topics of Open Science, FAIR software and FAIR data, research software infrastructure and tools, among other related topics.
 
 ## How to participate
-- **Do you have a common problem, tip or suggestion related to Software, Data, Computational Environments or Research infrastructure?** Then find out if the topic has been already opened in our [discussions](https://github.com/TU-Delft-DCC/TU-Delft-DCC.github.io/discussions)
+- **Do you have a common problem, tip or suggestion related to Software, Data, Computational Environments or Research infrastructure?** Then find out if the topic has been already opened in our [discussions](https://github.com/TU-Delft-DCC/TU-Delft-DCC.github.io/discussions).
 
 - **Do you want to improve or add content to the website?** You can fork the content and make a pull request. 
 ```{node} 
