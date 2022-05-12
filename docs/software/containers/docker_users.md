@@ -5,7 +5,7 @@ author_1: Maurits Kok
 author_2:
 ---
 
-# Docker for users
+# Using a docker container with a GUI
 
 Docker is an open platform for developing, shipping, and running applications. Docker provides the ability to package and run an application in a loosely isolated environment called a container. Containers are lightweight and contain everything needed to run the application, so you do not need to rely on what is currently installed on the host system. You can easily share containers while you work, and be sure that everyone you share with gets the same container that works in the same way.
 
@@ -82,7 +82,7 @@ For Linux and macOS:  `-v $(pwd):/data`
 
 For more info about mounting volumes, check this [StackOverflow question](https://stackoverflow.com/questions/41485217/mount-current-directory-as-a-volume-in-docker-on-windows-10)
 
-## Running a container
+## Running a container with data and graphical output
 
 To start a container from an image, we use the command `docker run <image_name>`. We also pass the additional flags `--rm` to delete the container after closing and `-it` to be able to interact with the container. Combining all arguments then leads to the following commands to run (and automatically close) the container:
 
