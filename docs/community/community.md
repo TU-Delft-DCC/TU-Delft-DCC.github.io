@@ -19,9 +19,11 @@
 - [Statistical Helpdesk](https://www.tudelft.nl/ewi/over-de-faculteit/afdelingen/applied-mathematics/statistics/statistical-helpdesk)
 
 ## 4TU.ResearchData
+[4TU.ResearchData](https://data.4tu.nl/info/en/) is an international data repository for science, engineering and design. Its services include curation, sharing, long-term access and preservation of research datasets. These services are available to anyone around the world. In addition, 4TU.ResearchData also offers training and resources to researchers to support them in making research data findable, accessible, interoperable and reproducible (FAIR).
 
 
 ## eScience Center
+Founded in 2012 as an independent foundation by NWO and SURF, [the Netherlands eScience Center](https://www.esciencecenter.nl/) is the national centre with the digital skills to create innovative software solutions in academic research. They award research projects based on [calls for proposals](https://www.esciencecenter.nl/calls-for-proposals/), and [train researchers](https://www.esciencecenter.nl/digital-skills/) in the use of research software. They offer our expertise in the form of research software engineers (RSEs), the technology specialists with expert digital skills who work with us at the Center. 
 
 
 ## NL-RSE
