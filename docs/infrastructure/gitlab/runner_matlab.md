@@ -5,7 +5,7 @@ author_1: Maurits Kok
 author_2: 
 ---
 
-# Gitlab runner for MATLAB
+# Setting up a Gitlab runner for MATLAB
 
 ## Background
 With the continuous method of software development, you continuously build, test, and deploy iterative code changes. This iterative process helps reduce the chance that you develop new code based on buggy or failed previous versions. With this method, you strive to have less human intervention or even no intervention at all, from the development of new code until its deployment.
