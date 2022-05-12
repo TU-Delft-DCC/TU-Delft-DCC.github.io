@@ -9,6 +9,5 @@ The guides are under active development and mainly in use as a useful resource f
 ## How to participate
 Please have a look at our [Contributing guidelines](https://tu-delft-dcc.github.io/community/contribute.html) for more information on how to participate.
 
-
 ## License
 This work is licensed under a [Creative Commons Attribution 4.0 International License](https://creativecommons.org/licenses/by/4.0/).
