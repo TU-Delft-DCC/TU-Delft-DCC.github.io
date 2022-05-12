@@ -1,0 +1,955 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Testing with MATLAB &#8212; DCC Guides</title>
+    
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=62ba249389abaaa9ffc34bf36a076bdc1d65ee18" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/tabs.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=f31d14ad54b65d19161ba51d4ffff3a77ae00456"></script>
+    <script src="../_static/tabs.js"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Version control with Git" href="git/intro.html" />
+    <link rel="prev" title="Software testing" href="testing_intro.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">DCC Guides</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Computing infrastructure
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../infrastructure/getting_started.html">
+   Getting started
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../infrastructure/intro_servers.html">
+   Remote servers
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../infrastructure/VPS_request.html">
+     Request a Virtual Private Server
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../infrastructure/VPS_SSH.html">
+     Configure SSH Tunneling
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../infrastructure/moving_data.html">
+     Moving data to your server
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../infrastructure/VPS_SSL_Certs.html">
+     Configure SSL certificates
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../infrastructure/apache_webserver.html">
+     Setting up an Apache web server
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../infrastructure/gitlab/gitlab_intro.html">
+   TU Delft GitLab
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../infrastructure/gitlab/gitlab_groups.html">
+     Creating GitLab groups
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../infrastructure/gitlab/gitlab_docker.html">
+     Continuous Integration with Gitlab
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../infrastructure/gitlab/runner_matlab.html">
+     Setting up a Gitlab runner for MATLAB
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Data management
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../data/getting_started.html">
+   Getting started
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../data/fair.html">
+   FAIR data
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../data/publishing.html">
+     Prepare data for publishing
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../data/storage_options.html">
+   TU Delft data storage
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../data/project_drive_request.html">
+     Request Project Drive space
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../data/project_drive_mounting.html">
+     Mount Project Drive on Server
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../data/sync_unison.html">
+     Sync with Project Drive and SURFDrive with Unison
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Research software
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="getting_started.html">
+   Getting started
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="fair.html">
+   FAIR Software
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+  <label for="toctree-checkbox-5">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="checklist.html">
+     FAIR software checklist
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="software_management_plan.html">
+     Software management plan
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="testing_intro.html">
+   Software testing
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+  <label for="toctree-checkbox-6">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     Testing with MATLAB
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="git/intro.html">
+   Version control with Git
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
+  <label for="toctree-checkbox-7">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="git/branch_management.html">
+     Branch management
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="containers/intro.html">
+   Working with containers
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
+  <label for="toctree-checkbox-8">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="containers/docker_users.html">
+     Using a docker container with a GUI
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Training
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../resources/courses.html">
+   Courses and workshops
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../resources/curriculum.html">
+   Research Software Curriculum
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../resources/tools.html">
+   Tools
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Community
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../community/dcc.html">
+   About the DCC
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../community/contribute.html">
+   Contributing guidelines
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../community/code_of_conduct.html">
+   Code of Conduct
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+            <div class="navbar_extra_footer">
+            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+            </div>
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-repository-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Source repositories">
+      <i class="fab fa-github"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://github.com/TU-Delft-DCC/TU-Delft-DCC.github.io"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Source repository"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="headerbtn__text-container">repository</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="https://github.com/TU-Delft-DCC/TU-Delft-DCC.github.io/edit/master/docs/software/testing_matlab.md"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Edit this page"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-pencil-alt"></i>
+  </span>
+<span class="headerbtn__text-container">suggest edit</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="../_sources/software/testing_matlab.md"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.md</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#writing-tests">
+   Writing tests
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#executing-tests">
+   Executing tests
+  </a>
+ </li>
+</ul>
+
+    </nav>
+</div>
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Testing with MATLAB</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#writing-tests">
+   Writing tests
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#executing-tests">
+   Executing tests
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
+                
+              <div>
+                
+  <div class="tex2jax_ignore mathjax_ignore section" id="testing-with-matlab">
+<h1>Testing with MATLAB<a class="headerlink" href="#testing-with-matlab" title="Permalink to this headline">#</a></h1>
+<p>In this guide, we will discuss writing and running tests with Matlab. See the <a class="reference external" href="https://nl.mathworks.com/help/matlab/matlab-unit-test-framework.html">documentation from Matlab</a> for more information.</p>
+<div class="section" id="writing-tests">
+<h2>Writing tests<a class="headerlink" href="#writing-tests" title="Permalink to this headline">#</a></h2>
+<p>Tests should be kept separate from the code base, usually in a folder <code class="docutils literal notranslate"><span class="pre">tests/</span></code>. The naming convention for writing a test for a particular MATLAB script is to prefix “test_” to the name of the script that is being tested. For example, a test for the file <code class="docutils literal notranslate"><span class="pre">draw_random_number.m</span></code> should be called <code class="docutils literal notranslate"><span class="pre">test_draw_random_number.m</span></code>. In general, Matlab will recognize any scripts that are prefixed or suffixed with the string “test” as tests.</p>
+<p>You can find an example below with the matlab syntax for writing <a class="reference external" href="https://nl.mathworks.com/help/matlab/class-based-unit-tests.html">Class-based unit tests</a>:</p>
+<div class="toggle docutils container">
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="c">% Test classes are created by inheriting (&lt; symbol) the  Matlab Testing </span><span class="w"></span>
+<span class="c">% framework.</span><span class="w"></span>
+<span class="c">%</span><span class="w"></span>
+<span class="c">% e.g. classdef nameOfTest &lt; matlab.unittest.TestCase</span><span class="w"></span>
+<span class="c">%      end</span><span class="w"></span>
+
+<span class="k">classdef</span><span class="w"> </span><span class="p">(</span><span class="n">TestTags</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">{</span><span class="s">&#39;Unit&#39;</span><span class="p">})</span><span class="w"> </span><span class="n">test_example</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="nb">matlab.unittest.TestCase</span><span class="w"> </span>
+<span class="c">%                              It&#39;s convention to name the test file </span><span class="w"></span>
+<span class="c">%                              test_&quot;filename being tested&quot;.m</span><span class="w"></span>
+<span class="c">%</span><span class="w"></span>
+<span class="c">%         TestTags are an optional feature that are useful for identifying </span><span class="w"></span>
+<span class="c">%         what kind of test you&#39;re coding, as you might only want to run </span><span class="w"></span>
+<span class="c">%         certain tests that are related.</span><span class="w"></span>
+
+<span class="w">    </span><span class="k">properties</span><span class="w"> </span>
+<span class="w">        </span><span class="c">% Class properties are not required, but are useful to contain </span><span class="w"></span>
+<span class="w">        </span><span class="c">% common parameters between tests.</span><span class="w"></span>
+<span class="w">    </span><span class="k">end</span><span class="w"></span>
+<span class="w">    </span>
+<span class="w">    </span><span class="k">methods</span><span class="w"> </span><span class="p">(</span><span class="n">TestClassSetup</span><span class="p">)</span><span class="w"> </span>
+<span class="w">        </span><span class="c">% TestClassSetup methods are not required, but are usually used to</span><span class="w"></span>
+<span class="w">        </span><span class="c">% setup common testing variables, or loading data. These methods</span><span class="w"></span>
+<span class="w">        </span><span class="c">% are executed *prior to* the (Test) methods.</span><span class="w"></span>
+<span class="w">    </span><span class="k">end</span><span class="w"></span>
+<span class="w">    </span>
+<span class="w">    </span><span class="k">methods</span><span class="w"> </span><span class="p">(</span><span class="n">TestClassTeardown</span><span class="p">)</span><span class="w"> </span>
+<span class="w">        </span><span class="c">% TestClassTeardown methods are not required, but are useful to</span><span class="w"></span>
+<span class="w">        </span><span class="c">% delete any files created during the test execution. These methods</span><span class="w"></span>
+<span class="w">        </span><span class="c">% are executed *after* the (Test) methods.</span><span class="w"></span>
+<span class="w">    </span><span class="k">end</span><span class="w"></span>
+<span class="w">    </span>
+<span class="w">    </span><span class="k">methods</span><span class="w"> </span><span class="p">(</span><span class="nb">Test</span><span class="p">)</span><span class="w"> </span><span class="c">% Each test is it&#39;s own method function, and takes </span><span class="w"></span>
+<span class="w">                   </span><span class="c">% testCase as their only argument.</span><span class="w"></span>
+
+<span class="w">        </span><span class="k">function</span><span class="w"> </span><span class="nf">test_sumNumbers_returns_expected_value_for_integer_case</span><span class="p">(</span>testCase<span class="p">)</span><span class="w"> </span>
+<span class="w">        </span><span class="c">% Use very descriptive test method names - this helps for debugging</span><span class="w"></span>
+<span class="w">        </span><span class="c">% when error occurs.</span><span class="w"></span>
+<span class="w">                        </span>
+<span class="w">            </span><span class="c">% Call the function you&#39;d like to test, e.g:</span><span class="w"></span>
+<span class="c">%             actualValue = sumNumbers(2,2); % Test example integer case, 2+2</span><span class="w"></span>
+<span class="w">            </span><span class="c">% Since the function sumNumbers is not defined, the test will</span><span class="w"></span>
+<span class="w">            </span><span class="c">% fail. Instead, we will define the actual value.</span><span class="w"></span>
+<span class="w">            </span><span class="n">actualValue</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">4</span><span class="p">;</span><span class="w"></span>
+
+
+<span class="w">            </span><span class="n">expectedValue</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">4</span><span class="p">;</span><span class="w"> </span><span class="c">% We know that we expect that 2+2 = 4</span><span class="w"></span>
+
+<span class="w">            </span><span class="n">testCase</span><span class="p">.</span><span class="n">assertEqual</span><span class="p">(</span><span class="n">expectedValue</span><span class="p">,</span><span class="w"> </span><span class="n">actualValue</span><span class="p">)</span><span class="w"></span>
+<span class="w">            </span><span class="c">% Assert functions are the core of unit tests; if it fails,</span><span class="w"></span>
+<span class="w">            </span><span class="c">% test log will return failed tests and details.</span><span class="w"></span>
+<span class="w">            </span><span class="c">%</span><span class="w"></span>
+<span class="w">            </span><span class="c">% They are called as methods of the testCase object.</span><span class="w"></span>
+<span class="w">            </span><span class="c">%</span><span class="w"></span>
+<span class="w">            </span><span class="c">% Example assert methods:</span><span class="w"></span>
+<span class="w">            </span><span class="c">%</span><span class="w"></span>
+<span class="w">            </span><span class="c">% assertEqual(expected, actual): Passes if the two input values</span><span class="w"></span>
+<span class="w">            </span><span class="c">%                                are equal.</span><span class="w"></span>
+<span class="w">            </span><span class="c">% assertTrue(boolValue): Passes if the value or statement is </span><span class="w"></span>
+<span class="w">            </span><span class="c">%                        true (e.g. 2&gt;1)</span><span class="w"></span>
+<span class="w">            </span><span class="c">% assertFalse(boolValue): Passes if the value or statement is</span><span class="w"></span>
+<span class="w">            </span><span class="c">%                         false (e.g. 1==0)</span><span class="w"></span>
+<span class="w">            </span><span class="c">%</span><span class="w"></span>
+<span class="w">            </span><span class="c">% See Matlab&#39;s documentation for more assert methods: </span><span class="w"></span>
+<span class="w">            </span><span class="c">% https://www.mathworks.com/help/matlab/ref/matlab.unittest.qualifications.assertable-class.html</span><span class="w"></span>
+<span class="w">        </span><span class="k">end</span><span class="w"></span>
+<span class="w">    </span><span class="k">end</span><span class="w"></span>
+
+<span class="k">end</span><span class="w"></span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="executing-tests">
+<h2>Executing tests<a class="headerlink" href="#executing-tests" title="Permalink to this headline">#</a></h2>
+<p>We will create a Matlab script called <code class="docutils literal notranslate"><span class="pre">run_testsuite.m</span></code> in the folder <code class="docutils literal notranslate"><span class="pre">tests/</span></code>. This function can run the tests present in the folder <code class="docutils literal notranslate"><span class="pre">tests/</span></code> and can create test reports.</p>
+<div class="toggle docutils container">
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="k">function</span><span class="w"> </span>result<span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nf">run_testsuite</span><span class="p">(</span>varargin<span class="p">)</span><span class="w"></span>
+<span class="c">%RUNTESTS - Run all tests and produce coverage report</span><span class="w"></span>
+<span class="c">%</span><span class="w"></span>
+<span class="c">% Requires Matlab version &gt;= R2017a</span><span class="w"></span>
+<span class="c">%</span><span class="w"></span>
+<span class="c">% This script is designed to be placed with the folder tests/ following</span><span class="w"></span>
+<span class="c">% the folder organization as seen below:</span><span class="w"></span>
+<span class="c">%</span><span class="w"></span>
+<span class="c">% - root/</span><span class="w"></span>
+<span class="c">%   | - src/</span><span class="w"></span>
+<span class="c">%   |   | - function_1.m</span><span class="w"></span>
+<span class="c">%   |   \ - function_2.m</span><span class="w"></span>
+<span class="c">%   |</span><span class="w"></span>
+<span class="c">%   \ - tests/</span><span class="w"></span>
+<span class="c">%       | - reports/    % Folder will be generated during testing</span><span class="w"></span>
+<span class="c">%       | - run_testsuite.m</span><span class="w"></span>
+<span class="c">%       | - test_function_1.m</span><span class="w"></span>
+<span class="c">%       \ - test_function_2.m</span><span class="w"></span>
+<span class="c">% </span><span class="w"></span>
+<span class="c">% Resources:</span><span class="w"></span>
+<span class="c">% https://nl.mathworks.com/help/matlab/ref/matlab.unittest.plugins.codecoverageplugin-class.html</span><span class="w"></span>
+<span class="c">%</span><span class="w"></span>
+<span class="c">% </span><span class="w"></span>
+<span class="c">% Parameters</span><span class="w"></span>
+<span class="c">% ----------</span><span class="w"></span>
+<span class="c">% srcFolderName : char, optional</span><span class="w"></span>
+<span class="c">%   Name of the source code directory. Defaults to &#39;pvmd&#39;.</span><span class="w"></span>
+<span class="c">% TestTag : char, optional</span><span class="w"></span>
+<span class="c">%   Only tests with this tag will be run. Defaults to running all tests,</span><span class="w"></span>
+<span class="c">% ExcludedFiles : cell, optional</span><span class="w"></span>
+<span class="c">%   List of filenames that will be excluded from the coverage report.</span><span class="w"></span>
+<span class="c">%   Defaults to reading the file &#39;excludedFiles.json&#39;.</span><span class="w"></span>
+<span class="c">% PDFReport : logical, optional</span><span class="w"></span>
+<span class="c">%   Add to generate a PDF report. Defaults to true.</span><span class="w"></span>
+<span class="c">% JUnitResults : logical, optional</span><span class="w"></span>
+<span class="c">%   Add to generate a JUnit report. Defaults to true.</span><span class="w"></span>
+<span class="c">% CoberturaCodeCoverageXML : logical, optional</span><span class="w"></span>
+<span class="c">%   Add to generate a XML Cobertura coverage report. Defaults to true.</span><span class="w"></span>
+<span class="c">% CoberturaCodeCoverageHTML : logical, optional</span><span class="w"></span>
+<span class="c">%   Add to generate a HTML Cobertura coverage report. Defaults to true.</span><span class="w"></span>
+<span class="c">%</span><span class="w"></span>
+<span class="c">%</span><span class="w"></span>
+<span class="c">% Returns</span><span class="w"></span>
+<span class="c">% -------</span><span class="w"></span>
+<span class="c">% result : matlab.unittest.TestResult</span><span class="w"></span>
+<span class="c">%</span><span class="w"></span>
+<span class="c">%</span><span class="w"></span>
+<span class="c">% Examples</span><span class="w"></span>
+<span class="c">% --------</span><span class="w"></span>
+<span class="c">%       result = run_testsuite(&#39;TestTag&#39;, &#39;Unit&#39;);   </span><span class="w"></span>
+<span class="c">%       result = run_testsuite(&#39;TestTag&#39;, &#39;Unit&#39;, ...</span><span class="w"></span>
+<span class="c">%                &#39;ExcludedFiles&#39;, {&#39;function_1.m&#39;);</span><span class="w"></span>
+<span class="c">% </span><span class="w"></span>
+
+<span class="n">p</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">inputParser</span><span class="p">;</span><span class="w"></span>
+<span class="n">p</span><span class="p">.</span><span class="n">addParameter</span><span class="p">(</span><span class="s">&#39;srcFolderName&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;src&#39;</span><span class="p">,</span><span class="w"> </span><span class="p">@</span><span class="nb">ischar</span><span class="p">);</span><span class="w"></span>
+<span class="n">p</span><span class="p">.</span><span class="n">addParameter</span><span class="p">(</span><span class="s">&#39;TestTag&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;&#39;</span><span class="p">,</span><span class="w"> </span><span class="p">@</span><span class="nb">ischar</span><span class="p">);</span><span class="w"></span>
+<span class="n">p</span><span class="p">.</span><span class="n">addParameter</span><span class="p">(</span><span class="s">&#39;ExcludedFiles&#39;</span><span class="p">,</span><span class="w"> </span><span class="p">{},</span><span class="w"> </span><span class="p">@</span><span class="nb">iscell</span><span class="p">);</span><span class="w"></span>
+<span class="n">p</span><span class="p">.</span><span class="n">addParameter</span><span class="p">(</span><span class="s">&#39;PDFReport&#39;</span><span class="p">,</span><span class="w"> </span><span class="nb">true</span><span class="p">,</span><span class="w"> </span><span class="p">@</span><span class="nb">islogical</span><span class="p">);</span><span class="w"></span>
+<span class="n">p</span><span class="p">.</span><span class="n">addParameter</span><span class="p">(</span><span class="s">&#39;JUnitResults&#39;</span><span class="p">,</span><span class="w"> </span><span class="nb">true</span><span class="p">,</span><span class="w"> </span><span class="p">@</span><span class="nb">islogical</span><span class="p">);</span><span class="w"></span>
+<span class="n">p</span><span class="p">.</span><span class="n">addParameter</span><span class="p">(</span><span class="s">&#39;CoberturaCodeCoverageXML&#39;</span><span class="p">,</span><span class="w"> </span><span class="nb">true</span><span class="p">,</span><span class="w"> </span><span class="p">@</span><span class="nb">islogical</span><span class="p">);</span><span class="w"></span>
+<span class="n">p</span><span class="p">.</span><span class="n">addParameter</span><span class="p">(</span><span class="s">&#39;CoberturaCodeCoverageHTML&#39;</span><span class="p">,</span><span class="w"> </span><span class="nb">true</span><span class="p">,</span><span class="w"> </span><span class="p">@</span><span class="nb">islogical</span><span class="p">);</span><span class="w"></span>
+
+<span class="n">p</span><span class="p">.</span><span class="n">parse</span><span class="p">(</span><span class="nb">varargin</span><span class="p">{:});</span><span class="w"></span>
+
+<span class="n">srcFolderName</span><span class="w">            </span><span class="p">=</span><span class="w"> </span><span class="n">p</span><span class="p">.</span><span class="n">Results</span><span class="p">.</span><span class="n">srcFolderName</span><span class="p">;</span><span class="w"></span>
+<span class="n">testTag</span><span class="w">                  </span><span class="p">=</span><span class="w"> </span><span class="n">p</span><span class="p">.</span><span class="n">Results</span><span class="p">.</span><span class="n">TestTag</span><span class="p">;</span><span class="w"></span>
+<span class="n">producePDFReport</span><span class="w">         </span><span class="p">=</span><span class="w"> </span><span class="n">p</span><span class="p">.</span><span class="n">Results</span><span class="p">.</span><span class="n">PDFReport</span><span class="p">;</span><span class="w"></span>
+<span class="n">produceJUnit</span><span class="w">             </span><span class="p">=</span><span class="w"> </span><span class="n">p</span><span class="p">.</span><span class="n">Results</span><span class="p">.</span><span class="n">JUnitResults</span><span class="p">;</span><span class="w"></span>
+<span class="n">produceCoberturaXML</span><span class="w">      </span><span class="p">=</span><span class="w"> </span><span class="n">p</span><span class="p">.</span><span class="n">Results</span><span class="p">.</span><span class="n">CoberturaCodeCoverageXML</span><span class="p">;</span><span class="w"></span>
+<span class="n">produceCoberturaHTML</span><span class="w">     </span><span class="p">=</span><span class="w"> </span><span class="n">p</span><span class="p">.</span><span class="n">Results</span><span class="p">.</span><span class="n">CoberturaCodeCoverageHTML</span><span class="p">;</span><span class="w"></span>
+<span class="n">excludedFiles</span><span class="w">            </span><span class="p">=</span><span class="w"> </span><span class="n">p</span><span class="p">.</span><span class="n">Results</span><span class="p">.</span><span class="n">ExcludedFiles</span><span class="p">;</span><span class="w"></span>
+
+<span class="c">% Import required Matlab libraries</span><span class="w"></span>
+<span class="nb">import</span><span class="w"> </span><span class="nb">matlab.unittest.TestSuite</span><span class="w"></span>
+<span class="nb">import</span><span class="w"> </span><span class="nb">matlab.unittest.TestRunner</span><span class="w"></span>
+<span class="nb">import</span><span class="w"> </span><span class="n">matlab</span><span class="p">.</span><span class="n">unittest</span><span class="p">.</span><span class="n">plugins</span><span class="p">.</span><span class="n">XMLPlugin</span><span class="w"></span>
+<span class="nb">import</span><span class="w"> </span><span class="n">matlab</span><span class="p">.</span><span class="n">unittest</span><span class="p">.</span><span class="n">plugins</span><span class="p">.</span><span class="n">TestReportPlugin</span><span class="w"></span>
+<span class="nb">import</span><span class="w"> </span><span class="n">matlab</span><span class="p">.</span><span class="n">unittest</span><span class="p">.</span><span class="n">plugins</span><span class="p">.</span><span class="n">CodeCoveragePlugin</span><span class="w"></span>
+<span class="nb">import</span><span class="w"> </span><span class="n">matlab</span><span class="p">.</span><span class="n">unittest</span><span class="p">.</span><span class="n">plugins</span><span class="p">.</span><span class="n">codecoverage</span><span class="p">.</span><span class="n">CoverageReport</span><span class="w"></span>
+<span class="nb">import</span><span class="w"> </span><span class="n">matlab</span><span class="p">.</span><span class="n">unittest</span><span class="p">.</span><span class="n">plugins</span><span class="p">.</span><span class="n">codecoverage</span><span class="p">.</span><span class="n">CoberturaFormat</span><span class="w"></span>
+<span class="nb">import</span><span class="w"> </span><span class="n">matlab</span><span class="p">.</span><span class="n">unittest</span><span class="p">.</span><span class="n">selectors</span><span class="p">.</span><span class="n">HasTag</span><span class="w"></span>
+
+<span class="c">% Define folder structure</span><span class="w"></span>
+<span class="n">rootDir</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">getRootDir</span><span class="p">();</span><span class="w"></span>
+<span class="n">testFolder</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">fullfile</span><span class="p">(</span><span class="n">rootDir</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;tests&#39;</span><span class="p">);</span><span class="w"></span>
+<span class="n">srcFolder</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">fullfile</span><span class="p">(</span><span class="n">rootDir</span><span class="p">,</span><span class="w"> </span><span class="n">srcFolderName</span><span class="p">);</span><span class="w"></span>
+<span class="n">reportFolder</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">fullfile</span><span class="p">(</span><span class="n">testFolder</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;reports&#39;</span><span class="p">);</span><span class="w"></span>
+
+<span class="c">% Add source folder plus all subfolders to the path.</span><span class="w"></span>
+<span class="n">addFilesToPath</span><span class="p">(</span><span class="n">srcFolder</span><span class="p">);</span><span class="w"></span>
+
+<span class="c">% Create test suite</span><span class="w"></span>
+<span class="n">suite</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">TestSuite</span><span class="p">.</span><span class="n">fromFolder</span><span class="p">(</span><span class="n">testFolder</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;IncludingSubfolders&#39;</span><span class="p">,</span><span class="w"> </span><span class="nb">true</span><span class="p">);</span><span class="w"></span>
+<span class="n">runner</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">TestRunner</span><span class="p">.</span><span class="n">withTextOutput</span><span class="p">;</span><span class="w"></span>
+
+<span class="c">% Exclude files from coverage report</span><span class="w"></span>
+<span class="n">codeFilePaths</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">excludeFilesFromCoverage</span><span class="p">(</span><span class="n">srcFolder</span><span class="p">,</span><span class="w"> </span><span class="n">excludedFiles</span><span class="p">);</span><span class="w"></span>
+
+<span class="c">% Produce JUnit report</span><span class="w"></span>
+<span class="k">if</span><span class="w"> </span><span class="n">produceJUnit</span><span class="w"></span>
+<span class="w">    </span><span class="n">mkdirIfNeeded</span><span class="p">(</span><span class="n">reportFolder</span><span class="p">)</span><span class="w"></span>
+<span class="w">    </span><span class="n">xmlFile</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">fullfile</span><span class="p">(</span><span class="n">reportFolder</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;junit.xml&#39;</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="n">runner</span><span class="p">.</span><span class="n">addPlugin</span><span class="p">(</span><span class="n">XMLPlugin</span><span class="p">.</span><span class="n">producingJUnitFormat</span><span class="p">(</span><span class="n">xmlFile</span><span class="p">));</span><span class="w"></span>
+<span class="k">end</span><span class="w"></span>
+
+<span class="c">% Prepare HTML format output</span><span class="w"></span>
+<span class="k">if</span><span class="w"> </span><span class="n">produceCoberturaHTML</span><span class="w"></span>
+<span class="w">    </span><span class="n">mkdirIfNeeded</span><span class="p">(</span><span class="n">reportFolder</span><span class="p">)</span><span class="w"></span>
+<span class="w">    </span><span class="n">reportFileHTML</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">&#39;coverage.html&#39;</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="n">pluginHTML</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">CodeCoveragePlugin</span><span class="p">.</span><span class="n">forFile</span><span class="p">(</span><span class="n">codeFilePaths</span><span class="p">,</span><span class="k">...</span><span class="w"></span>
+<span class="w">    </span><span class="s">&#39;Producing&#39;</span><span class="p">,</span><span class="w"> </span><span class="n">CoverageReport</span><span class="p">(</span><span class="n">reportFolder</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;MainFile&#39;</span><span class="p">,</span><span class="w"> </span><span class="n">reportFileHTML</span><span class="p">));</span><span class="w"></span>
+<span class="w">    </span><span class="n">runner</span><span class="p">.</span><span class="n">addPlugin</span><span class="p">(</span><span class="n">pluginHTML</span><span class="p">);</span><span class="w"></span>
+<span class="k">end</span><span class="w"></span>
+
+<span class="c">% Prepare XML format output</span><span class="w"></span>
+<span class="k">if</span><span class="w"> </span><span class="n">produceCoberturaXML</span><span class="w"></span>
+<span class="w">    </span><span class="n">mkdirIfNeeded</span><span class="p">(</span><span class="n">reportFolder</span><span class="p">)</span><span class="w"></span>
+<span class="w">    </span><span class="n">reportFileXML</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">fullfile</span><span class="p">(</span><span class="n">reportFolder</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;coverage.xml&#39;</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="n">reportFormat</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">CoberturaFormat</span><span class="p">(</span><span class="n">reportFileXML</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="n">pluginXML</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">CodeCoveragePlugin</span><span class="p">.</span><span class="n">forFile</span><span class="p">(</span><span class="n">codeFilePaths</span><span class="p">,</span><span class="k">...</span><span class="w"></span>
+<span class="w">        </span><span class="s">&#39;Producing&#39;</span><span class="p">,</span><span class="w"> </span><span class="n">reportFormat</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="n">runner</span><span class="p">.</span><span class="n">addPlugin</span><span class="p">(</span><span class="n">pluginXML</span><span class="p">);</span><span class="w"></span>
+<span class="k">end</span><span class="w"></span>
+
+<span class="c">% Produce PDF test report (Not supported on MacOS platform)</span><span class="w"></span>
+<span class="k">if</span><span class="w"> </span><span class="n">producePDFReport</span><span class="w"></span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="nb">ismac</span><span class="w"></span>
+<span class="w">        </span><span class="nb">warning</span><span class="p">(</span><span class="s">&#39;MATLAB:testArtifact:unSupportedPlatform&#39;</span><span class="p">,</span><span class="w"> </span><span class="k">...</span><span class="w"></span>
+<span class="w">            </span><span class="s">&#39;Producing a PDF test report is not currently supported on MacOS platforms.&#39;</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="k">else</span><span class="w"></span>
+<span class="w">        </span><span class="n">mkdirIfNeeded</span><span class="p">(</span><span class="n">reportFolder</span><span class="p">);</span><span class="w"></span>
+<span class="w">        </span><span class="n">reportFilePDF</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">fullfile</span><span class="p">(</span><span class="n">reportFolder</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;testreport.pdf&#39;</span><span class="p">);</span><span class="w"></span>
+<span class="w">        </span><span class="n">runner</span><span class="p">.</span><span class="n">addPlugin</span><span class="p">(</span><span class="n">TestReportPlugin</span><span class="p">.</span><span class="n">producingPDF</span><span class="p">(</span><span class="n">reportFilePDF</span><span class="p">));</span><span class="w">        </span>
+<span class="w">    </span><span class="k">end</span><span class="w"></span>
+<span class="k">end</span><span class="w"></span>
+
+<span class="c">% Select tests with specific TestTag</span><span class="w"></span>
+<span class="k">if</span><span class="w"> </span><span class="n">testTag</span><span class="w"></span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="o">~</span><span class="nb">isempty</span><span class="p">(</span><span class="n">suite</span><span class="p">.</span><span class="n">selectIf</span><span class="p">(</span><span class="n">HasTag</span><span class="p">(</span><span class="n">testTag</span><span class="p">)))</span><span class="w"></span>
+<span class="w">        </span><span class="n">suite</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">suite</span><span class="p">.</span><span class="n">selectIf</span><span class="p">(</span><span class="n">HasTag</span><span class="p">(</span><span class="n">testTag</span><span class="p">));</span><span class="w"></span>
+<span class="w">    </span><span class="k">end</span><span class="w"></span>
+<span class="k">end</span><span class="w"></span>
+
+<span class="c">% Run testsuite</span><span class="w"></span>
+<span class="n">result</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">runner</span><span class="p">.</span><span class="n">run</span><span class="p">(</span><span class="n">suite</span><span class="p">);</span><span class="w"></span>
+
+<span class="c">% Print coverage result to command window</span><span class="w"></span>
+<span class="k">if</span><span class="w"> </span><span class="nb">isfile</span><span class="p">(</span><span class="n">reportFileXML</span><span class="p">)</span><span class="w"></span>
+<span class="w">    </span><span class="n">printCoverage</span><span class="p">(</span><span class="n">reportFileXML</span><span class="p">)</span><span class="w"></span>
+<span class="k">end</span><span class="w"></span>
+
+
+<span class="k">function</span><span class="w"> </span><span class="nf">rootDir</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">getRootDir</span><span class="w"></span>
+<span class="w">    </span><span class="n">here</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">pwd</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="n">idx</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">strfind</span><span class="p">(</span><span class="n">here</span><span class="p">,</span><span class="w"> </span><span class="nb">filesep</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="n">rootDir</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">fullfile</span><span class="p">(</span><span class="n">here</span><span class="p">(</span><span class="mi">1</span><span class="p">:</span><span class="n">idx</span><span class="p">(</span><span class="k">end</span><span class="p">)</span><span class="o">-</span><span class="mi">1</span><span class="p">));</span><span class="w"></span>
+
+<span class="k">function</span><span class="w"> </span><span class="nf">mkdirIfNeeded</span><span class="p">(</span>dir<span class="p">)</span><span class="w"></span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="nb">exist</span><span class="p">(</span><span class="nb">dir</span><span class="p">,</span><span class="s">&#39;dir&#39;</span><span class="p">)</span><span class="w"> </span><span class="o">~=</span><span class="w"> </span><span class="mi">7</span><span class="w"></span>
+<span class="w">        </span><span class="nb">mkdir</span><span class="p">(</span><span class="nb">dir</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="k">end</span><span class="w"></span>
+
+<span class="k">function</span><span class="w"> </span><span class="nf">excludedFiles</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">readExcludedFiles</span><span class="w"></span>
+<span class="w">    </span><span class="k">try</span><span class="w"></span>
+<span class="w">        </span><span class="n">json</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">fileread</span><span class="p">(</span><span class="s">&#39;excludedFiles.json&#39;</span><span class="p">);</span><span class="w"></span>
+<span class="w">        </span><span class="n">excludedFiles</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">jsondecode</span><span class="p">(</span><span class="n">json</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="k">catch</span><span class="w"> </span><span class="n">ME</span><span class="w"></span>
+<span class="w">        </span><span class="n">msg</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">strcat</span><span class="p">(</span><span class="n">ME</span><span class="p">.</span><span class="n">message</span><span class="p">,</span><span class="w"> </span><span class="s">&#39; No files will be excluded from code coverage.&#39;</span><span class="p">);</span><span class="w"></span>
+<span class="w">        </span><span class="nb">warning</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span><span class="w"></span>
+<span class="w">    </span><span class="k">end</span><span class="w"></span>
+
+<span class="k">function</span><span class="w"> </span>codeFilePaths<span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nf">excludeFilesFromCoverage</span><span class="p">(</span>srcFolder, excludedFiles<span class="p">)</span><span class="w"></span>
+<span class="w">    </span><span class="n">dirOut</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">dir</span><span class="p">(</span><span class="nb">fullfile</span><span class="p">(</span><span class="n">srcFolder</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;**&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;*.m&#39;</span><span class="p">));</span><span class="w"></span>
+<span class="w">    </span><span class="n">codeFilePaths</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">string</span><span class="p">({</span><span class="n">dirOut</span><span class="p">.</span><span class="n">folder</span><span class="p">})</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nb">filesep</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nb">string</span><span class="p">({</span><span class="n">dirOut</span><span class="p">.</span><span class="n">name</span><span class="p">});</span><span class="w"></span>
+<span class="w">    </span><span class="n">codeFilePaths</span><span class="p">(</span><span class="nb">contains</span><span class="p">(</span><span class="n">codeFilePaths</span><span class="p">,</span><span class="w"> </span><span class="n">excludedFiles</span><span class="p">))</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">[];</span><span class="w"></span>
+
+<span class="k">function</span><span class="w"> </span><span class="nf">addFilesToPath</span><span class="p">(</span>srcFolder<span class="p">)</span><span class="w"></span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="nb">exist</span><span class="p">(</span><span class="n">srcFolder</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;dir&#39;</span><span class="p">)</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">7</span><span class="w"></span>
+<span class="w">        </span><span class="nb">addpath</span><span class="p">(</span><span class="nb">genpath</span><span class="p">(</span><span class="n">srcFolder</span><span class="p">));</span><span class="w"></span>
+<span class="w">    </span><span class="k">else</span><span class="w"></span>
+<span class="w">        </span><span class="nb">error</span><span class="p">(</span><span class="s">&#39;Cannot find source folder: %s&#39;</span><span class="p">,</span><span class="w"> </span><span class="n">srcFolder</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="k">end</span><span class="w"></span>
+
+<span class="k">function</span><span class="w"> </span><span class="nf">printCoverage</span><span class="p">(</span>coverageFile<span class="p">)</span><span class="w"></span>
+<span class="w">    </span><span class="n">S</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">parseXML</span><span class="p">(</span><span class="n">coverageFile</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="n">index</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">find</span><span class="p">(</span><span class="nb">strcmp</span><span class="p">(</span><span class="s">&#39;line-rate&#39;</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="n">S</span><span class="p">.</span><span class="n">Attributes</span><span class="p">.</span><span class="n">Name</span><span class="p">}));</span><span class="w"></span>
+<span class="w">    </span><span class="n">coverage</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">str2double</span><span class="p">(</span><span class="n">S</span><span class="p">.</span><span class="n">Attributes</span><span class="p">(</span><span class="n">index</span><span class="p">).</span><span class="n">Value</span><span class="p">)</span><span class="o">*</span><span class="mi">100</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="n">formatSpec</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">&#39;%.2f%% covered \n&#39;</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="nb">fprintf</span><span class="p">(</span><span class="n">formatSpec</span><span class="p">,</span><span class="w"> </span><span class="n">coverage</span><span class="p">)</span><span class="w"></span>
+</pre></div>
+</div>
+</div>
+<p>Additionally, we can selectively run test by defining TestTags. In the example above, we added the tag ‘Unit’. You can then call the function in the MATLAB command window to run all tests with the tag ‘Unit’ with</p>
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">result</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">run_testsuite</span><span class="p">(</span><span class="s">&#39;TestTag&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;Unit&#39;</span><span class="p">)</span><span class="w"></span>
+</pre></div>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>If you want to quickly check whether your tests pass without having to start up Matlab, you can also call <code class="docutils literal notranslate"><span class="pre">run_testsuite</span></code> from the terminal. In the folder containing the function, execute</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>matlab -batch <span class="s2">&quot;run_testsuite(&#39;TestTag&#39;, &#39;Unit&#39;)&quot;</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./software"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="testing_intro.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Software testing</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="git/intro.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Version control with Git</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            </footer>
+        </div>
+    </div>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By TU Delft Digital Competence Center<br/>
+  
+    <div class="extra_footer">
+      <a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.
+
+    </div>
+</p>
+        </footer>
+    </div>
+    
+</div>
+
+
+      </div>
+    </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
+
+  </body>
+</html>

@@ -1,0 +1,770 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Request Project Drive space &#8212; DCC Guides</title>
+    
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=62ba249389abaaa9ffc34bf36a076bdc1d65ee18" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/tabs.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=f31d14ad54b65d19161ba51d4ffff3a77ae00456"></script>
+    <script src="../_static/tabs.js"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Mount Project Drive on Server" href="project_drive_mounting.html" />
+    <link rel="prev" title="TU Delft data storage" href="storage_options.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">DCC Guides</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Computing infrastructure
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../infrastructure/getting_started.html">
+   Getting started
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../infrastructure/intro_servers.html">
+   Remote servers
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../infrastructure/VPS_request.html">
+     Request a Virtual Private Server
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../infrastructure/VPS_SSH.html">
+     Configure SSH Tunneling
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../infrastructure/moving_data.html">
+     Moving data to your server
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../infrastructure/VPS_SSL_Certs.html">
+     Configure SSL certificates
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../infrastructure/apache_webserver.html">
+     Setting up an Apache web server
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../infrastructure/gitlab/gitlab_intro.html">
+   TU Delft GitLab
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../infrastructure/gitlab/gitlab_groups.html">
+     Creating GitLab groups
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../infrastructure/gitlab/gitlab_docker.html">
+     Continuous Integration with Gitlab
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../infrastructure/gitlab/runner_matlab.html">
+     Setting up a Gitlab runner for MATLAB
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Data management
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="getting_started.html">
+   Getting started
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="fair.html">
+   FAIR data
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="publishing.html">
+     Prepare data for publishing
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="storage_options.html">
+   TU Delft data storage
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     Request Project Drive space
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="project_drive_mounting.html">
+     Mount Project Drive on Server
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="sync_unison.html">
+     Sync with Project Drive and SURFDrive with Unison
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Research software
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../software/getting_started.html">
+   Getting started
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../software/fair.html">
+   FAIR Software
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+  <label for="toctree-checkbox-5">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../software/checklist.html">
+     FAIR software checklist
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../software/software_management_plan.html">
+     Software management plan
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../software/testing_intro.html">
+   Software testing
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+  <label for="toctree-checkbox-6">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../software/testing_matlab.html">
+     Testing with MATLAB
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../software/git/intro.html">
+   Version control with Git
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
+  <label for="toctree-checkbox-7">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../software/git/branch_management.html">
+     Branch management
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../software/containers/intro.html">
+   Working with containers
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
+  <label for="toctree-checkbox-8">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../software/containers/docker_users.html">
+     Using a docker container with a GUI
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Training
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../resources/courses.html">
+   Courses and workshops
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../resources/curriculum.html">
+   Research Software Curriculum
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../resources/tools.html">
+   Tools
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Community
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../community/dcc.html">
+   About the DCC
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../community/contribute.html">
+   Contributing guidelines
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../community/code_of_conduct.html">
+   Code of Conduct
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+            <div class="navbar_extra_footer">
+            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+            </div>
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-repository-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Source repositories">
+      <i class="fab fa-github"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://github.com/TU-Delft-DCC/TU-Delft-DCC.github.io"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Source repository"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="headerbtn__text-container">repository</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="https://github.com/TU-Delft-DCC/TU-Delft-DCC.github.io/edit/master/docs/data/project_drive_request.md"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Edit this page"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-pencil-alt"></i>
+  </span>
+<span class="headerbtn__text-container">suggest edit</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="../_sources/data/project_drive_request.md"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.md</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#background">
+   Background
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#what-this-documentation-will-help-achieve">
+   What this documentation will help achieve
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#prerequisites">
+   Prerequisites
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#tools-software">
+   Tools/Software
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#steps">
+   Steps
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#step-1-request-project-drive-storage-via-the-tu-delft-ict-form-on-topdesk">
+     Step 1. Request Project Drive storage via the TU Delft ICT form on TopDesk
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#step-2-fill-and-send-the-form-according-to-your-data-storage-preferences-and-requirements">
+     Step 2. Fill and send the form according to your data storage preferences and requirements
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    </nav>
+</div>
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Request Project Drive space</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#background">
+   Background
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#what-this-documentation-will-help-achieve">
+   What this documentation will help achieve
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#prerequisites">
+   Prerequisites
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#tools-software">
+   Tools/Software
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#steps">
+   Steps
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#step-1-request-project-drive-storage-via-the-tu-delft-ict-form-on-topdesk">
+     Step 1. Request Project Drive storage via the TU Delft ICT form on TopDesk
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#step-2-fill-and-send-the-form-according-to-your-data-storage-preferences-and-requirements">
+     Step 2. Fill and send the form according to your data storage preferences and requirements
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
+                
+              <div>
+                
+  <div class="tex2jax_ignore mathjax_ignore section" id="request-project-drive-space">
+<h1>Request Project Drive space<a class="headerlink" href="#request-project-drive-space" title="Permalink to this headline">#</a></h1>
+<div class="section" id="background">
+<h2>Background<a class="headerlink" href="#background" title="Permalink to this headline">#</a></h2>
+<p>TU Delft offers several options for researchers to store their data. One of the most commonly recommended options is the Project Drive (Project Data, U:) for its large storage capacity and secure backups from the University.</p>
+</div>
+<div class="section" id="what-this-documentation-will-help-achieve">
+<h2>What this documentation will help achieve<a class="headerlink" href="#what-this-documentation-will-help-achieve" title="Permalink to this headline">#</a></h2>
+<p>This documentation will walk through the steps needed to request Project Drive storage from TU Delft ICT. This storage can then be accessed directly through <a class="reference external" href="https://webdata.tudelft.nl/">webdata.tudelft.nl</a> (uses WebDAV protocol), through a client like <a class="reference external" href="https://webdata.tudelft.nl/">WebDrive</a> on your local machine (click on the link and then the WebDrive heading to download and install this software for your operating system), or mounted to a TU Delft Virtual Private Server following the instructions <a class="reference internal" href="../infrastructure/VPS_request.html"><span class="doc std std-doc">here</span></a>.</p>
+</div>
+<div class="section" id="prerequisites">
+<h2>Prerequisites<a class="headerlink" href="#prerequisites" title="Permalink to this headline">#</a></h2>
+<ul class="simple">
+<li><p>TU Delft netID</p></li>
+<li><p>An Excel file with the netIDs of TU Delft collaborators who should have read/write access to the Project Drive storage space you are requesting (optional)</p></li>
+</ul>
+</div>
+<div class="section" id="tools-software">
+<h2>Tools/Software<a class="headerlink" href="#tools-software" title="Permalink to this headline">#</a></h2>
+<ul class="simple">
+<li><p>WebDrive (optional GUI to access data on Project Drive)</p></li>
+</ul>
+</div>
+<div class="section" id="steps">
+<h2>Steps<a class="headerlink" href="#steps" title="Permalink to this headline">#</a></h2>
+<ol class="simple">
+<li><p>Request Project Drive storage via the TU Delft ICT form on TopDesk</p></li>
+<li><p>Fill and send the form according to your data storage preferences and requirements</p></li>
+<li><p>Access your data storage on Project Drive</p></li>
+</ol>
+<div class="section" id="step-1-request-project-drive-storage-via-the-tu-delft-ict-form-on-topdesk">
+<h3>Step 1. Request Project Drive storage via the TU Delft ICT form on TopDesk<a class="headerlink" href="#step-1-request-project-drive-storage-via-the-tu-delft-ict-form-on-topdesk" title="Permalink to this headline">#</a></h3>
+<p>You can make a request for data storage via the <a class="reference external" href="https://tudelft.topdesk.net/tas/public/ssp/content/serviceflow?unid=21b6203ec6d74f00a45c32e6034dfc0c&amp;openedFromService=true">TopDesk self service portal</a>. Navigate to this form (requires netID sign in) and see below for guidance on how to fill in each of the sections.</p>
+</div>
+<div class="section" id="step-2-fill-and-send-the-form-according-to-your-data-storage-preferences-and-requirements">
+<h3>Step 2. Fill and send the form according to your data storage preferences and requirements<a class="headerlink" href="#step-2-fill-and-send-the-form-according-to-your-data-storage-preferences-and-requirements" title="Permalink to this headline">#</a></h3>
+<p>The form is divided into three sections: “Caller”, “Information about Requester and Data”, and “Data for a Research Project”.</p>
+<p>The <strong>Caller</strong> section should contain the contact information of the main administrator of this server. If you select your name, the fields below should be auto-populated with your building, phone number, email, department/program, organizational unit, and (sometimes) room.</p>
+<img width="547" alt="blurred3" src="https://user-images.githubusercontent.com/70349945/124717195-2e53b380-df05-11eb-914f-0f451a427e73.png">
+<hr class="docutils" />
+<p>In the next part you choose your preferences about data preservation. The first question asks whether you are setting up new storage on the Project Drive, or want to change existing storage. The next question is about the availability - see below for more information. The usual choice here is “Standard”.</p>
+<p><img alt="image" src="https://user-images.githubusercontent.com/70349945/124719093-12511180-df07-11eb-894b-827ca86613fd.png" /></p>
+<p>For the next question, you need to determine if your data is critical, sensitive, or standard, using these criteria:</p>
+<p><img alt="image" src="https://user-images.githubusercontent.com/70349945/124718801-c4d4a480-df06-11eb-9e48-5579640ba2a9.png" /></p>
+<p>There are two options for backup retention: standard and high. Data are backed up by ICT on a daily basis, so the retention time refers to the period for which these backups are stored. The standard option refers to 14 days of retention while in the other one the retention period is one year. In other words, if the retention time is set to 14 days (Standard) and you delete a file, you can restore it within those two weeks. If retention time is 1 year (High), you can restore it anytime within the year. For most situations, a Standard backup retention time is suitable.</p>
+<hr class="docutils" />
+<p>In the final section, you need to provide some information about your research project. Depending on your research needs, you should specify how much space you will need on the Project Drive to hold all your data, initially and into the planned future. It is important to know that the Project Drive storage is able to expand as your data grows, but you should make your best guess when requesting the space.</p>
+<p>At the bottom of this section you can attach an Excel file that contains the netIDs of TU Delft affiliated employees that should have read/write access to the storage you are requesting on the Project Drive. If access to the storage is required for TU Delft external researchers, this information can be added as well. Note that it is unusual that non-TU Delft personnel are added to Project Drive storage, and if you would like to do so you should provide a company-affiliated email address for each person you want to add.</p>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./data"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="storage_options.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">TU Delft data storage</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="project_drive_mounting.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Mount Project Drive on Server</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            </footer>
+        </div>
+    </div>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By TU Delft Digital Competence Center<br/>
+  
+    <div class="extra_footer">
+      <a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.
+
+    </div>
+</p>
+        </footer>
+    </div>
+    
+</div>
+
+
+      </div>
+    </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
+
+  </body>
+</html>
