@@ -1,37 +1,26 @@
 # Remote servers
 
-## About these guides
-These guides aim to give you a quick overview of research computing and research computing infrastructure (RCI). After reading these materials you will be to have an overview of how TU Delft can address your computational needs.
+The TU Delf offers employees the use of Faculty Managed Servers. The only condition is that it is not possible to use these servers to set up services that are already provided by the basic services of SSC ICT. All Faculty Managed Servers available as standard are virtual. 
 
-## Examples of research computing infrastructure
-- [TU Delft HPC](https://login.hpc.tudelft.nl/)
-- Virtual machines provided by TU Delft
-- National resources like [Cartesius Super Computer](https://userinfo.surfsara.nl/systems/cartesius) or [Lisa cluster](https://userinfo.surfsara.nl/systems/lisa)
+Hosting Faculty Managed Servers includes:
+* ICT provides the server, operating service (Windows, Linux  (Redhat Enterprise Linux (preferred), Ubuntu (LTS) and CentOS)) and network access. 
+* The user manages the server and can install whatever he wants within the given conditions (see form …) and is therefore provided with admin rights.
+* ICT provides backup, restore and virus scanning (Windows).
+* ICT ensures that the Operating System (OS) of the Server (e.g. security patches) is up to date except for Linux. 
+* User has the freedom to concentrate on his own applications that are needed for research.
 
-## Why you should care about research computing infrastructure
-> Sometimes you just can’t solve your research computing problems with a laptop alone. 
-- You’re trying to capture data from an experiment that’s running over several days. 
-- Your computer simulation needs more computer memory than you can fit into your laptop. 
-- Several members of your group need to use the same software installation.
+**Some use cases and examples**  
+- You might want to run an instance of a service. For example an ftp-server or a PostgreSQL database for your lab or research group, others.
+- You want to setup a server to host a static website or web application. 
+- You need a server to execute Gitlab-runners
 
 
-## Some things to keep in mind
-- A remote computer is not a server even though it could be.
-- Remote computers can also be Virtual Machines working on actual computers/hardware
-- Servers are meant to run continuously and provide a "service" often via http, to "client computers". It implies some understanding of networks, http protocols, and server software.
-
-For more information on how to get a Virtual Private Server read [this guide](./VPS_request.md)
-
-## Some use cases and examples
-1. You might want to run jobs in a remote machine instead of your desktop, specially when the computational task can take a lot of resources. 
-1. You might want to run an instance of a service. For example a geoserver, a postgresql database for your lab or research group, others.
-1. You need to use a cluster to run simulations or process large data sets.
-1. You want to setup a server to host a static website or web application. 
-
-## Basic skills 
+**General required skills**  
 - Working with the command line, shell scripting and linux
 - Working remotely and securely using ssh
 - Transfer files from one computer to another
 - Working with containers
 
 ## Table of Contents
+```{tableofcontents}
+```

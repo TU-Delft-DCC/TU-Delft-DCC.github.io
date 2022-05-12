@@ -5,7 +5,7 @@ author_1: Ashley Cryan
 author_2:
 ---
 
-# Setup SSL certificates
+# Configure SSL certificates
 
 ## Background
 It is common practice to have web servers serving content over HTTPS, which is the secure version of HTTP. In order to do this and make the connection secure, you need an SSL certificate from a certificate signing authority.

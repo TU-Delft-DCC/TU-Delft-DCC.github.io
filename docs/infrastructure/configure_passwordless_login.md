@@ -1,4 +1,4 @@
-# Secure login with ssh
+# Configure login with ssh
 
 ## Background
 
