@@ -5,5 +5,6 @@ Storing your data in a secure location is a key element of a successful project 
 The TU Delft offers various data storage options. A complete list is available throught the [Service desk](https://tudelft.topdesk.net/tas/public/ssp/content/detail/service?unid=f359caaa60264f99b0084941736786ae&from=feffb489-e1f9-49cd-8223-53ae0b70b609) (TU delft login required).
 
 
-## References
-[1]“Storage,” TU Delft. https://www.tudelft.nl/library/research-data-management/r/beheer/storage (accessed Nov. 02, 2021).
+## Table of contents
+```{tableofcontents}
+```
