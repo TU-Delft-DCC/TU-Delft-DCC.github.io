@@ -6,26 +6,26 @@
 - Are you a researcher interested in these topics?
 - Do you work and collaborate with researchers on these topics?
 
-We’re using [GitHub Discussions](https://github.com/TU-Delft-DCC/TU-Delft-DCC.github.io/discussions) as a place to connect with other members of our community. We hope that you:
+We’re using [**GitHub Discussions**](https://github.com/TU-Delft-DCC/TU-Delft-DCC.github.io/discussions) as a place to connect with other members of our community. We hope that you:
 * Ask questions about challenges you encounter
 * Share ideas and solutions
 * Engage with other community members
 * Be welcoming and open-minded. Remember that this is a community we
-build together 💪. See our [Code of Conduct](code_of_conduct.md) for more information.
+build together. See our [Code of Conduct](code_of_conduct.md) for more information 💪.
 
 ## How to participate
 Do you have questions, ideas or ongoing developments on FAIR related aspects, Open Science, training, etc? Would you like to point to specific resources and potential solutions or ideas?
 
 -  Use the [**Q&A**](https://github.com/TU-Delft-DCC/TU-Delft-DCC.github.io/discussions/categories/q-a) to ask a question on a specific topic, such as
-    - How do I generate a reproducible software development environment?
-    - Where can I find information on creating a Python package?
-    - How should I archive my software?
-    - How do I get started with git?
+    - _How do I generate a reproducible software development environment?_
+    - _Where can I find information on creating a Python package?_
+    - _How should I archive my software?_
+    - _How do I get started with git?_
 
 -  Use [**Ideas**](https://github.com/TU-Delft-DCC/TU-Delft-DCC.github.io/discussions/categories/ideas) to make proposals, for instance 
-    - Using jupyter hub for a workshop
-    - Using jupyter books to create educational resources
-    - Running monthly webinars for the community to transfer FAIR practices
+    - _Using jupyter hub for a workshop_
+    - _Using jupyter books to create educational resources_
+    - _Running monthly webinars for the community to transfer FAIR practices_
 
 - Use [**Solutions**](https://github.com/TU-Delft-DCC/TU-Delft-DCC.github.io/discussions/categories/solution) to point people to existing solutions or share your own. These solutions might end up on our Guides website to share with our community.
 
@@ -43,14 +43,19 @@ For the maintainers, here are some tips 💡 for getting started with Discussion
 
 ### Developing and building the guides locally
 1. Fork the repository to your own Github profile
-1. Configure your development environment in the terminal with `conda env create -f https://raw.githubusercontent.com/TU-Delft-DCC/TU-Delft-DCC.github.io/master/environment.yml`.
-1. Run `bash build.sh` to generate the documentation.
-1. Go to the `./_build/html/` folder and open the `index.html` file. This should launch the website with the latest version in your browser.
+1. Clone the repository
+1. Create a conda environment in the terminal with 
+
+    ```bash
+    conda env create -f environment.yml
+    ```
+1. Run `bash build.sh` to generate the documentation
+1. Go to the `./_build/html/` folder and open the `index.html` file. This should open the website in your browser.
 
 ### Deploying the website in your forked version
 1. Fork the repository to your own Github profile
 1. In your forked repository, under **Settings -> Pages** set Source to `gh-pages` and `/(root)` and press **Save**
-1. Either commit a new change to the repository to trigger the build action or manually trigger the action. To manually trigger the action, go to **Actions -> Deploy guides** (left) and press `Run workflow` and `Run workflow`.
+1. Either commit a new change to the repository to trigger the build action or manually trigger the action. To manually trigger the action, go to **Actions -> Deploy guides** and press `Run workflow` and `Run workflow`.
 
 ### You want to make some kind of change
 1. (**important**) announce your plan to the rest of the community *before you start working*. This announcement should be in the form of a (new) issue;
