@@ -1,0 +1,785 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Code Quality &#8212; TU Delft DCC guides</title>
+    
+  <link href="../../_static/css/theme.css" rel="stylesheet">
+  <link href="../../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../../_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script kind="utterances">
+
+    var commentsRunWhenDOMLoaded = cb => {
+    if (document.readyState != 'loading') {
+        cb()
+    } else if (document.addEventListener) {
+        document.addEventListener('DOMContentLoaded', cb)
+    } else {
+        document.attachEvent('onreadystatechange', function() {
+        if (document.readyState == 'complete') cb()
+        })
+    }
+}
+
+var addUtterances = () => {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src = "https://utteranc.es/client.js";
+    script.async = "async";
+
+    script.setAttribute("repo", "TU-Delft-DCC/TU-Delft-DCC.github.io.git");
+    script.setAttribute("issue-term", "pathname");
+    script.setAttribute("theme", "github-light");
+    script.setAttribute("label", "💬 comment");
+    script.setAttribute("crossorigin", "anonymous");
+
+    sections = document.querySelectorAll("div.section");
+    if (sections !== null) {
+        section = sections[sections.length-1];
+        section.appendChild(script);
+    }
+}
+commentsRunWhenDOMLoaded(addUtterances);
+</script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Documentation" href="../04_Documentation/README.html" />
+    <link rel="prev" title="Software Management" href="../02_Project_Setup/0_Project_Setup.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../../_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">TU Delft DCC guides</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../01_Welcome.html">
+   Welcome!
+  </a>
+ </li>
+</ul>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../01_Computing/01_README.html">
+   Research computing guides
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../01_Computing/02_Getting_started.html">
+     Getting started
+    </a>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../../01_Computing/02_Working_with_servers/01_Servers.html">
+     Working remotely with computers
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+    <label for="toctree-checkbox-2">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../01_Computing/02_Working_with_servers/01_VPS_request.html">
+       Request a Virtual Private Server
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../01_Computing/02_Working_with_servers/02_ConfiguringPasswordlessLogin.html">
+       Secure login with ssh
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../01_Computing/02_Working_with_servers/03_VPS_SSH.html">
+       SSH Tunneling
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../01_Computing/02_Working_with_servers/04_GivingSudoPrivilege.html">
+       Giving sudo privilege to a user
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../01_Computing/02_Working_with_servers/06_SSL_Certs.html">
+       SSL certificates for your server
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../01_Computing/02_Working_with_servers/07_ApacheWebServer.html">
+       Setting up a web server with Apache
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../../01_Computing/03_Containerization/01_Containers.html">
+     Working with containers
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+    <label for="toctree-checkbox-3">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../01_Computing/03_Containerization/02_podman.html">
+       Podman
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../02_Data/00_README.html">
+   Research data guides
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../02_Data/01_Getting_started.html">
+     Getting started
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../02_Data/01_Obtain.html">
+     Obtaining data
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../02_Data/02_Scrub.html">
+     Scrubing / Cleaning data
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../02_Data/03_Explore.html">
+     Exploring the data
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../02_Data/04_Model.html">
+     Modeling and Machine Learning
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../02_Data/05_Interpret.html">
+     Interpreting and Storytelling
+    </a>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../../02_Data/03_Storage/00_README.html">
+     Storage
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+    <label for="toctree-checkbox-5">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../02_Data/03_Storage/01_ProjectDrive_request.html">
+       Request Project Drive space
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../02_Data/03_Storage/02_Sync_Unison.html">
+       Sync with Unison
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../02_Data/03_Storage/03_Mount_ProjectDrive.html">
+       Mount Project Drive on Server
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="../00_README.html">
+   Research software guides
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+  <label for="toctree-checkbox-6">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../01_Intro/0_README.html">
+     Getting started
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../02_Project_Setup/0_Project_Setup.html">
+     Software Management
+    </a>
+   </li>
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     Code Quality
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../04_Documentation/README.html">
+     Documentation
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../05_Reproducibility/README.html">
+     Accessibility &amp; Reproducibility
+    </a>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../06_Advanced%20code%20management/01_CI_CD_devops.html">
+     Advanced code management
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
+    <label for="toctree-checkbox-7">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../06_Advanced%20code%20management/02_CI_GitLab_Docker.html">
+       Continuous Integration with a GitLab runner
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../06_Advanced%20code%20management/02_GitlabGroupArrangement.html">
+       Setting up groups and assigning contributors to the projects with the Gitlab
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../07_FAIR_checklist/checklist.html">
+     FAIR for research software guidelines
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../../_sources/03_Software/03_Code_quality/00_README.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/TU-Delft-DCC/TU-Delft-DCC.github.io.git"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        
+        <a class="edit-button" href="https://github.com/TU-Delft-DCC/TU-Delft-DCC.github.io.git/edit/master/03_Software/03_Code_quality/00_README.md"><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Edit this page"><i class="fas fa-pencil-alt"></i>suggest edit</button></a>
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#readability">
+   Readability
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#video">
+     Video
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#slides">
+     Slides
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#exercise">
+     Exercise
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#reusability">
+   Reusability
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id1">
+     Video
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id2">
+     Slides
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id3">
+     Exercise
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#robustness">
+   Robustness
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id4">
+     Video
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id5">
+     Slides
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id6">
+     Exercise
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Code Quality</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#readability">
+   Readability
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#video">
+     Video
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#slides">
+     Slides
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#exercise">
+     Exercise
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#reusability">
+   Reusability
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id1">
+     Video
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id2">
+     Slides
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id3">
+     Exercise
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#robustness">
+   Robustness
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id4">
+     Video
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id5">
+     Slides
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id6">
+     Exercise
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            
+              <div>
+                
+  <div class="tex2jax_ignore mathjax_ignore section" id="code-quality">
+<h1>Code Quality<a class="headerlink" href="#code-quality" title="Permalink to this headline">¶</a></h1>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The following content have been copied as is from the utrecht university github repository called <a class="reference external" href="https://utrechtuniversity.github.io/workshop-computational-reproducibility/docs/index.html">“Best practices in Writing reproducible code</a>. Retrieved on September, 2021.</p>
+</div>
+<p>Let’s start making our code readable and reusable!</p>
+<p>This section covers the following topics:</p>
+<ul class="simple">
+<li><p>code readability</p></li>
+<li><p>reusable code</p></li>
+<li><p>defensive programming</p></li>
+</ul>
+<p>Like the previous chapter, we have 3 short videos and accompanying exercises.
+Watch the video, then apply the exercises to your own project.
+<strong>Note:</strong> these exercises get you to work on your code in detail.
+Depending on how many issues you discover, it may take some time to refactor your code.
+Today, focus on identifying issues, and mark them with #TODO or equivalent, so you can find them later.
+<strong>We recommend spending a maximum of 20 minutes on each exercise.</strong>
+However, if you have time, do get started with refactoring your code!
+While code refactoring can be a time consuming exercise, it is also a great way to learn from your past mistakes, up your coding game, and significantly improve your code at the same time.</p>
+<p><em>Tip! Use #TODO or //TODO (depending on your comment marker) to easily find your tasks later on. Many IDEs extract these into a task list!</em></p>
+<p>The slides are linked below for reference, and be sure to ask for help when you need it!</p>
+<div class="section" id="readability">
+<h2>Readability<a class="headerlink" href="#readability" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="video">
+<h3>Video<a class="headerlink" href="#video" title="Permalink to this headline">¶</a></h3>
+<iframe src="https://player.vimeo.com/video/463572640" width="100%" height="400px">
+</iframe>
+<!-- ```{r}
+vembedr::embed_url("https://vimeo.com/463572640")
+``` -->
+</div>
+<div class="section" id="slides">
+<h3>Slides<a class="headerlink" href="#slides" title="Permalink to this headline">¶</a></h3>
+<iframe src="../../slides/slides_code-quality.html#3" width="100%" height="400px">
+</iframe>
+<!-- ```{r}
+knitr::include_url("../../slides/slides_code-quality.html#3")
+``` -->
+</div>
+<div class="section" id="exercise">
+<h3>Exercise<a class="headerlink" href="#exercise" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Use a linter to run through your code and identify style issues.</p></li>
+<li><p>Edit your code to improve the style compatibility, based on the feedback from your linter.
+If you work with Python, consider applying <a class="reference external" href="https://pypi.org/project/autopep8/">autopep8</a> to automatically fix linting issues.</p></li>
+<li><p>For the R users: a course participant found <a class="reference external" href="https://styler.r-lib.org/">styler</a>, which may do the same for R!</p></li>
+<li><p>If you find code that is hard to read, or variable names that need adjusting, make a note to work on it.
+(Again, use #TODO or another consistent label!)</p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="reusability">
+<h2>Reusability<a class="headerlink" href="#reusability" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id1">
+<h3>Video<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+<iframe src="https://player.vimeo.com/video/463647105" width="100%" height="400px">
+</iframe>
+<!-- ```{r}
+vembedr::embed_url("https://vimeo.com/463647105")
+``` -->
+</div>
+<div class="section" id="id2">
+<h3>Slides<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
+<iframe src="../../slides/slides_code-quality.html#12" width="100%" height="400px">
+</iframe>
+<!-- ```{r}
+knitr::include_url("../../slides/slides_code-quality.html#12")
+``` -->
+</div>
+<div class="section" id="id3">
+<h3>Exercise<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
+<p>Visualize your code.</p>
+<ul class="simple">
+<li><p>Use yellow for scripted code, purple for structured code (for-loops, functions, etc.), and green for comments</p></li>
+<li><p>Use any tool that works for you (powerpoint, word, paint, or good old pencils and paper)</p></li>
+<li><p>During this exercise, try to identify yellow parts that can be structured and turned into (a) function(s). Label them, or rewrite them if you have time.</p></li>
+<li><p>Make a screenshot or picture of your visualization, and share it on Teams!</p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="robustness">
+<h2>Robustness<a class="headerlink" href="#robustness" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id4">
+<h3>Video<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h3>
+<iframe src="https://player.vimeo.com/video/463647105" width="100%" height="400px">
+</iframe>
+<!-- ```{r}
+vembedr::embed_url("https://vimeo.com/463647105")
+``` -->
+</div>
+<div class="section" id="id5">
+<h3>Slides<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h3>
+<iframe src="../../slides/slides_code-quality.html#21" width="100%" height="400px">
+</iframe>
+<!-- ```{r}
+knitr::include_url("../../slides/slides_code-quality.html#21")
+``` -->
+</div>
+<div class="section" id="id6">
+<h3>Exercise<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Identify assumptions in your code</p>
+<ul>
+<li><p>What assumptions/expectations exist on your data or (user) input?</p></li>
+<li><p>What assumptions/expectations exist on the input of (a) function(s)?</p></li>
+</ul>
+</li>
+</ul>
+<p>Based on the assumptions/expectations you were able to identify, work on increasing the robustness of your code.
+Choose one:</p>
+<ul class="simple">
+<li><p>Make the input/data assumptions explicit</p>
+<ul>
+<li><p>Option 1: Explicitly state assumptions on data or input in your <a class="reference external" href="http://README.md">README.md</a>.</p></li>
+<li><p>Option 2: Write a piece of code that tests the validity of data/input, and reports an error if the expectations are not met.</p></li>
+</ul>
+</li>
+<li><p>Test the input for a function. Modify the code inside your function to:</p>
+<ul>
+<li><p>check the value of the arguments passed to your function using if/else statements;</p></li>
+<li><p>raise an error in case an argument is out of the range of acceptable values.</p></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./03_Software/03_Code_quality"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="../02_Project_Setup/0_Project_Setup.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Software Management</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="../04_Documentation/README.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Documentation</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            
+        </div>
+    </div>
+    <footer class="footer">
+  <p>
+    
+      By TU Delft DCC<br/>
+    
+      <div class="extra_footer">
+        <a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.
+
+      </div>
+  </p>
+</footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>

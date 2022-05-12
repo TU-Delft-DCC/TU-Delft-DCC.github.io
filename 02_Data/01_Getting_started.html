@@ -1,0 +1,689 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Getting started &#8212; TU Delft DCC guides</title>
+    
+  <link href="../_static/css/theme.css" rel="stylesheet">
+  <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script kind="utterances">
+
+    var commentsRunWhenDOMLoaded = cb => {
+    if (document.readyState != 'loading') {
+        cb()
+    } else if (document.addEventListener) {
+        document.addEventListener('DOMContentLoaded', cb)
+    } else {
+        document.attachEvent('onreadystatechange', function() {
+        if (document.readyState == 'complete') cb()
+        })
+    }
+}
+
+var addUtterances = () => {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src = "https://utteranc.es/client.js";
+    script.async = "async";
+
+    script.setAttribute("repo", "TU-Delft-DCC/TU-Delft-DCC.github.io.git");
+    script.setAttribute("issue-term", "pathname");
+    script.setAttribute("theme", "github-light");
+    script.setAttribute("label", "💬 comment");
+    script.setAttribute("crossorigin", "anonymous");
+
+    sections = document.querySelectorAll("div.section");
+    if (sections !== null) {
+        section = sections[sections.length-1];
+        section.appendChild(script);
+    }
+}
+commentsRunWhenDOMLoaded(addUtterances);
+</script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Obtaining data" href="01_Obtain.html" />
+    <link rel="prev" title="Research data guides" href="00_README.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">TU Delft DCC guides</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../01_Welcome.html">
+   Welcome!
+  </a>
+ </li>
+</ul>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../01_Computing/01_README.html">
+   Research computing guides
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../01_Computing/02_Getting_started.html">
+     Getting started
+    </a>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../01_Computing/02_Working_with_servers/01_Servers.html">
+     Working remotely with computers
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+    <label for="toctree-checkbox-2">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../01_Computing/02_Working_with_servers/01_VPS_request.html">
+       Request a Virtual Private Server
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../01_Computing/02_Working_with_servers/02_ConfiguringPasswordlessLogin.html">
+       Secure login with ssh
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../01_Computing/02_Working_with_servers/03_VPS_SSH.html">
+       SSH Tunneling
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../01_Computing/02_Working_with_servers/04_GivingSudoPrivilege.html">
+       Giving sudo privilege to a user
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../01_Computing/02_Working_with_servers/06_SSL_Certs.html">
+       SSL certificates for your server
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../01_Computing/02_Working_with_servers/07_ApacheWebServer.html">
+       Setting up a web server with Apache
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../01_Computing/03_Containerization/01_Containers.html">
+     Working with containers
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+    <label for="toctree-checkbox-3">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../01_Computing/03_Containerization/02_podman.html">
+       Podman
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="00_README.html">
+   Research data guides
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     Getting started
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="01_Obtain.html">
+     Obtaining data
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="02_Scrub.html">
+     Scrubing / Cleaning data
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="03_Explore.html">
+     Exploring the data
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="04_Model.html">
+     Modeling and Machine Learning
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="05_Interpret.html">
+     Interpreting and Storytelling
+    </a>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="03_Storage/00_README.html">
+     Storage
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+    <label for="toctree-checkbox-5">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="03_Storage/01_ProjectDrive_request.html">
+       Request Project Drive space
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="03_Storage/02_Sync_Unison.html">
+       Sync with Unison
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="03_Storage/03_Mount_ProjectDrive.html">
+       Mount Project Drive on Server
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../03_Software/00_README.html">
+   Research software guides
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+  <label for="toctree-checkbox-6">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../03_Software/01_Intro/0_README.html">
+     Getting started
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../03_Software/02_Project_Setup/0_Project_Setup.html">
+     Software Management
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../03_Software/03_Code_quality/00_README.html">
+     Code Quality
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../03_Software/04_Documentation/README.html">
+     Documentation
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../03_Software/05_Reproducibility/README.html">
+     Accessibility &amp; Reproducibility
+    </a>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../03_Software/06_Advanced%20code%20management/01_CI_CD_devops.html">
+     Advanced code management
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
+    <label for="toctree-checkbox-7">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../03_Software/06_Advanced%20code%20management/02_CI_GitLab_Docker.html">
+       Continuous Integration with a GitLab runner
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../03_Software/06_Advanced%20code%20management/02_GitlabGroupArrangement.html">
+       Setting up groups and assigning contributors to the projects with the Gitlab
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../03_Software/07_FAIR_checklist/checklist.html">
+     FAIR for research software guidelines
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/02_Data/01_Getting_started.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/TU-Delft-DCC/TU-Delft-DCC.github.io.git"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        
+        <a class="edit-button" href="https://github.com/TU-Delft-DCC/TU-Delft-DCC.github.io.git/edit/master/02_Data/01_Getting_started.md"><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Edit this page"><i class="fas fa-pencil-alt"></i>suggest edit</button></a>
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#publishing-fair-data">
+   Publishing (FAIR) data
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#working-with-data-in-research">
+   Working with data in research
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#context-and-goals-come-first">
+     Context and goals come first
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#start-with-an-abstract-or-design">
+     Start with an abstract or design
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#osemn">
+     OSEMN
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#references">
+   References
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Getting started</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#publishing-fair-data">
+   Publishing (FAIR) data
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#working-with-data-in-research">
+   Working with data in research
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#context-and-goals-come-first">
+     Context and goals come first
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#start-with-an-abstract-or-design">
+     Start with an abstract or design
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#osemn">
+     OSEMN
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#references">
+   References
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            
+              <div>
+                
+  <div class="tex2jax_ignore mathjax_ignore section" id="getting-started">
+<h1>Getting started<a class="headerlink" href="#getting-started" title="Permalink to this headline">¶</a></h1>
+<ul class="simple">
+<li><p>Learn basic concepts to work with data</p></li>
+<li><p>Understand the background</p></li>
+<li><p>Understand the skills associated to working with data</p></li>
+</ul>
+<p>When it comes to data, there are two main groups of activities that are quite generic in research:</p>
+<ul class="simple">
+<li><ol class="simple">
+<li><p>Working with data,</p></li>
+</ol>
+</li>
+<li><ol class="simple">
+<li><p>Publishing the data as part your research (this mostly known as research data)**.</p></li>
+</ol>
+</li>
+</ul>
+<p>In this guide we aim to give you a compact overview of aspects, considerations and things to keep in mind if you are planning to work with large or potenitially large volumes of data.</p>
+<div class="section" id="publishing-fair-data">
+<h2>Publishing (FAIR) data<a class="headerlink" href="#publishing-fair-data" title="Permalink to this headline">¶</a></h2>
+<p>Lets start at the end. Lets assume you have data to share with your scientific community and you want to make it in such a way that is as impactful and useful as possible. This implies you want your data to be compliant with FAIR principles/criteria.</p>
+<p><img alt="" src="https://www.openaire.eu/images/Guides/EC_FAIR_data.png" /></p>
+</div>
+<div class="section" id="working-with-data-in-research">
+<h2>Working with data in research<a class="headerlink" href="#working-with-data-in-research" title="Permalink to this headline">¶</a></h2>
+<p>Science has been widely impacted by software development practices, computer science and data science. The <strong>OSEMN (Obtain, Scrub, Explore, Model, Interpret) framework</strong> for data science has been widely adopted since the concept was introduced in 2010. It is not the only framework out there, but we will work with OSEMN for the simple reason that it’s easy to remember.</p>
+<div class="section" id="context-and-goals-come-first">
+<h3>Context and goals come first<a class="headerlink" href="#context-and-goals-come-first" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><p>A problem well stated is a problem half-solved.</p>
+</div></blockquote>
+<p>Start with the end in mind, that gives  a standard to evaluate the decisions to be made on the way to get there. (Then go from a plan A to a plan that works :)) Otherwise, we you run the risk of deciding that decisions are good just because they work with the dataset that we’ve found.</p>
+<p>We should be in the business of building models that solve problems, not inventing problems that our models happen to solve.</p>
+<p>Bare in mind that in the context of science, data is diverse, specific and domain focused, therefore aligning with your field and understanding the specifics of your domain is crucial. Always rely on your community, find champions in your field (or similar fields) and learn from them.</p>
+</div>
+<div class="section" id="start-with-an-abstract-or-design">
+<h3>Start with an abstract or design<a class="headerlink" href="#start-with-an-abstract-or-design" title="Permalink to this headline">¶</a></h3>
+<p>In <a class="reference external" href="https://datasciencemvp.com/articles/2019/04/16/aosemn/">“OSEMN is Awesome, but AOSEMN is Awesomer”</a>, Cliff Clive, gives great tips on how to start a data science research project by writing an abstract:</p>
+<blockquote>
+<div><p>At the start of your project, you won’t be able to summarize the work you haven’t done yet. But you should be able to put together ideas for most of these questions. And putting some thought into spelling out how you will know when you’ve got an answer is going to be extremely helpful for establishing the right perspective at the beginning.</p>
+</div></blockquote>
+<blockquote>
+<div><p>A good abstract should answer these questions:</p>
+</div></blockquote>
+<blockquote>
+<div><ul class="simple">
+<li><p><strong>End User:</strong> who has this problem and what are their needs?</p></li>
+<li><p><strong>Problem Statement:</strong> what are you trying to solve?</p></li>
+<li><p><strong>Motivation:</strong> why does this problem matter and how will our results meet that need?</p></li>
+<li><p><strong>Approach:</strong> what data should be useful for solving the problem and what kinds of models will able to turn the data into a solution?
+Results: what will our model output look like and how can we put it to use?</p></li>
+<li><p><strong>Conclusions:</strong> once we have our results, how can we evaluate them to show that the model is working?</p></li>
+</ul>
+</div></blockquote>
+<blockquote>
+<div><p>If we can provide well thought out answers to the first three questions, and provide a plan and conditions for success for the last three, we are setting ourselves up for a quick and effective workflow.</p>
+</div></blockquote>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This is approach can be also a great start for a data management plan.</p>
+</div>
+</div>
+<div class="section" id="osemn">
+<h3>OSEMN<a class="headerlink" href="#osemn" title="Permalink to this headline">¶</a></h3>
+<p><img alt="" src="https://s2.research.com/wp-content/uploads/2020/07/24110111/data-science-process-1.jpg" /></p>
+<ol class="simple">
+<li><p>Obtaining, storing and using/analyzing data</p></li>
+<li><p>Scrub data</p></li>
+<li><p>Explore data</p></li>
+<li><p>Model data</p></li>
+<li><p>Interpret results</p></li>
+</ol>
+<p>The following sections try to give you an overview of these different steps, but also basic skills you would need to go through them, and some examples of more advanced or complex scenarios.</p>
+</div>
+</div>
+<div class="section" id="references">
+<h2>References<a class="headerlink" href="#references" title="Permalink to this headline">¶</a></h2>
+<p>[1]J. Brownlee, “How To Work Through A Problem Like A Data Scientist,” Machine Learning Mastery, Dec. 18, 2014. <a class="reference external" href="https://machinelearningmastery.com/how-to-work-through-a-problem-like-a-data-scientist/">https://machinelearningmastery.com/how-to-work-through-a-problem-like-a-data-scientist/</a> (accessed Oct. 25, 2021).</p>
+<p>[2]“Snapshot.” Accessed: Oct. 25, 2021. [Online]. Available: <a class="reference external" href="https://machinelearningmastery.com/how-to-work-through-a-problem-like-a-data-scientist/">https://machinelearningmastery.com/how-to-work-through-a-problem-like-a-data-scientist/</a></p>
+<p>[3]“Data Science Curriculum for self-study,” KDnuggets. <a class="reference external" href="https://www.kdnuggets.com/data-science-curriculum-for-self-study.html/">https://www.kdnuggets.com/data-science-curriculum-for-self-study.html/</a> (accessed Oct. 25, 2021).</p>
+<p>[4]“Snapshot.” Accessed: Oct. 25, 2021. [Online]. Available: <a class="reference external" href="https://www.kdnuggets.com/2020/02/data-science-curriculum-self-study.html">https://www.kdnuggets.com/2020/02/data-science-curriculum-self-study.html</a></p>
+<p>[5]“dataists » A Taxonomy of Data Science.” <a class="reference external" href="http://www.dataists.com/2010/09/a-taxonomy-of-data-science/">http://www.dataists.com/2010/09/a-taxonomy-of-data-science/</a> (accessed Oct. 25, 2021).</p>
+<p>[6]“Snapshot.” Accessed: Oct. 25, 2021. [Online]. Available: <a class="reference external" href="http://www.dataists.com/2010/09/a-taxonomy-of-data-science/">http://www.dataists.com/2010/09/a-taxonomy-of-data-science/</a></p>
+<p>[7]C. Byrne, “Development Workflows for Data Scientists,” p. 28.</p>
+<p>[8]“Byrne - Development Workflows for Data Scientists.pdf.” Accessed: Oct. 29, 2021. [Online]. Available: <a class="reference external" href="https://resources.github.com/downloads/development-workflows-data-scientists.pdf">https://resources.github.com/downloads/development-workflows-data-scientists.pdf</a></p>
+<p>[9]H. Laser et al., “Data Science as a Service - Prototyping an integrated and consolidated IT infrastructure combining enterprise self-service platform and reproducible research (In: International Journal On Advances in Software, ISSN 1942-2628),” vol. 13, pp. 104–115, Jul. 2020.</p>
+<p>[10]“Full Text PDF.” Accessed: Oct. 25, 2021. [Online]. Available: <a class="reference external" href="https://www.researchgate.net/profile/Svetlana-Gerbel/publication/341234847_Data_Science_as_a_Service_-_Prototyping_an_integrated_and_consolidated_IT_infrastructure_combining_enterprise_self-service_platform_and_reproducible_research_In_International_Journal_On_Advances_in_So/links/5f07115fa6fdcc4ca459b678/">https://www.researchgate.net/profile/Svetlana-Gerbel/publication/341234847_Data_Science_as_a_Service_-_Prototyping_an_integrated_and_consolidated_IT_infrastructure_combining_enterprise_self-service_platform_and_reproducible_research_In_International_Journal_On_Advances_in_So/links/5f07115fa6fdcc4ca459b678/</a>
+Data-Science-as-a-Service-Prototyping-an-integrated-and-consolidated-IT-infrastructure-combining-enterprise-self-service-platform-and-reproducible-research-In-International-Journal-On-Advances-in-So.pdf</p>
+<p>[11]“ResearchGate Link.” Accessed: Oct. 25, 2021. [Online].
+Available: <a class="reference external" href="https://www.researchgate.net/publication/341234847_Data_Science_as_a_Service_-_Prototyping_an_integrated_and_consolidated_IT_infrastructure_combining_enterprise_self-service_platform_and_reproducible_research_In_International_Journal_On_Advances_in_So">https://www.researchgate.net/publication/341234847_Data_Science_as_a_Service_-_Prototyping_an_integrated_and_consolidated_IT_infrastructure_combining_enterprise_self-service_platform_and_reproducible_research_In_International_Journal_On_Advances_in_So</a></p>
+<p>[12]C. Clive, “OSEMN is Awesome, but AOSEMN is Awesomer,” Data Science MVP, Apr. 16, 2019. <a class="reference external" href="https://datasciencemvp.com/articles/2019/04/16/aosemn/">https://datasciencemvp.com/articles/2019/04/16/aosemn/</a> (accessed Oct. 29, 2021).</p>
+<p>[13]R. Lao, “A Beginner’s Guide to the Data Science Pipeline,” Medium, Dec. 19, 2019. <a class="reference external" href="https://towardsdatascience.com/a-beginners-guide-to-the-data-science-pipeline-a4904b2d8ad3">https://towardsdatascience.com/a-beginners-guide-to-the-data-science-pipeline-a4904b2d8ad3</a> (accessed Oct. 25, 2021).</p>
+<p>[14]“Snapshot.” Accessed: Oct. 25, 2021. [Online]. Available: <a class="reference external" href="https://towardsdatascience.com/">https://towardsdatascience.com/</a>
+a-beginners-guide-to-the-data-science-pipeline-a4904b2d8ad3</p>
+<p>[15]“data-science-process-1.jpg (1020×800).” <a class="reference external" href="https://s2.research.com/wp-content/uploads/2020/07/24110111/data-science-process-1.jpg">https://s2.research.com/wp-content/uploads/2020/07/24110111/data-science-process-1.jpg</a> (accessed Oct. 29, 2021).</p>
+<p>[16]“OSEMN is Awesome, but AOSEMN is Awesomer - Data Science MVP.” <a class="reference external" href="https://datasciencemvp.com/articles/2019/04/16/aosemn/">https://datasciencemvp.com/articles/2019/04/16/aosemn/</a> (accessed Oct. 29, 2021).</p>
+<p>[17]“What is a Data Pipeline? Process and Examples,” Stitch. <a class="reference external" href="https://www.stitchdata.com/resources/what-is-data-pipeline/">https://www.stitchdata.com/resources/what-is-data-pipeline/</a> (accessed Oct. 25, 2021).</p>
+<p>[18]“Snapshot.” Accessed: Oct. 25, 2021. [Online]. Available: <a class="reference external" href="https://www.stitchdata.com/resources/what-is-data-pipeline/">https://www.stitchdata.com/resources/what-is-data-pipeline/</a></p>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./02_Data"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="00_README.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Research data guides</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="01_Obtain.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Obtaining data</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            
+        </div>
+    </div>
+    <footer class="footer">
+  <p>
+    
+      By TU Delft DCC<br/>
+    
+      <div class="extra_footer">
+        <a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.
+
+      </div>
+  </p>
+</footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>

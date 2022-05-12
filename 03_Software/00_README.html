@@ -1,0 +1,670 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Research software guides &#8212; TU Delft DCC guides</title>
+    
+  <link href="../_static/css/theme.css" rel="stylesheet">
+  <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script kind="utterances">
+
+    var commentsRunWhenDOMLoaded = cb => {
+    if (document.readyState != 'loading') {
+        cb()
+    } else if (document.addEventListener) {
+        document.addEventListener('DOMContentLoaded', cb)
+    } else {
+        document.attachEvent('onreadystatechange', function() {
+        if (document.readyState == 'complete') cb()
+        })
+    }
+}
+
+var addUtterances = () => {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src = "https://utteranc.es/client.js";
+    script.async = "async";
+
+    script.setAttribute("repo", "TU-Delft-DCC/TU-Delft-DCC.github.io.git");
+    script.setAttribute("issue-term", "pathname");
+    script.setAttribute("theme", "github-light");
+    script.setAttribute("label", "💬 comment");
+    script.setAttribute("crossorigin", "anonymous");
+
+    sections = document.querySelectorAll("div.section");
+    if (sections !== null) {
+        section = sections[sections.length-1];
+        section.appendChild(script);
+    }
+}
+commentsRunWhenDOMLoaded(addUtterances);
+</script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Getting started" href="01_Intro/0_README.html" />
+    <link rel="prev" title="Mount Project Drive on Server" href="../02_Data/03_Storage/03_Mount_ProjectDrive.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">TU Delft DCC guides</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../01_Welcome.html">
+   Welcome!
+  </a>
+ </li>
+</ul>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../01_Computing/01_README.html">
+   Research computing guides
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../01_Computing/02_Getting_started.html">
+     Getting started
+    </a>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../01_Computing/02_Working_with_servers/01_Servers.html">
+     Working remotely with computers
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+    <label for="toctree-checkbox-2">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../01_Computing/02_Working_with_servers/01_VPS_request.html">
+       Request a Virtual Private Server
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../01_Computing/02_Working_with_servers/02_ConfiguringPasswordlessLogin.html">
+       Secure login with ssh
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../01_Computing/02_Working_with_servers/03_VPS_SSH.html">
+       SSH Tunneling
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../01_Computing/02_Working_with_servers/04_GivingSudoPrivilege.html">
+       Giving sudo privilege to a user
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../01_Computing/02_Working_with_servers/06_SSL_Certs.html">
+       SSL certificates for your server
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../01_Computing/02_Working_with_servers/07_ApacheWebServer.html">
+       Setting up a web server with Apache
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../01_Computing/03_Containerization/01_Containers.html">
+     Working with containers
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+    <label for="toctree-checkbox-3">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../01_Computing/03_Containerization/02_podman.html">
+       Podman
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../02_Data/00_README.html">
+   Research data guides
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../02_Data/01_Getting_started.html">
+     Getting started
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../02_Data/01_Obtain.html">
+     Obtaining data
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../02_Data/02_Scrub.html">
+     Scrubing / Cleaning data
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../02_Data/03_Explore.html">
+     Exploring the data
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../02_Data/04_Model.html">
+     Modeling and Machine Learning
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../02_Data/05_Interpret.html">
+     Interpreting and Storytelling
+    </a>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../02_Data/03_Storage/00_README.html">
+     Storage
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+    <label for="toctree-checkbox-5">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../02_Data/03_Storage/01_ProjectDrive_request.html">
+       Request Project Drive space
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../02_Data/03_Storage/02_Sync_Unison.html">
+       Sync with Unison
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../02_Data/03_Storage/03_Mount_ProjectDrive.html">
+       Mount Project Drive on Server
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 current active has-children">
+  <a class="current reference internal" href="#">
+   Research software guides
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+  <label for="toctree-checkbox-6">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="01_Intro/0_README.html">
+     Getting started
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="02_Project_Setup/0_Project_Setup.html">
+     Software Management
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="03_Code_quality/00_README.html">
+     Code Quality
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="04_Documentation/README.html">
+     Documentation
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="05_Reproducibility/README.html">
+     Accessibility &amp; Reproducibility
+    </a>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="06_Advanced%20code%20management/01_CI_CD_devops.html">
+     Advanced code management
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
+    <label for="toctree-checkbox-7">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="06_Advanced%20code%20management/02_CI_GitLab_Docker.html">
+       Continuous Integration with a GitLab runner
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="06_Advanced%20code%20management/02_GitlabGroupArrangement.html">
+       Setting up groups and assigning contributors to the projects with the Gitlab
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="07_FAIR_checklist/checklist.html">
+     FAIR for research software guidelines
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/03_Software/00_README.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/TU-Delft-DCC/TU-Delft-DCC.github.io.git"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        
+        <a class="edit-button" href="https://github.com/TU-Delft-DCC/TU-Delft-DCC.github.io.git/edit/master/03_Software/00_README.md"><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Edit this page"><i class="fas fa-pencil-alt"></i>suggest edit</button></a>
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#about-this-guide">
+   About this guide
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#what-is-research-software">
+   What is research software
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#what-is-not-research-software-in-our-view">
+   What is not research software in our view
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#examples-of-research-software-outputs">
+     Examples of research software outputs
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#why-should-you-care-about-research-software">
+     Why should you care about research software?
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#who-does-research-software">
+     Who does research software?
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#the-rse-role">
+     The RSE role
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Research software guides</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#about-this-guide">
+   About this guide
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#what-is-research-software">
+   What is research software
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#what-is-not-research-software-in-our-view">
+   What is not research software in our view
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#examples-of-research-software-outputs">
+     Examples of research software outputs
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#why-should-you-care-about-research-software">
+     Why should you care about research software?
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#who-does-research-software">
+     Who does research software?
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#the-rse-role">
+     The RSE role
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            
+              <div>
+                
+  <div class="tex2jax_ignore mathjax_ignore section" id="research-software-guides">
+<h1>Research software guides<a class="headerlink" href="#research-software-guides" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="about-this-guide">
+<h2>About this guide<a class="headerlink" href="#about-this-guide" title="Permalink to this headline">¶</a></h2>
+<p>This guide aims to give you a quick overview of research software concepts and best practices. After reading these materials you will be able to produce FAIR enough software in the context of your research.</p>
+<p>Bare in mind that even though data analysis involves scripting, and writing code, in the “Research data guides” we focus on the processes of working with data, while in these guides our focus will be on the quality of the scripts you right. Once you code regularly and in different projects, you will feel the need of managing your software as much as your data. Things like reusability, reproducibility and readability will become increasinly important to save you and others time.</p>
+<p><img alt="Research software" src="../_images/rs_intro.jpg" /></p>
+</div>
+<div class="section" id="what-is-research-software">
+<h2>What is research software<a class="headerlink" href="#what-is-research-software" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><p>Research software engineering is the use of software engineering practices in research applications. The term was proposed in a research paper in 2010 in response to an empirical survey on tools used for software development in research projects. It started to be used in United Kingdom in 2012, when it was needed to define the type of software development needed in research. <strong>This focuses on reproducibility, reusability, and accuracy of data analysis and applications created for research</strong>. <a class="reference external" href="https://en.wikipedia.org/wiki/Research_software_engineering">Read more…</a>.</p>
+</div></blockquote>
+<blockquote>
+<div><p>“Software that is used to generate, process or analyse results that you intend to appear in a publication <a class="reference external" href="https://zenodo.org/record/14809#.YNnss-gzZPY">Read more…</a></p>
+</div></blockquote>
+<p>Think of it as software applied in research, in contrast to research applied in industrial or business applications.</p>
+</div>
+<div class="section" id="what-is-not-research-software-in-our-view">
+<h2>What is not research software in our view<a class="headerlink" href="#what-is-not-research-software-in-our-view" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>Research Software is not just software that uses data.</p></li>
+<li><p>Research Software is not just Data Science, even though it is heavily influenced by this field.</p></li>
+<li><p>The main focus of research software is not to produce innovative products, platforms or services. It is focused on prodicing reproducible software to advance research.</p></li>
+<li><p>Therefore research software is not software development for services, businesses or companies.</p></li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>It might be the case that tools developed in the context of research evolve towards useful packages that require maintanance and support, but this emerges from consolidated and mature scientific communities, in an open source manner.</p>
+</div>
+<div class="section" id="examples-of-research-software-outputs">
+<h3>Examples of research software outputs<a class="headerlink" href="#examples-of-research-software-outputs" title="Permalink to this headline">¶</a></h3>
+<p>Research software projects can be simple or more complex:</p>
+<ul class="simple">
+<li><p>A simple script or set of scripts where you show how an analysis is done.</p></li>
+<li><p>A simple jupyter-notebook or series of jupyter notebooks where you deliver text, plots and code-snippets related to a research task or result.</p></li>
+<li><p>Packages that you use in your research (Numpy, Pandas or your own custom package )</p></li>
+<li><p>Research infrastructure, tools and stacks(spyder, jupyter hub, jupyter notebooks, jupyter lab, docker, python, etc.)</p></li>
+</ul>
+</div>
+<div class="section" id="why-should-you-care-about-research-software">
+<h3>Why should you care about research software?<a class="headerlink" href="#why-should-you-care-about-research-software" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Scientific software packages and tools allow researchers to make use of computing and data to ask new research questions and approach research from a computational standpoint.</p></li>
+<li><p>The emergence of open source tools and the adoption of software best practices in all science domains have changed the way in which researchers collaborate and produce science.</p></li>
+<li><p>Research software empowers researchers with tools, practices and culture.</p></li>
+<li><p>Adopting best practices in your own research software projects enable you to be more productive, effective, get feedback fasterm, collaborate with others and refine your workflows with automation.</p></li>
+</ul>
+</div>
+<div class="section" id="who-does-research-software">
+<h3>Who does research software?<a class="headerlink" href="#who-does-research-software" title="Permalink to this headline">¶</a></h3>
+<p><strong>Essentially researchers and/or RSEs, Data managers.</strong></p>
+</div>
+<div class="section" id="the-rse-role">
+<h3>The RSE role<a class="headerlink" href="#the-rse-role" title="Permalink to this headline">¶</a></h3>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The role of Research Software Engineers (RSEs) emerged within research groups where some members were doing mostly software development for the research group. In this context the need for more advanced support and setup of research infrastructure, adoption of best practices or dedicated development work is taken care by researchers that adopted a software development culture. Therefore a research software engineer has not only a technical background, but also a scientific and research culture. Bare in mind that there are also many researchers that have a software engineering and can also be doing intensive research software engineering. Another case could be that someone with a computer science background joins a research group and embeds into a knowledge domain for a period of time and contributes with this background to the research groups.</p>
+</div>
+<!-- ### What is required to succesfully take advantage of research software?
+- Aim to make your project reusable by you and your research group. Try to follow our guides, it will give you a quick overview of what it takes to produce more reproducible code.
+- Understand what is research software. It is a set of specialized research activities, but it is also a culture.
+- Understand how to use it and adopt it intentionally in your research group.
+- Understand how to collaborate in research software projects.
+- Engage in the use, design or production of research software, don't try to outsource it.
+- Work on software that you want to use first for your research, then think for larger audiences. 
+In order to take advantage of research best practices, culture and tools it is not enough to produce software, or work with a research software engineer. Putting together a researchers and a research software engineer without a proper cuture and expectation of what can be done and what is the role about can create a lot of challenges.  -->
+</div>
+</div>
+<div class="toctree-wrapper compound">
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./03_Software"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="../02_Data/03_Storage/03_Mount_ProjectDrive.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Mount Project Drive on Server</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="01_Intro/0_README.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Getting started</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            
+        </div>
+    </div>
+    <footer class="footer">
+  <p>
+    
+      By TU Delft DCC<br/>
+    
+      <div class="extra_footer">
+        <a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.
+
+      </div>
+  </p>
+</footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>
