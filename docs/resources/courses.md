@@ -5,7 +5,7 @@ The TU Delft organises courses for researchers on data management, research soft
 
 :::{panels}
 :column: col-lg-6 p-2
-:card:
+:card: shadow
 :header: bg-warning
 :footer: bg-white
 
@@ -19,8 +19,7 @@ The TU Delft organises courses for researchers on data management, research soft
 
 +++
 ```{link-button} https://www.tudelft.nl/library/research-data-management/r/training-evenementen/training-voor-onderzoekers
-:type: ref
-:classes: btn-outline-primary btn-block stretched-line
+:classes: btn-primary btn-block stretched-line text-white
 :text: Sign up
 ```
 ---
@@ -31,8 +30,8 @@ The TU Delft organises courses for researchers on data management, research soft
 
 +++
 ```{link-button} https://www.tudelft.nl/library/research-data-management/r/training-evenementen/training-voor-onderzoekers/coderefinery-workshop
-:type: ref
-:classes: btn-outline-primary btn-block stretched-line
+:type: url
+:classes: btn-primary btn-block stretched-line text-white
 :text: Sign up
 ```
 
