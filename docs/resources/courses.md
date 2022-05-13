@@ -7,6 +7,7 @@ The TU Delft organises courses for researchers on data management, research soft
 :column: col-lg-6 p-2
 :card:
 :header: bg-warning
+:footer: bg-white
 
 **The Carpentries**
 ^^^
@@ -16,14 +17,25 @@ The TU Delft organises courses for researchers on data management, research soft
 - [Data Carpentry](https://datacarpentry.org/lessons/)
 - [Library Carpentry](https://librarycarpentry.org/lessons/)
 
-Sign up through the [TU Delft library](https://www.tudelft.nl/library/research-data-management/r/training-evenementen/training-voor-onderzoekers)
++++
+```{link-button} https://www.tudelft.nl/library/research-data-management/r/training-evenementen/training-voor-onderzoekers
+:type: ref
+:classes: btn-outline-primary btn-block stretched-line
+:text: Sign up
+```
 ---
 
 **CodeRefinery**
 ^^^
-[CodeRefinery](https://coderefinery.org/) acts as a hub for FAIR (Findable, Accessible, Interoperable, and Reusable) software practices. The main focus is on professional tools for efficiently writing and maintaining research software.
+[CodeRefinery](https://coderefinery.org/) acts as a hub for FAIR (Findable, Accessible, Interoperable, and Reusable) software practices. The main focus is on professional tools for efficiently writing and maintaining research software, focussed on open source software.
 
-Sign up through the [TU Delft library](https://www.tudelft.nl/library/research-data-management/r/training-evenementen/training-voor-onderzoekers/coderefinery-workshop)
++++
+```{link-button} https://www.tudelft.nl/library/research-data-management/r/training-evenementen/training-voor-onderzoekers/coderefinery-workshop
+:type: ref
+:classes: btn-outline-primary btn-block stretched-line
+:text: Sign up
+```
+
 
 ---
 **eScience Center**
