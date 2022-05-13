@@ -11,7 +11,7 @@ If you would like to publish your data collection in 4TU.ResearchData or another
 
 - To learn more about research data management, you can participate in an introductory workshop on [Research Data Management](https://www.tudelft.nl/en/library/research-data-management/r/training-events/training-for-researchers/research-data-management-101) offered by TU Delft, or review materials from online resources. 
 
-- [Managing and Sharing Research Data](https://www.fosteropenscience.eu/learning/managing-and-sharing-research-data/#/id/5b2ccc7d7ce0b17553f69063) course from [FOSTER](https://www.fosteropenscience.eu/) - e-learning platform that brings together the training resources addressed to those who need to develop strategies and skills for implementing Open Science practices in their daily workflows 
+- [Managing and Sharing Research Data](https://www.fosteropenscience.eu/learning/managing-and-sharing-research-data/) course from [FOSTER](https://www.fosteropenscience.eu/) - e-learning platform that brings together the training resources addressed to those who need to develop strategies and skills for implementing Open Science practices in their daily workflows 
 
 - See a videos on [best practices](https://ukdataservice.ac.uk/learning-hub/research-data-management/format-your-data/organising/) on organising data files from [UK Data Service](https://ukdataservice.ac.uk/) 
 
