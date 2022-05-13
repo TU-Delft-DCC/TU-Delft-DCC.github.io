@@ -22,8 +22,8 @@ These materials represent a curated curriculum designed to help you develop and 
 * [Intro to version control with Git from Code Refinery](https://coderefinery.github.io/git-intro/) – self-paced introductory lesson to version control using Git
 * [Git Intro video lesson from Code Refinery - Day 1](https://www.youtube.com/watch?v=QcwQ8jeaHmc) - Recorded lesson from a May 2021 Code Refinery workshop on material in Intro to version control with Git, part 1/2
 * [Git Intro video lesson from Code Refinery - Day 2](https://www.youtube.com/watch?v=MeHB_Fjssjw) - Recorded lesson from a May 2021 Code Refinery workshop on material in Intro to version control with Git, part 2/2
-* [Branching and merging](https://coderefinery.github.io/git-intro/06-branches/) – lesson from Code Refinery on concept of branching in Git (featuring octopus diagram)
-* [What is .gitignore?](https://www.freecodecamp.org/news/gitignore-what-is-it-and-how-to-add-to-repo/#:~:text=The%20.,to%20ignore%20in%20a%20project.&text=gitignore%20file%20is%20usually%20placed,all%20of%20your%20Git%20repositories.) – introduction to how and why to use the .gitignore file to not track some files in a project folder (e.g., because of their size or sensitivity)
+* [Branching and merging](https://coderefinery.github.io/git-intro/branches/) – lesson from Code Refinery on concept of branching in Git (featuring octopus diagram)
+* [What is .gitignore?](https://www.freecodecamp.org/news/gitignore-what-is-it-and-how-to-add-to-repo/) – introduction to how and why to use the .gitignore file to not track some files in a project folder (e.g., because of their size or sensitivity)
 * [Git command cheat sheet](https://www.atlassian.com/git/tutorials/atlassian-git-cheatsheet) – commonly used Git commands in one page that can also be downloaded
 
 ## GitHub/GitLab (remote repositories)
@@ -44,7 +44,7 @@ These materials represent a curated curriculum designed to help you develop and 
 * [Managing Conda environments](https://conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html) - documentation on performing a range of common tasks with Conda using the command line
 
 ## Python
-* [Scientific Computing with Python](https://www.freecodecamp.org/learn/scientific-computing-with-python/#python-for-everybody) - a free video course series that teaches the basics of using Python 3
+* [Scientific Computing with Python](https://www.freecodecamp.org/learn/scientific-computing-with-python/) - a free video course series that teaches the basics of using Python 3
 * [Applied Data Science with Python Specialization](https://www.coursera.org/specializations/data-science-python?utm_source=gg&utm_medium=sem&utm_campaign=29-AppliedDataSciencePython-ROW&utm_content=29-AppliedDataSciencePython-ROW&campaignid=13259947800&adgroupid=117959621210&device=c&keyword=introduction%20to%20python&matchtype=b&network=g&devicemodel=&adpostion=&creativeid=524072187253&hide_mobile_promo&gclid=CjwKCAjwjdOIBhA_EiwAHz8xmzgKFVlySbCes2TmwDAB08gMJM3xW3QfOXp3NjVhym45aLS3nbCaFBoC3LEQAvD_BwE) - Coursera course in which you can enroll for free 
 * [LearnPython.org](https://www.learnpython.org/) - Whether you are an experienced programmer or not, this website is intended for everyone who wishes to learn the Python programming language
 * [Programming with Python from Software Carpentries](https://swcarpentry.github.io/python-novice-inflammation/) - this introduction to Python is built around a common scientific task: data analysis
@@ -77,7 +77,7 @@ These materials represent a curated curriculum designed to help you develop and 
 * [R for Social Scientists](https://datacarpentry.org/r-socialsci/) - basic information about R syntax, the RStudio interface, how to import CSV files, the structure of data frames, how to deal with factors, how to add/remove rows and columns, how to calculate summary statistics from a data frame, and a brief introduction to plotting
 
 ## MATLAB
-* [Using git with MATLAB](https://admin.kuleuven.be/icts/onderzoek/wetsoft/software/matlab/pdf/versioning-git-matlab.pdf) - Introduciton into using MATLAB and version control with git 
+* [Using git with MATLAB](https://admin.kuleuven.be/icts/onderzoek/wetsoft/software/matlab/pdf/versioning-git-matlab.pdf) - Introduction into using MATLAB and version control with git 
 * [Programming with MATLAB](http://swcarpentry.github.io/matlab-novice-inflammation/) - Lesson from the Software Carpentries on the basics of programming with MATLAB
 
 ## Modular Code and testing
@@ -99,4 +99,4 @@ These materials represent a curated curriculum designed to help you develop and 
 ## Reproducible Research
 * [Reproducible Research material from Code Refinery](https://coderefinery.github.io/reproducible-research/) - demonstrates how version control, workflows, containers, and package managers can be used to record reproducible environments and computational steps
 * [Reproducible Research video lesson from Code Refinery](https://www.youtube.com/watch?v=MxZF1gEJoWw) - Recorded video lesson from Code Refinery workshop in May 2021 on Reproducible Research material
-* [Data + Code + Software = PDF](https://zenodo.org/record/5508797#.YUHu0bj7RjU) - Slides to an overview on how to integrate data and software into a PDF.
+* [Data + Code + Software = PDF](https://zenodo.org/record/5508797) - Slides to an overview on how to integrate data and software into a PDF.

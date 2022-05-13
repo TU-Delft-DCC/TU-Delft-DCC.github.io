@@ -770,7 +770,7 @@ title="Print to PDF"
 <div class="section" id="step-1-request-a-tu-delft-vps">
 <h3>Step 1. Request a TU Delft VPS<a class="headerlink" href="#step-1-request-a-tu-delft-vps" title="Permalink to this headline">#</a></h3>
 <p>If you want to work with the TU Delft Gitlab instance and you want to implement CI/CD pipelines, then you need to install a Gitlab runner on your own. Runners are the agents that run the CI/CD jobs that come from GitLab. Currently, the TU Delft instance does not provide this feature out-of-the-box. Therefore, we need a separate (virtual) server to run the Gitlab runners and execute the jobs in the CI/CD pipeline.</p>
-<p>The TU Delft offers Virtual Private Servers (VPS) for researchers through the <a class="reference external" href="https://tudelft.topdesk.net/tas/public/ssp/content/serviceflow?unid=418c986f186d4934848dc2712039ed34">TopDesk selfservice portal</a>. If you don’t have a VPS already, please follow this guide to <a class="reference external" href="https://tu-delft-dcc.github.io/01_Computing/02_Working_with_servers/01_VPS_request.html">request a Virtual Private Server</a></p>
+<p>The TU Delft offers Virtual Private Servers (VPS) for researchers through the <a class="reference external" href="https://tudelft.topdesk.net/tas/public/ssp/content/serviceflow?unid=418c986f186d4934848dc2712039ed34">TopDesk selfservice portal</a>. If you don’t have a VPS already, please follow this guide to <a class="reference external" href="https://tu-delft-dcc.github.io/infrastructure/VPS_request.html">request a Virtual Private Server</a></p>
 <p><strong>VPS requirements</strong></p>
 <ul class="simple">
 <li><p>50Gb disk space (the Matlab installation in this guide requires ~10 Gb, but this depends on the size of the installed addons)</p></li>
@@ -778,7 +778,7 @@ title="Print to PDF"
 </div>
 <div class="section" id="step-2-setting-up-gitlab-runners">
 <h3>Step 2. Setting up Gitlab runners<a class="headerlink" href="#step-2-setting-up-gitlab-runners" title="Permalink to this headline">#</a></h3>
-<p>To set up a gitlab runner on the VPS, please follow this <a class="reference external" href="https://tu-delft-dcc.github.io/03_Software/06_Advanced%20code%20management/02_CI_GitLab_Docker.html">guide for setting up GitLab runners</a>.</p>
+<p>To set up a gitlab runner on the VPS, please follow this <a class="reference external" href="https://tu-delft-dcc.github.io/infrastructure/gitlab/gitlab_docker.html">guide for setting up GitLab runners</a>.</p>
 <p><strong>TLDR</strong></p>
 <ol>
 <li><p>Install docker with</p>
