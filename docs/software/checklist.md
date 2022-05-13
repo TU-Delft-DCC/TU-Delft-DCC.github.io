@@ -68,14 +68,14 @@ _Recommended_
 - [ ] [Semantic versioning](https://semver.org/)
 - [ ] Tagged releases ([GitHub](https://docs.github.com/en/repositories/releasing-projects-on-github))
 - [ ] [CHANGELOG](https://keepachangelog.com/en/1.0.0/)
-- [ ] Upload to registry ([PyPI](https://realpython.com/pypi-publish-python-package/), [conda](https://conda.io/projects/conda-build/en/latest/user-guide/tutorials/build-pkgs.html), [DockerHub](https://docs.docker.com/docker-hub/repos/#:~:text=To%20push%20an%20image%20to,docs%2Fbase%3Atesting%20))
+- [ ] Upload to registry ([PyPI](https://realpython.com/pypi-publish-python-package/), [conda](https://conda.io/projects/conda-build/en/latest/user-guide/tutorials/build-pkgs.html), [DockerHub](https://docs.docker.com/docker-hub/repos/))
 - [ ] [Release guide](https://docs.github.com/en/repositories/releasing-projects-on-github/managing-releases-in-a-repository)
 - [ ] Continuous Integration for build and release
 
 ### Code quality
 _Essential_
-- [ ] Project [organisation](https://coderefinery.github.io/reproducible-research/02-organizing-projects/)
-- [ ] Record [software dependencies](https://coderefinery.github.io/reproducible-research/03-dependencies/)
+- [ ] Project [organisation](https://coderefinery.github.io/reproducible-research/organizing-projects/)
+- [ ] Record [software dependencies](https://coderefinery.github.io/reproducible-research/dependencies/)
 
 _Recommended_
 - [ ] Follow [PEP8 guidelines](https://realpython.com/python-pep8/)

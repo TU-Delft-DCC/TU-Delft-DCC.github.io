@@ -21,9 +21,9 @@ The Netherlands eScience Center and NWO, the Dutch Research Council, have taken 
 
 * [Software Sustainability Institute - Software Management Plans](https://www.software.ac.uk/software-management-plans)
 
-* [Software Management Plan](https://zenodo.org/record/2159713#.YUhJS7j7SUk)
+* [Software Management Plan](https://zenodo.org/record/2159713)
 
-* [Software Development Plan](https://doit.software/blog/software-development-plan#screen1)
+* [Software Development Plan](https://doit.software/blog/software-development-plan)
 
 * [Software Architecture Guide](https://sceweb.uhcl.edu/helm/RationalUnifiedProcess/process/modguide/md_sad.htm)
 
