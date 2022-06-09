@@ -47,10 +47,15 @@ For the maintainers, here are some tips 💡 for getting started with Discussion
 1. Create a conda environment in the terminal with 
 
     ```bash
-    conda env create -f environment.yml
+    conda env create -f environment.yml    
     ```
-1. Run `bash build.sh` to generate the documentation
-1. Go to the `./_build/html/` folder and open the `index.html` file. This should open the website in your browser.
+1. Activate the conda environment with
+
+    ```bash
+    conda activate dcc_guides_env
+    ```
+2. In the root of the repository, run `bash build.sh` to generate the documentation
+3. Go to the `./_build/html/` folder and open the `index.html` file. This should open the website in your browser.
 
 ### Deploying the website in your forked version
 1. Fork the repository to your own Github profile
