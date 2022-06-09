@@ -23,7 +23,7 @@ The documentation below will help you deploy GitLab runner in a Docker container
 
 **Docker:** We use a Docker container to run the Gitlab runner and initialise the CI/CD pipeline. 
 
-**Gitlab runner:** (from GitLab documentation) "Runners are the agents that run the CI/CD jobs that come from GitLab. When you register a runner, you are setting up communication between your GitLab instance and the machine where GitLab Runner is installed. Runners usually process jobs on the same machine where you installed GitLab Runner." [Link](https://doc.gitlab.com)
+**Gitlab runner:** (from GitLab documentation) "Runners are the agents that run the CI/CD jobs that come from GitLab. When you register a runner, you are setting up communication between your GitLab instance and the machine where GitLab Runner is installed. Runners usually process jobs on the same machine where you installed GitLab Runner." [Link](https://docs.gitlab.com)
 
 **GitLab repository:** A remote repository that can store your code and keeps track of your project development. You're on one right now! :) If you haven’t already, you use your netID and password to login to TU Delft’s GitLab instance at gitlab.tudelft.nl and create a repository containing your project code.
 
@@ -171,7 +171,7 @@ This guide was created using multiple references on GitLab runner and Docker. If
 * https://www.digitalocean.com/community/tutorials/how-to-install-and-use-docker-on-ubuntu-20-04 
 * https://docs.gitlab.com/ee/ci/yaml/README.html 
 * https://docs.gitlab.com/runner/executors/docker.html#define-image-and-services-from-gitlab-ciyml 
-* https://gitlab.tudelft.nl/help/ci/yaml/README 
+* https://gitlab.tudelft.nl/help/ci/yaml/index.md
 * https://docs.gitlab.com/ee/ci/runners/ 
 * https://docs.gitlab.com/ee/ci/docker/using_docker_images.html 
 * https://docs.gitlab.com/ee/ci/examples/README.html 

@@ -48,13 +48,13 @@ _Pipeline configuration begins with jobs. Jobs are the most fundamental element 
 ### Step 1. Request a TU Delft VPS
 If you want to work with the TU Delft Gitlab instance and you want to implement CI/CD pipelines, then you need to install a Gitlab runner on your own. Runners are the agents that run the CI/CD jobs that come from GitLab. Currently, the TU Delft instance does not provide this feature out-of-the-box. Therefore, we need a separate (virtual) server to run the Gitlab runners and execute the jobs in the CI/CD pipeline.
 
-The TU Delft offers Virtual Private Servers (VPS) for researchers through the [TopDesk selfservice portal](https://tudelft.topdesk.net/tas/public/ssp/content/serviceflow?unid=418c986f186d4934848dc2712039ed34). If you don't have a VPS already, please follow this guide to [request a Virtual Private Server](https://tu-delft-dcc.github.io/01_Computing/02_Working_with_servers/01_VPS_request.html)
+The TU Delft offers Virtual Private Servers (VPS) for researchers through the [TopDesk selfservice portal](https://tudelft.topdesk.net/tas/public/ssp/content/serviceflow?unid=418c986f186d4934848dc2712039ed34). If you don't have a VPS already, please follow this guide to [request a Virtual Private Server](https://tu-delft-dcc.github.io/infrastructure/VPS_request.html)
 
 **VPS requirements**
 - 50Gb disk space (the Matlab installation in this guide requires ~10 Gb, but this depends on the size of the installed addons)
 
 ### Step 2. Setting up Gitlab runners
-To set up a gitlab runner on the VPS, please follow this [guide for setting up GitLab runners](https://tu-delft-dcc.github.io/03_Software/06_Advanced%20code%20management/02_CI_GitLab_Docker.html).
+To set up a gitlab runner on the VPS, please follow this [guide for setting up GitLab runners](https://tu-delft-dcc.github.io/infrastructure/gitlab/gitlab_docker.html).
 
 **TLDR**
 1. Install docker with
