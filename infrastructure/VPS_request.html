@@ -4,7 +4,8 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
     <title>Request a Virtual Private Server &#8212; DCC Guides</title>
     
   <!-- Loaded before other Sphinx assets -->
@@ -26,8 +27,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
     <link rel="stylesheet" type="text/css" href="../_static/tabs.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
     
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
@@ -45,6 +45,7 @@
     <script>let toggleOpenOnPrint = 'true';</script>
     <script src="../_static/togglebutton.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/design-tabs.js"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
 const thebe_selector = ".thebe,.cell"
 const thebe_selector_input = "pre"
@@ -666,9 +667,9 @@ title="Print to PDF"
                 
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="request-a-virtual-private-server">
+  <section class="tex2jax_ignore mathjax_ignore" id="request-a-virtual-private-server">
 <h1>Request a Virtual Private Server<a class="headerlink" href="#request-a-virtual-private-server" title="Permalink to this headline">#</a></h1>
-<div class="section" id="background">
+<section id="background">
 <h2>Background<a class="headerlink" href="#background" title="Permalink to this headline">#</a></h2>
 <p>This page describes the essentials for requesting and setting up a TU Delft managed server. A server is a computer that can handle requests. Servers are often a critical component of architectural solutions for data management. There are many reasons why you as a researcher may need to request a server, for example:</p>
 <ul class="simple">
@@ -681,25 +682,25 @@ title="Print to PDF"
 <li><p>Securing/controlling access</p></li>
 <li><p>Mounting storage drive</p></li>
 </ul>
-</div>
-<div class="section" id="what-this-documentation-will-help-achieve">
+</section>
+<section id="what-this-documentation-will-help-achieve">
 <h2>What this documentation will help achieve<a class="headerlink" href="#what-this-documentation-will-help-achieve" title="Permalink to this headline">#</a></h2>
 <p>This documentation helps researchers to request a VPS and data storage on the Project Drive. There are other forms of storage available, but Project Drive storage is often recommended for expandable and secure data preservation.</p>
-</div>
-<div class="section" id="prerequisites">
+</section>
+<section id="prerequisites">
 <h2>Prerequisites<a class="headerlink" href="#prerequisites" title="Permalink to this headline">#</a></h2>
 <ul class="simple">
 <li><p>TU Delft netID</p></li>
 <li><p>Basic knowledge of Linux (if requesting Linux server, recommended)</p></li>
 </ul>
-</div>
-<div class="section" id="tools-software">
+</section>
+<section id="tools-software">
 <h2>Tools/Software<a class="headerlink" href="#tools-software" title="Permalink to this headline">#</a></h2>
 <ul class="simple">
 <li><p>For Windows users, you will need a programming and runtime environment like Cygwin or SSH client like PuTTY in order to access the VPS running Linux</p></li>
 </ul>
-</div>
-<div class="section" id="steps">
+</section>
+<section id="steps">
 <h2>Steps<a class="headerlink" href="#steps" title="Permalink to this headline">#</a></h2>
 <ol class="simple">
 <li><p>Navigate to the TU Delft server request form</p></li>
@@ -707,11 +708,11 @@ title="Print to PDF"
 <li><p>Receive confirmation of server deployment from TU Delft ICT</p></li>
 <li><p>Login to your server for the first time</p></li>
 </ol>
-<div class="section" id="step-1-navigate-to-the-tu-delft-server-request-form">
+<section id="step-1-navigate-to-the-tu-delft-server-request-form">
 <h3>Step 1: Navigate to the TU Delft server request form<a class="headerlink" href="#step-1-navigate-to-the-tu-delft-server-request-form" title="Permalink to this headline">#</a></h3>
 <p>You can make a request for a server via the <a class="reference external" href="https://tudelft.topdesk.net/tas/public/ssp/content/serviceflow?unid=418c986f186d4934848dc2712039ed34">TopDesk self service portal</a>.</p>
-</div>
-<div class="section" id="step-2-fill-and-send-the-form-according-to-your-preferences-and-needs">
+</section>
+<section id="step-2-fill-and-send-the-form-according-to-your-preferences-and-needs">
 <h3>Step 2: Fill and send the form according to your preferences and needs<a class="headerlink" href="#step-2-fill-and-send-the-form-according-to-your-preferences-and-needs" title="Permalink to this headline">#</a></h3>
 <p>The form is divided into three sections: <strong>Caller Details</strong>, <strong>General Questions</strong>, and <strong>Technical Questions</strong>.</p>
 <p><strong>Caller Details</strong> should contain the contact information of the main administrator of this server. If you select your name, the fields below should be auto-populated with your building, phone number, email, department/program, organizational unit, and (sometimes) room.</p>
@@ -726,9 +727,9 @@ title="Print to PDF"
 <p>The next question deals with opening ports to the server through the TU Delft firewall. Ports are essentially gateways to the server that are specific to different purposes. For example, port 80 is opened to handle HTTP requests, port 20 is opened to handle SSH requests, port 3306 is opened to allow access to a MySQL database, and port 443 is opened to handle HTTPS requests. If you are planning to use your VPS as a webserver, ports 80 and 443 should be open. You can use this space to ask ICT to do so.</p>
 <p>The next section, FQDN, is the way you can refer to your server on the internet. The recommendation is a format like <code class="docutils literal notranslate"><span class="pre">&lt;servername&gt;.&lt;facultyabbreviation&gt;.tudelt.nl</span></code>. In general, it’s best to keep names relatively short and informative to make it easy to reference and remember.</p>
 <p>You should also be sure to check the instructions in the form and contact your faculty <a class="reference external" href="https://www.tudelft.nl/en/library/current-topics/research-data-management/r/support/data-stewardship/contact/">Data Steward</a> if you need further explanation.</p>
-</div>
-</div>
-<div class="section" id="initial-configuration-of-your-vps">
+</section>
+</section>
+<section id="initial-configuration-of-your-vps">
 <h2>Initial Configuration of your VPS<a class="headerlink" href="#initial-configuration-of-your-vps" title="Permalink to this headline">#</a></h2>
 <p>A few days after submitting the request, you will receive an email from ICT with login details. You can connect to your VPS via ssh. If you are in the windows environment, it is recommended to install Cygwin and its packages to be able to use the ssh command in a non-unix environment. The unix based systems (e.g., mac) contain ssh by default. In order to login to your VPS, you need to first ssh to the bastion server (ssh <username>&#64;linux-bastion-ex.tudelft.nl) and then from there login to your server (ssh <servername>). The first thing to do after logging into the server is to update the packages:</p>
 <p>(For Debian distributions such as Ubuntu)
@@ -737,8 +738,8 @@ title="Print to PDF"
 <p>(For RedHat distributions)
 <code class="docutils literal notranslate"><span class="pre">sudo</span> <span class="pre">yum</span> <span class="pre">update</span></code></p>
 <p>It would be also useful to set a password for the VPS when you log in. You can do that by passwd command.</p>
-</div>
-<div class="section" id="next-steps">
+</section>
+<section id="next-steps">
 <h2>Next Steps<a class="headerlink" href="#next-steps" title="Permalink to this headline">#</a></h2>
 <p>Common next steps after obtaining a VPS and storage include initial configuration steps like establishing a connection via SSH and mounting Project Drive storage; and also software installation steps for tools like Docker, and setting up Apache Web Server. We will add more documentation when common installations come to our attention, so please reach out to <a class="reference external" href="mailto:dcc&#37;&#52;&#48;tudelft&#46;nl">dcc<span>&#64;</span>tudelft<span>&#46;</span>nl</a> with questions or suggestions.</p>
 <ul class="simple">
@@ -747,8 +748,8 @@ title="Print to PDF"
 <li><p><a class="reference external" href="https://gitlab.tudelft.nl/acryan/data-management-for-researchers/-/wikis/Setting-up-an-Apache-Server">Apache Web Server</a></p></li>
 <li><p><a class="reference external" href="https://gitlab.tudelft.nl/acryan/data-management-for-researchers/-/wikis/Configuring-VM-Connection">Configuring VM connection via SSH</a>.</p></li>
 </ul>
-</div>
-</div>
+</section>
+</section>
 
     <script type="text/x-thebe-config">
     {

@@ -4,7 +4,8 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
     <title>Software testing &#8212; DCC Guides</title>
     
   <!-- Loaded before other Sphinx assets -->
@@ -26,8 +27,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
     <link rel="stylesheet" type="text/css" href="../_static/tabs.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
     
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
@@ -45,6 +45,7 @@
     <script>let toggleOpenOnPrint = 'true';</script>
     <script src="../_static/togglebutton.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/design-tabs.js"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
 const thebe_selector = ".thebe,.cell"
 const thebe_selector_input = "pre"
@@ -616,7 +617,7 @@ title="Print to PDF"
                 
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="software-testing">
+  <section class="tex2jax_ignore mathjax_ignore" id="software-testing">
 <h1>Software testing<a class="headerlink" href="#software-testing" title="Permalink to this headline">#</a></h1>
 <blockquote>
 <div><p><em>“Before relying on a new experimental device, an experimental scientist always establishes its accuracy. A new detector is calibrated when the scientist observes its responses to known input signals. The results of this calibration are compared against the expected response.”</em></p>
@@ -624,9 +625,9 @@ title="Print to PDF"
 </div></blockquote>
 <p>Simulations and analyses using software should be held to the same standards as experimental measurement devices!</p>
 <p>For a solid introduction and motivation on writing tests, we recommend the <a class="reference external" href="https://coderefinery.github.io/testing/motivation/">lesson on testing</a> from the Code Refinery.</p>
-<div class="section" id="approach">
+<section id="approach">
 <h2>Approach<a class="headerlink" href="#approach" title="Permalink to this headline">#</a></h2>
-<div class="section" id="what-to-test">
+<section id="what-to-test">
 <h3>What to test?<a class="headerlink" href="#what-to-test" title="Permalink to this headline">#</a></h3>
 <p>When writing tests, ask yourself the following questions:</p>
 <ul class="simple">
@@ -635,25 +636,25 @@ title="Print to PDF"
 <li><p>What do you compare the result to?</p></li>
 <li><p>How much time would it take to run the module (and therefore the test)?</p></li>
 </ul>
-</div>
-<div class="section" id="type-of-tests">
+</section>
+<section id="type-of-tests">
 <h3>Type of tests<a class="headerlink" href="#type-of-tests" title="Permalink to this headline">#</a></h3>
 <ul class="simple">
 <li><p><strong>Unit test</strong>: testing of individual units of source code (scripts, functions, classes).</p></li>
 <li><p><strong>Integration test</strong>: testing of a combination of individual units as a group.</p></li>
 <li><p><strong>Regression test</strong>: re-running all tests to ensure that the previously developed and tested code still performes after a code change.</p></li>
 </ul>
-</div>
-</div>
-<div class="section" id="table-of-contents">
+</section>
+</section>
+<section id="table-of-contents">
 <h2>Table of contents<a class="headerlink" href="#table-of-contents" title="Permalink to this headline">#</a></h2>
 <div class="toctree-wrapper compound">
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="testing_matlab.html">Testing with MATLAB</a></li>
 </ul>
 </div>
-</div>
-</div>
+</section>
+</section>
 
     <script type="text/x-thebe-config">
     {

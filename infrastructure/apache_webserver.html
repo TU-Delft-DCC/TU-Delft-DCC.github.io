@@ -4,7 +4,8 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
     <title>Setting up an Apache web server &#8212; DCC Guides</title>
     
   <!-- Loaded before other Sphinx assets -->
@@ -26,8 +27,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
     <link rel="stylesheet" type="text/css" href="../_static/tabs.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
     
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
@@ -45,6 +45,7 @@
     <script>let toggleOpenOnPrint = 'true';</script>
     <script src="../_static/togglebutton.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/design-tabs.js"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
 const thebe_selector = ".thebe,.cell"
 const thebe_selector_input = "pre"
@@ -696,37 +697,37 @@ title="Print to PDF"
                 
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="setting-up-an-apache-web-server">
+  <section class="tex2jax_ignore mathjax_ignore" id="setting-up-an-apache-web-server">
 <h1>Setting up an Apache web server<a class="headerlink" href="#setting-up-an-apache-web-server" title="Permalink to this headline">#</a></h1>
-<div class="section" id="background">
+<section id="background">
 <h2>Background<a class="headerlink" href="#background" title="Permalink to this headline">#</a></h2>
 <p>If you want to host a website for your lab, or a web application of some sort, you are going to need to work with a webserver. Apache Web Server is a software package that turns a computer into an HTTP server. That is, it sends web pages – stored as HTML files – to people on the internet who request them. It is open-source software, which means it can be used and modified freely.</p>
 <blockquote>
 <div><p>The job of a web server is to serve websites on the internet. To achieve that goal, it acts as a middleman between the server and client machines. It pulls content from the server on each user request and delivers it to the web…One of the most popular web servers, Apache allows you to run a secure website without too much of a headache. It is free and open-source, making it a frequent choice of solopreneurs and small businesses who want a presence on the web…The way Apache HTTP server works is that it will accept requests from the web browser, such as Google Chrome and Microsoft Edge, and turn programming scripts into web pages which contents are visible by the visitors.</p>
 </div></blockquote>
-</div>
-<div class="section" id="what-this-documentation-will-help-achieve">
+</section>
+<section id="what-this-documentation-will-help-achieve">
 <h2>What this documentation will help achieve<a class="headerlink" href="#what-this-documentation-will-help-achieve" title="Permalink to this headline">#</a></h2>
 <p>This guide will help you install the Apache web server on Ubuntu Linux 18.04 and configure a HTTPS secure connection for all incoming web traffic.</p>
 <p>The steps outlined below will ensure that all incoming web traffic to your server from port 80 (HTTP) will be redirected to port 443 (HTTPS). Port 80 is still accessible but redirects automatically. Redirection is configured after the SSL certificate is in place.</p>
-</div>
-<div class="section" id="prerequisites">
+</section>
+<section id="prerequisites">
 <h2>Prerequisites<a class="headerlink" href="#prerequisites" title="Permalink to this headline">#</a></h2>
 <ul class="simple">
 <li><p>A system running Ubuntu 18.04 LTS (Bionic Beaver)</p></li>
 <li><p>An internet connection</p></li>
 <li><p>Access to a user account with sudo privileges</p></li>
 </ul>
-</div>
-<div class="section" id="tools-software">
+</section>
+<section id="tools-software">
 <h2>Tools / Software<a class="headerlink" href="#tools-software" title="Permalink to this headline">#</a></h2>
 <ul class="simple">
 <li><p>A command-line utility (Use keyboard shortcut CTRL-ALT-T, or right-click the desktop and left-click Open Terminal)</p></li>
 <li><p>A firewall – the default UFW (Uncomplicated Firewall) in Ubuntu is fine</p></li>
 <li><p>The APT package manager, installed by default on Ubuntu</p></li>
 </ul>
-</div>
-<div class="section" id="steps">
+</section>
+<section id="steps">
 <h2>Steps<a class="headerlink" href="#steps" title="Permalink to this headline">#</a></h2>
 <ol class="simple">
 <li><p>Request a Virtual Private Server (VPS) from TU Delft ICT</p></li>
@@ -735,12 +736,12 @@ title="Print to PDF"
 <li><p>Configure the SSL certificate file on your VPS</p></li>
 <li><p>Redirect all incoming web traffic to HTTPS</p></li>
 </ol>
-<div class="section" id="step-1-request-a-virtual-private-server-from-tu-delft-ict">
+<section id="step-1-request-a-virtual-private-server-from-tu-delft-ict">
 <h3>Step 1. Request a Virtual Private Server from TU Delft ICT<a class="headerlink" href="#step-1-request-a-virtual-private-server-from-tu-delft-ict" title="Permalink to this headline">#</a></h3>
 <p>You can make a request for a server via the <a class="reference external" href="https://tudelft.topdesk.net/tas/public/ssp/content/serviceflow?unid=418c986f186d4934848dc2712039ed34">TopDesk self service portal</a>. If you would like more information, documentation can be found here ___</p>
 <p><em>Note:</em> to run a web server, ports 80 (HTTP) and 443 (HTTPS) must be opened.</p>
-</div>
-<div class="section" id="step-2-install-apache-web-server-on-the-vps">
+</section>
+<section id="step-2-install-apache-web-server-on-the-vps">
 <h3>Step 2. Install Apache web server on the VPS<a class="headerlink" href="#step-2-install-apache-web-server-on-the-vps" title="Permalink to this headline">#</a></h3>
 <p><a class="reference external" href="https://ubuntu.com/tutorials/install-and-configure-apache#1-overview">Apache</a> is an open source web server that’s available for Linux servers. It is one of the most commonly used softwares for creating a web server. And, it’s free!</p>
 <p><a class="reference external" href="https://phoenixnap.com/kb/how-to-install-apache-web-server-on-ubuntu-18-04">Installing Apache</a> can be done using commands in the terminal. These instructions are documented with further information at the link in the beginning of this paragraph. First, make sure your local software packages are up to date by running:</p>
@@ -761,8 +762,8 @@ title="Print to PDF"
 <p>Verify the changes by checking UFW status:</p>
 <p><code class="docutils literal notranslate"><span class="pre">sudo</span> <span class="pre">ufw</span> <span class="pre">status</span></code></p>
 <p>At this point, your Apache web server is serving over HTTP, which is a good first step! But remember, we need to secure the connection over HTTPS. So, we still have a few more steps.</p>
-</div>
-<div class="section" id="step-3-request-an-ssl-certificate-from-tu-delft-ict">
+</section>
+<section id="step-3-request-an-ssl-certificate-from-tu-delft-ict">
 <h3>Step 3. Request an SSL certificate from TU Delft ICT<a class="headerlink" href="#step-3-request-an-ssl-certificate-from-tu-delft-ict" title="Permalink to this headline">#</a></h3>
 <p>Detailed directions on how to do this can be found here ___</p>
 <p>You can create the .csr file directly on the VPS by first create a directory on /etc/apache2 called ssl:</p>
@@ -771,8 +772,8 @@ title="Print to PDF"
 <p><code class="docutils literal notranslate"><span class="pre">openssl</span> <span class="pre">req</span> <span class="pre">-x509</span> <span class="pre">-newkey</span> <span class="pre">rsa:4096</span> <span class="pre">-keyout</span> <span class="pre">&lt;server_domain&gt;.key</span> <span class="pre">-out</span> <span class="pre">&lt;server_domain&gt;.csr</span> <span class="pre">-nodes</span></code></p>
 <p>After successfully running the command it will ask for the information of certificate request. Complete it using the appropriate information and then &lt;server_domain&gt;.key and &lt;server_domain&gt;.csr files will be generated.</p>
 <p>The .csr file must be sent to TU Delft ICT using this TopDesk form: <a class="reference external" href="https://tudelft.topdesk.net/tas/public/ssp/content/serviceflow?unid=62aeef08314247f3aba7ff2297d011da">TOPdesk SSL certificate server request</a>.</p>
-</div>
-<div class="section" id="step-4-configure-the-ssl-certificate-on-your-vps">
+</section>
+<section id="step-4-configure-the-ssl-certificate-on-your-vps">
 <h3>Step 4. Configure the SSL certificate on your VPS<a class="headerlink" href="#step-4-configure-the-ssl-certificate-on-your-vps" title="Permalink to this headline">#</a></h3>
 <p>When you receive SSL certificate files from the signing authority via TU Delft ICT, you need to put the information from this certificate in a specific place on your VPS in order to securely expose the web server. These instructions come from here: - <a class="reference external" href="https://hostadvice.com/how-to/configure-apache-with-tls-ssl-certificate-on-ubuntu-18/">Configure ssl for https</a></p>
 <p>Navigate to the default Apache site config directory using the following command:</p>
@@ -850,8 +851,8 @@ title="Print to PDF"
 <p><code class="docutils literal notranslate"><span class="pre">sudo</span> <span class="pre">service</span> <span class="pre">apache2</span> <span class="pre">restart</span></code></p>
 <p>The website is now secure, access it using following address in the browser</p>
 <p><code class="docutils literal notranslate"><span class="pre">https://YOUR_SERVER_IP</span></code></p>
-</div>
-<div class="section" id="step-5-redirect-all-incoming-web-traffic-to-https">
+</section>
+<section id="step-5-redirect-all-incoming-web-traffic-to-https">
 <h3>Step 5. Redirect all incoming web traffic to HTTPS<a class="headerlink" href="#step-5-redirect-all-incoming-web-traffic-to-https" title="Permalink to this headline">#</a></h3>
 <p><code class="docutils literal notranslate"><span class="pre">sudo</span> <span class="pre">a2enmod</span> <span class="pre">proxy</span></code></p>
 <p><code class="docutils literal notranslate"><span class="pre">sudo</span> <span class="pre">a2enmod</span> <span class="pre">proxy_http</span></code></p>
@@ -862,17 +863,17 @@ title="Print to PDF"
             RedirectMatch ^/$ /thredds/
 </pre></div>
 </div>
-</div>
-</div>
-<div class="section" id="notes-and-next-steps">
+</section>
+</section>
+<section id="notes-and-next-steps">
 <h2>Notes and Next Steps<a class="headerlink" href="#notes-and-next-steps" title="Permalink to this headline">#</a></h2>
 <p>Test that your web server is secured by HTTPS by typing the Fully Qualified Domain Name (FQDN) of your server in a web browser. If HTTPS is enabled, the URL should begin with it - if it still says HTTP, something will need to be reconfigured.</p>
-</div>
-<div class="section" id="references">
+</section>
+<section id="references">
 <h2>References<a class="headerlink" href="#references" title="Permalink to this headline">#</a></h2>
 <p>[1]“What is Apache? An In-Depth Overview of Apache Web Server,” Hostinger Tutorials, Jun. 20, 2018. <a class="reference external" href="https://www.hostinger.com/tutorials/what-is-apache">https://www.hostinger.com/tutorials/what-is-apache</a> (accessed Nov. 02, 2021).</p>
-</div>
-</div>
+</section>
+</section>
 
     <script type="text/x-thebe-config">
     {

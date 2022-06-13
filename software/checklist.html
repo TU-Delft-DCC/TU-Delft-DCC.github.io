@@ -4,7 +4,8 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
     <title>FAIR software checklist &#8212; DCC Guides</title>
     
   <!-- Loaded before other Sphinx assets -->
@@ -26,8 +27,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
     <link rel="stylesheet" type="text/css" href="../_static/tabs.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
     
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
@@ -45,6 +45,7 @@
     <script>let toggleOpenOnPrint = 'true';</script>
     <script src="../_static/togglebutton.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/design-tabs.js"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
 const thebe_selector = ".thebe,.cell"
 const thebe_selector_input = "pre"
@@ -666,13 +667,13 @@ title="Print to PDF"
                 
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="fair-software-checklist">
+  <section class="tex2jax_ignore mathjax_ignore" id="fair-software-checklist">
 <h1>FAIR software checklist<a class="headerlink" href="#fair-software-checklist" title="Permalink to this headline">#</a></h1>
 <p>To ensure your research software is findable and usable by other researchers, we have compiled a checklist to improve its FAIRness (Findable, Accessible, Interoperable, Reusable).</p>
-<div class="section" id="checklist">
+<section id="checklist">
 <h2>Checklist<a class="headerlink" href="#checklist" title="Permalink to this headline">#</a></h2>
 <p>The checklist below is in part based on the checklist provided by the <a class="reference external" href="https://guide.esciencecenter.nl/#/nlesc_specific/checklist_matrix">eScience Center</a>, licensed under CC BY 4.0.</p>
-<div class="section" id="version-control">
+<section id="version-control">
 <h3>Version Control<a class="headerlink" href="#version-control" title="Permalink to this headline">#</a></h3>
 <p><em>Essential</em></p>
 <ul class="contains-task-list simple">
@@ -686,8 +687,8 @@ title="Print to PDF"
 <li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Use a branching model (<a class="reference external" href="https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow">GitFlow</a>)</p></li>
 <li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> <a class="reference external" href="https://www.git-scm.com/book/en/v2/Distributed-Git-Contributing-to-a-Project#_commit_guidelines">Meaningful commit messages</a></p></li>
 </ul>
-</div>
-<div class="section" id="documentation-repository">
+</section>
+<section id="documentation-repository">
 <h3>Documentation - Repository<a class="headerlink" href="#documentation-repository" title="Permalink to this headline">#</a></h3>
 <p><em>Essential</em></p>
 <ul class="contains-task-list simple">
@@ -701,8 +702,8 @@ title="Print to PDF"
 <li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Contribution <a class="reference external" href="https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contributions/setting-guidelines-for-repository-contributors">guidelines</a></p></li>
 <li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> <a class="reference external" href="https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contributions/adding-a-code-of-conduct-to-your-project">Code of conduct</a></p></li>
 </ul>
-</div>
-<div class="section" id="documentation-software">
+</section>
+<section id="documentation-software">
 <h3>Documentation - Software<a class="headerlink" href="#documentation-software" title="Permalink to this headline">#</a></h3>
 <p><em>Essential</em></p>
 <ul class="contains-task-list simple">
@@ -717,8 +718,8 @@ title="Print to PDF"
 <li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Website (<a class="reference external" href="https://pages.github.com/">github.io pages</a>, <a class="reference external" href="https://readthedocs.org/">Readthedocs</a>, <a class="reference external" href="https://jupyterbook.org/intro.html">JupyterBook</a></p></li>
 <li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Build <a class="reference external" href="https://developer.lsst.io/python/numpydoc.html">API reference</a> from docstrings</p></li>
 </ul>
-</div>
-<div class="section" id="testing">
+</section>
+<section id="testing">
 <h3>Testing<a class="headerlink" href="#testing" title="Permalink to this headline">#</a></h3>
 <p><em>Recommended</em></p>
 <ul class="contains-task-list simple">
@@ -728,8 +729,8 @@ title="Print to PDF"
 <li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Make use of <a class="reference external" href="https://the-turing-way.netlify.app/reproducible-research/ci/ci-options.html">Continuous Integration</a></p></li>
 <li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Code coverage check (<a class="reference external" href="https://about.codecov.io/">Codecov</a>, <a class="reference external" href="https://sonarcloud.io/">Sonarcloud</a>, <a class="reference external" href="https://www.travis-ci.com/">Travis</a>)</p></li>
 </ul>
-</div>
-<div class="section" id="releases">
+</section>
+<section id="releases">
 <h3>Releases<a class="headerlink" href="#releases" title="Permalink to this headline">#</a></h3>
 <p><em>Essential</em></p>
 <ul class="contains-task-list simple">
@@ -744,8 +745,8 @@ title="Print to PDF"
 <li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> <a class="reference external" href="https://docs.github.com/en/repositories/releasing-projects-on-github/managing-releases-in-a-repository">Release guide</a></p></li>
 <li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Continuous Integration for build and release</p></li>
 </ul>
-</div>
-<div class="section" id="code-quality">
+</section>
+<section id="code-quality">
 <h3>Code quality<a class="headerlink" href="#code-quality" title="Permalink to this headline">#</a></h3>
 <p><em>Essential</em></p>
 <ul class="contains-task-list simple">
@@ -759,16 +760,16 @@ title="Print to PDF"
 <li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Use a formatter (e.g. <a class="reference external" href="https://github.com/psf/black">black</a>, <a class="reference external" href="https://github.com/google/yapf">yapf</a>)</p></li>
 <li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Follow <a class="reference external" href="https://alan-turing-institute.github.io/rse-course/html/module07_construction_and_design/index.html">best coding practices</a></p></li>
 </ul>
-</div>
-</div>
-<div class="section" id="example-repositories">
+</section>
+</section>
+<section id="example-repositories">
 <h2>Example repositories<a class="headerlink" href="#example-repositories" title="Permalink to this headline">#</a></h2>
 <ul class="simple">
 <li><p><a class="reference external" href="https://github.com/matchms/matchms">eScience Center - matchms</a> - Matchms is an open-source Python package to import, process, clean, and compare mass spectrometry data.</p></li>
 <li><p><a class="reference external" href="https://github.com/SATAY-LL/Transposonmapper">TU Delft - Transposonmapper</a> - Transposonmapper is an open-source python package and Docker image for mapping transposons from sequencing data.</p></li>
 </ul>
-</div>
-<div class="section" id="references">
+</section>
+<section id="references">
 <h2>References<a class="headerlink" href="#references" title="Permalink to this headline">#</a></h2>
 <p>For a full overview of the principles behind FAIR software, please have a look at the following resources:</p>
 <ul class="simple">
@@ -778,8 +779,8 @@ title="Print to PDF"
 <li><p><a class="reference external" href="https://scicomp.aalto.fi/scicomp/zen-of-scicomp/">The Zen of Scientific Computing</a> - Scientific computing tips from Aalto University</p></li>
 <li><p><a class="reference external" href="https://doi.org/10.1515/itit-2019-0040">From FAIR research data toward FAIR and open research software</a></p></li>
 </ul>
-</div>
-</div>
+</section>
+</section>
 
     <script type="text/x-thebe-config">
     {

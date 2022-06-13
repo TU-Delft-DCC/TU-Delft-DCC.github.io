@@ -4,7 +4,8 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
     <title>Setting up a Gitlab runner for MATLAB &#8212; DCC Guides</title>
     
   <!-- Loaded before other Sphinx assets -->
@@ -26,8 +27,7 @@
     <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/tabs.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
     
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
@@ -45,6 +45,7 @@
     <script>let toggleOpenOnPrint = 'true';</script>
     <script src="../../_static/togglebutton.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../../_static/design-tabs.js"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
 const thebe_selector = ".thebe,.cell"
 const thebe_selector_input = "pre"
@@ -720,17 +721,17 @@ title="Print to PDF"
                 
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="setting-up-a-gitlab-runner-for-matlab">
+  <section class="tex2jax_ignore mathjax_ignore" id="setting-up-a-gitlab-runner-for-matlab">
 <h1>Setting up a Gitlab runner for MATLAB<a class="headerlink" href="#setting-up-a-gitlab-runner-for-matlab" title="Permalink to this headline">#</a></h1>
-<div class="section" id="background">
+<section id="background">
 <h2>Background<a class="headerlink" href="#background" title="Permalink to this headline">#</a></h2>
 <p>With the continuous method of software development, you continuously build, test, and deploy iterative code changes. This iterative process helps reduce the chance that you develop new code based on buggy or failed previous versions. With this method, you strive to have less human intervention or even no intervention at all, from the development of new code until its deployment.</p>
-<div class="section" id="purpose-of-this-guide">
+<section id="purpose-of-this-guide">
 <h3>Purpose of this guide<a class="headerlink" href="#purpose-of-this-guide" title="Permalink to this headline">#</a></h3>
 <p>With this guide, you will create a Continuous Integration Pipeline on a repository within the <a class="reference external" href="https://gitlab.tudelft.nl">TU Delft Gitlab</a> to use a Matlab environment.</p>
-</div>
-</div>
-<div class="section" id="prerequisites">
+</section>
+</section>
+<section id="prerequisites">
 <h2>Prerequisites<a class="headerlink" href="#prerequisites" title="Permalink to this headline">#</a></h2>
 <ul>
 <li><p>TU Delft netID</p></li>
@@ -743,8 +744,8 @@ title="Print to PDF"
 </div>
 </li>
 </ul>
-</div>
-<div class="section" id="glossary-of-terms">
+</section>
+<section id="glossary-of-terms">
 <h2>Glossary of terms<a class="headerlink" href="#glossary-of-terms" title="Permalink to this headline">#</a></h2>
 <p><strong>CI/CD pipeline</strong><br />
 <em>A CI/CD pipeline automates your software delivery process. The pipeline builds code, runs tests (Continuous Intergation), and safely deploys a new version of the application (Continuous Delivery). See this <a class="reference external" href="https://semaphoreci.com/blog/cicd-pipeline">introduction</a>.</em></p>
@@ -754,8 +755,8 @@ title="Print to PDF"
 <em>Runners are the agents that run the CI/CD jobs that come from GitLab. When you register a runner, you are setting up communication between your GitLab instance and the machine where GitLab Runner is installed. Runners usually process jobs on the same machine where you installed GitLab Runner.</em></p>
 <p><strong>Gitlab jobs</strong><br />
 <em>Pipeline configuration begins with jobs. Jobs are the most fundamental element of a <code class="docutils literal notranslate"><span class="pre">.gitlab-ci.yml</span></code> file. Each job is executed by a Gitlab runner. See Gitlab documentation for more <a class="reference external" href="https://docs.gitlab.com/ee/ci/jobs/">info</a>.</em></p>
-</div>
-<div class="section" id="steps">
+</section>
+<section id="steps">
 <h2>Steps<a class="headerlink" href="#steps" title="Permalink to this headline">#</a></h2>
 <ol class="simple">
 <li><p>Request a TU Delft Virtual Private Server</p></li>
@@ -767,7 +768,7 @@ title="Print to PDF"
 <li><p>Add a job to test the pipeline</p></li>
 <li><p>Optional: Updating the Matlab version</p></li>
 </ol>
-<div class="section" id="step-1-request-a-tu-delft-vps">
+<section id="step-1-request-a-tu-delft-vps">
 <h3>Step 1. Request a TU Delft VPS<a class="headerlink" href="#step-1-request-a-tu-delft-vps" title="Permalink to this headline">#</a></h3>
 <p>If you want to work with the TU Delft Gitlab instance and you want to implement CI/CD pipelines, then you need to install a Gitlab runner on your own. Runners are the agents that run the CI/CD jobs that come from GitLab. Currently, the TU Delft instance does not provide this feature out-of-the-box. Therefore, we need a separate (virtual) server to run the Gitlab runners and execute the jobs in the CI/CD pipeline.</p>
 <p>The TU Delft offers Virtual Private Servers (VPS) for researchers through the <a class="reference external" href="https://tudelft.topdesk.net/tas/public/ssp/content/serviceflow?unid=418c986f186d4934848dc2712039ed34">TopDesk selfservice portal</a>. If you don’t have a VPS already, please follow this guide to <a class="reference external" href="https://tu-delft-dcc.github.io/infrastructure/VPS_request.html">request a Virtual Private Server</a></p>
@@ -775,8 +776,8 @@ title="Print to PDF"
 <ul class="simple">
 <li><p>50Gb disk space (the Matlab installation in this guide requires ~10 Gb, but this depends on the size of the installed addons)</p></li>
 </ul>
-</div>
-<div class="section" id="step-2-setting-up-gitlab-runners">
+</section>
+<section id="step-2-setting-up-gitlab-runners">
 <h3>Step 2. Setting up Gitlab runners<a class="headerlink" href="#step-2-setting-up-gitlab-runners" title="Permalink to this headline">#</a></h3>
 <p>To set up a gitlab runner on the VPS, please follow this <a class="reference external" href="https://tu-delft-dcc.github.io/infrastructure/gitlab/gitlab_docker.html">guide for setting up GitLab runners</a>.</p>
 <p><strong>TLDR</strong></p>
@@ -807,8 +808,8 @@ gitlab/gitlab-runner:latest
 </div>
 </li>
 </ol>
-</div>
-<div class="section" id="step-3-create-a-docker-image-containing-a-custom-matlab-installation">
+</section>
+<section id="step-3-create-a-docker-image-containing-a-custom-matlab-installation">
 <h3>Step 3. Create a Docker image containing a custom Matlab installation<a class="headerlink" href="#step-3-create-a-docker-image-containing-a-custom-matlab-installation" title="Permalink to this headline">#</a></h3>
 <p>In order for a Gitlab runner to execute Matlab code, it needs to be able to access a container with Matlab installed. The aim of this step is to create a Docker image with Matlab installation that can be used by a Gitlab runner. By building our own Docker image, we can specify the Matlab version and customize the installed toolboxes.</p>
 <div class="admonition note">
@@ -880,8 +881,8 @@ gitlab/gitlab-runner:latest
 <p class="admonition-title">Tip</p>
 <p>You can also <a class="reference external" href="https://docs.docker.com/engine/reference/commandline/push/">upload your Docker image to Dockerhub</a> and have it available from there. This removes the need to build the image on the VPS as it can be pulled directly from DockerHub.</p>
 </div>
-</div>
-<div class="section" id="step-4-register-the-matlab-runner">
+</section>
+<section id="step-4-register-the-matlab-runner">
 <h3>Step 4. Register the Matlab runner<a class="headerlink" href="#step-4-register-the-matlab-runner" title="Permalink to this headline">#</a></h3>
 <p>After deploying the gitlab-runner in step 2, we need to register a new runner for our <code class="docutils literal notranslate"><span class="pre">matlab-gitlab</span></code> image. Run the following command to register your runner and configure it to deploy in a Docker container on your server.</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>docker run --rm -it -v /srv/gitlab-runner/config:/etc/gitlab-runner gitlab/gitlab-runner register
@@ -941,8 +942,8 @@ gitlab/gitlab-runner:latest
 </pre></div>
 </div>
 </div>
-</div>
-<div class="section" id="step-5-obtain-a-matlab-license-file">
+</section>
+<section id="step-5-obtain-a-matlab-license-file">
 <h3>Step 5. Obtain a Matlab license file<a class="headerlink" href="#step-5-obtain-a-matlab-license-file" title="Permalink to this headline">#</a></h3>
 <p>Every TU Delft employee has access to an Individual Matlab license. Normally, you would activate Matlab only once after installation through an online activation step. However, this does not work for a Docker container as it is relaunched for each CI trigger.</p>
 <p>The following steps for activating Matlab on an offline machine are adapted from the <a class="reference external" href="https://nl.mathworks.com/matlabcentral/answers/259627-how-do-i-activate-matlab-or-other-mathworks-products-without-an-internet-connection">Matlab Forum</a>:</p>
@@ -976,8 +977,8 @@ The Matlab license is created for a specific user. In the Docker container, we w
 </li>
 <li><p>Download the <code class="docutils literal notranslate"><span class="pre">license.lic</span></code> file</p></li>
 </ol>
-</div>
-<div class="section" id="step-6-configure-the-ci-cd-pipeline-on-gitlab">
+</section>
+<section id="step-6-configure-the-ci-cd-pipeline-on-gitlab">
 <h3>Step 6. Configure the CI/CD pipeline on Gitlab<a class="headerlink" href="#step-6-configure-the-ci-cd-pipeline-on-gitlab" title="Permalink to this headline">#</a></h3>
 <p>Before we can run a CI job, we need to configure a few settings in our Gitlab repository</p>
 <p><strong>1. Add tag to matlab runner</strong><br />
@@ -996,8 +997,8 @@ Under <strong>Settings -&gt; CI/CD -&gt; Variables</strong> add a new variable c
 <p>Never share any Docker images that contain license files or other confidential information.</p>
 </div>
 </div>
-</div>
-<div class="section" id="step-7-add-a-job-to-test-the-pipeline">
+</section>
+<section id="step-7-add-a-job-to-test-the-pipeline">
 <h3>Step 7. Add a job to test the pipeline<a class="headerlink" href="#step-7-add-a-job-to-test-the-pipeline" title="Permalink to this headline">#</a></h3>
 <p>To test the pipeline, add the following content to <code class="docutils literal notranslate"><span class="pre">.gitlab-ci.yml</span></code> via <strong>CI/CD -&gt; Editor</strong> in your repository.</p>
 <div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">variables</span><span class="p">:</span><span class="w"></span>
@@ -1020,8 +1021,8 @@ Under <strong>Settings -&gt; CI/CD -&gt; Variables</strong> add a new variable c
 </div>
 <p>After commiting, the pipeline should run and execute the job <code class="docutils literal notranslate"><span class="pre">check_matlab</span></code>. You can check the status of the pipeline via <strong>CI/CD -&gt; Pipelines</strong>.</p>
 <p>If all went well, you have successfully setup a Gitlab runner to run Matlab code. Congrats!</p>
-</div>
-<div class="section" id="step-8-optional-updating-the-matlab-version">
+</section>
+<section id="step-8-optional-updating-the-matlab-version">
 <h3>Step 8. Optional: Updating the Matlab version<a class="headerlink" href="#step-8-optional-updating-the-matlab-version" title="Permalink to this headline">#</a></h3>
 <p>If you need to update the Matlab version of the Docker container, you will need to go throught the following steps:</p>
 <ol>
@@ -1037,17 +1038,17 @@ Under <strong>Settings -&gt; CI/CD -&gt; Variables</strong> add a new variable c
 </div>
 </li>
 </ol>
-</div>
-</div>
-<div class="section" id="references">
+</section>
+</section>
+<section id="references">
 <h2>References<a class="headerlink" href="#references" title="Permalink to this headline">#</a></h2>
 <ul class="simple">
 <li><p><a class="reference external" href="https://nl.mathworks.com/matlabcentral/answers/259627-how-do-i-activate-matlab-or-other-mathworks-products-without-an-internet-connection">Activating Matlab without an internet connection</a></p></li>
 <li><p><a class="reference external" href="https://docs.gitlab.com/runner/install/docker.html">Run GitLab Runner in a container</a></p></li>
 <li><p><a class="reference external" href="https://docs.gitlab.com/runner/register/">Register a Gitlab runner</a></p></li>
 </ul>
-</div>
-</div>
+</section>
+</section>
 
     <script type="text/x-thebe-config">
     {

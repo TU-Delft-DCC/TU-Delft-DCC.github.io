@@ -4,7 +4,8 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
     <title>Using a docker container with a GUI &#8212; DCC Guides</title>
     
   <!-- Loaded before other Sphinx assets -->
@@ -26,8 +27,7 @@
     <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/tabs.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
     
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
@@ -45,6 +45,7 @@
     <script>let toggleOpenOnPrint = 'true';</script>
     <script src="../../_static/togglebutton.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../../_static/design-tabs.js"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
 const thebe_selector = ".thebe,.cell"
 const thebe_selector_input = "pre"
@@ -656,17 +657,17 @@ title="Print to PDF"
                 
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="using-a-docker-container-with-a-gui">
+  <section class="tex2jax_ignore mathjax_ignore" id="using-a-docker-container-with-a-gui">
 <h1>Using a docker container with a GUI<a class="headerlink" href="#using-a-docker-container-with-a-gui" title="Permalink to this headline">#</a></h1>
 <p>Docker is an open platform for developing, shipping, and running applications. Docker provides the ability to package and run an application in a loosely isolated environment called a container. Containers are lightweight and contain everything needed to run the application, so you do not need to rely on what is currently installed on the host system. You can easily share containers while you work, and be sure that everyone you share with gets the same container that works in the same way.</p>
 <p><img alt="image" src="https://user-images.githubusercontent.com/15414938/123805382-52543b00-d8ee-11eb-8f76-ae598d6fdb83.png" /></p>
 <p><strong>Dockerfile</strong> – is a text document that contains all the commands you would normally execute manually in order to build a Docker image. The instructions include a choice of operating system and all the libraries we need to install into it. Docker can build images automatically by reading the instructions from a Dockerfile.<br />
 <strong>Docker Images</strong> – are the basis of containers. A Docker image is an immutable (unchangeable) file that contains the source code, libraries, dependencies, tools, and other files needed for an application to run.<br />
 <strong>Docker Container</strong> – A container is, ultimately, just a running image.</p>
-<div class="section" id="docker-installation">
+<section id="docker-installation">
 <h2>Docker installation<a class="headerlink" href="#docker-installation" title="Permalink to this headline">#</a></h2>
 <p>Docker can be installed on Windows, macOS, and Linux. Please visit the <a class="reference external" href="https://docs.docker.com/get-docker/">Docker website</a> for downloading and installation instructions. Note, you will need admin access to your system. <strong>Please check the Issues/troubleshooting session at the end of this page if you encounter some problems during installation. If your problem is not listed you can add it as an issue in the main repository.</strong></p>
-<div class="section" id="verify-docker-installation">
+<section id="verify-docker-installation">
 <h3>Verify Docker installation<a class="headerlink" href="#verify-docker-installation" title="Permalink to this headline">#</a></h3>
 <p>Run the following commands in the terminal (see below) to verify your installation:</p>
 <ul class="simple">
@@ -675,9 +676,9 @@ Will output the version number</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">docker</span> <span class="pre">run</span> <span class="pre">hello-world</span></code><br />
 Will output a welcome message. If you haven’t run this command before, you will receive the message <em>Unable to find image: ‘hello-world:latest’ locally</em>. Docker will then proceed by downloading and running the latest version from <a class="reference external" href="https://hub.docker.com/_/hello-world">DockerHub</a>.</p></li>
 </ul>
-</div>
-</div>
-<div class="section" id="terminal-access">
+</section>
+</section>
+<section id="terminal-access">
 <h2>Terminal access<a class="headerlink" href="#terminal-access" title="Permalink to this headline">#</a></h2>
 <p><strong>Linux</strong><br />
 The default Unix Shell for Linux operating systems is usually Bash. On most versions of Linux, it is accessible by running the <a class="reference external" href="https://help.gnome.org/users/gnome-terminal/stable/">(Gnome) Terminal</a> or <a class="reference external" href="https://konsole.kde.org/">(KDE) Konsole</a> or <a class="reference external" href="https://en.wikipedia.org/wiki/Xterm">xterm</a>, which can be found via the applications menu or the search bar. If your machine is set up to use something other than bash, you can run it by opening a terminal and typing <code class="docutils literal notranslate"><span class="pre">bash</span></code>.</p>
@@ -690,8 +691,8 @@ For a Mac computer, the default Unix Shell is Bash, and it is available via the 
 <p>For more info: <a class="reference external" href="https://www.macworld.co.uk/how-to/how-use-terminal-on-mac-3608274/">How To use a terminal on Mac</a></p>
 <p><strong>Windows</strong><br />
 Computers with Windows operating systems do not automatically have a Unix Shell program installed. We encourage you to use an emulator included in <a class="reference external" href="https://gitforwindows.org/">Git for Windows</a>, which gives you access to both Bash shell commands and Git. To install, please follow these <a class="reference external" href="https://coderefinery.github.io/installation/shell-and-git/#shell-and-git">instructions</a>.</p>
-</div>
-<div class="section" id="x-windows-system">
+</section>
+<section id="x-windows-system">
 <h2>X Windows System<a class="headerlink" href="#x-windows-system" title="Permalink to this headline">#</a></h2>
 <p>Docker doesn’t have any build-in graphics, which means it cannot run desktop applications by default. For this, we require the X Windows System. The X Window System (X11, or simply X) is a windowing system for bitmap displays, common on Unix-like operating systems. X provides the basic framework for a GUI environment: drawing and moving windows on the display device and interacting with a mouse and a keyboard.</p>
 <p>If you are on a desktop Linux, you already have one. For macOS, you can download <a class="reference external" href="https://www.xquartz.org/">XQuartz</a>, and for Windows, we tested <a class="reference external" href="https://sourceforge.net/projects/vcxsrv/">VcXsrv</a>.</p>
@@ -715,8 +716,8 @@ Computers with Windows operating systems do not automatically have a Unix Shell 
 </div>
 </div>
 <p>With these commands (and an active X server on the host system), any graphical output inside the container will be shown on your own desktop.</p>
-</div>
-<div class="section" id="mount-a-volume">
+</section>
+<section id="mount-a-volume">
 <h2>Mount a volume<a class="headerlink" href="#mount-a-volume" title="Permalink to this headline">#</a></h2>
 <p>The docker image with which you can spawn a container contains all the software and general datafiles. However, we still need to give the container access to your dataset. To do so, we can mount a directory on your own system inside the container with the following command structure: <code class="docutils literal notranslate"><span class="pre">-v</span> <span class="pre">&lt;abs_path_host&gt;:&lt;abs_path_container&gt;</span></code>. Assuming your terminal is opened inside the data folder on your system, the specific commands for the different operating systems mount this folder as the <code class="docutils literal notranslate"><span class="pre">/data</span></code> folder inside the container, are:</p>
 <p>For Windows in GitBash: <code class="docutils literal notranslate"><span class="pre">-v</span> <span class="pre">/$(pwd):/data</span></code><br />
@@ -724,8 +725,8 @@ For Windows in cmd: <code class="docutils literal notranslate"><span class="pre"
 For Linux and macOS:  <code class="docutils literal notranslate"><span class="pre">-v</span> <span class="pre">$(pwd):/data</span></code></p>
 <p><code class="docutils literal notranslate"><span class="pre">$(pwd)</span></code> can be replaced with the absolute path of the datafolder, or be used to access subdirectories (e.g. <code class="docutils literal notranslate"><span class="pre">$(pwd)/data:/data</span></code>).</p>
 <p>For more info about mounting volumes, check this <a class="reference external" href="https://stackoverflow.com/questions/41485217/mount-current-directory-as-a-volume-in-docker-on-windows-10">StackOverflow question</a></p>
-</div>
-<div class="section" id="running-a-container-with-data-and-graphical-output">
+</section>
+<section id="running-a-container-with-data-and-graphical-output">
 <h2>Running a container with data and graphical output<a class="headerlink" href="#running-a-container-with-data-and-graphical-output" title="Permalink to this headline">#</a></h2>
 <p>To start a container from an image, we use the command <code class="docutils literal notranslate"><span class="pre">docker</span> <span class="pre">run</span> <span class="pre">&lt;image_name&gt;</span></code>. We also pass the additional flags <code class="docutils literal notranslate"><span class="pre">--rm</span></code> to delete the container after closing and <code class="docutils literal notranslate"><span class="pre">-it</span></code> to be able to interact with the container. Combining all arguments then leads to the following commands to run (and automatically close) the container:</p>
 <div class="tab-set docutils">
@@ -745,8 +746,8 @@ For Linux and macOS:  <code class="docutils literal notranslate"><span class="pr
 </div>
 </div>
 </div>
-</div>
-<div class="section" id="issues-troubleshooting">
+</section>
+<section id="issues-troubleshooting">
 <h2>Issues/Troubleshooting<a class="headerlink" href="#issues-troubleshooting" title="Permalink to this headline">#</a></h2>
 <ul>
 <li><p>For Linux users encountering the error <em>Unable to init server</em>, please run <code class="docutils literal notranslate"><span class="pre">xhost</span> <span class="pre">+</span></code> in the terminal and rerun the <code class="docutils literal notranslate"><span class="pre">docker</span> <span class="pre">run</span></code> command. For more info, see <a class="reference external" href="https://www.thegeekstuff.com/2010/06/xhost-cannot-open-display/">here</a>.</p></li>
@@ -787,16 +788,16 @@ libGL error: failed to load driver: swrast
 </ul>
 </li>
 </ul>
-</div>
-<div class="section" id="references">
+</section>
+<section id="references">
 <h2>References<a class="headerlink" href="#references" title="Permalink to this headline">#</a></h2>
 <ul class="simple">
 <li><p><a class="reference external" href="https://betterprogramming.pub/running-desktop-apps-in-docker-43a70a5265c4">https://betterprogramming.pub/running-desktop-apps-in-docker-43a70a5265c4</a></p></li>
 <li><p><a class="reference external" href="https://coderefinery.github.io/installation/shell-and-git/#shell-and-git">https://coderefinery.github.io/installation/shell-and-git/#shell-and-git</a></p></li>
 <li><p><a class="reference external" href="https://ucsbcarpentry.github.io/2019-10-24-gitbash/setup.html">https://ucsbcarpentry.github.io/2019-10-24-gitbash/setup.html</a></p></li>
 </ul>
-</div>
-</div>
+</section>
+</section>
 
     <script type="text/x-thebe-config">
     {

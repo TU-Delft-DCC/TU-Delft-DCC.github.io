@@ -4,7 +4,8 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
     <title>Getting started &#8212; DCC Guides</title>
     
   <!-- Loaded before other Sphinx assets -->
@@ -26,8 +27,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
     <link rel="stylesheet" type="text/css" href="../_static/tabs.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
     
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
@@ -45,6 +45,7 @@
     <script>let toggleOpenOnPrint = 'true';</script>
     <script src="../_static/togglebutton.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/design-tabs.js"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
 const thebe_selector = ".thebe,.cell"
 const thebe_selector_input = "pre"
@@ -656,7 +657,7 @@ title="Print to PDF"
                 
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="getting-started">
+  <section class="tex2jax_ignore mathjax_ignore" id="getting-started">
 <h1>Getting started<a class="headerlink" href="#getting-started" title="Permalink to this headline">#</a></h1>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -668,7 +669,7 @@ title="Print to PDF"
 <p class="admonition-title">Note</p>
 <p>To access some of the links, you may have to log in with your TU Delft NetID.</p>
 </div>
-<div class="section" id="human-help">
+<section id="human-help">
 <h2>Human help<a class="headerlink" href="#human-help" title="Permalink to this headline">#</a></h2>
 <p><em>Do you have the kind of prickly problem we like to sink our teeth into?</em></p>
 <a class="bg-primary reference internal image-reference" href="../_images/llama_teeth.jpg"><img alt="../_images/llama_teeth.jpg" class="bg-primary align-center" src="../_images/llama_teeth.jpg" style="width: 300px;" /></a>
@@ -678,8 +679,8 @@ title="Print to PDF"
 <li><p>Perhaps one of your fellow researchers has already solved your type of problem. Maybe it’s worth contacting a Data Champion close to home via <a class="reference external" href="https://www.tudelft.nl/en/library/research-data-management/r/data-stewardship/data-champions/our-data-champions/">https://www.tudelft.nl/en/library/research-data-management/r/data-stewardship/data-champions/our-data-champions/</a>.</p></li>
 <li><p>Still no joy? Please feel free to contact the <a class="reference internal" href="../community/dcc.html"><span class="doc std std-doc">DCC</span></a> or our colleagues at <a class="reference external" href="https://www.tudelft.nl/ict-innovation/about-innovation/">ICT-Innovation</a>. Chances are that you have just the kind of problem we like to sink our teeth into.</p></li>
 </ul>
-</div>
-<div class="section" id="computer-resources">
+</section>
+<section id="computer-resources">
 <h2>Computer resources<a class="headerlink" href="#computer-resources" title="Permalink to this headline">#</a></h2>
 <p><em>Is the biggest threat to your research at this moment, the cleaner who needs to plug in the vacuum cleaner?</em></p>
 <a class="bg-primary reference internal image-reference" href="../_images/compute_server_poor.jpg"><img alt="../_images/compute_server_poor.jpg" class="bg-primary align-center" src="../_images/compute_server_poor.jpg" style="width: 300px;" /></a>
@@ -693,11 +694,11 @@ If you are looking for a maintained, ‘always on’ computer with an operating 
 <p class="admonition-title">Personal anecdote</p>
 <p>I find this particularly useful. I have a standard Windows laptop and I work on a number of different projects at the same time for which Linux is more appropriate. I apply for a hosted server for the duration of the project and within a few days I have what I need, with thanks to my friendly FIM.</p>
 </div>
-<div class="section" id="delft-hpc">
+<section id="delft-hpc">
 <h3>Delft HPC<a class="headerlink" href="#delft-hpc" title="Permalink to this headline">#</a></h3>
 <p>🏗️ Under construction</p>
-</div>
-<div class="section" id="surf-national-computer-facilities">
+</section>
+<section id="surf-national-computer-facilities">
 <h3>SURF National Computer Facilities<a class="headerlink" href="#surf-national-computer-facilities" title="Permalink to this headline">#</a></h3>
 <p>If you need more computational power, then you might consider the national computer facilities provided by <a class="reference external" href="https://www.surf.nl/en/which-compute-service-for-which-research-question">SURF</a>:</p>
 <ul class="simple">
@@ -710,14 +711,14 @@ If you are looking for a maintained, ‘always on’ computer with an operating 
 <p>For ‘large’ requests, applications go through NWO: <a class="reference external" href="https://www.nwo.nl/en/funding/our-funding-instruments/enw/computing-time-on-national-computer-facilities/access-to-the-national-computer-facilities-for-regular-projects.html">https://www.nwo.nl/en/funding/our-funding-instruments/enw/computing-time-on-national-computer-facilities/access-to-the-national-computer-facilities-for-regular-projects.html</a></p>
 <p>For ‘small’ requests, applications go through SURF: <a class="reference external" href="https://www.surf.nl/en/applying-for-access-to-compute-services">https://www.surf.nl/en/applying-for-access-to-compute-services</a></p>
 <p>Alternatively, your FIM can arrange access to Cartesius and Lisa on a pay per use basis: <a class="reference external" href="https://userinfo.surfsara.nl/systems/shared/rccs">https://userinfo.surfsara.nl/systems/shared/rccs</a></p>
-</div>
-<div class="section" id="cloud-services">
+</section>
+<section id="cloud-services">
 <h3>Cloud services<a class="headerlink" href="#cloud-services" title="Permalink to this headline">#</a></h3>
 <p>Of course, if you are not working with (privacy) sensitive data, it’s always possible to use commercial providers such as Microsoft Azure, Amazon AWS Google GCS, etc. Please discuss this with your FIM first.</p>
 <p>If you have privacy or security concerns please use the TU Delft Cloud Advice Service: <a class="reference external" href="https://intranet.tudelft.nl/en/-/cloud-advice-service-1">https://intranet.tudelft.nl/en/-/cloud-advice-service-1</a> (log into <a class="reference external" href="http://intranet.tudelft.nl">intranet.tudelft.nl</a> first and then copy/paste this link)</p>
-</div>
-</div>
-<div class="section" id="website-hosting">
+</section>
+</section>
+<section id="website-hosting">
 <h2>Website Hosting<a class="headerlink" href="#website-hosting" title="Permalink to this headline">#</a></h2>
 <p>If you need to host a website, you can apply for a LAMP environment here: <a class="reference external" href="https://intranet.tudelft.nl/en/-/application-for-lamp-website">https://intranet.tudelft.nl/en/-/application-for-lamp-website</a> (log into <a class="reference external" href="http://intranet.tudelft.nl">intranet.tudelft.nl</a> first and then copy/paste this link)
 Apparently there’s a new improved LAMP environment coming soon!</p>
@@ -726,23 +727,23 @@ Apparently there’s a new improved LAMP environment coming soon!</p>
 <p>If you would like a TU Delft domain name for your website, you can apply for one here:  <a class="reference external" href="https://tudelft.topdesk.net/tas/public/ssp/">https://tudelft.topdesk.net/tas/public/ssp/</a>  Log into the self-service portal and then navigate to <strong>SOFTWARE &amp; AUTORISATIONS &gt; IT FOR COMMUNICATION &gt; REQUEST DOMAIN NAMES</strong></p>
 <p><strong>Do you need to host a Data Portal?</strong> Please consider using the 4TU data repository (<a class="reference external" href="https://researchdata.4tu.nl/en/">https://researchdata.4tu.nl/en/</a>), DANS (<a class="reference external" href="https://dans.knaw.nl/en">https://dans.knaw.nl/en</a>), Zenodo (<a class="reference external" href="https://zenodo.org/">https://zenodo.org/</a>), or a domain specific repository first. If you have to build your own, consider using the CKAN Data Portal Platform: <a class="reference external" href="https://ckan.org">https://ckan.org</a>.</p>
 <p><strong>Do you need to host a Research Software Directory?</strong> Please consider using the Dutch national directory (<a class="reference external" href="https://www.research-software.nl/">https://www.research-software.nl/</a>). If you need to build your own, consider reusing the software used to build the national directory (<a class="reference external" href="https://github.com/research-software-directory/research-software-directory/">https://github.com/research-software-directory/research-software-directory/</a>).</p>
-</div>
-<div class="section" id="cant-find-what-you-need">
+</section>
+<section id="cant-find-what-you-need">
 <h2>Can’t find what you need?<a class="headerlink" href="#cant-find-what-you-need" title="Permalink to this headline">#</a></h2>
 <p><em>Things can move quickly in the world of scientific computing.</em></p>
 <a class="bg-primary reference internal image-reference" href="../_images/compute_train.jpg"><img alt="../_images/compute_train.jpg" class="bg-primary align-center" src="../_images/compute_train.jpg" style="width: 300px;" /></a>
 <p>By the time you read this blog, a lot of the links may no longer work and the information will probably be outdated. No problem! If you can’t find what you are looking for, or if you have a problem not mentioned here, or if you know of additional useful resources, please don’t hesitate to get in touch.</p>
 <p>You can find me here <a class="reference external" href="https://www.tudelft.nl/en/staff/s.e.branchett/?cHash=245b0ce9092ea7f97c549dd5bda8b221">TU Delft</a> and here <a class="reference external" href="https://linkedin.com/in/sebranchett">LinkedIn</a> and here <a class="reference external" href="https://twitter.com/sebranchett">Twitter</a> and here <a class="reference external" href="https://github.com/sebranchett">github</a>.</p>
-</div>
-<div class="section" id="acknowledgements">
+</section>
+<section id="acknowledgements">
 <h2>Acknowledgements<a class="headerlink" href="#acknowledgements" title="Permalink to this headline">#</a></h2>
 <p>This blog expresses the views of the author, <a class="reference external" href="https://www.tudelft.nl/en/staff/s.e.branchett/?cHash=245b0ce9092ea7f97c549dd5bda8b221">Susan Branchett</a>.</p>
 <p>The FIMs, Data Stewards and ICT-Innovation staff are kindly acknowledged for their help in collecting the information provided above.</p>
 <p><a class="reference external" href="https://pixabay.com/photos/binary-binary-code-binary-system-2910663/">Binary code</a>, <a class="reference external" href="https://pixabay.com/photos/alpaca-cactus-denture-teeth-3647011/">alpaca</a> and <a class="reference external" href="https://pixabay.com/photos/train-station-transportation-people-2593687/">train</a> images are used under the <a class="reference external" href="https://pixabay.com/service/license/">Pixabay license</a>.
 Server image by Flickr user Phil! Gold / CC BY-SA (<a class="reference external" href="https://creativecommons.org/licenses/by-sa/2.0">https://creativecommons.org/licenses/by-sa/2.0</a>).</p>
 <p>This article is published under a <a class="reference external" href="https://creativecommons.org/licenses/by/4.0/">CC-BY-4.0 international license</a>.</p>
-</div>
-</div>
+</section>
+</section>
 
     <script type="text/x-thebe-config">
     {

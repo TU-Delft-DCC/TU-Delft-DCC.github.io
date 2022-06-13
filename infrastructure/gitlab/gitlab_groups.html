@@ -4,7 +4,8 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
     <title>Creating GitLab groups &#8212; DCC Guides</title>
     
   <!-- Loaded before other Sphinx assets -->
@@ -26,8 +27,7 @@
     <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/tabs.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
     
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
@@ -45,6 +45,7 @@
     <script>let toggleOpenOnPrint = 'true';</script>
     <script src="../../_static/togglebutton.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../../_static/design-tabs.js"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
 const thebe_selector = ".thebe,.cell"
 const thebe_selector_input = "pre"
@@ -664,23 +665,23 @@ title="Print to PDF"
                 
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="creating-gitlab-groups">
+  <section class="tex2jax_ignore mathjax_ignore" id="creating-gitlab-groups">
 <h1>Creating GitLab groups<a class="headerlink" href="#creating-gitlab-groups" title="Permalink to this headline">#</a></h1>
-<div class="section" id="background">
+<section id="background">
 <h2>Background<a class="headerlink" href="#background" title="Permalink to this headline">#</a></h2>
 <p>Groups and subgroups are similar to directories in the operating systems. In windows or Mac, we create directories to organise files or other directories. For example, imagine a scenario where you want to keep your photos in an organised manner. To this end, you may organise your photos on multiple levels. In the first level, perhaps you broadly classify them and then in the next levels you narrow it down to more specific subjects. Similarly, in the Gitlab, a group is used as a binder to put together projects or even other groups. For example, if three themes are researched in a lab, each of those themes could be a group, and all the research in a certain theme fall into its corresponding group. Sometimes there are also sub-themes. For every sub-theme you can create a subgroup (within the group corresponding to the broader theme) and assign the research close to the sub-theme there.</p>
-</div>
-<div class="section" id="what-this-documentation-will-help-achieve">
+</section>
+<section id="what-this-documentation-will-help-achieve">
 <h2>What this documentation will help achieve<a class="headerlink" href="#what-this-documentation-will-help-achieve" title="Permalink to this headline">#</a></h2>
 <p>This documentation helps researchers to set up a group and assign contributors to the projects within the Gitlab.</p>
-</div>
-<div class="section" id="prerequisites">
+</section>
+<section id="prerequisites">
 <h2>Prerequisites<a class="headerlink" href="#prerequisites" title="Permalink to this headline">#</a></h2>
 <ul class="simple">
 <li><p>TU Delft netID</p></li>
 </ul>
-</div>
-<div class="section" id="steps">
+</section>
+<section id="steps">
 <h2>Steps<a class="headerlink" href="#steps" title="Permalink to this headline">#</a></h2>
 <ol class="simple">
 <li><p>Log-in to the Gitlab with your netid and password.</p></li>
@@ -688,25 +689,25 @@ title="Print to PDF"
 <li><p>Create a group.</p></li>
 <li><p>Assign contributors to the group.</p></li>
 </ol>
-<div class="section" id="step-1-log-in-to-the-gitlab-with-your-netid-and-password">
+<section id="step-1-log-in-to-the-gitlab-with-your-netid-and-password">
 <h3>Step 1. Log-in to the Gitlab with your netid and password<a class="headerlink" href="#step-1-log-in-to-the-gitlab-with-your-netid-and-password" title="Permalink to this headline">#</a></h3>
 <p>To create a group in Gitlab, first you need to log in to the <a class="reference external" href="https://gitlab.tudelft.nl/">TU Delft’s instance of Gitlab</a>.</p>
 <p><img alt="AA" src="https://user-images.githubusercontent.com/70349945/125589301-b69555cd-2e96-455c-b129-4ba155d44685.png" />
 Figure 1: The login page of TU Delft’s Gitlab.</p>
-</div>
-<div class="section" id="step-2-enter-to-the-groups-section">
+</section>
+<section id="step-2-enter-to-the-groups-section">
 <h3>Step 2. Enter to the <em>Groups</em> section<a class="headerlink" href="#step-2-enter-to-the-groups-section" title="Permalink to this headline">#</a></h3>
 <p>After the log-in, from the top bar click on groups and then Your groups. I</p>
 <p><img alt="BB" src="https://user-images.githubusercontent.com/70349945/125589314-e173ad4c-f607-4ff5-8886-d2a80cd6eecb.png" />
 Figure 2: The Group section of the Gitlab.</p>
-</div>
-<div class="section" id="step-3-create-a-group">
+</section>
+<section id="step-3-create-a-group">
 <h3>Step 3. Create a group<a class="headerlink" href="#step-3-create-a-group" title="Permalink to this headline">#</a></h3>
 <p>In the new web page, click on the New group and then fill in the form by choosing a suitable group name and then selecting the visibility level. You can later on change both group name and visibility level.</p>
 <p><img alt="CC" src="https://user-images.githubusercontent.com/70349945/125589330-26e7788a-fdf8-4b99-a1d8-00e3e4f0344e.png" />
 Figure 3: Creation of a new Group in the Gitlab.</p>
-</div>
-<div class="section" id="step-4-assign-contributors-to-the-group">
+</section>
+<section id="step-4-assign-contributors-to-the-group">
 <h3>Step 4. Assign contributors to the group.<a class="headerlink" href="#step-4-assign-contributors-to-the-group" title="Permalink to this headline">#</a></h3>
 <p>After creating a group, it appears in the Groups tab. The group owner can add different people to the projects. This can be done by entering a project and then clicking on the Members on the left panel and filling in the form (Figure 4). A very important part of this form is permissions which are explained here in detail.</p>
 <p><img alt="DD" src="https://user-images.githubusercontent.com/70349945/125589349-c1e84563-4578-421c-8535-f16cd7732825.png" />
@@ -715,9 +716,9 @@ Figure 4: Assigning members to a project.</p>
 <p><img alt="image" src="https://user-images.githubusercontent.com/70349945/125596041-94a273ab-8685-4231-bbdf-1bbc42580acc.png" />
 Figure 5: Creating a subgroup</p>
 <p>After setting up the group, (sub groups,) projects, and assigning the collaborators to the projects, they can start working with the remote repository and transfer their scripts there.</p>
-</div>
-</div>
-</div>
+</section>
+</section>
+</section>
 
     <script type="text/x-thebe-config">
     {

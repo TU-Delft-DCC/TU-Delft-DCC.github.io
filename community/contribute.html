@@ -4,7 +4,8 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
     <title>Contributing guidelines &#8212; DCC Guides</title>
     
   <!-- Loaded before other Sphinx assets -->
@@ -26,8 +27,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
     <link rel="stylesheet" type="text/css" href="../_static/tabs.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
     
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
@@ -45,6 +45,7 @@
     <script>let toggleOpenOnPrint = 'true';</script>
     <script src="../_static/togglebutton.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/design-tabs.js"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
 const thebe_selector = ".thebe,.cell"
 const thebe_selector_input = "pre"
@@ -650,9 +651,9 @@ title="Print to PDF"
                 
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="contributing-guidelines">
+  <section class="tex2jax_ignore mathjax_ignore" id="contributing-guidelines">
 <h1>Contributing guidelines<a class="headerlink" href="#contributing-guidelines" title="Permalink to this headline">#</a></h1>
-<div class="section" id="welcome">
+<section id="welcome">
 <h2>👋 Welcome!<a class="headerlink" href="#welcome" title="Permalink to this headline">#</a></h2>
 <ul class="simple">
 <li><p>Do you have issues, tips, ideas, events, or questions related to Research Computing, Research Data, and Research Software at TU Delft?</p></li>
@@ -667,8 +668,8 @@ title="Print to PDF"
 <li><p>Be welcoming and open-minded. Remember that this is a community we
 build together. See our <a class="reference internal" href="code_of_conduct.html"><span class="doc std std-doc">Code of Conduct</span></a> for more information 💪.</p></li>
 </ul>
-</div>
-<div class="section" id="how-to-participate">
+</section>
+<section id="how-to-participate">
 <h2>How to participate<a class="headerlink" href="#how-to-participate" title="Permalink to this headline">#</a></h2>
 <p>Do you have questions, ideas or ongoing developments on FAIR related aspects, Open Science, training, etc? Would you like to point to specific resources and potential solutions or ideas?</p>
 <ul class="simple">
@@ -690,38 +691,43 @@ build together. See our <a class="reference internal" href="code_of_conduct.html
 <li><p>Use <a class="reference external" href="https://github.com/TU-Delft-DCC/TU-Delft-DCC.github.io/discussions/categories/solution"><strong>Solutions</strong></a> to point people to existing solutions or share your own. These solutions might end up on our Guides website to share with our community.</p></li>
 <li><p><a class="reference external" href="https://github.com/TU-Delft-DCC/TU-Delft-DCC.github.io/discussions/categories/show-and-tell"><strong>Show and tell</strong></a> things you have done that you are proud of and like other to be aware of.</p></li>
 </ul>
-<div class="section" id="for-moderators-and-maintainers">
+<section id="for-moderators-and-maintainers">
 <h3>For moderators and maintainers<a class="headerlink" href="#for-moderators-and-maintainers" title="Permalink to this headline">#</a></h3>
 <p>For the maintainers, here are some tips 💡 for getting started with Discussions.</p>
 <p>🔗 If you use issue templates, <strong>link any relevant issue templates</strong> such as questions and community conversations to Discussions. Declutter your issues by driving community content to where they belong in Discussions. If you need help, here’s a <a class="reference external" href="https://docs.github.com/en/github/building-a-strong-community/configuring-issue-templates-for-your-repository#configuring-the-template-chooser">link to the documentation</a>.</p>
 <p>➡️ You can <strong>convert issues to discussions</strong> either individually or bulk by labels. Looking at you, issues labeled “question” or “discussion”.</p>
-</div>
-</div>
-<div class="section" id="for-developers">
+</section>
+</section>
+<section id="for-developers">
 <h2>For developers<a class="headerlink" href="#for-developers" title="Permalink to this headline">#</a></h2>
-<div class="section" id="developing-and-building-the-guides-locally">
+<section id="developing-and-building-the-guides-locally">
 <h3>Developing and building the guides locally<a class="headerlink" href="#developing-and-building-the-guides-locally" title="Permalink to this headline">#</a></h3>
 <ol>
 <li><p>Fork the repository to your own Github profile</p></li>
 <li><p>Clone the repository</p></li>
 <li><p>Create a conda environment in the terminal with</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda env create -f environment.yml
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda env create -f environment.yml    
 </pre></div>
 </div>
 </li>
-<li><p>Run <code class="docutils literal notranslate"><span class="pre">bash</span> <span class="pre">build.sh</span></code> to generate the documentation</p></li>
+<li><p>Activate the conda environment with</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda activate dcc_guides_env
+</pre></div>
+</div>
+</li>
+<li><p>In the root of the repository, run <code class="docutils literal notranslate"><span class="pre">bash</span> <span class="pre">build.sh</span></code> to generate the documentation</p></li>
 <li><p>Go to the <code class="docutils literal notranslate"><span class="pre">./_build/html/</span></code> folder and open the <code class="docutils literal notranslate"><span class="pre">index.html</span></code> file. This should open the website in your browser.</p></li>
 </ol>
-</div>
-<div class="section" id="deploying-the-website-in-your-forked-version">
+</section>
+<section id="deploying-the-website-in-your-forked-version">
 <h3>Deploying the website in your forked version<a class="headerlink" href="#deploying-the-website-in-your-forked-version" title="Permalink to this headline">#</a></h3>
 <ol class="simple">
 <li><p>Fork the repository to your own Github profile</p></li>
 <li><p>In your forked repository, under <strong>Settings -&gt; Pages</strong> set Source to <code class="docutils literal notranslate"><span class="pre">gh-pages</span></code> and <code class="docutils literal notranslate"><span class="pre">/(root)</span></code> and press <strong>Save</strong></p></li>
 <li><p>Either commit a new change to the repository to trigger the build action or manually trigger the action. To manually trigger the action, go to <strong>Actions -&gt; Deploy guides</strong> and press <code class="docutils literal notranslate"><span class="pre">Run</span> <span class="pre">workflow</span></code> and <code class="docutils literal notranslate"><span class="pre">Run</span> <span class="pre">workflow</span></code>.</p></li>
 </ol>
-</div>
-<div class="section" id="you-want-to-make-some-kind-of-change">
+</section>
+<section id="you-want-to-make-some-kind-of-change">
 <h3>You want to make some kind of change<a class="headerlink" href="#you-want-to-make-some-kind-of-change" title="Permalink to this headline">#</a></h3>
 <ol class="simple">
 <li><p>(<strong>important</strong>) announce your plan to the rest of the community <em>before you start working</em>. This announcement should be in the form of a (new) issue;</p></li>
@@ -730,9 +736,9 @@ build together. See our <a class="reference internal" href="code_of_conduct.html
 <li><p><a class="reference external" href="http://rogerdudler.github.io/git-guide/">push</a> your feature branch to (your fork of) the DCC guides repository on GitHub;</p></li>
 <li><p>create the pull request, e.g. following the instructions <a class="reference external" href="https://help.github.com/articles/creating-a-pull-request/">here</a>. If needed, provide a link to the gh-pages in your forked repository: <code class="docutils literal notranslate"><span class="pre">https://&lt;your-username&gt;.github.io/TU-Delft-DCC.github.io/</span></code>.</p></li>
 </ol>
-</div>
-</div>
-</div>
+</section>
+</section>
+</section>
 
     <script type="text/x-thebe-config">
     {

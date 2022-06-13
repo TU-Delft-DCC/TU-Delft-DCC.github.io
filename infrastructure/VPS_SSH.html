@@ -4,7 +4,8 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
     <title>Configure SSH Tunneling &#8212; DCC Guides</title>
     
   <!-- Loaded before other Sphinx assets -->
@@ -26,8 +27,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
     <link rel="stylesheet" type="text/css" href="../_static/tabs.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
     
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
@@ -45,6 +45,7 @@
     <script>let toggleOpenOnPrint = 'true';</script>
     <script src="../_static/togglebutton.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/design-tabs.js"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
 const thebe_selector = ".thebe,.cell"
 const thebe_selector_input = "pre"
@@ -592,10 +593,10 @@ title="Print to PDF"
                 
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="configure-ssh-tunneling">
+  <section class="tex2jax_ignore mathjax_ignore" id="configure-ssh-tunneling">
 <h1>Configure SSH Tunneling<a class="headerlink" href="#configure-ssh-tunneling" title="Permalink to this headline">#</a></h1>
 <p>To connect to a remote host, TU Delft uses a <em>proxy server</em>, know as  <strong>bastion</strong>. Thefore, to reach a remote host, a user has to connect first to the <strong>bastion</strong> and from there to the remote host, e.g., <em><a class="reference external" href="http://my-vm.tudelft.nl">my-vm.tudelft.nl</a></em>. However, a user can connect directly to the remote host using <em>ssh tunneling</em>.</p>
-<div class="section" id="set-a-default-ssh-tunneling-for-a-host-linux-terminal">
+<section id="set-a-default-ssh-tunneling-for-a-host-linux-terminal">
 <h2>Set a Default SSH Tunneling for a Host (Linux Terminal)<a class="headerlink" href="#set-a-default-ssh-tunneling-for-a-host-linux-terminal" title="Permalink to this headline">#</a></h2>
 <ol class="simple">
 <li><p>On your local machine, edit the <code class="docutils literal notranslate"><span class="pre">~/.ssh/config</span></code> file and add the following confuration:</p></li>
@@ -627,12 +628,12 @@ title="Print to PDF"
 </pre></div>
 </div>
 <p>If you encounter problems with the connection. Use the debug mode <code class="docutils literal notranslate"><span class="pre">ssh</span> <span class="pre">-vvv</span> <span class="pre">&lt;host-nickname&gt;</span></code> to find out what might have gone wrong.</p>
-</div>
-<div class="section" id="tunneling-with-winscp">
+</section>
+<section id="tunneling-with-winscp">
 <h2>Tunneling with WinSCP<a class="headerlink" href="#tunneling-with-winscp" title="Permalink to this headline">#</a></h2>
 <p>If using winscp, you will find detailed information here: <a class="reference external" href="https://winscp.net/eng/docs/ui_login_tunnel">https://winscp.net/eng/docs/ui_login_tunnel</a></p>
-</div>
-</div>
+</section>
+</section>
 
     <script type="text/x-thebe-config">
     {

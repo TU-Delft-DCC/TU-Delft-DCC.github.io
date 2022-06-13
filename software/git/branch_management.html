@@ -4,7 +4,8 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
     <title>Branch management &#8212; DCC Guides</title>
     
   <!-- Loaded before other Sphinx assets -->
@@ -26,8 +27,7 @@
     <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/tabs.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
     
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
@@ -45,6 +45,7 @@
     <script>let toggleOpenOnPrint = 'true';</script>
     <script src="../../_static/togglebutton.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../../_static/design-tabs.js"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
 const thebe_selector = ".thebe,.cell"
 const thebe_selector_input = "pre"
@@ -606,7 +607,7 @@ title="Print to PDF"
                 
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="branch-management">
+  <section class="tex2jax_ignore mathjax_ignore" id="branch-management">
 <h1>Branch management<a class="headerlink" href="#branch-management" title="Permalink to this headline">#</a></h1>
 <p>Branch management is an important consideration for working collaboratively with git and GitHub. Branching allows you to diverge from the main line of development and continue to do work without messing with that main line [1]. A good method for branch management is Gitflow [2]. The referenced <a class="reference external" href="https://nvie.com/posts/a-successful-git-branching-model/">article</a> contains all information.</p>
 <p>In general, the <code class="docutils literal notranslate"><span class="pre">origin/master</span></code> branch is considered to be the main branch where the source code always reflects a <em>production-ready</em> state, i.e. a stable source code that you would like to share with the community. The <code class="docutils literal notranslate"><span class="pre">origin/develop</span></code> branch is the main development branch where the source code always reflects a state with the latest delivered development changes for the next release. When the source code in the <code class="docutils literal notranslate"><span class="pre">origin/develop</span></code> branch reaches a stable point, it needs to be merged into <code class="docutils literal notranslate"><span class="pre">origin/master</span></code> and tagged with a release number.</p>
@@ -618,7 +619,7 @@ title="Print to PDF"
 <li><p>Hot fix: <code class="docutils literal notranslate"><span class="pre">hotfix/[issue-number]</span></code> (for a bug in <code class="docutils literal notranslate"><span class="pre">origin/master</span></code>)</p></li>
 <li><p>Release: <code class="docutils literal notranslate"><span class="pre">release/[version]</span></code></p></li>
 </ul>
-<div class="section" id="workflow-examples">
+<section id="workflow-examples">
 <h2>Workflow examples<a class="headerlink" href="#workflow-examples" title="Permalink to this headline">#</a></h2>
 <p><strong>Aim:</strong> implement new features into the code.</p>
 <ol class="simple">
@@ -637,17 +638,17 @@ title="Print to PDF"
 <li><p>Create a <a class="reference external" href="https://docs.gitlab.com/ee/user/project/releases/">new release</a> in the master branch.</p></li>
 </ol>
 <img src="https://user-images.githubusercontent.com/15414938/110449882-f0639180-80c2-11eb-93a1-2688824c22cc.png" alt="git-model" width="500"/>
-</div>
-<div class="section" id="protected-branches">
+</section>
+<section id="protected-branches">
 <h2>Protected branches<a class="headerlink" href="#protected-branches" title="Permalink to this headline">#</a></h2>
 <p>GitLab will protect the <code class="docutils literal notranslate"><span class="pre">master</span></code> branch, see <a class="reference external" href="https://docs.gitlab.com/ee/user/project/protected_branches.html">https://docs.gitlab.com/ee/user/project/protected_branches.html</a></p>
-<div class="section" id="references">
+<section id="references">
 <h3>References<a class="headerlink" href="#references" title="Permalink to this headline">#</a></h3>
 <p>[1] <a class="reference external" href="https://www.atlassian.com/git/tutorials/using-branches">https://www.atlassian.com/git/tutorials/using-branches</a><br />
 [2] <a class="reference external" href="https://nvie.com/posts/a-successful-git-branching-model/">https://nvie.com/posts/a-successful-git-branching-model/</a></p>
-</div>
-</div>
-</div>
+</section>
+</section>
+</section>
 
     <script type="text/x-thebe-config">
     {

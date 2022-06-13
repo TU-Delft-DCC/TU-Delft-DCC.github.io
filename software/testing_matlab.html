@@ -4,7 +4,8 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
     <title>Testing with MATLAB &#8212; DCC Guides</title>
     
   <!-- Loaded before other Sphinx assets -->
@@ -26,8 +27,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
     <link rel="stylesheet" type="text/css" href="../_static/tabs.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
     
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
@@ -45,6 +45,7 @@
     <script>let toggleOpenOnPrint = 'true';</script>
     <script src="../_static/togglebutton.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/design-tabs.js"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
 const thebe_selector = ".thebe,.cell"
 const thebe_selector_input = "pre"
@@ -592,10 +593,10 @@ title="Print to PDF"
                 
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="testing-with-matlab">
+  <section class="tex2jax_ignore mathjax_ignore" id="testing-with-matlab">
 <h1>Testing with MATLAB<a class="headerlink" href="#testing-with-matlab" title="Permalink to this headline">#</a></h1>
 <p>In this guide, we will discuss writing and running tests with Matlab. See the <a class="reference external" href="https://nl.mathworks.com/help/matlab/matlab-unit-test-framework.html">documentation from Matlab</a> for more information.</p>
-<div class="section" id="writing-tests">
+<section id="writing-tests">
 <h2>Writing tests<a class="headerlink" href="#writing-tests" title="Permalink to this headline">#</a></h2>
 <p>Tests should be kept separate from the code base, usually in a folder <code class="docutils literal notranslate"><span class="pre">tests/</span></code>. The naming convention for writing a test for a particular MATLAB script is to prefix “test_” to the name of the script that is being tested. For example, a test for the file <code class="docutils literal notranslate"><span class="pre">draw_random_number.m</span></code> should be called <code class="docutils literal notranslate"><span class="pre">test_draw_random_number.m</span></code>. In general, Matlab will recognize any scripts that are prefixed or suffixed with the string “test” as tests.</p>
 <p>You can find an example below with the matlab syntax for writing <a class="reference external" href="https://nl.mathworks.com/help/matlab/class-based-unit-tests.html">Class-based unit tests</a>:</p>
@@ -671,8 +672,8 @@ title="Print to PDF"
 </pre></div>
 </div>
 </div>
-</div>
-<div class="section" id="executing-tests">
+</section>
+<section id="executing-tests">
 <h2>Executing tests<a class="headerlink" href="#executing-tests" title="Permalink to this headline">#</a></h2>
 <p>We will create a Matlab script called <code class="docutils literal notranslate"><span class="pre">run_testsuite.m</span></code> in the folder <code class="docutils literal notranslate"><span class="pre">tests/</span></code>. This function can run the tests present in the folder <code class="docutils literal notranslate"><span class="pre">tests/</span></code> and can create test reports.</p>
 <div class="toggle docutils container">
@@ -880,8 +881,8 @@ title="Print to PDF"
 </pre></div>
 </div>
 </div>
-</div>
-</div>
+</section>
+</section>
 
     <script type="text/x-thebe-config">
     {
