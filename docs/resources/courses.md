@@ -8,6 +8,7 @@ The TU Delft organises courses for researchers on data management, research soft
 :card: shadow
 :header: bg-warning
 :footer: bg-white
+:img-top-cls: pl-5 pr-5
 
 **The Carpentries**
 ^^^
@@ -35,7 +36,6 @@ The TU Delft organises courses for researchers on data management, research soft
 :text: Sign up
 ```
 
-
 ---
 **eScience Center**
 ^^^
@@ -48,7 +48,22 @@ SURF offers various [workshops](https://www.surf.nl/en/training-courses-for-rese
 
 :::
 
-## Software Sustainability Institute
+### Community support
+:::{panels}
+:column: col-lg-6 p-2
+:card: shadow
+:header: bg-warning
+:footer: bg-white
+:img-top-cls: pl-5 pr-5
+
+:img-top: ../img/R_cafe_logo_small.png
+
+Do you want to build your R skills, write R code with others, or ask questions about working with R? To join the TU Delft R Café, have a look at the [upcoming meeting dates](https://www.tudelft.nl/library/research-data-management/r/training-evenementen/training-voor-onderzoekers/tu-delft-r-cafe-1).
+
+
+:::
+
+### Software Sustainability Institute
 Since 2010, the Software Sustainability Institute has facilitated the advancement of software in research by cultivating better, more sustainable, research software to enable world-class research (“Better software, better research”). The Institute is based at the Universities of Edinburgh, Manchester, Oxford and Southampton, and draws on a team of experts with a breadth of experience in software development, project and programme management, research facilitation, publicity and community engagement.
 
 You can view their upcoming workshops at https://www.software.ac.uk/news.
