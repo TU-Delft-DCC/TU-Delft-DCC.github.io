@@ -102,7 +102,7 @@ and copy the content below in the Dockerfile. Make sure to update the Matlab rel
 
 ```{code-block} docker
 ---
-emphasize-lines: 5, 28
+emphasize-lines: 5, 28, 40
 ---
 # Copyright 2019 - 2021 The MathWorks, Inc.
 
