@@ -764,7 +764,7 @@ title="Print to PDF"
 </section>
 <section id="prerequisites">
 <h2>Prerequisites<a class="headerlink" href="#prerequisites" title="Permalink to this headline">#</a></h2>
-<p><strong>Server:</strong> This example uses a server to run the whole process. You can request a server from TU Delft ICT service following these directions <a class="reference external" href="https://gitlab.tudelft.nl/acryan/data-management-for-researchers/-/wikis/Setting-up-and-running-a-THREDDS-server">here</a> . It is useful to set this up on a server so that Docker can be running continuously, and be ready to run CI/CD tests whenever a new commit occurs in the repository.</p>
+<p><strong>Server:</strong> This example uses a server to run the whole process. You can request a server from TU Delft ICT service following these directions <a class="reference internal" href="../VPS_request.html"><span class="doc std std-doc">here</span></a>. It is useful to set this up on a server so that Docker can be running continuously, and be ready to run CI/CD tests whenever a pipeline is triggered in the repository.</p>
 <p><strong>Docker:</strong> We use a Docker container to run the Gitlab runner and initialise the CI/CD pipeline.</p>
 <p><strong>Gitlab runner:</strong> (from GitLab documentation) “Runners are the agents that run the CI/CD jobs that come from GitLab. When you register a runner, you are setting up communication between your GitLab instance and the machine where GitLab Runner is installed. Runners usually process jobs on the same machine where you installed GitLab Runner.” <a class="reference external" href="https://docs.gitlab.com">Link</a></p>
 <p><strong>GitLab repository:</strong> A remote repository that can store your code and keeps track of your project development. You’re on one right now! :) If you haven’t already, you use your netID and password to login to TU Delft’s GitLab instance at <a class="reference external" href="http://gitlab.tudelft.nl">gitlab.tudelft.nl</a> and create a repository containing your project code.</p>
@@ -794,7 +794,12 @@ title="Print to PDF"
 </ol>
 <section id="step-1-request-server-running-ubuntu">
 <h3>Step 1. Request server running Ubuntu<a class="headerlink" href="#step-1-request-server-running-ubuntu" title="Permalink to this headline">#</a></h3>
-<p>If you don’t have a VPS already, you can request one from TU Delft ICT. Instructions for requesting a server and storage from ICT can be found here ___. Ubuntu is associated with Basic Configuration 4 on the TopDesk request form.</p>
+<p>If you don’t have a VPS already, you can request one from TU Delft ICT. Instructions for requesting a server and storage from ICT can be found under <a class="reference internal" href="../VPS_request.html"><span class="doc std std-doc">Remote servers/Request a Virtual Private Server</span></a>.</p>
+<p>We recommend the following configuration for configuring a Gitlab runner:</p>
+<ul class="simple">
+<li><p>Basic Configuration 4 (Ubuntu)</p></li>
+<li><p>No additional <strong>ports</strong> need to be configured for deploying a GitLab runner with Docker.</p></li>
+</ul>
 </section>
 <section id="step-2-connect-to-the-server-via-ssh">
 <h3>Step 2. Connect to the server via ssh<a class="headerlink" href="#step-2-connect-to-the-server-via-ssh" title="Permalink to this headline">#</a></h3>

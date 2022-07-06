@@ -865,8 +865,8 @@ gitlab/gitlab-runner:latest
 <span class="c"># Set user and work directory</span>
 <span class="k">USER</span><span class="w"> </span><span class="s">matlab</span>
 <span class="k">WORKDIR</span><span class="w"> </span><span class="s">/home/matlab</span>
-<span class="k">CMD</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;bash&quot;</span><span class="p">]</span>
-</pre></div>
+<span class="hll"><span class="k">CMD</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;bash&quot;</span><span class="p">]</span>
+</span></pre></div>
 </div>
 <p>To build a Docker image with the name <code class="docutils literal notranslate"><span class="pre">matlab-gitlab</span></code> and the version reference <code class="docutils literal notranslate"><span class="pre">r2021b</span></code>, run the following command in the folder containing the Dockerfile:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo docker build . -t matlab-gitlab:r2021b
