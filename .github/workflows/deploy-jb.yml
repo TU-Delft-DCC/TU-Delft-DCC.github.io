@@ -13,7 +13,7 @@ on:
         default: ""
 
 jobs:
-  deploy:
+  deploy-book:
     name: Deploy jupyter book
     runs-on: ubuntu-latest
     steps:
