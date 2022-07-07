@@ -44,4 +44,4 @@ sphinx:
   extra_extensions:
     - sphinx_inline_tabs
     - sphinx_togglebutton
-    - sphinx_design
+    - sphinx_panels

@@ -13,7 +13,7 @@ handler.setFormatter(FORMATTER)
 log.addHandler(handler)
 
 
-def create_page_maintainers(path: str = './docs'):
+def create_page_maintainers(path: str = "./docs"):
     """Create a .md file with all maintainers
 
     Parameters
@@ -22,7 +22,6 @@ def create_page_maintainers(path: str = './docs'):
         directory of the jupyter book, by default "./docs"
     
     """
-
     files = get_filenames_in_toc(path)
     df = get_metadata(files)
     write_authors_page(df, path)
@@ -41,11 +40,11 @@ def get_filenames_in_toc(path: str) -> List:
     list
         filepaths of files in _toc.yml
     """
-    toc_file = os.path.join(path, '_toc.yml')
+    toc_file = os.path.join(path, "_toc.yml")
     files = []
-    with open(toc_file, 'r') as f:
+    with open(toc_file, "r") as f:
         for line in f:
-            if '- file:' in line:
+            if "- file:" in line:
                 files.append(line.strip().split()[-1])
 
     filepaths = [os.path.join(path, f"{file}.md") for file in files]
@@ -65,18 +64,25 @@ def get_metadata(files: List) -> pd.DataFrame:
     pandas.DataFrame
         dataframe with the metadata from the articles
     
-    """ 
+    """
     entries = []
     for file in files:
         try:
             post = frontmatter.load(file)
-            details = [post["section"], post["title"], post["author_1"], post["author_2"]]
+            details = [
+                post["section"],
+                post["title"],
+                post["author_1"],
+                post["author_2"],
+            ]
             entries.append(details)
             log.info(f"Added metadata found in {file}")
         except:
-            log.debug(f"No metadata found in {file}")        
-    
-    return pd.DataFrame(entries, columns = ["Section", "Title", "Lead maintainer", "Backup maintainer"])    
+            log.debug(f"No metadata found in {file}")
+
+    return pd.DataFrame(
+        entries, columns=["Section", "Title", "Lead maintainer", "Backup maintainer"]
+    )
 
 
 def write_authors_page(df: pd.DataFrame, path):
@@ -89,15 +95,18 @@ def write_authors_page(df: pd.DataFrame, path):
     path : str
         directory of the jupyter book
     """
-    file = os.path.join(path, 'community', 'maintainers.md')
-    with open(file, 'w') as f:
+    file = os.path.join(path, "community", "maintainers.md")
+    with open(file, "w") as f:
         f.write("# Guide maintainers \n\n")
-        f.write("_This content is automatically generated, all changes made will be lost._ \n\n")
-        f.write(df.sort_values(by=["Section"]).to_markdown(index=False))        
+        f.write(
+            "_This content is automatically generated, all changes made will be lost._ \n\n"
+        )
+        f.write(df.sort_values(by=["Section"]).to_markdown(index=False))
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     if len(sys.argv) == 2:
+        # Specify the location of the documentation
         create_page_maintainers(sys.argv[1])
     else:
         create_page_maintainers()
