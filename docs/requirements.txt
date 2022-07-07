@@ -6,3 +6,4 @@ linkify
 sphinx-tabs
 sphinx_inline_tabs
 sphinx-design
+sphinx-panels
