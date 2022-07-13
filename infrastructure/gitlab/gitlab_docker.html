@@ -28,8 +28,8 @@
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/tabs.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/panels-bootstrap.5fd3999ee7762ccc51105388f4a9d115.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     
   <!-- Pre-loaded scripts that we'll load fully later -->
@@ -767,7 +767,7 @@ title="Print to PDF"
 </section>
 <section id="prerequisites">
 <h2>Prerequisites<a class="headerlink" href="#prerequisites" title="Permalink to this headline">#</a></h2>
-<p><strong>Server:</strong> This example uses a server to run the whole process. You can request a server from TU Delft ICT service following these directions <a class="reference internal" href="../VPS_request.html"><span class="doc std std-doc">here</span></a>. It is useful to set this up on a server so that Docker can be running continuously, and be ready to run CI/CD tests whenever a pipeline is triggered in the repository.</p>
+<p><strong>Server:</strong> This example uses a server to run the whole process. You can request a server from TU Delft ICT service following these directions <a class="reference internal" href="../VPS_request.html"><span class="doc std std-doc">here</span></a>. It is useful to set this up on a server so that Docker can be running continuously, and be ready to run CI/CD tests whenever a new commit occurs in the repository.</p>
 <p><strong>Docker:</strong> We use a Docker container to run the Gitlab runner and initialise the CI/CD pipeline.</p>
 <p><strong>Gitlab runner:</strong> (from GitLab documentation) “Runners are the agents that run the CI/CD jobs that come from GitLab. When you register a runner, you are setting up communication between your GitLab instance and the machine where GitLab Runner is installed. Runners usually process jobs on the same machine where you installed GitLab Runner.” <a class="reference external" href="https://docs.gitlab.com">Link</a></p>
 <p><strong>GitLab repository:</strong> A remote repository that can store your code and keeps track of your project development. You’re on one right now! :) If you haven’t already, you use your netID and password to login to TU Delft’s GitLab instance at <a class="reference external" href="http://gitlab.tudelft.nl">gitlab.tudelft.nl</a> and create a repository containing your project code.</p>
@@ -802,13 +802,14 @@ title="Print to PDF"
 <ul class="simple">
 <li><p>Basic Configuration 4 (Ubuntu)</p></li>
 <li><p>No additional <strong>ports</strong> need to be configured for deploying a GitLab runner with Docker.</p></li>
+<li><p>Additional space if your Docker images are larger than ~10Gb.</p></li>
 </ul>
 </section>
 <section id="step-2-connect-to-the-server-via-ssh">
 <h3>Step 2. Connect to the server via ssh<a class="headerlink" href="#step-2-connect-to-the-server-via-ssh" title="Permalink to this headline">#</a></h3>
 <p>The email response from <a class="reference external" href="mailto:Sysadmin&#37;&#52;&#48;TUDelft&#46;nl">Sysadmin<span>&#64;</span>TUDelft<span>&#46;</span>nl</a> confirming the successful deployment of your server should contain instructions to connect via ssh.</p>
 <p>The default login procedure is to connect to the Bastion host (an intermediary server) and then to your server, so it is a two-step process. Please check your email for Steps A and B as described by ICT admin.</p>
-<p>You can also connect to your server using Putty (Windows) or, on Mac/Linux, configure one-step access by storing ssh keys between your local machine and your server and designating an alias. Details can be found here ___.</p>
+<p>You can also connect to your server using Putty (Windows) or, on Mac/Linux, configure one-step access by storing ssh keys between your local machine and your server and designating an alias.</p>
 <p>When you are successfully connected, you should see in your terminal/command prompt something like this:</p>
 <p><img alt="Screen_Shot_2020-11-17_at_10.30.31" src="https://gitlab.tudelft.nl/acryan/data-management-for-researchers/-/wikis/uploads/048a06a817852a399c697582ae1e3a08/Screen_Shot_2020-11-17_at_10.30.31.png" /></p>
 </section>
