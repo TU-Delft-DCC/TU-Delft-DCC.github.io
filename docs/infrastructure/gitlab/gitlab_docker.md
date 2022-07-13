@@ -47,7 +47,12 @@ The documentation below will help you deploy GitLab runner in a Docker container
 10. Test the CI/CD pipeline 
 
 ### Step 1. Request server running Ubuntu
-If you don't have a VPS already, you can request one from TU Delft ICT. Instructions for requesting a server and storage from ICT can be found [here](../VPS_request.md). Ubuntu is associated with Basic Configuration 4 on the TopDesk request form.
+If you don't have a VPS already, you can request one from TU Delft ICT. Instructions for requesting a server and storage from ICT can be found under [Remote servers/Request a Virtual Private Server](../VPS_request.md).
+
+We recommend the following configuration for configuring a Gitlab runner:
+- Basic Configuration 4 (Ubuntu)
+- No additional **ports** need to be configured for deploying a GitLab runner with Docker.
+- Additional space if your Docker images are larger than ~10Gb.
 
 ### Step 2. Connect to the server via ssh
 The email response from Sysadmin@TUDelft.nl confirming the successful deployment of your server should contain instructions to connect via ssh. 
