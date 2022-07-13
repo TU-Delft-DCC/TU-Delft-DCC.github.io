@@ -19,7 +19,7 @@ In order to be ready to run CI/CD pipeline, a gitlab-runner Docker container is 
 The documentation below will help you deploy GitLab runner in a Docker container on a server to automatically run CI/CD tests and store artifacts every time there is a new commit to a GitLab repository.
 
 ## Prerequisites
-**Server:** This example uses a server to run the whole process. You can request a server from TU Delft ICT service following these directions [here](../VPS_request.md). It is useful to set this up on a server so that Docker can be running continuously, and be ready to run CI/CD tests whenever a pipeline is triggered in the repository.
+**Server:** This example uses a server to run the whole process. You can request a server from TU Delft ICT service following these directions [here](../VPS_request.md). It is useful to set this up on a server so that Docker can be running continuously, and be ready to run CI/CD tests whenever a new commit occurs in the repository.
 
 **Docker:** We use a Docker container to run the Gitlab runner and initialise the CI/CD pipeline. 
 
@@ -52,13 +52,14 @@ If you don't have a VPS already, you can request one from TU Delft ICT. Instruct
 We recommend the following configuration for configuring a Gitlab runner:
 - Basic Configuration 4 (Ubuntu)
 - No additional **ports** need to be configured for deploying a GitLab runner with Docker.
+- Additional space if your Docker images are larger than ~10Gb.
 
 ### Step 2. Connect to the server via ssh
 The email response from Sysadmin@TUDelft.nl confirming the successful deployment of your server should contain instructions to connect via ssh. 
 
 The default login procedure is to connect to the Bastion host (an intermediary server) and then to your server, so it is a two-step process. Please check your email for Steps A and B as described by ICT admin.
 
-You can also connect to your server using Putty (Windows) or, on Mac/Linux, configure one-step access by storing ssh keys between your local machine and your server and designating an alias. Details can be found here ___. 
+You can also connect to your server using Putty (Windows) or, on Mac/Linux, configure one-step access by storing ssh keys between your local machine and your server and designating an alias. 
 
 When you are successfully connected, you should see in your terminal/command prompt something like this: 
 
