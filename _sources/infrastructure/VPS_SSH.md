@@ -1,6 +1,6 @@
 # Configure SSH Tunneling
 
-To connect to a remote host, TU Delft uses a *proxy server*, know as  **bastion**. Thefore, to reach a remote host, a user has to connect first to the **bastion** and from there to the remote host, e.g., *my-vm.tudelft.nl*. However, a user can connect directly to the remote host using *ssh tunneling*.
+To connect to a remote host, TU Delft uses a *proxy server*, know as  **bastion**. To reach a remote host, a user has to connect first to the **bastion** and from there to the remote host. However, a user can connect directly to the remote host using *ssh tunneling*.
 
 ## Set a Default SSH Tunneling for a Host (Linux Terminal)
 
@@ -13,12 +13,12 @@ Host <host-nickname>
     ProxyCommand ssh <bastion-username>@linux-bastion-ex.tudelft.nl -W %h:%p 
 ```
 Replace:
-**<host-nickname>:** a name for you choice for the targe host, e.g., *my-server*
-**<target-host>:** the actual name of the target host (FQDM), e.g, *server.tudelft.nl*
-**<target-username>:**  the username used to login to the target host, e.g., *wlodewijk*
-**<bastion-username>:** the username used to login to the bastion server, e.g., *wlodewijk*
+**<host-nickname>:** a name for you choice for the targe host, e.g., `my-server`
+**<target-host>:** the actual name of the target host (FQDM), e.g, `server.tudelft.nl`
+**<target-username>:**  the username used to login to the target host
+**<bastion-username>:** the username used to login to the bastion server
 
-2. Create a key-pair on the local machine.
+1. Create a key-pair on the local machine.
 
 ```bash
 $ ssh-keygen -f ~/.ssh/<my-keyname> -t rsa -b 4096

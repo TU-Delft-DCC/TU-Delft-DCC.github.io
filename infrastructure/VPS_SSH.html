@@ -598,7 +598,7 @@ title="Print to PDF"
                 
   <section class="tex2jax_ignore mathjax_ignore" id="configure-ssh-tunneling">
 <h1>Configure SSH Tunneling<a class="headerlink" href="#configure-ssh-tunneling" title="Permalink to this headline">#</a></h1>
-<p>To connect to a remote host, TU Delft uses a <em>proxy server</em>, know as  <strong>bastion</strong>. Thefore, to reach a remote host, a user has to connect first to the <strong>bastion</strong> and from there to the remote host, e.g., <em><a class="reference external" href="http://my-vm.tudelft.nl">my-vm.tudelft.nl</a></em>. However, a user can connect directly to the remote host using <em>ssh tunneling</em>.</p>
+<p>To connect to a remote host, TU Delft uses a <em>proxy server</em>, know as  <strong>bastion</strong>. To reach a remote host, a user has to connect first to the <strong>bastion</strong> and from there to the remote host. However, a user can connect directly to the remote host using <em>ssh tunneling</em>.</p>
 <section id="set-a-default-ssh-tunneling-for-a-host-linux-terminal">
 <h2>Set a Default SSH Tunneling for a Host (Linux Terminal)<a class="headerlink" href="#set-a-default-ssh-tunneling-for-a-host-linux-terminal" title="Permalink to this headline">#</a></h2>
 <ol class="simple">
@@ -611,10 +611,10 @@ title="Print to PDF"
 </pre></div>
 </div>
 <p>Replace:
-<strong><host-nickname>:</strong> a name for you choice for the targe host, e.g., <em>my-server</em>
-<strong><target-host>:</strong> the actual name of the target host (FQDM), e.g, <em><a class="reference external" href="http://server.tudelft.nl">server.tudelft.nl</a></em>
-<strong><target-username>:</strong>  the username used to login to the target host, e.g., <em>wlodewijk</em>
-<strong><bastion-username>:</strong> the username used to login to the bastion server, e.g., <em>wlodewijk</em></p>
+<strong><host-nickname>:</strong> a name for you choice for the targe host, e.g., <code class="docutils literal notranslate"><span class="pre">my-server</span></code>
+<strong><target-host>:</strong> the actual name of the target host (FQDM), e.g, <code class="docutils literal notranslate"><span class="pre">server.tudelft.nl</span></code>
+<strong><target-username>:</strong>  the username used to login to the target host
+<strong><bastion-username>:</strong> the username used to login to the bastion server</p>
 <ol class="simple">
 <li><p>Create a key-pair on the local machine.</p></li>
 </ol>
