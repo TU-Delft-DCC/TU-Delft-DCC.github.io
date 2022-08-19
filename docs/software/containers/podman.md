@@ -1,4 +1,3 @@
-[index](README.md)
 # Podman
 Docker is not available on [RHEL8](https://www.redhat.com/en/enterprise-linux-8) systems anymore. You can use the replacement podman.
 In most cases you can replace the "docker" command with "podman"
