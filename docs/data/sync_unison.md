@@ -27,7 +27,7 @@ This documentation will help you create bi-directional backups between your loca
 1. Unison requires .dll's from GTK+ for Windows Runtime Environment. Download it (from https://sourceforge.net/projects/gtk-win/) and install it (to C:\Program Files (x86)\GTK2-Runtime).
 2. Install Unison 2.48.4 (from https://www.irif.fr/~vouillon/unison/) and extract it in a folder.
 3. Download desktop client for SurfDrive https://www.surf.nl/en/surfdrive-store-and-share-your-files-securely-in-the-cloud/downloads-for-surfdrive?dst=n1463
-4. If not already there, mount H: Drive or Project Drive folder in your local machine from WebDAV link https://webdav.io/webdav/webdav-clients/ 
+4. If not already there, mount H: Drive or Project Drive folder in your local machine from WebDAV link https://webdata.tudelft.nl/ 
 5. Navigate to Unison folder via command prompt and then enter "unison 2.48.4 GTK.exe" to run the Unison GUI.
 6. The GUI starts & asks you to set a Profile for your file syncing. The Profile Creation Wizard guides you through this. For the Synchronization kind choose Local. Set the First directory to your local SurfDrive and Second directory, to WebDAV folder. 
 7. By pressing the Go button on the top menu, Unison start synchronizing both specified directories. 
