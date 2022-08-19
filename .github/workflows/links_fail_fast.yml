@@ -1,4 +1,4 @@
-name: Links
+name: Links (Fail Fast)
 
 on:
   push:
