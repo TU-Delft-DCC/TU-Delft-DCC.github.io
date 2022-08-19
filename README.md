@@ -1,3 +1,6 @@
+[![Check Links](https://github.com/TU-Delft-DCC/TU-Delft-DCC.github.io/actions/workflows/links.yml/badge.svg?label=Links)](https://github.com/org/repo/actions/workflows/links.yml)
+
+
 # Welcome
 Welcome to the DCC guides! Here we try to address common issues related to Research Software, Data and Infrastructure at TU Delft. These guides are undergoing continuous development in response to the community needs.
 
