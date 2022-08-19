@@ -33,7 +33,7 @@ _Do you have the kind of prickly problem we like to sink our teeth into?_
 
 - Is your problem more data related? Each faculty has a Data Steward. You can find your Data Steward at https://www.tudelft.nl/en/library/research-data-management/r/support/data-stewardship/contact/.
 
-- Perhaps one of your fellow researchers has already solved your type of problem. Maybe it’s worth contacting a Data Champion close to home via https://www.tudelft.nl/en/library/research-data-management/r/data-stewardship/data-champions/our-data-champions/.
+- Perhaps one of your fellow researchers has already solved your type of problem. Maybe it’s worth contacting a Data Champion close to home via https://openworking.wordpress.com/data-champions/.
 
 - Still no joy? Please feel free to contact the [DCC](../community/dcc.md) or our colleagues at [ICT-Innovation](https://www.tudelft.nl/ict-innovation/about-innovation/). Chances are that you have just the kind of problem we like to sink our teeth into. 
 
@@ -49,7 +49,7 @@ _Is the biggest threat to your research at this moment, the cleaner who needs to
 
 
 **Nonstandard laptops, desktops and specials**  
-Please discuss this with your FIM first and then order here: https://intranet.tudelft.nl/-/ordering-hardware-laptop-desktop-and-paraphernalia- (log into intranet.tudelft.nl first and then copy/paste this link)
+Please discuss this with your FIM first and then order here: https://tudelft.topdesk.net/tas/public/ssp/content/detail/service?unid=ea6fcf970be647b5a46d2a85cc1377ec&from=e7ab82cf-42c3-487f-a97b-96fded6a4c6c
 
 **Research group servers and clusters**  
 Some groups and departments at the TU Delft have their own locally maintained computer clusters. Ask your colleagues or your FIM. There are also a number centrally maintained computer clusters. You can find out more about these clusters, and apply for access, here: https://hpcwiki.tudelft.nl/index.php/Introduction
@@ -74,7 +74,7 @@ If you need more computational power, then you might consider the national compu
 - HPC cloud – for individual or group - https://servicedesk.surfsara.nl/wiki/display/WIKI/HPC+Cloud
 - Grid – extremely large datasets - https://userinfo.surfsara.nl/systems/grid
 
-For ‘large’ requests, applications go through NWO: https://www.nwo.nl/en/funding/our-funding-instruments/enw/computing-time-on-national-computer-facilities/access-to-the-national-computer-facilities-for-regular-projects.html
+For ‘large’ requests, applications go through NWO: https://www.nwo.nl/en/calls/computing-time-national-computer-facilities-2022
 
 For ‘small’ requests, applications go through SURF: https://www.surf.nl/en/applying-for-access-to-compute-services
 
@@ -117,8 +117,5 @@ You can find me here [TU Delft](https://www.tudelft.nl/en/staff/s.e.branchett/?c
 This blog expresses the views of the author, [Susan Branchett](https://www.tudelft.nl/en/staff/s.e.branchett/?cHash=245b0ce9092ea7f97c549dd5bda8b221).
 
 The FIMs, Data Stewards and ICT-Innovation staff are kindly acknowledged for their help in collecting the information provided above.
-
-[Binary code](https://pixabay.com/photos/binary-binary-code-binary-system-2910663/), [alpaca](https://pixabay.com/photos/alpaca-cactus-denture-teeth-3647011/) and [train](https://pixabay.com/photos/train-station-transportation-people-2593687/) images are used under the [Pixabay license](https://pixabay.com/service/license/).
-Server image by Flickr user Phil! Gold / CC BY-SA (https://creativecommons.org/licenses/by-sa/2.0).
 
 This article is published under a [CC-BY-4.0 international license](https://creativecommons.org/licenses/by/4.0/).

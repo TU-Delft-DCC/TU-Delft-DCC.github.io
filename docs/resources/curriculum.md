@@ -83,7 +83,7 @@ These materials represent a curated curriculum designed to help you develop and 
 ## Modular Code and testing
 * [Writing tests](https://coderefinery.github.io/testing/) - lesson from CodeRefinery on automated testing
 * [Video testing lesson](https://www.youtube.com/watch?v=s72AqTTi_Y8) - recording from software testing workshop by Code Refinery
-* [Modular coding](http://cicero.xyz/v3/remark/0.14.0/github.com/coderefinery/modular-code-development/master/talk.md/#1) - slides on modular code from Code Refinery
+* [Modular coding](http://cicero.xyz/v3/remark/0.14.0/github.com/coderefinery/modular-code-development/master/talk.md) - slides on modular code from Code Refinery
 
 ## Docker
 * [Installing Docker](https://docs.docker.com/get-docker/) - installation instructions for Windows, macOS, and Linux
