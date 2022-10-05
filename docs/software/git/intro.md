@@ -5,7 +5,7 @@ Using a version control system provides better management to your code. It allow
 
 Following are the different ways in which you can learn version control with Git: 
 
-- [Sign up](https://www.tudelft.nl/library/research-data-management/r/training-evenementen/training-voor-onderzoekers/software-carpentry-workshop) for the software carpentry workshop (free of cost) at TU Delft.  
+- [Sign up](https://www.tudelft.nl/library/research-data-management/r/training-evenementen/training-voor-onderzoekers/software-carpentry-workshops) for the software carpentry workshop (free of cost) at TU Delft.  
 
 - Learn at your own pace using the publicly available training material from the [Software Carpentry](https://swcarpentry.github.io/git-novice/) and [Code Refinery](https://coderefinery.github.io/git-intro/)
 
