@@ -20,7 +20,7 @@ _Essential_
 - [ ] Upload your project on [GitHub](https://github.com/) or [TU Delft GitLab](https://gitlab.tudelft.nl/)
 
 _Recommended_  
-- [ ] Make your repository [public](https://coderefinery.github.io/social-coding/social_coding/)
+- [ ] Make your repository [public](https://coderefinery.github.io/social-coding/)
 - [ ] [Branch hygiene](https://coderefinery.github.io/git-branch-design/)
 - [ ] Use a branching model ([GitFlow](https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow))
 - [ ] [Meaningful commit messages](https://www.git-scm.com/book/en/v2/Distributed-Git-Contributing-to-a-Project#_commit_guidelines)
