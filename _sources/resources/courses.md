@@ -58,7 +58,7 @@ SURF offers various [workshops](https://www.surf.nl/en/training-courses-for-rese
 
 :img-top: ../img/R_cafe_logo_small.png
 
-Do you want to build your R skills, write R code with others, or ask questions about working with R? To join the TU Delft R Café, have a look at the [upcoming meeting dates](https://www.tudelft.nl/library/research-data-management/r/training-evenementen/training-voor-onderzoekers/tu-delft-r-cafe-1).
+Do you want to build your R skills, write R code with others, or ask questions about working with R? To join the TU Delft R Café, have a look at the [TU Delft R Café website](https://delft-rcafe.github.io/home/Index.html) for more information.
 
 
 :::
