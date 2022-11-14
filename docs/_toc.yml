@@ -44,7 +44,7 @@ parts:
           - file: software/git/branch_management
       - file: software/containers/intro
         sections:
-          - file: software/containers/docker_users
+          - file: software/containers/docker_gui
 
   - caption: Resources
     chapters:
