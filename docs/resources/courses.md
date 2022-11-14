@@ -30,7 +30,7 @@ The TU Delft organises courses for researchers on data management, research soft
 [CodeRefinery](https://coderefinery.org/) acts as a hub for FAIR (Findable, Accessible, Interoperable, and Reusable) software practices. The main focus is on professional tools for efficiently writing and maintaining research software, focussed on open source software.
 
 +++
-```{link-button} https://www.tudelft.nl/library/research-data-management/r/training-evenementen/training-voor-onderzoekers/coderefinery-workshop
+```{link-button} https://www.tudelft.nl/library/research-data-management/r/training-evenementen/training-voor-onderzoekers/coderefinery-workshops
 :type: url
 :classes: btn-primary btn-block stretched-line text-white
 :text: Sign up
@@ -58,7 +58,7 @@ SURF offers various [workshops](https://www.surf.nl/en/training-courses-for-rese
 
 :img-top: ../img/R_cafe_logo_small.png
 
-Do you want to build your R skills, write R code with others, or ask questions about working with R? To join the TU Delft R Café, have a look at the [upcoming meeting dates](https://www.tudelft.nl/library/research-data-management/r/training-evenementen/training-voor-onderzoekers/tu-delft-r-cafe-1).
+Do you want to build your R skills, write R code with others, or ask questions about working with R? To join the TU Delft R Café, have a look at the [TU Delft R Café website](https://delft-rcafe.github.io/home/Index.html) for more information.
 
 
 :::
