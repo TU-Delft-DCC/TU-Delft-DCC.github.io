@@ -30,7 +30,7 @@ The TU Delft organises courses for researchers on data management, research soft
 [CodeRefinery](https://coderefinery.org/) acts as a hub for FAIR (Findable, Accessible, Interoperable, and Reusable) software practices. The main focus is on professional tools for efficiently writing and maintaining research software, focussed on open source software.
 
 +++
-```{link-button} https://www.tudelft.nl/library/research-data-management/r/training-evenementen/training-voor-onderzoekers/coderefinery-workshop
+```{link-button} https://www.tudelft.nl/library/research-data-management/r/training-evenementen/training-voor-onderzoekers/coderefinery-workshops
 :type: url
 :classes: btn-primary btn-block stretched-line text-white
 :text: Sign up
