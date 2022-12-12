@@ -111,7 +111,7 @@ _Things can move quickly in the world of scientific computing._
 
 By the time you read this blog, a lot of the links may no longer work and the information will probably be outdated. No problem! If you can’t find what you are looking for, or if you have a problem not mentioned here, or if you know of additional useful resources, please don’t hesitate to get in touch.
 
-You can find me here [TU Delft](https://www.tudelft.nl/en/staff/s.e.branchett/?cHash=245b0ce9092ea7f97c549dd5bda8b221) and here [LinkedIn](https://nl.linkedin.com/in/sebranchett/) and here [Twitter](https://twitter.com/sebranchett) and here [github](https://github.com/sebranchett).
+You can find me here [TU Delft](https://www.tudelft.nl/staff/s.e.branchett/) and here [LinkedIn](https://nl.linkedin.com/in/sebranchett/) and here [Twitter](https://twitter.com/sebranchett) and here [github](https://github.com/sebranchett).
 
 ## Acknowledgements
 This blog expresses the views of the author, [Susan Branchett](https://www.tudelft.nl/en/staff/s.e.branchett/?cHash=245b0ce9092ea7f97c549dd5bda8b221).
