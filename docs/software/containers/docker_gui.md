@@ -138,6 +138,6 @@ docker run --rm -it --net=host -e DISPLAY=:0 -v $(pwd):/data <image_name>:<image
     
 
 ## References
-- https://betterprogramming.pub/running-desktop-apps-in-docker-43a70a5265c4
+- https://medium.com/better-programming/running-desktop-apps-in-docker-43a70a5265c4
 - https://coderefinery.github.io/installation/shell-and-git/#shell-and-git
 - https://ucsbcarpentry.github.io/2019-10-24-gitbash/setup.html
