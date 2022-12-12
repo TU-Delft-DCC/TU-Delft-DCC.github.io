@@ -94,7 +94,7 @@ These materials represent a curated curriculum designed to help you develop and 
 * [Setting up VSCode for Linux](https://docs.microsoft.com/en-us/windows/wsl/tutorials/wsl-vscode) - guide to getting started using VSCode with Windows Subsystem for Linux
 
 ## Continuous Integration
-* [GitHub Actions introduction course](https://lab.github.com/githubtraining/github-actions:-hello-world) - an introductory course from GitHub on how to use GitHub Actions
+* [GitHub Actions introduction course](https://github.com/skills/hello-github-actions) - an introductory course from GitHub on how to use GitHub Actions
 
 ## Reproducible Research
 * [Reproducible Research material from Code Refinery](https://coderefinery.github.io/reproducible-research/) - demonstrates how version control, workflows, containers, and package managers can be used to record reproducible environments and computational steps
