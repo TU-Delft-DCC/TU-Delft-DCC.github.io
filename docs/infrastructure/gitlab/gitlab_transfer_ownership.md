@@ -44,7 +44,7 @@ Summary (based on this [Stack Overflow post](https://stackoverflow.com/questions
 ### Step 1. Create a new group
 Create a new group if you don’t have one that you want to use (**Menu > Groups > Create group**)
 
-### Step 2. 
+### Step 2. Invite members
 Make sure that both the maintainer of the project repository, and the person who it will be transferred to, are members of the group and have the Owner role (to add a new owner: go to the group namespace, then from the sidebar choose **Group information > Members > Invite members**. 
 
 ![Invite members 1](../../img/gitlab_invite_members_1.png)
@@ -55,20 +55,20 @@ Enter the username or email of the person you want to invite and change the role
 
 ![Invite members 3](../../img/gitlab_invite_members_3.png)
 
-### Step 3
+### Step 3. Transfer project to group
 Have a maintainer of the project repository transfer it to the group namespace (go to the project namespace, then from the sidebar go to **Settings > General > Advanced > Transfer Project**)
 
 ![Transfer project](../../img/gitlab_transfer_project.png)
 
-### Step 4
+### Step 4. Check email
 After doing this, the maintainer(s) of the project will get an email:
 
 ![Email transfer](../../img/gitlab_email_transfer.png)
 
-### Step 5
+### Step 5. Transfer project to user
 Now the person who the project is being transferred to can move it to their own namespace (go to the project namespace, then from the sidebar, go to **Settings > General > Advanced > Transfer Project** like before).
 
-### Step 6
+### Step 6. Optional: remove group
 If desired, the group can be deleted after the transfer is complete (go to the group namespace, then from the sidebar go to **Settings > General > Advanced > Remove Group**)
 
 ![Remove group](../../img/gitlab_remove_group.png)
