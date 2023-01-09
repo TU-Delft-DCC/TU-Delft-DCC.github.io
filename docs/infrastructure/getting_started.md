@@ -74,7 +74,7 @@ If you need more computational power, then you might consider the national compu
 - HPC cloud – for individual or group - https://servicedesk.surfsara.nl/wiki/display/WIKI/HPC+Cloud
 - Grid – extremely large datasets - https://userinfo.surfsara.nl/systems/grid
 
-For ‘large’ requests, applications go through NWO: https://www.nwo.nl/en/calls/computing-time-national-computer-facilities-2022
+For ‘large’ requests, applications go through NWO: https://www.nwo.nl/en/researchprogrammes/computing-time-national-computer-facilities
 
 For ‘small’ requests, applications go through SURF: https://www.surf.nl/en/applying-for-access-to-compute-services
 
@@ -95,7 +95,7 @@ https://pages.github.com/ and https://help.github.com/en/articles/using-jekyll-a
 
 If you would like a TU Delft domain name for your website, you can apply for one here:  https://tudelft.topdesk.net/tas/public/ssp/  Log into the self-service portal and then navigate to **SOFTWARE & AUTORISATIONS > IT FOR COMMUNICATION > REQUEST DOMAIN NAMES**
 
-**Do you need to host a Data Portal?** Please consider using the 4TU data repository (https://researchdata.4tu.nl/en/), DANS (https://dans.knaw.nl/en), Zenodo (https://zenodo.org/), or a domain specific repository first. If you have to build your own, consider using the CKAN Data Portal Platform: https://ckan.org.
+**Do you need to host a Data Portal?** Please consider using the [4TU data repository](https://researchdata.4tu.nl/en/), [DANS](https://dans.knaw.nl/en/), [Zenodo](https://zenodo.org/), or a domain specific repository first. If you have to build your own, consider using the CKAN Data Portal Platform: https://ckan.org.
 
 **Do you need to host a Research Software Directory?** Please consider using the Dutch national directory (https://www.research-software.nl/). If you need to build your own, consider reusing the software used to build the national directory (https://github.com/research-software-directory/research-software-directory/).
 
