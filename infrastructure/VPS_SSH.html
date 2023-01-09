@@ -609,10 +609,10 @@ title="Print to PDF"
 <ol class="simple">
 <li><p>On your local machine, edit the <code class="docutils literal notranslate"><span class="pre">~/.ssh/config</span></code> file and add the following confuration:</p></li>
 </ol>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>Host &lt;host-nickname&gt;
-    HostName &lt;target-host&gt;
-    User &lt;target-username&gt;
-    ProxyCommand ssh &lt;bastion-username&gt;@linux-bastion-ex.tudelft.nl -W %h:%p 
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>Host<span class="w"> </span>&lt;host-nickname&gt;
+<span class="w">    </span>HostName<span class="w"> </span>&lt;target-host&gt;
+<span class="w">    </span>User<span class="w"> </span>&lt;target-username&gt;
+<span class="w">    </span>ProxyCommand<span class="w"> </span>ssh<span class="w"> </span>&lt;bastion-username&gt;@linux-bastion-ex.tudelft.nl<span class="w"> </span>-W<span class="w"> </span>%h:%p<span class="w"> </span>
 </pre></div>
 </div>
 <p>Replace:
@@ -623,7 +623,7 @@ title="Print to PDF"
 <ol class="simple">
 <li><p>Create a key-pair on the local machine.</p></li>
 </ol>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ ssh-keygen -f ~/.ssh/&lt;my-keyname&gt; -t rsa -b <span class="m">4096</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>ssh-keygen<span class="w"> </span>-f<span class="w"> </span>~/.ssh/&lt;my-keyname&gt;<span class="w"> </span>-t<span class="w"> </span>rsa<span class="w"> </span>-b<span class="w"> </span><span class="m">4096</span>
 </pre></div>
 </div>
 <p>You will be promted to crate a <em>passphrase</em>, we recommend you to add one to make the connection more secure. The passphrase will be asked every time you connect to the target host.</p>
@@ -632,7 +632,7 @@ title="Print to PDF"
 <li><p>Copy the content of the public key to the <code class="docutils literal notranslate"><span class="pre">~/.ssh/authorized_keys</span></code> file in the target host.</p></li>
 <li><p>Connect to the target host using <em>ssh tunneling</em>. Use your <em>bastion-password</em> when asked.</p></li>
 </ol>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ ssh &lt;host-nickname&gt;
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>ssh<span class="w"> </span>&lt;host-nickname&gt;
 </pre></div>
 </div>
 <p>If you encounter problems with the connection. Use the debug mode <code class="docutils literal notranslate"><span class="pre">ssh</span> <span class="pre">-vvv</span> <span class="pre">&lt;host-nickname&gt;</span></code> to find out what might have gone wrong.</p>

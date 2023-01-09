@@ -625,13 +625,13 @@ title="Print to PDF"
 <h1>Moving data to your server<a class="headerlink" href="#moving-data-to-your-server" title="Permalink to this headline">#</a></h1>
 <section id="copy-data-from-client-to-host-using-proxycommand">
 <h2>Copy Data from Client to Host using ProxyCommand<a class="headerlink" href="#copy-data-from-client-to-host-using-proxycommand" title="Permalink to this headline">#</a></h2>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ scp -o <span class="s2">&quot;ProxyCommand ssh -W %h:%p &lt;bastion-username&gt;@linux-bastion-ex.tudelft.nl&quot;</span> &lt;my-local-file&gt;  &lt;target-username&gt;@&lt;target-host&gt;:/&lt;remote-directory&gt;/
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>scp<span class="w"> </span>-o<span class="w"> </span><span class="s2">&quot;ProxyCommand ssh -W %h:%p &lt;bastion-username&gt;@linux-bastion-ex.tudelft.nl&quot;</span><span class="w"> </span>&lt;my-local-file&gt;<span class="w">  </span>&lt;target-username&gt;@&lt;target-host&gt;:/&lt;remote-directory&gt;/
 </pre></div>
 </div>
 </section>
 <section id="copy-data-from-host-to-client-using-proxycommand">
 <h2>Copy Data from Host to Client using ProxyCommand<a class="headerlink" href="#copy-data-from-host-to-client-using-proxycommand" title="Permalink to this headline">#</a></h2>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ scp -o <span class="s2">&quot;ProxyCommand ssh -W %h:%p &lt;bastion-username&gt;@linux-bastion-ex.tudelft.nl&quot;</span> &lt;target-username&gt;@&lt;target-host&gt;:/tmp/&lt;my-remote-file&gt; /&lt;my-local-directory&gt;/
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>scp<span class="w"> </span>-o<span class="w"> </span><span class="s2">&quot;ProxyCommand ssh -W %h:%p &lt;bastion-username&gt;@linux-bastion-ex.tudelft.nl&quot;</span><span class="w"> </span>&lt;target-username&gt;@&lt;target-host&gt;:/tmp/&lt;my-remote-file&gt;<span class="w"> </span>/&lt;my-local-directory&gt;/
 </pre></div>
 </div>
 </section>
@@ -639,11 +639,11 @@ title="Print to PDF"
 <h2>Copy Data using SSH Tunneling<a class="headerlink" href="#copy-data-using-ssh-tunneling" title="Permalink to this headline">#</a></h2>
 <p>If a default <a class="reference external" href="##ssh-tunneling">ssh tunneling</a> was configured correctly. Data can be copied to and from a remote host as follows:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Copy TO Remote Host</span>
-$ scp &lt;my-local-file&gt; &lt;host-nickname&gt;:/&lt;remote-directory&gt;/
+$<span class="w"> </span>scp<span class="w"> </span>&lt;my-local-file&gt;<span class="w"> </span>&lt;host-nickname&gt;:/&lt;remote-directory&gt;/
 </pre></div>
 </div>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Copy FROM Remote Host</span>
-$ scp &lt;host-nickname&gt;:/&lt;my-remote-file&gt; /&lt;my-local-directory&gt;/ 
+$<span class="w"> </span>scp<span class="w"> </span>&lt;host-nickname&gt;:/&lt;my-remote-file&gt;<span class="w"> </span>/&lt;my-local-directory&gt;/<span class="w"> </span>
 </pre></div>
 </div>
 </section>

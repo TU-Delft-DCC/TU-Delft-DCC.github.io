@@ -839,25 +839,25 @@ title="Print to PDF"
 <p>This file in the root of your repository defines what CI/CD tests to run upon each new commit. It does this by prescribing what container to run, what scripts to run inside the container, and what things to store as artefacts.</p>
 <p>In the first line of the file, you can write <code class="docutils literal notranslate"><span class="pre">image:</span> <span class="pre">&lt;image_name&gt;:&lt;tag&gt;</span></code> to indicate you want to run the runner in a Docker container container.  <code class="docutils literal notranslate"><span class="pre">&lt;image_name&gt;</span></code> should be replaced by the name of the image you want to use to start a container and <code class="docutils literal notranslate"><span class="pre">&lt;tag&gt;</span></code> should be replaced by the tag of the image you want to use(image names can be found on DockerHub). Tag will be set to <code class="docutils literal notranslate"><span class="pre">latest</span></code> by default.</p>
 <p><strong>Important:</strong> The file must be named exactly <code class="docutils literal notranslate"><span class="pre">.gitlab-ci.yml</span></code> so it will be recognizable by GitLab runner. Below is an example .gitlab-ci.yml file.</p>
-<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="c1"># This is a sample build configuration for Python.</span><span class="w"></span>
-<span class="c1"># Check our guides at https://confluence.atlassian.com/x/x4UWN for more examples.</span><span class="w"></span>
-<span class="c1"># Only use spaces to indent your .yml configuration.</span><span class="w"></span>
-<span class="c1"># -----</span><span class="w"></span>
-<span class="c1"># You can specify a custom docker image from Docker Hub as your build environment.</span><span class="w"></span>
-<span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">python:3.7.3</span><span class="w"></span>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="c1"># This is a sample build configuration for Python.</span>
+<span class="c1"># Check our guides at https://confluence.atlassian.com/x/x4UWN for more examples.</span>
+<span class="c1"># Only use spaces to indent your .yml configuration.</span>
+<span class="c1"># -----</span>
+<span class="c1"># You can specify a custom docker image from Docker Hub as your build environment.</span>
+<span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">python:3.7.3</span>
 
-<span class="nt">cache</span><span class="p">:</span><span class="w"></span>
-<span class="w">  </span><span class="nt">paths</span><span class="p">:</span><span class="w"></span>
-<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">.cache/pip</span><span class="w"></span>
-<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">venv/</span><span class="w"></span>
+<span class="nt">cache</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">paths</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">.cache/pip</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">venv/</span>
 
-<span class="nt">test</span><span class="p">:</span><span class="w"></span>
-<span class="w">  </span><span class="nt">script</span><span class="p">:</span><span class="w"> </span><span class="c1"># Modify the commands below to build your repository.</span><span class="w"></span>
-<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">pip install -r requirements.txt</span><span class="w"></span>
-<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">nosetests --with-coverage  --cover-html</span><span class="w"></span>
-<span class="w">  </span><span class="nt">artifacts</span><span class="p">:</span><span class="w"></span>
-<span class="w">    </span><span class="nt">paths</span><span class="p">:</span><span class="w"></span>
-<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">cover/</span><span class="w"></span>
+<span class="nt">test</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">script</span><span class="p">:</span><span class="w"> </span><span class="c1"># Modify the commands below to build your repository.</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">pip install -r requirements.txt</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">nosetests --with-coverage  --cover-html</span>
+<span class="w">  </span><span class="nt">artifacts</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">paths</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">cover/</span>
 </pre></div>
 </div>
 <p>Tags can be added as a final section in your .gitlab-ci.yml file (they are optional, we didn’t enter any in this example). You then need to enter these tags exactly when registering the runner.</p>
@@ -869,9 +869,9 @@ title="Print to PDF"
 </section>
 <section id="step-8-deploy-gitlab-runner-in-a-docker-container">
 <h3>Step 8. Deploy GitLab runner in a Docker container<a class="headerlink" href="#step-8-deploy-gitlab-runner-in-a-docker-container" title="Permalink to this headline">#</a></h3>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>docker run -d --name gitlab-runner --restart always <span class="se">\</span>
--v /srv/gitlab-runner/config:/etc/gitlab-runner <span class="se">\</span>
--v /var/run/docker.sock:/var/run/docker.sock <span class="se">\</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>docker<span class="w"> </span>run<span class="w"> </span>-d<span class="w"> </span>--name<span class="w"> </span>gitlab-runner<span class="w"> </span>--restart<span class="w"> </span>always<span class="w"> </span><span class="se">\</span>
+-v<span class="w"> </span>/srv/gitlab-runner/config:/etc/gitlab-runner<span class="w"> </span><span class="se">\</span>
+-v<span class="w"> </span>/var/run/docker.sock:/var/run/docker.sock<span class="w"> </span><span class="se">\</span>
 gitlab/gitlab-runner:latest
 </pre></div>
 </div>
