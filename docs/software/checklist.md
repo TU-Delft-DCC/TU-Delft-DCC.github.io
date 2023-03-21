@@ -62,7 +62,7 @@ _Recommended_
 
 ### Releases
 _Essential_  
-- [ ] Obtain a DOI ([Zenodo](https://zenodo.org/) or [4TU.ResearchData](https://data.4tu.nl/info/en/))
+- [ ] Obtain a DOI ([Zenodo](https://zenodo.org/) or [4TU.ResearchData](https://data.4tu.nl/info/about-your-data/getting-started))
 
 _Recommended_  
 - [ ] [Semantic versioning](https://semver.org/)
