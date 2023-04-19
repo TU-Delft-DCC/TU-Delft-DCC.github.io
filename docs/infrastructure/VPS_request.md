@@ -1,6 +1,7 @@
 ---
 section: infrastructure
 title: Request VPS
+version: 1.0
 author_1: Ashley Cryan
 author_2:
 ---
