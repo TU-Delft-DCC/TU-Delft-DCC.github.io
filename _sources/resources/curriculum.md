@@ -39,7 +39,7 @@ These materials represent a curated curriculum designed to help you develop and 
 
 ## Anaconda Navigator and managing conda environments
 * [Anaconda Installation Guide from Software Carpentries](https://carpentries.github.io/workshop-template/#python) - Although one can install a plain-vanilla Python and all required libraries by hand, we recommend installing Anaconda, a Python distribution that comes with the latest version of Python and Jupyter Notebooks by default
-* [Intro to Anaconda Navigator](https://docs.anaconda.com/anaconda/navigator/getting-started/) - Anaconda Navigator is a graphical user interface to the conda package and environment manager. This 10-minute guide to Navigator will have you navigating the powerful conda program in a web-like interface without having to learn command line commands
+* [Intro to Anaconda Navigator](https://docs.anaconda.com/free/navigator/getting-started/) - Anaconda Navigator is a graphical user interface to the conda package and environment manager. This 10-minute guide to Navigator will have you navigating the powerful conda program in a web-like interface without having to learn command line commands
 * [Introduction to Conda for (Data) Scientists](https://carpentries-incubator.github.io/introduction-to-conda-for-data-scientists/) -  Conda is an open source package and environment management system that easily creates, saves, loads, and switches between environments on your local computer
 * [Managing Conda environments](https://conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html) - documentation on performing a range of common tasks with Conda using the command line
 
