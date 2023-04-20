@@ -95,7 +95,7 @@ https://pages.github.com/ and https://help.github.com/en/articles/using-jekyll-a
 
 If you would like a TU Delft domain name for your website, you can apply for one here:  https://tudelft.topdesk.net/tas/public/ssp/  Log into the self-service portal and then navigate to **SOFTWARE & AUTORISATIONS > IT FOR COMMUNICATION > REQUEST DOMAIN NAMES**
 
-**Do you need to host a Data Portal?** Please consider using the [4TU data repository](https://researchdata.4tu.nl/en/), [DANS](https://dans.knaw.nl/en/), [Zenodo](https://zenodo.org/), or a domain specific repository first. If you have to build your own, consider using the CKAN Data Portal Platform: https://ckan.org.
+**Do you need to host a Data Portal?** Please consider using the [4TU data repository](https://data.4tu.nl/), [DANS](https://dans.knaw.nl/en/), [Zenodo](https://zenodo.org/), or a domain specific repository first. If you have to build your own, consider using the CKAN Data Portal Platform: https://ckan.org.
 
 **Do you need to host a Research Software Directory?** Please consider using the Dutch national directory (https://www.research-software.nl/). If you need to build your own, consider reusing the software used to build the national directory (https://github.com/research-software-directory/research-software-directory/).
 
