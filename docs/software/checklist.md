@@ -53,7 +53,7 @@ _Recommended_
 
 ### Testing
 _Recommended_  
-- [ ] [Defensive programming](https://swcarpentry.github.io/python-novice-inflammation/10-defensive/index.html)
+- [ ] [Defensive programming](https://swcarpentry.github.io/python-novice-inflammation/10-defensive.html)
 - [ ] Test your software with [integration tests](https://the-turing-way.netlify.app/reproducible-research/testing/testing-integrationtest.html) and [unit tests](https://the-turing-way.netlify.app/reproducible-research/testing/testing-unittest.html)
 - [ ] User installation test
 - [ ] Make use of [Continuous Integration](https://the-turing-way.netlify.app/reproducible-research/ci/ci-options.html)
