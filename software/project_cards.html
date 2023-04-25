@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>Software management plan &#8212; DCC Guides</title>
+    <title>FAIR assessment cards &#8212; DCC Guides</title>
   
   
   
@@ -65,11 +65,11 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'software/software_management_plan';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'software/project_cards';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Software testing" href="testing_intro.html" />
-    <link rel="prev" title="FAIR assessment cards" href="project_cards.html" />
+    <link rel="next" title="Software management plan" href="software_management_plan.html" />
+    <link rel="prev" title="FAIR software checklist" href="checklist.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -190,8 +190,8 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference internal" href="getting_started.html">Getting started</a></li>
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="fair.html">FAIR Software</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="checklist.html">FAIR software checklist</a></li>
-<li class="toctree-l2"><a class="reference internal" href="project_cards.html">FAIR assessment cards</a></li>
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">Software management plan</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">FAIR assessment cards</a></li>
+<li class="toctree-l2"><a class="reference internal" href="software_management_plan.html">Software management plan</a></li>
 <li class="toctree-l2"><a class="reference external" href="https://hackmd.io/@fair4rs/ry9bbfMxh">FAIR for Research Software Program Spring 2023</a></li>
 </ul>
 </li>
@@ -290,7 +290,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="https://github.com/TU-Delft-DCC/TU-Delft-DCC.github.io/edit/master/docs/software/software_management_plan.md" target="_blank"
+      <li><a href="https://github.com/TU-Delft-DCC/TU-Delft-DCC.github.io/edit/master/docs/software/project_cards.md" target="_blank"
    class="btn btn-sm btn-source-edit-button dropdown-item"
    title="Suggest edit"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -320,7 +320,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="../_sources/software/software_management_plan.md" target="_blank"
+      <li><a href="../_sources/software/project_cards.md" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -389,9 +389,7 @@ document.write(`
   </button>
 `);
 </script>
-<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="fa-solid fa-list"></span>
-</label>
+
 </div></div>
       
     </div>
@@ -402,23 +400,11 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Software management plan</h1>
+    <h1>FAIR assessment cards</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
             
-            <div>
-                <h2> Contents </h2>
-            </div>
-            <nav aria-label="Page">
-                <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#resources-for-software-development">Resources for software development</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#developing-open-source-software">Developing open source software</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#software-architecture-diagrams">Software Architecture diagrams</a></li>
-</ul>
-</li>
-</ul>
-            </nav>
         </div>
     </div>
 </div>
@@ -428,43 +414,136 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="software-management-plan">
-<h1>Software management plan<a class="headerlink" href="#software-management-plan" title="Permalink to this heading">#</a></h1>
-<p>Research software plays a crucial role in academic research and has become a key output of many research projects. A software management plan helps to implement best practices during software development and ensures that software is accessible and reusable in the short and longer term. It also contributes to the reproducibility of results and stimulates collaborative work on open-source software for research.</p>
-<p>The Netherlands eScience Center and NWO, the Dutch Research Council, have taken the initiative to form a <a class="reference external" href="https://www.esciencecenter.nl/national-guidelines-for-software-management-plans/">working group</a> to develop (national) guidelines for software management plans. This working group – composed of five experts in research software, representing different research organizations in the Netherlands, and roles within those organizations – started their work in December 2021.</p>
-<p>The initiative resulted in the publication of the <a class="reference external" href="https://zenodo.org/record/7248877"><strong>Practical guide to Software Management Plans</strong></a> in October 2022. You can read more about the process leading up to the guide in <a class="reference external" href="https://blog.esciencecenter.nl/how-to-manage-your-software-327c8ac8a937">this blog</a>. The DCC is currently evaluating the adoption of these guidelines for TU Delft research software.</p>
-<section id="resources-for-software-development">
-<h2>Resources for software development<a class="headerlink" href="#resources-for-software-development" title="Permalink to this heading">#</a></h2>
-<ul class="simple">
-<li><p><a class="reference external" href="https://harness.io/blog/software-development-life-cycle/">Understanding the Phases of the Software Development Life Cycle</a></p></li>
-<li><p><a class="reference external" href="https://acqnotes.com/acqnote/careerfields/software-management-overview">Software Management from AcqNotes</a></p></li>
-<li><p><a class="reference external" href="https://www.acqnotes.com/Attachments/Software%20Development%20Plan%20Template%20-%20SPAWAR.pdf">Software Development Plan - Template</a></p></li>
-<li><p><a class="reference external" href="https://www.software.ac.uk/software-management-plans">Software Sustainability Institute - Software Management Plans</a></p></li>
-<li><p><a class="reference external" href="https://zenodo.org/record/2159713">Software Management Plan</a></p></li>
-<li><p><a class="reference external" href="https://doit.software/blog/software-development-plan">Software Development Plan</a></p></li>
-<li><p><a class="reference external" href="https://sceweb.uhcl.edu/helm/RationalUnifiedProcess/process/modguide/md_sad.htm">Software Architecture Guide</a></p></li>
-<li><p><a class="reference external" href="https://www.diva-portal.org/smash/get/diva2:838171/FULLTEXT01.pdf">Software Architecture - Design and Evaluation</a></p></li>
-<li><p><a class="reference external" href="https://tudelft.on.worldcat.org/v2/search/detail/1141018084?queryString=Fundamentals%20of%20Software%20Architecture">Fundamentals of Software Architecture</a></p></li>
-<li><p><a class="reference external" href="https://khalilstemmler.com/articles/software-design-architecture/full-stack-software-design">Full Stack Software Design</a></p></li>
-<li><p><a class="reference external" href="https://rse.dlr.de/guidelines/00_dlr-se-guidelines_en.html#anwendungsklassen">DLR Software Engineering Initiative</a></p></li>
-<li><p><a class="reference external" href="https://www.software.ac.uk/blog/2021-12-22-testing-research-software-review-iccs-2021-and-septembrse">Blog on testing for research software</a></p></li>
-<li><p><a class="reference external" href="https://doi.org/10.5281/zenodo.4988277">A Framework for Understanding Research Software Sustainability</a></p></li>
-</ul>
-<section id="developing-open-source-software">
-<h3>Developing open source software<a class="headerlink" href="#developing-open-source-software" title="Permalink to this heading">#</a></h3>
-<ul class="simple">
-<li><p><a class="reference external" href="https://producingoss.com/en/producingoss-letter.pdf">Producing Open Source Software</a></p></li>
-</ul>
-</section>
-<section id="software-architecture-diagrams">
-<h3>Software Architecture diagrams<a class="headerlink" href="#software-architecture-diagrams" title="Permalink to this heading">#</a></h3>
-<ul class="simple">
-<li><p><a class="reference external" href="https://c4model.com/">C4 model</a></p></li>
-<li><p><a class="reference external" href="https://www.youtube.com/watch?v=x2-rSnhpw0g">C4 model video</a></p></li>
-<li><p><a class="reference external" href="https://lukemerrett.com/c4-diagrams-as-code-architectural-joy/">Adopting the C4 model</a></p></li>
-</ul>
-</section>
-</section>
+  <section class="tex2jax_ignore mathjax_ignore" id="fair-assessment-cards">
+<h1>FAIR assessment cards<a class="headerlink" href="#fair-assessment-cards" title="Permalink to this heading">#</a></h1>
+<p>Add the cards below as issues to your repository to track the progress of adopting the best practices for FAIR research software.</p>
+<div class="sphinx-bs container pb-4 docutils">
+<div class="row docutils">
+<div class="d-flex col-lg-12 p-2 docutils">
+<div class="card w-100 shadow docutils">
+<div class="card-header bg-info docutils">
+<p class="card-text"><strong>Version Control</strong></p>
+</div>
+<div class="card-body docutils">
+<div class="highlight-md notranslate"><div class="highlight"><pre><span></span>Essential_  
+<span class="k">- [ ]</span> Use [<span class="nt">git</span>](<span class="na">https://www.atlassian.com/git</span>) as a version control system 
+<span class="k">- [ ]</span> Upload your project on [<span class="nt">GitHub</span>](<span class="na">https://github.com/</span>) or [<span class="nt">TU Delft GitLab</span>](<span class="na">https://gitlab.tudelft.nl/</span>)
+
+<span class="ge">_Recommended_</span>  
+<span class="k">- [ ]</span> Make your repository [<span class="nt">public</span>](<span class="na">https://coderefinery.github.io/social-coding/</span>)
+<span class="k">- [ ]</span> [<span class="nt">Branch hygiene</span>](<span class="na">https://coderefinery.github.io/git-branch-design/</span>)
+<span class="k">- [ ]</span> [<span class="nt">Meaningful commit messages</span>](<span class="na">https://www.git-scm.com/book/en/v2/Distributed-Git-Contributing-to-a-Project#_commit_guidelines</span>)
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="d-flex col-lg-12 p-2 docutils">
+<div class="card w-100 shadow docutils">
+<div class="card-header bg-info docutils">
+<p class="card-text"><strong>Dependency management</strong></p>
+</div>
+<div class="card-body docutils">
+<div class="highlight-md notranslate"><div class="highlight"><pre><span></span><span class="ge">_Essential_</span>
+<span class="k">- [ ]</span> Document your project dependencies
+<span class="k">- [ ]</span> Provide instructions for replicating the computational environment
+
+<span class="ge">_Recommended_</span>
+<span class="k">- [ ]</span> Use a [<span class="nt">dependency manager</span>](<span class="na">https://the-turing-way.netlify.app/reproducible-research/renv/renv-package.html</span>)
+<span class="k">- [ ]</span> Pin [<span class="nt">exact versions</span>](<span class="na">https://github.com/conda/conda-lock</span>) used to generate your environment
+
+<span class="ge">_Optional_</span>
+<span class="k">- [ ]</span> [<span class="nt">Containerized workflow</span>](<span class="na">https://the-turing-way.netlify.app/reproducible-research/renv/renv-containers.html</span>)
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="d-flex col-lg-12 p-2 docutils">
+<div class="card w-100 shadow docutils">
+<div class="card-header bg-info docutils">
+<p class="card-text"><strong>Project documentation</strong></p>
+</div>
+<div class="card-body docutils">
+<div class="highlight-md notranslate"><div class="highlight"><pre><span></span><span class="ge">_Essential_</span>  
+<span class="k">- [ ]</span> [<span class="nt">README</span>](<span class="na">https://github.com/18F/open-source-guide/blob/18f-pages/pages/making-readmes-readable.md</span>)
+<span class="k">- [ ]</span> [<span class="nt">LICENSE</span>](<span class="na">https://doi.org/10.5281/zenodo.4629662</span>)
+<span class="k">- [ ]</span> [<span class="nt">CITATION</span>](<span class="na">https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-citation-files</span>)
+
+<span class="ge">_Recommended_</span>  
+<span class="k">- [ ]</span> Make use of [<span class="nt">Github issues</span>](<span class="na">https://docs.github.com/en/issues/tracking-your-work-with-issues/about-issues</span>)
+<span class="k">- [ ]</span> [<span class="nt">Code of conduct</span>](<span class="na">https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contributions/adding-a-code-of-conduct-to-your-project</span>)
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="d-flex col-lg-12 p-2 docutils">
+<div class="card w-100 shadow docutils">
+<div class="card-header bg-info docutils">
+<p class="card-text"><strong>Software documentation</strong></p>
+</div>
+<div class="card-body docutils">
+<div class="highlight-md notranslate"><div class="highlight"><pre><span></span><span class="ge">_Essential_</span>  
+<span class="k">- [ ]</span> Installation instructions
+<span class="k">- [ ]</span> User documentation
+<span class="k">- [ ]</span> Developer documentation
+<span class="k">- [ ]</span> Source code documentation ([docstrings](https://numpydoc.readthedocs.io/en/latest/format.html))
+
+<span class="ge">_Recommended_</span>  
+<span class="k">- [ ]</span> Examples and tutorials (Jupyter notebooks, videos, screencasts)
+<span class="k">- [ ]</span> Automate documentation building with [<span class="nt">sphinx</span>](<span class="na">https://coderefinery.github.io/sphinx-lesson/</span>)
+<span class="k">- [ ]</span> Website ([github.io pages](https://pages.github.com/), [<span class="nt">Readthedocs</span>](<span class="na">https://readthedocs.org/</span>), [<span class="nt">JupyterBook</span>](<span class="na">https://jupyterbook.org/intro.html</span>))
+
+<span class="ge">_Optional_</span>  
+<span class="k">- [ ]</span> Build [<span class="nt">API reference</span>](<span class="na">https://developer.lsst.io/python/numpydoc.html</span>) from docstrings
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="d-flex col-lg-12 p-2 docutils">
+<div class="card w-100 shadow docutils">
+<div class="card-header bg-info docutils">
+<p class="card-text"><strong>Collaboration</strong></p>
+</div>
+<div class="card-body docutils">
+<div class="highlight-md notranslate"><div class="highlight"><pre><span></span><span class="ge">_Essential_</span>
+<span class="k">- [ ]</span> Make use of [<span class="nt">Github issues</span>](<span class="na">https://docs.github.com/en/issues/tracking-your-work-with-issues/about-issues</span>)
+<span class="k">- [ ]</span> Provide contribution [<span class="nt">guidelines</span>](<span class="na">https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contributions/setting-guidelines-for-repository-contributors</span>)
+
+<span class="ge">_Recommended_</span>
+<span class="k">- [ ]</span> Choose a branching model ([DCC Guides on branches](https://tu-delft-dcc.github.io/software/git/branch_management.html))
+<span class="k">- [ ]</span> Make use of [<span class="nt">issue templates</span>](<span class="na">https://docs.github.com/en/communities/using-templates-to-encourage-useful-issues-and-pull-requests/configuring-issue-templates-for-your-repository</span>)
+<span class="k">- [ ]</span> Provide a [<span class="nt">Code of Conduct</span>](<span class="na">https://www.contributor-covenant.org/</span>)
+<span class="k">- [ ]</span> Use [<span class="nt">semantic versioning</span>](<span class="na">https://semver.org/</span>) for your releases
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="d-flex col-lg-12 p-2 docutils">
+<div class="card w-100 shadow docutils">
+<div class="card-header bg-info docutils">
+<p class="card-text"><strong>Software testing</strong></p>
+</div>
+<div class="card-body docutils">
+<div class="highlight-md notranslate"><div class="highlight"><pre><span></span><span class="ge">_Essential_</span>
+<span class="k">- [ ]</span> Document how users can verify the proper 
+<span class="k">- [ ]</span> Document verification for user installation and software execution
+
+<span class="ge">_Recommended_</span>  
+<span class="k">- [ ]</span> [<span class="nt">Defensive programming</span>](<span class="na">https://swcarpentry.github.io/python-novice-inflammation/10-defensive/index.html</span>)
+<span class="k">- [ ]</span> Test your software with [<span class="nt">integration tests</span>](<span class="na">https://the-turing-way.netlify.app/reproducible-research/testing/testing-integrationtest.html</span>) and [<span class="nt">unit tests</span>](<span class="na">https://the-turing-way.netlify.app/reproducible-research/testing/testing-unittest.html</span>)
+<span class="k">- [ ]</span> Make use of [<span class="nt">Continuous Integration</span>](<span class="na">https://the-turing-way.netlify.app/reproducible-research/ci/ci-options.html</span>)
+<span class="k">- [ ]</span> Code coverage check ([Codecov](https://about.codecov.io/), [<span class="nt">Sonarcloud</span>](<span class="na">https://sonarcloud.io/</span>), [<span class="nt">Travis</span>](<span class="na">https://www.travis-ci.com/</span>))
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
 </section>
 
     <script type="text/x-thebe-config">
@@ -499,20 +578,20 @@ document.write(`
     <div class="footer-article-item"><!-- Previous / next buttons -->
 <div class="prev-next-area">
     <a class="left-prev"
-       href="project_cards.html"
+       href="checklist.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">FAIR assessment cards</p>
+        <p class="prev-next-title">FAIR software checklist</p>
       </div>
     </a>
     <a class="right-next"
-       href="testing_intro.html"
+       href="software_management_plan.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Software testing</p>
+        <p class="prev-next-title">Software management plan</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -525,24 +604,6 @@ document.write(`
             </div>
             
             
-              
-                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
-
-  <div class="sidebar-secondary-item">
-  <div class="page-toc tocsection onthispage">
-    <i class="fa-solid fa-list"></i> Contents
-  </div>
-  <nav class="bd-toc-nav page-toc">
-    <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#resources-for-software-development">Resources for software development</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#developing-open-source-software">Developing open source software</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#software-architecture-diagrams">Software Architecture diagrams</a></li>
-</ul>
-</li>
-</ul>
-  </nav></div>
-
-</div></div>
               
             
           </div>
