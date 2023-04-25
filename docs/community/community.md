@@ -19,7 +19,7 @@
 - [Statistical Helpdesk](https://www.tudelft.nl/ewi/over-de-faculteit/afdelingen/applied-mathematics/statistics/statistical-helpdesk)
 
 ## 4TU.ResearchData
-[4TU.ResearchData](https://data.4tu.nl/info/en/) is an international data repository for science, engineering and design. Its services include curation, sharing, long-term access and preservation of research datasets. These services are available to anyone around the world. In addition, 4TU.ResearchData also offers training and resources to researchers to support them in making research data findable, accessible, interoperable and reproducible (FAIR).
+[4TU.ResearchData](https://data.4tu.nl/) is an international data repository for science, engineering and design. Its services include curation, sharing, long-term access and preservation of research datasets. These services are available to anyone around the world. In addition, 4TU.ResearchData also offers training and resources to researchers to support them in making research data findable, accessible, interoperable and reproducible (FAIR).
 
 
 ## eScience Center

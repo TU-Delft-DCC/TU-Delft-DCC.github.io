@@ -9,7 +9,9 @@ author_2:
 
 Research software plays a crucial role in academic research and has become a key output of many research projects. A software management plan helps to implement best practices during software development and ensures that software is accessible and reusable in the short and longer term. It also contributes to the reproducibility of results and stimulates collaborative work on open-source software for research. 
 
-The Netherlands eScience Center and NWO, the Dutch Research Council, have taken the initiative to form a [working group](https://www.esciencecenter.nl/national-guidelines-for-software-management-plans/) to develop (national) guidelines for software management plans. This working group – composed of five experts in research software, representing different research organizations in the Netherlands, and roles within those organizations – started their work in December 2021.  
+The Netherlands eScience Center and NWO, the Dutch Research Council, have taken the initiative to form a [working group](https://www.esciencecenter.nl/national-guidelines-for-software-management-plans/) to develop (national) guidelines for software management plans. This working group – composed of five experts in research software, representing different research organizations in the Netherlands, and roles within those organizations – started their work in December 2021.
+
+The initiative resulted in the publication of the [**Practical guide to Software Management Plans**](https://zenodo.org/record/7248877) in October 2022. You can read more about the process leading up to the guide in [this blog](https://blog.esciencecenter.nl/how-to-manage-your-software-327c8ac8a937). The DCC is currently evaluating the adoption of these guidelines for TU Delft research software.
 
 ## Resources for software development
 
