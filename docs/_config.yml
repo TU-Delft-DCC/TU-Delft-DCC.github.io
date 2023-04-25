@@ -45,3 +45,4 @@ sphinx:
     - sphinx_inline_tabs
     - sphinx_togglebutton
     - sphinx_panels
+    - sphinx_design
