@@ -35,7 +35,10 @@ parts:
       - file: software/fair
         sections:
           - file: software/checklist
+          - file: software/project_cards
           - file: software/software_management_plan
+          - url: https://hackmd.io/@fair4rs/ry9bbfMxh
+            title: FAIR for Research Software Program Spring 2023
       - file: software/testing_intro
         sections:
           - file: software/testing_matlab
