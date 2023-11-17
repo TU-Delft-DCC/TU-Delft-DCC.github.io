@@ -1,7 +1,6 @@
 # Version control with Git 
 
-Using a version control system provides better management to your code. It allows tracing back changes made, facilitates collaboration and dissemination of the code files. As using a version control system is becoming standard, some scientific journals (e.g. [Science](https://www.science.org/content/page/science-journals-editorial-policies#:~:text=In%20general%2C%20all,in%20the%20acknowledgments.)) require code used for modelling or data analysis to be available in a publicly accessible repository.  Git is the most popular and commonly used version control software.   
-
+Using a version control system provides better management to your code. It allows tracing back changes made, facilitates collaboration and dissemination of the code files. As using a version control system is becoming standard, some scientific journals (e.g. Science and Nature) require code used for modelling or data analysis to be available in a publicly accessible repository. Git is the most popular and commonly used version control software.   
 
 Following are the different ways in which you can learn version control with Git: 
 

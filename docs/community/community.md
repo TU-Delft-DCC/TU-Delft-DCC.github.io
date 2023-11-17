@@ -14,7 +14,7 @@
 
 - [Data Champions](https://osc-delft.github.io/initiatives)
 
-- [ICT Innovation](https://www.tudelft.nl/ict-innovation)
+- ICT Innovation
 
 - [Statistical Helpdesk](https://www.tudelft.nl/ewi/over-de-faculteit/afdelingen/applied-mathematics/statistics/statistical-helpdesk)
 
