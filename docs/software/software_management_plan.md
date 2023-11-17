@@ -27,8 +27,6 @@ The initiative resulted in the publication of the [**Practical guide to Software
 
 * [Software Development Plan](https://doit.software/blog/software-development-plan)
 
-* [Software Architecture Guide](https://sceweb.uhcl.edu/helm/RationalUnifiedProcess/process/modguide/md_sad.htm)
-
 * [Software Architecture - Design and Evaluation](https://www.diva-portal.org/smash/get/diva2:838171/FULLTEXT01.pdf)
 
 * [Fundamentals of Software Architecture](https://tudelft.on.worldcat.org/v2/search/detail/1141018084?queryString=Fundamentals%20of%20Software%20Architecture)
