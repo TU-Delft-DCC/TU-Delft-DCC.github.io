@@ -8,7 +8,7 @@ author_2: Jose Urra
 # Getting started
 
 ```{note}
- The following content has been adapted from [Susan Branchett’s](https://www.tudelft.nl/staff/s.e.branchett/?cHash=245b0ce9092ea7f97c549dd5bda8b221) March 2020 blogpost:["How can the TU Delft support your research computing needs?"](https://www.tudelft.nl/en/ict-innovation/articles/how-can-the-tu-delft-support-your-research-computing-needs)
+ The following content has been adapted from [Susan Branchett’s](https://www.tudelft.nl/staff/s.e.branchett/?cHash=245b0ce9092ea7f97c549dd5bda8b221) March 2020 blogpost:["How can the TU Delft support your research computing needs?"](https://sebranchett.github.io/TUDlife/2020/03/18/Support-for-Research-Computing.html)
 ```
 
 **The laptop can’t keep up with your research needs? Try these resources…**
@@ -35,7 +35,7 @@ _Do you have the kind of prickly problem we like to sink our teeth into?_
 
 - Perhaps one of your fellow researchers has already solved your type of problem. Maybe it’s worth contacting a Data Champion close to home via https://openworking.wordpress.com/data-champions/.
 
-- Still no joy? Please feel free to contact the [DCC](../community/dcc.md) or our colleagues at [ICT-Innovation](https://www.tudelft.nl/ict-innovation/about-innovation/). Chances are that you have just the kind of problem we like to sink our teeth into. 
+- Still no joy? Please feel free to contact the [DCC](../community/dcc.md) or our colleagues at ICT-Innovation. Chances are that you have just the kind of problem we like to sink our teeth into. 
 
 ## Computer resources
 
@@ -68,7 +68,7 @@ I find this particularly useful. I have a standard Windows laptop and I work on 
 ### SURF National Computer Facilities
 If you need more computational power, then you might consider the national computer facilities provided by [SURF](https://www.surf.nl/en/which-compute-service-for-which-research-question):
 
-- Snellius - general purpose supercomputer - https://servicedesk.surf.nl/wiki/display/WIKI/Snellius+and+Lisa
+- Snellius - general purpose supercomputer - https://servicedesk.surf.nl/wiki/display/WIKI/Snellius
 - Cartesius – large scale parallel – https://userinfo.surfsara.nl/systems/cartesius
 - Lisa – ‘friendly’ processing power - https://userinfo.surfsara.nl/systems/lisa
 - HPC cloud – for individual or group - https://servicedesk.surfsara.nl/wiki/display/WIKI/HPC+Cloud
