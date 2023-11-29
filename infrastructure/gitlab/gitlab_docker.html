@@ -424,9 +424,9 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-4-pull-the-gitlab-runner-docker-image">Step 4. Pull the gitlab-runner Docker image</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-5-create-a-unit-test-function-stored-as-a-file-in-the-repository">Step 5. Create a unit test function stored as a file in the repository</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-6-set-up-the-ci-by-configuration-of-the-gitlab-ci-yml-file">Step 6. Set up the CI by configuration of the .gitlab-ci.yml file</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-7-set-up-gitlab-runner">Step 7. Set up GitLab runner</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-7-setup-the-gitlab-runner">Step 7. Setup the GitLab runner</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-8-deploy-gitlab-runner-in-a-docker-container">Step 8. Deploy GitLab runner in a Docker container</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-9-register-the-runner">Step 9. Register the runner</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-9-register-the-runner-using-authentication-token">Step 9. Register the runner using authentication token</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-10-check-that-the-ci-cd-process-is-activated-and-your-pipeline-runs-successfully">Step 10. Check that the CI/CD process is activated and your pipeline runs successfully</a></li>
 </ul>
 </li>
@@ -549,10 +549,13 @@ document.write(`
 </div>
 <p>Tags can be added as a final section in your .gitlab-ci.yml file (they are optional, we didn’t enter any in this example). You then need to enter these tags exactly when registering the runner.</p>
 </section>
-<section id="step-7-set-up-gitlab-runner">
-<h3>Step 7. Set up GitLab runner<a class="headerlink" href="#step-7-set-up-gitlab-runner" title="Permalink to this heading">#</a></h3>
-<p>Now that you have the .gitlab-ci.yml file configured, you can link your repository to a runner with a token and tags, if you have included those in your .gitlab-ci.yml file. The token can be generated in GitLab by going to Your Project -&gt; Settings -&gt; CI/CD -&gt; Expand Runners -&gt; Setup a specific runner manually. Copy the token you see there.</p>
-<p><img alt="token" src="https://gitlab.tudelft.nl/acryan/data-management-for-researchers/-/wikis/uploads/89288dcfd011627a4397cf4a4ad00cd7/token.PNG" /></p>
+<section id="step-7-setup-the-gitlab-runner">
+<h3>Step 7. Setup the GitLab runner<a class="headerlink" href="#step-7-setup-the-gitlab-runner" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Follow the instructions <a class="reference external" href="https://docs.gitlab.com/ee/tutorials/create_register_first_runner/#create-and-register-a-project-runner">here</a> <strong>till step 7</strong> to create a GitLab runner for your repository</p></li>
+<li><p>Choose ‘Linux’ under operating systems</p></li>
+<li><p>Copy the authentication token generated and keep it handy. It will be required in Step 9.</p></li>
+</ul>
 </section>
 <section id="step-8-deploy-gitlab-runner-in-a-docker-container">
 <h3>Step 8. Deploy GitLab runner in a Docker container<a class="headerlink" href="#step-8-deploy-gitlab-runner-in-a-docker-container" title="Permalink to this heading">#</a></h3>
@@ -565,31 +568,47 @@ gitlab/gitlab-runner:latest
 <p><strong>on Mac OS, use /Users/Shared/ instead of /srv/</strong></p>
 <p>Check that gitlab-runner container is running using <code class="docutils literal notranslate"><span class="pre">docker</span> <span class="pre">ps</span> <span class="pre">-a</span></code></p>
 </section>
-<section id="step-9-register-the-runner">
-<h3>Step 9. Register the runner<a class="headerlink" href="#step-9-register-the-runner" title="Permalink to this heading">#</a></h3>
+<section id="step-9-register-the-runner-using-authentication-token">
+<h3>Step 9. Register the runner using authentication token<a class="headerlink" href="#step-9-register-the-runner-using-authentication-token" title="Permalink to this heading">#</a></h3>
 <p>Run the following command to register your runner and configure it to deploy in a Docker container on your server.</p>
 <p><code class="docutils literal notranslate"><span class="pre">docker</span> <span class="pre">run</span> <span class="pre">--rm</span> <span class="pre">-it</span> <span class="pre">-v</span> <span class="pre">/srv/gitlab-runner/config:/etc/gitlab-runner</span> <span class="pre">gitlab/gitlab-runner</span> <span class="pre">register</span></code></p>
 <p><strong>on Mac OS, use /Users/Shared/ instead of /srv/</strong></p>
-<p>In response to this command you will be prompted to answer a series of questions, about the gitlab-ci coordinator URL (for TU Delft this is <a class="reference external" href="https://gitlab.tudelft.nl">https://gitlab.tudelft.nl</a>), gitlab-ci token (copied from your repository CI/CD settings), an optional description (can hit enter to skip), tgas (must exactly match the tags in your .gitlab-ci.yml file, or hit enter to skip), executor (docker), and default Docker image (same as the one specified in your .gitlab-ci.yml file).</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Please</span> <span class="n">enter</span> <span class="n">the</span> <span class="n">gitlab</span><span class="o">-</span><span class="n">ci</span> <span class="n">coordinator</span> <span class="n">URL</span> <span class="p">(</span><span class="n">e</span><span class="o">.</span><span class="n">g</span><span class="o">.</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">gitlab</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="p">):</span>
-<span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">gitlab</span><span class="o">.</span><span class="n">tudelft</span><span class="o">.</span><span class="n">nl</span>
-<span class="n">Please</span> <span class="n">enter</span> <span class="n">the</span> <span class="n">gitlab</span><span class="o">-</span><span class="n">ci</span> <span class="n">token</span> <span class="k">for</span> <span class="n">this</span> <span class="n">runner</span><span class="p">:</span>
-<span class="o">&lt;</span><span class="n">copied</span> <span class="kn">from</span> <span class="nn">your</span> <span class="n">repository</span> <span class="n">CI</span><span class="o">/</span><span class="n">CD</span> <span class="n">settings</span><span class="o">&gt;</span>
-<span class="n">Please</span> <span class="n">enter</span> <span class="n">the</span> <span class="n">gitlab</span><span class="o">-</span><span class="n">ci</span> <span class="n">description</span> <span class="k">for</span> <span class="n">this</span> <span class="n">runner</span><span class="p">:</span> <span class="p">(</span><span class="ow">or</span> <span class="n">hit</span> <span class="n">enter</span> <span class="n">to</span> <span class="n">skip</span><span class="p">)</span>
-<span class="n">Please</span> <span class="n">enter</span> <span class="n">the</span> <span class="n">gitlab</span><span class="o">-</span><span class="n">ci</span> <span class="n">tags</span> <span class="k">for</span> <span class="n">this</span> <span class="n">runner</span> <span class="p">(</span><span class="n">comma</span> <span class="n">separated</span><span class="p">):</span> <span class="p">(</span><span class="ow">or</span> <span class="n">hit</span> <span class="n">enter</span> <span class="n">to</span> <span class="n">skip</span><span class="p">)</span>
-<span class="n">Please</span> <span class="n">enter</span> <span class="n">the</span> <span class="n">executor</span><span class="p">:</span> <span class="n">custom</span><span class="p">,</span> <span class="n">docker</span><span class="o">-</span><span class="n">ssh</span><span class="p">,</span> <span class="n">shell</span><span class="p">,</span> <span class="n">virtualbox</span><span class="p">,</span> <span class="n">docker</span><span class="o">+</span><span class="n">machine</span><span class="p">,</span> <span class="n">docker</span><span class="p">,</span> <span class="n">parallels</span><span class="p">,</span> <span class="n">ssh</span><span class="p">,</span> <span class="n">docker</span><span class="o">-</span><span class="n">ssh</span><span class="o">+</span><span class="n">machine</span><span class="p">,</span> <span class="n">kubernetes</span><span class="p">:</span>
-<span class="n">docker</span>
-<span class="n">Please</span> <span class="n">enter</span> <span class="n">the</span> <span class="n">default</span> <span class="n">Docker</span> <span class="n">image</span> <span class="p">(</span><span class="n">e</span><span class="o">.</span><span class="n">g</span><span class="o">.</span> <span class="n">ruby</span><span class="p">:</span><span class="mf">2.6</span><span class="p">):</span>
-<span class="n">python</span><span class="p">:</span><span class="mf">3.7.3</span>
+<p>In response to this command you will be prompted to answer the following questions</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>-<span class="w"> </span>GitLab<span class="w"> </span>URL:<span class="w"> </span>https://gitlab.tudelft.nl
+-<span class="w"> </span>gitlab-ci<span class="w"> </span>token:<span class="w"> </span>Paste<span class="w"> </span>the<span class="w"> </span>authentication<span class="w"> </span>token<span class="w"> </span>generated<span class="w"> </span><span class="k">in</span><span class="w"> </span>Step<span class="w"> </span><span class="m">7</span>.
+-<span class="w"> </span>Enter<span class="w"> </span>name<span class="w"> </span>of<span class="w"> </span>the<span class="w"> </span>runner:<span class="w"> </span>example-runner
+-<span class="w"> </span>Type<span class="w"> </span>of<span class="w"> </span>executor:<span class="w"> </span>docker
+-<span class="w"> </span>Default<span class="w"> </span>Docker<span class="w"> </span>image:<span class="w"> </span>Specify<span class="w"> </span>the<span class="w"> </span>same<span class="w"> </span>image<span class="w"> </span>as<span class="w"> </span>the<span class="w"> </span>one<span class="w"> </span>specified<span class="w"> </span><span class="k">in</span><span class="w"> </span>the<span class="w"> </span><span class="s1">&#39;image&#39;</span><span class="w"> </span>field<span class="w"> </span>of<span class="w"> </span>the<span class="w"> </span>.gitlab-ci.yml<span class="w"> </span>file.
+</pre></div>
+</div>
+<p>See an example below.</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>~$ docker run --rm -it -v /srv/gitlab-runner/config:/etc/gitlab-runner gitlab/gitlab-runner register
 
-<span class="n">Runner</span> <span class="n">registered</span> <span class="n">successfully</span><span class="o">.</span> <span class="n">Feel</span> <span class="n">free</span> <span class="n">to</span> <span class="n">start</span> <span class="n">it</span><span class="p">,</span> <span class="n">but</span> <span class="k">if</span> <span class="n">it</span><span class="s1">&#39;s running already the config should be automatically reloaded! </span>
+
+Enter the GitLab instance URL (for example, https://gitlab.com/):
+https://gitlab.tudelft.nl
+Enter the registration token:
+xxxxxxxxxxxxxxx
+Verifying runner... is valid                        runner=xxxxxxx
+Enter a name for the runner. This is stored only in the local config.toml file:
+[xxxxxxx]: example-runner
+Enter an executor: instance, kubernetes, docker-windows, docker-autoscaler, parallels, shell, ssh, virtualbox, docker+machine, custom, docker:
+docker
+Enter the default Docker image (for example, ruby:2.7):
+julia:1.6
+Runner registered successfully. Feel free to start it, but if it&#39;s running already the config should be automatically reloaded!
+
+Configuration (with the authentication token) was saved in &quot;/etc/gitlab-runner/config.toml&quot;
 </pre></div>
 </div>
 </section>
 <section id="step-10-check-that-the-ci-cd-process-is-activated-and-your-pipeline-runs-successfully">
 <h3>Step 10. Check that the CI/CD process is activated and your pipeline runs successfully<a class="headerlink" href="#step-10-check-that-the-ci-cd-process-is-activated-and-your-pipeline-runs-successfully" title="Permalink to this heading">#</a></h3>
-<p>In order to activate the CI/CD process, you should make a new commit to the GitLab repository. This will trigger the CI/CD pipeline to run.</p>
-<p>Navigate to Your Project -&gt; CI/CD -&gt; Pipelines to check the status of CI/CD pipelines connected to your repository. If you find a green message that says “passed” with a check mark then congratulations, your pipeline works! If you see a red message that says “failed”, check to see the error message associated with it - sometimes you need to reconfigure your .gitlab-ci.yml file to make sure it uses the correct formatting and defines the tests appropriately.</p>
+<ul class="simple">
+<li><p>In your repository, navigate to Settings &gt; CI/CD &gt; Click on Expand under Runners: You should see that the runner is active as indicated by a green dot. This means that the CI pipeline is ready to run, but it needs to be triggered.</p></li>
+<li><p>In order to trigger the CI pipeline, you should make a new commit to the GitLab repository.</p></li>
+<li><p>After you have made a new commit to the repository, navigate to Your Project -&gt; Build -&gt; Pipelines to check the status of CI/CD pipelines connected to your repository. If you find a green message that says “passed” with a check mark then congratulations, your pipeline works! If you see a red message that says “failed”, check to see the error message associated with it - sometimes you need to reconfigure your .gitlab-ci.yml file to make sure it uses the correct formatting and defines the tests appropriately.</p></li>
+</ul>
 <p><img alt="Screen_Shot_2020-11-17_at_11.56.41" src="https://gitlab.tudelft.nl/acryan/data-management-for-researchers/-/wikis/uploads/f7aadbc87f49d31de4da37a2f8a76ef3/Screen_Shot_2020-11-17_at_11.56.41.png" /></p>
 </section>
 </section>
@@ -690,9 +709,9 @@ gitlab/gitlab-runner:latest
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-4-pull-the-gitlab-runner-docker-image">Step 4. Pull the gitlab-runner Docker image</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-5-create-a-unit-test-function-stored-as-a-file-in-the-repository">Step 5. Create a unit test function stored as a file in the repository</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-6-set-up-the-ci-by-configuration-of-the-gitlab-ci-yml-file">Step 6. Set up the CI by configuration of the .gitlab-ci.yml file</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-7-set-up-gitlab-runner">Step 7. Set up GitLab runner</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-7-setup-the-gitlab-runner">Step 7. Setup the GitLab runner</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-8-deploy-gitlab-runner-in-a-docker-container">Step 8. Deploy GitLab runner in a Docker container</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-9-register-the-runner">Step 9. Register the runner</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-9-register-the-runner-using-authentication-token">Step 9. Register the runner using authentication token</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-10-check-that-the-ci-cd-process-is-activated-and-your-pipeline-runs-successfully">Step 10. Check that the CI/CD process is activated and your pipeline runs successfully</a></li>
 </ul>
 </li>
