@@ -120,6 +120,8 @@ Tags can be added as a final section in your .gitlab-ci.yml file (they are optio
 
 - Follow the instructions [here](https://docs.gitlab.com/ee/tutorials/create_register_first_runner/#create-and-register-a-project-runner) **till step 7** to create a GitLab runner for your repository
 
+- Choose 'Linux' under operating systems
+
 - Copy the authentication token generated and keep it handy. It will be required in Step 9.
 
 ### Step 8. Deploy GitLab runner in a Docker container
@@ -144,15 +146,18 @@ Run the following command to register your runner and configure it to deploy in 
 **on Mac OS, use /Users/Shared/ instead of /srv/**
 
 In response to this command you will be prompted to answer the following questions
-- GitLab URL URL: Enter https://gitlab.tudelft.nl
+
+```shell
+- GitLab URL: https://gitlab.tudelft.nl
 - gitlab-ci token: Paste the authentication token generated in Step 7.
-- Enter name of the runner
-- Type of executor: Choose `docker`
+- Enter name of the runner: example-runner
+- Type of executor: docker
 - Default Docker image: Specify the same image as the one specified in the 'image' field of the .gitlab-ci.yml file.
 
+```
 See an example below.
 
-```
+```shell
 ~$ docker run --rm -it -v /srv/gitlab-runner/config:/etc/gitlab-runner gitlab/gitlab-runner register
 
 
