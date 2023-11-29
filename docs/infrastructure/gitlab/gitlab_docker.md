@@ -183,7 +183,7 @@ Configuration (with the authentication token) was saved in "/etc/gitlab-runner/c
 
 - In order to trigger the CI pipeline, you should make a new commit to the GitLab repository.
 
-- After you have made a new commit to the repository, navigate to Your Project -> CI/CD -> Pipelines to check the status of CI/CD pipelines connected to your repository. If you find a green message that says “passed” with a check mark then congratulations, your pipeline works! If you see a red message that says “failed”, check to see the error message associated with it - sometimes you need to reconfigure your .gitlab-ci.yml file to make sure it uses the correct formatting and defines the tests appropriately.
+- After you have made a new commit to the repository, navigate to Your Project -> Build -> Pipelines to check the status of CI/CD pipelines connected to your repository. If you find a green message that says “passed” with a check mark then congratulations, your pipeline works! If you see a red message that says “failed”, check to see the error message associated with it - sometimes you need to reconfigure your .gitlab-ci.yml file to make sure it uses the correct formatting and defines the tests appropriately.
 
 ![Screen_Shot_2020-11-17_at_11.56.41](https://gitlab.tudelft.nl/acryan/data-management-for-researchers/-/wikis/uploads/f7aadbc87f49d31de4da37a2f8a76ef3/Screen_Shot_2020-11-17_at_11.56.41.png)
 
