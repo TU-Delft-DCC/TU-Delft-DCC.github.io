@@ -193,10 +193,8 @@ This guide was created using multiple references on GitLab runner and Docker. If
 * https://www.hostinger.com/tutorials/how-to-install-docker-on-ubuntu
 * https://cloudcone.com/docs/article/how-to-install-and-run-docker-on-ubuntu-20-04-lts/
 * https://www.digitalocean.com/community/tutorials/how-to-install-and-use-docker-on-ubuntu-20-04
-* https://docs.gitlab.com/ee/ci/yaml/README.html
+* https://docs.gitlab.com/ee/topics/build_your_application.html
 * https://docs.gitlab.com/runner/executors/docker.html#define-image-and-services-from-gitlab-ciyml
 * https://gitlab.tudelft.nl/help/ci/yaml/index.md
-* https://docs.gitlab.com/ee/ci/runners/
 * https://docs.gitlab.com/ee/ci/docker/using_docker_images.html
-* https://docs.gitlab.com/ee/ci/examples/README.html
 * https://semaphoreci.com/blog/cicd-pipeline

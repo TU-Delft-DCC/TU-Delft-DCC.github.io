@@ -74,9 +74,7 @@ If you need more computational power, then you might consider the national compu
 - HPC cloud – for individual or group - https://servicedesk.surfsara.nl/wiki/display/WIKI/HPC+Cloud
 - Grid – extremely large datasets - https://userinfo.surfsara.nl/systems/grid
 
-For ‘large’ requests, applications go through NWO: https://www.nwo.nl/en/researchprogrammes/computing-time-national-computer-facilities
-
-For ‘small’ requests, applications go through SURF: https://www.surf.nl/en/applying-for-access-to-compute-services
+For small and large requests, applications go through NWO: https://www.surf.nl/en/access-to-compute-services
 
 Alternatively, your FIM can arrange access to Cartesius and Lisa on a pay per use basis: https://userinfo.surfsara.nl/systems/shared/rccs
 

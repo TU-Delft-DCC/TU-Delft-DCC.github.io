@@ -30,7 +30,7 @@ These materials represent a curated curriculum designed to help you develop and 
 * [Understanding the GitHub flow](https://guides.github.com/introduction/flow/) – guide from GitHub on how and why to work with branches
 * [Collaborative distributed version control](https://coderefinery.github.io/git-collaborative/) - We have learned how to make a git repository for a single person. What about sharing?
 * [SSH connection to GitHub](https://coderefinery.github.io/installation/ssh/) – instructions to set up SSH connection to GitHub so that you do not need to input your login credentials with every push/pull
-* [Gitlab and SSH keys](https://docs.gitlab.com/ee/ssh/) - instructions to add an SSH key to your (TU Delft) GitLab account for the same reason as above
+* [Gitlab and SSH keys](https://docs.gitlab.com/ee/user/ssh.html) - instructions to add an SSH key to your (TU Delft) GitLab account for the same reason as above
 * [GitHub without the Command Line from Code Refinery](https://coderefinery.github.io/github-without-command-line/) - practice collaborating and sharing using either the GitHub website or GitHub desktop application
 * [GitHub Guides: Mastering Markdown](https://guides.github.com/features/mastering-markdown/) - Markdown is a lightweight and easy-to-use syntax for styling all forms of writing on the GitHub platform.
 
