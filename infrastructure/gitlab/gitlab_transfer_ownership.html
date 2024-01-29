@@ -3,11 +3,11 @@
 <!DOCTYPE html>
 
 
-<html lang="en" >
+<html >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
     <title>Transfer ownership of a GitLab repository &#8212; DCC Guides</title>
   
@@ -37,8 +37,9 @@
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/tabs.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-dropdown.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/panels-bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-bootstrap.5fd3999ee7762ccc51105388f4a9d115.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
@@ -47,7 +48,6 @@
     <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
     <script src="../../_static/underscore.js"></script>
-    <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../../_static/doctools.js"></script>
     <script src="../../_static/clipboard.min.js"></script>
     <script src="../../_static/copybutton.js"></script>
@@ -71,7 +71,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="next" title="Continuous Integration with Gitlab" href="gitlab_docker.html" />
     <link rel="prev" title="Creating GitLab groups" href="gitlab_groups.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:language" content="None"/>
   </head>
   
   
@@ -435,9 +435,9 @@ document.write(`
                 <article class="bd-article" role="main">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="transfer-ownership-of-a-gitlab-repository">
-<h1>Transfer ownership of a GitLab repository<a class="headerlink" href="#transfer-ownership-of-a-gitlab-repository" title="Permalink to this heading">#</a></h1>
+<h1>Transfer ownership of a GitLab repository<a class="headerlink" href="#transfer-ownership-of-a-gitlab-repository" title="Permalink to this headline">#</a></h1>
 <section id="background">
-<h2>Background<a class="headerlink" href="#background" title="Permalink to this heading">#</a></h2>
+<h2>Background<a class="headerlink" href="#background" title="Permalink to this headline">#</a></h2>
 <p>GitLab repositories belonging to employees leaving the TU Delft might be deleted in future.</p>
 <p>From the <a class="reference external" href="https://gitlab.tudelft.nl/help#what-happens-to-my-gitlab-projects-when-i-leave">TU Delft GitLab help documentation</a>, we read the following:</p>
 <p><strong>Current situation</strong><br />
@@ -446,7 +446,7 @@ document.write(`
 <em>At some point in the future, repositories of former TU Delft employees may be deleted. To avoid losing information, it is recommended to transfer ownership of your repositories to a current TU Delft employee when you leave.</em></p>
 </section>
 <section id="purpose-of-this-guide">
-<h2>Purpose of this guide<a class="headerlink" href="#purpose-of-this-guide" title="Permalink to this heading">#</a></h2>
+<h2>Purpose of this guide<a class="headerlink" href="#purpose-of-this-guide" title="Permalink to this headline">#</a></h2>
 <p>This guide provides the steps required to secure access to repositories of employees who will leave the TU Delft.</p>
 <p>If they have access to your projects, they will still have access after you leave, as long as the projects still exist. You can control who has access to your projects by going to <strong>Project Information &gt; Members</strong> in the sidebar of your repository. To be safe, transfer the ownership of the projects to a current TU Delft employee when you leave.</p>
 <p>You can transfer a project to another user’s GitLab namespace. Read what a namespace is <a class="reference external" href="https://docs.gitlab.com/ee/user/group/#namespaces">here</a>.</p>
@@ -456,7 +456,7 @@ document.write(`
 </div>
 </section>
 <section id="steps">
-<h2>Steps<a class="headerlink" href="#steps" title="Permalink to this heading">#</a></h2>
+<h2>Steps<a class="headerlink" href="#steps" title="Permalink to this headline">#</a></h2>
 <p>The steps will guide you through transferring repository ownership between TU Delft employees through an intermediary GitLab group:</p>
 <p><img alt="Transfer ownership" src="../../_images/gitlab_transfer_ownership.png" /></p>
 <div class="admonition note">
@@ -464,11 +464,11 @@ document.write(`
 <p>Summary (based on this <a class="reference external" href="https://stackoverflow.com/questions/21579693/how-to-change-the-project-owner-in-gitlab">Stack Overflow post</a>): ​​Move your project from your namespace to a group where both you and the other user are owners, then the other user can transfer it to their own namespace</p>
 </div>
 <section id="step-1-create-a-new-group">
-<h3>Step 1. Create a new group<a class="headerlink" href="#step-1-create-a-new-group" title="Permalink to this heading">#</a></h3>
+<h3>Step 1. Create a new group<a class="headerlink" href="#step-1-create-a-new-group" title="Permalink to this headline">#</a></h3>
 <p>Create a new group if you don’t have one that you want to use (<strong>Menu &gt; Groups &gt; Create group</strong>)</p>
 </section>
 <section id="step-2-invite-members">
-<h3>Step 2. Invite members<a class="headerlink" href="#step-2-invite-members" title="Permalink to this heading">#</a></h3>
+<h3>Step 2. Invite members<a class="headerlink" href="#step-2-invite-members" title="Permalink to this headline">#</a></h3>
 <p>Make sure that both the maintainer of the project repository, and the person who it will be transferred to, are members of the group and have the Owner role (to add a new owner: go to the group namespace, then from the sidebar choose <strong>Group information &gt; Members &gt; Invite members</strong>.</p>
 <p><img alt="Invite members 1" src="../../_images/gitlab_invite_members_1.png" /></p>
 <p><img alt="Invite members 2" src="../../_images/gitlab_invite_members_2.png" /></p>
@@ -476,21 +476,21 @@ document.write(`
 <p><img alt="Invite members 3" src="../../_images/gitlab_invite_members_3.png" /></p>
 </section>
 <section id="step-3-transfer-project-to-group">
-<h3>Step 3. Transfer project to group<a class="headerlink" href="#step-3-transfer-project-to-group" title="Permalink to this heading">#</a></h3>
+<h3>Step 3. Transfer project to group<a class="headerlink" href="#step-3-transfer-project-to-group" title="Permalink to this headline">#</a></h3>
 <p>Have a maintainer of the project repository transfer it to the group namespace (go to the project namespace, then from the sidebar go to <strong>Settings &gt; General &gt; Advanced &gt; Transfer Project</strong>)</p>
 <p><img alt="Transfer project" src="../../_images/gitlab_transfer_project.png" /></p>
 </section>
 <section id="step-4-check-email">
-<h3>Step 4. Check email<a class="headerlink" href="#step-4-check-email" title="Permalink to this heading">#</a></h3>
+<h3>Step 4. Check email<a class="headerlink" href="#step-4-check-email" title="Permalink to this headline">#</a></h3>
 <p>After doing this, the maintainer(s) of the project will get an email:</p>
 <p><img alt="Email transfer" src="../../_images/gitlab_email_transfer.png" /></p>
 </section>
 <section id="step-5-transfer-project-to-user">
-<h3>Step 5. Transfer project to user<a class="headerlink" href="#step-5-transfer-project-to-user" title="Permalink to this heading">#</a></h3>
+<h3>Step 5. Transfer project to user<a class="headerlink" href="#step-5-transfer-project-to-user" title="Permalink to this headline">#</a></h3>
 <p>Now the person who the project is being transferred to can move it to their own namespace (go to the project namespace, then from the sidebar, go to <strong>Settings &gt; General &gt; Advanced &gt; Transfer Project</strong> like before).</p>
 </section>
 <section id="step-6-optional-remove-group">
-<h3>Step 6. Optional: remove group<a class="headerlink" href="#step-6-optional-remove-group" title="Permalink to this heading">#</a></h3>
+<h3>Step 6. Optional: remove group<a class="headerlink" href="#step-6-optional-remove-group" title="Permalink to this headline">#</a></h3>
 <p>If desired, the group can be deleted after the transfer is complete (go to the group namespace, then from the sidebar go to <strong>Settings &gt; General &gt; Advanced &gt; Remove Group</strong>)</p>
 <p><img alt="Remove group" src="../../_images/gitlab_remove_group.png" /></p>
 </section>

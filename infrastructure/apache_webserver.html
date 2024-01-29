@@ -3,11 +3,11 @@
 <!DOCTYPE html>
 
 
-<html lang="en" >
+<html >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
     <title>Setting up an Apache web server &#8212; DCC Guides</title>
   
@@ -37,8 +37,9 @@
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
     <link rel="stylesheet" type="text/css" href="../_static/tabs.css" />
     <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/sphinx-dropdown.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/panels-bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-bootstrap.5fd3999ee7762ccc51105388f4a9d115.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
@@ -47,7 +48,6 @@
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
-    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
@@ -71,7 +71,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="next" title="TU Delft GitLab" href="gitlab/gitlab_intro.html" />
     <link rel="prev" title="Configure SSL certificates" href="VPS_SSL_Certs.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:language" content="None"/>
   </head>
   
   
@@ -438,21 +438,21 @@ document.write(`
                 <article class="bd-article" role="main">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="setting-up-an-apache-web-server">
-<h1>Setting up an Apache web server<a class="headerlink" href="#setting-up-an-apache-web-server" title="Permalink to this heading">#</a></h1>
+<h1>Setting up an Apache web server<a class="headerlink" href="#setting-up-an-apache-web-server" title="Permalink to this headline">#</a></h1>
 <section id="background">
-<h2>Background<a class="headerlink" href="#background" title="Permalink to this heading">#</a></h2>
+<h2>Background<a class="headerlink" href="#background" title="Permalink to this headline">#</a></h2>
 <p>If you want to host a website for your lab, or a web application of some sort, you are going to need to work with a webserver. Apache Web Server is a software package that turns a computer into an HTTP server. That is, it sends web pages – stored as HTML files – to people on the internet who request them. It is open-source software, which means it can be used and modified freely.</p>
 <blockquote>
 <div><p>The job of a web server is to serve websites on the internet. To achieve that goal, it acts as a middleman between the server and client machines. It pulls content from the server on each user request and delivers it to the web…One of the most popular web servers, Apache allows you to run a secure website without too much of a headache. It is free and open-source, making it a frequent choice of solopreneurs and small businesses who want a presence on the web…The way Apache HTTP server works is that it will accept requests from the web browser, such as Google Chrome and Microsoft Edge, and turn programming scripts into web pages which contents are visible by the visitors.</p>
 </div></blockquote>
 </section>
 <section id="what-this-documentation-will-help-achieve">
-<h2>What this documentation will help achieve<a class="headerlink" href="#what-this-documentation-will-help-achieve" title="Permalink to this heading">#</a></h2>
+<h2>What this documentation will help achieve<a class="headerlink" href="#what-this-documentation-will-help-achieve" title="Permalink to this headline">#</a></h2>
 <p>This guide will help you install the Apache web server on Ubuntu Linux 18.04 and configure a HTTPS secure connection for all incoming web traffic.</p>
 <p>The steps outlined below will ensure that all incoming web traffic to your server from port 80 (HTTP) will be redirected to port 443 (HTTPS). Port 80 is still accessible but redirects automatically. Redirection is configured after the SSL certificate is in place.</p>
 </section>
 <section id="prerequisites">
-<h2>Prerequisites<a class="headerlink" href="#prerequisites" title="Permalink to this heading">#</a></h2>
+<h2>Prerequisites<a class="headerlink" href="#prerequisites" title="Permalink to this headline">#</a></h2>
 <ul class="simple">
 <li><p>A system running Ubuntu 18.04 LTS (Bionic Beaver)</p></li>
 <li><p>An internet connection</p></li>
@@ -460,7 +460,7 @@ document.write(`
 </ul>
 </section>
 <section id="tools-software">
-<h2>Tools / Software<a class="headerlink" href="#tools-software" title="Permalink to this heading">#</a></h2>
+<h2>Tools / Software<a class="headerlink" href="#tools-software" title="Permalink to this headline">#</a></h2>
 <ul class="simple">
 <li><p>A command-line utility (Use keyboard shortcut CTRL-ALT-T, or right-click the desktop and left-click Open Terminal)</p></li>
 <li><p>A firewall – the default UFW (Uncomplicated Firewall) in Ubuntu is fine</p></li>
@@ -468,7 +468,7 @@ document.write(`
 </ul>
 </section>
 <section id="steps">
-<h2>Steps<a class="headerlink" href="#steps" title="Permalink to this heading">#</a></h2>
+<h2>Steps<a class="headerlink" href="#steps" title="Permalink to this headline">#</a></h2>
 <ol class="arabic simple">
 <li><p>Request a Virtual Private Server (VPS) from TU Delft ICT</p></li>
 <li><p>Install Apache web server on the VPS</p></li>
@@ -477,12 +477,12 @@ document.write(`
 <li><p>Redirect all incoming web traffic to HTTPS</p></li>
 </ol>
 <section id="step-1-request-a-virtual-private-server-from-tu-delft-ict">
-<h3>Step 1. Request a Virtual Private Server from TU Delft ICT<a class="headerlink" href="#step-1-request-a-virtual-private-server-from-tu-delft-ict" title="Permalink to this heading">#</a></h3>
+<h3>Step 1. Request a Virtual Private Server from TU Delft ICT<a class="headerlink" href="#step-1-request-a-virtual-private-server-from-tu-delft-ict" title="Permalink to this headline">#</a></h3>
 <p>You can make a request for a server via the <a class="reference external" href="https://tudelft.topdesk.net/tas/public/ssp/content/serviceflow?unid=418c986f186d4934848dc2712039ed34">TopDesk self service portal</a>. If you would like more information, documentation can be found here ___</p>
 <p><em>Note:</em> to run a web server, ports 80 (HTTP) and 443 (HTTPS) must be opened.</p>
 </section>
 <section id="step-2-install-apache-web-server-on-the-vps">
-<h3>Step 2. Install Apache web server on the VPS<a class="headerlink" href="#step-2-install-apache-web-server-on-the-vps" title="Permalink to this heading">#</a></h3>
+<h3>Step 2. Install Apache web server on the VPS<a class="headerlink" href="#step-2-install-apache-web-server-on-the-vps" title="Permalink to this headline">#</a></h3>
 <p><a class="reference external" href="https://ubuntu.com/tutorials/install-and-configure-apache#1-overview">Apache</a> is an open source web server that’s available for Linux servers. It is one of the most commonly used softwares for creating a web server. And, it’s free!</p>
 <p><a class="reference external" href="https://phoenixnap.com/kb/how-to-install-apache-web-server-on-ubuntu-18-04">Installing Apache</a> can be done using commands in the terminal. These instructions are documented with further information at the link in the beginning of this paragraph. First, make sure your local software packages are up to date by running:</p>
 <p><code class="docutils literal notranslate"><span class="pre">sudo</span> <span class="pre">apt-get</span> <span class="pre">update</span></code></p>
@@ -504,7 +504,7 @@ document.write(`
 <p>At this point, your Apache web server is serving over HTTP, which is a good first step! But remember, we need to secure the connection over HTTPS. So, we still have a few more steps.</p>
 </section>
 <section id="step-3-request-an-ssl-certificate-from-tu-delft-ict">
-<h3>Step 3. Request an SSL certificate from TU Delft ICT<a class="headerlink" href="#step-3-request-an-ssl-certificate-from-tu-delft-ict" title="Permalink to this heading">#</a></h3>
+<h3>Step 3. Request an SSL certificate from TU Delft ICT<a class="headerlink" href="#step-3-request-an-ssl-certificate-from-tu-delft-ict" title="Permalink to this headline">#</a></h3>
 <p>Detailed directions on how to do this can be found here ___</p>
 <p>You can create the .csr file directly on the VPS by first create a directory on /etc/apache2 called ssl:</p>
 <p><code class="docutils literal notranslate"><span class="pre">mkdir</span> <span class="pre">/etc/apache2/ssl</span></code></p>
@@ -514,7 +514,7 @@ document.write(`
 <p>The .csr file must be sent to TU Delft ICT using this TopDesk form: <a class="reference external" href="https://tudelft.topdesk.net/tas/public/ssp/content/serviceflow?unid=62aeef08314247f3aba7ff2297d011da">TOPdesk SSL certificate server request</a>.</p>
 </section>
 <section id="step-4-configure-the-ssl-certificate-on-your-vps">
-<h3>Step 4. Configure the SSL certificate on your VPS<a class="headerlink" href="#step-4-configure-the-ssl-certificate-on-your-vps" title="Permalink to this heading">#</a></h3>
+<h3>Step 4. Configure the SSL certificate on your VPS<a class="headerlink" href="#step-4-configure-the-ssl-certificate-on-your-vps" title="Permalink to this headline">#</a></h3>
 <p>When you receive SSL certificate files from the signing authority via TU Delft ICT, you need to put the information from this certificate in a specific place on your VPS in order to securely expose the web server. These instructions come from here: - <a class="reference external" href="https://hostadvice.com/how-to/configure-apache-with-tls-ssl-certificate-on-ubuntu-18/">Configure ssl for https</a></p>
 <p>Navigate to the default Apache site config directory using the following command:</p>
 <p><code class="docutils literal notranslate"><span class="pre">sudo</span> <span class="pre">nano</span> <span class="pre">/etc/apache2/sites-available/default-ssl.conf</span></code></p>
@@ -593,7 +593,7 @@ document.write(`
 <p><code class="docutils literal notranslate"><span class="pre">https://YOUR_SERVER_IP</span></code></p>
 </section>
 <section id="step-5-redirect-all-incoming-web-traffic-to-https">
-<h3>Step 5. Redirect all incoming web traffic to HTTPS<a class="headerlink" href="#step-5-redirect-all-incoming-web-traffic-to-https" title="Permalink to this heading">#</a></h3>
+<h3>Step 5. Redirect all incoming web traffic to HTTPS<a class="headerlink" href="#step-5-redirect-all-incoming-web-traffic-to-https" title="Permalink to this headline">#</a></h3>
 <p><code class="docutils literal notranslate"><span class="pre">sudo</span> <span class="pre">a2enmod</span> <span class="pre">proxy</span></code></p>
 <p><code class="docutils literal notranslate"><span class="pre">sudo</span> <span class="pre">a2enmod</span> <span class="pre">proxy_http</span></code></p>
 <p><code class="docutils literal notranslate"><span class="pre">sudo</span> <span class="pre">a2enmod</span> <span class="pre">rewrite</span></code></p>
@@ -606,11 +606,11 @@ document.write(`
 </section>
 </section>
 <section id="notes-and-next-steps">
-<h2>Notes and Next Steps<a class="headerlink" href="#notes-and-next-steps" title="Permalink to this heading">#</a></h2>
+<h2>Notes and Next Steps<a class="headerlink" href="#notes-and-next-steps" title="Permalink to this headline">#</a></h2>
 <p>Test that your web server is secured by HTTPS by typing the Fully Qualified Domain Name (FQDN) of your server in a web browser. If HTTPS is enabled, the URL should begin with it - if it still says HTTP, something will need to be reconfigured.</p>
 </section>
 <section id="references">
-<h2>References<a class="headerlink" href="#references" title="Permalink to this heading">#</a></h2>
+<h2>References<a class="headerlink" href="#references" title="Permalink to this headline">#</a></h2>
 <p>[1]“What is Apache? An In-Depth Overview of Apache Web Server,” Hostinger Tutorials, Jun. 20, 2018. <a class="reference external" href="https://www.hostinger.com/tutorials/what-is-apache">https://www.hostinger.com/tutorials/what-is-apache</a> (accessed Nov. 02, 2021).</p>
 </section>
 </section>

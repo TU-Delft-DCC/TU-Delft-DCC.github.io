@@ -3,11 +3,11 @@
 <!DOCTYPE html>
 
 
-<html lang="en" >
+<html >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
     <title>Configure SSH Tunneling &#8212; DCC Guides</title>
   
@@ -37,8 +37,9 @@
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
     <link rel="stylesheet" type="text/css" href="../_static/tabs.css" />
     <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/sphinx-dropdown.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/panels-bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-bootstrap.5fd3999ee7762ccc51105388f4a9d115.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
@@ -47,7 +48,6 @@
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
-    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
@@ -71,7 +71,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="next" title="Moving data to your server" href="moving_data.html" />
     <link rel="prev" title="Request a Virtual Private Server" href="VPS_request.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:language" content="None"/>
   </head>
   
   
@@ -426,10 +426,10 @@ document.write(`
                 <article class="bd-article" role="main">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="configure-ssh-tunneling">
-<h1>Configure SSH Tunneling<a class="headerlink" href="#configure-ssh-tunneling" title="Permalink to this heading">#</a></h1>
+<h1>Configure SSH Tunneling<a class="headerlink" href="#configure-ssh-tunneling" title="Permalink to this headline">#</a></h1>
 <p>To connect to a remote host, TU Delft uses a <em>proxy server</em>, know as  <strong>bastion</strong>. To reach a remote host, a user has to connect first to the <strong>bastion</strong> and from there to the remote host. However, a user can connect directly to the remote host using <em>ssh tunneling</em>.</p>
 <section id="set-a-default-ssh-tunneling-for-a-host-linux-terminal">
-<h2>Set a Default SSH Tunneling for a Host (Linux Terminal)<a class="headerlink" href="#set-a-default-ssh-tunneling-for-a-host-linux-terminal" title="Permalink to this heading">#</a></h2>
+<h2>Set a Default SSH Tunneling for a Host (Linux Terminal)<a class="headerlink" href="#set-a-default-ssh-tunneling-for-a-host-linux-terminal" title="Permalink to this headline">#</a></h2>
 <ol class="arabic simple">
 <li><p>On your local machine, edit the <code class="docutils literal notranslate"><span class="pre">~/.ssh/config</span></code> file and add the following confuration:</p></li>
 </ol>
@@ -462,7 +462,7 @@ document.write(`
 <p>If you encounter problems with the connection. Use the debug mode <code class="docutils literal notranslate"><span class="pre">ssh</span> <span class="pre">-vvv</span> <span class="pre">&lt;host-nickname&gt;</span></code> to find out what might have gone wrong.</p>
 </section>
 <section id="tunneling-with-winscp">
-<h2>Tunneling with WinSCP<a class="headerlink" href="#tunneling-with-winscp" title="Permalink to this heading">#</a></h2>
+<h2>Tunneling with WinSCP<a class="headerlink" href="#tunneling-with-winscp" title="Permalink to this headline">#</a></h2>
 <p>If using winscp, you will find detailed information here: <a class="reference external" href="https://winscp.net/eng/docs/ui_login_tunnel">https://winscp.net/eng/docs/ui_login_tunnel</a></p>
 </section>
 </section>

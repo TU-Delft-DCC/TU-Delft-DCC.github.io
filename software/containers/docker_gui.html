@@ -3,11 +3,11 @@
 <!DOCTYPE html>
 
 
-<html lang="en" >
+<html >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
     <title>Using a docker container with a GUI &#8212; DCC Guides</title>
   
@@ -37,8 +37,9 @@
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/tabs.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-dropdown.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/panels-bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-bootstrap.5fd3999ee7762ccc51105388f4a9d115.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
@@ -47,7 +48,6 @@
     <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
     <script src="../../_static/underscore.js"></script>
-    <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../../_static/doctools.js"></script>
     <script src="../../_static/clipboard.min.js"></script>
     <script src="../../_static/copybutton.js"></script>
@@ -71,7 +71,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="next" title="Courses and workshops" href="../../resources/courses.html" />
     <link rel="prev" title="Working with containers" href="intro.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:language" content="None"/>
   </head>
   
   
@@ -434,17 +434,17 @@ document.write(`
                 <article class="bd-article" role="main">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="using-a-docker-container-with-a-gui">
-<h1>Using a docker container with a GUI<a class="headerlink" href="#using-a-docker-container-with-a-gui" title="Permalink to this heading">#</a></h1>
+<h1>Using a docker container with a GUI<a class="headerlink" href="#using-a-docker-container-with-a-gui" title="Permalink to this headline">#</a></h1>
 <p>Docker is an open platform for developing, shipping, and running applications. Docker provides the ability to package and run an application in a loosely isolated environment called a container. Containers are lightweight and contain everything needed to run the application, so you do not need to rely on what is currently installed on the host system. You can easily share containers while you work, and be sure that everyone you share with gets the same container that works in the same way.</p>
 <p><img alt="image" src="https://user-images.githubusercontent.com/15414938/123805382-52543b00-d8ee-11eb-8f76-ae598d6fdb83.png" /></p>
 <p><strong>Dockerfile</strong> – is a text document that contains all the commands you would normally execute manually in order to build a Docker image. The instructions include a choice of operating system and all the libraries we need to install into it. Docker can build images automatically by reading the instructions from a Dockerfile.<br />
 <strong>Docker Images</strong> – are the basis of containers. A Docker image is an immutable (unchangeable) file that contains the source code, libraries, dependencies, tools, and other files needed for an application to run.<br />
 <strong>Docker Container</strong> – A container is, ultimately, just a running image.</p>
 <section id="docker-installation">
-<h2>Docker installation<a class="headerlink" href="#docker-installation" title="Permalink to this heading">#</a></h2>
+<h2>Docker installation<a class="headerlink" href="#docker-installation" title="Permalink to this headline">#</a></h2>
 <p>Docker can be installed on Windows, macOS, and Linux. Please visit the <a class="reference external" href="https://docs.docker.com/get-docker/">Docker website</a> for downloading and installation instructions. Note, you will need admin access to your system. <strong>Please check the Issues/troubleshooting session at the end of this page if you encounter some problems during installation. If your problem is not listed you can add it as an issue in the main repository.</strong></p>
 <section id="verify-docker-installation">
-<h3>Verify Docker installation<a class="headerlink" href="#verify-docker-installation" title="Permalink to this heading">#</a></h3>
+<h3>Verify Docker installation<a class="headerlink" href="#verify-docker-installation" title="Permalink to this headline">#</a></h3>
 <p>Run the following commands in the terminal (see below) to verify your installation:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">docker</span> <span class="pre">--version</span></code><br />
@@ -455,7 +455,7 @@ Will output a welcome message. If you haven’t run this command before, you wil
 </section>
 </section>
 <section id="terminal-access">
-<h2>Terminal access<a class="headerlink" href="#terminal-access" title="Permalink to this heading">#</a></h2>
+<h2>Terminal access<a class="headerlink" href="#terminal-access" title="Permalink to this headline">#</a></h2>
 <p><strong>Linux</strong><br />
 The default Unix Shell for Linux operating systems is usually Bash. On most versions of Linux, it is accessible by running the <a class="reference external" href="https://help.gnome.org/users/gnome-terminal/stable/">(Gnome) Terminal</a> or <a class="reference external" href="https://konsole.kde.org/">(KDE) Konsole</a> or <a class="reference external" href="https://en.wikipedia.org/wiki/Xterm">xterm</a>, which can be found via the applications menu or the search bar. If your machine is set up to use something other than bash, you can run it by opening a terminal and typing <code class="docutils literal notranslate"><span class="pre">bash</span></code>.</p>
 <p><strong>macOS</strong><br />
@@ -469,7 +469,7 @@ For a Mac computer, the default Unix Shell is Bash, and it is available via the 
 Computers with Windows operating systems do not automatically have a Unix Shell program installed. We encourage you to use an emulator included in <a class="reference external" href="https://gitforwindows.org/">Git for Windows</a>, which gives you access to both Bash shell commands and Git. To install, please follow these <a class="reference external" href="https://coderefinery.github.io/installation/shell-and-git/#shell-and-git">instructions</a>.</p>
 </section>
 <section id="x-windows-system">
-<h2>X Windows System<a class="headerlink" href="#x-windows-system" title="Permalink to this heading">#</a></h2>
+<h2>X Windows System<a class="headerlink" href="#x-windows-system" title="Permalink to this headline">#</a></h2>
 <p>Docker doesn’t have any build-in graphics, which means it cannot run desktop applications by default. For this, we require the X Windows System. The X Window System (X11, or simply X) is a windowing system for bitmap displays, common on Unix-like operating systems. X provides the basic framework for a GUI environment: drawing and moving windows on the display device and interacting with a mouse and a keyboard.</p>
 <p>If you are on a desktop Linux, you already have one. For macOS, you can download <a class="reference external" href="https://www.xquartz.org/">XQuartz</a>, and for Windows, we tested <a class="reference external" href="https://sourceforge.net/projects/vcxsrv/">VcXsrv</a>.</p>
 <p>Desktop applications will run in Docker and will try to communicate with the X server you’re running on your PC. They don’t need to know anything but the location of the X server and an optional display that they target. This is denoted by an environmental variable named <code class="docutils literal notranslate"><span class="pre">DISPLAY</span></code>, with the following syntax: <code class="docutils literal notranslate"><span class="pre">DISPLAY=xserver-host:0</span></code>. The number you see after the <code class="docutils literal notranslate"><span class="pre">:</span></code> is the display number; for the intents and purpose of this article, we will consider this to be equivalent to <em>0 is the primary display attached to the X server</em>.</p>
@@ -494,7 +494,7 @@ Computers with Windows operating systems do not automatically have a Unix Shell 
 <p>With these commands (and an active X server on the host system), any graphical output inside the container will be shown on your own desktop.</p>
 </section>
 <section id="mount-a-volume">
-<h2>Mount a volume<a class="headerlink" href="#mount-a-volume" title="Permalink to this heading">#</a></h2>
+<h2>Mount a volume<a class="headerlink" href="#mount-a-volume" title="Permalink to this headline">#</a></h2>
 <p>The docker image with which you can spawn a container contains all the software and general datafiles. However, we still need to give the container access to your dataset. To do so, we can mount a directory on your own system inside the container with the following command structure: <code class="docutils literal notranslate"><span class="pre">-v</span> <span class="pre">&lt;abs_path_host&gt;:&lt;abs_path_container&gt;</span></code>. Assuming your terminal is opened inside the data folder on your system, the specific commands for the different operating systems mount this folder as the <code class="docutils literal notranslate"><span class="pre">/data</span></code> folder inside the container, are:</p>
 <p>For Windows in GitBash: <code class="docutils literal notranslate"><span class="pre">-v</span> <span class="pre">/$(pwd):/data</span></code><br />
 For Windows in cmd: <code class="docutils literal notranslate"><span class="pre">-v</span> <span class="pre">%cd%:/data</span></code><br />
@@ -503,7 +503,7 @@ For Linux and macOS:  <code class="docutils literal notranslate"><span class="pr
 <p>For more info about mounting volumes, check this <a class="reference external" href="https://stackoverflow.com/questions/41485217/mount-current-directory-as-a-volume-in-docker-on-windows-10">StackOverflow question</a></p>
 </section>
 <section id="running-a-container-with-data-and-graphical-output">
-<h2>Running a container with data and graphical output<a class="headerlink" href="#running-a-container-with-data-and-graphical-output" title="Permalink to this heading">#</a></h2>
+<h2>Running a container with data and graphical output<a class="headerlink" href="#running-a-container-with-data-and-graphical-output" title="Permalink to this headline">#</a></h2>
 <p>To start a container from an image, we use the command <code class="docutils literal notranslate"><span class="pre">docker</span> <span class="pre">run</span> <span class="pre">&lt;image_name&gt;</span></code>. We also pass the additional flags <code class="docutils literal notranslate"><span class="pre">--rm</span></code> to delete the container after closing and <code class="docutils literal notranslate"><span class="pre">-it</span></code> to be able to interact with the container. Combining all arguments then leads to the following commands to run (and automatically close) the container:</p>
 <div class="tab-set docutils">
 <input checked="True" class="tab-input" id="tab-set--1-input--1" name="tab-set--1" type="radio"><label class="tab-label" for="tab-set--1-input--1">Windows</label><div class="tab-content docutils">
@@ -524,7 +524,7 @@ For Linux and macOS:  <code class="docutils literal notranslate"><span class="pr
 </div>
 </section>
 <section id="issues-troubleshooting">
-<h2>Issues/Troubleshooting<a class="headerlink" href="#issues-troubleshooting" title="Permalink to this heading">#</a></h2>
+<h2>Issues/Troubleshooting<a class="headerlink" href="#issues-troubleshooting" title="Permalink to this headline">#</a></h2>
 <ul>
 <li><p>For Linux users encountering the error <em>Unable to init server</em>, please run <code class="docutils literal notranslate"><span class="pre">xhost</span> <span class="pre">+</span></code> in the terminal and rerun the <code class="docutils literal notranslate"><span class="pre">docker</span> <span class="pre">run</span></code> command. For more info, see <a class="reference external" href="https://www.thegeekstuff.com/2010/06/xhost-cannot-open-display/">here</a>.</p></li>
 <li><p><strong>WSL 2 installation incomplete for Windows users</strong></p>
@@ -566,7 +566,7 @@ libGL<span class="w"> </span>error:<span class="w"> </span>failed<span class="w"
 </ul>
 </section>
 <section id="references">
-<h2>References<a class="headerlink" href="#references" title="Permalink to this heading">#</a></h2>
+<h2>References<a class="headerlink" href="#references" title="Permalink to this headline">#</a></h2>
 <ul class="simple">
 <li><p><a class="reference external" href="https://medium.com/better-programming/running-desktop-apps-in-docker-43a70a5265c4">https://medium.com/better-programming/running-desktop-apps-in-docker-43a70a5265c4</a></p></li>
 <li><p><a class="reference external" href="https://coderefinery.github.io/installation/shell-and-git/#shell-and-git">https://coderefinery.github.io/installation/shell-and-git/#shell-and-git</a></p></li>

@@ -3,11 +3,11 @@
 <!DOCTYPE html>
 
 
-<html lang="en" >
+<html >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
     <title>Testing with MATLAB &#8212; DCC Guides</title>
   
@@ -37,8 +37,9 @@
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
     <link rel="stylesheet" type="text/css" href="../_static/tabs.css" />
     <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/sphinx-dropdown.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/panels-bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-bootstrap.5fd3999ee7762ccc51105388f4a9d115.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
@@ -47,7 +48,6 @@
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
-    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
@@ -71,7 +71,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="next" title="Version control with Git" href="git/intro.html" />
     <link rel="prev" title="Software testing" href="testing_intro.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:language" content="None"/>
   </head>
   
   
@@ -426,10 +426,10 @@ document.write(`
                 <article class="bd-article" role="main">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="testing-with-matlab">
-<h1>Testing with MATLAB<a class="headerlink" href="#testing-with-matlab" title="Permalink to this heading">#</a></h1>
+<h1>Testing with MATLAB<a class="headerlink" href="#testing-with-matlab" title="Permalink to this headline">#</a></h1>
 <p>In this guide, we will discuss writing and running tests with Matlab. See the <a class="reference external" href="https://nl.mathworks.com/help/matlab/matlab-unit-test-framework.html">documentation from Matlab</a> for more information.</p>
 <section id="writing-tests">
-<h2>Writing tests<a class="headerlink" href="#writing-tests" title="Permalink to this heading">#</a></h2>
+<h2>Writing tests<a class="headerlink" href="#writing-tests" title="Permalink to this headline">#</a></h2>
 <p>Tests should be kept separate from the code base, usually in a folder <code class="docutils literal notranslate"><span class="pre">tests/</span></code>. The naming convention for writing a test for a particular MATLAB script is to prefix “test_” to the name of the script that is being tested. For example, a test for the file <code class="docutils literal notranslate"><span class="pre">draw_random_number.m</span></code> should be called <code class="docutils literal notranslate"><span class="pre">test_draw_random_number.m</span></code>. In general, Matlab will recognize any scripts that are prefixed or suffixed with the string “test” as tests.</p>
 <p>You can find an example below with the matlab syntax for writing <a class="reference external" href="https://nl.mathworks.com/help/matlab/class-based-unit-tests.html">Class-based unit tests</a>:</p>
 <div class="toggle docutils container">
@@ -506,7 +506,7 @@ document.write(`
 </div>
 </section>
 <section id="executing-tests">
-<h2>Executing tests<a class="headerlink" href="#executing-tests" title="Permalink to this heading">#</a></h2>
+<h2>Executing tests<a class="headerlink" href="#executing-tests" title="Permalink to this headline">#</a></h2>
 <p>We will create a Matlab script called <code class="docutils literal notranslate"><span class="pre">run_testsuite.m</span></code> in the folder <code class="docutils literal notranslate"><span class="pre">tests/</span></code>. This function can run the tests present in the folder <code class="docutils literal notranslate"><span class="pre">tests/</span></code> and can create test reports.</p>
 <div class="toggle docutils container">
 <div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="k">function</span><span class="w"> </span>result<span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nf">run_testsuite</span><span class="p">(</span>varargin<span class="p">)</span>

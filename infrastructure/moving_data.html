@@ -3,11 +3,11 @@
 <!DOCTYPE html>
 
 
-<html lang="en" >
+<html >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
     <title>Moving data to your server &#8212; DCC Guides</title>
   
@@ -37,8 +37,9 @@
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
     <link rel="stylesheet" type="text/css" href="../_static/tabs.css" />
     <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/sphinx-dropdown.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/panels-bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-bootstrap.5fd3999ee7762ccc51105388f4a9d115.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
@@ -47,7 +48,6 @@
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
-    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
@@ -71,7 +71,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="next" title="Configure SSL certificates" href="VPS_SSL_Certs.html" />
     <link rel="prev" title="Configure SSH Tunneling" href="VPS_SSH.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:language" content="None"/>
   </head>
   
   
@@ -428,21 +428,21 @@ document.write(`
                 <article class="bd-article" role="main">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="moving-data-to-your-server">
-<h1>Moving data to your server<a class="headerlink" href="#moving-data-to-your-server" title="Permalink to this heading">#</a></h1>
+<h1>Moving data to your server<a class="headerlink" href="#moving-data-to-your-server" title="Permalink to this headline">#</a></h1>
 <section id="copy-data-from-client-to-host-using-proxycommand">
-<h2>Copy Data from Client to Host using ProxyCommand<a class="headerlink" href="#copy-data-from-client-to-host-using-proxycommand" title="Permalink to this heading">#</a></h2>
+<h2>Copy Data from Client to Host using ProxyCommand<a class="headerlink" href="#copy-data-from-client-to-host-using-proxycommand" title="Permalink to this headline">#</a></h2>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>scp<span class="w"> </span>-o<span class="w"> </span><span class="s2">&quot;ProxyCommand ssh -W %h:%p &lt;bastion-username&gt;@linux-bastion-ex.tudelft.nl&quot;</span><span class="w"> </span>&lt;my-local-file&gt;<span class="w">  </span>&lt;target-username&gt;@&lt;target-host&gt;:/&lt;remote-directory&gt;/
 </pre></div>
 </div>
 </section>
 <section id="copy-data-from-host-to-client-using-proxycommand">
-<h2>Copy Data from Host to Client using ProxyCommand<a class="headerlink" href="#copy-data-from-host-to-client-using-proxycommand" title="Permalink to this heading">#</a></h2>
+<h2>Copy Data from Host to Client using ProxyCommand<a class="headerlink" href="#copy-data-from-host-to-client-using-proxycommand" title="Permalink to this headline">#</a></h2>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>scp<span class="w"> </span>-o<span class="w"> </span><span class="s2">&quot;ProxyCommand ssh -W %h:%p &lt;bastion-username&gt;@linux-bastion-ex.tudelft.nl&quot;</span><span class="w"> </span>&lt;target-username&gt;@&lt;target-host&gt;:/tmp/&lt;my-remote-file&gt;<span class="w"> </span>/&lt;my-local-directory&gt;/
 </pre></div>
 </div>
 </section>
 <section id="copy-data-using-ssh-tunneling">
-<h2>Copy Data using SSH Tunneling<a class="headerlink" href="#copy-data-using-ssh-tunneling" title="Permalink to this heading">#</a></h2>
+<h2>Copy Data using SSH Tunneling<a class="headerlink" href="#copy-data-using-ssh-tunneling" title="Permalink to this headline">#</a></h2>
 <p>If a default <span class="xref myst">ssh tunneling</span> was configured correctly. Data can be copied to and from a remote host as follows:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Copy TO Remote Host</span>
 $<span class="w"> </span>scp<span class="w"> </span>&lt;my-local-file&gt;<span class="w"> </span>&lt;host-nickname&gt;:/&lt;remote-directory&gt;/
@@ -454,7 +454,7 @@ $<span class="w"> </span>scp<span class="w"> </span>&lt;host-nickname&gt;:/&lt;m
 </div>
 </section>
 <section id="scp-with-sudo-files-from-a-remote-host-to-another-remote-host">
-<h2>scp with sudo files from a remote host to another remote host<a class="headerlink" href="#scp-with-sudo-files-from-a-remote-host-to-another-remote-host" title="Permalink to this heading">#</a></h2>
+<h2>scp with sudo files from a remote host to another remote host<a class="headerlink" href="#scp-with-sudo-files-from-a-remote-host-to-another-remote-host" title="Permalink to this headline">#</a></h2>
 <p>“-C /tmp/a” can be used when you wanted to “cd /tmp/a”</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ssh</span> <span class="n">source</span><span class="o">.</span><span class="n">tudelft</span><span class="o">.</span><span class="n">nl</span> <span class="n">sudo</span> <span class="n">tar</span> <span class="n">cf</span> <span class="o">-</span> <span class="o">-</span><span class="n">C</span> <span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">a</span> <span class="o">.</span> <span class="o">|</span> <span class="n">ssh</span> <span class="n">target</span><span class="o">.</span><span class="n">tudelft</span><span class="o">.</span><span class="n">nl</span>  <span class="n">sudo</span> <span class="n">tar</span> <span class="n">xvf</span> <span class="o">-</span> <span class="o">-</span><span class="n">C</span> <span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">b</span><span class="o">/</span>
 </pre></div>

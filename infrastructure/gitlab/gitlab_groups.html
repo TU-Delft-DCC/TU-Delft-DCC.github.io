@@ -3,11 +3,11 @@
 <!DOCTYPE html>
 
 
-<html lang="en" >
+<html >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
     <title>Creating GitLab groups &#8212; DCC Guides</title>
   
@@ -37,8 +37,9 @@
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/tabs.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-dropdown.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/panels-bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-bootstrap.5fd3999ee7762ccc51105388f4a9d115.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
@@ -47,7 +48,6 @@
     <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
     <script src="../../_static/underscore.js"></script>
-    <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../../_static/doctools.js"></script>
     <script src="../../_static/clipboard.min.js"></script>
     <script src="../../_static/copybutton.js"></script>
@@ -71,7 +71,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="next" title="Transfer ownership of a GitLab repository" href="gitlab_transfer_ownership.html" />
     <link rel="prev" title="TU Delft GitLab" href="gitlab_intro.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:language" content="None"/>
   </head>
   
   
@@ -434,23 +434,23 @@ document.write(`
                 <article class="bd-article" role="main">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="creating-gitlab-groups">
-<h1>Creating GitLab groups<a class="headerlink" href="#creating-gitlab-groups" title="Permalink to this heading">#</a></h1>
+<h1>Creating GitLab groups<a class="headerlink" href="#creating-gitlab-groups" title="Permalink to this headline">#</a></h1>
 <section id="background">
-<h2>Background<a class="headerlink" href="#background" title="Permalink to this heading">#</a></h2>
+<h2>Background<a class="headerlink" href="#background" title="Permalink to this headline">#</a></h2>
 <p>Groups and subgroups are similar to directories in the operating systems. In windows or Mac, we create directories to organise files or other directories. For example, imagine a scenario where you want to keep your photos in an organised manner. To this end, you may organise your photos on multiple levels. In the first level, perhaps you broadly classify them and then in the next levels you narrow it down to more specific subjects. Similarly, in the Gitlab, a group is used as a binder to put together projects or even other groups. For example, if three themes are researched in a lab, each of those themes could be a group, and all the research in a certain theme fall into its corresponding group. Sometimes there are also sub-themes. For every sub-theme you can create a subgroup (within the group corresponding to the broader theme) and assign the research close to the sub-theme there.</p>
 </section>
 <section id="what-this-documentation-will-help-achieve">
-<h2>What this documentation will help achieve<a class="headerlink" href="#what-this-documentation-will-help-achieve" title="Permalink to this heading">#</a></h2>
+<h2>What this documentation will help achieve<a class="headerlink" href="#what-this-documentation-will-help-achieve" title="Permalink to this headline">#</a></h2>
 <p>This documentation helps researchers to set up a group and assign contributors to the projects within the Gitlab.</p>
 </section>
 <section id="prerequisites">
-<h2>Prerequisites<a class="headerlink" href="#prerequisites" title="Permalink to this heading">#</a></h2>
+<h2>Prerequisites<a class="headerlink" href="#prerequisites" title="Permalink to this headline">#</a></h2>
 <ul class="simple">
 <li><p>TU Delft netID</p></li>
 </ul>
 </section>
 <section id="steps">
-<h2>Steps<a class="headerlink" href="#steps" title="Permalink to this heading">#</a></h2>
+<h2>Steps<a class="headerlink" href="#steps" title="Permalink to this headline">#</a></h2>
 <ol class="arabic simple">
 <li><p>Log-in to the Gitlab with your netid and password.</p></li>
 <li><p>Enter to the <em>Groups</em> section.</p></li>
@@ -458,25 +458,25 @@ document.write(`
 <li><p>Assign contributors to the group.</p></li>
 </ol>
 <section id="step-1-log-in-to-the-gitlab-with-your-netid-and-password">
-<h3>Step 1. Log-in to the Gitlab with your netid and password<a class="headerlink" href="#step-1-log-in-to-the-gitlab-with-your-netid-and-password" title="Permalink to this heading">#</a></h3>
+<h3>Step 1. Log-in to the Gitlab with your netid and password<a class="headerlink" href="#step-1-log-in-to-the-gitlab-with-your-netid-and-password" title="Permalink to this headline">#</a></h3>
 <p>To create a group in Gitlab, first you need to log in to the <a class="reference external" href="https://gitlab.tudelft.nl/">TU Delft’s instance of Gitlab</a>.</p>
 <p><img alt="AA" src="https://user-images.githubusercontent.com/70349945/125589301-b69555cd-2e96-455c-b129-4ba155d44685.png" />
 Figure 1: The login page of TU Delft’s Gitlab.</p>
 </section>
 <section id="step-2-enter-to-the-groups-section">
-<h3>Step 2. Enter to the <em>Groups</em> section<a class="headerlink" href="#step-2-enter-to-the-groups-section" title="Permalink to this heading">#</a></h3>
+<h3>Step 2. Enter to the <em>Groups</em> section<a class="headerlink" href="#step-2-enter-to-the-groups-section" title="Permalink to this headline">#</a></h3>
 <p>After the log-in, from the top bar click on groups and then Your groups. I</p>
 <p><img alt="BB" src="https://user-images.githubusercontent.com/70349945/125589314-e173ad4c-f607-4ff5-8886-d2a80cd6eecb.png" />
 Figure 2: The Group section of the Gitlab.</p>
 </section>
 <section id="step-3-create-a-group">
-<h3>Step 3. Create a group<a class="headerlink" href="#step-3-create-a-group" title="Permalink to this heading">#</a></h3>
+<h3>Step 3. Create a group<a class="headerlink" href="#step-3-create-a-group" title="Permalink to this headline">#</a></h3>
 <p>In the new web page, click on the New group and then fill in the form by choosing a suitable group name and then selecting the visibility level. You can later on change both group name and visibility level.</p>
 <p><img alt="CC" src="https://user-images.githubusercontent.com/70349945/125589330-26e7788a-fdf8-4b99-a1d8-00e3e4f0344e.png" />
 Figure 3: Creation of a new Group in the Gitlab.</p>
 </section>
 <section id="step-4-assign-contributors-to-the-group">
-<h3>Step 4. Assign contributors to the group.<a class="headerlink" href="#step-4-assign-contributors-to-the-group" title="Permalink to this heading">#</a></h3>
+<h3>Step 4. Assign contributors to the group.<a class="headerlink" href="#step-4-assign-contributors-to-the-group" title="Permalink to this headline">#</a></h3>
 <p>After creating a group, it appears in the Groups tab. The group owner can add different people to the projects. This can be done by entering a project and then clicking on the Members on the left panel and filling in the form (Figure 4). A very important part of this form is permissions which are explained here in detail.</p>
 <p><img alt="DD" src="https://user-images.githubusercontent.com/70349945/125589349-c1e84563-4578-421c-8535-f16cd7732825.png" />
 Figure 4: Assigning members to a project.</p>

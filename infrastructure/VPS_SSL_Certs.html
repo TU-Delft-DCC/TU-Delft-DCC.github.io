@@ -3,11 +3,11 @@
 <!DOCTYPE html>
 
 
-<html lang="en" >
+<html >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
     <title>Configure SSL certificates &#8212; DCC Guides</title>
   
@@ -37,8 +37,9 @@
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
     <link rel="stylesheet" type="text/css" href="../_static/tabs.css" />
     <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/sphinx-dropdown.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/panels-bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-bootstrap.5fd3999ee7762ccc51105388f4a9d115.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
@@ -47,7 +48,6 @@
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
-    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
@@ -71,7 +71,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="next" title="Setting up an Apache web server" href="apache_webserver.html" />
     <link rel="prev" title="Moving data to your server" href="moving_data.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:language" content="None"/>
   </head>
   
   
@@ -435,19 +435,19 @@ document.write(`
                 <article class="bd-article" role="main">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="configure-ssl-certificates">
-<h1>Configure SSL certificates<a class="headerlink" href="#configure-ssl-certificates" title="Permalink to this heading">#</a></h1>
+<h1>Configure SSL certificates<a class="headerlink" href="#configure-ssl-certificates" title="Permalink to this headline">#</a></h1>
 <section id="background">
-<h2>Background<a class="headerlink" href="#background" title="Permalink to this heading">#</a></h2>
+<h2>Background<a class="headerlink" href="#background" title="Permalink to this headline">#</a></h2>
 <p>It is common practice to have web servers serving content over HTTPS, which is the secure version of HTTP. In order to do this and make the connection secure, you need an SSL certificate from a certificate signing authority.</p>
 <p>The role of the SSL certificate is to indicate the encryption of user data from a server exposed on the web. SSL is a key for encrypting information. When a website’s certificate is expired or invalid, or if it using a self-signed (unofficial) certificate, as a user you either get a warning saying, “go back to safety,” or can’t access the website over https - instead you see a message that says “Not Secure” in your web browser. This means that the certificate is not signed by an authority, so it’s not trusted.</p>
 <p>In theory, if your web server is universally accessible and doesn’t contain forms for users with personal or confidential information, there is no strict need for HTTPS connection. But, HTTPS is the modern standard and without it, visitors will have impression that the website is not safe. Therefore it is good practice to always have HTTPS on your web server.</p>
 </section>
 <section id="what-this-documentation-will-help-achieve">
-<h2>What this documentation will help achieve<a class="headerlink" href="#what-this-documentation-will-help-achieve" title="Permalink to this heading">#</a></h2>
+<h2>What this documentation will help achieve<a class="headerlink" href="#what-this-documentation-will-help-achieve" title="Permalink to this headline">#</a></h2>
 <p>SSL certificates for TU Delft researchers and staff may be requested by contacting the ICT service desk. TU Delft ICT will order SSL certificates on your behalf from a trusted certificate signing authority.</p>
 </section>
 <section id="prerequisites">
-<h2>Prerequisites<a class="headerlink" href="#prerequisites" title="Permalink to this heading">#</a></h2>
+<h2>Prerequisites<a class="headerlink" href="#prerequisites" title="Permalink to this headline">#</a></h2>
 <ul class="simple">
 <li><p>TU Delft netID</p></li>
 <li><p>Linux-based VPS provided by TU Delft ICT</p></li>
@@ -455,20 +455,20 @@ document.write(`
 </ul>
 </section>
 <section id="tools-software">
-<h2>Tools/Software<a class="headerlink" href="#tools-software" title="Permalink to this heading">#</a></h2>
+<h2>Tools/Software<a class="headerlink" href="#tools-software" title="Permalink to this headline">#</a></h2>
 <ul class="simple">
 <li><p>None</p></li>
 </ul>
 </section>
 <section id="steps">
-<h2>Steps<a class="headerlink" href="#steps" title="Permalink to this heading">#</a></h2>
+<h2>Steps<a class="headerlink" href="#steps" title="Permalink to this headline">#</a></h2>
 <ol class="arabic simple">
 <li><p>Generate .csr file</p></li>
 <li><p>Secure-copy .csr file from server to local machine</p></li>
 <li><p>Submit Certificate Server Request to TU Delft ICT via TopDesk form</p></li>
 </ol>
 <section id="step-1-generate-csr-file">
-<h3>Step 1. Generate .csr file<a class="headerlink" href="#step-1-generate-csr-file" title="Permalink to this heading">#</a></h3>
+<h3>Step 1. Generate .csr file<a class="headerlink" href="#step-1-generate-csr-file" title="Permalink to this headline">#</a></h3>
 <p>The Certificate Signing Request (.csr) file is a file generated by you in a standard format that contains all the information the signing authority needs to create a signed certificate. You will need to include this .csr file in submitting your SSL certificate request form to TU Delft ICT, and you should generate it on your VPS directly. The instructions for generating a .csr file come from <a class="reference external" href="https://hostadvice.com/how-to/configure-apache-with-tls-ssl-certificate-on-ubuntu-18/">here</a>.</p>
 <p>SSH to your VPS (____ link if you have followed the process to connect directly, you can use:
 <code class="docutils literal notranslate"><span class="pre">username&#64;localmachine</span> <span class="pre">~</span> <span class="pre">%</span> <span class="pre">ssh</span> <span class="pre">externalserveralias</span></code>)</p>
@@ -496,7 +496,7 @@ document.write(`
 <p>The .key file should be kept private on your server. The .csr file is your certificate signing request, and can be sent to a Certificate Authority.</p>
 </section>
 <section id="step-2-secure-copy-csr-file-from-server-to-local-machine">
-<h3>Step 2. Secure-copy .csr file from server to local machine<a class="headerlink" href="#step-2-secure-copy-csr-file-from-server-to-local-machine" title="Permalink to this heading">#</a></h3>
+<h3>Step 2. Secure-copy .csr file from server to local machine<a class="headerlink" href="#step-2-secure-copy-csr-file-from-server-to-local-machine" title="Permalink to this headline">#</a></h3>
 <p>In this step we use Secure Copy protocol (SCP) which is a means of securely transferring files between hosts on a network. This example will save the file in the Home directory, but you can also save it into any other project folder on your machine.</p>
 <p>Navigate to directory of choice. In this case, we’ll use home.</p>
 <p><code class="docutils literal notranslate"><span class="pre">username&#64;localmachine</span> <span class="pre">.ssh</span> <span class="pre">%</span> <span class="pre">cd</span> <span class="pre">~</span> </code></p>
@@ -525,7 +525,7 @@ document.write(`
 <p><code class="docutils literal notranslate"><span class="pre">ssh</span> <span class="pre">&lt;netid&gt;&#64;&lt;intermediary_server_address&gt;</span></code> (e.g., <code class="docutils literal notranslate"><span class="pre">ssh</span> <span class="pre">mynetid&#64;linux-bastion-ex.tudelft.nl</span></code>).</p>
 </section>
 <section id="step-3-submit-certificate-server-request-to-tu-delft-ict-via-topdesk-form">
-<h3>Step 3. Submit Certificate Server Request to TU Delft ICT via TopDesk form<a class="headerlink" href="#step-3-submit-certificate-server-request-to-tu-delft-ict-via-topdesk-form" title="Permalink to this heading">#</a></h3>
+<h3>Step 3. Submit Certificate Server Request to TU Delft ICT via TopDesk form<a class="headerlink" href="#step-3-submit-certificate-server-request-to-tu-delft-ict-via-topdesk-form" title="Permalink to this headline">#</a></h3>
 <p>TU Delft ICT will use the information stored in your .csr file to get the SSL certificate from the signing authority and send the SSL certificate to you. In order to make this request, you must attach your .csr file from the previous step.</p>
 <p>Navigate to TopDesk form for TU Delft. <a class="reference external" href="https://tudelft.topdesk.net/tas/public/ssp/content/serviceflow?unid=62aeef08314247f3aba7ff2297d011da">TOPdesk SSL certificate server request</a>.</p>
 <p>Choose “Attach file” and navigate to directory where .csr file is stored** (in this example, it is in “Home”). Select “external-server-FQDN.nl.csr”.</p>
@@ -534,7 +534,7 @@ document.write(`
 </section>
 </section>
 <section id="notes-and-next-steps">
-<h2>Notes and Next Steps<a class="headerlink" href="#notes-and-next-steps" title="Permalink to this heading">#</a></h2>
+<h2>Notes and Next Steps<a class="headerlink" href="#notes-and-next-steps" title="Permalink to this headline">#</a></h2>
 <p>SSL certificates can expire - TU Delft ICT will let you know when this is about to happen. To renew, you will need a new .csr file. You can send this to TU Delft ICT via the original TopDesk form and they will forward to the signing authority.</p>
 <p>To use your SSL certificate with your web server, you need to change some configuration settings based on the web server you are using (e.g., Apache, nginx). See ___Set up an Apache web server for more information.</p>
 </section>

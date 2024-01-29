@@ -3,11 +3,11 @@
 <!DOCTYPE html>
 
 
-<html lang="en" >
+<html >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
     <title>Software testing &#8212; DCC Guides</title>
   
@@ -37,8 +37,9 @@
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
     <link rel="stylesheet" type="text/css" href="../_static/tabs.css" />
     <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/sphinx-dropdown.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/panels-bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-bootstrap.5fd3999ee7762ccc51105388f4a9d115.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
@@ -47,7 +48,6 @@
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
-    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
@@ -71,7 +71,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="next" title="Testing with MATLAB" href="testing_matlab.html" />
     <link rel="prev" title="Software management plan" href="software_management_plan.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:language" content="None"/>
   </head>
   
   
@@ -430,7 +430,7 @@ document.write(`
                 <article class="bd-article" role="main">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="software-testing">
-<h1>Software testing<a class="headerlink" href="#software-testing" title="Permalink to this heading">#</a></h1>
+<h1>Software testing<a class="headerlink" href="#software-testing" title="Permalink to this headline">#</a></h1>
 <blockquote>
 <div><p><em>“Before relying on a new experimental device, an experimental scientist always establishes its accuracy. A new detector is calibrated when the scientist observes its responses to known input signals. The results of this calibration are compared against the expected response.”</em></p>
 <p>[From <a class="reference external" href="https://carpentries-incubator.github.io/python-testing/">Testing and Continuous Integration with Python</a>, created by K. Huff]</p>
@@ -438,9 +438,9 @@ document.write(`
 <p>Simulations and analyses using software should be held to the same standards as experimental measurement devices!</p>
 <p>For a solid introduction and motivation on writing tests, we recommend the <a class="reference external" href="https://coderefinery.github.io/testing/motivation/">lesson on testing</a> from the Code Refinery.</p>
 <section id="approach">
-<h2>Approach<a class="headerlink" href="#approach" title="Permalink to this heading">#</a></h2>
+<h2>Approach<a class="headerlink" href="#approach" title="Permalink to this headline">#</a></h2>
 <section id="what-to-test">
-<h3>What to test?<a class="headerlink" href="#what-to-test" title="Permalink to this heading">#</a></h3>
+<h3>What to test?<a class="headerlink" href="#what-to-test" title="Permalink to this headline">#</a></h3>
 <p>When writing tests, ask yourself the following questions:</p>
 <ul class="simple">
 <li><p>How would you manually check the correctness of the code?</p></li>
@@ -450,7 +450,7 @@ document.write(`
 </ul>
 </section>
 <section id="type-of-tests">
-<h3>Type of tests<a class="headerlink" href="#type-of-tests" title="Permalink to this heading">#</a></h3>
+<h3>Type of tests<a class="headerlink" href="#type-of-tests" title="Permalink to this headline">#</a></h3>
 <ul class="simple">
 <li><p><strong>Unit test</strong>: testing of individual units of source code (scripts, functions, classes).</p></li>
 <li><p><strong>Integration test</strong>: testing of a combination of individual units as a group.</p></li>
@@ -459,7 +459,7 @@ document.write(`
 </section>
 </section>
 <section id="table-of-contents">
-<h2>Table of contents<a class="headerlink" href="#table-of-contents" title="Permalink to this heading">#</a></h2>
+<h2>Table of contents<a class="headerlink" href="#table-of-contents" title="Permalink to this headline">#</a></h2>
 <div class="toctree-wrapper compound">
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="testing_matlab.html">Testing with MATLAB</a></li>
