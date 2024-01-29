@@ -1,7 +1,7 @@
 format: jb-book
 root: welcome
 parts:
-  - caption: Computing infrastructure
+  - caption: ⚙️ Computing infrastructure
     chapters:
       - file: infrastructure/getting_started
       - file: infrastructure/intro_servers
@@ -18,7 +18,7 @@ parts:
           - file: infrastructure/gitlab/gitlab_docker
           - file: infrastructure/gitlab/runner_matlab
 
-  - caption: Data management
+  - caption: 🗃️ Data management
     chapters:
       - file: data/getting_started
       - file: data/fair
@@ -30,7 +30,7 @@ parts:
           - file: data/project_drive_mounting
           - file: data/sync_unison
 
-  - caption: Research software
+  - caption: 💻 Research software
     chapters:
       - file: software/getting_started
       - file: software/fair
@@ -38,7 +38,7 @@ parts:
           - file: software/checklist
           - file: software/project_cards
           - file: software/software_management_plan
-          - url: https://hackmd.io/@fair4rs/ry9bbfMxh
+          - url: https://tu-delft-dcc.github.io/FAIR4RS/
             title: FAIR for Research Software Program Spring 2023
       - file: software/testing_intro
         sections:
@@ -50,14 +50,15 @@ parts:
         sections:
           - file: software/containers/docker_gui
 
-  - caption: Resources
+  - caption: 📖 Resources
     chapters:
       - file: resources/courses
       - file: resources/curriculum
       - file: resources/tools
 
-  - caption: Community
+  - caption: 🤝 Community
     chapters:
       - file: community/dcc
+      - file: community/dcc_projects
       - file: community/contribute
       - file: community/code_of_conduct

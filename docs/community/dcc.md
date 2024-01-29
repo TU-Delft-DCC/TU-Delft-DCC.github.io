@@ -4,4 +4,4 @@ The TU Delft Digital Competence Centre (DCC) is an on-campus initiative to help 
 
 For more information, please visit our website at dcc.tudelft.nl or email us at dcc@tudelft.nl.
 
-<iframe src="https://docs.google.com/presentation/d/e/2PACX-1vR5c9h7PzAaLgJ-JLmwRgGfEUXq4bCOz-9WHcRm31hiOPk2o3Q0URzQrH-FZoC7KY5cvOnCmTBfueYT/embed?start=false&loop=false&delayms=3000" frameborder="0" width="100%" height="569" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+<iframe id="DCC video" width="720" height="405" src="https://www.youtube.com/embed/9eoI98_jQpo" frameborder="0" allowfullscreen> </iframe>
