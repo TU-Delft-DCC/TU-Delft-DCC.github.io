@@ -52,8 +52,17 @@ The full new record in the fstab file should be formatted like this:
 If that throws a permissions error, try: 
 
 ```
-//tudelft.net/staff-umbrella/ODCOR/ /media/odcor cifs username=acryan,noauto,uid=549192,gid=5004,forcegid,rw,_netdev
+//tudelft.net/staff-umbrella/<Project_Drive_space>/ /media/<server_mount_point> cifs username=<your_netID>,noauto,uid=<your_uid>,gid=<your_gid>,forcegid,rw,_netdev
 ```
+
+Te values for `uid` and `gid` can be found, correspondingly, with the following commands:
+
+```
+id -u <your_netID>
+id -g <your_netID>
+```
+
+These commands are VPS-specific so make sure to execute them within the same VPS where the project drives are expected to be mounted.
 
 ### Step 6. Save the fstab file
 Use Control+C followed by `:wq` to save the file and close it to get back to your terminal.
