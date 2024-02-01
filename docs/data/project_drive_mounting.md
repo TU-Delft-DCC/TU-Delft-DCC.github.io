@@ -47,7 +47,27 @@ You may need their values for `uid` and `gid`, correspondingly, for step 6.
 Note: These commands are VPS-specific so make sure to execute them within the same VPS where the project drives are expected to be mounted.
 
 ### Step 5. Open the fstab file 
-The fstab file is where you can list the addresses of external file systems you want to mount. Find it in the /etc/ directory by typing `sudo vi fstab`. The fstab file must be in the /etc/ directory.
+The fstab file is where you can list the addresses of external file systems you want to mount. The fstab file must be in the /etc/ directory.
+
+Click on the arrow to display instructions for your favorite editor
+
+<details> 
+<summary>
+vi
+</summary>
+
+  Within the /etc/ directory type `sudo vi fstab`. 
+
+</details>
+
+<details> 
+<summary>
+nano
+</summary>
+
+  Within the /etc/ directory type `sudo nano fstab`. 
+
+</details>
 
 ### Step 6. Edit the fstab file to include project storage technical details
 
@@ -69,7 +89,26 @@ If that throws a permissions error, try:
 ```
 
 ### Step 7. Save the fstab file
-Use Control+C followed by `:wq` to save the file and close it to get back to your terminal.
+
+Click on the arrow to display instructions for the editor chosen in step 5.
+
+<details> 
+<summary>
+vi
+</summary>
+
+  Use `Control`+`C` followed by `:wq` to save the file and close it to get back to your terminal.
+
+</details>
+
+<details> 
+<summary>
+nano
+</summary>
+
+  As indicated by the nano interface, use `Control`+`O` to write the file. Then, confirm your choice of filename by hitting `enter`. Finally, exit the file with `Control`+`X`
+
+</details>
 
 ### Step 8. Mounting the project drive
 To mount the project drive use the `sudo mount /media/<server_mount_point>` command. You can also unmount it using `fusermount -u /media/<server_mount_point>`.
