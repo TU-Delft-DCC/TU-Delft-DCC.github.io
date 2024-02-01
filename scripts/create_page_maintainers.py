@@ -42,7 +42,7 @@ def get_filenames_in_toc(path: str) -> List:
     """
     toc_file = os.path.join(path, "_toc.yml")
     files = []
-    with open(toc_file, "r") as f:
+    with open(toc_file, "r", encoding="utf8") as f:
         for line in f:
             if "- file:" in line:
                 files.append(line.strip().split()[-1])
