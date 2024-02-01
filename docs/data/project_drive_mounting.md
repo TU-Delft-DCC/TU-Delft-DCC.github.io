@@ -1,130 +1,142 @@
 ---
 section: data
 title: Mount Project Drive
-author_1: Ashley Cryan
-author_2:
+author_1: Raúl Ortiz Merino
+author_2: Maurits Kok
 ---
 
 # Mount Project Drive on Server
-
-## Background
 
 ## What this documentation will help achieve
 Project drive storage from TU Delft ICT can be mounted and made accessible in your (TU Delft) Virtual Private Server.
 
 ## Prerequisites
-A (TU Delft) Virtual Private Server and space on the (TU Delft) Project Drive
+- A (TU Delft) [Virtual Private Server](../infrastructure/VPS_request.md)
+- (TU Delft) [Project Drive](./project_drive_request.md)
 
 ## Steps
+1. Locate the URL of your project storage
 1. Connect to your TU Delft VPS via SSH
-2. Think of a mount point and create a new directory for it (It is a convention to mount external drives into /media) 
-3. Locate the URL of your project storage
-4.  Open the fstab file 
-5. Edit the fstab file to include project storage technical details
-6. Save the fstab file
-7. Mounting the project drive
+1. Create a new directory as a mounting point
+1. Retrieve your Linux user and group details
+1. Edit the fstab file to include project storage technical details
+1. Mount the project drive
 
-### Step 1. Connect to your TU Delft VPS via SSH 
-Follow instructions in TU Delft ICT email from initial server setup or configure 1-step connection via SSH.
+### Step 1. Locate the URL of your project storage
+The URL for your project drive can be obtained from either 
+- the email from TU Delft ICT with the confirmation of your project drive request, or 
+- by navigating to https://webdata.tudelft.nl/, and then through **WebDav Web Links > Staff-Umbrella > "Enter your netID and password"** to retrieve a list of your project drives. 
 
-### Step 2. Create a new directory as the mounting point preferably in /media 
-This is where you will mount the project drive. Use `cd /media` to enter the media directory, and `mkdir <yourprojectname>` to create a new directory where the TU Delft project drive will be mounted.
+Copy everything after "https://webdata.tudelft.nl/" (this will be staff-umbrella/`<your_project_name>`)
 
-### Step 3. Locate the URL of your project storage
-This can be found either in the email from TU Delft ICT confirming project drive storage setup, or by going to https://webdata.tudelft.nl/, and then WebDav Web Links > Staff-Umbrella > Enter your netID and password > "Your Project Name". Copy everything after "https://webdata.tudelft.nl/" (this will be staff-umbrella/yourprojectname)
+### Step 2. Connect to your TU Delft VPS via SSH 
+Follow instructions in TU Delft ICT email from initial server setup or [configure a 1-step connection via SSH](../infrastructure/VPS_SSH.md).
 
-### Step 4. Find and save your user and group details as preparation
+### Step 3. Create a new directory as the mounting point
+The convention is to create mounting points in the folder `/media`. Navigate to the folder and create a new folder with
 
-Type the following commands:
-
+```bash
+cd /media
+mkdir <server_mount_point>
 ```
-id -u <your_netID>
-id -g <your_netID>
-```
+Replace `<server_mount_point>` with the name of your choice. This will be the name of the folder where your project drive will be mounted.
 
-You may need their values for `uid` and `gid`, correspondingly, for step 6.
+### Step 4. Find and save your user and group details
 
-Note: These commands are VPS-specific so make sure to execute them within the same VPS where the project drives are expected to be mounted.
+In the terminal, you can retrieve your local user and group details with:
 
-### Step 5. Open the fstab file 
-The fstab file is where you can list the addresses of external file systems you want to mount. The fstab file must be in the /etc/ directory.
-
-Click on the arrow to display instructions for your favorite editor
-
-<details> 
-<summary>
-vi
-</summary>
-
-  Within the /etc/ directory type `sudo vi fstab`. 
-
-</details>
-
-<details> 
-<summary>
-nano
-</summary>
-
-  Within the /etc/ directory type `sudo nano fstab`. 
-
-</details>
-
-### Step 6. Edit the fstab file to include project storage technical details
-
-Basically you need to add one line to this file. This line consists of four parts: (i) filesystem, (ii) mount point, (iii) type, and (iv) options. The filesystem refers to the project drive address which is specified in the ICT email. The mount point is where you want to mount the project drive in the VPS. The third part determines the type of the filesystem and in the last part you specify some options such as privileges. 
-
-To add the filesystem, open the /etc/fstab file with the sudo privilage and switch to the insert mode (hit "i" to switch to insert mode and be able to type), and write `//tudelft.net/` and paste the latter half of the URL you copied from the WebDav links. The full URL should be in this format: `//tudelft.net/staff-umbrella/yourprojectname`. 
-
-For the mount point, add a space followed by the location in your VPS where you want to mount the Project Drive storage (where you created the folder previously, e.g., `/media/<server_mount_point>` ).
-
-The full new record in the fstab file should be formatted like this: 
-
-```
-<your_netID>@sftp.tudelft.nl:/staff-umbrella/<Project_Drive_space>  /media/<server_mount_point> fuse.sshfs  rw,noauto,users,_netdev  0  0
-```
-If that throws a permissions error, try: 
-
-```
-//tudelft.net/staff-umbrella/<Project_Drive_space>/ /media/<server_mount_point> cifs username=<your_netID>,noauto,uid=<your_uid>,gid=<your_gid>,forcegid,rw,_netdev
+```bash
+id -u <your_netID> # User ID
+id -g <your_netID> # Group ID
 ```
 
-### Step 7. Save the fstab file
+You may need the values for `uid` and `gid` for step 5.
 
-Click on the arrow to display instructions for the editor chosen in step 5.
+```{note}
+These commands are server-specific, so make sure to execute them on the server where the project drives will be mounted.
+```
 
-<details> 
-<summary>
-vi
-</summary>
+### Step 5. Edit the fstab file to include project storage technical details
+The fstab file containes a list of the addresses of external file systems. In this file, the details of your project drive will need to be added in a single line. This line consists of four parts: 
+1. *filesystem* - the address of the project drive
+2. *mount point* - the location in the VPS where you want to mount the project drive
+3. *type* - the type of the filesystem
+4. *options* - additional option such as user privileges
 
-  Use `Control`+`C` followed by `:wq` to save the file and close it to get back to your terminal.
 
-</details>
+The fstab file must be in the `/etc/` directory and can be opened with the `vi` or `nano` editor:
 
-<details> 
-<summary>
-nano
-</summary>
+````{tab-set}
+```{tab-item} vi
+In the terminal, enter the following command to open the fstab file in the vi editor:  
+`sudo vi /etc/fstab`  
+Then, switch to the insert mode (hit "i" to switch to insert mode and be able to type)
+```
 
-  As indicated by the nano interface, use `Control`+`O` to write the file. Then, confirm your choice of filename by hitting `enter`. Finally, exit the file with `Control`+`X`
+```{tab-item} nano
+In the terminal, enter the following command to open the fstab file in the nano editor:  
+`sudo nano /etc/fstab`
+```
+````
 
-</details>
+Add the following line to the file:
 
-### Step 8. Mounting the project drive
-To mount the project drive use the `sudo mount /media/<server_mount_point>` command. You can also unmount it using `fusermount -u /media/<server_mount_point>`.
+```
+<your_netID>@sftp.tudelft.nl:/staff-umbrella/<project_drive_name>  /media/<server_mount_point> fuse.sshfs  rw,noauto,users,_netdev  0  0
+```
+
+replacing the values between `<` and `>` with your NetID, the name of your project drive, and the name of the folder you created in step 3.
+
+````{note}
+
+If this configuration throws a permission error during mounting, try: 
+
+```
+//tudelft.net/staff-umbrella/<project_drive_name>/ /media/<server_mount_point> cifs username=<your_netID>,noauto,uid=<your_uid>,gid=<your_gid>,forcegid,rw,_netdev
+
+```
+Use the values for `uid` and `gid` from step 4.
+````
+
+Close the file editor and save the changes:
+````{tab-set}
+```{tab-item} vi
+Use `Control`+`C` followed by `:wq` to save the file and close it to get back to your terminal.
+```
+
+```{tab-item} nano
+As indicated by the nano interface, use `Control`+`O` to write the file. Then, confirm your choice of filename by hitting `enter`. Finally, exit the file with `Control`+`X`
+```
+````
+
+### Step 6. Mount the project drive
+To mount the project drive execute the command
+
+```bash
+sudo mount /media/<server_mount_point>
+```
+
+You can also unmount the drive with
+```bash
+fusermount -u /media/<server_mount_point>
+```
+
+The project drive will not mount automatically, so you will need to remount it manually each time you restart the server.
+
+`````{note}
+If the step above does not work, it probably means that the packages for mounting cifs-type filesystems haven't been installed. Depending on your linux flavour you will need to install them using:
+
+  ````{tab-set}
+  ```{tab-item} Ubuntu/Debian
+  `sudo apt install cifs-utils`
+  ```
+
+  ```{tab-item} Redhat/Centos/Fedora
+  `sudo yum install cifs-utils`
+  ```
+  ````
+
+`````
 
 ## Notes and next steps
-The project drive will not mount automatically, so you will need to mount it manually each time you start the server. To do so, from the home (`/`) directory in your server run `mount /media/<server_mount_point>`. You should now be able to `cd /media/<server_mount_point>` and view your files stored on the project drive using `ls`.
-
-Note, if the step above does not work, it probably means that the packages for mounting cifs-type filesystems haven't been installed. Depending on your linux flavour you will need to install them first using:
-
-`sudo apt install cifs-utils`
-
-on ubuntu/debian like linuxes, or
-
-`sudo yum install cifs-utils`
-
-on redhat/centos/fedora flavours.
-
-The steps above can also be used to mount any storage offered by TU Delft with a WebDav link (staff-homes, staff-groups, staff-bulk, student-homes, student-groups and apps). Simply use the latter half of the URL from the WebDav web link of your storage drive (step 5), which will change from staff-umbrella (project drive) to something else depending on the storage drive you would like to mount.
-
+The steps above can also be used to mount any storage offered by TU Delft with a WebDav link (staff-homes, staff-groups, staff-bulk, student-homes, student-groups and apps). Simply use the latter half of the URL from the WebDav web link of your storage drive, which will change from staff-umbrella (project drive) to something else depending on the storage drive you would like to mount.
