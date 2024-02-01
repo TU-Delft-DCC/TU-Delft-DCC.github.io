@@ -33,10 +33,23 @@ This is where you will mount the project drive. Use `cd /media` to enter the med
 ### Step 3. Locate the URL of your project storage
 This can be found either in the email from TU Delft ICT confirming project drive storage setup, or by going to https://webdata.tudelft.nl/, and then WebDav Web Links > Staff-Umbrella > Enter your netID and password > "Your Project Name". Copy everything after "https://webdata.tudelft.nl/" (this will be staff-umbrella/yourprojectname)
 
-### Step 4. Open the fstab file 
+### Step 4. Find and save your user and group details as preparation
+
+Type the following commands:
+
+```
+id -u <your_netID>
+id -g <your_netID>
+```
+
+You may need their values for `uid` and `gid`, correspondingly, for step 6.
+
+Note: These commands are VPS-specific so make sure to execute them within the same VPS where the project drives are expected to be mounted.
+
+### Step 5. Open the fstab file 
 The fstab file is where you can list the addresses of external file systems you want to mount. Find it in the /etc/ directory by typing `sudo vi fstab`. The fstab file must be in the /etc/ directory.
 
-### Step 5. Edit the fstab file to include project storage technical details
+### Step 6. Edit the fstab file to include project storage technical details
 
 Basically you need to add one line to this file. This line consists of four parts: (i) filesystem, (ii) mount point, (iii) type, and (iv) options. The filesystem refers to the project drive address which is specified in the ICT email. The mount point is where you want to mount the project drive in the VPS. The third part determines the type of the filesystem and in the last part you specify some options such as privileges. 
 
@@ -55,19 +68,10 @@ If that throws a permissions error, try:
 //tudelft.net/staff-umbrella/<Project_Drive_space>/ /media/<server_mount_point> cifs username=<your_netID>,noauto,uid=<your_uid>,gid=<your_gid>,forcegid,rw,_netdev
 ```
 
-Te values for `uid` and `gid` can be found, correspondingly, with the following commands:
-
-```
-id -u <your_netID>
-id -g <your_netID>
-```
-
-These commands are VPS-specific so make sure to execute them within the same VPS where the project drives are expected to be mounted.
-
-### Step 6. Save the fstab file
+### Step 7. Save the fstab file
 Use Control+C followed by `:wq` to save the file and close it to get back to your terminal.
 
-### Step 7. Mounting the project drive
+### Step 8. Mounting the project drive
 To mount the project drive use the `sudo mount /media/<server_mount_point>` command. You can also unmount it using `fusermount -u /media/<server_mount_point>`.
 
 ## Notes and next steps
