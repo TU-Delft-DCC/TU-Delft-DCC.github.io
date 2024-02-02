@@ -412,17 +412,15 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#background">Background</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-this-documentation-will-help-achieve">What this documentation will help achieve</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#prerequisites">Prerequisites</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#steps">Steps</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-1-connect-to-your-tu-delft-vps-via-ssh">Step 1. Connect to your TU Delft VPS via SSH</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-2-create-a-new-directory-as-the-mounting-point-preferably-in-media">Step 2. Create a new directory as the mounting point preferably in /media</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-3-locate-the-url-of-your-project-storage">Step 3. Locate the URL of your project storage</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-4-open-the-fstab-file">Step 4. Open the fstab file</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-1-locate-the-url-of-your-project-storage">Step 1. Locate the URL of your project storage</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-2-connect-to-your-tu-delft-vps-via-ssh">Step 2. Connect to your TU Delft VPS via SSH</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-3-create-a-new-directory-as-the-mounting-point">Step 3. Create a new directory as the mounting point</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-4-find-and-save-your-user-and-group-details">Step 4. Find and save your user and group details</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-5-edit-the-fstab-file-to-include-project-storage-technical-details">Step 5. Edit the fstab file to include project storage technical details</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-6-save-the-fstab-file">Step 6. Save the fstab file</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-7-mounting-the-project-drive">Step 7. Mounting the project drive</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-6-mount-the-project-drive">Step 6. Mount the project drive</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#notes-and-next-steps">Notes and next steps</a></li>
@@ -439,76 +437,147 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="mount-project-drive-on-server">
 <h1>Mount Project Drive on Server<a class="headerlink" href="#mount-project-drive-on-server" title="Permalink to this headline">#</a></h1>
-<section id="background">
-<h2>Background<a class="headerlink" href="#background" title="Permalink to this headline">#</a></h2>
-</section>
 <section id="what-this-documentation-will-help-achieve">
 <h2>What this documentation will help achieve<a class="headerlink" href="#what-this-documentation-will-help-achieve" title="Permalink to this headline">#</a></h2>
 <p>Project drive storage from TU Delft ICT can be mounted and made accessible in your (TU Delft) Virtual Private Server.</p>
 </section>
 <section id="prerequisites">
 <h2>Prerequisites<a class="headerlink" href="#prerequisites" title="Permalink to this headline">#</a></h2>
-<p>A (TU Delft) Virtual Private Server and space on the (TU Delft) Project Drive</p>
+<ul class="simple">
+<li><p>A (TU Delft) <a class="reference internal" href="../infrastructure/VPS_request.html"><span class="doc std std-doc">Virtual Private Server</span></a></p></li>
+<li><p>(TU Delft) <a class="reference internal" href="project_drive_request.html"><span class="doc std std-doc">Project Drive</span></a></p></li>
+</ul>
 </section>
 <section id="steps">
 <h2>Steps<a class="headerlink" href="#steps" title="Permalink to this headline">#</a></h2>
 <ol class="arabic simple">
-<li><p>Connect to your TU Delft VPS via SSH</p></li>
-<li><p>Think of a mount point and create a new directory for it (It is a convention to mount external drives into /media)</p></li>
 <li><p>Locate the URL of your project storage</p></li>
-<li><p>Open the fstab file</p></li>
+<li><p>Connect to your TU Delft VPS via SSH</p></li>
+<li><p>Create a new directory as a mounting point</p></li>
+<li><p>Retrieve your Linux user and group details</p></li>
 <li><p>Edit the fstab file to include project storage technical details</p></li>
-<li><p>Save the fstab file</p></li>
-<li><p>Mounting the project drive</p></li>
+<li><p>Mount the project drive</p></li>
 </ol>
-<section id="step-1-connect-to-your-tu-delft-vps-via-ssh">
-<h3>Step 1. Connect to your TU Delft VPS via SSH<a class="headerlink" href="#step-1-connect-to-your-tu-delft-vps-via-ssh" title="Permalink to this headline">#</a></h3>
-<p>Follow instructions in TU Delft ICT email from initial server setup or configure 1-step connection via SSH.</p>
+<section id="step-1-locate-the-url-of-your-project-storage">
+<h3>Step 1. Locate the URL of your project storage<a class="headerlink" href="#step-1-locate-the-url-of-your-project-storage" title="Permalink to this headline">#</a></h3>
+<p>The URL for your project drive can be obtained from either</p>
+<ul class="simple">
+<li><p>the email from TU Delft ICT with the confirmation of your project drive request, or</p></li>
+<li><p>by navigating to <a class="reference external" href="https://webdata.tudelft.nl/">https://webdata.tudelft.nl/</a>, and then through <strong>WebDav Web Links &gt; Staff-Umbrella &gt; “Enter your netID and password”</strong> to retrieve a list of your project drives.</p></li>
+</ul>
+<p>Copy everything after “<a class="reference external" href="https://webdata.tudelft.nl/">https://webdata.tudelft.nl/</a>” (this will be staff-umbrella/<code class="docutils literal notranslate"><span class="pre">&lt;your_project_name&gt;</span></code>)</p>
 </section>
-<section id="step-2-create-a-new-directory-as-the-mounting-point-preferably-in-media">
-<h3>Step 2. Create a new directory as the mounting point preferably in /media<a class="headerlink" href="#step-2-create-a-new-directory-as-the-mounting-point-preferably-in-media" title="Permalink to this headline">#</a></h3>
-<p>This is where you will mount the project drive. Use <code class="docutils literal notranslate"><span class="pre">cd</span> <span class="pre">/media</span></code> to enter the media directory, and <code class="docutils literal notranslate"><span class="pre">mkdir</span> <span class="pre">&lt;yourprojectname&gt;</span></code> to create a new directory where the TU Delft project drive will be mounted.</p>
+<section id="step-2-connect-to-your-tu-delft-vps-via-ssh">
+<h3>Step 2. Connect to your TU Delft VPS via SSH<a class="headerlink" href="#step-2-connect-to-your-tu-delft-vps-via-ssh" title="Permalink to this headline">#</a></h3>
+<p>Follow instructions in TU Delft ICT email from initial server setup or <a class="reference internal" href="../infrastructure/VPS_SSH.html"><span class="doc std std-doc">configure a 1-step connection via SSH</span></a>.</p>
 </section>
-<section id="step-3-locate-the-url-of-your-project-storage">
-<h3>Step 3. Locate the URL of your project storage<a class="headerlink" href="#step-3-locate-the-url-of-your-project-storage" title="Permalink to this headline">#</a></h3>
-<p>This can be found either in the email from TU Delft ICT confirming project drive storage setup, or by going to <a class="reference external" href="https://webdata.tudelft.nl/">https://webdata.tudelft.nl/</a>, and then WebDav Web Links &gt; Staff-Umbrella &gt; Enter your netID and password &gt; “Your Project Name”. Copy everything after “<a class="reference external" href="https://webdata.tudelft.nl/">https://webdata.tudelft.nl/</a>” (this will be staff-umbrella/yourprojectname)</p>
+<section id="step-3-create-a-new-directory-as-the-mounting-point">
+<h3>Step 3. Create a new directory as the mounting point<a class="headerlink" href="#step-3-create-a-new-directory-as-the-mounting-point" title="Permalink to this headline">#</a></h3>
+<p>The convention is to create mounting points in the folder <code class="docutils literal notranslate"><span class="pre">/media</span></code>. Navigate to the folder and create a new folder with</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span><span class="w"> </span>/media
+mkdir<span class="w"> </span>&lt;server_mount_point&gt;
+</pre></div>
+</div>
+<p>Replace <code class="docutils literal notranslate"><span class="pre">&lt;server_mount_point&gt;</span></code> with the name of your choice. This will be the name of the folder where your project drive will be mounted.</p>
 </section>
-<section id="step-4-open-the-fstab-file">
-<h3>Step 4. Open the fstab file<a class="headerlink" href="#step-4-open-the-fstab-file" title="Permalink to this headline">#</a></h3>
-<p>The fstab file is where you can list the addresses of external file systems you want to mount. Find it in the /etc/ directory by typing <code class="docutils literal notranslate"><span class="pre">sudo</span> <span class="pre">vi</span> <span class="pre">fstab</span></code>. The fstab file must be in the /etc/ directory.</p>
+<section id="step-4-find-and-save-your-user-and-group-details">
+<h3>Step 4. Find and save your user and group details<a class="headerlink" href="#step-4-find-and-save-your-user-and-group-details" title="Permalink to this headline">#</a></h3>
+<p>In the terminal, you can retrieve your local user and group details with:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>id<span class="w"> </span>-u<span class="w"> </span>&lt;your_netID&gt;<span class="w"> </span><span class="c1"># User ID</span>
+id<span class="w"> </span>-g<span class="w"> </span>&lt;your_netID&gt;<span class="w"> </span><span class="c1"># Group ID</span>
+</pre></div>
+</div>
+<p>You may need the values for <code class="docutils literal notranslate"><span class="pre">uid</span></code> and <code class="docutils literal notranslate"><span class="pre">gid</span></code> for step 5.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>These commands are server-specific, so make sure to execute them on the server where the project drives will be mounted.</p>
+</div>
 </section>
 <section id="step-5-edit-the-fstab-file-to-include-project-storage-technical-details">
 <h3>Step 5. Edit the fstab file to include project storage technical details<a class="headerlink" href="#step-5-edit-the-fstab-file-to-include-project-storage-technical-details" title="Permalink to this headline">#</a></h3>
-<p>Basically you need to add one line to this file. This line consists of four parts: (i) filesystem, (ii) mount point, (iii) type, and (iv) options. The filesystem refers to the project drive address which is specified in the ICT email. The mount point is where you want to mount the project drive in the VPS. The third part determines the type of the filesystem and in the last part you specify some options such as privileges.</p>
-<p>To add the filesystem, open the /etc/fstab file with the sudo privilage and switch to the insert mode (hit “i” to switch to insert mode and be able to type), and write <code class="docutils literal notranslate"><span class="pre">//tudelft.net/</span></code> and paste the latter half of the URL you copied from the WebDav links. The full URL should be in this format: <code class="docutils literal notranslate"><span class="pre">//tudelft.net/staff-umbrella/yourprojectname</span></code>.</p>
-<p>For the mount point, add a space followed by the location in your VPS where you want to mount the Project Drive storage (where you created the folder previously, e.g., <code class="docutils literal notranslate"><span class="pre">/media/&lt;server_mount_point&gt;</span></code> ).</p>
-<p>The full new record in the fstab file should be formatted like this:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">your_netID</span><span class="o">&gt;</span><span class="nd">@sftp</span><span class="o">.</span><span class="n">tudelft</span><span class="o">.</span><span class="n">nl</span><span class="p">:</span><span class="o">/</span><span class="n">staff</span><span class="o">-</span><span class="n">umbrella</span><span class="o">/&lt;</span><span class="n">Project_Drive_space</span><span class="o">&gt;</span>  <span class="o">/</span><span class="n">media</span><span class="o">/&lt;</span><span class="n">server_mount_point</span><span class="o">&gt;</span> <span class="n">fuse</span><span class="o">.</span><span class="n">sshfs</span>  <span class="n">rw</span><span class="p">,</span><span class="n">noauto</span><span class="p">,</span><span class="n">users</span><span class="p">,</span><span class="n">_netdev</span>  <span class="mi">0</span>  <span class="mi">0</span>
+<p>The fstab file containes a list of the addresses of external file systems. In this file, the details of your project drive will need to be added in a single line. This line consists of four parts:</p>
+<ol class="arabic simple">
+<li><p><em>filesystem</em> - the address of the project drive</p></li>
+<li><p><em>mount point</em> - the location in the VPS where you want to mount the project drive</p></li>
+<li><p><em>type</em> - the type of the filesystem</p></li>
+<li><p><em>options</em> - additional option such as user privileges</p></li>
+</ol>
+<p>The fstab file must be in the <code class="docutils literal notranslate"><span class="pre">/etc/</span></code> directory and can be opened with the <code class="docutils literal notranslate"><span class="pre">vi</span></code> or <code class="docutils literal notranslate"><span class="pre">nano</span></code> editor:</p>
+<div class="sd-tab-set docutils">
+<input checked="checked" id="sd-tab-item-0" name="sd-tab-set-0" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-0">
+vi</label><div class="sd-tab-content docutils">
+<p>In the terminal, enter the following command to open the fstab file in the vi editor:<br />
+<code class="docutils literal notranslate"><span class="pre">sudo</span> <span class="pre">vi</span> <span class="pre">/etc/fstab</span></code><br />
+Then, switch to the insert mode (hit “i” to switch to insert mode and be able to type)</p>
+</div>
+<input id="sd-tab-item-1" name="sd-tab-set-0" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-1">
+nano</label><div class="sd-tab-content docutils">
+<p>In the terminal, enter the following command to open the fstab file in the nano editor:<br />
+<code class="docutils literal notranslate"><span class="pre">sudo</span> <span class="pre">nano</span> <span class="pre">/etc/fstab</span></code></p>
+</div>
+</div>
+<p>Add the following line to the file:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">your_netID</span><span class="o">&gt;</span><span class="nd">@sftp</span><span class="o">.</span><span class="n">tudelft</span><span class="o">.</span><span class="n">nl</span><span class="p">:</span><span class="o">/</span><span class="n">staff</span><span class="o">-</span><span class="n">umbrella</span><span class="o">/&lt;</span><span class="n">project_drive_name</span><span class="o">&gt;</span>  <span class="o">/</span><span class="n">media</span><span class="o">/&lt;</span><span class="n">server_mount_point</span><span class="o">&gt;</span> <span class="n">fuse</span><span class="o">.</span><span class="n">sshfs</span>  <span class="n">rw</span><span class="p">,</span><span class="n">noauto</span><span class="p">,</span><span class="n">users</span><span class="p">,</span><span class="n">_netdev</span>  <span class="mi">0</span>  <span class="mi">0</span>
 </pre></div>
 </div>
-<p>If that throws a permissions error, try:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">//</span><span class="n">tudelft</span><span class="o">.</span><span class="n">net</span><span class="o">/</span><span class="n">staff</span><span class="o">-</span><span class="n">umbrella</span><span class="o">/</span><span class="n">ODCOR</span><span class="o">/</span> <span class="o">/</span><span class="n">media</span><span class="o">/</span><span class="n">odcor</span> <span class="n">cifs</span> <span class="n">username</span><span class="o">=</span><span class="n">acryan</span><span class="p">,</span><span class="n">noauto</span><span class="p">,</span><span class="n">uid</span><span class="o">=</span><span class="mi">549192</span><span class="p">,</span><span class="n">gid</span><span class="o">=</span><span class="mi">5004</span><span class="p">,</span><span class="n">forcegid</span><span class="p">,</span><span class="n">rw</span><span class="p">,</span><span class="n">_netdev</span>
+<p>replacing the values between <code class="docutils literal notranslate"><span class="pre">&lt;</span></code> and <code class="docutils literal notranslate"><span class="pre">&gt;</span></code> with your NetID, the name of your project drive, and the name of the folder you created in step 3.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If this configuration throws a permission error during mounting, try:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">//</span><span class="n">tudelft</span><span class="o">.</span><span class="n">net</span><span class="o">/</span><span class="n">staff</span><span class="o">-</span><span class="n">umbrella</span><span class="o">/&lt;</span><span class="n">project_drive_name</span><span class="o">&gt;/</span> <span class="o">/</span><span class="n">media</span><span class="o">/&lt;</span><span class="n">server_mount_point</span><span class="o">&gt;</span> <span class="n">cifs</span> <span class="n">username</span><span class="o">=&lt;</span><span class="n">your_netID</span><span class="o">&gt;</span><span class="p">,</span><span class="n">noauto</span><span class="p">,</span><span class="n">uid</span><span class="o">=&lt;</span><span class="n">your_uid</span><span class="o">&gt;</span><span class="p">,</span><span class="n">gid</span><span class="o">=&lt;</span><span class="n">your_gid</span><span class="o">&gt;</span><span class="p">,</span><span class="n">forcegid</span><span class="p">,</span><span class="n">rw</span><span class="p">,</span><span class="n">_netdev</span>
+
 </pre></div>
 </div>
+<p>Use the values for <code class="docutils literal notranslate"><span class="pre">uid</span></code> and <code class="docutils literal notranslate"><span class="pre">gid</span></code> from step 4.</p>
+</div>
+<p>Close the file editor and save the changes:</p>
+<div class="sd-tab-set docutils">
+<input checked="checked" id="sd-tab-item-2" name="sd-tab-set-1" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-2">
+vi</label><div class="sd-tab-content docutils">
+<p>Use <code class="docutils literal notranslate"><span class="pre">Control</span></code>+<code class="docutils literal notranslate"><span class="pre">C</span></code> followed by <code class="docutils literal notranslate"><span class="pre">:wq</span></code> to save the file and close it to get back to your terminal.</p>
+</div>
+<input id="sd-tab-item-3" name="sd-tab-set-1" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-3">
+nano</label><div class="sd-tab-content docutils">
+<p>As indicated by the nano interface, use <code class="docutils literal notranslate"><span class="pre">Control</span></code>+<code class="docutils literal notranslate"><span class="pre">O</span></code> to write the file. Then, confirm your choice of filename by hitting <code class="docutils literal notranslate"><span class="pre">enter</span></code>. Finally, exit the file with <code class="docutils literal notranslate"><span class="pre">Control</span></code>+<code class="docutils literal notranslate"><span class="pre">X</span></code></p>
+</div>
+</div>
 </section>
-<section id="step-6-save-the-fstab-file">
-<h3>Step 6. Save the fstab file<a class="headerlink" href="#step-6-save-the-fstab-file" title="Permalink to this headline">#</a></h3>
-<p>Use Control+C followed by <code class="docutils literal notranslate"><span class="pre">:wq</span></code> to save the file and close it to get back to your terminal.</p>
-</section>
-<section id="step-7-mounting-the-project-drive">
-<h3>Step 7. Mounting the project drive<a class="headerlink" href="#step-7-mounting-the-project-drive" title="Permalink to this headline">#</a></h3>
-<p>To mount the project drive use the <code class="docutils literal notranslate"><span class="pre">sudo</span> <span class="pre">mount</span> <span class="pre">/media/&lt;server_mount_point&gt;</span></code> command. You can also unmount it using <code class="docutils literal notranslate"><span class="pre">fusermount</span> <span class="pre">-u</span> <span class="pre">/media/&lt;server_mount_point&gt;</span></code>.</p>
+<section id="step-6-mount-the-project-drive">
+<h3>Step 6. Mount the project drive<a class="headerlink" href="#step-6-mount-the-project-drive" title="Permalink to this headline">#</a></h3>
+<p>To mount the project drive execute the command</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>mount<span class="w"> </span>/media/&lt;server_mount_point&gt;
+</pre></div>
+</div>
+<p>You can also unmount the drive with</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>fusermount<span class="w"> </span>-u<span class="w"> </span>/media/&lt;server_mount_point&gt;
+</pre></div>
+</div>
+<p>The project drive will not mount automatically, so you will need to remount it manually each time you restart the server.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If the step above does not work, it probably means that the packages for mounting cifs-type filesystems haven’t been installed. Depending on your linux flavour you will need to install them using:</p>
+<div class="sd-tab-set docutils">
+<input checked="checked" id="sd-tab-item-4" name="sd-tab-set-2" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-4">
+Ubuntu/Debian</label><div class="sd-tab-content docutils">
+<p><code class="docutils literal notranslate"><span class="pre">sudo</span> <span class="pre">apt</span> <span class="pre">install</span> <span class="pre">cifs-utils</span></code></p>
+</div>
+<input id="sd-tab-item-5" name="sd-tab-set-2" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-5">
+Redhat/Centos/Fedora</label><div class="sd-tab-content docutils">
+<p><code class="docutils literal notranslate"><span class="pre">sudo</span> <span class="pre">yum</span> <span class="pre">install</span> <span class="pre">cifs-utils</span></code></p>
+</div>
+</div>
+</div>
 </section>
 </section>
 <section id="notes-and-next-steps">
 <h2>Notes and next steps<a class="headerlink" href="#notes-and-next-steps" title="Permalink to this headline">#</a></h2>
-<p>The project drive will not mount automatically, so you will need to mount it manually each time you start the server. To do so, from the home (<code class="docutils literal notranslate"><span class="pre">/</span></code>) directory in your server run <code class="docutils literal notranslate"><span class="pre">mount</span> <span class="pre">/media/&lt;server_mount_point&gt;</span></code>. You should now be able to <code class="docutils literal notranslate"><span class="pre">cd</span> <span class="pre">/media/&lt;server_mount_point&gt;</span></code> and view your files stored on the project drive using <code class="docutils literal notranslate"><span class="pre">ls</span></code>.</p>
-<p>Note, if the step above does not work, it probably means that the packages for mounting cifs-type filesystems haven’t been installed. Depending on your linux flavour you will need to install them first using:</p>
-<p><code class="docutils literal notranslate"><span class="pre">sudo</span> <span class="pre">apt</span> <span class="pre">install</span> <span class="pre">cifs-utils</span></code></p>
-<p>on ubuntu/debian like linuxes, or</p>
-<p><code class="docutils literal notranslate"><span class="pre">sudo</span> <span class="pre">yum</span> <span class="pre">install</span> <span class="pre">cifs-utils</span></code></p>
-<p>on redhat/centos/fedora flavours.</p>
-<p>The steps above can also be used to mount any storage offered by TU Delft with a WebDav link (staff-homes, staff-groups, staff-bulk, student-homes, student-groups and apps). Simply use the latter half of the URL from the WebDav web link of your storage drive (step 5), which will change from staff-umbrella (project drive) to something else depending on the storage drive you would like to mount.</p>
+<p>The steps above can also be used to mount any storage offered by TU Delft with a WebDav link (staff-homes, staff-groups, staff-bulk, student-homes, student-groups and apps). Simply use the latter half of the URL from the WebDav web link of your storage drive, which will change from staff-umbrella (project drive) to something else depending on the storage drive you would like to mount.</p>
 </section>
 </section>
 
@@ -579,17 +648,15 @@ document.write(`
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#background">Background</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-this-documentation-will-help-achieve">What this documentation will help achieve</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#prerequisites">Prerequisites</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#steps">Steps</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-1-connect-to-your-tu-delft-vps-via-ssh">Step 1. Connect to your TU Delft VPS via SSH</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-2-create-a-new-directory-as-the-mounting-point-preferably-in-media">Step 2. Create a new directory as the mounting point preferably in /media</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-3-locate-the-url-of-your-project-storage">Step 3. Locate the URL of your project storage</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-4-open-the-fstab-file">Step 4. Open the fstab file</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-1-locate-the-url-of-your-project-storage">Step 1. Locate the URL of your project storage</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-2-connect-to-your-tu-delft-vps-via-ssh">Step 2. Connect to your TU Delft VPS via SSH</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-3-create-a-new-directory-as-the-mounting-point">Step 3. Create a new directory as the mounting point</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-4-find-and-save-your-user-and-group-details">Step 4. Find and save your user and group details</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-5-edit-the-fstab-file-to-include-project-storage-technical-details">Step 5. Edit the fstab file to include project storage technical details</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-6-save-the-fstab-file">Step 6. Save the fstab file</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-7-mounting-the-project-drive">Step 7. Mounting the project drive</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-6-mount-the-project-drive">Step 6. Mount the project drive</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#notes-and-next-steps">Notes and next steps</a></li>
