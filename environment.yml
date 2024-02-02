@@ -1,11 +1,10 @@
-name: dcc_guides_env
+name: dcc_guides
 channels:
   - conda-forge
   - bioconda
   - defaults
 dependencies:
     - python=3.8
-    - pip
     - numpy
     - pandas
     - tabulate
