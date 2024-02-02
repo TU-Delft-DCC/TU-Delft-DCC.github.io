@@ -96,7 +96,7 @@ def write_authors_page(df: pd.DataFrame, path):
         directory of the jupyter book
     """
     file = os.path.join(path, "community", "maintainers.md")
-    with open(file, "w") as f:
+    with open(file, "w", encoding="utf8") as f:
         f.write("# Guide maintainers \n\n")
         f.write(
             "_This content is automatically generated, all changes made will be lost._ \n\n"
