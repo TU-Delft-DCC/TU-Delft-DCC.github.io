@@ -10,7 +10,7 @@ Add the cards below as issues to your repository to track the progress of adopti
 ^^^
 
 ```md
-Essential_  
+_Essential_  
 - [ ] Use [git](https://www.atlassian.com/git) as a version control system 
 - [ ] Upload your project on [GitHub](https://github.com/) or [TU Delft GitLab](https://gitlab.tudelft.nl/)
 
@@ -94,8 +94,8 @@ _Recommended_
 
 ```md
 _Essential_
-- [ ] Document how users can verify the proper 
-- [ ] Document verification for user installation and software execution
+- [ ] Document verification of user installation
+- [ ] Document how users can verify the proper functioning of the software
 
 _Recommended_  
 - [ ] [Defensive programming](https://swcarpentry.github.io/python-novice-inflammation/10-defensive/index.html)
@@ -104,5 +104,38 @@ _Recommended_
 - [ ] Code coverage check ([Codecov](https://about.codecov.io/), [Sonarcloud](https://sonarcloud.io/), [Travis](https://www.travis-ci.com/))
 ```
 
-````
+---
+**Code quality**
+^^^
+
+```md	
+_Essential_
+- [ ] Project [organisation](https://coderefinery.github.io/reproducible-research/organizing-projects/)
+- [ ] Record [software dependencies](https://coderefinery.github.io/reproducible-research/dependencies/)
+
+_Recommended_
+- [ ] Follow a consistent code style, such as [PEP8 guidelines](https://realpython.com/python-pep8/)
+- [ ] Use a linter ([pylint](https://pypi.org/project/pylint/), [flake8](https://pypi.org/project/flake8/))
+- [ ] Use a formatter ([black](https://github.com/psf/black), [yapf](https://github.com/google/yapf))
+- [ ] Follow [best coding practices](https://alan-turing-institute.github.io/rse-course/html/module07_construction_and_design/index.html)
+```
+
+---
+**Releases**
+^^^
+
+```md
+_Essential_  
+- [ ] Obtain a DOI from ([Zenodo](https://zenodo.org/) or [4TU.ResearchData](https://data.4tu.nl/info/about-your-data/getting-started))
+
+_Recommended_  
+- [ ] [Semantic versioning](https://semver.org/)
+- [ ] Tagged releases ([GitHub](https://docs.github.com/en/repositories/releasing-projects-on-github))
+- [ ] [CHANGELOG](https://keepachangelog.com/en/1.0.0/)
+- [ ] Upload to registry ([PyPI](https://realpython.com/pypi-publish-python-package/), [conda](https://conda.io/projects/conda-build/en/latest/user-guide/tutorials/build-pkgs.html), [DockerHub](https://docs.docker.com/docker-hub/repos/))
+- [ ] [Release guide](https://docs.github.com/en/repositories/releasing-projects-on-github/managing-releases-in-a-repository)
+- [ ] [Continuous Integration](https://the-turing-way.netlify.app/reproducible-research/ci/ci-options) for build and release
+```
+
+````    
 
