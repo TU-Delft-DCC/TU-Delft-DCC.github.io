@@ -37,8 +37,8 @@
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
     <link rel="stylesheet" type="text/css" href="../_static/tabs.css" />
     <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="../_static/panels-bootstrap.5fd3999ee7762ccc51105388f4a9d115.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
@@ -425,7 +425,7 @@ document.write(`
 <p class="card-text"><strong>Version Control</strong></p>
 </div>
 <div class="card-body docutils">
-<div class="highlight-md notranslate"><div class="highlight"><pre><span></span>Essential_  
+<div class="highlight-md notranslate"><div class="highlight"><pre><span></span><span class="ge">_Essential_</span>  
 <span class="k">- [ ]</span> Use [<span class="nt">git</span>](<span class="na">https://www.atlassian.com/git</span>) as a version control system 
 <span class="k">- [ ]</span> Upload your project on [<span class="nt">GitHub</span>](<span class="na">https://github.com/</span>) or [<span class="nt">TU Delft GitLab</span>](<span class="na">https://gitlab.tudelft.nl/</span>)
 
@@ -529,14 +529,55 @@ document.write(`
 </div>
 <div class="card-body docutils">
 <div class="highlight-md notranslate"><div class="highlight"><pre><span></span><span class="ge">_Essential_</span>
-<span class="k">- [ ]</span> Document how users can verify the proper 
-<span class="k">- [ ]</span> Document verification for user installation and software execution
+<span class="k">- [ ]</span> Document verification of user installation
+<span class="k">- [ ]</span> Document how users can verify the proper functioning of the software
 
 <span class="ge">_Recommended_</span>  
 <span class="k">- [ ]</span> [<span class="nt">Defensive programming</span>](<span class="na">https://swcarpentry.github.io/python-novice-inflammation/10-defensive/index.html</span>)
 <span class="k">- [ ]</span> Test your software with [<span class="nt">integration tests</span>](<span class="na">https://the-turing-way.netlify.app/reproducible-research/testing/testing-integrationtest.html</span>) and [<span class="nt">unit tests</span>](<span class="na">https://the-turing-way.netlify.app/reproducible-research/testing/testing-unittest.html</span>)
 <span class="k">- [ ]</span> Make use of [<span class="nt">Continuous Integration</span>](<span class="na">https://the-turing-way.netlify.app/reproducible-research/ci/ci-options.html</span>)
 <span class="k">- [ ]</span> Code coverage check ([Codecov](https://about.codecov.io/), [<span class="nt">Sonarcloud</span>](<span class="na">https://sonarcloud.io/</span>), [<span class="nt">Travis</span>](<span class="na">https://www.travis-ci.com/</span>))
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="d-flex col-lg-12 p-2 docutils">
+<div class="card w-100 shadow docutils">
+<div class="card-header bg-info docutils">
+<p class="card-text"><strong>Code quality</strong></p>
+</div>
+<div class="card-body docutils">
+<div class="highlight-md notranslate"><div class="highlight"><pre><span></span><span class="ge">_Essential_</span>
+<span class="k">- [ ]</span> Project [<span class="nt">organisation</span>](<span class="na">https://coderefinery.github.io/reproducible-research/organizing-projects/</span>)
+<span class="k">- [ ]</span> Record [<span class="nt">software dependencies</span>](<span class="na">https://coderefinery.github.io/reproducible-research/dependencies/</span>)
+
+<span class="ge">_Recommended_</span>
+<span class="k">- [ ]</span> Follow a consistent code style, such as [<span class="nt">PEP8 guidelines</span>](<span class="na">https://realpython.com/python-pep8/</span>)
+<span class="k">- [ ]</span> Use a linter ([pylint](https://pypi.org/project/pylint/), [<span class="nt">flake8</span>](<span class="na">https://pypi.org/project/flake8/</span>))
+<span class="k">- [ ]</span> Use a formatter ([black](https://github.com/psf/black), [<span class="nt">yapf</span>](<span class="na">https://github.com/google/yapf</span>))
+<span class="k">- [ ]</span> Follow [<span class="nt">best coding practices</span>](<span class="na">https://alan-turing-institute.github.io/rse-course/html/module07_construction_and_design/index.html</span>)
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="d-flex col-lg-12 p-2 docutils">
+<div class="card w-100 shadow docutils">
+<div class="card-header bg-info docutils">
+<p class="card-text"><strong>Releases</strong></p>
+</div>
+<div class="card-body docutils">
+<div class="highlight-md notranslate"><div class="highlight"><pre><span></span><span class="ge">_Essential_</span>  
+<span class="k">- [ ]</span> Obtain a DOI from ([Zenodo](https://zenodo.org/) or [<span class="nt">4TU.ResearchData</span>](<span class="na">https://data.4tu.nl/info/about-your-data/getting-started</span>))
+
+<span class="ge">_Recommended_</span>  
+<span class="k">- [ ]</span> [<span class="nt">Semantic versioning</span>](<span class="na">https://semver.org/</span>)
+<span class="k">- [ ]</span> Tagged releases ([GitHub](https://docs.github.com/en/repositories/releasing-projects-on-github))
+<span class="k">- [ ]</span> [<span class="nt">CHANGELOG</span>](<span class="na">https://keepachangelog.com/en/1.0.0/</span>)
+<span class="k">- [ ]</span> Upload to registry ([PyPI](https://realpython.com/pypi-publish-python-package/), [<span class="nt">conda</span>](<span class="na">https://conda.io/projects/conda-build/en/latest/user-guide/tutorials/build-pkgs.html</span>), [<span class="nt">DockerHub</span>](<span class="na">https://docs.docker.com/docker-hub/repos/</span>))
+<span class="k">- [ ]</span> [<span class="nt">Release guide</span>](<span class="na">https://docs.github.com/en/repositories/releasing-projects-on-github/managing-releases-in-a-repository</span>)
+<span class="k">- [ ]</span> [<span class="nt">Continuous Integration</span>](<span class="na">https://the-turing-way.netlify.app/reproducible-research/ci/ci-options</span>) for build and release
 </pre></div>
 </div>
 </div>
