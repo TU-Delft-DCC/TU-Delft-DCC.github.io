@@ -40,7 +40,7 @@ For a Mac computer, the default Unix Shell is Bash, and it is available via the 
 For more info: [How To use a terminal on Mac](https://www.macworld.co.uk/how-to/how-use-terminal-on-mac-3608274/)
 
 **Windows**  
-Computers with Windows operating systems do not automatically have a Unix Shell program installed. We encourage you to use an emulator included in [Git for Windows](https://gitforwindows.org/), which gives you access to both Bash shell commands and Git. To install, please follow these [instructions](https://coderefinery.github.io/installation/shell-and-git/#shell-and-git).
+Computers with Windows operating systems do not automatically have a Unix Shell program installed. We encourage you to use an emulator included in [Git for Windows](https://gitforwindows.org/), which gives you access to both Bash shell commands and Git. To install, please follow these [instructions](https://coderefinery.github.io/installation/git-in-terminal/#git-in-terminal).
 
 
 ## X Windows System
@@ -139,5 +139,5 @@ docker run --rm -it --net=host -e DISPLAY=:0 -v $(pwd):/data <image_name>:<image
 
 ## References
 - https://medium.com/better-programming/running-desktop-apps-in-docker-43a70a5265c4
-- https://coderefinery.github.io/installation/shell-and-git/#shell-and-git
+- https://coderefinery.github.io/installation/git-in-terminal/#git-in-terminal
 - https://ucsbcarpentry.github.io/2019-10-24-gitbash/setup.html
