@@ -42,7 +42,7 @@ def get_filenames_in_toc(path: str) -> List:
     """
     toc_file = os.path.join(path, "_toc.yml")
     files = []
-    with open(toc_file, "r") as f:
+    with open(toc_file, "r", encoding="utf8") as f:
         for line in f:
             if "- file:" in line:
                 files.append(line.strip().split()[-1])
@@ -96,7 +96,7 @@ def write_authors_page(df: pd.DataFrame, path):
         directory of the jupyter book
     """
     file = os.path.join(path, "community", "maintainers.md")
-    with open(file, "w") as f:
+    with open(file, "w", encoding="utf8") as f:
         f.write("# Guide maintainers \n\n")
         f.write(
             "_This content is automatically generated, all changes made will be lost._ \n\n"

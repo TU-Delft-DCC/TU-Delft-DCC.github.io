@@ -5,9 +5,9 @@ _This content is automatically generated, all changes made will be lost._
 | Section        | Title                                     | Lead maintainer       | Backup maintainer   |
 |:---------------|:------------------------------------------|:----------------------|:--------------------|
 | containers     | Docker users                              | Maurits Kok           |                     |
-| data           | RequestProject Drive                      | Ashley Cryan          |                     |
+| data           | Request Project Drive                     | Ashley Cryan          |                     |
 | data           | Sync with Unison                          | Ashley Cryan          |                     |
-| data           | Mount Project Drive                       | Ashley Cryan          |                     |
+| data           | Mount Project Drive                       | Raúl Ortiz Merino     | Maurits Kok         |
 | data           | Data publishing                           | Aleksandra Wilczynska |                     |
 | gitlab         | Transfer ownership of a GitLab repository | Lora Armstrong        | Maurits Kok         |
 | gitlab         | CI with Gitlab                            | Ashley Cryan          | Maurits Kok         |

@@ -1,6 +1,6 @@
 ---
 section: gitlab
-title: CI with Gitlab 
+title: CI with Gitlab
 author_1: Ashley Cryan
 author_2: Maurits Kok
 ---
@@ -8,7 +8,7 @@ author_2: Maurits Kok
 # Continuous Integration with Gitlab
 
 ## Background
-If you happen to be working with TU Delft Gitlab instance and you want to implement DevOps or CI/CD pipelines, then you need to install a gitlab runner on your own. This should runner should be in a server, responding to changes such as commits or pull requests in your Gitlab repository.  
+If you happen to be working with TU Delft Gitlab instance and you want to implement DevOps or CI/CD pipelines, then you need to install a gitlab runner on your own. This should runner should be in a server, responding to changes such as commits or pull requests in your Gitlab repository.
 
 ## Quick overview of how it works
 In order to be ready to run CI/CD pipeline, a gitlab-runner Docker container is running on the server all the time. When a new commit is made in the GitLab repository, this triggers the CI/CD process to run a job (e.g., unit test) based on the pipeline defined in the .gitlab-ci.yml file in the repository. The container used to carry out the CI/CD tests is defined in the .gitlab-ci.yml file in the first line, and spawned from within the continuously running gitlab-runner container. In our example, we define `image:python:3.7.3` so every time a commit is made in the repository, a new container based on the python:3.7.3 Docker image is started and used to run tests on the python scripts and generate artifacts as defined in the .gitlab-ci.yml file.
@@ -21,7 +21,7 @@ The documentation below will help you deploy GitLab runner in a Docker container
 ## Prerequisites
 **Server:** This example uses a server to run the whole process. You can request a server from TU Delft ICT service following these directions [here](../VPS_request.md). It is useful to set this up on a server so that Docker can be running continuously, and be ready to run CI/CD tests whenever a new commit occurs in the repository.
 
-**Docker:** We use a Docker container to run the Gitlab runner and initialise the CI/CD pipeline. 
+**Docker:** We use a Docker container to run the Gitlab runner and initialise the CI/CD pipeline.
 
 **Gitlab runner:** (from GitLab documentation) "Runners are the agents that run the CI/CD jobs that come from GitLab. When you register a runner, you are setting up communication between your GitLab instance and the machine where GitLab Runner is installed. Runners usually process jobs on the same machine where you installed GitLab Runner." [Link](https://docs.gitlab.com)
 
@@ -44,7 +44,7 @@ The documentation below will help you deploy GitLab runner in a Docker container
 7. Set up the GitLab runner
 8. Deploy the GitLab runner in a Docker container
 9. Register the runner
-10. Test the CI/CD pipeline 
+10. Test the CI/CD pipeline
 
 ### Step 1. Request server running Ubuntu
 If you don't have a VPS already, you can request one from TU Delft ICT. Instructions for requesting a server and storage from ICT can be found under [Remote servers/Request a Virtual Private Server](../VPS_request.md).
@@ -55,17 +55,17 @@ We recommend the following configuration for configuring a Gitlab runner:
 - Additional space if your Docker images are larger than ~10Gb.
 
 ### Step 2. Connect to the server via ssh
-The email response from Sysadmin@TUDelft.nl confirming the successful deployment of your server should contain instructions to connect via ssh. 
+The email response from Sysadmin@TUDelft.nl confirming the successful deployment of your server should contain instructions to connect via ssh.
 
 The default login procedure is to connect to the Bastion host (an intermediary server) and then to your server, so it is a two-step process. Please check your email for Steps A and B as described by ICT admin.
 
-You can also connect to your server using Putty (Windows) or, on Mac/Linux, configure one-step access by storing ssh keys between your local machine and your server and designating an alias. 
+You can also connect to your server using Putty (Windows) or, on Mac/Linux, configure one-step access by storing ssh keys between your local machine and your server and designating an alias.
 
-When you are successfully connected, you should see in your terminal/command prompt something like this: 
+When you are successfully connected, you should see in your terminal/command prompt something like this:
 
 ![Screen_Shot_2020-11-17_at_10.30.31](https://gitlab.tudelft.nl/acryan/data-management-for-researchers/-/wikis/uploads/048a06a817852a399c697582ae1e3a08/Screen_Shot_2020-11-17_at_10.30.31.png)
 
-### Step 3. Install Docker on the server 
+### Step 3. Install Docker on the server
 
 Servers often do not come with Docker installed, so you may need to do it by yourself. To check whether Docker is installed, run `docker --version`. If you get an error message, you can install it using the following commands:
 
@@ -89,7 +89,7 @@ This file in the root of your repository defines what CI/CD tests to run upon ea
 
 In the first line of the file, you can write `image: <image_name>:<tag>` to indicate you want to run the runner in a Docker container container.  `<image_name>` should be replaced by the name of the image you want to use to start a container and `<tag>` should be replaced by the tag of the image you want to use(image names can be found on DockerHub). Tag will be set to `latest` by default.
 
-**Important:** The file must be named exactly `.gitlab-ci.yml` so it will be recognizable by GitLab runner. Below is an example .gitlab-ci.yml file. 
+**Important:** The file must be named exactly `.gitlab-ci.yml` so it will be recognizable by GitLab runner. Below is an example .gitlab-ci.yml file.
 
 ```yaml
 # This is a sample build configuration for Python.
@@ -116,11 +116,13 @@ test:
 
 Tags can be added as a final section in your .gitlab-ci.yml file (they are optional, we didn’t enter any in this example). You then need to enter these tags exactly when registering the runner.
 
-### Step 7. Set up GitLab runner  
+### Step 7. Setup the GitLab runner
 
-Now that you have the .gitlab-ci.yml file configured, you can link your repository to a runner with a token and tags, if you have included those in your .gitlab-ci.yml file. The token can be generated in GitLab by going to Your Project -> Settings -> CI/CD -> Expand Runners -> Setup a specific runner manually. Copy the token you see there.
+- Follow the instructions [here](https://docs.gitlab.com/ee/tutorials/create_register_first_runner/#create-and-register-a-project-runner) **till step 7** to create a GitLab runner for your repository
 
-![token](https://gitlab.tudelft.nl/acryan/data-management-for-researchers/-/wikis/uploads/89288dcfd011627a4397cf4a4ad00cd7/token.PNG)
+- Choose 'Linux' under operating systems
+
+- Copy the authentication token generated and keep it handy. It will be required in Step 9.
 
 ### Step 8. Deploy GitLab runner in a Docker container
 
@@ -135,7 +137,7 @@ gitlab/gitlab-runner:latest
 
 Check that gitlab-runner container is running using `docker ps -a`
 
-### Step 9. Register the runner 
+### Step 9. Register the runner using authentication token
 
 Run the following command to register your runner and configure it to deploy in a Docker container on your server.
 
@@ -143,41 +145,56 @@ Run the following command to register your runner and configure it to deploy in 
 
 **on Mac OS, use /Users/Shared/ instead of /srv/**
 
-In response to this command you will be prompted to answer a series of questions, about the gitlab-ci coordinator URL (for TU Delft this is https://gitlab.tudelft.nl), gitlab-ci token (copied from your repository CI/CD settings), an optional description (can hit enter to skip), tgas (must exactly match the tags in your .gitlab-ci.yml file, or hit enter to skip), executor (docker), and default Docker image (same as the one specified in your .gitlab-ci.yml file). 
+In response to this command you will be prompted to answer the following questions
+
+```shell
+- GitLab URL: https://gitlab.tudelft.nl
+- gitlab-ci token: Paste the authentication token generated in Step 7.
+- Enter name of the runner: example-runner
+- Type of executor: docker
+- Default Docker image: Specify the same image as the one specified in the 'image' field of the .gitlab-ci.yml file.
 
 ```
-Please enter the gitlab-ci coordinator URL (e.g. https://gitlab.com/):
-https://gitlab.tudelft.nl
-Please enter the gitlab-ci token for this runner:
-<copied from your repository CI/CD settings>
-Please enter the gitlab-ci description for this runner: (or hit enter to skip)
-Please enter the gitlab-ci tags for this runner (comma separated): (or hit enter to skip)
-Please enter the executor: custom, docker-ssh, shell, virtualbox, docker+machine, docker, parallels, ssh, docker-ssh+machine, kubernetes:
-docker
-Please enter the default Docker image (e.g. ruby:2.6):
-python:3.7.3
+See an example below.
 
-Runner registered successfully. Feel free to start it, but if it's running already the config should be automatically reloaded! 
+```shell
+~$ docker run --rm -it -v /srv/gitlab-runner/config:/etc/gitlab-runner gitlab/gitlab-runner register
+
+
+Enter the GitLab instance URL (for example, https://gitlab.com/):
+https://gitlab.tudelft.nl
+Enter the registration token:
+xxxxxxxxxxxxxxx
+Verifying runner... is valid                        runner=xxxxxxx
+Enter a name for the runner. This is stored only in the local config.toml file:
+[xxxxxxx]: example-runner
+Enter an executor: instance, kubernetes, docker-windows, docker-autoscaler, parallels, shell, ssh, virtualbox, docker+machine, custom, docker:
+docker
+Enter the default Docker image (for example, ruby:2.7):
+julia:1.6
+Runner registered successfully. Feel free to start it, but if it's running already the config should be automatically reloaded!
+
+Configuration (with the authentication token) was saved in "/etc/gitlab-runner/config.toml"
 ```
 
 ### Step 10. Check that the CI/CD process is activated and your pipeline runs successfully
 
-In order to activate the CI/CD process, you should make a new commit to the GitLab repository. This will trigger the CI/CD pipeline to run. 
+- In your repository, navigate to Settings > CI/CD > Click on Expand under Runners: You should see that the runner is active as indicated by a green dot. This means that the CI pipeline is ready to run, but it needs to be triggered.
 
-Navigate to Your Project -> CI/CD -> Pipelines to check the status of CI/CD pipelines connected to your repository. If you find a green message that says “passed” with a check mark then congratulations, your pipeline works! If you see a red message that says “failed”, check to see the error message associated with it - sometimes you need to reconfigure your .gitlab-ci.yml file to make sure it uses the correct formatting and defines the tests appropriately. 
+- In order to trigger the CI pipeline, you should make a new commit to the GitLab repository.
+
+- After you have made a new commit to the repository, navigate to Your Project -> Build -> Pipelines to check the status of CI/CD pipelines connected to your repository. If you find a green message that says “passed” with a check mark then congratulations, your pipeline works! If you see a red message that says “failed”, check to see the error message associated with it - sometimes you need to reconfigure your .gitlab-ci.yml file to make sure it uses the correct formatting and defines the tests appropriately.
 
 ![Screen_Shot_2020-11-17_at_11.56.41](https://gitlab.tudelft.nl/acryan/data-management-for-researchers/-/wikis/uploads/f7aadbc87f49d31de4da37a2f8a76ef3/Screen_Shot_2020-11-17_at_11.56.41.png)
- 
+
 
 ## Notes and References
-This guide was created using multiple references on GitLab runner and Docker. If you would like more information or details, please refer to the links below. 
-* https://www.hostinger.com/tutorials/how-to-install-docker-on-ubuntu 
-* https://cloudcone.com/docs/article/how-to-install-and-run-docker-on-ubuntu-20-04-lts/ 
-* https://www.digitalocean.com/community/tutorials/how-to-install-and-use-docker-on-ubuntu-20-04 
-* https://docs.gitlab.com/ee/ci/yaml/README.html 
-* https://docs.gitlab.com/runner/executors/docker.html#define-image-and-services-from-gitlab-ciyml 
+This guide was created using multiple references on GitLab runner and Docker. If you would like more information or details, please refer to the links below.
+* https://www.hostinger.com/tutorials/how-to-install-docker-on-ubuntu
+* https://cloudcone.com/docs/article/how-to-install-and-run-docker-on-ubuntu-20-04-lts/
+* https://www.digitalocean.com/community/tutorials/how-to-install-and-use-docker-on-ubuntu-20-04
+* https://docs.gitlab.com/ee/topics/build_your_application.html
+* https://docs.gitlab.com/runner/executors/docker.html#define-image-and-services-from-gitlab-ciyml
 * https://gitlab.tudelft.nl/help/ci/yaml/index.md
-* https://docs.gitlab.com/ee/ci/runners/ 
-* https://docs.gitlab.com/ee/ci/docker/using_docker_images.html 
-* https://docs.gitlab.com/ee/ci/examples/README.html 
+* https://docs.gitlab.com/ee/ci/docker/using_docker_images.html
 * https://semaphoreci.com/blog/cicd-pipeline
