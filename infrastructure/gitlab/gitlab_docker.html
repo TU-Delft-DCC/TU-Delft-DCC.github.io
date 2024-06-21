@@ -450,7 +450,7 @@ document.write(`
 </section>
 <section id="quick-overview-of-how-it-works">
 <h2>Quick overview of how it works<a class="headerlink" href="#quick-overview-of-how-it-works" title="Permalink to this headline">#</a></h2>
-<p>In order to be ready to run CI/CD pipeline, a gitlab-runner Docker container is running on the server all the time. When a new commit is made in the GitLab repository, this triggers the CI/CD process to run a job (e.g., unit test) based on the pipeline defined in the .gitlab-ci.yml file in the repository. The container used to carry out the CI/CD tests is defined in the .gitlab-ci.yml file in the first line, and spawned from within the continuously running gitlab-runner container. In our example, we define <code class="docutils literal notranslate"><span class="pre">image:python:3.7.3</span></code> so every time a commit is made in the repository, a new container based on the python:3.7.3 Docker image is started and used to run tests on the python scripts and generate artifacts as defined in the .gitlab-ci.yml file.</p>
+<p>In order to be ready to run CI/CD pipeline, a gitlab-runner Docker container is running on the server all the time. When a new commit is made in the GitLab repository, this triggers the CI/CD process to run a job (e.g., unit test) based on the pipeline defined in the .gitlab-ci.yml file in the repository. The container used to carry out the CI/CD tests is defined in the .gitlab-ci.yml file in the first line, and spawned from within the continuously running gitlab-runner container. In our example, we define <code class="docutils literal notranslate"><span class="pre">image:python:3.12.3</span></code> so every time a commit is made in the repository, a new container based on the python:3.12.3 Docker image is started and used to run tests on the python scripts and generate artifacts as defined in the .gitlab-ci.yml file.</p>
 <p><img alt="Untitled_Document__31_" src="https://gitlab.tudelft.nl/acryan/data-management-for-researchers/-/wikis/uploads/711ac593ec886bd9216dff0591a82e6f/Untitled_Document__31_.png" /></p>
 </section>
 <section id="what-this-documentation-will-help-achieve">
@@ -530,15 +530,13 @@ document.write(`
 <span class="c1"># Check our guides at https://confluence.atlassian.com/x/x4UWN for more examples.</span>
 <span class="c1"># Only use spaces to indent your .yml configuration.</span>
 <span class="c1"># -----</span>
-<span class="c1"># You can specify a custom docker image from Docker Hub as your build environment.</span>
-<span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">python:3.7.3</span>
-
-<span class="nt">cache</span><span class="p">:</span>
-<span class="w">  </span><span class="nt">paths</span><span class="p">:</span>
-<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">.cache/pip</span>
-<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">venv/</span>
-
 <span class="nt">test</span><span class="p">:</span>
+<span class="w">  </span><span class="c1"># You can specify a custom docker image from Docker Hub as your build environment.</span>
+<span class="w">  </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">python:3.12.3</span>
+<span class="w">  </span><span class="nt">cache</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">paths</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">.cache/pip</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">venv/</span>
 <span class="w">  </span><span class="nt">script</span><span class="p">:</span><span class="w"> </span><span class="c1"># Modify the commands below to build your repository.</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">pip install -r requirements.txt</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">nosetests --with-coverage  --cover-html</span>
