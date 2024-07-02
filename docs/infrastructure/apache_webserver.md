@@ -12,16 +12,15 @@ If you want to host a website for your lab, or a web application of some sort, y
 
 > The job of a web server is to serve websites on the internet. To achieve that goal, it acts as a middleman between the server and client machines. It pulls content from the server on each user request and delivers it to the web.....One of the most popular web servers, Apache allows you to run a secure website without too much of a headache. It is free and open-source, making it a frequent choice of solopreneurs and small businesses who want a presence on the web.....The way Apache HTTP server works is that it will accept requests from the web browser, such as Google Chrome and Microsoft Edge, and turn programming scripts into web pages which contents are visible by the visitors. 
 
-
 ## What this documentation will help achieve
 This guide will help you install the Apache web server on Ubuntu Linux 18.04 and configure a HTTPS secure connection for all incoming web traffic.
 
 The steps outlined below will ensure that all incoming web traffic to your server from port 80 (HTTP) will be redirected to port 443 (HTTPS). Port 80 is still accessible but redirects automatically. Redirection is configured after the SSL certificate is in place. 
 
 ## Prerequisites
-* A system running Ubuntu 18.04 LTS (Bionic Beaver)
-* An internet connection
-* Access to a user account with sudo privileges
+* A system running Ubuntu Server
+* An internet connection 
+* Access to a user account with sudo privileges 
 
 ## Tools / Software
 * A command-line utility (Use keyboard shortcut CTRL-ALT-T, or right-click the desktop and left-click Open Terminal)
