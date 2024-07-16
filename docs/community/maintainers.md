@@ -17,7 +17,7 @@ _This content is automatically generated, all changes made will be lost._
 | infrastructure | Request VPS                               | Ashley Cryan          |                     |
 | infrastructure | Set up an Apache web server               | Ashley Cryan          |                     |
 | resources      | Curriculum                                | Ashley Cryan          | Maurits Kok         |
-| software       | FAIR checklist                            | Maurits Kok           |                     |
+| software       | FAIR4RS checklist                         | Maurits Kok           | Elviss Dvinskis     |
 | software       | Software Management Plan                  | Maurits Kok           |                     |
 | software       | Branch management                         | Maurits Kok           |                     |
 | testing        | Testing with MATLAB                       | Maurits Kok           |                     |
