@@ -189,7 +189,7 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../../software/getting_started.html">Getting started</a></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../../software/fair.html">FAIR Software</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../software/checklist.html">FAIR software checklist</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../software/checklist.html">FAIR checklist for research software</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../software/project_cards.html">FAIR assessment cards</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../software/software_management_plan.html">Software management plan</a></li>
 <li class="toctree-l2"><a class="reference external" href="https://tu-delft-dcc.github.io/FAIR4RS/">FAIR for Research Software Program Spring 2023</a></li>
@@ -580,23 +580,23 @@ gitlab/gitlab-runner:latest
 </pre></div>
 </div>
 <p>See an example below.</p>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>~$ docker run --rm -it -v /srv/gitlab-runner/config:/etc/gitlab-runner gitlab/gitlab-runner register
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>docker<span class="w"> </span>run<span class="w"> </span>--rm<span class="w"> </span>-it<span class="w"> </span>-v<span class="w"> </span>/srv/gitlab-runner/config:/etc/gitlab-runner<span class="w"> </span>gitlab/gitlab-runner<span class="w"> </span>register
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Enter</span> <span class="n">the</span> <span class="n">GitLab</span> <span class="n">instance</span> <span class="n">URL</span> <span class="p">(</span><span class="k">for</span> <span class="n">example</span><span class="p">,</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">gitlab</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="p">):</span>
+<span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">gitlab</span><span class="o">.</span><span class="n">tudelft</span><span class="o">.</span><span class="n">nl</span>
+<span class="n">Enter</span> <span class="n">the</span> <span class="n">registration</span> <span class="n">token</span><span class="p">:</span>
+<span class="n">xxxxxxxxxxxxxxx</span>
+<span class="n">Verifying</span> <span class="n">runner</span><span class="o">...</span> <span class="ow">is</span> <span class="n">valid</span>                        <span class="n">runner</span><span class="o">=</span><span class="n">xxxxxxx</span>
+<span class="n">Enter</span> <span class="n">a</span> <span class="n">name</span> <span class="k">for</span> <span class="n">the</span> <span class="n">runner</span><span class="o">.</span> <span class="n">This</span> <span class="ow">is</span> <span class="n">stored</span> <span class="n">only</span> <span class="ow">in</span> <span class="n">the</span> <span class="n">local</span> <span class="n">config</span><span class="o">.</span><span class="n">toml</span> <span class="n">file</span><span class="p">:</span>
+<span class="p">[</span><span class="n">xxxxxxx</span><span class="p">]:</span> <span class="n">example</span><span class="o">-</span><span class="n">runner</span>
+<span class="n">Enter</span> <span class="n">an</span> <span class="n">executor</span><span class="p">:</span> <span class="n">instance</span><span class="p">,</span> <span class="n">kubernetes</span><span class="p">,</span> <span class="n">docker</span><span class="o">-</span><span class="n">windows</span><span class="p">,</span> <span class="n">docker</span><span class="o">-</span><span class="n">autoscaler</span><span class="p">,</span> <span class="n">parallels</span><span class="p">,</span> <span class="n">shell</span><span class="p">,</span> <span class="n">ssh</span><span class="p">,</span> <span class="n">virtualbox</span><span class="p">,</span> <span class="n">docker</span><span class="o">+</span><span class="n">machine</span><span class="p">,</span> <span class="n">custom</span><span class="p">,</span> <span class="n">docker</span><span class="p">:</span>
+<span class="n">docker</span>
+<span class="n">Enter</span> <span class="n">the</span> <span class="n">default</span> <span class="n">Docker</span> <span class="n">image</span> <span class="p">(</span><span class="k">for</span> <span class="n">example</span><span class="p">,</span> <span class="n">ruby</span><span class="p">:</span><span class="mf">2.7</span><span class="p">):</span>
+<span class="n">julia</span><span class="p">:</span><span class="mf">1.6</span>
+<span class="n">Runner</span> <span class="n">registered</span> <span class="n">successfully</span><span class="o">.</span> <span class="n">Feel</span> <span class="n">free</span> <span class="n">to</span> <span class="n">start</span> <span class="n">it</span><span class="p">,</span> <span class="n">but</span> <span class="k">if</span> <span class="n">it</span><span class="s1">&#39;s running already the config should be automatically reloaded!</span>
 
-
-Enter the GitLab instance URL (for example, https://gitlab.com/):
-https://gitlab.tudelft.nl
-Enter the registration token:
-xxxxxxxxxxxxxxx
-Verifying runner... is valid                        runner=xxxxxxx
-Enter a name for the runner. This is stored only in the local config.toml file:
-[xxxxxxx]: example-runner
-Enter an executor: instance, kubernetes, docker-windows, docker-autoscaler, parallels, shell, ssh, virtualbox, docker+machine, custom, docker:
-docker
-Enter the default Docker image (for example, ruby:2.7):
-julia:1.6
-Runner registered successfully. Feel free to start it, but if it&#39;s running already the config should be automatically reloaded!
-
-Configuration (with the authentication token) was saved in &quot;/etc/gitlab-runner/config.toml&quot;
+<span class="n">Configuration</span> <span class="p">(</span><span class="k">with</span> <span class="n">the</span> <span class="n">authentication</span> <span class="n">token</span><span class="p">)</span> <span class="n">was</span> <span class="n">saved</span> <span class="ow">in</span> <span class="s2">&quot;/etc/gitlab-runner/config.toml&quot;</span>
 </pre></div>
 </div>
 </section>

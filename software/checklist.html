@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>FAIR software checklist &#8212; DCC Guides</title>
+    <title>FAIR checklist for research software &#8212; DCC Guides</title>
   
   
   
@@ -189,7 +189,7 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="getting_started.html">Getting started</a></li>
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="fair.html">FAIR Software</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">FAIR software checklist</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">FAIR checklist for research software</a></li>
 <li class="toctree-l2"><a class="reference internal" href="project_cards.html">FAIR assessment cards</a></li>
 <li class="toctree-l2"><a class="reference internal" href="software_management_plan.html">Software management plan</a></li>
 <li class="toctree-l2"><a class="reference external" href="https://tu-delft-dcc.github.io/FAIR4RS/">FAIR for Research Software Program Spring 2023</a></li>
@@ -402,7 +402,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>FAIR software checklist</h1>
+    <h1>FAIR checklist for research software</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -412,17 +412,9 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#checklist">Checklist</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#version-control">Version Control</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#documentation-repository">Documentation - Repository</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#documentation-software">Documentation - Software</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#testing">Testing</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#releases">Releases</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#code-quality">Code quality</a></li>
-</ul>
-</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#checklist">Checklist</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#example-repositories">Example repositories</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#references">References</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#acknowledgements">Acknowledgements</a></li>
 </ul>
             </nav>
         </div>
@@ -434,14 +426,28 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="fair-software-checklist">
-<h1>FAIR software checklist<a class="headerlink" href="#fair-software-checklist" title="Permalink to this headline">#</a></h1>
-<p>To ensure your research software is findable and usable by other researchers, we have compiled a checklist to improve its FAIRness (Findable, Accessible, Interoperable, Reusable).</p>
+  <section class="tex2jax_ignore mathjax_ignore" id="fair-checklist-for-research-software">
+<h1>FAIR checklist for research software<a class="headerlink" href="#fair-checklist-for-research-software" title="Permalink to this headline">#</a></h1>
+<p>The goal of the FAIR principles is to improve research transparency, reproducibility and reusability. To achieve this, your research needs to be described through metadata, should be open for inspection, well-documented, and well structured. This ensures that it can be replicated, expanded upon, merged, reinterpreted, or reimplemented. The acronym FAIR stands for:</p>
+<ul class="simple">
+<li><p><strong>F</strong>indable: Your research software can be easily found (i.e. has rich metadata, unique identifiers).</p></li>
+<li><p><strong>A</strong>ccessible: Once found, it can be accessed, ideally through well-defined and open protocols.</p></li>
+<li><p><strong>I</strong>nteroperable: Your research is compatible with other datasets, tools, and workflows, allowing for integration and reuse across various applications and fields.</p></li>
+<li><p><strong>R</strong>eusable: The ultimate goal is that your research outputs can be reused in different contexts. This requires comprehensive documentation, clear licensing, and a modular structure.</p></li>
+</ul>
+<p>While originally targetting data management, the FAIR for Research Software (FAIR4RS) extends these principles to research software, which, unlike data, is executable and evolves over time. Ensuring the findability of software involves metadata, identifiers, and version control systems, while accessibility includes guidelines for obtaining, installing, and running the software. Interoperability involves adherence to community-driven standards or protocols, and reusability requires detailed documentation and user guides to effectively apply the software in new research projects.</p>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://zenodo.org/records/6623556">FAIR Guiding Principles for scientific data management and stewardship to research software</a></p></li>
+<li><p><a class="reference external" href="https://zenodo.org/communities/fair4rs/records?q=&amp;l=list&amp;p=1&amp;s=10&amp;sort=newest">FAIR4RS community in Zenodo</a></p></li>
+<li><p><a class="reference external" href="https://fair-software.nl/">FAIR Software Checklist</a> - five recommendations for FAIR (scientific) software</p></li>
+</ul>
+</div>
 <section id="checklist">
 <h2>Checklist<a class="headerlink" href="#checklist" title="Permalink to this headline">#</a></h2>
-<p>The checklist below is in part based on the checklist provided by the <a class="reference external" href="https://guide.esciencecenter.nl/#/nlesc_specific/checklist_matrix">eScience Center</a>, licensed under CC BY 4.0.</p>
-<section id="version-control">
-<h3>Version Control<a class="headerlink" href="#version-control" title="Permalink to this headline">#</a></h3>
+<div class="admonition-version-control admonition">
+<p class="admonition-title">Version Control  </p>
 <p><em>Essential</em></p>
 <ul class="contains-task-list simple">
 <li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Use <a class="reference external" href="https://www.atlassian.com/git">git</a> as a version control system</p></li>
@@ -450,84 +456,109 @@ document.write(`
 <p><em>Recommended</em></p>
 <ul class="contains-task-list simple">
 <li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Make your repository <a class="reference external" href="https://coderefinery.github.io/social-coding/">public</a></p></li>
-<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> <a class="reference external" href="https://coderefinery.github.io/git-branch-design/">Branch hygiene</a></p></li>
-<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Use a branching model (<a class="reference external" href="https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow">GitFlow</a>)</p></li>
-<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> <a class="reference external" href="https://www.git-scm.com/book/en/v2/Distributed-Git-Contributing-to-a-Project#_commit_guidelines">Meaningful commit messages</a></p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Consider your <a class="reference external" href="https://coderefinery.github.io/git-branch-design/">branch hygiene</a></p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Use a branching model (e.g. <a class="reference external" href="https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow">GitFlow</a>)</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Use <a class="reference external" href="https://www.git-scm.com/book/en/v2/Distributed-Git-Contributing-to-a-Project#_commit_guidelines">meaningful commit messages</a></p></li>
 </ul>
-</section>
-<section id="documentation-repository">
-<h3>Documentation - Repository<a class="headerlink" href="#documentation-repository" title="Permalink to this headline">#</a></h3>
+</div>
+<div class="admonition-collaboration admonition">
+<p class="admonition-title">Collaboration</p>
 <p><em>Essential</em></p>
 <ul class="contains-task-list simple">
-<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> <a class="reference external" href="https://github.com/18F/open-source-guide/blob/18f-pages/pages/making-readmes-readable.md">README</a></p></li>
-<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> <a class="reference external" href="https://doi.org/10.5281/zenodo.4629662">LICENSE</a></p></li>
-<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> <a class="reference external" href="https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-citation-files">CITATION</a></p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Make use of <a class="reference external" href="https://docs.github.com/en/issues/tracking-your-work-with-issues/about-issues">GitHub issues</a></p></li>
 </ul>
 <p><em>Recommended</em></p>
 <ul class="contains-task-list simple">
-<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Make use of <a class="reference external" href="https://docs.github.com/en/issues/tracking-your-work-with-issues/about-issues">Github issues</a></p></li>
-<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Contribution <a class="reference external" href="https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contributions/setting-guidelines-for-repository-contributors">guidelines</a></p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> <a class="reference external" href="https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contributions/setting-guidelines-for-repository-contributors">Contribution guidelines</a></p></li>
 <li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> <a class="reference external" href="https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contributions/adding-a-code-of-conduct-to-your-project">Code of conduct</a></p></li>
 </ul>
-</section>
-<section id="documentation-software">
-<h3>Documentation - Software<a class="headerlink" href="#documentation-software" title="Permalink to this headline">#</a></h3>
+</div>
+<div class="admonition-project-documentation admonition">
+<p class="admonition-title">Project documentation</p>
+<p><em>Essential</em></p>
+<ul class="contains-task-list simple">
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> <a class="reference external" href="https://www.makeareadme.com">README</a></p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Apply a TU Delft pre-approved <a class="reference external" href="https://zenodo.org/records/4629635">LICENSE</a></p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> <a class="reference external" href="https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-citation-files">CITATION</a></p></li>
+</ul>
+</div>
+<div class="admonition-software-documentation admonition">
+<p class="admonition-title">Software documentation</p>
 <p><em>Essential</em></p>
 <ul class="contains-task-list simple">
 <li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Source code documentation (<a class="reference external" href="https://numpydoc.readthedocs.io/en/latest/format.html">docstrings</a>)</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Document your project dependencies</p></li>
 <li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Installation instructions</p></li>
-<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Usage documentation</p></li>
-<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Developer setup</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> User documentation</p></li>
 </ul>
 <p><em>Recommended</em></p>
 <ul class="contains-task-list simple">
-<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Examples and tutorials (Jupyter notebooks, videos, screencasts)</p></li>
-<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Website (<a class="reference external" href="https://pages.github.com/">github.io pages</a>, <a class="reference external" href="https://readthedocs.org/">Readthedocs</a>, <a class="reference external" href="https://jupyterbook.org/intro.html">JupyterBook</a></p></li>
-<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Build <a class="reference external" href="https://developer.lsst.io/python/numpydoc.html">API reference</a> from docstrings</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Developer documentation and setup</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Examples and tutorials (e.g. Jupyter Notebooks)</p></li>
 </ul>
-</section>
-<section id="testing">
-<h3>Testing<a class="headerlink" href="#testing" title="Permalink to this headline">#</a></h3>
+<p><em>Optional</em></p>
+<ul class="contains-task-list simple">
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Documentation tools (<a class="reference external" href="https://coderefinery.github.io/documentation/sphinx/">Sphinx</a>, <a class="reference external" href="https://jupyterbook.org/intro.html">JupyterBook</a>, <a class="reference external" href="https://quarto.org/docs/guide/">Quarto</a>)</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Build an <a class="reference external" href="https://developer.lsst.io/python/numpydoc.html">API reference</a> from docstrings</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Hosting (<a class="reference external" href="https://pages.github.com/">GitHub Pages</a>, <a class="reference external" href="https://readthedocs.org/">Readthedocs</a>)</p></li>
+</ul>
+</div>
+<div class="admonition-software-testing admonition">
+<p class="admonition-title">Software testing</p>
+<p><em>Essential</em></p>
+<ul class="contains-task-list simple">
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Installation/execution verification</p></li>
+</ul>
 <p><em>Recommended</em></p>
 <ul class="contains-task-list simple">
 <li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> <a class="reference external" href="https://swcarpentry.github.io/python-novice-inflammation/10-defensive.html">Defensive programming</a></p></li>
 <li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Test your software with <a class="reference external" href="https://the-turing-way.netlify.app/reproducible-research/testing/testing-integrationtest.html">integration tests</a> and <a class="reference external" href="https://the-turing-way.netlify.app/reproducible-research/testing/testing-unittest.html">unit tests</a></p></li>
-<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> User installation test</p></li>
-<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Make use of <a class="reference external" href="https://the-turing-way.netlify.app/reproducible-research/ci/ci-options.html">Continuous Integration</a></p></li>
-<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Code coverage check (<a class="reference external" href="https://about.codecov.io/">Codecov</a>, <a class="reference external" href="https://sonarcloud.io/">Sonarcloud</a>, <a class="reference external" href="https://www.travis-ci.com/">Travis</a>)</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Make use of <a class="reference external" href="https://coderefinery.github.io/testing/continuous-integration/">Continuous Integration</a> to automate testing</p></li>
 </ul>
-</section>
-<section id="releases">
-<h3>Releases<a class="headerlink" href="#releases" title="Permalink to this headline">#</a></h3>
+<p><em>Optional</em></p>
+<ul class="contains-task-list simple">
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Code coverage check (e.g. <a class="reference external" href="https://sonarcloud.io/">Sonarcloud</a>, <a class="reference external" href="https://about.codecov.io">codecov</a>)</p></li>
+</ul>
+</div>
+<div class="admonition-software-quality admonition">
+<p class="admonition-title">Software quality</p>
+<p><em>Essential</em></p>
+<ul class="contains-task-list simple">
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> <a class="reference external" href="https://coderefinery.github.io/reproducible-research/organizing-projects/">Organize</a> your project for reproducibility</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> <a class="reference external" href="https://coderefinery.github.io/reproducible-research/dependencies/">Record and manage</a> your software dependencies</p></li>
+</ul>
+<p><em>Recommended</em></p>
+<ul class="contains-task-list simple">
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Make <a class="reference external" href="https://refactoring.guru/refactoring">refactoring</a> part of your workflow</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Follow <a class="reference external" href="https://alan-turing-institute.github.io/rse-course/html/module07_construction_and_design/index.html">best coding practices</a></p></li>
+</ul>
+<p><em>Recommended for Python</em></p>
+<ul class="contains-task-list simple">
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Follow <a class="reference external" href="https://realpython.com/python-pep8/">PEP8 guidelines</a></p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Use a tool for dependency management (e.g. <a class="reference external" href="https://the-turing-way.netlify.app/reproducible-research/renv/renv-package.html">poetry</a>)</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Use linter (e.g. <a class="reference external" href="https://pypi.org/project/pylint/">pylint</a>, <a class="reference external" href="https://pypi.org/project/flake8/">flake8</a>)</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Use a formatter (e.g. <a class="reference external" href="https://github.com/psf/black">black</a>)</p></li>
+</ul>
+</div>
+<div class="admonition-releases admonition">
+<p class="admonition-title">Releases</p>
 <p><em>Essential</em></p>
 <ul class="contains-task-list simple">
 <li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Obtain a DOI (<a class="reference external" href="https://zenodo.org/">Zenodo</a> or <a class="reference external" href="https://data.4tu.nl/info/about-your-data/getting-started">4TU.ResearchData</a>)</p></li>
 </ul>
 <p><em>Recommended</em></p>
 <ul class="contains-task-list simple">
-<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> <a class="reference external" href="https://semver.org/">Semantic versioning</a></p></li>
-<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Tagged releases (<a class="reference external" href="https://docs.github.com/en/repositories/releasing-projects-on-github">GitHub</a>)</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Use <a class="reference external" href="https://semver.org/">semantic versioning</a></p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Create tagged releases (<a class="reference external" href="https://docs.github.com/en/repositories/releasing-projects-on-github">GitHub</a>)</p></li>
 <li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> <a class="reference external" href="https://keepachangelog.com/en/1.0.0/">CHANGELOG</a></p></li>
-<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Upload to registry (<a class="reference external" href="https://realpython.com/pypi-publish-python-package/">PyPI</a>, <a class="reference external" href="https://conda.io/projects/conda-build/en/latest/user-guide/tutorials/build-pkgs.html">conda</a>, <a class="reference external" href="https://docs.docker.com/docker-hub/repos/">DockerHub</a>)</p></li>
-<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> <a class="reference external" href="https://docs.github.com/en/repositories/releasing-projects-on-github/managing-releases-in-a-repository">Release guide</a></p></li>
-<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Continuous Integration for build and release</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Upload to <a class="reference external" href="https://github.com/NLeSC/awesome-research-software-registries">registry</a> (e.g. <a class="reference external" href="https://realpython.com/pypi-publish-python-package/">PyPI</a>, <a class="reference external" href="https://conda.io/projects/conda-build/en/latest/user-guide/tutorials/build-pkgs.html">conda</a>)</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> <a class="reference external" href="https://docs.github.com/en/repositories/releasing-projects-on-github/managing-releases-in-a-repository">Releasing guide</a></p></li>
 </ul>
-</section>
-<section id="code-quality">
-<h3>Code quality<a class="headerlink" href="#code-quality" title="Permalink to this headline">#</a></h3>
-<p><em>Essential</em></p>
+<p><em>Optional</em></p>
 <ul class="contains-task-list simple">
-<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Project <a class="reference external" href="https://coderefinery.github.io/reproducible-research/organizing-projects/">organisation</a></p></li>
-<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Record <a class="reference external" href="https://coderefinery.github.io/reproducible-research/dependencies/">software dependencies</a></p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> <a class="reference external" href="https://the-turing-way.netlify.app/reproducible-research/ci/ci-options.html">Continuous Integration</a> for automated build and release</p></li>
 </ul>
-<p><em>Recommended</em></p>
-<ul class="contains-task-list simple">
-<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Follow <a class="reference external" href="https://realpython.com/python-pep8/">PEP8 guidelines</a></p></li>
-<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Use linter (e.g. <a class="reference external" href="https://pypi.org/project/pylint/">pylint</a>, <a class="reference external" href="https://pypi.org/project/flake8/">flake8</a>)</p></li>
-<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Use a formatter (e.g. <a class="reference external" href="https://github.com/psf/black">black</a>, <a class="reference external" href="https://github.com/google/yapf">yapf</a>)</p></li>
-<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Follow <a class="reference external" href="https://alan-turing-institute.github.io/rse-course/html/module07_construction_and_design/index.html">best coding practices</a></p></li>
-</ul>
-</section>
+</div>
 </section>
 <section id="example-repositories">
 <h2>Example repositories<a class="headerlink" href="#example-repositories" title="Permalink to this headline">#</a></h2>
@@ -535,17 +566,20 @@ document.write(`
 <li><p><a class="reference external" href="https://github.com/matchms/matchms">eScience Center - matchms</a> - Matchms is an open-source Python package to import, process, clean, and compare mass spectrometry data.</p></li>
 <li><p><a class="reference external" href="https://github.com/SATAY-LL/Transposonmapper">TU Delft - Transposonmapper</a> - Transposonmapper is an open-source python package and Docker image for mapping transposons from sequencing data.</p></li>
 </ul>
-</section>
-<section id="references">
-<h2>References<a class="headerlink" href="#references" title="Permalink to this headline">#</a></h2>
-<p>For a full overview of the principles behind FAIR software, please have a look at the following resources:</p>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p>For more information on the principles behind FAIR software, please have a look at the following resources:</p>
 <ul class="simple">
-<li><p><a class="reference external" href="https://fair-software.nl/">FAIR software checklist</a> - five recommendations for FAIR (scientific) software</p></li>
-<li><p><a class="reference external" href="https://content.iospress.com/articles/data-science/ds190026">Towards FAIR principles for research software</a> - publication on the translation of FAIR principles for data to FAIR principles for software.</p></li>
-<li><p><a class="reference external" href="https://the-turing-way.netlify.app/reproducible-research/reproducible-research.html">Guide for Reproducible Research</a> - general guide to reproducible research</p></li>
-<li><p><a class="reference external" href="https://scicomp.aalto.fi/scicomp/zen-of-scicomp/#">The Zen of Scientific Computing</a> - Scientific computing tips from Aalto University</p></li>
+<li><p><a class="reference external" href="https://the-turing-way.netlify.app/reproducible-research/reproducible-research.html">The Turing Way - Guide for Reproducible Research</a> - general guide to reproducible research</p></li>
+<li><p><a class="reference external" href="https://content.iospress.com/articles/data-science/ds190026">Towards FAIR principles for research software</a> - publication on the translation of FAIR principles for data to FAIR principles for software</p></li>
 <li><p><a class="reference external" href="https://doi.org/10.1515/itit-2019-0040">From FAIR research data toward FAIR and open research software</a></p></li>
+<li><p><a class="reference external" href="https://zenodo.org/records/6623556">FAIR Principles for Research Software</a></p></li>
 </ul>
+</div>
+</section>
+<section id="acknowledgements">
+<h2>Acknowledgements<a class="headerlink" href="#acknowledgements" title="Permalink to this headline">#</a></h2>
+<p>The checklist was in part based on the checklist provided by the <a class="reference external" href="https://guide.esciencecenter.nl/#/nlesc_specific/checklist_matrix">eScience Center</a>, licensed under CC BY 4.0.</p>
 </section>
 </section>
 
@@ -616,17 +650,9 @@ document.write(`
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#checklist">Checklist</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#version-control">Version Control</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#documentation-repository">Documentation - Repository</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#documentation-software">Documentation - Software</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#testing">Testing</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#releases">Releases</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#code-quality">Code quality</a></li>
-</ul>
-</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#checklist">Checklist</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#example-repositories">Example repositories</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#references">References</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#acknowledgements">Acknowledgements</a></li>
 </ul>
   </nav></div>
 
