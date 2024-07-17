@@ -5,7 +5,7 @@ _This content is automatically generated, all changes made will be lost._
 | Section        | Title                                     | Lead maintainer       | Backup maintainer   |
 |:---------------|:------------------------------------------|:----------------------|:--------------------|
 | containers     | Docker users                              | Maurits Kok           |                     |
-| data           | Request Project Drive                     | Ashley Cryan          |                     |
+| data           | RequestProject Drive                      | Ashley Cryan          |                     |
 | data           | Sync with Unison                          | Ashley Cryan          |                     |
 | data           | Mount Project Drive                       | Raúl Ortiz Merino     | Maurits Kok         |
 | data           | Data publishing                           | Aleksandra Wilczynska |                     |
@@ -17,7 +17,7 @@ _This content is automatically generated, all changes made will be lost._
 | infrastructure | Request VPS                               | Ashley Cryan          |                     |
 | infrastructure | Set up an Apache web server               | Ashley Cryan          |                     |
 | resources      | Curriculum                                | Ashley Cryan          | Maurits Kok         |
-| software       | FAIR checklist                            | Maurits Kok           |                     |
+| software       | FAIR4RS checklist                         | Maurits Kok           | Elviss Dvinskis     |
 | software       | Software Management Plan                  | Maurits Kok           |                     |
 | software       | Branch management                         | Maurits Kok           |                     |
 | testing        | Testing with MATLAB                       | Maurits Kok           |                     |

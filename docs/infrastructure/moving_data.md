@@ -13,7 +13,7 @@ $ scp -o "ProxyCommand ssh -W %h:%p <bastion-username>@linux-bastion-ex.tudelft.
 
 ## Copy Data using SSH Tunneling
 
-If a default [ssh tunneling](##ssh-tunneling) was configured correctly. Data can be copied to and from a remote host as follows:
+If a default [ssh tunneling](VPS_SSH.md) was configured correctly. Data can be copied to and from a remote host as follows:
 
 ```bash
 # Copy TO Remote Host

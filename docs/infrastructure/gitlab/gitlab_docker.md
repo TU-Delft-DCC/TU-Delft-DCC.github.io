@@ -151,14 +151,15 @@ In response to this command you will be prompted to answer the following questio
 - Enter name of the runner: example-runner
 - Type of executor: docker
 - Default Docker image: Specify the same image as the one specified in the 'image' field of the .gitlab-ci.yml file.
-
 ```
+
 See an example below.
 
-```shell
-~$ docker run --rm -it -v /srv/gitlab-runner/config:/etc/gitlab-runner gitlab/gitlab-runner register
+```bash
+docker run --rm -it -v /srv/gitlab-runner/config:/etc/gitlab-runner gitlab/gitlab-runner register
+```
 
-
+```
 Enter the GitLab instance URL (for example, https://gitlab.com/):
 https://gitlab.tudelft.nl
 Enter the registration token:

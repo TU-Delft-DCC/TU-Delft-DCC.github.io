@@ -59,6 +59,5 @@ parts:
   - caption: 🤝 Community
     chapters:
       - file: community/dcc
-      - file: community/dcc_projects
       - file: community/contribute
       - file: community/code_of_conduct
