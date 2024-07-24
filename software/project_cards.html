@@ -425,14 +425,15 @@ document.write(`
 <p class="card-text"><strong>Version Control</strong></p>
 </div>
 <div class="card-body docutils">
-<div class="highlight-md notranslate"><div class="highlight"><pre><span></span><span class="ge">_Essential_</span>  
+<div class="highlight-md notranslate"><div class="highlight"><pre><span></span><span class="ge">_Essential_</span>
 <span class="k">- [ ]</span> Use [<span class="nt">git</span>](<span class="na">https://www.atlassian.com/git</span>) as a version control system 
 <span class="k">- [ ]</span> Upload your project on [<span class="nt">GitHub</span>](<span class="na">https://github.com/</span>) or [<span class="nt">TU Delft GitLab</span>](<span class="na">https://gitlab.tudelft.nl/</span>)
 
 <span class="ge">_Recommended_</span>  
 <span class="k">- [ ]</span> Make your repository [<span class="nt">public</span>](<span class="na">https://coderefinery.github.io/social-coding/</span>)
-<span class="k">- [ ]</span> [<span class="nt">Branch hygiene</span>](<span class="na">https://coderefinery.github.io/git-branch-design/</span>)
-<span class="k">- [ ]</span> [<span class="nt">Meaningful commit messages</span>](<span class="na">https://www.git-scm.com/book/en/v2/Distributed-Git-Contributing-to-a-Project#_commit_guidelines</span>)
+<span class="k">- [ ]</span> Consider your [<span class="nt">branch hygiene</span>](<span class="na">https://coderefinery.github.io/git-branch-design/</span>)
+<span class="k">- [ ]</span> Use a branching model (e.g. [<span class="nt">GitFlow</span>](<span class="na">https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow</span>))
+<span class="k">- [ ]</span> Use [<span class="nt">meaningful commit messages</span>](<span class="na">https://www.git-scm.com/book/en/v2/Distributed-Git-Contributing-to-a-Project#_commit_guidelines</span>)
 </pre></div>
 </div>
 </div>
@@ -441,19 +442,15 @@ document.write(`
 <div class="d-flex col-lg-12 p-2 docutils">
 <div class="card w-100 shadow docutils">
 <div class="card-header bg-info docutils">
-<p class="card-text"><strong>Dependency management</strong></p>
+<p class="card-text"><strong>Collaboration</strong></p>
 </div>
 <div class="card-body docutils">
-<div class="highlight-md notranslate"><div class="highlight"><pre><span></span><span class="ge">_Essential_</span>
-<span class="k">- [ ]</span> Document your project dependencies
-<span class="k">- [ ]</span> Provide instructions for replicating the computational environment
+<div class="highlight-md notranslate"><div class="highlight"><pre><span></span><span class="ge">_Essential_</span>  
+<span class="k">- [ ]</span> Make use of [<span class="nt">GitHub issues</span>](<span class="na">https://docs.github.com/en/issues/tracking-your-work-with-issues/about-issues</span>)
 
 <span class="ge">_Recommended_</span>
-<span class="k">- [ ]</span> Use a [<span class="nt">dependency manager</span>](<span class="na">https://the-turing-way.netlify.app/reproducible-research/renv/renv-package.html</span>)
-<span class="k">- [ ]</span> Pin [<span class="nt">exact versions</span>](<span class="na">https://github.com/conda/conda-lock</span>) used to generate your environment
-
-<span class="ge">_Optional_</span>
-<span class="k">- [ ]</span> [<span class="nt">Containerized workflow</span>](<span class="na">https://the-turing-way.netlify.app/reproducible-research/renv/renv-containers.html</span>)
+<span class="k">- [ ]</span> [<span class="nt">Contribution guidelines</span>](<span class="na">https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contributions/setting-guidelines-for-repository-contributors</span>)
+<span class="k">- [ ]</span> [<span class="nt">Code of conduct</span>](<span class="na">https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contributions/adding-a-code-of-conduct-to-your-project</span>)
 </pre></div>
 </div>
 </div>
@@ -466,13 +463,9 @@ document.write(`
 </div>
 <div class="card-body docutils">
 <div class="highlight-md notranslate"><div class="highlight"><pre><span></span><span class="ge">_Essential_</span>  
-<span class="k">- [ ]</span> [<span class="nt">README</span>](<span class="na">https://github.com/18F/open-source-guide/blob/18f-pages/pages/making-readmes-readable.md</span>)
-<span class="k">- [ ]</span> [<span class="nt">LICENSE</span>](<span class="na">https://doi.org/10.5281/zenodo.4629662</span>)
+<span class="k">- [ ]</span> [<span class="nt">README</span>](<span class="na">https://www.makeareadme.com</span>)
+<span class="k">- [ ]</span> Apply a TU Delft pre-approved [<span class="nt">LICENSE</span>](<span class="na">https://zenodo.org/records/4629635</span>)
 <span class="k">- [ ]</span> [<span class="nt">CITATION</span>](<span class="na">https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-citation-files</span>)
-
-<span class="ge">_Recommended_</span>  
-<span class="k">- [ ]</span> Make use of [<span class="nt">Github issues</span>](<span class="na">https://docs.github.com/en/issues/tracking-your-work-with-issues/about-issues</span>)
-<span class="k">- [ ]</span> [<span class="nt">Code of conduct</span>](<span class="na">https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contributions/adding-a-code-of-conduct-to-your-project</span>)
 </pre></div>
 </div>
 </div>
@@ -485,38 +478,19 @@ document.write(`
 </div>
 <div class="card-body docutils">
 <div class="highlight-md notranslate"><div class="highlight"><pre><span></span><span class="ge">_Essential_</span>  
+<span class="k">- [ ]</span> Source code documentation ([docstrings](https://numpydoc.readthedocs.io/en/latest/format.html))
+<span class="k">- [ ]</span> Document your project dependencies
 <span class="k">- [ ]</span> Installation instructions
 <span class="k">- [ ]</span> User documentation
-<span class="k">- [ ]</span> Developer documentation
-<span class="k">- [ ]</span> Source code documentation ([docstrings](https://numpydoc.readthedocs.io/en/latest/format.html))
 
 <span class="ge">_Recommended_</span>  
-<span class="k">- [ ]</span> Examples and tutorials (Jupyter notebooks, videos, screencasts)
-<span class="k">- [ ]</span> Automate documentation building with [<span class="nt">sphinx</span>](<span class="na">https://coderefinery.github.io/sphinx-lesson/</span>)
-<span class="k">- [ ]</span> Website ([github.io pages](https://pages.github.com/), [<span class="nt">Readthedocs</span>](<span class="na">https://readthedocs.org/</span>), [<span class="nt">JupyterBook</span>](<span class="na">https://jupyterbook.org/intro.html</span>))
+<span class="k">- [ ]</span> Developer documentation and setup
+<span class="k">- [ ]</span> Examples and tutorials (e.g. Jupyter Notebooks)
 
-<span class="ge">_Optional_</span>  
-<span class="k">- [ ]</span> Build [<span class="nt">API reference</span>](<span class="na">https://developer.lsst.io/python/numpydoc.html</span>) from docstrings
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-<div class="d-flex col-lg-12 p-2 docutils">
-<div class="card w-100 shadow docutils">
-<div class="card-header bg-info docutils">
-<p class="card-text"><strong>Collaboration</strong></p>
-</div>
-<div class="card-body docutils">
-<div class="highlight-md notranslate"><div class="highlight"><pre><span></span><span class="ge">_Essential_</span>
-<span class="k">- [ ]</span> Make use of [<span class="nt">Github issues</span>](<span class="na">https://docs.github.com/en/issues/tracking-your-work-with-issues/about-issues</span>)
-<span class="k">- [ ]</span> Provide contribution [<span class="nt">guidelines</span>](<span class="na">https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contributions/setting-guidelines-for-repository-contributors</span>)
-
-<span class="ge">_Recommended_</span>
-<span class="k">- [ ]</span> Choose a branching model ([DCC Guides on branches](https://tu-delft-dcc.github.io/software/git/branch_management.html))
-<span class="k">- [ ]</span> Make use of [<span class="nt">issue templates</span>](<span class="na">https://docs.github.com/en/communities/using-templates-to-encourage-useful-issues-and-pull-requests/configuring-issue-templates-for-your-repository</span>)
-<span class="k">- [ ]</span> Provide a [<span class="nt">Code of Conduct</span>](<span class="na">https://www.contributor-covenant.org/</span>)
-<span class="k">- [ ]</span> Use [<span class="nt">semantic versioning</span>](<span class="na">https://semver.org/</span>) for your releases
+<span class="ge">_Optional_</span>
+<span class="k">- [ ]</span> Documentation tools ([Sphinx](https://coderefinery.github.io/documentation/sphinx/), [<span class="nt">JupyterBook</span>](<span class="na">https://jupyterbook.org/intro.html</span>), [<span class="nt">Quarto</span>](<span class="na">https://quarto.org/docs/guide/</span>))
+<span class="k">- [ ]</span> Build an [<span class="nt">API reference</span>](<span class="na">https://developer.lsst.io/python/numpydoc.html</span>) from docstrings
+<span class="k">- [ ]</span> Hosting ([GitHub Pages](https://pages.github.com/), [<span class="nt">Readthedocs</span>](<span class="na">https://readthedocs.org/</span>))
 </pre></div>
 </div>
 </div>
@@ -529,14 +503,15 @@ document.write(`
 </div>
 <div class="card-body docutils">
 <div class="highlight-md notranslate"><div class="highlight"><pre><span></span><span class="ge">_Essential_</span>
-<span class="k">- [ ]</span> Document verification of user installation
-<span class="k">- [ ]</span> Document how users can verify the proper functioning of the software
+<span class="k">- [ ]</span> Installation/execution verification
 
-<span class="ge">_Recommended_</span>  
-<span class="k">- [ ]</span> [<span class="nt">Defensive programming</span>](<span class="na">https://swcarpentry.github.io/python-novice-inflammation/10-defensive/index.html</span>)
+<span class="ge">_Recommended_</span>
+<span class="k">- [ ]</span> [<span class="nt">Defensive programming</span>](<span class="na">https://swcarpentry.github.io/python-novice-inflammation/10-defensive.html</span>)
 <span class="k">- [ ]</span> Test your software with [<span class="nt">integration tests</span>](<span class="na">https://the-turing-way.netlify.app/reproducible-research/testing/testing-integrationtest.html</span>) and [<span class="nt">unit tests</span>](<span class="na">https://the-turing-way.netlify.app/reproducible-research/testing/testing-unittest.html</span>)
-<span class="k">- [ ]</span> Make use of [<span class="nt">Continuous Integration</span>](<span class="na">https://the-turing-way.netlify.app/reproducible-research/ci/ci-options.html</span>)
-<span class="k">- [ ]</span> Code coverage check ([Codecov](https://about.codecov.io/), [<span class="nt">Sonarcloud</span>](<span class="na">https://sonarcloud.io/</span>), [<span class="nt">Travis</span>](<span class="na">https://www.travis-ci.com/</span>))
+<span class="k">- [ ]</span> Make use of [<span class="nt">Continuous Integration</span>](<span class="na">https://coderefinery.github.io/testing/continuous-integration/</span>) to automate testing
+
+<span class="ge">_Optional_</span>
+<span class="k">- [ ]</span> Code coverage check (e.g. [<span class="nt">Sonarcloud</span>](<span class="na">https://sonarcloud.io/</span>), [<span class="nt">codecov</span>](<span class="na">https://about.codecov.io</span>))
 </pre></div>
 </div>
 </div>
@@ -545,18 +520,22 @@ document.write(`
 <div class="d-flex col-lg-12 p-2 docutils">
 <div class="card w-100 shadow docutils">
 <div class="card-header bg-info docutils">
-<p class="card-text"><strong>Code quality</strong></p>
+<p class="card-text"><strong>Software quality</strong></p>
 </div>
 <div class="card-body docutils">
 <div class="highlight-md notranslate"><div class="highlight"><pre><span></span><span class="ge">_Essential_</span>
-<span class="k">- [ ]</span> Project [<span class="nt">organisation</span>](<span class="na">https://coderefinery.github.io/reproducible-research/organizing-projects/</span>)
-<span class="k">- [ ]</span> Record [<span class="nt">software dependencies</span>](<span class="na">https://coderefinery.github.io/reproducible-research/dependencies/</span>)
+<span class="k">- [ ]</span> [<span class="nt">Organize</span>](<span class="na">https://coderefinery.github.io/reproducible-research/organizing-projects/</span>) your project for reproducibility
+<span class="k">- [ ]</span> [<span class="nt">Record and manage</span>](<span class="na">https://coderefinery.github.io/reproducible-research/dependencies/</span>) your software dependencies 
 
 <span class="ge">_Recommended_</span>
-<span class="k">- [ ]</span> Follow a consistent code style, such as [<span class="nt">PEP8 guidelines</span>](<span class="na">https://realpython.com/python-pep8/</span>)
-<span class="k">- [ ]</span> Use a linter ([pylint](https://pypi.org/project/pylint/), [<span class="nt">flake8</span>](<span class="na">https://pypi.org/project/flake8/</span>))
-<span class="k">- [ ]</span> Use a formatter ([black](https://github.com/psf/black), [<span class="nt">yapf</span>](<span class="na">https://github.com/google/yapf</span>))
+<span class="k">- [ ]</span> Make [<span class="nt">refactoring</span>](<span class="na">https://refactoring.guru/refactoring</span>) part of your workflow
 <span class="k">- [ ]</span> Follow [<span class="nt">best coding practices</span>](<span class="na">https://alan-turing-institute.github.io/rse-course/html/module07_construction_and_design/index.html</span>)
+
+<span class="ge">_Recommended for Python_</span>
+<span class="k">- [ ]</span> Follow [<span class="nt">PEP8 guidelines</span>](<span class="na">https://realpython.com/python-pep8/</span>)
+<span class="k">- [ ]</span> Use a tool for dependency management (e.g. [<span class="nt">poetry</span>](<span class="na">https://the-turing-way.netlify.app/reproducible-research/renv/renv-package.html</span>))
+<span class="k">- [ ]</span> Use linter (e.g. [<span class="nt">pylint</span>](<span class="na">https://pypi.org/project/pylint/</span>), [<span class="nt">flake8</span>](<span class="na">https://pypi.org/project/flake8/</span>))
+<span class="k">- [ ]</span> Use a formatter (e.g. [<span class="nt">black</span>](<span class="na">https://github.com/psf/black</span>))
 </pre></div>
 </div>
 </div>
@@ -569,15 +548,17 @@ document.write(`
 </div>
 <div class="card-body docutils">
 <div class="highlight-md notranslate"><div class="highlight"><pre><span></span><span class="ge">_Essential_</span>  
-<span class="k">- [ ]</span> Obtain a DOI from ([Zenodo](https://zenodo.org/) or [<span class="nt">4TU.ResearchData</span>](<span class="na">https://data.4tu.nl/info/about-your-data/getting-started</span>))
+<span class="k">- [ ]</span> Obtain a DOI ([Zenodo](https://zenodo.org/) or [<span class="nt">4TU.ResearchData</span>](<span class="na">https://data.4tu.nl/info/about-your-data/getting-started</span>))
 
 <span class="ge">_Recommended_</span>  
-<span class="k">- [ ]</span> [<span class="nt">Semantic versioning</span>](<span class="na">https://semver.org/</span>)
-<span class="k">- [ ]</span> Tagged releases ([GitHub](https://docs.github.com/en/repositories/releasing-projects-on-github))
+<span class="k">- [ ]</span> Use [<span class="nt">semantic versioning</span>](<span class="na">https://semver.org/</span>)
+<span class="k">- [ ]</span> Create tagged releases ([GitHub](https://docs.github.com/en/repositories/releasing-projects-on-github))
 <span class="k">- [ ]</span> [<span class="nt">CHANGELOG</span>](<span class="na">https://keepachangelog.com/en/1.0.0/</span>)
-<span class="k">- [ ]</span> Upload to registry ([PyPI](https://realpython.com/pypi-publish-python-package/), [<span class="nt">conda</span>](<span class="na">https://conda.io/projects/conda-build/en/latest/user-guide/tutorials/build-pkgs.html</span>), [<span class="nt">DockerHub</span>](<span class="na">https://docs.docker.com/docker-hub/repos/</span>))
-<span class="k">- [ ]</span> [<span class="nt">Release guide</span>](<span class="na">https://docs.github.com/en/repositories/releasing-projects-on-github/managing-releases-in-a-repository</span>)
-<span class="k">- [ ]</span> [<span class="nt">Continuous Integration</span>](<span class="na">https://the-turing-way.netlify.app/reproducible-research/ci/ci-options</span>) for build and release
+<span class="k">- [ ]</span> Upload to [<span class="nt">registry</span>](<span class="na">https://github.com/NLeSC/awesome-research-software-registries</span>) (e.g. [<span class="nt">PyPI</span>](<span class="na">https://realpython.com/pypi-publish-python-package/</span>), [<span class="nt">conda</span>](<span class="na">https://conda.io/projects/conda-build/en/latest/user-guide/tutorials/build-pkgs.html</span>))
+<span class="k">- [ ]</span> [<span class="nt">Releasing guide</span>](<span class="na">https://docs.github.com/en/repositories/releasing-projects-on-github/managing-releases-in-a-repository</span>)
+
+<span class="ge">_Optional_</span>
+<span class="k">- [ ]</span> [<span class="nt">Continuous Integration</span>](<span class="na">https://the-turing-way.netlify.app/reproducible-research/ci/ci-options.html</span>) for automated build and release
 </pre></div>
 </div>
 </div>
