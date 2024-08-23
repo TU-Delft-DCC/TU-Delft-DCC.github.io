@@ -46,7 +46,7 @@ _These instructions were tested with an existing `id_ed25519` key, assume you al
 
 Do the following:
 
-1. log in to the server and add your public key to the file `/home/<username>/.ssh/authorized_keys`
+1. As explained above, log in to the server and add your public key to the file `/home/<username>/.ssh/authorized_keys` (this only needs to be done once).
 
 It should look like this with your own keys `XXXXXXX` and NetID filled between the `<...>` (note the `<XXXXXXX>` is much longer in reality):
 ```
