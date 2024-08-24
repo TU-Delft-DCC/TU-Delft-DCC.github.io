@@ -37,8 +37,8 @@
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
     <link rel="stylesheet" type="text/css" href="../_static/tabs.css" />
     <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/panels-bootstrap.5fd3999ee7762ccc51105388f4a9d115.css" />
     <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-bootstrap.5fd3999ee7762ccc51105388f4a9d115.css" />
     <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
@@ -413,7 +413,10 @@ document.write(`
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#set-a-default-ssh-tunneling-for-a-host-linux-terminal">Set a Default SSH Tunneling for a Host (Linux Terminal)</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tunneling-with-winscp">Tunneling with WinSCP</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tunneling-with-winscp">Tunneling with WinSCP</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#using-winscp-with-sudo-rights">Using WinSCP with sudo rights</a></li>
+</ul>
+</li>
 </ul>
             </nav>
         </div>
@@ -463,7 +466,56 @@ document.write(`
 </section>
 <section id="tunneling-with-winscp">
 <h2>Tunneling with WinSCP<a class="headerlink" href="#tunneling-with-winscp" title="Permalink to this headline">#</a></h2>
-<p>If using winscp, you will find detailed information here: <a class="reference external" href="https://winscp.net/eng/docs/ui_login_tunnel">https://winscp.net/eng/docs/ui_login_tunnel</a></p>
+<p>WinSCP is a GUI that makes it very easy to inspect, edit and transfer files on the webserver. Instructions for setting this up on a hypothetical server from the CiTG faculty are provided below. General documentation on tunneling with WinSCP are here: <a class="reference external" href="https://winscp.net/eng/docs/ui_login_tunnel">https://winscp.net/eng/docs/ui_login_tunnel</a></p>
+<p><em>These instructions were tested with an existing <code class="docutils literal notranslate"><span class="pre">id_ed25519</span></code> key, assume you already have WinSCP installed and can modify a text file on the server in your user directory using the terminal.</em></p>
+<p>Do the following:</p>
+<ol class="arabic simple">
+<li><p>As explained above, log in to the server and add your public key to the file <code class="docutils literal notranslate"><span class="pre">/home/&lt;username&gt;/.ssh/authorized_keys</span></code> (this only needs to be done once).</p></li>
+</ol>
+<p>It should look like this with your own keys <code class="docutils literal notranslate"><span class="pre">XXXXXXX</span></code> and NetID filled between the <code class="docutils literal notranslate"><span class="pre">&lt;...&gt;</span></code> (note the <code class="docutils literal notranslate"><span class="pre">&lt;XXXXXXX&gt;</span></code> is much longer in reality):</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ssh</span><span class="o">-</span><span class="n">rsa</span> <span class="o">&lt;</span><span class="n">XXXXXXX</span><span class="o">&gt;</span> <span class="n">ICT</span><span class="o">-</span><span class="n">SYSTEMS</span><span class="o">-&lt;</span><span class="n">NETID</span><span class="o">&gt;</span>
+<span class="n">ssh</span><span class="o">-</span><span class="n">rsa</span> <span class="o">&lt;</span><span class="n">XXXXXXX</span><span class="o">&gt;</span> <span class="n">ICT</span><span class="o">-</span><span class="n">SYSTEMS</span><span class="o">-&lt;</span><span class="n">NETID</span><span class="o">&gt;</span>
+<span class="n">ssh</span><span class="o">-</span><span class="n">ed25519</span> <span class="o">&lt;</span><span class="n">XXXXXXX</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="n">NETID</span><span class="o">&gt;</span><span class="nd">@tudelft</span><span class="o">.</span><span class="n">nl</span>
+</pre></div>
+</div>
+<ol class="arabic simple" start="2">
+<li><p>Using WinSCP, the following fields should be entered:</p></li>
+</ol>
+<p>On the main login settings page:</p>
+<ul class="simple">
+<li><p>File protocol: <code class="docutils literal notranslate"><span class="pre">SFTP</span></code></p></li>
+<li><p>Host name: <code class="docutils literal notranslate"><span class="pre">&lt;server&gt;.citg.tudelft.nl</span></code></p></li>
+<li><p>User name: your NetID</p></li>
+</ul>
+<ol class="arabic simple" start="3">
+<li><p>Open the “Advanced…” window</p></li>
+<li><p>On the page “Tunnel” (under heading “Connection,” still in the Advanced window):</p></li>
+</ol>
+<ul class="simple">
+<li><p>Host name: <code class="docutils literal notranslate"><span class="pre">linux-bastion-ex.tudelft.nl</span></code></p></li>
+<li><p>User name: your NetID</p></li>
+</ul>
+<ol class="arabic simple" start="5">
+<li><p>On the page “Authentication” (under heading “SSH,” still in the Advanced window):</p></li>
+</ol>
+<ul class="simple">
+<li><p>Private key file: select your private key file, for example <code class="docutils literal notranslate"><span class="pre">C:..../&lt;username&gt;/.ssh/id_ed25519</span></code></p></li>
+<li><p>Note that the app may ask you to convert your existing key to a Putty format (for example “Do you want to convert OpenSSH private key to PuTTY format?”). Click “OK” then make sure you select the new PuTTY file (e.g., <code class="docutils literal notranslate"><span class="pre">C:..../&lt;username&gt;/.ssh/id_ed25519.ppk</span></code>)</p></li>
+</ul>
+<ol class="arabic simple" start="6">
+<li><p>Save the setting and click “Login”, using your NetID password to authenticate.)</p></li>
+</ol>
+<section id="using-winscp-with-sudo-rights">
+<h3>Using WinSCP with sudo rights<a class="headerlink" href="#using-winscp-with-sudo-rights" title="Permalink to this headline">#</a></h3>
+<p>If you have sudo rights on the webserver you can use this via WinSCP as follows:</p>
+<ol class="arabic simple">
+<li><p>Once agin go to the “Advanced…” window to the “SFTP” page under heading “Environment”</p></li>
+<li><p>In field “SFTP server” enter the following: <code class="docutils literal notranslate"><span class="pre">sudo</span> <span class="pre">/usr/lib/openssh/sftp-server</span></code></p></li>
+<li><p>Save the changes</p></li>
+<li><p>Use with caution!</p></li>
+</ol>
+<p>Note that the path to <code class="docutils literal notranslate"><span class="pre">sftp-server</span></code> may be different but can be easily checked and arranged. This will not work if you change the setting and continue to use an open session.</p>
+</section>
 </section>
 </section>
 
@@ -535,7 +587,10 @@ document.write(`
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#set-a-default-ssh-tunneling-for-a-host-linux-terminal">Set a Default SSH Tunneling for a Host (Linux Terminal)</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tunneling-with-winscp">Tunneling with WinSCP</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tunneling-with-winscp">Tunneling with WinSCP</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#using-winscp-with-sudo-rights">Using WinSCP with sudo rights</a></li>
+</ul>
+</li>
 </ul>
   </nav></div>
 
