@@ -1,6 +1,6 @@
 # Working with containers
 🏗️ Under construction
 
-## Table of contents
+<!-- ## Table of contents
 ```{tableofcontents}
-```
+``` -->
