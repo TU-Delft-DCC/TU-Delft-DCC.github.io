@@ -1,9 +1,9 @@
----
+<!-- ---
 section: infrastructure
 title: Request SSL Certificate
 author_1: Ashley Cryan
 author_2:
----
+--- -->
 
 # Configure SSL certificates
 
@@ -55,7 +55,7 @@ You will be prompted to answer a series of questions:
 
 Your CSR file has now been generated. To find your CSR, take a look at the contents of your current working directory with the ls command. You should notice two new files ending with “.key” and “.csr” respectively. For example:
 
-```
+```bash
 username@externalserver ~ % ls
 -rw-r--r--. 1 root root 1082 Jan 31 12:10 mydomain.csr
 -rw-------. 1 root root 1704 Jan 31 12:10 mydomain.key
@@ -76,9 +76,9 @@ Use `scp` to secure copy .csr file from your external server. If you have follow
 
 Check to see that it saved on your local machine using `ls`:
 
-```
+```bash
 username@localmachine ~ % ls
-Applications			Movies
+Applications		Movies
 Desktop				Music
 Documents			Pictures
 Downloads			Public
