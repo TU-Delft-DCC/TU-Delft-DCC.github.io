@@ -1,15 +1,15 @@
----
+<!-- ---
 section: containers
 title: Docker users
 author_1: Maurits Kok
 author_2:
----
+--- -->
 
 # Using a docker container with a GUI
 
 Docker is an open platform for developing, shipping, and running applications. Docker provides the ability to package and run an application in a loosely isolated environment called a container. Containers are lightweight and contain everything needed to run the application, so you do not need to rely on what is currently installed on the host system. You can easily share containers while you work, and be sure that everyone you share with gets the same container that works in the same way.
 
-![image](https://user-images.githubusercontent.com/15414938/123805382-52543b00-d8ee-11eb-8f76-ae598d6fdb83.png)
+![](https://user-images.githubusercontent.com/15414938/123805382-52543b00-d8ee-11eb-8f76-ae598d6fdb83.png)
 
 **Dockerfile** – is a text document that contains all the commands you would normally execute manually in order to build a Docker image. The instructions include a choice of operating system and all the libraries we need to install into it. Docker can build images automatically by reading the instructions from a Dockerfile.  
 **Docker Images** – are the basis of containers. A Docker image is an immutable (unchangeable) file that contains the source code, libraries, dependencies, tools, and other files needed for an application to run.  
@@ -17,10 +17,13 @@ Docker is an open platform for developing, shipping, and running applications. D
 
 ## Docker installation
 
-Docker can be installed on Windows, macOS, and Linux. Please visit the [Docker website](https://docs.docker.com/get-docker/) for downloading and installation instructions. Note, you will need admin access to your system. **Please check the Issues/troubleshooting session at the end of this page if you encounter some problems during installation. If your problem is not listed you can add it as an issue in the main repository.**
+Docker can be installed on Windows, macOS, and Linux. Please visit the [Docker website](https://docs.docker.com/get-docker/) for downloading and installation instructions. Note, you will need admin access to your system. 
+
+**Please check the Issues/troubleshooting session at the end of this page if you encounter some problems during installation. If your problem is not listed you can add it as an issue in the main repository.**
 
 ### Verify Docker installation
 Run the following commands in the terminal (see below) to verify your installation:
+
 - `docker --version`   
  Will output the version number
 - `docker run hello-world`  
@@ -52,21 +55,17 @@ Desktop applications will run in Docker and will try to communicate with the X s
 
 In order to set up the environment variable, we need to add the following code to the `docker run` command in the terminal:
 
-````{tab} Windows
-```
--e DISPLAY=host.docker.internal:0
-```
-````
-````{tab} macOS
-```
--e DISPLAY=docker.for.mac.host.internal:0
-```
-````
-````{tab} Linux
-```
---net=host -e DISPLAY=:0
-```
-````
+::: {.panel-tabset}
+
+### Windows
+`-e DISPLAY=host.docker.internal:0`
+
+### macOS
+`-e DISPLAY=docker.for.mac.host.internal:0`
+
+### Linux
+`--net=host -e DISPLAY=:0`
+:::
 
 With these commands (and an active X server on the host system), any graphical output inside the container will be shown on your own desktop. 
 
@@ -86,58 +85,41 @@ For more info about mounting volumes, check this [StackOverflow question](https:
 
 To start a container from an image, we use the command `docker run <image_name>`. We also pass the additional flags `--rm` to delete the container after closing and `-it` to be able to interact with the container. Combining all arguments then leads to the following commands to run (and automatically close) the container:
 
-````{tab} Windows
-```
-docker run --rm -it -e DISPLAY=host.docker.internal:0 -v /$(pwd):/data <image_name>:<image_version> 
-```
-````
-````{tab} macOS
-```
-docker run --rm -it -e DISPLAY=docker.for.mac.host.internal:0 -v $(pwd):/data l<image_name>:<image_version>
-```
-````
-````{tab} Linux
-```
-docker run --rm -it --net=host -e DISPLAY=:0 -v $(pwd):/data <image_name>:<image_version>
-```
-````
+::: {.panel-tabset}
+### Windows
+`docker run --rm -it -e DISPLAY=host.docker.internal:0 -v /$(pwd):/data <image_name>:<image_version> `
+
+### macOS
+`docker run --rm -it -e DISPLAY=docker.for.mac.host.internal:0 -v $(pwd):/data <image_name>:<image_version>`
+
+### Linux
+`docker run --rm -it --net=host -e DISPLAY=:0 -v $(pwd):/data <image_name>:<image_version>`
+:::
 
 ## Issues/Troubleshooting
 
 - For Linux users encountering the error _Unable to init server_, please run `xhost +` in the terminal and rerun the `docker run` command. For more info, see [here](https://www.thegeekstuff.com/2010/06/xhost-cannot-open-display/).
-
 - **WSL 2 installation incomplete for Windows users** 
     - Enable the virtualization in the BIOS
     - Follow ALL the steps described in: https://docs.microsoft.com/en-us/windows/wsl/install-manual
-    
 - Failing to port a display in the docker container for Mac users.
     - Solution: Change the docker run command by this one , 
-
     `docker run --rm -it -e DISPLAY=IPADDRESS:0 -v $(pwd):/data <image_name>:<image_version>`
-
     - The *IPADDRESS* is gotten from typing `ifconfig` in the terminal. 
-
 - Failing to run the pipeline once the GUI is open
     - Check that all documents are closed before run it , namely the *Getting started* and the *adapter files* documents. 
-
 - Failing to mount an external hard drive in Windows when running a docker container 
-
     - Error:
-
-        ```bash
-
+```bash
         libGL error: No matching fbConfigs or visuals found
         libGL error: failed to load driver: swrast
-
-        ```
-
+```
     - Solution (noy yet found):
-
 - Look into this links: 
     - https://stackoverflow.com/questions/46586013/glxgears-not-working-inside-of-docker
     
 
-## References
+<!-- ## References
 - https://medium.com/better-programming/running-desktop-apps-in-docker-43a70a5265c4
 - https://coderefinery.github.io/installation/git-in-terminal/#git-in-terminal
-- https://ucsbcarpentry.github.io/2019-10-24-gitbash/setup.html
+- https://ucsbcarpentry.github.io/2019-10-24-gitbash/setup.html -->
