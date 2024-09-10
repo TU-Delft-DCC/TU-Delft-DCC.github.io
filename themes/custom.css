@@ -1,0 +1,17 @@
+.navbar {
+  background-color: #E0F7FA !important;
+}
+
+.navbar .navbar-nav .nav-link {
+    color: #0076C2 !important;
+}
+
+.navbar-brand {
+  font-size: 1.4em;
+  font-weight: bold;
+  color: #00A6D6 !important;
+
+.navbar-brand img {
+  max-height: 45px;
+  height: auto;
+}
