@@ -1,9 +1,9 @@
----
+<!-- ---
 section: data
 title: Mount Project Drive
 author_1: Raúl Ortiz Merino
 author_2: Maurits Kok
----
+--- -->
 
 # Mount Project Drive on Server
 
@@ -52,9 +52,9 @@ id -g <your_netID> # Group ID
 
 You may need the values for `uid` and `gid` for step 5.
 
-```{note}
+:::{.callout-note}
 These commands are server-specific, so make sure to execute them on the server where the project drives will be mounted.
-```
+:::
 
 ### Step 5. Edit the fstab file to include project storage technical details
 The fstab file containes a list of the addresses of external file systems. In this file, the details of your project drive will need to be added in a single line. This line consists of four parts: 
@@ -66,48 +66,53 @@ The fstab file containes a list of the addresses of external file systems. In th
 
 The fstab file must be in the `/etc/` directory and can be opened with the `vi` or `nano` editor:
 
-````{tab-set}
-```{tab-item} vi
+::: {.panel-tabset}
+
+### vi
+
 In the terminal, enter the following command to open the fstab file in the vi editor:  
 `sudo vi /etc/fstab`  
 Then, switch to the insert mode (hit "i" to switch to insert mode and be able to type)
-```
 
-```{tab-item} nano
+
+### nano
 In the terminal, enter the following command to open the fstab file in the nano editor:  
 `sudo nano /etc/fstab`
-```
-````
+
+:::
 
 Add the following line to the file:
 
-```
+```bash
 <your_netID>@sftp.tudelft.nl:/staff-umbrella/<project_drive_name>  /media/<server_mount_point> fuse.sshfs  rw,noauto,users,_netdev  0  0
 ```
 
 replacing the values between `<` and `>` with your NetID, the name of your project drive, and the name of the folder you created in step 3.
 
-````{note}
+:::{.callout-note}
 
 If this configuration throws a permission error during mounting, try: 
 
-```
+```bash
 //tudelft.net/staff-umbrella/<project_drive_name>/ /media/<server_mount_point> cifs username=<your_netID>,noauto,uid=<your_uid>,gid=<your_gid>,forcegid,rw,_netdev
 
 ```
 Use the values for `uid` and `gid` from step 4.
-````
+:::
 
 Close the file editor and save the changes:
-````{tab-set}
-```{tab-item} vi
-Use `Control`+`C` followed by `:wq` to save the file and close it to get back to your terminal.
-```
 
-```{tab-item} nano
+::: {.panel-tabset}
+
+### vi
+
+Use `Control`+`C` followed by `:wq` to save the file and close it to get back to your terminal.
+
+### nano
+
 As indicated by the nano interface, use `Control`+`O` to write the file. Then, confirm your choice of filename by hitting `enter`. Finally, exit the file with `Control`+`X`
-```
-````
+
+:::
 
 ### Step 6. Mount the project drive
 To mount the project drive execute the command
@@ -123,20 +128,17 @@ fusermount -u /media/<server_mount_point>
 
 The project drive will not mount automatically, so you will need to remount it manually each time you restart the server.
 
-`````{note}
+:::{.callout-note}
 If the step above does not work, it probably means that the packages for mounting cifs-type filesystems haven't been installed. Depending on your linux flavour you will need to install them using:
 
-  ````{tab-set}
-  ```{tab-item} Ubuntu/Debian
-  `sudo apt install cifs-utils`
-  ```
+::: {.panel-tabset}
+### Ubuntu/Debian
+`sudo apt install cifs-utils`
 
-  ```{tab-item} Redhat/Centos/Fedora
-  `sudo yum install cifs-utils`
-  ```
-  ````
-
-`````
+### Redhat/Centos/Fedora  
+`sudo yum install cifs-utils`
+:::
+:::
 
 ## Notes and next steps
 The steps above can also be used to mount any storage offered by TU Delft with a WebDav link (staff-homes, staff-groups, staff-bulk, student-homes, student-groups and apps). Simply use the latter half of the URL from the WebDav web link of your storage drive, which will change from staff-umbrella (project drive) to something else depending on the storage drive you would like to mount.
