@@ -1,9 +1,9 @@
----
+<!-- ---
 section: data
 title: RequestProject Drive
 author_1: Ashley Cryan
 author_2:
----
+--- -->
 
 # Request Project Drive space
 
@@ -40,11 +40,11 @@ ________
 
 In the next part you choose your preferences about data preservation. The first question asks whether you are setting up new storage on the Project Drive, or want to change existing storage. The next question is about the availability - see below for more information. The usual choice here is "Standard".
 
-![image](https://user-images.githubusercontent.com/70349945/124719093-12511180-df07-11eb-894b-827ca86613fd.png)
+![](https://user-images.githubusercontent.com/70349945/124719093-12511180-df07-11eb-894b-827ca86613fd.png)
 
 For the next question, you need to determine if your data is critical, sensitive, or standard, using these criteria:
 
-![image](https://user-images.githubusercontent.com/70349945/124718801-c4d4a480-df06-11eb-9e48-5579640ba2a9.png)
+![](https://user-images.githubusercontent.com/70349945/124718801-c4d4a480-df06-11eb-9e48-5579640ba2a9.png)
 
 There are two options for backup retention: standard and high. Data are backed up by ICT on a daily basis, so the retention time refers to the period for which these backups are stored. The standard option refers to 14 days of retention while in the other one the retention period is one year. In other words, if the retention time is set to 14 days (Standard) and you delete a file, you can restore it within those two weeks. If retention time is 1 year (High), you can restore it anytime within the year. For most situations, a Standard backup retention time is suitable.
 
