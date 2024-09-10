@@ -3,10 +3,11 @@ project:
   output-dir: _site
   resources: # Can just specify which folders need to be rendered, see https://github.com/quarto-dev/quarto-web/blob/main/_quarto.yml
     - "*.md"
+    - "docs/**/*.md"
   render:
     # Render
-    - index.md
-    - docs/**/*.md
+    - "index.md"
+    - "docs/**/*.md"
     # Do not render
     - "!slides/**"
     - "!docs/infrastructure/getting_started.md"
