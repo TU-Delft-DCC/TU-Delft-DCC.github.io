@@ -9,11 +9,9 @@ author_2:
 
 If you would like to publish your data collection in 4TU.ResearchData or another data repository, it is advisable that you discuss the publishing process, including the reuse and [citation](https://www.tudelft.nl/en/library/research-data-management/r/publish/cite-your-data) of the original datasets and appropriate [licensing](https://data.4tu.nl/info/en/use/publish-cite/upload-your-data-in-our-data-repository/licencing) options with your faculty [Data Steward](https://www.tudelft.nl/library/research-data-management/r/support/data-stewardship/contact). 
 
-- To learn more about research data management, you can participate in an introductory workshop on [Research Data Management](https://www.tudelft.nl/en/library/research-data-management/r/training-events/training-for-researchers/research-data-management-101) offered by TU Delft, or review materials from online resources. 
+- To learn more about research data management, you can participate in an introductory workshop on [Research Data Management](https://www.tudelft.nl/en/library/research-data-management/r/training-events/training-for-researchers/research-data-management-101) offered by TU Delft, or review materials from online resources.
 
-- [Managing and Sharing Research Data](https://www.fosteropenscience.eu/learning/managing-and-sharing-research-data/) course from [FOSTER](https://www.fosteropenscience.eu/) - e-learning platform that brings together the training resources addressed to those who need to develop strategies and skills for implementing Open Science practices in their daily workflows 
-
-- See a videos on [best practices](https://ukdataservice.ac.uk/learning-hub/research-data-management/format-your-data/organising/) on organising data files from [UK Data Service](https://ukdataservice.ac.uk/) 
+- See a videos on [best practices](https://ukdataservice.ac.uk/learning-hub/research-data-management/format-your-data/organising/) on organising data files from [UK Data Service](https://ukdataservice.ac.uk/).
 
 - See a [General guide](https://mediacentral.princeton.edu/media/How+to+Prepare+Data+for+PublicationA+An+Overview/1_v0who3u4) prepared by [Princeton Research Data Service](https://researchdata.princeton.edu/) on how to prepare data for publication as well more detailed videos on:  
     - [READMEs and codebooks ](https://mediacentral.princeton.edu/media/Preparing+Data+for+PublicationA+Readmes+and+Documentation/1_sknb0yn3)
