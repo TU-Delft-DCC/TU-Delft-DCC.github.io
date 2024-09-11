@@ -9,6 +9,7 @@ project:
     - "index.md"
     - "docs/**/*.md"
     # Do not render
+    - "!_under_development/**"
     - "!slides/**"
     - "!docs/infrastructure/getting_started.md"
     - "!docs/infrastructure/VPS_SSH_connect.md"
