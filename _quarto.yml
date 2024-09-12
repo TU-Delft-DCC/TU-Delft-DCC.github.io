@@ -27,15 +27,9 @@ website:
   # google-analytics: "UA-XXXXXXXX"
   # cookie-consent: true
   #
-  # Comment this out before merge
-  # site-url: https://tu-delft-dcc.github.io/
-  # repo-url: https://github.com/TU-Delft-DCC/TU-Delft-DCC.github.io/
-  # issue-url: https://github.com/TU-Delft-DCC/TU-Delft-DCC.github.io/issues/new/choose
-  # 
-  # Delete this before merge
-  repo-url: https://github.com/edvinskis/TU-Delft-DCC.github.io/
-  issue-url: https://github.com/edvinskis/TU-Delft-DCC.github.io/issues/new/choose
-  #
+  site-url: https://tu-delft-dcc.github.io/
+  repo-url: https://github.com/TU-Delft-DCC/TU-Delft-DCC.github.io/
+  issue-url: https://github.com/TU-Delft-DCC/TU-Delft-DCC.github.io/issues/new/choose
   repo-actions: [issue]
   page-navigation: true
   page-footer:
