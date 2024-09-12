@@ -1,9 +1,9 @@
----
+<!-- ---
 section: software
 title: Branch management
 author_1: Maurits Kok
 author_2: 
----
+--- -->
 
 # Branch management
 
@@ -15,14 +15,14 @@ A branching strategy, therefore, is the strategy that teams adopt when writing, 
 
 For open source projects, the branching strategy is often described in the [Contributing guide](../../community/contribute.md) of the repository.
 
-```{admonition} A branching strategy aims to
-:class: note
+:::{.callout-note title="A branching strategy aims to"}
+
 - Enhance productivity by ensuring proper coordination among developers
 - Enable parallel development
 - Help organize a series of planned, structured releases
 - Map a clear path when making changes to software through to production
 - Maintain a bug-free code where developers can quickly fix issues and get these changes back to production without disrupting the development workflow
-```
+:::
 
 Various branch management workflows have been developed for different teams and software types[^2]. When developing research software, we recommend using either GitHub Flow or Gitflow[^3].
 
@@ -37,13 +37,14 @@ You start off with the master branch then developers create feature branches tha
 
 ### Example workflow
 **Aim:** create a new feature  
+
 1. Create new descriptively-named branches off the master branch for new work, such as `feature/add-new-payment-types`.
 2. Commit new work to your local branches and regularly push work to the remote.
 3. To request feedback or help, or when you think your work is ready to merge into the `master` branch, open a pull request.
 4. After your work or feature has been reviewed and approved, it can be merged into the `master` branch.
 5. Once your work has been merged into the `master` branch, it is available for use.
 
-![GitHub flow](../../img/github-flow-branching-model.jpeg)
+![](../../img/github-flow-branching-model.jpeg)
 
 ### Benefits of GitHub Flow
 1. Simple design
@@ -74,7 +75,7 @@ In general, the `origin/master`branch is considered to be the main branch where 
 
 We would like develop new code in isolation to keep `origin/develop` clean. To do this, we use feature branches to develop new features for upcoming releases. When starting work on a new feature, branch off from `origin/develop` and develop the feature in isolation. When the feature is ready, create a pull request to merge the feature back into `origin/develop`. Once the feature branch is merged, it should be deleted.
 
-### Benefits of GitFlow:
+### Benefits of GitFlow
 
 1. The various types of branches make it easy and intuitive to organize your work.
 1. The systematic development process allows for efficient testing.
@@ -82,11 +83,13 @@ We would like develop new code in isolation to keep `origin/develop` clean. To d
 1. Structured and more secure approach better suited for open source project with contributions from external (anonymous) developers.
 
 ### Challenges of GitFlow
+
 1. Depending on the complexity of the product, the Git flow model could overcomplicate and slow the development process and release cycle.
 1. Because of the long development cycle, Git flow is historically not able to support Continuous Delivery or Continuous Integration.
 
 ### Workflow examples
 **Aim:** implement new features into the code.
+
 1. General development of the code takes place on `origin/develop`. When you want to fix a bug or work on a new feature, first create an issue where you announce what you will be working on.
 1. When you want to work on a new feature or fix a bug, create a new feature branch from the development branch. 
 1. Work on the code in the feature branch.
@@ -94,13 +97,14 @@ We would like develop new code in isolation to keep `origin/develop` clean. To d
 1. Repeat previous steps to implement more features. Best practice is to keep the merge requests small; this makes it easy to review and limits the possibilty of generating conflicts.
 
 **Aim:** create a new release on `origin/master`.
+
 1. When ready to make a new release, create a release branch from the development branch.
 1. On the release branch: compile and package the software, update documentation, update version, dotting i's, ...
 1. Create a merge request to merge the release branch with the main branch and back into the development branch. 
 1. Delete release branch after merge.
 1. Create a [new release](https://docs.gitlab.com/ee/user/project/releases/) in the master branch.
 
-
+<!-- 
 [^1]: https://www.atlassian.com/git/tutorials/using-branches   
 [^2]: https://www.flagship.io/git-branching-strategies/ 
-[^3]: https://nvie.com/posts/a-successful-git-branching-model/
+[^3]: https://nvie.com/posts/a-successful-git-branching-model/ -->

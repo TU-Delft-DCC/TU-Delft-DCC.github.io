@@ -49,7 +49,8 @@ Do the following:
 1. As explained above, log in to the server and add your public key to the file `/home/<username>/.ssh/authorized_keys` (this only needs to be done once).
 
 It should look like this with your own keys `XXXXXXX` and NetID filled between the `<...>` (note the `<XXXXXXX>` is much longer in reality):
-```
+
+```bash
 ssh-rsa <XXXXXXX> ICT-SYSTEMS-<NETID>
 ssh-rsa <XXXXXXX> ICT-SYSTEMS-<NETID>
 ssh-ed25519 <XXXXXXX> <NETID>@tudelft.nl
@@ -72,11 +73,12 @@ On the main login settings page:
 - Private key file: select your private key file, for example `C:..../<username>/.ssh/id_ed25519`
 - Note that the app may ask you to convert your existing key to a Putty format (for example "Do you want to convert OpenSSH private key to PuTTY format?"). Click "OK" then make sure you select the new PuTTY file (e.g., `C:..../<username>/.ssh/id_ed25519.ppk`)
 
-6. Save the setting and click "Login", using your NetID password to authenticate.)
+6. Save the setting and click "Login", using your NetID password to authenticate.
 
 ### Using WinSCP with sudo rights
 
 If you have sudo rights on the webserver you can use this via WinSCP as follows:
+
 1. Once agin go to the "Advanced..." window to the "SFTP" page under heading "Environment"
 2. In field "SFTP server" enter the following: `sudo /usr/lib/openssh/sftp-server`
 3. Save the changes

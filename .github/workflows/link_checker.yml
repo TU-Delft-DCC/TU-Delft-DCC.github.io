@@ -1,0 +1,38 @@
+name: Link Checker
+
+on:
+  push:
+    branches:
+      - master
+  pull_request:    
+    branches:
+      - master
+
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: Tag for manually checking links
+        required: False
+        default: ""
+
+jobs:
+  linkChecker:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Quarto
+        uses: quarto-dev/quarto-actions/setup@v2
+
+      - name: Build Quarto site
+        run: quarto render  # Build the Quarto book to generate the latest content
+
+      - name: Link Checker
+        uses: lycheeverse/lychee-action@v1.9.3
+        with:
+          args: --exclude-path 'docs/_under_development' --verbose --no-progress './**/*.md' './**/*.qmd' './**/*.html' # Verbose output and check for both source .md and .qmd files, and then the rendered .html files
+          fail: true  # Fail the job if any links are broken
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

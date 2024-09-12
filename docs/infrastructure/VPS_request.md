@@ -1,15 +1,16 @@
----
+<!-- ---
 section: infrastructure
 title: Request VPS
 version: 1.0
 author_1: Ashley Cryan
 author_2:
----
+--- -->
 
-# Request a Virtual Private Server
+# Request a Virtual Private Server (VPS)
 
 ## Background
 This guide describes the essentials for requesting and setting up a TU Delft managed server. A server is a computer that can handle requests. Servers are often a critical component of architectural solutions for data management. There are many reasons why you as a researcher may need to request a server, for example:
+
 * Automation of a process in your data collection
 * Set up runners for the TU Delft Gitlab
 * A part of your analysis should be running continuously, and you cannot do it with your own machine 
@@ -48,9 +49,9 @@ The form is divided into three sections: **Caller Details**, **General Questions
 
 The last question in the **Caller Details** section access to the server by external users. Generally speaking, granting access to TU Delft-managed servers is not recommended, but if it is necessary you can add the contact details of the external party and the reason(s) for which they should have access. You will need to provide a company-affiliated email address for the external user, and the request may or may not be granted by ICT. 
 
-```{note}
+:::{.callout-note}
 Keep in mind that a server provides access to the backend of your application. If for example you want to deploy a web server to share your data widely, users **do not** need direct access to the server in order to access the data itself. 
-```
+:::
 
 The next section contains **General Questions** about the name and purpose of your server. If you plan to use this server ongoing into the future, you can either leave the field "Expiration Date" blank or add a date in 10+ years. TU Delft ICT will alert you when the expiration date you select is nearing. 
 
@@ -69,20 +70,27 @@ You should also be sure to check the instructions in the form and contact your f
 ## Initial Configuration of your VPS
 A few days after submitting the request, you will receive an email from ICT with login details. You can connect to your VPS via ssh. If you are in the windows environment, it is recommended to install Cygwin and its packages to be able to use the ssh command in a non-unix environment. The unix based systems (e.g., mac) contain ssh by default. In order to login to your VPS, you need to first ssh to the bastion server with `ssh <username>@linux-bastion-ex.tudelft.nl` and then from there login to your server `ssh <servername>`. The first thing we recommend to do after logging into the server is to update the pre-installed packages:
 
-````{tab-set}
-```{tab-item} Debian (Ubuntu)
-    sudo apt-get update && sudo apt-get upgrade
+::: {.panel-tabset}
+
+### Debian (Ubuntu)
+
+```
+sudo apt-get update && sudo apt-get upgrade
 ```
 
-```{tab-item} RedHat
-    sudo yum update
+### RedHat
+
 ```
-````
+sudo yum update
+```
+
+:::
 
 It would be also useful to set a password for the VPS when you log in. You can do that by `passwd` command. 
 
 ## Next Steps
 Common next steps after obtaining a VPS and storage include initial configuration steps such as establishing a connection via SSH and mounting Project Drive storage; and also software installation steps for tools like Docker, and setting up Apache Web Server. We will add more documentation when common installations come to our attention, so please [reach out to us](../community/contribute.md) with your questions or suggestions.
+
 - [Install Docker](https://phoenixnap.com/kb/how-to-install-docker-on-ubuntu-18-04)
 - [Configure Docker for use as non-root](https://docs.docker.com/engine/install/linux-postinstall/)
 - [Configuring VM connection via SSH](https://gitlab.tudelft.nl/acryan/data-management-for-researchers/-/wikis/Configuring-VM-Connection)

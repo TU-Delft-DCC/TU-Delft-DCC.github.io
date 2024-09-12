@@ -1,9 +1,9 @@
----
+<!-- ---
 section: infrastructure
 title: Set up an Apache web server
 author_1: Ashley Cryan
 author_2: 
----
+--- -->
 
 # Setting up an Apache web server
 
@@ -104,6 +104,7 @@ Navigate to the default Apache site config directory using the following command
 
 This config file tells the server where to find SSL certificate. It should look like this:
 
+```bash
                 <IfModule mod_ssl.c>
                 <VirtualHost _default_:443>
                 ServerAdmin webmaster@localhost
@@ -127,21 +128,26 @@ This config file tells the server where to find SSL certificate. It should look 
 
                 </VirtualHost>
                 </IfModule>
+```
 
 Edit this: `ServerAdmin webmaster@localhost` to this: `ServerAdmin email@example.net`
 
 Add this right below the ServerAdmin line:
 
+```bash
                 ServerName ADD_YOUR_IP_OR_DOMAIN_NAME_HERE
+```
 
 Now, edit these lines with our certificate location:
 
+```bash
                 SSLCertificateFile    /etc/apache2/ssl/apache.crt
                 SSLCertificateKeyFile /etc/apache2/ssl/apache.key
-
+```
 
 Our file should look like this:
 
+```bash
                 <IfModule mod_ssl.c>
                 <VirtualHost _default_:443>
                 ServerAdmin email@example.net
@@ -166,6 +172,7 @@ Our file should look like this:
 
                 </VirtualHost>
                 </IfModule>
+```
 
 **Save the file**, and close it.
 
@@ -198,13 +205,11 @@ The website is now secure, access it using following address in the browser
 
 Add in apache conf:
 
+```bash
                 ProxyPass /thredds http://localhost:8080/thredds
                 ProxyPassReverse /thredds http://localhost:8080/thredds
                 RedirectMatch ^/$ /thredds/
+```
 
 ## Notes and Next Steps
 Test that your web server is secured by HTTPS by typing the Fully Qualified Domain Name (FQDN) of your server in a web browser. If HTTPS is enabled, the URL should begin with it - if it still says HTTP, something will need to be reconfigured.
-
-## References
-[1]“What is Apache? An In-Depth Overview of Apache Web Server,” Hostinger Tutorials, Jun. 20, 2018. https://www.hostinger.com/tutorials/what-is-apache (accessed Nov. 02, 2021).
-
