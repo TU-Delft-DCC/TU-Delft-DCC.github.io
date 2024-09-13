@@ -23,7 +23,16 @@ jobs:
       - name: Link Checker
         uses: lycheeverse/lychee-action@v1.9.3
         with:
-          args: --exclude-path 'docs/_under_development' --verbose --no-progress './**/*.md' './**/*.qmd' './**/*.html' # Verbose output and check for both source .md and .qmd files, and then the rendered .html files
+          args: >-
+            --exclude-path 'docs/_under_development'
+            --exclude-path '_site/docs/_under_development' 
+            --accept 429 
+            --verbose 
+            --no-progress 
+            './**/*.md' 
+            './**/*.qmd' 
+            './**/*.html' 
+            # Verbose output and check for both source .md and .qmd files, and then the rendered .html files
           fail: true  # Fail the job if any links are broken
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
