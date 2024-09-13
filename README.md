@@ -1,4 +1,6 @@
-[![Check Links](https://github.com/TU-Delft-DCC/TU-Delft-DCC.github.io/actions/workflows/links.yml/badge.svg)](https://github.com/TU-Delft-DCC/TU-Delft-DCC.github.io/actions/workflows/links.yml)
+[![Quarto Publish](https://github.com/TU-Delft-DCC/TU-Delft-DCC.github.io/actions/workflows/deploy.yml/badge.svg)](https://github.com/TU-Delft-DCC/TU-Delft-DCC.github.io/actions/workflows/deploy.yml)
+[![Link Checker](https://github.com/TU-Delft-DCC/TU-Delft-DCC.github.io/actions/workflows/link_checker.yml/badge.svg)](https://github.com/TU-Delft-DCC/TU-Delft-DCC.github.io/actions/workflows/link_checker.yml)
+[![Scheduled Link Checker](https://github.com/TU-Delft-DCC/TU-Delft-DCC.github.io/actions/workflows/scheduled_link_checker.yml/badge.svg)](https://github.com/TU-Delft-DCC/TU-Delft-DCC.github.io/actions/workflows/scheduled_link_checker.yml)
 
 
 # Welcome
