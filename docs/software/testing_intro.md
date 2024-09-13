@@ -23,8 +23,3 @@ When writing tests, ask yourself the following questions:
 * **Unit test**: testing of individual units of source code (scripts, functions, classes).
 * **Integration test**: testing of a combination of individual units as a group.
 * **Regression test**: re-running all tests to ensure that the previously developed and tested code still performes after a code change.
-
-
-## Table of contents
-```{tableofcontents}
-```

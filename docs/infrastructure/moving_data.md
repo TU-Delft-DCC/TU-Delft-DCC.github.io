@@ -27,6 +27,7 @@ $ scp <host-nickname>:/<my-remote-file> /<my-local-directory>/
 
 ## scp with sudo files from a remote host to another remote host
 "-C /tmp/a" can be used when you wanted to "cd /tmp/a"
-```
+
+```bash
 ssh source.tudelft.nl sudo tar cf - -C /tmp/a . | ssh target.tudelft.nl  sudo tar xvf - -C /tmp/b/
 ```
