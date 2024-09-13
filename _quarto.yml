@@ -33,7 +33,7 @@ website:
   repo-actions: [issue]
   page-navigation: true
   page-footer:
-    left: "By TU Delft Digital Competence Center. Content on this site is licensed under a [CC-BY-4.0](https://creativecommons.org/licenses/by/4.0/) license. "
+    left: "By TU Delft Digital Competence Centre. Content on this site is licensed under a [CC-BY-4.0](https://creativecommons.org/licenses/by/4.0/) license. "
   bread-crumbs: true # Breadcrumbs in Quarto websites are a type of secondary navigation that shows the user's current location within the site hierarchy
   navbar:
     logo: docs/img/logo.png
