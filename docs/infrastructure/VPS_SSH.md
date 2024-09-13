@@ -39,4 +39,49 @@ If you encounter problems with the connection. Use the debug mode `ssh -vvv <hos
 
 
 ## Tunneling with WinSCP
-If using winscp, you will find detailed information here: https://winscp.net/eng/docs/ui_login_tunnel
+
+WinSCP is a GUI that makes it very easy to inspect, edit and transfer files on the webserver. Instructions for setting this up on a hypothetical server from the CiTG faculty are provided below. General documentation on tunneling with WinSCP are here: https://winscp.net/eng/docs/ui_login_tunnel
+
+_These instructions were tested with an existing `id_ed25519` key, assume you already have WinSCP installed and can modify a text file on the server in your user directory using the terminal._
+
+Do the following:
+
+1. As explained above, log in to the server and add your public key to the file `/home/<username>/.ssh/authorized_keys` (this only needs to be done once).
+
+It should look like this with your own keys `XXXXXXX` and NetID filled between the `<...>` (note the `<XXXXXXX>` is much longer in reality):
+
+```bash
+ssh-rsa <XXXXXXX> ICT-SYSTEMS-<NETID>
+ssh-rsa <XXXXXXX> ICT-SYSTEMS-<NETID>
+ssh-ed25519 <XXXXXXX> <NETID>@tudelft.nl
+```
+
+2. Using WinSCP, the following fields should be entered:
+
+On the main login settings page:
+- File protocol: `SFTP`
+- Host name: `<server>.citg.tudelft.nl`
+- User name: your NetID
+
+3. Open the "Advanced..." window
+
+4. On the page "Tunnel" (under heading "Connection," still in the Advanced window):
+- Host name: `linux-bastion-ex.tudelft.nl`
+- User name: your NetID
+
+5. On the page "Authentication" (under heading "SSH," still in the Advanced window):
+- Private key file: select your private key file, for example `C:..../<username>/.ssh/id_ed25519`
+- Note that the app may ask you to convert your existing key to a Putty format (for example "Do you want to convert OpenSSH private key to PuTTY format?"). Click "OK" then make sure you select the new PuTTY file (e.g., `C:..../<username>/.ssh/id_ed25519.ppk`)
+
+6. Save the setting and click "Login", using your NetID password to authenticate.
+
+### Using WinSCP with sudo rights
+
+If you have sudo rights on the webserver you can use this via WinSCP as follows:
+
+1. Once agin go to the "Advanced..." window to the "SFTP" page under heading "Environment"
+2. In field "SFTP server" enter the following: `sudo /usr/lib/openssh/sftp-server`
+3. Save the changes
+4. Use with caution!
+
+Note that the path to `sftp-server` may be different but can be easily checked and arranged. This will not work if you change the setting and continue to use an open session.

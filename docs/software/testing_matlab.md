@@ -1,13 +1,13 @@
----
+<!-- ---
 section: testing
 title: Testing with MATLAB
 author_1: Maurits Kok 
 author_2: 
----
+--- -->
 
 # Testing with MATLAB
 
-In this guide, we will discuss writing and running tests with Matlab. See the [documentation from Matlab](https://nl.mathworks.com/help/matlab/matlab-unit-test-framework.html) for more information.
+In this guide, we will discuss writing and running tests with MATLAB. See the [documentation from Matlab](https://nl.mathworks.com/help/matlab/matlab-unit-test-framework.html) for more information.
 
 ## Writing tests
 
@@ -15,8 +15,8 @@ Tests should be kept separate from the code base, usually in a folder `tests/`. 
 
 You can find an example below with the matlab syntax for writing [Class-based unit tests](https://nl.mathworks.com/help/matlab/class-based-unit-tests.html):
 
-````{toggle}
-```{code-block} matlab
+:::{.callout-note collapse="true" title="Click to view"}
+```matlab
 % Test classes are created by inheriting (< symbol) the  Matlab Testing 
 % framework.
 %
@@ -86,13 +86,13 @@ classdef (TestTags = {'Unit'}) test_example < matlab.unittest.TestCase
 
 end
 ```
-````
+:::
 
 
 ## Executing tests
 We will create a Matlab script called `run_testsuite.m` in the folder `tests/`. This function can run the tests present in the folder `tests/` and can create test reports.
 
-````{toggle}
+:::{.callout-note collapse="true" title="Click to view"}
 ```matlab
 function result = run_testsuite(varargin)
 %RUNTESTS - Run all tests and produce coverage report
@@ -286,7 +286,7 @@ function printCoverage(coverageFile)
     fprintf(formatSpec, coverage)
 
 ```
-````
+:::
 
 
 Additionally, we can selectively run test by defining TestTags. In the example above, we added the tag 'Unit'. You can then call the function in the MATLAB command window to run all tests with the tag 'Unit' with
@@ -294,12 +294,11 @@ Additionally, we can selectively run test by defining TestTags. In the example a
 ```matlab
 result = run_testsuite('TestTag', 'Unit')
 ```
-
-````{tip}
+:::{.callout-tip}
 If you want to quickly check whether your tests pass without having to start up Matlab, you can also call `run_testsuite` from the terminal. In the folder containing the function, execute
 
 ```bash
 matlab -batch "run_testsuite('TestTag', 'Unit')"
 ```
 
-````
+:::

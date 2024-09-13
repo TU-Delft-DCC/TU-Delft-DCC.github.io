@@ -1,9 +1,0 @@
-numpy
-pandas
-python-frontmatter
-tabulate
-jupyter-book
-linkify
-sphinx-tabs
-sphinx_inline_tabs
-sphinx-panels

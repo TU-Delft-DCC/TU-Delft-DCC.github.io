@@ -1,9 +1,9 @@
----
+<!-- ---
 section: software
 title: Software Management Plan
 author_1: Maurits Kok
 author_2: 
----
+--- -->
 
 # Software management plan
 
@@ -15,7 +15,7 @@ The initiative resulted in the publication of the [**Practical guide to Software
 
 ## Resources for software development
 
-* [Understanding the Phases of the Software Development Life Cycle](https://harness.io/blog/software-development-life-cycle/)
+* [Understanding the Phases of the Software Development Life Cycle](https://resources.github.com/software-development/what-is-sdlc/)
 
 * [Software Management from AcqNotes](https://acqnotes.com/acqnote/careerfields/software-management-overview)
 

@@ -10,6 +10,6 @@ Following are the different ways in which you can learn version control with Git
 
 - Use the [Repository Template](https://github.com/manuGil/fair-code) to make your code more compliant with FAIR principles 
 
-## Table of contents
+<!-- ## Table of contents
 ```{tableofcontents}
-```
+``` -->
