@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>DCC Guides</title>
+<title>docker_gui – DCC Guides</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,27 +20,63 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<script src="site_libs/quarto-html/quarto.js"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<script src="../../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../../">
+<link href="../../../docs/resources/courses.html" rel="next">
+<link href="../../../docs/software/containers/intro.html" rel="prev">
+<script src="../../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../../site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -70,7 +106,7 @@ ul.task-list li input[type="checkbox"] {
 }</script>
 
 
-<link rel="stylesheet" href="themes/custom.css">
+<link rel="stylesheet" href="../../../themes/custom.css">
 </head>
 
 <body class="nav-sidebar docked nav-fixed">
@@ -80,10 +116,10 @@ ul.task-list li input[type="checkbox"] {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a href="./index.html" class="navbar-brand navbar-brand-logo">
-    <img src="./docs/img/logo.png" alt="" class="navbar-logo">
+    <a href="../../../index.html" class="navbar-brand navbar-brand-logo">
+    <img src="../../../docs/img/logo.png" alt="" class="navbar-logo">
     </a>
-    <a class="navbar-brand" href="./index.html">
+    <a class="navbar-brand" href="../../../index.html">
     <span class="navbar-title">DCC Guides</span>
     </a>
   </div>
@@ -94,15 +130,15 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./docs/community/dcc.html"> 
+    <a class="nav-link" href="../../../docs/community/dcc.html"> 
 <span class="menu-text">About the DCC</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./docs/community/contribute.html"> 
+    <a class="nav-link" href="../../../docs/community/contribute.html"> 
 <span class="menu-text">Contributing</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./docs/community/code_of_conduct.html"> 
+    <a class="nav-link" href="../../../docs/community/code_of_conduct.html"> 
 <span class="menu-text">Code of Conduct</span></a>
   </li>  
 </ul>
@@ -118,7 +154,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../../docs/software/getting_started.html">💻 <strong>Research Software</strong></a></li><li class="breadcrumb-item"><a href="../../../docs/software/containers/intro.html">Working with containers</a></li><li class="breadcrumb-item"><a href="../../../docs/software/containers/docker_gui.html">Using a docker container with a GUI</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -141,7 +177,7 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="./docs/infrastructure/intro_servers.html" class="sidebar-item-text sidebar-link">
+            <a href="../../../docs/infrastructure/intro_servers.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Remote servers</span></a>
           <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
@@ -150,31 +186,31 @@ ul.task-list li input[type="checkbox"] {
       <ul id="" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./docs/infrastructure/VPS_request.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../docs/infrastructure/VPS_request.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Request a VPS</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./docs/infrastructure/VPS_SSH.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../docs/infrastructure/VPS_SSH.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Configure SSH Tunneling</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./docs/infrastructure/moving_data.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../docs/infrastructure/moving_data.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Moving data to your server</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./docs/infrastructure/VPS_SSL_Certs.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../docs/infrastructure/VPS_SSL_Certs.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Configure SSL certificates</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./docs/infrastructure/apache_webserver.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../docs/infrastructure/apache_webserver.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Setting up an Apache web server</span></a>
   </div>
 </li>
@@ -182,7 +218,7 @@ ul.task-list li input[type="checkbox"] {
   </li>
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="./docs/infrastructure/gitlab/gitlab_intro.html" class="sidebar-item-text sidebar-link">
+            <a href="../../../docs/infrastructure/gitlab/gitlab_intro.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">TU Delft GitLab</span></a>
           <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
@@ -191,25 +227,25 @@ ul.task-list li input[type="checkbox"] {
       <ul id="" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./docs/infrastructure/gitlab/gitlab_groups.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../docs/infrastructure/gitlab/gitlab_groups.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Creating GitLab groups</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./docs/infrastructure/gitlab/gitlab_transfer_ownership.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../docs/infrastructure/gitlab/gitlab_transfer_ownership.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Transfer ownership of a GitLab repository</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./docs/infrastructure/gitlab/gitlab_docker.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../docs/infrastructure/gitlab/gitlab_docker.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Continuous Integration with GitLab</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./docs/infrastructure/gitlab/runner_matlab.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../docs/infrastructure/gitlab/runner_matlab.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Setting up a Gitlab runner for MATLAB</span></a>
   </div>
 </li>
@@ -228,13 +264,13 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./docs/data/getting_started.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../docs/data/getting_started.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Getting started</span></a>
   </div>
 </li>
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="./docs/data/fair.html" class="sidebar-item-text sidebar-link">
+            <a href="../../../docs/data/fair.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">FAIR Data</span></a>
           <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
@@ -243,7 +279,7 @@ ul.task-list li input[type="checkbox"] {
       <ul id="" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./docs/data/publishing.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../docs/data/publishing.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Prepare data for publishing</span></a>
   </div>
 </li>
@@ -251,7 +287,7 @@ ul.task-list li input[type="checkbox"] {
   </li>
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="./docs/data/storage_options.html" class="sidebar-item-text sidebar-link">
+            <a href="../../../docs/data/storage_options.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">TU Delft Data storage</span></a>
           <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
@@ -260,19 +296,19 @@ ul.task-list li input[type="checkbox"] {
       <ul id="" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./docs/data/project_drive_request.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../docs/data/project_drive_request.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Request Project Drive space</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./docs/data/project_drive_mounting.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../docs/data/project_drive_mounting.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Mount Project Drive on Server</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./docs/data/sync_unison.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../docs/data/sync_unison.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Sync with Project Drive and SURFDrive with Unison</span></a>
   </div>
 </li>
@@ -291,13 +327,13 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./docs/software/getting_started.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../docs/software/getting_started.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Getting started</span></a>
   </div>
 </li>
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="./docs/software/fair.html" class="sidebar-item-text sidebar-link">
+            <a href="../../../docs/software/fair.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">FAIR Software</span></a>
           <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
@@ -306,19 +342,19 @@ ul.task-list li input[type="checkbox"] {
       <ul id="" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./docs/software/checklist.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../docs/software/checklist.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">FAIR checklist for research software</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./docs/software/project_cards.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../docs/software/project_cards.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">FAIR assessment cards</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./docs/software/software_management_plan.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../docs/software/software_management_plan.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Software management plan</span></a>
   </div>
 </li>
@@ -332,7 +368,7 @@ ul.task-list li input[type="checkbox"] {
   </li>
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="./docs/software/testing_intro.html" class="sidebar-item-text sidebar-link">
+            <a href="../../../docs/software/testing_intro.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Software testing</span></a>
           <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
@@ -341,7 +377,7 @@ ul.task-list li input[type="checkbox"] {
       <ul id="" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./docs/software/testing_matlab.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../docs/software/testing_matlab.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Testing with MATLAB</span></a>
   </div>
 </li>
@@ -349,7 +385,7 @@ ul.task-list li input[type="checkbox"] {
   </li>
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="./docs/software/git/intro.html" class="sidebar-item-text sidebar-link">
+            <a href="../../../docs/software/git/intro.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Version control with Git</span></a>
           <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
@@ -358,7 +394,7 @@ ul.task-list li input[type="checkbox"] {
       <ul id="" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./docs/software/git/branch_management.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../docs/software/git/branch_management.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Branch management</span></a>
   </div>
 </li>
@@ -366,16 +402,16 @@ ul.task-list li input[type="checkbox"] {
   </li>
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="./docs/software/containers/intro.html" class="sidebar-item-text sidebar-link">
+            <a href="../../../docs/software/containers/intro.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Working with containers</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#" role="navigation" aria-expanded="false" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="" class="collapse list-unstyled sidebar-section depth2 ">  
+      <ul id="" class="collapse list-unstyled sidebar-section depth2 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./docs/software/containers/docker_gui.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../docs/software/containers/docker_gui.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Using a docker container with a GUI</span></a>
   </div>
 </li>
@@ -394,19 +430,19 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./docs/resources/courses.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../docs/resources/courses.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Courses and workshops</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./docs/resources/curriculum.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../docs/resources/curriculum.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Research Software Curriculum</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./docs/resources/tools.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../docs/resources/tools.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Tools</span></a>
   </div>
 </li>
@@ -422,7 +458,18 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#welcome-to-the-dcc-guides" id="toc-welcome-to-the-dcc-guides" class="nav-link active" data-scroll-target="#welcome-to-the-dcc-guides">Welcome to the DCC Guides!</a></li>
+  <li><a href="#using-a-docker-container-with-a-gui" id="toc-using-a-docker-container-with-a-gui" class="nav-link active" data-scroll-target="#using-a-docker-container-with-a-gui">Using a docker container with a GUI</a>
+  <ul class="collapse">
+  <li><a href="#docker-installation" id="toc-docker-installation" class="nav-link" data-scroll-target="#docker-installation">Docker installation</a>
+  <ul class="collapse">
+  <li><a href="#verify-docker-installation" id="toc-verify-docker-installation" class="nav-link" data-scroll-target="#verify-docker-installation">Verify Docker installation</a></li>
+  </ul></li>
+  <li><a href="#terminal-access" id="toc-terminal-access" class="nav-link" data-scroll-target="#terminal-access">Terminal access</a></li>
+  <li><a href="#x-windows-system" id="toc-x-windows-system" class="nav-link" data-scroll-target="#x-windows-system">X Windows System</a></li>
+  <li><a href="#mount-a-volume" id="toc-mount-a-volume" class="nav-link" data-scroll-target="#mount-a-volume">Mount a volume</a></li>
+  <li><a href="#running-a-container-with-data-and-graphical-output" id="toc-running-a-container-with-data-and-graphical-output" class="nav-link" data-scroll-target="#running-a-container-with-data-and-graphical-output">Running a container with data and graphical output</a></li>
+  <li><a href="#issuestroubleshooting" id="toc-issuestroubleshooting" class="nav-link" data-scroll-target="#issuestroubleshooting">Issues/Troubleshooting</a></li>
+  </ul></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/TU-Delft-DCC/TU-Delft-DCC.github.io/issues/new/choose" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div></nav>
     </div>
@@ -432,49 +479,136 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<section id="welcome-to-the-dcc-guides" class="level1">
-<h1>Welcome to the DCC Guides!</h1>
-<p>These guides are an initiative from TU Delft <a href="./docs/community/dcc.html">Digital Competence Center</a> and aim to provide a comprehensive entrypoint to get you started with Research Computing, Research Data and Research Software at TU Delft.</p>
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<strong>Disclaimer</strong>
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>The guides are under active development and mainly in use as a useful resource for the support provided by the DCC. The content is a compilation of developed solutions, relevant links and resources, and documents produced by colleagues inside and outside TU Delft. This is not an official TU Delft website, but rather a place where we keep note of things we find important and useful to share.</p>
-</div>
-</div>
-<p>The guides are split into a few major sections:</p>
+<!-- ---
+section: containers
+title: Docker users
+author_1: Maurits Kok
+author_2:
+--- -->
+<section id="using-a-docker-container-with-a-gui" class="level1">
+<h1>Using a docker container with a GUI</h1>
+<p>Docker is an open platform for developing, shipping, and running applications. Docker provides the ability to package and run an application in a loosely isolated environment called a container. Containers are lightweight and contain everything needed to run the application, so you do not need to rely on what is currently installed on the host system. You can easily share containers while you work, and be sure that everyone you share with gets the same container that works in the same way.</p>
+<p><img src="https://user-images.githubusercontent.com/15414938/123805382-52543b00-d8ee-11eb-8f76-ae598d6fdb83.png" class="img-fluid"></p>
+<p><strong>Dockerfile</strong> – is a text document that contains all the commands you would normally execute manually in order to build a Docker image. The instructions include a choice of operating system and all the libraries we need to install into it. Docker can build images automatically by reading the instructions from a Dockerfile.<br>
+<strong>Docker Images</strong> – are the basis of containers. A Docker image is an immutable (unchangeable) file that contains the source code, libraries, dependencies, tools, and other files needed for an application to run.<br>
+<strong>Docker Container</strong> – A container is, ultimately, just a running image.</p>
+<section id="docker-installation" class="level2">
+<h2 class="anchored" data-anchor-id="docker-installation">Docker installation</h2>
+<p>Docker can be installed on Windows, macOS, and Linux. Please visit the <a href="https://docs.docker.com/get-docker/">Docker website</a> for downloading and installation instructions. Note, you will need admin access to your system.</p>
+<p><strong>Please check the Issues/troubleshooting session at the end of this page if you encounter some problems during installation. If your problem is not listed you can add it as an issue in the main repository.</strong></p>
+<section id="verify-docker-installation" class="level3">
+<h3 class="anchored" data-anchor-id="verify-docker-installation">Verify Docker installation</h3>
+<p>Run the following commands in the terminal (see below) to verify your installation:</p>
 <ul>
-<li><strong>Computing Infrastructure</strong> contains information and guides on TU Delft ICT infrastructure.</li>
-<li><strong>Data Management</strong> contains information and guides on using TU Delft data storage options and best-practices for FAIR data.</li>
-<li><strong>Research Software</strong> contains information for creating FAIR research software.</li>
-<li><strong>Resources</strong> contains a collection of courses, workshops, and references.</li>
+<li><code>docker --version</code><br>
+Will output the version number</li>
+<li><code>docker run hello-world</code><br>
+Will output a welcome message. If you haven’t run this command before, you will receive the message <em>Unable to find image: ‘hello-world:latest’ locally</em>. Docker will then proceed by downloading and running the latest version from <a href="https://hub.docker.com/_/hello-world">DockerHub</a>.</li>
 </ul>
-<div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
+</section>
+</section>
+<section id="terminal-access" class="level2">
+<h2 class="anchored" data-anchor-id="terminal-access">Terminal access</h2>
+<p><strong>Linux</strong><br>
+The default Unix Shell for Linux operating systems is usually Bash. On most versions of Linux, it is accessible by running the <a href="https://help.gnome.org/users/gnome-terminal/stable/">(Gnome) Terminal</a> or <a href="https://konsole.kde.org/">(KDE) Konsole</a> or <a href="https://en.wikipedia.org/wiki/Xterm">xterm</a>, which can be found via the applications menu or the search bar. If your machine is set up to use something other than bash, you can run it by opening a terminal and typing <code>bash</code>.</p>
+<p><strong>macOS</strong><br>
+For a Mac computer, the default Unix Shell is Bash, and it is available via the Terminal Utilities program within your Applications folder. To open Terminal, try one or both of the following:</p>
+<ul>
+<li>Go to your Applications. Within Applications, open the Utilities folder. Locate Terminal in the Utilities folder and open it.</li>
+<li>Use the Mac ‘Spotlight’ computer search function. Search for: Terminal and press Return.</li>
+</ul>
+<p>For more info: <a href="https://www.macworld.co.uk/how-to/how-use-terminal-on-mac-3608274/">How To use a terminal on Mac</a></p>
+<p><strong>Windows</strong><br>
+Computers with Windows operating systems do not automatically have a Unix Shell program installed. We encourage you to use an emulator included in <a href="https://gitforwindows.org/">Git for Windows</a>, which gives you access to both Bash shell commands and Git. To install, please follow these <a href="https://coderefinery.github.io/installation/git-in-terminal/#git-in-terminal">instructions</a>.</p>
+</section>
+<section id="x-windows-system" class="level2">
+<h2 class="anchored" data-anchor-id="x-windows-system">X Windows System</h2>
+<p>Docker doesn’t have any build-in graphics, which means it cannot run desktop applications by default. For this, we require the X Windows System. The X Window System (X11, or simply X) is a windowing system for bitmap displays, common on Unix-like operating systems. X provides the basic framework for a GUI environment: drawing and moving windows on the display device and interacting with a mouse and a keyboard.</p>
+<p>If you are on a desktop Linux, you already have one. For macOS, you can download <a href="https://www.xquartz.org/">XQuartz</a>, and for Windows, we tested <a href="https://sourceforge.net/projects/vcxsrv/">VcXsrv</a>.</p>
+<p>Desktop applications will run in Docker and will try to communicate with the X server you’re running on your PC. They don’t need to know anything but the location of the X server and an optional display that they target. This is denoted by an environmental variable named <code>DISPLAY</code>, with the following syntax: <code>DISPLAY=xserver-host:0</code>. The number you see after the <code>:</code> is the display number; for the intents and purpose of this article, we will consider this to be equivalent to <em>0 is the primary display attached to the X server</em>.</p>
+<p>In order to set up the environment variable, we need to add the following code to the <code>docker run</code> command in the terminal:</p>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true" aria-current="page">Windows</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false">macOS</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-3" role="tab" aria-controls="tabset-1-3" aria-selected="false">Linux</a></li></ul>
+<div class="tab-content">
+<div id="tabset-1-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-1-1-tab">
+<p><code>-e DISPLAY=host.docker.internal:0</code></p>
 </div>
-<div class="callout-title-container flex-fill">
-<strong>Learn more and get involved</strong>
+<div id="tabset-1-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-2-tab">
+<p><code>-e DISPLAY=docker.for.mac.host.internal:0</code></p>
+</div>
+<div id="tabset-1-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-3-tab">
+<p><code>--net=host -e DISPLAY=:0</code></p>
 </div>
 </div>
-<div class="callout-body-container callout-body">
-<p>🙌 <a href="./docs/community/contribute.html"><strong>Join the community</strong></a><br>
-We welcome anyone to join us in improving our guides. To join, check out our <a href="./docs/community/contribute.html">contributing guide</a>.</p>
-<p>💬 <a href="https://github.com/TU-Delft-DCC/TU-Delft-DCC.github.io/discussions"><strong>Join the discussion</strong></a><br>
-We have community discussions, talk about ideas, share general questions and develop solutions and feedback in our <a href="https://github.com/TU-Delft-DCC/TU-Delft-DCC.github.io/discussions">community forum</a>.</p>
-<p>💡 <a href="https://github.com/TU-Delft-DCC/TU-Delft-DCC.github.io/issues/new/choose"><strong>Open an issue</strong></a><br>
-We track topic requests and bug-reports via GitHub issues.</p>
+</div>
+<p>With these commands (and an active X server on the host system), any graphical output inside the container will be shown on your own desktop.</p>
+</section>
+<section id="mount-a-volume" class="level2">
+<h2 class="anchored" data-anchor-id="mount-a-volume">Mount a volume</h2>
+<p>The docker image with which you can spawn a container contains all the software and general datafiles. However, we still need to give the container access to your dataset. To do so, we can mount a directory on your own system inside the container with the following command structure: <code>-v &lt;abs_path_host&gt;:&lt;abs_path_container&gt;</code>. Assuming your terminal is opened inside the data folder on your system, the specific commands for the different operating systems mount this folder as the <code>/data</code> folder inside the container, are:</p>
+<p>For Windows in GitBash: <code>-v /$(pwd):/data</code><br>
+For Windows in cmd: <code>-v %cd%:/data</code><br>
+For Linux and macOS: <code>-v $(pwd):/data</code></p>
+<p><code>$(pwd)</code> can be replaced with the absolute path of the datafolder, or be used to access subdirectories (e.g.&nbsp;<code>$(pwd)/data:/data</code>).</p>
+<p>For more info about mounting volumes, check this <a href="https://stackoverflow.com/questions/41485217/mount-current-directory-as-a-volume-in-docker-on-windows-10">StackOverflow question</a></p>
+</section>
+<section id="running-a-container-with-data-and-graphical-output" class="level2">
+<h2 class="anchored" data-anchor-id="running-a-container-with-data-and-graphical-output">Running a container with data and graphical output</h2>
+<p>To start a container from an image, we use the command <code>docker run &lt;image_name&gt;</code>. We also pass the additional flags <code>--rm</code> to delete the container after closing and <code>-it</code> to be able to interact with the container. Combining all arguments then leads to the following commands to run (and automatically close) the container:</p>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-2-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-1" role="tab" aria-controls="tabset-2-1" aria-selected="true">Windows</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-2-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-2" role="tab" aria-controls="tabset-2-2" aria-selected="false">macOS</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-2-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-3" role="tab" aria-controls="tabset-2-3" aria-selected="false">Linux</a></li></ul>
+<div class="tab-content">
+<div id="tabset-2-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-2-1-tab">
+<p><code>docker run --rm -it -e DISPLAY=host.docker.internal:0 -v /$(pwd):/data &lt;image_name&gt;:&lt;image_version&gt;</code></p>
+</div>
+<div id="tabset-2-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-2-2-tab">
+<p><code>docker run --rm -it -e DISPLAY=docker.for.mac.host.internal:0 -v $(pwd):/data &lt;image_name&gt;:&lt;image_version&gt;</code></p>
+</div>
+<div id="tabset-2-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-2-3-tab">
+<p><code>docker run --rm -it --net=host -e DISPLAY=:0 -v $(pwd):/data &lt;image_name&gt;:&lt;image_version&gt;</code></p>
 </div>
 </div>
+</div>
+</section>
+<section id="issuestroubleshooting" class="level2">
+<h2 class="anchored" data-anchor-id="issuestroubleshooting">Issues/Troubleshooting</h2>
+<ul>
+<li>For Linux users encountering the error <em>Unable to init server</em>, please run <code>xhost +</code> in the terminal and rerun the <code>docker run</code> command. For more info, see <a href="https://www.thegeekstuff.com/2010/06/xhost-cannot-open-display/">here</a>.</li>
+<li><strong>WSL 2 installation incomplete for Windows users</strong>
+<ul>
+<li>Enable the virtualization in the BIOS</li>
+<li>Follow ALL the steps described in: https://docs.microsoft.com/en-us/windows/wsl/install-manual</li>
+</ul></li>
+<li>Failing to port a display in the docker container for Mac users.
+<ul>
+<li>Solution: Change the docker run command by this one , <code>docker run --rm -it -e DISPLAY=IPADDRESS:0 -v $(pwd):/data &lt;image_name&gt;:&lt;image_version&gt;</code></li>
+<li>The <em>IPADDRESS</em> is gotten from typing <code>ifconfig</code> in the terminal.</li>
+</ul></li>
+<li>Failing to run the pipeline once the GUI is open
+<ul>
+<li>Check that all documents are closed before run it , namely the <em>Getting started</em> and the <em>adapter files</em> documents.</li>
+</ul></li>
+<li>Failing to mount an external hard drive in Windows when running a docker container
+<ul>
+<li>Error:</li>
+</ul>
+<div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>      <span class="ex">libGL</span> error: No matching fbConfigs or visuals found</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>      <span class="ex">libGL</span> error: failed to load driver: swrast</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<ul>
+<li>Solution (noy yet found):</li>
+</ul></li>
+<li>Look into this links:
+<ul>
+<li>https://stackoverflow.com/questions/46586013/glxgears-not-working-inside-of-docker</li>
+</ul></li>
+</ul>
+<!-- ## References
+- https://medium.com/better-programming/running-desktop-apps-in-docker-43a70a5265c4
+- https://coderefinery.github.io/installation/git-in-terminal/#git-in-terminal
+- https://ucsbcarpentry.github.io/2019-10-24-gitbash/setup.html -->
 
 
+</section>
 </section>
 
 </main> <!-- /main -->
@@ -1042,6 +1176,18 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
 });
 </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="../../../docs/software/containers/intro.html" class="pagination-link" aria-label="Working with containers">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Working with containers</span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="../../../docs/resources/courses.html" class="pagination-link" aria-label="Courses and workshops">
+        <span class="nav-page-text">Courses and workshops</span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
 </div> <!-- /content -->
 <footer class="footer">
   <div class="nav-footer">

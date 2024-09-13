@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>DCC Guides</title>
+<title>gitlab_docker – DCC Guides</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,27 +20,63 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<script src="site_libs/quarto-html/quarto.js"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<script src="../../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../../">
+<link href="../../../docs/infrastructure/gitlab/runner_matlab.html" rel="next">
+<link href="../../../docs/infrastructure/gitlab/gitlab_transfer_ownership.html" rel="prev">
+<script src="../../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../../site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -70,7 +106,7 @@ ul.task-list li input[type="checkbox"] {
 }</script>
 
 
-<link rel="stylesheet" href="themes/custom.css">
+<link rel="stylesheet" href="../../../themes/custom.css">
 </head>
 
 <body class="nav-sidebar docked nav-fixed">
@@ -80,10 +116,10 @@ ul.task-list li input[type="checkbox"] {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a href="./index.html" class="navbar-brand navbar-brand-logo">
-    <img src="./docs/img/logo.png" alt="" class="navbar-logo">
+    <a href="../../../index.html" class="navbar-brand navbar-brand-logo">
+    <img src="../../../docs/img/logo.png" alt="" class="navbar-logo">
     </a>
-    <a class="navbar-brand" href="./index.html">
+    <a class="navbar-brand" href="../../../index.html">
     <span class="navbar-title">DCC Guides</span>
     </a>
   </div>
@@ -94,15 +130,15 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./docs/community/dcc.html"> 
+    <a class="nav-link" href="../../../docs/community/dcc.html"> 
 <span class="menu-text">About the DCC</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./docs/community/contribute.html"> 
+    <a class="nav-link" href="../../../docs/community/contribute.html"> 
 <span class="menu-text">Contributing</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./docs/community/code_of_conduct.html"> 
+    <a class="nav-link" href="../../../docs/community/code_of_conduct.html"> 
 <span class="menu-text">Code of Conduct</span></a>
   </li>  
 </ul>
@@ -118,7 +154,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../../docs/infrastructure/intro_servers.html">⚙️ <strong>Computing Infrastructure</strong></a></li><li class="breadcrumb-item"><a href="../../../docs/infrastructure/gitlab/gitlab_intro.html">TU Delft GitLab</a></li><li class="breadcrumb-item"><a href="../../../docs/infrastructure/gitlab/gitlab_docker.html">Continuous Integration with GitLab</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -141,7 +177,7 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="./docs/infrastructure/intro_servers.html" class="sidebar-item-text sidebar-link">
+            <a href="../../../docs/infrastructure/intro_servers.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Remote servers</span></a>
           <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
@@ -150,31 +186,31 @@ ul.task-list li input[type="checkbox"] {
       <ul id="" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./docs/infrastructure/VPS_request.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../docs/infrastructure/VPS_request.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Request a VPS</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./docs/infrastructure/VPS_SSH.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../docs/infrastructure/VPS_SSH.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Configure SSH Tunneling</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./docs/infrastructure/moving_data.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../docs/infrastructure/moving_data.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Moving data to your server</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./docs/infrastructure/VPS_SSL_Certs.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../docs/infrastructure/VPS_SSL_Certs.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Configure SSL certificates</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./docs/infrastructure/apache_webserver.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../docs/infrastructure/apache_webserver.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Setting up an Apache web server</span></a>
   </div>
 </li>
@@ -182,34 +218,34 @@ ul.task-list li input[type="checkbox"] {
   </li>
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="./docs/infrastructure/gitlab/gitlab_intro.html" class="sidebar-item-text sidebar-link">
+            <a href="../../../docs/infrastructure/gitlab/gitlab_intro.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">TU Delft GitLab</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#" role="navigation" aria-expanded="false" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="" class="collapse list-unstyled sidebar-section depth2 ">  
+      <ul id="" class="collapse list-unstyled sidebar-section depth2 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./docs/infrastructure/gitlab/gitlab_groups.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../docs/infrastructure/gitlab/gitlab_groups.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Creating GitLab groups</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./docs/infrastructure/gitlab/gitlab_transfer_ownership.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../docs/infrastructure/gitlab/gitlab_transfer_ownership.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Transfer ownership of a GitLab repository</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./docs/infrastructure/gitlab/gitlab_docker.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../docs/infrastructure/gitlab/gitlab_docker.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Continuous Integration with GitLab</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./docs/infrastructure/gitlab/runner_matlab.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../docs/infrastructure/gitlab/runner_matlab.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Setting up a Gitlab runner for MATLAB</span></a>
   </div>
 </li>
@@ -228,13 +264,13 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./docs/data/getting_started.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../docs/data/getting_started.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Getting started</span></a>
   </div>
 </li>
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="./docs/data/fair.html" class="sidebar-item-text sidebar-link">
+            <a href="../../../docs/data/fair.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">FAIR Data</span></a>
           <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
@@ -243,7 +279,7 @@ ul.task-list li input[type="checkbox"] {
       <ul id="" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./docs/data/publishing.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../docs/data/publishing.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Prepare data for publishing</span></a>
   </div>
 </li>
@@ -251,7 +287,7 @@ ul.task-list li input[type="checkbox"] {
   </li>
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="./docs/data/storage_options.html" class="sidebar-item-text sidebar-link">
+            <a href="../../../docs/data/storage_options.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">TU Delft Data storage</span></a>
           <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
@@ -260,19 +296,19 @@ ul.task-list li input[type="checkbox"] {
       <ul id="" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./docs/data/project_drive_request.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../docs/data/project_drive_request.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Request Project Drive space</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./docs/data/project_drive_mounting.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../docs/data/project_drive_mounting.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Mount Project Drive on Server</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./docs/data/sync_unison.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../docs/data/sync_unison.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Sync with Project Drive and SURFDrive with Unison</span></a>
   </div>
 </li>
@@ -291,13 +327,13 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./docs/software/getting_started.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../docs/software/getting_started.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Getting started</span></a>
   </div>
 </li>
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="./docs/software/fair.html" class="sidebar-item-text sidebar-link">
+            <a href="../../../docs/software/fair.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">FAIR Software</span></a>
           <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
@@ -306,19 +342,19 @@ ul.task-list li input[type="checkbox"] {
       <ul id="" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./docs/software/checklist.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../docs/software/checklist.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">FAIR checklist for research software</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./docs/software/project_cards.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../docs/software/project_cards.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">FAIR assessment cards</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./docs/software/software_management_plan.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../docs/software/software_management_plan.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Software management plan</span></a>
   </div>
 </li>
@@ -332,7 +368,7 @@ ul.task-list li input[type="checkbox"] {
   </li>
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="./docs/software/testing_intro.html" class="sidebar-item-text sidebar-link">
+            <a href="../../../docs/software/testing_intro.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Software testing</span></a>
           <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
@@ -341,7 +377,7 @@ ul.task-list li input[type="checkbox"] {
       <ul id="" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./docs/software/testing_matlab.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../docs/software/testing_matlab.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Testing with MATLAB</span></a>
   </div>
 </li>
@@ -349,7 +385,7 @@ ul.task-list li input[type="checkbox"] {
   </li>
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="./docs/software/git/intro.html" class="sidebar-item-text sidebar-link">
+            <a href="../../../docs/software/git/intro.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Version control with Git</span></a>
           <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
@@ -358,7 +394,7 @@ ul.task-list li input[type="checkbox"] {
       <ul id="" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./docs/software/git/branch_management.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../docs/software/git/branch_management.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Branch management</span></a>
   </div>
 </li>
@@ -366,7 +402,7 @@ ul.task-list li input[type="checkbox"] {
   </li>
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="./docs/software/containers/intro.html" class="sidebar-item-text sidebar-link">
+            <a href="../../../docs/software/containers/intro.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Working with containers</span></a>
           <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
@@ -375,7 +411,7 @@ ul.task-list li input[type="checkbox"] {
       <ul id="" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./docs/software/containers/docker_gui.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../docs/software/containers/docker_gui.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Using a docker container with a GUI</span></a>
   </div>
 </li>
@@ -394,19 +430,19 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./docs/resources/courses.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../docs/resources/courses.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Courses and workshops</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./docs/resources/curriculum.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../docs/resources/curriculum.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Research Software Curriculum</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./docs/resources/tools.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../docs/resources/tools.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Tools</span></a>
   </div>
 </li>
@@ -422,7 +458,27 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#welcome-to-the-dcc-guides" id="toc-welcome-to-the-dcc-guides" class="nav-link active" data-scroll-target="#welcome-to-the-dcc-guides">Welcome to the DCC Guides!</a></li>
+  <li><a href="#continuous-integration-with-gitlab" id="toc-continuous-integration-with-gitlab" class="nav-link active" data-scroll-target="#continuous-integration-with-gitlab">Continuous Integration with GitLab</a>
+  <ul class="collapse">
+  <li><a href="#background" id="toc-background" class="nav-link" data-scroll-target="#background">Background</a></li>
+  <li><a href="#quick-overview-of-how-it-works" id="toc-quick-overview-of-how-it-works" class="nav-link" data-scroll-target="#quick-overview-of-how-it-works">Quick overview of how it works</a></li>
+  <li><a href="#what-this-documentation-will-help-achieve" id="toc-what-this-documentation-will-help-achieve" class="nav-link" data-scroll-target="#what-this-documentation-will-help-achieve">What this documentation will help achieve</a></li>
+  <li><a href="#prerequisites" id="toc-prerequisites" class="nav-link" data-scroll-target="#prerequisites">Prerequisites</a></li>
+  <li><a href="#toolssoftware" id="toc-toolssoftware" class="nav-link" data-scroll-target="#toolssoftware">Tools/Software</a></li>
+  <li><a href="#steps" id="toc-steps" class="nav-link" data-scroll-target="#steps">Steps</a>
+  <ul class="collapse">
+  <li><a href="#step-1.-request-server-running-ubuntu" id="toc-step-1.-request-server-running-ubuntu" class="nav-link" data-scroll-target="#step-1.-request-server-running-ubuntu">Step 1. Request server running Ubuntu</a></li>
+  <li><a href="#step-2.-connect-to-the-server-via-ssh" id="toc-step-2.-connect-to-the-server-via-ssh" class="nav-link" data-scroll-target="#step-2.-connect-to-the-server-via-ssh">Step 2. Connect to the server via ssh</a></li>
+  <li><a href="#step-3.-install-docker-on-the-server" id="toc-step-3.-install-docker-on-the-server" class="nav-link" data-scroll-target="#step-3.-install-docker-on-the-server">Step 3. Install Docker on the server</a></li>
+  <li><a href="#step-4.-pull-the-gitlab-runner-docker-image" id="toc-step-4.-pull-the-gitlab-runner-docker-image" class="nav-link" data-scroll-target="#step-4.-pull-the-gitlab-runner-docker-image">Step 4. Pull the gitlab-runner Docker image</a></li>
+  <li><a href="#step-5.-create-a-unit-test-function-stored-as-a-file-in-the-repository" id="toc-step-5.-create-a-unit-test-function-stored-as-a-file-in-the-repository" class="nav-link" data-scroll-target="#step-5.-create-a-unit-test-function-stored-as-a-file-in-the-repository">Step 5. Create a unit test function stored as a file in the repository</a></li>
+  <li><a href="#step-6.-set-up-the-ci-by-configuration-of-the-.gitlab-ci.yml-file" id="toc-step-6.-set-up-the-ci-by-configuration-of-the-.gitlab-ci.yml-file" class="nav-link" data-scroll-target="#step-6.-set-up-the-ci-by-configuration-of-the-.gitlab-ci.yml-file">Step 6. Set up the CI by configuration of the .gitlab-ci.yml file</a></li>
+  <li><a href="#step-7.-setup-the-gitlab-runner" id="toc-step-7.-setup-the-gitlab-runner" class="nav-link" data-scroll-target="#step-7.-setup-the-gitlab-runner">Step 7. Setup the GitLab runner</a></li>
+  <li><a href="#step-8.-deploy-gitlab-runner-in-a-docker-container" id="toc-step-8.-deploy-gitlab-runner-in-a-docker-container" class="nav-link" data-scroll-target="#step-8.-deploy-gitlab-runner-in-a-docker-container">Step 8. Deploy GitLab runner in a Docker container</a></li>
+  <li><a href="#step-9.-register-the-runner-using-authentication-token" id="toc-step-9.-register-the-runner-using-authentication-token" class="nav-link" data-scroll-target="#step-9.-register-the-runner-using-authentication-token">Step 9. Register the runner using authentication token</a></li>
+  <li><a href="#step-10.-check-that-the-cicd-process-is-activated-and-your-pipeline-runs-successfully" id="toc-step-10.-check-that-the-cicd-process-is-activated-and-your-pipeline-runs-successfully" class="nav-link" data-scroll-target="#step-10.-check-that-the-cicd-process-is-activated-and-your-pipeline-runs-successfully">Step 10. Check that the CI/CD process is activated and your pipeline runs successfully</a></li>
+  </ul></li>
+  </ul></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/TU-Delft-DCC/TU-Delft-DCC.github.io/issues/new/choose" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div></nav>
     </div>
@@ -432,49 +488,181 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<section id="welcome-to-the-dcc-guides" class="level1">
-<h1>Welcome to the DCC Guides!</h1>
-<p>These guides are an initiative from TU Delft <a href="./docs/community/dcc.html">Digital Competence Center</a> and aim to provide a comprehensive entrypoint to get you started with Research Computing, Research Data and Research Software at TU Delft.</p>
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<strong>Disclaimer</strong>
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>The guides are under active development and mainly in use as a useful resource for the support provided by the DCC. The content is a compilation of developed solutions, relevant links and resources, and documents produced by colleagues inside and outside TU Delft. This is not an official TU Delft website, but rather a place where we keep note of things we find important and useful to share.</p>
-</div>
-</div>
-<p>The guides are split into a few major sections:</p>
+<!-- ---
+section: gitlab
+title: CI with Gitlab
+author_1: Ashley Cryan
+author_2: Maurits Kok
+--- -->
+<section id="continuous-integration-with-gitlab" class="level1">
+<h1>Continuous Integration with GitLab</h1>
+<section id="background" class="level2">
+<h2 class="anchored" data-anchor-id="background">Background</h2>
+<p>If you happen to be working with TU Delft GitLab instance and you want to implement DevOps or CI/CD pipelines, then you need to install a GitLab runner on your own. This should runner should be in a server, responding to changes such as commits or pull requests in your GitLab repository.</p>
+</section>
+<section id="quick-overview-of-how-it-works" class="level2">
+<h2 class="anchored" data-anchor-id="quick-overview-of-how-it-works">Quick overview of how it works</h2>
+<p>In order to be ready to run CI/CD pipeline, a gitlab-runner Docker container is running on the server all the time. When a new commit is made in the GitLab repository, this triggers the CI/CD process to run a job (e.g., unit test) based on the pipeline defined in the .gitlab-ci.yml file in the repository. The container used to carry out the CI/CD tests is defined in the .gitlab-ci.yml file in the first line, and spawned from within the continuously running gitlab-runner container. In our example, we define <code>image:python:3.12.3</code> so every time a commit is made in the repository, a new container based on the python:3.12.3 Docker image is started and used to run tests on the python scripts and generate artifacts as defined in the .gitlab-ci.yml file.</p>
+<p><img src="https://gitlab.tudelft.nl/acryan/data-management-for-researchers/-/wikis/uploads/711ac593ec886bd9216dff0591a82e6f/Untitled_Document__31_.png" class="img-fluid"></p>
+</section>
+<section id="what-this-documentation-will-help-achieve" class="level2">
+<h2 class="anchored" data-anchor-id="what-this-documentation-will-help-achieve">What this documentation will help achieve</h2>
+<p>The documentation below will help you deploy GitLab runner in a Docker container on a server to automatically run CI/CD tests and store artifacts every time there is a new commit to a GitLab repository.</p>
+</section>
+<section id="prerequisites" class="level2">
+<h2 class="anchored" data-anchor-id="prerequisites">Prerequisites</h2>
+<p><strong>Server:</strong> This example uses a server to run the whole process. You can request a server from TU Delft ICT service following these directions <a href="../../../docs/infrastructure/VPS_request.html">here</a>. It is useful to set this up on a server so that Docker can be running continuously, and be ready to run CI/CD tests whenever a new commit occurs in the repository.</p>
+<p><strong>Docker:</strong> We use a Docker container to run the GitLab runner and initialise the CI/CD pipeline.</p>
+<p><strong>Gitlab runner:</strong> (from GitLab documentation) “Runners are the agents that run the CI/CD jobs that come from GitLab. When you register a runner, you are setting up communication between your GitLab instance and the machine where GitLab Runner is installed. Runners usually process jobs on the same machine where you installed GitLab Runner.” <a href="https://docs.gitlab.com">Link</a></p>
+<p><strong>GitLab repository:</strong> A remote repository that can store your code and keeps track of your project development. You’re on one right now! :) If you haven’t already, you use your netID and password to login to TU Delft’s GitLab instance at gitlab.tudelft.nl and create a repository containing your project code.</p>
+<p><strong>CI/CD pipeline:</strong> “A CI/CD pipeline automates your software delivery process. The pipeline builds code, runs tests (CI), and safely deploys a new version of the application (CD)” <a href="https://semaphoreci.com/blog/cicd-pipeline">Link</a>.</p>
+</section>
+<section id="toolssoftware" class="level2">
+<h2 class="anchored" data-anchor-id="toolssoftware">Tools/Software</h2>
 <ul>
-<li><strong>Computing Infrastructure</strong> contains information and guides on TU Delft ICT infrastructure.</li>
-<li><strong>Data Management</strong> contains information and guides on using TU Delft data storage options and best-practices for FAIR data.</li>
-<li><strong>Research Software</strong> contains information for creating FAIR research software.</li>
-<li><strong>Resources</strong> contains a collection of courses, workshops, and references.</li>
+<li>GitLab (TU Delft instance)</li>
+<li>Docker</li>
+<li>gitlab-runner Docker image</li>
 </ul>
-<div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<strong>Learn more and get involved</strong>
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>🙌 <a href="./docs/community/contribute.html"><strong>Join the community</strong></a><br>
-We welcome anyone to join us in improving our guides. To join, check out our <a href="./docs/community/contribute.html">contributing guide</a>.</p>
-<p>💬 <a href="https://github.com/TU-Delft-DCC/TU-Delft-DCC.github.io/discussions"><strong>Join the discussion</strong></a><br>
-We have community discussions, talk about ideas, share general questions and develop solutions and feedback in our <a href="https://github.com/TU-Delft-DCC/TU-Delft-DCC.github.io/discussions">community forum</a>.</p>
-<p>💡 <a href="https://github.com/TU-Delft-DCC/TU-Delft-DCC.github.io/issues/new/choose"><strong>Open an issue</strong></a><br>
-We track topic requests and bug-reports via GitHub issues.</p>
-</div>
-</div>
+</section>
+<section id="steps" class="level2">
+<h2 class="anchored" data-anchor-id="steps">Steps</h2>
+<ol type="1">
+<li>Request the server</li>
+<li>Connect to the server via ssh</li>
+<li>Install Docker on the server</li>
+<li>Pull in the gitlab-runner image</li>
+<li>Create a unit test function stored as a file in the repository</li>
+<li>Make the .gitlab-ci.yml file</li>
+<li>Set up the GitLab runner</li>
+<li>Deploy the GitLab runner in a Docker container</li>
+<li>Register the runner</li>
+<li>Test the CI/CD pipeline</li>
+</ol>
+<section id="step-1.-request-server-running-ubuntu" class="level3">
+<h3 class="anchored" data-anchor-id="step-1.-request-server-running-ubuntu">Step 1. Request server running Ubuntu</h3>
+<p>If you don’t have a VPS already, you can request one from TU Delft ICT. Instructions for requesting a server and storage from ICT can be found under <a href="../../../docs/infrastructure/VPS_request.html">Remote servers/Request a Virtual Private Server</a>.</p>
+<p>We recommend the following configuration for configuring a GitLab runner:</p>
+<ul>
+<li>Basic Configuration 4 (Ubuntu)</li>
+<li>No additional <strong>ports</strong> need to be configured for deploying a GitLab runner with Docker.</li>
+<li>Additional space if your Docker images are larger than ~10Gb.</li>
+</ul>
+</section>
+<section id="step-2.-connect-to-the-server-via-ssh" class="level3">
+<h3 class="anchored" data-anchor-id="step-2.-connect-to-the-server-via-ssh">Step 2. Connect to the server via ssh</h3>
+<p>The email response from Sysadmin@TUDelft.nl confirming the successful deployment of your server should contain instructions to connect via ssh.</p>
+<p>The default login procedure is to connect to the Bastion host (an intermediary server) and then to your server, so it is a two-step process. Please check your email for Steps A and B as described by ICT admin.</p>
+<p>You can also connect to your server using Putty (Windows) or, on Mac/Linux, configure one-step access by storing ssh keys between your local machine and your server and designating an alias.</p>
+<p>When you are successfully connected, you should see in your terminal/command prompt something like this:</p>
+<p><img src="https://gitlab.tudelft.nl/acryan/data-management-for-researchers/-/wikis/uploads/048a06a817852a399c697582ae1e3a08/Screen_Shot_2020-11-17_at_10.30.31.png" class="img-fluid"></p>
+</section>
+<section id="step-3.-install-docker-on-the-server" class="level3">
+<h3 class="anchored" data-anchor-id="step-3.-install-docker-on-the-server">Step 3. Install Docker on the server</h3>
+<p>Servers often do not come with Docker installed, so you may need to do it by yourself. To check whether Docker is installed, run <code>docker --version</code>. If you get an error message, you can install it using the following commands:</p>
+<p><code>sudo su</code> (this will give you the root access) <code>apt install docker.io</code></p>
+<p>Now, Docker is installed. You can check if it is installed successfully by again typing <code>docker --version</code> in the terminal. The result should show the version of Docker you just installed.</p>
+</section>
+<section id="step-4.-pull-the-gitlab-runner-docker-image" class="level3">
+<h3 class="anchored" data-anchor-id="step-4.-pull-the-gitlab-runner-docker-image">Step 4. Pull the gitlab-runner Docker image</h3>
+<p>In order to run CI/CD jobs for your repository, you need to install GitLab Runner. GitLab Runner is an application that works with GitLab CI/CD to run jobs in a pipeline. Rather than install GitLab Runner directly on the server, we will run a lightweight version of it as a Docker container. To do so, we first need to pull the gitlab-runner Docker image by running:</p>
+<p><code>docker pull gitlab/gitlab-runner</code></p>
+<p>You can check whether it was successful by running <code>docker images</code> - you should see the gitlab/gitlab-runner image listed in the output.</p>
+</section>
+<section id="step-5.-create-a-unit-test-function-stored-as-a-file-in-the-repository" class="level3">
+<h3 class="anchored" data-anchor-id="step-5.-create-a-unit-test-function-stored-as-a-file-in-the-repository">Step 5. Create a unit test function stored as a file in the repository</h3>
+</section>
+<section id="step-6.-set-up-the-ci-by-configuration-of-the-.gitlab-ci.yml-file" class="level3">
+<h3 class="anchored" data-anchor-id="step-6.-set-up-the-ci-by-configuration-of-the-.gitlab-ci.yml-file">Step 6. Set up the CI by configuration of the .gitlab-ci.yml file</h3>
+<p>This file in the root of your repository defines what CI/CD tests to run upon each new commit. It does this by prescribing what container to run, what scripts to run inside the container, and what things to store as artefacts.</p>
+<p>In the first line of the file, you can write <code>image: &lt;image_name&gt;:&lt;tag&gt;</code> to indicate you want to run the runner in a Docker container container. <code>&lt;image_name&gt;</code> should be replaced by the name of the image you want to use to start a container and <code>&lt;tag&gt;</code> should be replaced by the tag of the image you want to use(image names can be found on DockerHub). Tag will be set to <code>latest</code> by default.</p>
+<p><strong>Important:</strong> The file must be named exactly <code>.gitlab-ci.yml</code> so it will be recognizable by GitLab runner. Below is an example .gitlab-ci.yml file.</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># This is a sample build configuration for Python.</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Check our guides at https://confluence.atlassian.com/x/x4UWN for more examples.</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Only use spaces to indent your .yml configuration.</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="co"># -----</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="fu">test</span><span class="kw">:</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="co">  # You can specify a custom docker image from Docker Hub as your build environment.</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">image</span><span class="kw">:</span><span class="at"> python:3.12.3</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">cache</span><span class="kw">:</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">paths</span><span class="kw">:</span></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="kw">-</span><span class="at"> .cache/pip</span></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="kw">-</span><span class="at"> venv/</span></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">script</span><span class="kw">:</span><span class="co"> # Modify the commands below to build your repository.</span></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="kw">-</span><span class="at"> pip install -r requirements.txt</span></span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="kw">-</span><span class="at"> nosetests --with-coverage  --cover-html</span></span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">artifacts</span><span class="kw">:</span></span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">paths</span><span class="kw">:</span></span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="kw">-</span><span class="at"> cover/</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Tags can be added as a final section in your .gitlab-ci.yml file (they are optional, we didn’t enter any in this example). You then need to enter these tags exactly when registering the runner.</p>
+</section>
+<section id="step-7.-setup-the-gitlab-runner" class="level3">
+<h3 class="anchored" data-anchor-id="step-7.-setup-the-gitlab-runner">Step 7. Setup the GitLab runner</h3>
+<ul>
+<li><p>Follow the instructions <a href="https://docs.gitlab.com/ee/tutorials/create_register_first_runner/#create-and-register-a-project-runner">here</a> <strong>till step 7</strong> to create a GitLab runner for your repository</p></li>
+<li><p>Choose ‘Linux’ under operating systems</p></li>
+<li><p>Copy the authentication token generated and keep it handy. It will be required in Step 9.</p></li>
+</ul>
+</section>
+<section id="step-8.-deploy-gitlab-runner-in-a-docker-container" class="level3">
+<h3 class="anchored" data-anchor-id="step-8.-deploy-gitlab-runner-in-a-docker-container">Step 8. Deploy GitLab runner in a Docker container</h3>
+<div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ex">docker</span> run <span class="at">-d</span> <span class="at">--name</span> gitlab-runner <span class="at">--restart</span> always <span class="dt">\</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>-v /srv/gitlab-runner/config:/etc/gitlab-runner <span class="dt">\</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>-v /var/run/docker.sock:/var/run/docker.sock <span class="dt">\</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>gitlab/gitlab-runner:latest</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><strong>on Mac OS, use /Users/Shared/ instead of /srv/</strong></p>
+<p>Check that gitlab-runner container is running using <code>docker ps -a</code></p>
+</section>
+<section id="step-9.-register-the-runner-using-authentication-token" class="level3">
+<h3 class="anchored" data-anchor-id="step-9.-register-the-runner-using-authentication-token">Step 9. Register the runner using authentication token</h3>
+<p>Run the following command to register your runner and configure it to deploy in a Docker container on your server.</p>
+<p><code>docker run --rm -it -v /srv/gitlab-runner/config:/etc/gitlab-runner gitlab/gitlab-runner register</code></p>
+<p><strong>on Mac OS, use /Users/Shared/ instead of /srv/</strong></p>
+<p>In response to this command you will be prompted to answer the following questions</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="ex">-</span> GitLab URL: https://gitlab.tudelft.nl</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="ex">-</span> gitlab-ci token: Paste the authentication token generated in Step 7.</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="ex">-</span> Enter name of the runner: example-runner</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="ex">-</span> Type of executor: docker</span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="ex">-</span> Default Docker image: Specify the same image as the one specified in the <span class="st">'image'</span> field of the .gitlab-ci.yml file.</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>See an example below.</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="ex">docker</span> run <span class="at">--rm</span> <span class="at">-it</span> <span class="at">-v</span> /srv/gitlab-runner/config:/etc/gitlab-runner gitlab/gitlab-runner register</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb5"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="ex">Enter</span> the GitLab instance URL <span class="er">(</span><span class="cf">for</span> example<span class="ex">,</span> https://gitlab.com/<span class="kw">)</span><span class="bu">:</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="ex">https://gitlab.tudelft.nl</span></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="ex">Enter</span> the registration token:</span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a><span class="ex">xxxxxxxxxxxxxxx</span></span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a><span class="ex">Verifying</span> runner... is valid                        runner=xxxxxxx</span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a><span class="ex">Enter</span> a name for the runner. This is stored only in the local config.toml file:</span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a><span class="ex">[xxxxxxx]:</span> example-runner</span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a><span class="ex">Enter</span> an executor: instance, kubernetes, docker-windows, docker-autoscaler, parallels, shell, ssh, virtualbox, docker+machine, custom, docker:</span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a><span class="ex">docker</span></span>
+<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a><span class="ex">Enter</span> the default Docker image <span class="er">(</span><span class="cf">for</span> example<span class="ex">,</span> ruby:2.7<span class="kw">)</span><span class="bu">:</span></span>
+<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a><span class="ex">julia:1.6</span></span>
+<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a><span class="ex">Runner</span> registered successfully. Feel free to start it, but if it<span class="st">'s running already the config should be automatically reloaded!</span></span>
+<span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-14"><a href="#cb5-14" aria-hidden="true" tabindex="-1"></a><span class="st">Configuration (with the authentication token) was saved in "/etc/gitlab-runner/config.toml"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="step-10.-check-that-the-cicd-process-is-activated-and-your-pipeline-runs-successfully" class="level3">
+<h3 class="anchored" data-anchor-id="step-10.-check-that-the-cicd-process-is-activated-and-your-pipeline-runs-successfully">Step 10. Check that the CI/CD process is activated and your pipeline runs successfully</h3>
+<ul>
+<li><p>In your repository, navigate to Settings &gt; CI/CD &gt; Click on Expand under Runners: You should see that the runner is active as indicated by a green dot. This means that the CI pipeline is ready to run, but it needs to be triggered.</p></li>
+<li><p>In order to trigger the CI pipeline, you should make a new commit to the GitLab repository.</p></li>
+<li><p>After you have made a new commit to the repository, navigate to Your Project -&gt; Build -&gt; Pipelines to check the status of CI/CD pipelines connected to your repository. If you find a green message that says “passed” with a check mark then congratulations, your pipeline works! If you see a red message that says “failed”, check to see the error message associated with it - sometimes you need to reconfigure your .gitlab-ci.yml file to make sure it uses the correct formatting and defines the tests appropriately.</p></li>
+</ul>
+<p><img src="https://gitlab.tudelft.nl/acryan/data-management-for-researchers/-/wikis/uploads/f7aadbc87f49d31de4da37a2f8a76ef3/Screen_Shot_2020-11-17_at_11.56.41.png" class="img-fluid"></p>
+<!-- ## Notes and References
+This guide was created using multiple references on GitLab runner and Docker. If you would like more information or details, please refer to the links below.
+* https://www.hostinger.com/tutorials/how-to-install-docker-on-ubuntu
+* https://cloudcone.com/docs/article/how-to-install-and-run-docker-on-ubuntu-20-04-lts/
+* https://www.digitalocean.com/community/tutorials/how-to-install-and-use-docker-on-ubuntu-20-04
+* https://docs.gitlab.com/ee/topics/build_your_application.html
+* https://docs.gitlab.com/runner/executors/docker.html#define-image-and-services-from-gitlab-ciyml
+* https://gitlab.tudelft.nl/help/ci/yaml/index.md
+* https://docs.gitlab.com/ee/ci/docker/using_docker_images.html
+* https://semaphoreci.com/blog/cicd-pipeline -->
 
 
+</section>
+</section>
 </section>
 
 </main> <!-- /main -->
@@ -1042,6 +1230,18 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
 });
 </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="../../../docs/infrastructure/gitlab/gitlab_transfer_ownership.html" class="pagination-link" aria-label="Transfer ownership of a GitLab repository">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Transfer ownership of a GitLab repository</span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="../../../docs/infrastructure/gitlab/runner_matlab.html" class="pagination-link" aria-label="Setting up a Gitlab runner for MATLAB">
+        <span class="nav-page-text">Setting up a Gitlab runner for MATLAB</span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
 </div> <!-- /content -->
 <footer class="footer">
   <div class="nav-footer">

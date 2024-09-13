@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>DCC Guides</title>
+<title>apache_webserver – DCC Guides</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,27 +20,63 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<script src="site_libs/quarto-html/quarto.js"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<link href="../../docs/infrastructure/gitlab/gitlab_intro.html" rel="next">
+<link href="../../docs/infrastructure/VPS_SSL_Certs.html" rel="prev">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -70,7 +106,7 @@ ul.task-list li input[type="checkbox"] {
 }</script>
 
 
-<link rel="stylesheet" href="themes/custom.css">
+<link rel="stylesheet" href="../../themes/custom.css">
 </head>
 
 <body class="nav-sidebar docked nav-fixed">
@@ -80,10 +116,10 @@ ul.task-list li input[type="checkbox"] {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a href="./index.html" class="navbar-brand navbar-brand-logo">
-    <img src="./docs/img/logo.png" alt="" class="navbar-logo">
+    <a href="../../index.html" class="navbar-brand navbar-brand-logo">
+    <img src="../../docs/img/logo.png" alt="" class="navbar-logo">
     </a>
-    <a class="navbar-brand" href="./index.html">
+    <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">DCC Guides</span>
     </a>
   </div>
@@ -94,15 +130,15 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./docs/community/dcc.html"> 
+    <a class="nav-link" href="../../docs/community/dcc.html"> 
 <span class="menu-text">About the DCC</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./docs/community/contribute.html"> 
+    <a class="nav-link" href="../../docs/community/contribute.html"> 
 <span class="menu-text">Contributing</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./docs/community/code_of_conduct.html"> 
+    <a class="nav-link" href="../../docs/community/code_of_conduct.html"> 
 <span class="menu-text">Code of Conduct</span></a>
   </li>  
 </ul>
@@ -118,7 +154,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../docs/infrastructure/intro_servers.html">⚙️ <strong>Computing Infrastructure</strong></a></li><li class="breadcrumb-item"><a href="../../docs/infrastructure/intro_servers.html">Remote servers</a></li><li class="breadcrumb-item"><a href="../../docs/infrastructure/apache_webserver.html">Setting up an Apache web server</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -141,40 +177,40 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="./docs/infrastructure/intro_servers.html" class="sidebar-item-text sidebar-link">
+            <a href="../../docs/infrastructure/intro_servers.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Remote servers</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#" role="navigation" aria-expanded="false" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="" class="collapse list-unstyled sidebar-section depth2 ">  
+      <ul id="" class="collapse list-unstyled sidebar-section depth2 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./docs/infrastructure/VPS_request.html" class="sidebar-item-text sidebar-link">
+  <a href="../../docs/infrastructure/VPS_request.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Request a VPS</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./docs/infrastructure/VPS_SSH.html" class="sidebar-item-text sidebar-link">
+  <a href="../../docs/infrastructure/VPS_SSH.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Configure SSH Tunneling</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./docs/infrastructure/moving_data.html" class="sidebar-item-text sidebar-link">
+  <a href="../../docs/infrastructure/moving_data.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Moving data to your server</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./docs/infrastructure/VPS_SSL_Certs.html" class="sidebar-item-text sidebar-link">
+  <a href="../../docs/infrastructure/VPS_SSL_Certs.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Configure SSL certificates</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./docs/infrastructure/apache_webserver.html" class="sidebar-item-text sidebar-link">
+  <a href="../../docs/infrastructure/apache_webserver.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Setting up an Apache web server</span></a>
   </div>
 </li>
@@ -182,7 +218,7 @@ ul.task-list li input[type="checkbox"] {
   </li>
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="./docs/infrastructure/gitlab/gitlab_intro.html" class="sidebar-item-text sidebar-link">
+            <a href="../../docs/infrastructure/gitlab/gitlab_intro.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">TU Delft GitLab</span></a>
           <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
@@ -191,25 +227,25 @@ ul.task-list li input[type="checkbox"] {
       <ul id="" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./docs/infrastructure/gitlab/gitlab_groups.html" class="sidebar-item-text sidebar-link">
+  <a href="../../docs/infrastructure/gitlab/gitlab_groups.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Creating GitLab groups</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./docs/infrastructure/gitlab/gitlab_transfer_ownership.html" class="sidebar-item-text sidebar-link">
+  <a href="../../docs/infrastructure/gitlab/gitlab_transfer_ownership.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Transfer ownership of a GitLab repository</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./docs/infrastructure/gitlab/gitlab_docker.html" class="sidebar-item-text sidebar-link">
+  <a href="../../docs/infrastructure/gitlab/gitlab_docker.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Continuous Integration with GitLab</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./docs/infrastructure/gitlab/runner_matlab.html" class="sidebar-item-text sidebar-link">
+  <a href="../../docs/infrastructure/gitlab/runner_matlab.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Setting up a Gitlab runner for MATLAB</span></a>
   </div>
 </li>
@@ -228,13 +264,13 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./docs/data/getting_started.html" class="sidebar-item-text sidebar-link">
+  <a href="../../docs/data/getting_started.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Getting started</span></a>
   </div>
 </li>
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="./docs/data/fair.html" class="sidebar-item-text sidebar-link">
+            <a href="../../docs/data/fair.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">FAIR Data</span></a>
           <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
@@ -243,7 +279,7 @@ ul.task-list li input[type="checkbox"] {
       <ul id="" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./docs/data/publishing.html" class="sidebar-item-text sidebar-link">
+  <a href="../../docs/data/publishing.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Prepare data for publishing</span></a>
   </div>
 </li>
@@ -251,7 +287,7 @@ ul.task-list li input[type="checkbox"] {
   </li>
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="./docs/data/storage_options.html" class="sidebar-item-text sidebar-link">
+            <a href="../../docs/data/storage_options.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">TU Delft Data storage</span></a>
           <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
@@ -260,19 +296,19 @@ ul.task-list li input[type="checkbox"] {
       <ul id="" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./docs/data/project_drive_request.html" class="sidebar-item-text sidebar-link">
+  <a href="../../docs/data/project_drive_request.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Request Project Drive space</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./docs/data/project_drive_mounting.html" class="sidebar-item-text sidebar-link">
+  <a href="../../docs/data/project_drive_mounting.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Mount Project Drive on Server</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./docs/data/sync_unison.html" class="sidebar-item-text sidebar-link">
+  <a href="../../docs/data/sync_unison.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Sync with Project Drive and SURFDrive with Unison</span></a>
   </div>
 </li>
@@ -291,13 +327,13 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./docs/software/getting_started.html" class="sidebar-item-text sidebar-link">
+  <a href="../../docs/software/getting_started.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Getting started</span></a>
   </div>
 </li>
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="./docs/software/fair.html" class="sidebar-item-text sidebar-link">
+            <a href="../../docs/software/fair.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">FAIR Software</span></a>
           <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
@@ -306,19 +342,19 @@ ul.task-list li input[type="checkbox"] {
       <ul id="" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./docs/software/checklist.html" class="sidebar-item-text sidebar-link">
+  <a href="../../docs/software/checklist.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">FAIR checklist for research software</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./docs/software/project_cards.html" class="sidebar-item-text sidebar-link">
+  <a href="../../docs/software/project_cards.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">FAIR assessment cards</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./docs/software/software_management_plan.html" class="sidebar-item-text sidebar-link">
+  <a href="../../docs/software/software_management_plan.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Software management plan</span></a>
   </div>
 </li>
@@ -332,7 +368,7 @@ ul.task-list li input[type="checkbox"] {
   </li>
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="./docs/software/testing_intro.html" class="sidebar-item-text sidebar-link">
+            <a href="../../docs/software/testing_intro.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Software testing</span></a>
           <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
@@ -341,7 +377,7 @@ ul.task-list li input[type="checkbox"] {
       <ul id="" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./docs/software/testing_matlab.html" class="sidebar-item-text sidebar-link">
+  <a href="../../docs/software/testing_matlab.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Testing with MATLAB</span></a>
   </div>
 </li>
@@ -349,7 +385,7 @@ ul.task-list li input[type="checkbox"] {
   </li>
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="./docs/software/git/intro.html" class="sidebar-item-text sidebar-link">
+            <a href="../../docs/software/git/intro.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Version control with Git</span></a>
           <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
@@ -358,7 +394,7 @@ ul.task-list li input[type="checkbox"] {
       <ul id="" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./docs/software/git/branch_management.html" class="sidebar-item-text sidebar-link">
+  <a href="../../docs/software/git/branch_management.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Branch management</span></a>
   </div>
 </li>
@@ -366,7 +402,7 @@ ul.task-list li input[type="checkbox"] {
   </li>
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="./docs/software/containers/intro.html" class="sidebar-item-text sidebar-link">
+            <a href="../../docs/software/containers/intro.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Working with containers</span></a>
           <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
@@ -375,7 +411,7 @@ ul.task-list li input[type="checkbox"] {
       <ul id="" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./docs/software/containers/docker_gui.html" class="sidebar-item-text sidebar-link">
+  <a href="../../docs/software/containers/docker_gui.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Using a docker container with a GUI</span></a>
   </div>
 </li>
@@ -394,19 +430,19 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./docs/resources/courses.html" class="sidebar-item-text sidebar-link">
+  <a href="../../docs/resources/courses.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Courses and workshops</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./docs/resources/curriculum.html" class="sidebar-item-text sidebar-link">
+  <a href="../../docs/resources/curriculum.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Research Software Curriculum</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./docs/resources/tools.html" class="sidebar-item-text sidebar-link">
+  <a href="../../docs/resources/tools.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Tools</span></a>
   </div>
 </li>
@@ -422,7 +458,22 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#welcome-to-the-dcc-guides" id="toc-welcome-to-the-dcc-guides" class="nav-link active" data-scroll-target="#welcome-to-the-dcc-guides">Welcome to the DCC Guides!</a></li>
+  <li><a href="#setting-up-an-apache-web-server" id="toc-setting-up-an-apache-web-server" class="nav-link active" data-scroll-target="#setting-up-an-apache-web-server">Setting up an Apache web server</a>
+  <ul class="collapse">
+  <li><a href="#background" id="toc-background" class="nav-link" data-scroll-target="#background">Background</a></li>
+  <li><a href="#what-this-documentation-will-help-achieve" id="toc-what-this-documentation-will-help-achieve" class="nav-link" data-scroll-target="#what-this-documentation-will-help-achieve">What this documentation will help achieve</a></li>
+  <li><a href="#prerequisites" id="toc-prerequisites" class="nav-link" data-scroll-target="#prerequisites">Prerequisites</a></li>
+  <li><a href="#tools-software" id="toc-tools-software" class="nav-link" data-scroll-target="#tools-software">Tools / Software</a></li>
+  <li><a href="#steps" id="toc-steps" class="nav-link" data-scroll-target="#steps">Steps</a>
+  <ul class="collapse">
+  <li><a href="#step-1.-request-a-virtual-private-server-from-tu-delft-ict" id="toc-step-1.-request-a-virtual-private-server-from-tu-delft-ict" class="nav-link" data-scroll-target="#step-1.-request-a-virtual-private-server-from-tu-delft-ict">Step 1. Request a Virtual Private Server from TU Delft ICT</a></li>
+  <li><a href="#step-2.-install-apache-web-server-on-the-vps" id="toc-step-2.-install-apache-web-server-on-the-vps" class="nav-link" data-scroll-target="#step-2.-install-apache-web-server-on-the-vps">Step 2. Install Apache web server on the VPS</a></li>
+  <li><a href="#step-3.-request-an-ssl-certificate-from-tu-delft-ict" id="toc-step-3.-request-an-ssl-certificate-from-tu-delft-ict" class="nav-link" data-scroll-target="#step-3.-request-an-ssl-certificate-from-tu-delft-ict">Step 3. Request an SSL certificate from TU Delft ICT</a></li>
+  <li><a href="#step-4.-configure-the-ssl-certificate-on-your-vps" id="toc-step-4.-configure-the-ssl-certificate-on-your-vps" class="nav-link" data-scroll-target="#step-4.-configure-the-ssl-certificate-on-your-vps">Step 4. Configure the SSL certificate on your VPS</a></li>
+  <li><a href="#step-5.-redirect-all-incoming-web-traffic-to-https" id="toc-step-5.-redirect-all-incoming-web-traffic-to-https" class="nav-link" data-scroll-target="#step-5.-redirect-all-incoming-web-traffic-to-https">Step 5. Redirect all incoming web traffic to HTTPS</a></li>
+  </ul></li>
+  <li><a href="#notes-and-next-steps" id="toc-notes-and-next-steps" class="nav-link" data-scroll-target="#notes-and-next-steps">Notes and Next Steps</a></li>
+  </ul></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/TU-Delft-DCC/TU-Delft-DCC.github.io/issues/new/choose" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div></nav>
     </div>
@@ -432,49 +483,176 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<section id="welcome-to-the-dcc-guides" class="level1">
-<h1>Welcome to the DCC Guides!</h1>
-<p>These guides are an initiative from TU Delft <a href="./docs/community/dcc.html">Digital Competence Center</a> and aim to provide a comprehensive entrypoint to get you started with Research Computing, Research Data and Research Software at TU Delft.</p>
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<strong>Disclaimer</strong>
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>The guides are under active development and mainly in use as a useful resource for the support provided by the DCC. The content is a compilation of developed solutions, relevant links and resources, and documents produced by colleagues inside and outside TU Delft. This is not an official TU Delft website, but rather a place where we keep note of things we find important and useful to share.</p>
-</div>
-</div>
-<p>The guides are split into a few major sections:</p>
+<!-- ---
+section: infrastructure
+title: Set up an Apache web server
+author_1: Ashley Cryan
+author_2: 
+--- -->
+<section id="setting-up-an-apache-web-server" class="level1">
+<h1>Setting up an Apache web server</h1>
+<section id="background" class="level2">
+<h2 class="anchored" data-anchor-id="background">Background</h2>
+<p>If you want to host a website for your lab, or a web application of some sort, you are going to need to work with a webserver. Apache Web Server is a software package that turns a computer into an HTTP server. That is, it sends web pages – stored as HTML files – to people on the internet who request them. It is open-source software, which means it can be used and modified freely.</p>
+<blockquote class="blockquote">
+<p>The job of a web server is to serve websites on the internet. To achieve that goal, it acts as a middleman between the server and client machines. It pulls content from the server on each user request and delivers it to the web…..One of the most popular web servers, Apache allows you to run a secure website without too much of a headache. It is free and open-source, making it a frequent choice of solopreneurs and small businesses who want a presence on the web…..The way Apache HTTP server works is that it will accept requests from the web browser, such as Google Chrome and Microsoft Edge, and turn programming scripts into web pages which contents are visible by the visitors.</p>
+</blockquote>
+</section>
+<section id="what-this-documentation-will-help-achieve" class="level2">
+<h2 class="anchored" data-anchor-id="what-this-documentation-will-help-achieve">What this documentation will help achieve</h2>
+<p>This guide will help you install the Apache web server on Ubuntu Linux and configure a HTTPS secure connection for all incoming web traffic.</p>
+<p>The steps outlined below will ensure that all incoming web traffic to your server from port 80 (HTTP) will be redirected to port 443 (HTTPS). Port 80 is still accessible but redirects automatically. Redirection is configured after the SSL certificate is in place.</p>
+</section>
+<section id="prerequisites" class="level2">
+<h2 class="anchored" data-anchor-id="prerequisites">Prerequisites</h2>
 <ul>
-<li><strong>Computing Infrastructure</strong> contains information and guides on TU Delft ICT infrastructure.</li>
-<li><strong>Data Management</strong> contains information and guides on using TU Delft data storage options and best-practices for FAIR data.</li>
-<li><strong>Research Software</strong> contains information for creating FAIR research software.</li>
-<li><strong>Resources</strong> contains a collection of courses, workshops, and references.</li>
+<li>A system running Ubuntu Server</li>
+<li>An internet connection</li>
+<li>Access to a user account with sudo privileges</li>
 </ul>
-<div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<strong>Learn more and get involved</strong>
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>🙌 <a href="./docs/community/contribute.html"><strong>Join the community</strong></a><br>
-We welcome anyone to join us in improving our guides. To join, check out our <a href="./docs/community/contribute.html">contributing guide</a>.</p>
-<p>💬 <a href="https://github.com/TU-Delft-DCC/TU-Delft-DCC.github.io/discussions"><strong>Join the discussion</strong></a><br>
-We have community discussions, talk about ideas, share general questions and develop solutions and feedback in our <a href="https://github.com/TU-Delft-DCC/TU-Delft-DCC.github.io/discussions">community forum</a>.</p>
-<p>💡 <a href="https://github.com/TU-Delft-DCC/TU-Delft-DCC.github.io/issues/new/choose"><strong>Open an issue</strong></a><br>
-We track topic requests and bug-reports via GitHub issues.</p>
-</div>
-</div>
+</section>
+<section id="tools-software" class="level2">
+<h2 class="anchored" data-anchor-id="tools-software">Tools / Software</h2>
+<ul>
+<li>A command-line utility (Use keyboard shortcut CTRL-ALT-T, or right-click the desktop and left-click Open Terminal)</li>
+<li>A firewall – the default UFW (Uncomplicated Firewall) in Ubuntu is fine</li>
+<li>The APT package manager, installed by default on Ubuntu</li>
+</ul>
+</section>
+<section id="steps" class="level2">
+<h2 class="anchored" data-anchor-id="steps">Steps</h2>
+<ol type="1">
+<li>Request a Virtual Private Server (VPS) from TU Delft ICT</li>
+<li>Install Apache web server on the VPS</li>
+<li>Request an SSL certificate from TU Delft ICT</li>
+<li>Configure the SSL certificate file on your VPS</li>
+<li>Redirect all incoming web traffic to HTTPS</li>
+</ol>
+<section id="step-1.-request-a-virtual-private-server-from-tu-delft-ict" class="level3">
+<h3 class="anchored" data-anchor-id="step-1.-request-a-virtual-private-server-from-tu-delft-ict">Step 1. Request a Virtual Private Server from TU Delft ICT</h3>
+<p>You can make a request for a server via the <a href="https://tudelft.topdesk.net/tas/public/ssp/content/serviceflow?unid=418c986f186d4934848dc2712039ed34">TopDesk self service portal</a>. If you would like more information, documentation can be found here ___</p>
+<p><em>Note:</em> to run a web server, ports 80 (HTTP) and 443 (HTTPS) must be opened.</p>
+</section>
+<section id="step-2.-install-apache-web-server-on-the-vps" class="level3">
+<h3 class="anchored" data-anchor-id="step-2.-install-apache-web-server-on-the-vps">Step 2. Install Apache web server on the VPS</h3>
+<p><a href="https://ubuntu.com/tutorials/install-and-configure-apache#1-overview">Apache</a> is an open source web server that’s available for Linux servers. It is one of the most commonly used softwares for creating a web server. And, it’s free!</p>
+<p><a href="https://phoenixnap.com/kb/install-apache-ubuntu">Installing Apache</a> can be done using commands in the terminal. These instructions are documented with further information at the link in the beginning of this paragraph. First, make sure your local software packages are up to date by running:</p>
+<p><code>sudo apt-get update</code></p>
+<p>When that has finished, install the Apache package using:</p>
+<p><code>sudo apt-get install apache2</code></p>
+<p>The system prompts for confirmation – do so, and allow the system to complete the installation.</p>
+<p>Find the IP address of your VPS by running:</p>
+<p><code>hostname -I | awk '{print $1}'</code></p>
+<p>Use this IP address to enter the following command in your terminal, replacing local.server.ip with the actual IP address of your server:</p>
+<p><code>http://local.server.ip</code></p>
+<p>If the installation was completed successfully, you should see the Apache2 Ubuntu Default page in your web browser.</p>
+<p>Although the Apache installation process is complete, there is one more additional step. Configure the default UFW firewall to allow traffic on port 80.</p>
+<p>Start by displaying available app profiles on UFW:</p>
+<p><code>sudo ufw show app list</code></p>
+<p>Use the following command to allow normal web traffic on port 80:</p>
+<p><code>sudo ufw allow 'Apache Full'</code></p>
+<p>Verify the changes by checking UFW status:</p>
+<p><code>sudo ufw status</code></p>
+<p>At this point, your Apache web server is serving over HTTP, which is a good first step! But remember, we need to secure the connection over HTTPS. So, we still have a few more steps.</p>
+</section>
+<section id="step-3.-request-an-ssl-certificate-from-tu-delft-ict" class="level3">
+<h3 class="anchored" data-anchor-id="step-3.-request-an-ssl-certificate-from-tu-delft-ict">Step 3. Request an SSL certificate from TU Delft ICT</h3>
+<p>Detailed directions on how to do this can be found here ___</p>
+<p>You can create the .csr file directly on the VPS by first create a directory on /etc/apache2 called ssl:</p>
+<p><code>mkdir /etc/apache2/ssl</code></p>
+<p>Then, generate a CSR and private key using:</p>
+<p><code>openssl req -x509 -newkey rsa:4096 -keyout &lt;server_domain&gt;.key -out &lt;server_domain&gt;.csr -nodes</code></p>
+<p>After successfully running the command it will ask for the information of certificate request. Complete it using the appropriate information and then <server_domain>.key and <server_domain>.csr files will be generated.</server_domain></server_domain></p>
+<p>The .csr file must be sent to TU Delft ICT using this TopDesk form: <a href="https://tudelft.topdesk.net/tas/public/ssp/content/serviceflow?unid=62aeef08314247f3aba7ff2297d011da">TOPdesk SSL certificate server request</a>.</p>
+</section>
+<section id="step-4.-configure-the-ssl-certificate-on-your-vps" class="level3">
+<h3 class="anchored" data-anchor-id="step-4.-configure-the-ssl-certificate-on-your-vps">Step 4. Configure the SSL certificate on your VPS</h3>
+<p>When you receive SSL certificate files from the signing authority via TU Delft ICT, you need to put the information from this certificate in a specific place on your VPS in order to securely expose the web server. These instructions come from here: - <a href="https://hostadvice.com/how-to/configure-apache-with-tls-ssl-certificate-on-ubuntu-18/">Configure ssl for https</a></p>
+<p>Navigate to the default Apache site config directory using the following command:</p>
+<p><code>sudo nano /etc/apache2/sites-available/default-ssl.conf</code></p>
+<p>This config file tells the server where to find SSL certificate. It should look like this:</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>                <span class="op">&lt;</span>IfModule <span class="ex">mod_ssl.c</span><span class="op">&gt;</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>                <span class="op">&lt;</span>VirtualHost <span class="ex">_default_:443</span><span class="op">&gt;</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>                <span class="ex">ServerAdmin</span> webmaster@localhost</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>                <span class="ex">DocumentRoot</span> /var/www/html</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>                <span class="ex">ErrorLog</span> <span class="va">${APACHE_LOG_DIR}</span>/error.log</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>                <span class="ex">CustomLog</span> <span class="va">${APACHE_LOG_DIR}</span>/access.log combined</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>                <span class="ex">SSLEngine</span> on</span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>                <span class="ex">SSLCertificateFile</span>    /etc/ssl/certs/ssl-cert-snakeoil.pem</span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>                <span class="ex">SSLCertificateKeyFile</span> /etc/ssl/private/ssl-cert-snakeoil.key</span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>                <span class="op">&lt;</span>FilesMatch <span class="st">".(cgi|shtml|phtml|php)$"</span><span class="op">&gt;</span></span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>                <span class="ex">SSLOptions</span> +StdEnvVars</span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>                <span class="op">&lt;</span>/FilesMatch<span class="op">&gt;</span></span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>                <span class="op">&lt;</span>Directory <span class="ex">/usr/lib/cgi-bin</span><span class="op">&gt;</span></span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>                <span class="ex">SSLOptions</span> +StdEnvVars</span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>                <span class="op">&lt;</span>/Directory<span class="op">&gt;</span></span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a>                <span class="op">&lt;</span>/VirtualHost<span class="op">&gt;</span></span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a>                <span class="op">&lt;</span>/IfModule<span class="op">&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Edit this: <code>ServerAdmin webmaster@localhost</code> to this: <code>ServerAdmin email@example.net</code></p>
+<p>Add this right below the ServerAdmin line:</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>                <span class="ex">ServerName</span> ADD_YOUR_IP_OR_DOMAIN_NAME_HERE</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Now, edit these lines with our certificate location:</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>                <span class="ex">SSLCertificateFile</span>    /etc/apache2/ssl/apache.crt</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>                <span class="ex">SSLCertificateKeyFile</span> /etc/apache2/ssl/apache.key</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Our file should look like this:</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>                <span class="op">&lt;</span>IfModule <span class="ex">mod_ssl.c</span><span class="op">&gt;</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>                <span class="op">&lt;</span>VirtualHost <span class="ex">_default_:443</span><span class="op">&gt;</span></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>                <span class="ex">ServerAdmin</span> email@example.net</span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>                <span class="ex">ServerName</span> 203.0.113.122</span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>                <span class="ex">DocumentRoot</span> /var/www/html</span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>                <span class="ex">ErrorLog</span> <span class="va">${APACHE_LOG_DIR}</span>/error.log</span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a>                <span class="ex">CustomLog</span> <span class="va">${APACHE_LOG_DIR}</span>/access.log combined</span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a>                <span class="ex">SSLEngine</span> on</span>
+<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a>                <span class="ex">SSLCertificateFile</span>    /etc/apache2/ssl/apache.crt</span>
+<span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a>                <span class="ex">SSLCertificateKeyFile</span> /etc/apache2/ssl/apache.key</span>
+<span id="cb4-15"><a href="#cb4-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-16"><a href="#cb4-16" aria-hidden="true" tabindex="-1"></a>                <span class="op">&lt;</span>FilesMatch <span class="st">".(cgi|shtml|phtml|php)$"</span><span class="op">&gt;</span></span>
+<span id="cb4-17"><a href="#cb4-17" aria-hidden="true" tabindex="-1"></a>                <span class="ex">SSLOptions</span> +StdEnvVars</span>
+<span id="cb4-18"><a href="#cb4-18" aria-hidden="true" tabindex="-1"></a>                <span class="op">&lt;</span>/FilesMatch<span class="op">&gt;</span></span>
+<span id="cb4-19"><a href="#cb4-19" aria-hidden="true" tabindex="-1"></a>                <span class="op">&lt;</span>Directory <span class="ex">/usr/lib/cgi-bin</span><span class="op">&gt;</span></span>
+<span id="cb4-20"><a href="#cb4-20" aria-hidden="true" tabindex="-1"></a>                <span class="ex">SSLOptions</span> +StdEnvVars</span>
+<span id="cb4-21"><a href="#cb4-21" aria-hidden="true" tabindex="-1"></a>                <span class="op">&lt;</span>/Directory<span class="op">&gt;</span></span>
+<span id="cb4-22"><a href="#cb4-22" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-23"><a href="#cb4-23" aria-hidden="true" tabindex="-1"></a>                <span class="op">&lt;</span>/VirtualHost<span class="op">&gt;</span></span>
+<span id="cb4-24"><a href="#cb4-24" aria-hidden="true" tabindex="-1"></a>                <span class="op">&lt;</span>/IfModule<span class="op">&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><strong>Save the file</strong>, and close it.</p>
+<p><em>Note: If you are using something other than Apache Web Server (like, nginx for example) you can also create the SSL config file from scratch. Each application will have different syntax that should be used in this file. You can see how the syntax is set up by using <a href="https://ssl-config.mozilla.org/#server=apache&amp;version=2.4.41&amp;config=intermediate&amp;openssl=1.1.1d&amp;guideline=5.6">this tool</a></em></p>
+<p>Enable the SSL module using following command:</p>
+<p><code>sudo a2enmod ssl</code></p>
+<p>Now enable the site we have just edited:</p>
+<p><code>sudo a2ensite default-ssl.conf</code></p>
+<p>Restart Apache:</p>
+<p><code>sudo service apache2 restart</code></p>
+<p>The website is now secure, access it using following address in the browser</p>
+<p><code>https://YOUR_SERVER_IP</code></p>
+</section>
+<section id="step-5.-redirect-all-incoming-web-traffic-to-https" class="level3">
+<h3 class="anchored" data-anchor-id="step-5.-redirect-all-incoming-web-traffic-to-https">Step 5. Redirect all incoming web traffic to HTTPS</h3>
+<p><code>sudo a2enmod proxy</code></p>
+<p><code>sudo a2enmod proxy_http</code></p>
+<p><code>sudo a2enmod rewrite</code></p>
+<p>Add in apache conf:</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>                <span class="ex">ProxyPass</span> /thredds http://localhost:8080/thredds</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>                <span class="ex">ProxyPassReverse</span> /thredds http://localhost:8080/thredds</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>                <span class="ex">RedirectMatch</span> ^/$ /thredds/</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+</section>
+<section id="notes-and-next-steps" class="level2">
+<h2 class="anchored" data-anchor-id="notes-and-next-steps">Notes and Next Steps</h2>
+<p>Test that your web server is secured by HTTPS by typing the Fully Qualified Domain Name (FQDN) of your server in a web browser. If HTTPS is enabled, the URL should begin with it - if it still says HTTP, something will need to be reconfigured.</p>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->
@@ -1042,6 +1220,18 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
 });
 </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="../../docs/infrastructure/VPS_SSL_Certs.html" class="pagination-link" aria-label="Configure SSL certificates">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Configure SSL certificates</span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="../../docs/infrastructure/gitlab/gitlab_intro.html" class="pagination-link" aria-label="TU Delft GitLab">
+        <span class="nav-page-text">TU Delft GitLab</span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
 </div> <!-- /content -->
 <footer class="footer">
   <div class="nav-footer">

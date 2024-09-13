@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>DCC Guides</title>
+<title>project_drive_mounting – DCC Guides</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,27 +20,63 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<script src="site_libs/quarto-html/quarto.js"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<link href="../../docs/data/sync_unison.html" rel="next">
+<link href="../../docs/data/project_drive_request.html" rel="prev">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -70,7 +106,7 @@ ul.task-list li input[type="checkbox"] {
 }</script>
 
 
-<link rel="stylesheet" href="themes/custom.css">
+<link rel="stylesheet" href="../../themes/custom.css">
 </head>
 
 <body class="nav-sidebar docked nav-fixed">
@@ -80,10 +116,10 @@ ul.task-list li input[type="checkbox"] {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a href="./index.html" class="navbar-brand navbar-brand-logo">
-    <img src="./docs/img/logo.png" alt="" class="navbar-logo">
+    <a href="../../index.html" class="navbar-brand navbar-brand-logo">
+    <img src="../../docs/img/logo.png" alt="" class="navbar-logo">
     </a>
-    <a class="navbar-brand" href="./index.html">
+    <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">DCC Guides</span>
     </a>
   </div>
@@ -94,15 +130,15 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./docs/community/dcc.html"> 
+    <a class="nav-link" href="../../docs/community/dcc.html"> 
 <span class="menu-text">About the DCC</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./docs/community/contribute.html"> 
+    <a class="nav-link" href="../../docs/community/contribute.html"> 
 <span class="menu-text">Contributing</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./docs/community/code_of_conduct.html"> 
+    <a class="nav-link" href="../../docs/community/code_of_conduct.html"> 
 <span class="menu-text">Code of Conduct</span></a>
   </li>  
 </ul>
@@ -118,7 +154,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../docs/data/getting_started.html">🗃️ <strong>Data Management</strong></a></li><li class="breadcrumb-item"><a href="../../docs/data/storage_options.html">TU Delft Data storage</a></li><li class="breadcrumb-item"><a href="../../docs/data/project_drive_mounting.html">Mount Project Drive on Server</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -141,7 +177,7 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="./docs/infrastructure/intro_servers.html" class="sidebar-item-text sidebar-link">
+            <a href="../../docs/infrastructure/intro_servers.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Remote servers</span></a>
           <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
@@ -150,31 +186,31 @@ ul.task-list li input[type="checkbox"] {
       <ul id="" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./docs/infrastructure/VPS_request.html" class="sidebar-item-text sidebar-link">
+  <a href="../../docs/infrastructure/VPS_request.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Request a VPS</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./docs/infrastructure/VPS_SSH.html" class="sidebar-item-text sidebar-link">
+  <a href="../../docs/infrastructure/VPS_SSH.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Configure SSH Tunneling</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./docs/infrastructure/moving_data.html" class="sidebar-item-text sidebar-link">
+  <a href="../../docs/infrastructure/moving_data.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Moving data to your server</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./docs/infrastructure/VPS_SSL_Certs.html" class="sidebar-item-text sidebar-link">
+  <a href="../../docs/infrastructure/VPS_SSL_Certs.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Configure SSL certificates</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./docs/infrastructure/apache_webserver.html" class="sidebar-item-text sidebar-link">
+  <a href="../../docs/infrastructure/apache_webserver.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Setting up an Apache web server</span></a>
   </div>
 </li>
@@ -182,7 +218,7 @@ ul.task-list li input[type="checkbox"] {
   </li>
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="./docs/infrastructure/gitlab/gitlab_intro.html" class="sidebar-item-text sidebar-link">
+            <a href="../../docs/infrastructure/gitlab/gitlab_intro.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">TU Delft GitLab</span></a>
           <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
@@ -191,25 +227,25 @@ ul.task-list li input[type="checkbox"] {
       <ul id="" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./docs/infrastructure/gitlab/gitlab_groups.html" class="sidebar-item-text sidebar-link">
+  <a href="../../docs/infrastructure/gitlab/gitlab_groups.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Creating GitLab groups</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./docs/infrastructure/gitlab/gitlab_transfer_ownership.html" class="sidebar-item-text sidebar-link">
+  <a href="../../docs/infrastructure/gitlab/gitlab_transfer_ownership.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Transfer ownership of a GitLab repository</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./docs/infrastructure/gitlab/gitlab_docker.html" class="sidebar-item-text sidebar-link">
+  <a href="../../docs/infrastructure/gitlab/gitlab_docker.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Continuous Integration with GitLab</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./docs/infrastructure/gitlab/runner_matlab.html" class="sidebar-item-text sidebar-link">
+  <a href="../../docs/infrastructure/gitlab/runner_matlab.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Setting up a Gitlab runner for MATLAB</span></a>
   </div>
 </li>
@@ -228,13 +264,13 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./docs/data/getting_started.html" class="sidebar-item-text sidebar-link">
+  <a href="../../docs/data/getting_started.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Getting started</span></a>
   </div>
 </li>
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="./docs/data/fair.html" class="sidebar-item-text sidebar-link">
+            <a href="../../docs/data/fair.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">FAIR Data</span></a>
           <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
@@ -243,7 +279,7 @@ ul.task-list li input[type="checkbox"] {
       <ul id="" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./docs/data/publishing.html" class="sidebar-item-text sidebar-link">
+  <a href="../../docs/data/publishing.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Prepare data for publishing</span></a>
   </div>
 </li>
@@ -251,28 +287,28 @@ ul.task-list li input[type="checkbox"] {
   </li>
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="./docs/data/storage_options.html" class="sidebar-item-text sidebar-link">
+            <a href="../../docs/data/storage_options.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">TU Delft Data storage</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#" role="navigation" aria-expanded="false" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="" class="collapse list-unstyled sidebar-section depth2 ">  
+      <ul id="" class="collapse list-unstyled sidebar-section depth2 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./docs/data/project_drive_request.html" class="sidebar-item-text sidebar-link">
+  <a href="../../docs/data/project_drive_request.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Request Project Drive space</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./docs/data/project_drive_mounting.html" class="sidebar-item-text sidebar-link">
+  <a href="../../docs/data/project_drive_mounting.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Mount Project Drive on Server</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./docs/data/sync_unison.html" class="sidebar-item-text sidebar-link">
+  <a href="../../docs/data/sync_unison.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Sync with Project Drive and SURFDrive with Unison</span></a>
   </div>
 </li>
@@ -291,13 +327,13 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./docs/software/getting_started.html" class="sidebar-item-text sidebar-link">
+  <a href="../../docs/software/getting_started.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Getting started</span></a>
   </div>
 </li>
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="./docs/software/fair.html" class="sidebar-item-text sidebar-link">
+            <a href="../../docs/software/fair.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">FAIR Software</span></a>
           <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
@@ -306,19 +342,19 @@ ul.task-list li input[type="checkbox"] {
       <ul id="" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./docs/software/checklist.html" class="sidebar-item-text sidebar-link">
+  <a href="../../docs/software/checklist.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">FAIR checklist for research software</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./docs/software/project_cards.html" class="sidebar-item-text sidebar-link">
+  <a href="../../docs/software/project_cards.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">FAIR assessment cards</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./docs/software/software_management_plan.html" class="sidebar-item-text sidebar-link">
+  <a href="../../docs/software/software_management_plan.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Software management plan</span></a>
   </div>
 </li>
@@ -332,7 +368,7 @@ ul.task-list li input[type="checkbox"] {
   </li>
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="./docs/software/testing_intro.html" class="sidebar-item-text sidebar-link">
+            <a href="../../docs/software/testing_intro.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Software testing</span></a>
           <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
@@ -341,7 +377,7 @@ ul.task-list li input[type="checkbox"] {
       <ul id="" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./docs/software/testing_matlab.html" class="sidebar-item-text sidebar-link">
+  <a href="../../docs/software/testing_matlab.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Testing with MATLAB</span></a>
   </div>
 </li>
@@ -349,7 +385,7 @@ ul.task-list li input[type="checkbox"] {
   </li>
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="./docs/software/git/intro.html" class="sidebar-item-text sidebar-link">
+            <a href="../../docs/software/git/intro.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Version control with Git</span></a>
           <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
@@ -358,7 +394,7 @@ ul.task-list li input[type="checkbox"] {
       <ul id="" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./docs/software/git/branch_management.html" class="sidebar-item-text sidebar-link">
+  <a href="../../docs/software/git/branch_management.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Branch management</span></a>
   </div>
 </li>
@@ -366,7 +402,7 @@ ul.task-list li input[type="checkbox"] {
   </li>
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="./docs/software/containers/intro.html" class="sidebar-item-text sidebar-link">
+            <a href="../../docs/software/containers/intro.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Working with containers</span></a>
           <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
@@ -375,7 +411,7 @@ ul.task-list li input[type="checkbox"] {
       <ul id="" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./docs/software/containers/docker_gui.html" class="sidebar-item-text sidebar-link">
+  <a href="../../docs/software/containers/docker_gui.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Using a docker container with a GUI</span></a>
   </div>
 </li>
@@ -394,19 +430,19 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./docs/resources/courses.html" class="sidebar-item-text sidebar-link">
+  <a href="../../docs/resources/courses.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Courses and workshops</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./docs/resources/curriculum.html" class="sidebar-item-text sidebar-link">
+  <a href="../../docs/resources/curriculum.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Research Software Curriculum</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./docs/resources/tools.html" class="sidebar-item-text sidebar-link">
+  <a href="../../docs/resources/tools.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Tools</span></a>
   </div>
 </li>
@@ -422,7 +458,21 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#welcome-to-the-dcc-guides" id="toc-welcome-to-the-dcc-guides" class="nav-link active" data-scroll-target="#welcome-to-the-dcc-guides">Welcome to the DCC Guides!</a></li>
+  <li><a href="#mount-project-drive-on-server" id="toc-mount-project-drive-on-server" class="nav-link active" data-scroll-target="#mount-project-drive-on-server">Mount Project Drive on Server</a>
+  <ul class="collapse">
+  <li><a href="#what-this-documentation-will-help-achieve" id="toc-what-this-documentation-will-help-achieve" class="nav-link" data-scroll-target="#what-this-documentation-will-help-achieve">What this documentation will help achieve</a></li>
+  <li><a href="#prerequisites" id="toc-prerequisites" class="nav-link" data-scroll-target="#prerequisites">Prerequisites</a></li>
+  <li><a href="#steps" id="toc-steps" class="nav-link" data-scroll-target="#steps">Steps</a>
+  <ul class="collapse">
+  <li><a href="#step-1.-locate-the-url-of-your-project-storage" id="toc-step-1.-locate-the-url-of-your-project-storage" class="nav-link" data-scroll-target="#step-1.-locate-the-url-of-your-project-storage">Step 1. Locate the URL of your project storage</a></li>
+  <li><a href="#step-2.-connect-to-your-tu-delft-vps-via-ssh" id="toc-step-2.-connect-to-your-tu-delft-vps-via-ssh" class="nav-link" data-scroll-target="#step-2.-connect-to-your-tu-delft-vps-via-ssh">Step 2. Connect to your TU Delft VPS via SSH</a></li>
+  <li><a href="#step-3.-create-a-new-directory-as-the-mounting-point" id="toc-step-3.-create-a-new-directory-as-the-mounting-point" class="nav-link" data-scroll-target="#step-3.-create-a-new-directory-as-the-mounting-point">Step 3. Create a new directory as the mounting point</a></li>
+  <li><a href="#step-4.-find-and-save-your-user-and-group-details" id="toc-step-4.-find-and-save-your-user-and-group-details" class="nav-link" data-scroll-target="#step-4.-find-and-save-your-user-and-group-details">Step 4. Find and save your user and group details</a></li>
+  <li><a href="#step-5.-edit-the-fstab-file-to-include-project-storage-technical-details" id="toc-step-5.-edit-the-fstab-file-to-include-project-storage-technical-details" class="nav-link" data-scroll-target="#step-5.-edit-the-fstab-file-to-include-project-storage-technical-details">Step 5. Edit the fstab file to include project storage technical details</a></li>
+  <li><a href="#step-6.-mount-the-project-drive" id="toc-step-6.-mount-the-project-drive" class="nav-link" data-scroll-target="#step-6.-mount-the-project-drive">Step 6. Mount the project drive</a></li>
+  </ul></li>
+  <li><a href="#notes-and-next-steps" id="toc-notes-and-next-steps" class="nav-link" data-scroll-target="#notes-and-next-steps">Notes and next steps</a></li>
+  </ul></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/TU-Delft-DCC/TU-Delft-DCC.github.io/issues/new/choose" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div></nav>
     </div>
@@ -432,49 +482,159 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<section id="welcome-to-the-dcc-guides" class="level1">
-<h1>Welcome to the DCC Guides!</h1>
-<p>These guides are an initiative from TU Delft <a href="./docs/community/dcc.html">Digital Competence Center</a> and aim to provide a comprehensive entrypoint to get you started with Research Computing, Research Data and Research Software at TU Delft.</p>
+<!-- ---
+section: data
+title: Mount Project Drive
+author_1: Raúl Ortiz Merino
+author_2: Maurits Kok
+--- -->
+<section id="mount-project-drive-on-server" class="level1">
+<h1>Mount Project Drive on Server</h1>
+<section id="what-this-documentation-will-help-achieve" class="level2">
+<h2 class="anchored" data-anchor-id="what-this-documentation-will-help-achieve">What this documentation will help achieve</h2>
+<p>Project drive storage from TU Delft ICT can be mounted and made accessible in your (TU Delft) Virtual Private Server.</p>
+</section>
+<section id="prerequisites" class="level2">
+<h2 class="anchored" data-anchor-id="prerequisites">Prerequisites</h2>
+<ul>
+<li>A (TU Delft) <a href="../../docs/infrastructure/VPS_request.html">Virtual Private Server</a></li>
+<li>(TU Delft) <a href="../../docs/data/project_drive_request.html">Project Drive</a></li>
+</ul>
+</section>
+<section id="steps" class="level2">
+<h2 class="anchored" data-anchor-id="steps">Steps</h2>
+<ol type="1">
+<li>Locate the URL of your project storage</li>
+<li>Connect to your TU Delft VPS via SSH</li>
+<li>Create a new directory as a mounting point</li>
+<li>Retrieve your Linux user and group details</li>
+<li>Edit the fstab file to include project storage technical details</li>
+<li>Mount the project drive</li>
+</ol>
+<section id="step-1.-locate-the-url-of-your-project-storage" class="level3">
+<h3 class="anchored" data-anchor-id="step-1.-locate-the-url-of-your-project-storage">Step 1. Locate the URL of your project storage</h3>
+<p>The URL for your project drive can be obtained from either - the email from TU Delft ICT with the confirmation of your project drive request, or - by navigating to https://webdata.tudelft.nl/, and then through <strong>WebDav Web Links &gt; Staff-Umbrella &gt; “Enter your netID and password”</strong> to retrieve a list of your project drives.</p>
+<p>Copy everything after “https://webdata.tudelft.nl/” (this will be staff-umbrella/<code>&lt;your_project_name&gt;</code>)</p>
+</section>
+<section id="step-2.-connect-to-your-tu-delft-vps-via-ssh" class="level3">
+<h3 class="anchored" data-anchor-id="step-2.-connect-to-your-tu-delft-vps-via-ssh">Step 2. Connect to your TU Delft VPS via SSH</h3>
+<p>Follow instructions in TU Delft ICT email from initial server setup or <a href="../../docs/infrastructure/VPS_SSH.html">configure a 1-step connection via SSH</a>.</p>
+</section>
+<section id="step-3.-create-a-new-directory-as-the-mounting-point" class="level3">
+<h3 class="anchored" data-anchor-id="step-3.-create-a-new-directory-as-the-mounting-point">Step 3. Create a new directory as the mounting point</h3>
+<p>The convention is to create mounting points in the folder <code>/media</code>. Navigate to the folder and create a new folder with</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> /media</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">mkdir</span> <span class="op">&lt;</span>server_mount_point<span class="op">&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Replace <code>&lt;server_mount_point&gt;</code> with the name of your choice. This will be the name of the folder where your project drive will be mounted.</p>
+</section>
+<section id="step-4.-find-and-save-your-user-and-group-details" class="level3">
+<h3 class="anchored" data-anchor-id="step-4.-find-and-save-your-user-and-group-details">Step 4. Find and save your user and group details</h3>
+<p>In the terminal, you can retrieve your local user and group details with:</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">id</span> <span class="at">-u</span> <span class="op">&lt;</span>your_netID<span class="op">&gt;</span> <span class="co"># User ID</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="fu">id</span> <span class="at">-g</span> <span class="op">&lt;</span>your_netID<span class="op">&gt;</span> <span class="co"># Group ID</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>You may need the values for <code>uid</code> and <code>gid</code> for step 5.</p>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<strong>Disclaimer</strong>
+Note
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>The guides are under active development and mainly in use as a useful resource for the support provided by the DCC. The content is a compilation of developed solutions, relevant links and resources, and documents produced by colleagues inside and outside TU Delft. This is not an official TU Delft website, but rather a place where we keep note of things we find important and useful to share.</p>
+<p>These commands are server-specific, so make sure to execute them on the server where the project drives will be mounted.</p>
 </div>
 </div>
-<p>The guides are split into a few major sections:</p>
-<ul>
-<li><strong>Computing Infrastructure</strong> contains information and guides on TU Delft ICT infrastructure.</li>
-<li><strong>Data Management</strong> contains information and guides on using TU Delft data storage options and best-practices for FAIR data.</li>
-<li><strong>Research Software</strong> contains information for creating FAIR research software.</li>
-<li><strong>Resources</strong> contains a collection of courses, workshops, and references.</li>
-</ul>
-<div class="callout callout-style-default callout-tip callout-titled">
+</section>
+<section id="step-5.-edit-the-fstab-file-to-include-project-storage-technical-details" class="level3">
+<h3 class="anchored" data-anchor-id="step-5.-edit-the-fstab-file-to-include-project-storage-technical-details">Step 5. Edit the fstab file to include project storage technical details</h3>
+<p>The fstab file containes a list of the addresses of external file systems. In this file, the details of your project drive will need to be added in a single line. This line consists of four parts: 1. <em>filesystem</em> - the address of the project drive 2. <em>mount point</em> - the location in the VPS where you want to mount the project drive 3. <em>type</em> - the type of the filesystem 4. <em>options</em> - additional option such as user privileges</p>
+<p>The fstab file must be in the <code>/etc/</code> directory and can be opened with the <code>vi</code> or <code>nano</code> editor:</p>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true" aria-current="page">vi</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false">nano</a></li></ul>
+<div class="tab-content">
+<div id="tabset-1-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-1-1-tab">
+<p>In the terminal, enter the following command to open the fstab file in the vi editor:<br>
+<code>sudo vi /etc/fstab</code><br>
+Then, switch to the insert mode (hit “i” to switch to insert mode and be able to type)</p>
+</div>
+<div id="tabset-1-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-2-tab">
+<p>In the terminal, enter the following command to open the fstab file in the nano editor:<br>
+<code>sudo nano /etc/fstab</code></p>
+</div>
+</div>
+</div>
+<p>Add the following line to the file:</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="op">&lt;</span>your_netID<span class="op">&gt;</span>@sftp.tudelft.nl:/staff-umbrella/<span class="op">&lt;</span>project_drive_name<span class="op">&gt;</span>  /media/<span class="op">&lt;</span>server_mount_point<span class="op">&gt;</span> fuse.sshfs  <span class="ex">rw,noauto,users,_netdev</span>  0  0</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>replacing the values between <code>&lt;</code> and <code>&gt;</code> with your NetID, the name of your project drive, and the name of the folder you created in step 3.</p>
+<div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<strong>Learn more and get involved</strong>
+Note
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>🙌 <a href="./docs/community/contribute.html"><strong>Join the community</strong></a><br>
-We welcome anyone to join us in improving our guides. To join, check out our <a href="./docs/community/contribute.html">contributing guide</a>.</p>
-<p>💬 <a href="https://github.com/TU-Delft-DCC/TU-Delft-DCC.github.io/discussions"><strong>Join the discussion</strong></a><br>
-We have community discussions, talk about ideas, share general questions and develop solutions and feedback in our <a href="https://github.com/TU-Delft-DCC/TU-Delft-DCC.github.io/discussions">community forum</a>.</p>
-<p>💡 <a href="https://github.com/TU-Delft-DCC/TU-Delft-DCC.github.io/issues/new/choose"><strong>Open an issue</strong></a><br>
-We track topic requests and bug-reports via GitHub issues.</p>
+<p>If this configuration throws a permission error during mounting, try:</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="ex">//tudelft.net/staff-umbrella/</span><span class="op">&lt;</span>project_drive_name<span class="op">&gt;</span>/ /media/<span class="op">&lt;</span>server_mount_point<span class="op">&gt;</span> cifs username=<span class="op">&lt;</span>your_netID<span class="op">&gt;</span>,noauto,uid=<span class="op">&lt;</span>your_uid<span class="op">&gt;</span>,gid=<span class="op">&lt;</span>your_gid<span class="op">&gt;</span>,forcegid,rw,_netdev</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Use the values for <code>uid</code> and <code>gid</code> from step 4.</p>
 </div>
 </div>
+<p>Close the file editor and save the changes:</p>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-2-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-1" role="tab" aria-controls="tabset-2-1" aria-selected="true">vi</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-2-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-2" role="tab" aria-controls="tabset-2-2" aria-selected="false">nano</a></li></ul>
+<div class="tab-content">
+<div id="tabset-2-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-2-1-tab">
+<p>Use <code>Control</code>+<code>C</code> followed by <code>:wq</code> to save the file and close it to get back to your terminal.</p>
+</div>
+<div id="tabset-2-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-2-2-tab">
+<p>As indicated by the nano interface, use <code>Control</code>+<code>O</code> to write the file. Then, confirm your choice of filename by hitting <code>enter</code>. Finally, exit the file with <code>Control</code>+<code>X</code></p>
+</div>
+</div>
+</div>
+</section>
+<section id="step-6.-mount-the-project-drive" class="level3">
+<h3 class="anchored" data-anchor-id="step-6.-mount-the-project-drive">Step 6. Mount the project drive</h3>
+<p>To mount the project drive execute the command</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> mount /media/<span class="op">&lt;</span>server_mount_point<span class="op">&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>You can also unmount the drive with</p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="ex">fusermount</span> <span class="at">-u</span> /media/<span class="op">&lt;</span>server_mount_point<span class="op">&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>The project drive will not mount automatically, so you will need to remount it manually each time you restart the server.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>If the step above does not work, it probably means that the packages for mounting cifs-type filesystems haven’t been installed. Depending on your linux flavour you will need to install them using:</p>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-3-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-3-1" role="tab" aria-controls="tabset-3-1" aria-selected="true">Ubuntu/Debian</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-3-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-3-2" role="tab" aria-controls="tabset-3-2" aria-selected="false">Redhat/Centos/Fedora</a></li></ul>
+<div class="tab-content">
+<div id="tabset-3-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-3-1-tab">
+<p><code>sudo apt install cifs-utils</code></p>
+</div>
+<div id="tabset-3-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-3-2-tab">
+<p><code>sudo yum install cifs-utils</code></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="notes-and-next-steps" class="level2">
+<h2 class="anchored" data-anchor-id="notes-and-next-steps">Notes and next steps</h2>
+<p>The steps above can also be used to mount any storage offered by TU Delft with a WebDav link (staff-homes, staff-groups, staff-bulk, student-homes, student-groups and apps). Simply use the latter half of the URL from the WebDav web link of your storage drive, which will change from staff-umbrella (project drive) to something else depending on the storage drive you would like to mount.</p>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->
@@ -1042,6 +1202,18 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
 });
 </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="../../docs/data/project_drive_request.html" class="pagination-link" aria-label="Request Project Drive space">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Request Project Drive space</span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="../../docs/data/sync_unison.html" class="pagination-link" aria-label="Sync with Project Drive and SURFDrive with Unison">
+        <span class="nav-page-text">Sync with Project Drive and SURFDrive with Unison</span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
 </div> <!-- /content -->
 <footer class="footer">
   <div class="nav-footer">
