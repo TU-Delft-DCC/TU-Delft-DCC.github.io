@@ -89,7 +89,7 @@ sudo yum update
 It would be also useful to set a password for the VPS when you log in. You can do that by `passwd` command. 
 
 ## Next Steps
-Common next steps after obtaining a VPS and storage include initial configuration steps such as establishing a connection via SSH and mounting Project Drive storage; and also software installation steps for tools like Docker, and setting up Apache Web Server. We will add more documentation when common installations come to our attention, so please [reach out to us](../community/contribute.md) with your questions or suggestions.
+Common next steps after obtaining a VPS and storage include initial configuration steps such as establishing a connection via SSH and mounting Project Drive storage; and also software installation steps for tools like Docker, and setting up Apache Web Server. We will add more documentation when common installations come to our attention, so please [reach out to us](/../../CONTRIBUTING.md) with your questions or suggestions.
 
 - [Install Docker](https://phoenixnap.com/kb/how-to-install-docker-on-ubuntu-18-04)
 - [Configure Docker for use as non-root](https://docs.docker.com/engine/install/linux-postinstall/)
