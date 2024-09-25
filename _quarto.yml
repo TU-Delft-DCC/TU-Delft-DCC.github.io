@@ -23,7 +23,7 @@ execute:
   freeze: true # When freeze: true is set, it tells Quarto to "freeze" the execution of code chunks.
 
 website:
-  title: "DCC Guides"
+  # title: "DCC Guides"
   # google-analytics: "UA-XXXXXXXX"
   # cookie-consent: true
   #
@@ -36,9 +36,11 @@ website:
     left: "By TU Delft Digital Competence Centre. Content on this site is licensed under a [CC-BY-4.0](https://creativecommons.org/licenses/by/4.0/) license. "
   bread-crumbs: true # Breadcrumbs in Quarto websites are a type of secondary navigation that shows the user's current location within the site hierarchy
   navbar:
-    logo: docs/img/logo.png
+    logo: docs/img/tud/logo_crop.png
     collapse-below: lg # It determines at which screen size the navbar should collapse into a mobile-friendly format (typically a hamburger menu)
     left:
+      - href: index.md
+        text: Home
       - href: docs/community/dcc.md
         text: About the DCC
       # - href: name.md
@@ -58,43 +60,43 @@ website:
     collapse-level: 2
     align: left
     contents:
-      - section: "⚙️ **Computing Infrastructure**"
+      - section: ⚙️ Computing Infrastructure
         contents:
-          - href: docs/infrastructure/intro_servers.md
-            text: Remote servers
-            contents:
-              - href: docs/infrastructure/VPS_request.md
-                text: Request a VPS
-              - href: docs/infrastructure/VPS_SSH.md
-                text: Configure SSH Tunneling
-              - href: docs/infrastructure/moving_data.md
-                text: Moving data to your server
-              - href: docs/infrastructure/VPS_SSL_Certs.md
-                text: Configure SSL certificates
-              - href: docs/infrastructure/apache_webserver.md
-                text: Setting up an Apache web server
-          - href: docs/infrastructure/gitlab/gitlab_intro.md
-            text: TU Delft GitLab
-            contents:
-              - href: docs/infrastructure/gitlab/gitlab_groups.md
-                text: Creating GitLab groups
-              - href: docs/infrastructure/gitlab/gitlab_transfer_ownership.md
-                text: Transfer ownership of a GitLab repository
-              - href: docs/infrastructure/gitlab/gitlab_docker.md
-                text: Continuous Integration with GitLab
-              - href: docs/infrastructure/gitlab/runner_matlab.md
-                text: Setting up a Gitlab runner for MATLAB
-      - section: "🗃️ **Data Management**"
+        - section: "Remote servers"
+          href: docs/infrastructure/intro_servers.md
+          contents:
+            - text: "Request a VPS"
+              href: docs/infrastructure/VPS_request.md
+            - href: docs/infrastructure/VPS_SSH.md
+              text: Configure SSH Tunneling
+            - href: docs/infrastructure/moving_data.md
+              text: Moving data to your server
+            - href: docs/infrastructure/VPS_SSL_Certs.md
+              text: Configure SSL certificates
+            - href: docs/infrastructure/apache_webserver.md
+              text: Setting up an Apache web server
+        - section: "TU Delft GitLab" 
+          href: docs/infrastructure/gitlab/gitlab_intro.md
+          contents:
+            - href: docs/infrastructure/gitlab/gitlab_groups.md
+              text: Creating GitLab groups
+            - href: docs/infrastructure/gitlab/gitlab_transfer_ownership.md
+              text: Transfer ownership of a GitLab repository
+            - href: docs/infrastructure/gitlab/gitlab_docker.md
+              text: Continuous Integration with GitLab
+            - href: docs/infrastructure/gitlab/runner_matlab.md
+              text: Setting up a Gitlab runner for MATLAB
+      - section: "🗃️ Data Management"
         contents:
           - href: docs/data/getting_started.md
             text: Getting started
-          - href: docs/data/fair.md
-            text: FAIR Data
+          - section: "FAIR Data"
+            href: docs/data/fair.md
             contents:
               - href: docs/data/publishing.md
                 text: Prepare data for publishing
-          - href: docs/data/storage_options.md
-            text: TU Delft Data storage
+          - section: "TU Delft Data storage"
+            href: docs/data/storage_options.md
             contents:
               - href: docs/data/project_drive_request.md
                 text: Request Project Drive space
@@ -102,12 +104,12 @@ website:
                 text: Mount Project Drive on Server
               - href: docs/data/sync_unison.md
                 text: Sync with Project Drive and SURFDrive with Unison
-      - section: "💻 **Research Software**"
+      - section: "💻 Research Software"
         contents:
           - href: docs/software/getting_started.md
             text: Getting started
-          - href: docs/software/fair.md
-            text: FAIR Software
+          - section: "FAIR Software"
+            href: docs/software/fair.md
             contents:
               - href: docs/software/checklist.md
                 text: FAIR checklist for research software
@@ -117,22 +119,22 @@ website:
                 text: Software management plan
               - url: https://tu-delft-dcc.github.io/FAIR4RS/
                 text: FAIR for Research Software Program Spring 2023
-          - href: docs/software/testing_intro.md
-            text: Software testing
+          - section: "Software testing"
+            href: docs/software/testing_intro.md
             contents:
               - href: docs/software/testing_matlab.md
                 text: Testing with MATLAB
-          - href: docs/software/git/intro.md
-            text: Version control with Git
+          - section: "Version control with git"
+            href: docs/software/git/intro.md
             contents:
               - href: docs/software/git/branch_management.md
                 text: Branch management
-          - href: docs/software/containers/intro.md
-            text: Working with containers
+          - section: "Working with containers"
+            href: docs/software/containers/intro.md
             contents:
               - href: docs/software/containers/docker_gui.md
                 text: Using a docker container with a GUI
-      - section: "📖 **Resources**"
+      - section: "📖 Resources"
         contents:
           - href: docs/resources/courses.md
             text: Courses and workshops
@@ -151,3 +153,5 @@ format:
     css: themes/custom.css
     toc: true
     toc-location: right
+    grid: 
+      sidebar-width: 300px
