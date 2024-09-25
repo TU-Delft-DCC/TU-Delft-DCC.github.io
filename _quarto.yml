@@ -7,6 +7,8 @@ project:
   render:
     # Render
     - "index.md"
+    - "CONTRIBUTING.md"
+    - "CODE_OF_CONDUCT.md"
     - "docs/**/*.md"
     # Do not render
     - "!_under_development/**"
