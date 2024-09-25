@@ -157,3 +157,5 @@ format:
     css: themes/custom.css
     toc: true
     toc-location: right
+    anchor-sections: true
+    smooth-scroll: true
