@@ -47,9 +47,9 @@ website:
         text: About the DCC
       # - href: name.md
       #   text: Contact
-      - href: docs/community/contribute.md
+      - href: CONTRIBUTING.md
         text: Contributing
-      - href: docs/community/code_of_conduct.md
+      - href: CODE_OF_CONDUCT.md
         text: Code of Conduct
       # - href: name.md
       #   text: FAQ   
