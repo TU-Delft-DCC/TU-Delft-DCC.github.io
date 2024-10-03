@@ -36,7 +36,7 @@ website:
     left: |
       Powered by [Quarto](https://quarto.org).
     center: |
-      &copy; 2024 TU Delft Digital Comptence Centre
+      &copy; 2024 TU Delft Digital Competence Centre
     right: |
       License: [CC-BY-4.0](https://creativecommons.org/licenses/by/4.0/).
   bread-crumbs: true # Breadcrumbs in Quarto websites are a type of secondary navigation that shows the user's current location within the site hierarchy
