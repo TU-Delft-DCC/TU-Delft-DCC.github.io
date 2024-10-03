@@ -1,5 +1,10 @@
-# Welcome to the DCC Guides!
-These guides are an initiative from TU Delft [Digital Competence Center](/docs/community/dcc.md) and aim to provide a comprehensive entrypoint to get you started with Research Computing, Research Data and Research Software at TU Delft. 
+---
+title: Welcome to the DCC Guides!
+toc: false
+---
+
+
+These guides are an initiative from TU Delft [Digital Competence Centre](/docs/community/dcc.md) and aim to provide a comprehensive entrypoint to get you started with Research Computing, Research Data, and Research Software at TU Delft. 
 
 :::{.callout-note} 
 ## **Disclaimer**
@@ -18,8 +23,8 @@ The guides are split into a few major sections:
 :::{.callout-tip} 
 ## **Learn more and get involved**
 
-🙌 [**Join the community**](docs/community/contribute.md)  
-We welcome anyone to join us in improving our guides. To join, check out our [contributing guide](docs/community/contribute.md).
+🙌 [**Join the community**](/docs/community/contribute.md)  
+We welcome anyone to join us in improving our guides. To join, check out our [contributing guide](/docs/community/contribute.md).
 
 💬 [**Join the discussion**](https://github.com/TU-Delft-DCC/TU-Delft-DCC.github.io/discussions)  
 We have community discussions, talk about ideas, share general questions and develop solutions and feedback in our [community forum](https://github.com/TU-Delft-DCC/TU-Delft-DCC.github.io/discussions).
