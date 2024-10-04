@@ -1,10 +1,11 @@
 ---
 title: References
-listing: 
-    type: grid
-    categories: true
-    contents: 
-        - "./software/"
+repo-actions: false
+# listing: 
+#     type: grid
+#     categories: true
+#     contents: 
+#        - "./software/"
 ---
-
+Coming soon!
 
