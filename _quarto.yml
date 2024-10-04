@@ -34,19 +34,20 @@ website:
   page-navigation: true
   page-footer:
     left: |
-      Powered by [Quarto](https://quarto.org).
+      Powered by [{{< iconify simple-icons:quarto >}} Quarto](https://quarto.org).
     center: |
-      &copy; 2024 TU Delft Digital Competence Centre
+      &copy; 2024 [TU Delft Digital Competence Centre](https://dcc.tudelft.nl)
     right: |
       License: [CC-BY-4.0](https://creativecommons.org/licenses/by/4.0/).
+    border: false
   bread-crumbs: true # Breadcrumbs in Quarto websites are a type of secondary navigation that shows the user's current location within the site hierarchy
   navbar:
     logo: docs/img/tud/logo_white_crop.png
     collapse-below: lg # It determines at which screen size the navbar should collapse into a mobile-friendly format (typically a hamburger menu)
     right:
+      # - href: index.md
+      #   text: Overview
       - href: index.md
-        text: Overview
-      - href: docs/guides.md
         text: Guides
       - href: docs/tud-support/index.md
         text: Support Staff
@@ -71,7 +72,7 @@ website:
       align: left
       contents:
         - text: "Getting started"
-          href: docs/guides.md
+          href: index.md
         - text: <br>
         - section: ⚙️ **Computing Infrastructure**
           contents:
@@ -175,9 +176,11 @@ format:
       light: 
       - cosmo
       - themes/tud-light.scss
-      dark: solar
-      # dark: [cosmo, themes/theme-dark.scss]
+      dark: 
+        - solar
+        # - themes/tud-dark.scss
     css: themes/custom.css
+    lang: en
     toc: true
     toc-location: right
     grid: 

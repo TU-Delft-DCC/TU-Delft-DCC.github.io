@@ -1,5 +1,7 @@
 ---
 title: How-to Guides
+page-navigation: false
+repo-actions: false
 ---
 
 The guides are split into a few major sections:

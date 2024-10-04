@@ -1,6 +1,8 @@
 ---
 title: Welcome to the DCC Guides!
-toc: false
+toc: true
+page-navigation: false
+repo-actions: false
 ---
 
 
