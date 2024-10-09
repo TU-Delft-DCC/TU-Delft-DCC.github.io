@@ -13,7 +13,7 @@ Branches are primarily used as a means for teams to develop featurest and give t
 
 A branching strategy, therefore, is the strategy that teams adopt when writing, merging and releasing code when using a version control system. It is essentially a set of rules that developers can follow to stipulate how they interact with a shared codebase.
 
-For open source projects, the branching strategy is often described in the [Contributing guide](../../community/contribute.md) of the repository.
+For open source projects, the branching strategy is often described in the [Contributing guide](../../../CONTRIBUTING.md) of the repository.
 
 :::{.callout-note title="A branching strategy aims to"}
 

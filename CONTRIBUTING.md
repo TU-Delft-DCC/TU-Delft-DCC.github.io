@@ -12,7 +12,7 @@ We’re using [**GitHub Discussions**](https://github.com/TU-Delft-DCC/TU-Delft-
 * Share ideas and solutions
 * Engage with other community members
 * Be welcoming and open-minded. Remember that this is a community we
-build together. See our [Code of Conduct](code_of_conduct.md) for more information.
+build together. See our [Code of Conduct](CODE_OF_CONDUCT.md) for more information.
 
 ## How to participate
 Do you have questions, ideas or ongoing developments on FAIR related aspects, Open Science, training, etc? Would you like to point to specific resources and potential solutions or ideas?

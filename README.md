@@ -12,7 +12,7 @@ This repository also has a [**Discussions**](https://github.com/TU-Delft-DCC/TU-
 The guides are under active development and mainly in use as a useful resource for the support provided by the DCC. The content is a compilation of developed solutions, relevant links and resources, and documents produced by colleagues inside and outside TU Delft. This is not an official TU Delft website, but rather a place where we keep note of things we find important and useful to share.
 
 ## How to participate
-Please have a look at our [Contributing guidelines](https://tu-delft-dcc.github.io/docs/community/contribute.html) for more information on how to participate.
+Please have a look at our [Contributing guidelines](./CONTRIBUTING.md) for more information on how to participate.
 
 ## License
 This work is licensed under a [Creative Commons Attribution 4.0 International License](https://creativecommons.org/licenses/by/4.0/).

@@ -25,8 +25,8 @@ The guides are split into a few major sections:
 :::{.callout-tip} 
 ## **Learn more and get involved**
 
-🙌 [**Join the community**](/docs/community/contribute.md)  
-We welcome anyone to join us in improving our guides. To join, check out our [contributing guide](/docs/community/contribute.md).
+🙌 [**Join the community**](CONTRIBUTING.md)  
+We welcome anyone to join us in improving our guides. To join, check out our [contributing guide](CONTRIBUTING.md).
 
 💬 [**Join the discussion**](https://github.com/TU-Delft-DCC/TU-Delft-DCC.github.io/discussions)  
 We have community discussions, talk about ideas, share general questions and develop solutions and feedback in our [community forum](https://github.com/TU-Delft-DCC/TU-Delft-DCC.github.io/discussions).
