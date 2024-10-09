@@ -71,7 +71,7 @@ If you need more computational power, then you might consider the national compu
 - Snellius - general purpose supercomputer - https://servicedesk.surf.nl/wiki/display/WIKI/Snellius
 - Cartesius – large scale parallel – https://userinfo.surfsara.nl/systems/cartesius
 - Lisa – ‘friendly’ processing power - https://userinfo.surfsara.nl/systems/lisa
-- HPC cloud – for individual or group - https://servicedesk.surfsara.nl/wiki/display/WIKI/HPC+Cloud
+- SURF Research Cloud - https://www.surf.nl/en/services/surf-research-cloud
 - Grid – extremely large datasets - https://userinfo.surfsara.nl/systems/grid
 
 For small and large requests, applications go through NWO: https://www.surf.nl/en/access-to-compute-services
