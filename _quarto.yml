@@ -23,7 +23,7 @@ execute:
   freeze: true # When freeze: true is set, it tells Quarto to "freeze" the execution of code chunks.
 
 website:
-  title: "DCC Guides"
+  # title: "DCC Guides"
   # google-analytics: "UA-XXXXXXXX"
   # cookie-consent: true
   #
@@ -33,38 +33,54 @@ website:
   repo-actions: [issue]
   page-navigation: true
   page-footer:
-    left: "By TU Delft Digital Competence Centre. Content on this site is licensed under a [CC-BY-4.0](https://creativecommons.org/licenses/by/4.0/) license. "
+    left: |
+      Powered by [{{< iconify simple-icons:quarto >}} Quarto](https://quarto.org).
+    center: |
+      &copy; 2024 [TU Delft Digital Competence Centre](https://dcc.tudelft.nl)
+    right: |
+      License: [CC-BY-4.0](https://creativecommons.org/licenses/by/4.0/).
+    border: false
   bread-crumbs: true # Breadcrumbs in Quarto websites are a type of secondary navigation that shows the user's current location within the site hierarchy
   navbar:
-    logo: docs/img/logo.png
+    logo: docs/img/tud/logo_white_crop.png
     collapse-below: lg # It determines at which screen size the navbar should collapse into a mobile-friendly format (typically a hamburger menu)
-    left:
-      - href: docs/community/dcc.md
-        text: About the DCC
-      # - href: name.md
-      #   text: Contact
-      - href: docs/community/contribute.md
-        text: Contributing
-      - href: docs/community/code_of_conduct.md
-        text: Code of Conduct
-      # - href: name.md
-      #   text: FAQ   
+    right:
+      # - href: index.md
+      #   text: Overview
+      - href: index.md
+        text: Guides
+      - href: docs/tud-support/index.md
+        text: Support Staff
+      - href: docs/listing.md
+        text: References
+      - text: Community
+        menu:
+          - href: docs/community/contribute.md
+            text: Contributing
+          - href: docs/community/code_of_conduct.md
+            text: Code of Conduct
+          - text: About the DCC
+            href: https://www.tudelft.nl/library/support/library-voor-onderzoekers/onderzoek-starten/dcc/contact
     tools:
       - icon: github
         href: https://github.com/TU-Delft-DCC/TU-Delft-DCC.github.io/
         text: DCC GitHub
   sidebar:
-    style: "docked"
-    collapse-level: 2
-    align: left
-    contents:
-      - section: "⚙️ **Computing Infrastructure**"
-        contents:
-          - href: docs/infrastructure/intro_servers.md
-            text: Remote servers
+    - title: "Guides"
+      style: "docked"
+      collapse-level: 2
+      align: left
+      contents:
+        - text: "Getting started"
+          href: index.md
+        - text: <br>
+        - section: ⚙️ **Computing Infrastructure**
+          contents:
+          - section: "Remote servers"
+            href: docs/infrastructure/intro_servers.md
             contents:
-              - href: docs/infrastructure/VPS_request.md
-                text: Request a VPS
+              - text: "Request a VPS"
+                href: docs/infrastructure/VPS_request.md
               - href: docs/infrastructure/VPS_SSH.md
                 text: Configure SSH Tunneling
               - href: docs/infrastructure/moving_data.md
@@ -73,8 +89,8 @@ website:
                 text: Configure SSL certificates
               - href: docs/infrastructure/apache_webserver.md
                 text: Setting up an Apache web server
-          - href: docs/infrastructure/gitlab/gitlab_intro.md
-            text: TU Delft GitLab
+          - section: "TU Delft GitLab" 
+            href: docs/infrastructure/gitlab/gitlab_intro.md
             contents:
               - href: docs/infrastructure/gitlab/gitlab_groups.md
                 text: Creating GitLab groups
@@ -84,70 +100,88 @@ website:
                 text: Continuous Integration with GitLab
               - href: docs/infrastructure/gitlab/runner_matlab.md
                 text: Setting up a Gitlab runner for MATLAB
-      - section: "🗃️ **Data Management**"
-        contents:
-          - href: docs/data/getting_started.md
-            text: Getting started
-          - href: docs/data/fair.md
-            text: FAIR Data
-            contents:
-              - href: docs/data/publishing.md
-                text: Prepare data for publishing
-          - href: docs/data/storage_options.md
-            text: TU Delft Data storage
-            contents:
-              - href: docs/data/project_drive_request.md
-                text: Request Project Drive space
-              - href: docs/data/project_drive_mounting.md
-                text: Mount Project Drive on Server
-              - href: docs/data/sync_unison.md
-                text: Sync with Project Drive and SURFDrive with Unison
-      - section: "💻 **Research Software**"
-        contents:
-          - href: docs/software/getting_started.md
-            text: Getting started
-          - href: docs/software/fair.md
-            text: FAIR Software
-            contents:
-              - href: docs/software/checklist.md
-                text: FAIR checklist for research software
-              - href: docs/software/project_cards.md
-                text: FAIR assessment cards
-              - href: docs/software/software_management_plan.md
-                text: Software management plan
-              - url: https://tu-delft-dcc.github.io/FAIR4RS/
-                text: FAIR for Research Software Program Spring 2023
-          - href: docs/software/testing_intro.md
-            text: Software testing
-            contents:
-              - href: docs/software/testing_matlab.md
-                text: Testing with MATLAB
-          - href: docs/software/git/intro.md
-            text: Version control with Git
-            contents:
-              - href: docs/software/git/branch_management.md
-                text: Branch management
-          - href: docs/software/containers/intro.md
-            text: Working with containers
-            contents:
-              - href: docs/software/containers/docker_gui.md
-                text: Using a docker container with a GUI
-      - section: "📖 **Resources**"
-        contents:
-          - href: docs/resources/courses.md
-            text: Courses and workshops
-          - href: docs/resources/curriculum.md
-            text: Research Software Curriculum
-          - href: docs/resources/tools.md
-            text: Tools
-          
+        - text: <br>
+        - section: "🗃️ **Data Management**"
+          contents:
+            - href: docs/data/getting_started.md
+              text: Getting started
+            - section: "FAIR Data"
+              href: docs/data/fair.md
+              contents:
+                - href: docs/data/publishing.md
+                  text: Prepare data for publishing
+            - section: "TU Delft Data storage"
+              href: docs/data/storage_options.md
+              contents:
+                - href: docs/data/project_drive_request.md
+                  text: Request Project Drive space
+                - href: docs/data/project_drive_mounting.md
+                  text: Mount Project Drive on Server
+                - href: docs/data/sync_unison.md
+                  text: Sync with Project Drive and SURFDrive with Unison
+        - text: <br>
+        - section: "💻 **Research Software**"
+          contents:
+            - href: docs/software/getting_started.md
+              text: Getting started
+            - section: "FAIR Software"
+              href: docs/software/fair.md
+              contents:
+                - href: docs/software/checklist.md
+                  text: FAIR checklist for research software
+                - href: docs/software/project_cards.md
+                  text: FAIR assessment cards
+                - href: docs/software/software_management_plan.md
+                  text: Software management plan
+                - url: https://tu-delft-dcc.github.io/FAIR4RS/
+                  text: FAIR for Research Software Program Spring 2023
+            - section: "Software testing"
+              href: docs/software/testing_intro.md
+              contents:
+                - href: docs/software/testing_matlab.md
+                  text: Testing with MATLAB
+            - section: "Version control with git"
+              href: docs/software/git/intro.md
+              contents:
+                - href: docs/software/git/branch_management.md
+                  text: Branch management
+            - section: "Working with containers"
+              href: docs/software/containers/intro.md
+              contents:
+                - href: docs/software/containers/docker_gui.md
+                  text: Using a docker container with a GUI
+        - text: <br>
+        - section: "📖 **Resources**"
+          contents:
+            - href: docs/resources/courses.md
+              text: Courses and workshops
+            - href: docs/resources/curriculum.md
+              text: Research Software Curriculum
+            - href: docs/resources/tools.md
+              text: Tools
+    
+    # - title: "TU Delft Support"
+    #   contents: 
+    #   - href: docs/tud-support/index.md
+    #     text: Support at TU Delft
+    #   - href: docs/tud-support/partners.md
+    #     text: Partners
+    #   - href: docs/tud-support/professionalization.md
+    #     text: Professionalization
+
 highlight-style: pygments
 format:
   html:
     theme: 
-      light: cosmo
-      dark: solar
-      # dark: [cosmo, themes/theme-dark.scss]
+      light: 
+      - cosmo
+      - themes/tud-light.scss
+      dark: 
+        - solar
+        # - themes/tud-dark.scss
     css: themes/custom.css
+    lang: en
     toc: true
     toc-location: right
+    grid: 
+      sidebar-width: 300px
