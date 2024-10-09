@@ -7,6 +7,8 @@ project:
   render:
     # Render
     - "index.md"
+    - "CONTRIBUTING.md"
+    - "CODE_OF_CONDUCT.md"
     - "docs/**/*.md"
     # Do not render
     - "!_under_development/**"
@@ -36,9 +38,11 @@ website:
     left: |
       Powered by [{{< iconify simple-icons:quarto >}} Quarto](https://quarto.org).
     center: |
-      &copy; 2024 [TU Delft Digital Competence Centre](https://dcc.tudelft.nl)
-    right: |
-      License: [CC-BY-4.0](https://creativecommons.org/licenses/by/4.0/).
+      &copy; 2024 [TU Delft Digital Competence Centre](https://dcc.tudelft.nl). Licensed under [CC-BY-4.0](https://creativecommons.org/licenses/by/4.0/).
+    right: 
+          If you find this content useful, please consider giving us a star on GitHub.
+          <script async defer src="https://buttons.github.io/buttons.js"></script>
+          <a class="github-button" href="https://github.com/TU-Delft-DCC/TU-Delft-DCC.github.io" data-icon="star" data-size="small" data-show-count="false" aria-label="Star TU-Delft-DCC/TU-Delft-DCC.github.io on GitHub">Star</a>
     border: false
   bread-crumbs: true # Breadcrumbs in Quarto websites are a type of secondary navigation that shows the user's current location within the site hierarchy
   navbar:
@@ -55,10 +59,10 @@ website:
         text: References
       - text: Community
         menu:
-          - href: docs/community/contribute.md
-            text: Contributing
-          - href: docs/community/code_of_conduct.md
-            text: Code of Conduct
+          - text: Contributing
+            href: CONTRIBUTING.md
+          - text: Code of Conduct
+            href: CODE_OF_CONDUCT.md
           - text: About the DCC
             href: https://www.tudelft.nl/library/support/library-voor-onderzoekers/onderzoek-starten/dcc/contact
     tools:
@@ -79,7 +83,7 @@ website:
           - section: "Remote servers"
             href: docs/infrastructure/intro_servers.md
             contents:
-              - text: "Request a VPS"
+              - text: Request a VPS
                 href: docs/infrastructure/VPS_request.md
               - href: docs/infrastructure/VPS_SSH.md
                 text: Configure SSH Tunneling
@@ -92,74 +96,74 @@ website:
           - section: "TU Delft GitLab" 
             href: docs/infrastructure/gitlab/gitlab_intro.md
             contents:
-              - href: docs/infrastructure/gitlab/gitlab_groups.md
-                text: Creating GitLab groups
-              - href: docs/infrastructure/gitlab/gitlab_transfer_ownership.md
-                text: Transfer ownership of a GitLab repository
-              - href: docs/infrastructure/gitlab/gitlab_docker.md
-                text: Continuous Integration with GitLab
-              - href: docs/infrastructure/gitlab/runner_matlab.md
-                text: Setting up a Gitlab runner for MATLAB
+              - text: Creating GitLab groups
+                href: docs/infrastructure/gitlab/gitlab_groups.md
+              - text: Transfer ownership of a GitLab repository
+                href: docs/infrastructure/gitlab/gitlab_transfer_ownership.md
+              - text: Continuous Integration with GitLab
+                href: docs/infrastructure/gitlab/gitlab_docker.md
+              - text: Setting up a Gitlab runner for MATLAB
+                href: docs/infrastructure/gitlab/runner_matlab.md
         - text: <br>
         - section: "🗃️ **Data Management**"
           contents:
-            - href: docs/data/getting_started.md
-              text: Getting started
+            - text: Getting started
+              href: docs/data/getting_started.md
             - section: "FAIR Data"
               href: docs/data/fair.md
               contents:
-                - href: docs/data/publishing.md
-                  text: Prepare data for publishing
+                - text: Prepare data for publishing
+                  href: docs/data/publishing.md
             - section: "TU Delft Data storage"
               href: docs/data/storage_options.md
               contents:
-                - href: docs/data/project_drive_request.md
-                  text: Request Project Drive space
-                - href: docs/data/project_drive_mounting.md
-                  text: Mount Project Drive on Server
-                - href: docs/data/sync_unison.md
-                  text: Sync with Project Drive and SURFDrive with Unison
+                - text: Request Project Drive space
+                  href: docs/data/project_drive_request.md
+                - text: Mount Project Drive on Server
+                  href: docs/data/project_drive_mounting.md
+                - text: Sync with Project Drive and SURFDrive with Unison
+                  href: docs/data/sync_unison.md
         - text: <br>
         - section: "💻 **Research Software**"
           contents:
-            - href: docs/software/getting_started.md
-              text: Getting started
+            - text: Getting started
+              href: docs/software/getting_started.md
             - section: "FAIR Software"
               href: docs/software/fair.md
               contents:
-                - href: docs/software/checklist.md
-                  text: FAIR checklist for research software
-                - href: docs/software/project_cards.md
-                  text: FAIR assessment cards
-                - href: docs/software/software_management_plan.md
-                  text: Software management plan
-                - url: https://tu-delft-dcc.github.io/FAIR4RS/
-                  text: FAIR for Research Software Program Spring 2023
+                - text: FAIR checklist for research software
+                  href: docs/software/checklist.md
+                - text: FAIR assessment cards
+                  href: docs/software/project_cards.md 
+                - text: Software management plan
+                  href: docs/software/software_management_plan.md
+                - text: FAIR for Research Software Program Spring 2023
+                  url: https://tu-delft-dcc.github.io/FAIR4RS/
             - section: "Software testing"
               href: docs/software/testing_intro.md
               contents:
-                - href: docs/software/testing_matlab.md
-                  text: Testing with MATLAB
+                - text: Testing with MATLAB
+                  href: docs/software/testing_matlab.md
             - section: "Version control with git"
               href: docs/software/git/intro.md
               contents:
-                - href: docs/software/git/branch_management.md
-                  text: Branch management
+                - text: Branch management
+                  href: docs/software/git/branch_management.md
             - section: "Working with containers"
               href: docs/software/containers/intro.md
               contents:
-                - href: docs/software/containers/docker_gui.md
-                  text: Using a docker container with a GUI
+                - text: Using a docker container with a GUI
+                  href: docs/software/containers/docker_gui.md
         - text: <br>
         - section: "📖 **Resources**"
           contents:
-            - href: docs/resources/courses.md
-              text: Courses and workshops
-            - href: docs/resources/curriculum.md
-              text: Research Software Curriculum
-            - href: docs/resources/tools.md
-              text: Tools
-    
+            - text: Courses and workshops
+              href: docs/resources/courses.md
+            - text: Research Software Curriculum
+              href: docs/resources/curriculum.md
+            - text: Tools
+              href: docs/resources/tools.md
+
     # - title: "TU Delft Support"
     #   contents: 
     #   - href: docs/tud-support/index.md
@@ -183,5 +187,7 @@ format:
     lang: en
     toc: true
     toc-location: right
+    anchor-sections: true
+    smooth-scroll: true
     grid: 
       sidebar-width: 300px
