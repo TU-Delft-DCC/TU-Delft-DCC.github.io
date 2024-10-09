@@ -1,4 +1,4 @@
-.navbar {
+/* .navbar {
   background-color: #E0F7FA !important;
 }
 
@@ -10,8 +10,15 @@
   font-size: 1.4em;
   font-weight: bold;
   color: #00A6D6 !important;
+} */
 
 .navbar-brand img {
-  max-height: 45px;
+  max-height: 34px;
   height: auto;
+}
+
+@media (min-width: 991.98px) {
+  #quarto-header {
+    border-bottom: 1px solid #dee2e6;
+  }
 }

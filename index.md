@@ -1,5 +1,12 @@
-# Welcome to the DCC Guides!
-These guides are an initiative from TU Delft [Digital Competence Center](/docs/community/dcc.md) and aim to provide a comprehensive entrypoint to get you started with Research Computing, Research Data and Research Software at TU Delft. 
+---
+title: Welcome to the DCC Guides!
+toc: true
+page-navigation: false
+repo-actions: false
+---
+
+
+These guides are an initiative from TU Delft [Digital Competence Centre](/docs/community/dcc.md) and aim to provide a comprehensive entrypoint to get you started with Research Computing, Research Data, and Research Software at TU Delft. 
 
 :::{.callout-note} 
 ## **Disclaimer**
