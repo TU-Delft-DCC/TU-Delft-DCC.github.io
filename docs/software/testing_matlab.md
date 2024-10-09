@@ -1,11 +1,13 @@
-<!-- ---
-section: testing
+---
 title: Testing with MATLAB
-author_1: Maurits Kok 
-author_2: 
---- -->
-
-# Testing with MATLAB
+categories:
+    - testing
+    - matlab
+description: "Writing and running tests with MATLAB."
+hide-description: true
+author_1:
+    - name: "DCC Team"
+---
 
 In this guide, we will discuss writing and running tests with MATLAB. See the [documentation from Matlab](https://nl.mathworks.com/help/matlab/matlab-unit-test-framework.html) for more information.
 
