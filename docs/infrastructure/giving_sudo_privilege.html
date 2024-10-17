@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>giving_sudo_privilege</title>
+<title>Giving sudo privilege to a user</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -141,9 +141,7 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#giving-sudo-privilege-to-a-user" id="toc-giving-sudo-privilege-to-a-user" class="nav-link active" data-scroll-target="#giving-sudo-privilege-to-a-user">Giving sudo privilege to a user</a>
-  <ul class="collapse">
-  <li><a href="#background" id="toc-background" class="nav-link" data-scroll-target="#background">Background</a></li>
+  <li><a href="#background" id="toc-background" class="nav-link active" data-scroll-target="#background">Background</a></li>
   <li><a href="#what-this-documentation-will-help-achieve" id="toc-what-this-documentation-will-help-achieve" class="nav-link" data-scroll-target="#what-this-documentation-will-help-achieve">What this documentation will help achieve</a></li>
   <li><a href="#prerequisites" id="toc-prerequisites" class="nav-link" data-scroll-target="#prerequisites">Prerequisites</a></li>
   <li><a href="#toolssoftware" id="toc-toolssoftware" class="nav-link" data-scroll-target="#toolssoftware">Tools/Software</a></li>
@@ -154,18 +152,37 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#step-3.-create-an-access-file-for-each-of-the-candidates" id="toc-step-3.-create-an-access-file-for-each-of-the-candidates" class="nav-link" data-scroll-target="#step-3.-create-an-access-file-for-each-of-the-candidates">Step 3. Create an access file for each of the candidates</a></li>
   <li><a href="#step-4.-editing-the-access-files" id="toc-step-4.-editing-the-access-files" class="nav-link" data-scroll-target="#step-4.-editing-the-access-files">Step 4. Editing the access files</a></li>
   </ul></li>
-  </ul></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/TU-Delft-DCC/TU-Delft-DCC.github.io/issues/new/choose" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Giving sudo privilege to a user</h1>
+</div>
 
 
 
-<section id="giving-sudo-privilege-to-a-user" class="level1">
-<h1>Giving sudo privilege to a user</h1>
+<div class="quarto-title-meta">
+
+    
+  
+    <div>
+    <div class="quarto-title-meta-heading">Last modified</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date-modified">October 17, 2024</p>
+    </div>
+  </div>
+    
+  </div>
+  
+
+
+</header>
+
+
 <section id="background" class="level2">
 <h2 class="anchored" data-anchor-id="background">Background</h2>
 <p>There are some tasks in Linux that requires superuser (sudo) permission. For instance editing the /etc/fstab file, rebooting the system, mounting a drive, viewing /etc/passwd file and many other tasks cannot be done without sudo privilege.</p>
@@ -213,7 +230,6 @@ ul.task-list li input[type="checkbox"] {
 <p>In this step you need to open each of the newly duplicated files and replace the old username in the second line with the sudo candidate username. After the edit, you just save the changes and exit the file.</p>
 
 
-</section>
 </section>
 </section>
 

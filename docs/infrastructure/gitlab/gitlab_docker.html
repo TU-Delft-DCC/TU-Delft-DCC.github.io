@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>gitlab_docker</title>
+<title>CI with Gitlab</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -494,9 +494,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#continuous-integration-with-gitlab" id="toc-continuous-integration-with-gitlab" class="nav-link active" data-scroll-target="#continuous-integration-with-gitlab">Continuous Integration with GitLab</a>
-  <ul class="collapse">
-  <li><a href="#background" id="toc-background" class="nav-link" data-scroll-target="#background">Background</a></li>
+  <li><a href="#background" id="toc-background" class="nav-link active" data-scroll-target="#background">Background</a></li>
   <li><a href="#quick-overview-of-how-it-works" id="toc-quick-overview-of-how-it-works" class="nav-link" data-scroll-target="#quick-overview-of-how-it-works">Quick overview of how it works</a></li>
   <li><a href="#what-this-documentation-will-help-achieve" id="toc-what-this-documentation-will-help-achieve" class="nav-link" data-scroll-target="#what-this-documentation-will-help-achieve">What this documentation will help achieve</a></li>
   <li><a href="#prerequisites" id="toc-prerequisites" class="nav-link" data-scroll-target="#prerequisites">Prerequisites</a></li>
@@ -514,24 +512,37 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#step-9.-register-the-runner-using-authentication-token" id="toc-step-9.-register-the-runner-using-authentication-token" class="nav-link" data-scroll-target="#step-9.-register-the-runner-using-authentication-token">Step 9. Register the runner using authentication token</a></li>
   <li><a href="#step-10.-check-that-the-cicd-process-is-activated-and-your-pipeline-runs-successfully" id="toc-step-10.-check-that-the-cicd-process-is-activated-and-your-pipeline-runs-successfully" class="nav-link" data-scroll-target="#step-10.-check-that-the-cicd-process-is-activated-and-your-pipeline-runs-successfully">Step 10. Check that the CI/CD process is activated and your pipeline runs successfully</a></li>
   </ul></li>
-  </ul></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/TU-Delft-DCC/TU-Delft-DCC.github.io/issues/new/choose" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../../docs/infrastructure/intro_servers.html">⚙️ <strong>Computing Infrastructure</strong></a></li><li class="breadcrumb-item"><a href="../../../docs/infrastructure/gitlab/gitlab_intro.html">TU Delft GitLab</a></li><li class="breadcrumb-item"><a href="../../../docs/infrastructure/gitlab/gitlab_docker.html">Continuous Integration with GitLab</a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title">CI with Gitlab</h1>
+</div>
 
 
 
-<!-- ---
-section: gitlab
-title: CI with Gitlab
-author_1: Ashley Cryan
-author_2: Maurits Kok
---- -->
-<section id="continuous-integration-with-gitlab" class="level1">
-<h1>Continuous Integration with GitLab</h1>
+<div class="quarto-title-meta">
+
+    
+  
+    <div>
+    <div class="quarto-title-meta-heading">Last modified</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date-modified">October 17, 2024</p>
+    </div>
+  </div>
+    
+  </div>
+  
+
+
+</header>
+
+
 <section id="background" class="level2">
 <h2 class="anchored" data-anchor-id="background">Background</h2>
 <p>If you happen to be working with TU Delft GitLab instance and you want to implement DevOps or CI/CD pipelines, then you need to install a GitLab runner on your own. This should runner should be in a server, responding to changes such as commits or pull requests in your GitLab repository.</p>
@@ -697,7 +708,6 @@ This guide was created using multiple references on GitLab runner and Docker. If
 * https://semaphoreci.com/blog/cicd-pipeline -->
 
 
-</section>
 </section>
 </section>
 

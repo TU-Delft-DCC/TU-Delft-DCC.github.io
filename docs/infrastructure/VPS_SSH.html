@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>vps_ssh</title>
+<title>Configure SSH Tunneling</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -494,13 +494,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#configure-ssh-tunneling" id="toc-configure-ssh-tunneling" class="nav-link active" data-scroll-target="#configure-ssh-tunneling">Configure SSH Tunneling</a>
-  <ul class="collapse">
-  <li><a href="#set-a-default-ssh-tunneling-for-a-host-linux-terminal" id="toc-set-a-default-ssh-tunneling-for-a-host-linux-terminal" class="nav-link" data-scroll-target="#set-a-default-ssh-tunneling-for-a-host-linux-terminal">Set a Default SSH Tunneling for a Host (Linux Terminal)</a></li>
+  <li><a href="#set-a-default-ssh-tunneling-for-a-host-linux-terminal" id="toc-set-a-default-ssh-tunneling-for-a-host-linux-terminal" class="nav-link active" data-scroll-target="#set-a-default-ssh-tunneling-for-a-host-linux-terminal">Set a Default SSH Tunneling for a Host (Linux Terminal)</a></li>
   <li><a href="#tunneling-with-winscp" id="toc-tunneling-with-winscp" class="nav-link" data-scroll-target="#tunneling-with-winscp">Tunneling with WinSCP</a>
   <ul class="collapse">
   <li><a href="#using-winscp-with-sudo-rights" id="toc-using-winscp-with-sudo-rights" class="nav-link" data-scroll-target="#using-winscp-with-sudo-rights">Using WinSCP with sudo rights</a></li>
-  </ul></li>
   </ul></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/TU-Delft-DCC/TU-Delft-DCC.github.io/issues/new/choose" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div></nav>
@@ -508,11 +505,31 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../docs/infrastructure/intro_servers.html">⚙️ <strong>Computing Infrastructure</strong></a></li><li class="breadcrumb-item"><a href="../../docs/infrastructure/intro_servers.html">Remote servers</a></li><li class="breadcrumb-item"><a href="../../docs/infrastructure/VPS_SSH.html">Configure SSH Tunneling</a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title">Configure SSH Tunneling</h1>
+</div>
 
 
 
-<section id="configure-ssh-tunneling" class="level1">
-<h1>Configure SSH Tunneling</h1>
+<div class="quarto-title-meta">
+
+    
+  
+    <div>
+    <div class="quarto-title-meta-heading">Last modified</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date-modified">October 17, 2024</p>
+    </div>
+  </div>
+    
+  </div>
+  
+
+
+</header>
+
+
 <p>To connect to a remote host, TU Delft uses a <em>proxy server</em>, know as <strong>bastion</strong>. To reach a remote host, a user has to connect first to the <strong>bastion</strong> and from there to the remote host. However, a user can connect directly to the remote host using <em>ssh tunneling</em>.</p>
 <section id="set-a-default-ssh-tunneling-for-a-host-linux-terminal" class="level2">
 <h2 class="anchored" data-anchor-id="set-a-default-ssh-tunneling-for-a-host-linux-terminal">Set a Default SSH Tunneling for a Host (Linux Terminal)</h2>
@@ -583,7 +600,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>Note that the path to <code>sftp-server</code> may be different but can be easily checked and arranged. This will not work if you change the setting and continue to use an open session.</p>
 
 
-</section>
 </section>
 </section>
 

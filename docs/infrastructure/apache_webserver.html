@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>apache_webserver</title>
+<title>Set up an Apache web server</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -494,9 +494,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#setting-up-an-apache-web-server" id="toc-setting-up-an-apache-web-server" class="nav-link active" data-scroll-target="#setting-up-an-apache-web-server">Setting up an Apache web server</a>
-  <ul class="collapse">
-  <li><a href="#background" id="toc-background" class="nav-link" data-scroll-target="#background">Background</a></li>
+  <li><a href="#background" id="toc-background" class="nav-link active" data-scroll-target="#background">Background</a></li>
   <li><a href="#what-this-documentation-will-help-achieve" id="toc-what-this-documentation-will-help-achieve" class="nav-link" data-scroll-target="#what-this-documentation-will-help-achieve">What this documentation will help achieve</a></li>
   <li><a href="#prerequisites" id="toc-prerequisites" class="nav-link" data-scroll-target="#prerequisites">Prerequisites</a></li>
   <li><a href="#tools-software" id="toc-tools-software" class="nav-link" data-scroll-target="#tools-software">Tools / Software</a></li>
@@ -509,24 +507,37 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#step-5.-redirect-all-incoming-web-traffic-to-https" id="toc-step-5.-redirect-all-incoming-web-traffic-to-https" class="nav-link" data-scroll-target="#step-5.-redirect-all-incoming-web-traffic-to-https">Step 5. Redirect all incoming web traffic to HTTPS</a></li>
   </ul></li>
   <li><a href="#notes-and-next-steps" id="toc-notes-and-next-steps" class="nav-link" data-scroll-target="#notes-and-next-steps">Notes and Next Steps</a></li>
-  </ul></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/TU-Delft-DCC/TU-Delft-DCC.github.io/issues/new/choose" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../docs/infrastructure/intro_servers.html">⚙️ <strong>Computing Infrastructure</strong></a></li><li class="breadcrumb-item"><a href="../../docs/infrastructure/intro_servers.html">Remote servers</a></li><li class="breadcrumb-item"><a href="../../docs/infrastructure/apache_webserver.html">Setting up an Apache web server</a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title">Set up an Apache web server</h1>
+</div>
 
 
 
-<!-- ---
-section: infrastructure
-title: Set up an Apache web server
-author_1: Ashley Cryan
-author_2: 
---- -->
-<section id="setting-up-an-apache-web-server" class="level1">
-<h1>Setting up an Apache web server</h1>
+<div class="quarto-title-meta">
+
+    
+  
+    <div>
+    <div class="quarto-title-meta-heading">Last modified</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date-modified">October 17, 2024</p>
+    </div>
+  </div>
+    
+  </div>
+  
+
+
+</header>
+
+
 <section id="background" class="level2">
 <h2 class="anchored" data-anchor-id="background">Background</h2>
 <p>If you want to host a website for your lab, or a web application of some sort, you are going to need to work with a webserver. Apache Web Server is a software package that turns a computer into an HTTP server. That is, it sends web pages – stored as HTML files – to people on the internet who request them. It is open-source software, which means it can be used and modified freely.</p>
@@ -688,7 +699,6 @@ author_2:
 <p>Test that your web server is secured by HTTPS by typing the Fully Qualified Domain Name (FQDN) of your server in a web browser. If HTTPS is enabled, the URL should begin with it - if it still says HTTP, something will need to be reconfigured.</p>
 
 
-</section>
 </section>
 
 </main> <!-- /main -->

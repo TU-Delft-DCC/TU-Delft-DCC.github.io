@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>moving_data</title>
+<title>Moving data to your server</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -494,24 +494,41 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#moving-data-to-your-server" id="toc-moving-data-to-your-server" class="nav-link active" data-scroll-target="#moving-data-to-your-server">Moving data to your server</a>
-  <ul class="collapse">
-  <li><a href="#copy-data-from-client-to-host-using-proxycommand" id="toc-copy-data-from-client-to-host-using-proxycommand" class="nav-link" data-scroll-target="#copy-data-from-client-to-host-using-proxycommand">Copy Data from Client to Host using ProxyCommand</a></li>
+  <li><a href="#copy-data-from-client-to-host-using-proxycommand" id="toc-copy-data-from-client-to-host-using-proxycommand" class="nav-link active" data-scroll-target="#copy-data-from-client-to-host-using-proxycommand">Copy Data from Client to Host using ProxyCommand</a></li>
   <li><a href="#copy-data-from-host-to-client-using-proxycommand" id="toc-copy-data-from-host-to-client-using-proxycommand" class="nav-link" data-scroll-target="#copy-data-from-host-to-client-using-proxycommand">Copy Data from Host to Client using ProxyCommand</a></li>
   <li><a href="#copy-data-using-ssh-tunneling" id="toc-copy-data-using-ssh-tunneling" class="nav-link" data-scroll-target="#copy-data-using-ssh-tunneling">Copy Data using SSH Tunneling</a></li>
   <li><a href="#scp-with-sudo-files-from-a-remote-host-to-another-remote-host" id="toc-scp-with-sudo-files-from-a-remote-host-to-another-remote-host" class="nav-link" data-scroll-target="#scp-with-sudo-files-from-a-remote-host-to-another-remote-host">scp with sudo files from a remote host to another remote host</a></li>
-  </ul></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/TU-Delft-DCC/TU-Delft-DCC.github.io/issues/new/choose" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../docs/infrastructure/intro_servers.html">⚙️ <strong>Computing Infrastructure</strong></a></li><li class="breadcrumb-item"><a href="../../docs/infrastructure/intro_servers.html">Remote servers</a></li><li class="breadcrumb-item"><a href="../../docs/infrastructure/moving_data.html">Moving data to your server</a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title">Moving data to your server</h1>
+</div>
 
 
 
-<section id="moving-data-to-your-server" class="level1">
-<h1>Moving data to your server</h1>
+<div class="quarto-title-meta">
+
+    
+  
+    <div>
+    <div class="quarto-title-meta-heading">Last modified</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date-modified">October 17, 2024</p>
+    </div>
+  </div>
+    
+  </div>
+  
+
+
+</header>
+
+
 <section id="copy-data-from-client-to-host-using-proxycommand" class="level2">
 <h2 class="anchored" data-anchor-id="copy-data-from-client-to-host-using-proxycommand">Copy Data from Client to Host using ProxyCommand</h2>
 <div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> scp <span class="at">-o</span> <span class="st">"ProxyCommand ssh -W %h:%p &lt;bastion-username&gt;@linux-bastion-ex.tudelft.nl"</span> <span class="op">&lt;</span>my-local-file<span class="op">&gt;</span>  <span class="op">&lt;</span>target-username<span class="op">&gt;</span>@<span class="op">&lt;</span>target-host<span class="op">&gt;</span>:/<span class="op">&lt;</span>remote-directory<span class="op">&gt;</span>/</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -534,7 +551,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="sourceCode" id="cb5"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ssh</span> source.tudelft.nl sudo tar cf <span class="at">-</span> <span class="at">-C</span> /tmp/a . <span class="kw">|</span> <span class="fu">ssh</span> target.tudelft.nl  sudo tar xvf <span class="at">-</span> <span class="at">-C</span> /tmp/b/</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 
 
-</section>
 </section>
 
 </main> <!-- /main -->

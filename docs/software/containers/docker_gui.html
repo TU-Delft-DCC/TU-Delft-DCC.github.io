@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>docker_gui</title>
+<title>Using a docker container with a GUI</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -494,9 +494,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#using-a-docker-container-with-a-gui" id="toc-using-a-docker-container-with-a-gui" class="nav-link active" data-scroll-target="#using-a-docker-container-with-a-gui">Using a docker container with a GUI</a>
-  <ul class="collapse">
-  <li><a href="#docker-installation" id="toc-docker-installation" class="nav-link" data-scroll-target="#docker-installation">Docker installation</a>
+  <li><a href="#docker-installation" id="toc-docker-installation" class="nav-link active" data-scroll-target="#docker-installation">Docker installation</a>
   <ul class="collapse">
   <li><a href="#verify-docker-installation" id="toc-verify-docker-installation" class="nav-link" data-scroll-target="#verify-docker-installation">Verify Docker installation</a></li>
   </ul></li>
@@ -505,24 +503,37 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#mount-a-volume" id="toc-mount-a-volume" class="nav-link" data-scroll-target="#mount-a-volume">Mount a volume</a></li>
   <li><a href="#running-a-container-with-data-and-graphical-output" id="toc-running-a-container-with-data-and-graphical-output" class="nav-link" data-scroll-target="#running-a-container-with-data-and-graphical-output">Running a container with data and graphical output</a></li>
   <li><a href="#issuestroubleshooting" id="toc-issuestroubleshooting" class="nav-link" data-scroll-target="#issuestroubleshooting">Issues/Troubleshooting</a></li>
-  </ul></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/TU-Delft-DCC/TU-Delft-DCC.github.io/issues/new/choose" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../../docs/software/getting_started.html">💻 <strong>Research Software</strong></a></li><li class="breadcrumb-item"><a href="../../../docs/software/containers/intro.html">Working with containers</a></li><li class="breadcrumb-item"><a href="../../../docs/software/containers/docker_gui.html">Using a docker container with a GUI</a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title">Using a docker container with a GUI</h1>
+</div>
 
 
 
-<!-- ---
-section: containers
-title: Docker users
-author_1: Maurits Kok
-author_2:
---- -->
-<section id="using-a-docker-container-with-a-gui" class="level1">
-<h1>Using a docker container with a GUI</h1>
+<div class="quarto-title-meta">
+
+    
+  
+    <div>
+    <div class="quarto-title-meta-heading">Last modified</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date-modified">October 17, 2024</p>
+    </div>
+  </div>
+    
+  </div>
+  
+
+
+</header>
+
+
 <p>Docker is an open platform for developing, shipping, and running applications. Docker provides the ability to package and run an application in a loosely isolated environment called a container. Containers are lightweight and contain everything needed to run the application, so you do not need to rely on what is currently installed on the host system. You can easily share containers while you work, and be sure that everyone you share with gets the same container that works in the same way.</p>
 <p><img src="https://user-images.githubusercontent.com/15414938/123805382-52543b00-d8ee-11eb-8f76-ae598d6fdb83.png" class="img-fluid"></p>
 <p><strong>Dockerfile</strong> – is a text document that contains all the commands you would normally execute manually in order to build a Docker image. The instructions include a choice of operating system and all the libraries we need to install into it. Docker can build images automatically by reading the instructions from a Dockerfile.<br>
@@ -644,7 +655,6 @@ For Linux and macOS: <code>-v $(pwd):/data</code></p>
 - https://ucsbcarpentry.github.io/2019-10-24-gitbash/setup.html -->
 
 
-</section>
 </section>
 
 </main> <!-- /main -->
