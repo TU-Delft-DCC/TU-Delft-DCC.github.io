@@ -1,11 +1,38 @@
-<!-- ---
-section: software
-title: Branch management
-author_1: Maurits Kok
-author_2: 
---- -->
+---
+# Insert this YAML header (including the opening and closing ---) at the beginning of the document and fill it out accordingly
 
-# Branch management
+# We use this key to indicate the last reviewed date [manual entry, use MM/DD/YYYY]
+#date:
+
+# We use this key to indicate the last modified date [automatic entry]
+date-modified: last-modified
+
+# Do not modify
+lang: en
+language: 
+  title-block-published: "Last reviewed"
+  title-block-modified: "Last modified"
+
+# Title of the document [manual entry]
+title: Branch management
+
+# Authors of the document, will not be parsed [manual entry]
+author_1:
+author_2:
+
+# Maintainers of the document, will not be parsed [manual entry]
+maintainer_1:
+maintainer_2:
+
+# To whom reach out regarding the document, will not be parsed [manual entry]
+corresponding:
+
+# Meaningful keywords, newline separated [manual entry]
+categories: 
+ - 
+ - 
+
+---
 
 Branch management is an important consideration when working collaboratively with Git and GitHub. In Git, branches are a part of your everyday development process. Git branches are effectively a pointer to a snapshot of your changes. When you want to add a new feature or fix a bug — no matter how big or how small — you spawn a new branch to encapsulate your changes.
 
