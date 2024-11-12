@@ -2,10 +2,10 @@
 # Insert this YAML header (including the opening and closing ---) at the beginning of the document and fill it out accordingly
 
 # We use this key to indicate the last reviewed date [manual entry, use MM/DD/YYYY]
-#date:
+date: 11/11/2024
 
 # We use this key to indicate the last modified date [automatic entry]
-# date-modified: last-modified
+date-modified: last-modified
 
 # Do not modify
 lang: en
@@ -17,7 +17,7 @@ language:
 title: Getting started
 
 # Authors of the document, will not be parsed [manual entry]
-author_1:
+author_1: Selin Kubilay
 author_2:
 
 # Maintainers of the document, will not be parsed [manual entry]
@@ -29,8 +29,7 @@ corresponding:
 
 # Meaningful keywords, newline separated [manual entry]
 categories: 
- - 
- - 
+ - FAIR
 
 ---
 
