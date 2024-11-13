@@ -17,7 +17,7 @@ language:
 title: FAIR data
 
 # Authors of the document, will not be parsed [manual entry]
-author_1:
+author_1: Selin Kubilay
 author_2:
 
 # Maintainers of the document, will not be parsed [manual entry]
@@ -42,6 +42,6 @@ FAIR data stands for **Findable, Accessible, Interoperable, and Reusable** dataâ
 
 - **Interoperable**: Data should be in standardized formats with a clear structure to allow it to be interoperable across different systems, enabling data to be used in various applications by both the data owners and other users.
 
-- **Reusable**: For data to be reusable, users must understand what the data represents, the information it contains, and how to interpret its structure and format. Good documentation and an appropriate license are key to supporting reusability, as these enable others to understand and work with your dataset, especially upon publication.
+- **Reusable**: For data to be reusable, users must understand what the data represents, the information it contains, and how to interpret its structure and format. Good documentation and an appropriate license are key in reusability, as these enable others to understand and work with your dataset, especially upon publication.
 
 Choosing a repository for publishing your data depends on factors such as storage costs, funding or publication requirements, and security needs. TU Delft provides an in-house data repository, [4TU.ResearchData](https://data.4tu.nl/), as one of many available options.
