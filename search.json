@@ -1304,7 +1304,7 @@
     "href": "docs/infrastructure/VPS_request.html#next-steps",
     "title": "Request a VPS",
     "section": "Next Steps",
-    "text": "Next Steps\nCommon next steps after obtaining a VPS and storage include initial configuration steps such as establishing a connection via SSH and mounting Project Drive storage; and also software installation steps for tools like Docker, and setting up Apache Web Server. We will add more documentation when common installations come to our attention, so please reach out to us with your questions or suggestions.\n\nInstall Docker\nConfigure Docker for use as non-root\nConfiguring VM connection via SSH\nConfigure a runner for the TU Delft Gitlab\nApache Web Server",
+    "text": "Next Steps\nCommon next steps after obtaining a VPS and storage include initial configuration steps such as establishing a connection via SSH and mounting Project Drive storage; and also software installation steps for tools like Docker, and setting up Apache Web Server. We will add more documentation when common installations come to our attention, so please reach out to us with your questions or suggestions.\n\nInstall Docker\nConfigure Docker for use as non-root\nConfigure a runner for the TU Delft Gitlab\nApache Web Server",
     "crumbs": [
       "Guides",
       "⚙️ **Computing Infrastructure**",
