@@ -2,7 +2,7 @@
 # Insert this YAML header (including the opening and closing ---) at the beginning of the document and fill it out accordingly
 
 # We use this key to indicate the last reviewed date [manual entry, use MM/DD/YYYY]
-#date:
+date: 11/13/2024
 
 # We use this key to indicate the last modified date [automatic entry]
 date-modified: last-modified
@@ -17,20 +17,20 @@ language:
 title: FAIR assessment cards
 
 # Authors of the document, will not be parsed [manual entry]
-author_1:
-author_2:
+author_1: Maurits Kok
+author_2: Elviss Dvinskis
 
 # Maintainers of the document, will not be parsed [manual entry]
-maintainer_1:
+maintainer_1: Elviss Dvinskis
 maintainer_2:
 
 # To whom reach out regarding the document, will not be parsed [manual entry]
-corresponding:
+corresponding: Elviss Dvinskis
 
 # Meaningful keywords, newline separated [manual entry]
 categories: 
- - 
- - 
+ - FAIR
+ - Checklist
 
 ---
 
