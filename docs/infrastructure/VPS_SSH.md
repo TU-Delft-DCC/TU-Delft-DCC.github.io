@@ -1,4 +1,38 @@
-# Configure SSH Tunneling
+---
+# Insert this YAML header (including the opening and closing ---) at the beginning of the document and fill it out accordingly
+
+# We use this key to indicate the last reviewed date [manual entry, use MM/DD/YYYY]
+#date:
+
+# We use this key to indicate the last modified date [automatic entry]
+date-modified: last-modified
+
+# Do not modify
+lang: en
+language: 
+  title-block-published: "Last reviewed"
+  title-block-modified: "Last modified"
+
+# Title of the document [manual entry]
+title: Configure SSH Tunneling
+
+# Authors of the document, will not be parsed [manual entry]
+author_1:
+author_2:
+
+# Maintainers of the document, will not be parsed [manual entry]
+maintainer_1:
+maintainer_2:
+
+# To whom reach out regarding the document, will not be parsed [manual entry]
+corresponding:
+
+# Meaningful keywords, newline separated [manual entry]
+categories: 
+ - 
+ - 
+
+---
 
 To connect to a remote host, TU Delft uses a *proxy server*, know as  **bastion**. To reach a remote host, a user has to connect first to the **bastion** and from there to the remote host. However, a user can connect directly to the remote host using *ssh tunneling*.
 

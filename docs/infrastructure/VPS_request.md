@@ -1,12 +1,38 @@
-<!-- ---
-section: infrastructure
-title: Request VPS
-version: 1.0
+---
+# Insert this YAML header (including the opening and closing ---) at the beginning of the document and fill it out accordingly
+
+# We use this key to indicate the last reviewed date [manual entry, use MM/DD/YYYY]
+#date:
+
+# We use this key to indicate the last modified date [automatic entry]
+date-modified: last-modified
+
+# Do not modify
+lang: en
+language: 
+  title-block-published: "Last reviewed"
+  title-block-modified: "Last modified"
+
+# Title of the document [manual entry]
+title: Request a VPS
+
+# Authors of the document, will not be parsed [manual entry]
 author_1: Ashley Cryan
 author_2:
---- -->
 
-# Request a Virtual Private Server (VPS)
+# Maintainers of the document, will not be parsed [manual entry]
+maintainer_1:
+maintainer_2:
+
+# To whom reach out regarding the document, will not be parsed [manual entry]
+corresponding:
+
+# Meaningful keywords, newline separated [manual entry]
+categories: 
+ - 
+ - 
+
+---
 
 ## Background
 This guide describes the essentials for requesting and setting up a TU Delft managed server. A server is a computer that can handle requests. Servers are often a critical component of architectural solutions for data management. There are many reasons why you as a researcher may need to request a server, for example:
@@ -93,6 +119,5 @@ Common next steps after obtaining a VPS and storage include initial configuratio
 
 - [Install Docker](https://phoenixnap.com/kb/how-to-install-docker-on-ubuntu-18-04)
 - [Configure Docker for use as non-root](https://docs.docker.com/engine/install/linux-postinstall/)
-- [Configuring VM connection via SSH](https://gitlab.tudelft.nl/acryan/data-management-for-researchers/-/wikis/Configuring-VM-Connection)
 - [Configure a runner for the TU Delft Gitlab](./gitlab/gitlab_docker.md)
 - [Apache Web Server](./apache_webserver.md)

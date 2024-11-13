@@ -2,7 +2,7 @@
 # Insert this YAML header (including the opening and closing ---) at the beginning of the document and fill it out accordingly
 
 # We use this key to indicate the last reviewed date [manual entry, use MM/DD/YYYY]
-#date:
+date:
 
 # We use this key to indicate the last modified date [automatic entry]
 date-modified: last-modified
@@ -14,7 +14,7 @@ language:
   title-block-modified: "Last modified"
 
 # Title of the document [manual entry]
-title: FAIR Software
+title:
 
 # Authors of the document, will not be parsed [manual entry]
 author_1:
@@ -33,4 +33,3 @@ categories:
  - 
 
 ---
-🏗️ Under construction
