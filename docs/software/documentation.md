@@ -1,2 +1,0 @@
-# Software documentation
-🏗️ Under construction
