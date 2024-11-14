@@ -1,11 +1,38 @@
-<!-- ---
-section: gitlab
+---
+# Insert this YAML header (including the opening and closing ---) at the beginning of the document and fill it out accordingly
+
+# We use this key to indicate the last reviewed date [manual entry, use MM/DD/YYYY]
+#date:
+
+# We use this key to indicate the last modified date [automatic entry]
+date-modified: last-modified
+
+# Do not modify
+lang: en
+language: 
+  title-block-published: "Last reviewed"
+  title-block-modified: "Last modified"
+
+# Title of the document [manual entry]
 title: CI with Gitlab
+
+# Authors of the document, will not be parsed [manual entry]
 author_1: Ashley Cryan
 author_2: Maurits Kok
---- -->
 
-# Continuous Integration with GitLab
+# Maintainers of the document, will not be parsed [manual entry]
+maintainer_1:
+maintainer_2:
+
+# To whom reach out regarding the document, will not be parsed [manual entry]
+corresponding:
+
+# Meaningful keywords, newline separated [manual entry]
+categories: 
+ - 
+ - 
+
+---
 
 ## Background
 If you happen to be working with TU Delft GitLab instance and you want to implement DevOps or CI/CD pipelines, then you need to install a GitLab runner on your own. This should runner should be in a server, responding to changes such as commits or pull requests in your GitLab repository.

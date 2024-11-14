@@ -1,4 +1,38 @@
-# Creating GitLab groups
+---
+# Insert this YAML header (including the opening and closing ---) at the beginning of the document and fill it out accordingly
+
+# We use this key to indicate the last reviewed date [manual entry, use MM/DD/YYYY]
+#date:
+
+# We use this key to indicate the last modified date [automatic entry]
+date-modified: last-modified
+
+# Do not modify
+lang: en
+language: 
+  title-block-published: "Last reviewed"
+  title-block-modified: "Last modified"
+
+# Title of the document [manual entry]
+title: Creating GitLab groups
+
+# Authors of the document, will not be parsed [manual entry]
+author_1:
+author_2:
+
+# Maintainers of the document, will not be parsed [manual entry]
+maintainer_1:
+maintainer_2:
+
+# To whom reach out regarding the document, will not be parsed [manual entry]
+corresponding:
+
+# Meaningful keywords, newline separated [manual entry]
+categories: 
+ - 
+ - 
+
+---
 
 ## Background
 Groups and subgroups are similar to directories in the operating systems. In windows or Mac, we create directories to organise files or other directories. For example, imagine a scenario where you want to keep your photos in an organised manner. To this end, you may organise your photos on multiple levels. In the first level, perhaps you broadly classify them and then in the next levels you narrow it down to more specific subjects. Similarly, in the GitLab, a group is used as a binder to put together projects or even other groups. For example, if three themes are researched in a lab, each of those themes could be a group, and all the research in a certain theme fall into its corresponding group. Sometimes there are also sub-themes. For every sub-theme you can create a subgroup (within the group corresponding to the broader theme) and assign the research close to the sub-theme there. 

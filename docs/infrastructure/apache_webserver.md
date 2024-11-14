@@ -1,11 +1,38 @@
-<!-- ---
-section: infrastructure
-title: Set up an Apache web server
-author_1: Ashley Cryan
-author_2: 
---- -->
+---
+# Insert this YAML header (including the opening and closing ---) at the beginning of the document and fill it out accordingly
 
-# Setting up an Apache web server
+# We use this key to indicate the last reviewed date [manual entry, use MM/DD/YYYY]
+#date:
+
+# We use this key to indicate the last modified date [automatic entry]
+date-modified: last-modified
+
+# Do not modify
+lang: en
+language: 
+  title-block-published: "Last reviewed"
+  title-block-modified: "Last modified"
+
+# Title of the document [manual entry]
+title: Set up an Apache web server
+
+# Authors of the document, will not be parsed [manual entry]
+author_1: Ashley Cryan
+author_2:
+
+# Maintainers of the document, will not be parsed [manual entry]
+maintainer_1:
+maintainer_2:
+
+# To whom reach out regarding the document, will not be parsed [manual entry]
+corresponding:
+
+# Meaningful keywords, newline separated [manual entry]
+categories: 
+ - 
+ - 
+
+---
 
 ## Background
 If you want to host a website for your lab, or a web application of some sort, you are going to need to work with a webserver. Apache Web Server is a software package that turns a computer into an HTTP server. That is, it sends web pages – stored as HTML files – to people on the internet who request them. It is open-source software, which means it can be used and modified freely.
