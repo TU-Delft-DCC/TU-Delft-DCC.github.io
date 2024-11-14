@@ -139,6 +139,15 @@ website:
                   href: docs/software/software_management_plan.md
                 - text: FAIR for Research Software Program Spring 2023
                   url: https://tu-delft-dcc.github.io/FAIR4RS/
+            - section: "Documentation"
+              href: docs/software/documentation/index.md
+              contents:
+                - text: README
+                  href: docs/software/documentation/readme.md
+                - text: CITATION.cff
+                  href: docs/software/documentation/citation.md
+                - text: Software license
+                  href: docs/software/documentation/license.md
             - section: "Software testing"
               href: docs/software/testing_intro.md
               contents:
