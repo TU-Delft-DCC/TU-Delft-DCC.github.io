@@ -199,4 +199,4 @@ format:
     anchor-sections: true
     smooth-scroll: true
     grid: 
-      sidebar-width: 300px
+      sidebar-width: 320px
