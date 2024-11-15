@@ -62,6 +62,7 @@ Containers can be useful for various purposes:
 - If you are facing issues due to different system architectures you can distribute a definition file to build an image that tailors to different machines. While it might not replicate your environment exactly, it often provides a sufficiently close alternative.
 
 Popular containerisation solutions:
+
 - [Docker](https://www.docker.com) and [Podman](https://podman.io) are great for general software development.
 - [Singularity](https://sylabs.io/docs/) is tailored for high-performance computing (HPC) environments.
 - For managing and scaling containers across multiple machines, tools like [Kubernetes](https://kubernetes.io/) are commonly used.
