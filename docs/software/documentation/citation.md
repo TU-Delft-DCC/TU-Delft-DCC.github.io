@@ -59,10 +59,6 @@ url: "https://github.com/your_repo"
 ```
 :::
 
-:::{.callout-note collapse="true"}
-
-
-
 When citing a paper that is linked to the software you can use `preferred-citation` argument.
 
 :::{.callout-note collapse="true"}
@@ -100,6 +96,7 @@ preferred-citation:
 ```
 :::
 
+:::{.callout-note collapse="true"}
 ## How the citation would look on GitHub
 On GitHub, it will show in either APA or BibTeX formatting, as they are the currently supported formats. If you add a `CITATION.cff` file to your repository, then a label for citing will automatically be generated and will show up on the right sidebar of the repository.
 
