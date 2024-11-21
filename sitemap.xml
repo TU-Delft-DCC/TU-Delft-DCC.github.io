@@ -2,170 +2,186 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://tu-delft-dcc.github.io/docs/tud-support/index.html</loc>
-    <lastmod>2024-11-13T10:27:38.727Z</lastmod>
+    <lastmod>2024-11-21T16:03:41.299Z</lastmod>
   </url>
   <url>
     <loc>https://tu-delft-dcc.github.io/docs/software/testing_intro.html</loc>
-    <lastmod>2024-11-13T10:27:38.727Z</lastmod>
+    <lastmod>2024-11-21T16:03:41.299Z</lastmod>
   </url>
   <url>
     <loc>https://tu-delft-dcc.github.io/docs/software/project_cards.html</loc>
-    <lastmod>2024-11-13T10:27:38.727Z</lastmod>
+    <lastmod>2024-11-21T16:03:41.299Z</lastmod>
   </url>
   <url>
     <loc>https://tu-delft-dcc.github.io/docs/software/git/branch_management.html</loc>
-    <lastmod>2024-11-13T10:27:38.727Z</lastmod>
+    <lastmod>2024-11-21T16:03:41.299Z</lastmod>
   </url>
   <url>
     <loc>https://tu-delft-dcc.github.io/docs/software/fair.html</loc>
-    <lastmod>2024-11-13T10:27:38.727Z</lastmod>
+    <lastmod>2024-11-21T16:03:41.299Z</lastmod>
+  </url>
+  <url>
+    <loc>https://tu-delft-dcc.github.io/docs/software/documentation/license.html</loc>
+    <lastmod>2024-11-21T16:03:41.295Z</lastmod>
+  </url>
+  <url>
+    <loc>https://tu-delft-dcc.github.io/docs/software/documentation/citation.html</loc>
+    <lastmod>2024-11-21T16:03:41.295Z</lastmod>
   </url>
   <url>
     <loc>https://tu-delft-dcc.github.io/docs/software/containers/docker_gui.html</loc>
-    <lastmod>2024-11-13T10:27:38.727Z</lastmod>
+    <lastmod>2024-11-21T16:03:41.295Z</lastmod>
   </url>
   <url>
     <loc>https://tu-delft-dcc.github.io/docs/resources/tools.html</loc>
-    <lastmod>2024-11-13T10:27:38.715Z</lastmod>
+    <lastmod>2024-11-21T16:03:41.283Z</lastmod>
   </url>
   <url>
     <loc>https://tu-delft-dcc.github.io/docs/resources/courses.html</loc>
-    <lastmod>2024-11-13T10:27:38.715Z</lastmod>
+    <lastmod>2024-11-21T16:03:41.283Z</lastmod>
   </url>
   <url>
     <loc>https://tu-delft-dcc.github.io/docs/infrastructure/moving_data.html</loc>
-    <lastmod>2024-11-13T10:27:38.715Z</lastmod>
+    <lastmod>2024-11-21T16:03:41.283Z</lastmod>
   </url>
   <url>
     <loc>https://tu-delft-dcc.github.io/docs/infrastructure/giving_sudo_privilege.html</loc>
-    <lastmod>2024-11-13T10:27:38.715Z</lastmod>
+    <lastmod>2024-11-21T16:03:41.283Z</lastmod>
   </url>
   <url>
     <loc>https://tu-delft-dcc.github.io/docs/infrastructure/gitlab/gitlab_transfer_ownership.html</loc>
-    <lastmod>2024-11-13T10:27:38.711Z</lastmod>
+    <lastmod>2024-11-21T16:03:41.279Z</lastmod>
   </url>
   <url>
     <loc>https://tu-delft-dcc.github.io/docs/infrastructure/gitlab/gitlab_groups.html</loc>
-    <lastmod>2024-11-13T10:27:38.711Z</lastmod>
+    <lastmod>2024-11-21T16:03:41.279Z</lastmod>
   </url>
   <url>
     <loc>https://tu-delft-dcc.github.io/docs/infrastructure/apache_webserver.html</loc>
-    <lastmod>2024-11-13T10:27:38.711Z</lastmod>
+    <lastmod>2024-11-21T16:03:41.279Z</lastmod>
   </url>
   <url>
     <loc>https://tu-delft-dcc.github.io/docs/infrastructure/VPS_SSL_Certs.html</loc>
-    <lastmod>2024-11-13T10:27:38.711Z</lastmod>
+    <lastmod>2024-11-21T16:03:41.279Z</lastmod>
   </url>
   <url>
     <loc>https://tu-delft-dcc.github.io/docs/guides.html</loc>
-    <lastmod>2024-11-13T10:27:38.707Z</lastmod>
+    <lastmod>2024-11-21T16:03:41.275Z</lastmod>
   </url>
   <url>
     <loc>https://tu-delft-dcc.github.io/docs/data/storage_options.html</loc>
-    <lastmod>2024-11-13T10:27:38.707Z</lastmod>
+    <lastmod>2024-11-21T16:03:41.275Z</lastmod>
   </url>
   <url>
     <loc>https://tu-delft-dcc.github.io/docs/data/project_drive_request.html</loc>
-    <lastmod>2024-11-13T10:27:38.707Z</lastmod>
+    <lastmod>2024-11-21T16:03:41.275Z</lastmod>
   </url>
   <url>
     <loc>https://tu-delft-dcc.github.io/docs/data/getting_started.html</loc>
-    <lastmod>2024-11-13T10:27:38.707Z</lastmod>
+    <lastmod>2024-11-21T16:03:41.275Z</lastmod>
   </url>
   <url>
     <loc>https://tu-delft-dcc.github.io/docs/community/maintainers.html</loc>
-    <lastmod>2024-11-13T10:27:38.707Z</lastmod>
+    <lastmod>2024-11-21T16:03:41.275Z</lastmod>
   </url>
   <url>
     <loc>https://tu-delft-dcc.github.io/docs/community/community.html</loc>
-    <lastmod>2024-11-13T10:27:38.703Z</lastmod>
+    <lastmod>2024-11-21T16:03:41.271Z</lastmod>
   </url>
   <url>
     <loc>https://tu-delft-dcc.github.io/CONTRIBUTING.html</loc>
-    <lastmod>2024-11-13T10:27:38.703Z</lastmod>
+    <lastmod>2024-11-21T16:03:41.271Z</lastmod>
   </url>
   <url>
     <loc>https://tu-delft-dcc.github.io/index.html</loc>
-    <lastmod>2024-11-13T10:27:38.727Z</lastmod>
+    <lastmod>2024-11-21T16:03:41.299Z</lastmod>
   </url>
   <url>
     <loc>https://tu-delft-dcc.github.io/CODE_OF_CONDUCT.html</loc>
-    <lastmod>2024-11-13T10:27:38.703Z</lastmod>
+    <lastmod>2024-11-21T16:03:41.271Z</lastmod>
   </url>
   <url>
     <loc>https://tu-delft-dcc.github.io/docs/community/dcc.html</loc>
-    <lastmod>2024-11-13T10:27:38.703Z</lastmod>
+    <lastmod>2024-11-21T16:03:41.275Z</lastmod>
   </url>
   <url>
     <loc>https://tu-delft-dcc.github.io/docs/data/fair.html</loc>
-    <lastmod>2024-11-13T10:27:38.707Z</lastmod>
+    <lastmod>2024-11-21T16:03:41.275Z</lastmod>
   </url>
   <url>
     <loc>https://tu-delft-dcc.github.io/docs/data/project_drive_mounting.html</loc>
-    <lastmod>2024-11-13T10:27:38.707Z</lastmod>
+    <lastmod>2024-11-21T16:03:41.275Z</lastmod>
   </url>
   <url>
     <loc>https://tu-delft-dcc.github.io/docs/data/publishing.html</loc>
-    <lastmod>2024-11-13T10:27:38.707Z</lastmod>
+    <lastmod>2024-11-21T16:03:41.275Z</lastmod>
   </url>
   <url>
     <loc>https://tu-delft-dcc.github.io/docs/data/sync_unison.html</loc>
-    <lastmod>2024-11-13T10:27:38.707Z</lastmod>
+    <lastmod>2024-11-21T16:03:41.275Z</lastmod>
   </url>
   <url>
     <loc>https://tu-delft-dcc.github.io/docs/infrastructure/VPS_SSH.html</loc>
-    <lastmod>2024-11-13T10:27:38.711Z</lastmod>
+    <lastmod>2024-11-21T16:03:41.279Z</lastmod>
   </url>
   <url>
     <loc>https://tu-delft-dcc.github.io/docs/infrastructure/VPS_request.html</loc>
-    <lastmod>2024-11-13T10:27:38.711Z</lastmod>
+    <lastmod>2024-11-21T16:03:41.279Z</lastmod>
   </url>
   <url>
     <loc>https://tu-delft-dcc.github.io/docs/infrastructure/gitlab/gitlab_docker.html</loc>
-    <lastmod>2024-11-13T10:27:38.711Z</lastmod>
+    <lastmod>2024-11-21T16:03:41.279Z</lastmod>
   </url>
   <url>
     <loc>https://tu-delft-dcc.github.io/docs/infrastructure/gitlab/gitlab_intro.html</loc>
-    <lastmod>2024-11-13T10:27:38.711Z</lastmod>
+    <lastmod>2024-11-21T16:03:41.279Z</lastmod>
   </url>
   <url>
     <loc>https://tu-delft-dcc.github.io/docs/infrastructure/gitlab/runner_matlab.html</loc>
-    <lastmod>2024-11-13T10:27:38.715Z</lastmod>
+    <lastmod>2024-11-21T16:03:41.283Z</lastmod>
   </url>
   <url>
     <loc>https://tu-delft-dcc.github.io/docs/infrastructure/intro_servers.html</loc>
-    <lastmod>2024-11-13T10:27:38.715Z</lastmod>
+    <lastmod>2024-11-21T16:03:41.283Z</lastmod>
   </url>
   <url>
     <loc>https://tu-delft-dcc.github.io/docs/listing.html</loc>
-    <lastmod>2024-11-13T10:27:38.715Z</lastmod>
+    <lastmod>2024-11-21T16:03:41.283Z</lastmod>
   </url>
   <url>
     <loc>https://tu-delft-dcc.github.io/docs/resources/curriculum.html</loc>
-    <lastmod>2024-11-13T10:27:38.715Z</lastmod>
+    <lastmod>2024-11-21T16:03:41.283Z</lastmod>
   </url>
   <url>
     <loc>https://tu-delft-dcc.github.io/docs/software/checklist.html</loc>
-    <lastmod>2024-11-13T10:27:38.727Z</lastmod>
+    <lastmod>2024-11-21T16:03:41.295Z</lastmod>
   </url>
   <url>
     <loc>https://tu-delft-dcc.github.io/docs/software/containers/intro.html</loc>
-    <lastmod>2024-11-13T10:27:38.727Z</lastmod>
+    <lastmod>2024-11-21T16:03:41.295Z</lastmod>
+  </url>
+  <url>
+    <loc>https://tu-delft-dcc.github.io/docs/software/documentation/index.html</loc>
+    <lastmod>2024-11-21T16:03:41.295Z</lastmod>
+  </url>
+  <url>
+    <loc>https://tu-delft-dcc.github.io/docs/software/documentation/readme.html</loc>
+    <lastmod>2024-11-21T16:03:41.295Z</lastmod>
   </url>
   <url>
     <loc>https://tu-delft-dcc.github.io/docs/software/getting_started.html</loc>
-    <lastmod>2024-11-13T10:27:38.727Z</lastmod>
+    <lastmod>2024-11-21T16:03:41.299Z</lastmod>
   </url>
   <url>
     <loc>https://tu-delft-dcc.github.io/docs/software/git/intro.html</loc>
-    <lastmod>2024-11-13T10:27:38.727Z</lastmod>
+    <lastmod>2024-11-21T16:03:41.299Z</lastmod>
   </url>
   <url>
     <loc>https://tu-delft-dcc.github.io/docs/software/software_management_plan.html</loc>
-    <lastmod>2024-11-13T10:27:38.727Z</lastmod>
+    <lastmod>2024-11-21T16:03:41.299Z</lastmod>
   </url>
   <url>
     <loc>https://tu-delft-dcc.github.io/docs/software/testing_matlab.html</loc>
-    <lastmod>2024-11-13T10:27:38.727Z</lastmod>
+    <lastmod>2024-11-21T16:03:41.299Z</lastmod>
   </url>
 </urlset>

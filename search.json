@@ -186,6 +186,58 @@
     ]
   },
   {
+    "objectID": "docs/software/documentation/license.html",
+    "href": "docs/software/documentation/license.html",
+    "title": "Software license",
+    "section": "",
+    "text": "Important\n\n\n\nFor questions about data and software licenses, please consult your Faculty Data Steward.",
+    "crumbs": [
+      "Guides",
+      "💻 **Research Software**",
+      "Documentation",
+      "Software license"
+    ]
+  },
+  {
+    "objectID": "docs/software/documentation/license.html#tu-delft-licensing-policy",
+    "href": "docs/software/documentation/license.html#tu-delft-licensing-policy",
+    "title": "Software license",
+    "section": "TU Delft licensing policy",
+    "text": "TU Delft licensing policy\nTU Delft, by default, holds the rights to the software created by its employees. In order to apply a pre-approved open source license, you have to follow the guidelines in TU Delft Guidelines on Research Software: Licensing, Registration and Commercialisation. It states:\n\nIt is important to remember that in principle TU Delft holds the rights to the software created by its employees (i.e. software developers, researchers and/or staff). So, some formal (legal) steps are needed to arrange matters properly.\n\n\nWhen these guidelines are followed and when the software is published, TU Delft disclaims its copyright, allowing software developers, researchers and staff to hold the copyright to their software and thereby having the right to apply one of the pre-approved licences when sharing software. The pre-approved open source software licences at TU Delft are Apache, MIT, BSD, EUPL, AGPL, LGPL, GPL, and CC0.\n\n\nSteps to apply a pre-approved open-source license\n\nDetermine if it is possible to apply an Open Source Software licence to your project (see diagram below).\nThe waiver of TU Delft should be indicated in the software licence with the following text:\n\nTechnische Universiteit Delft hereby disclaims all copyright interest in the program “Name program” (one line description of the content or function) written by the Author(s). \n\n[Name Dean], Dean of [Name Faculty]\n\nAssert your own, personal copyright (© YEAR, [NAME], [REFERENCE project, grant or study if desired]. The reason for waiving the copyright and having the software developers, researchers and staff file the copyright in their own name facilitates the use of copyleft licences.\nApply one of the TU Delft pre-approved Open Source Software licences in the format and form described in the licence text after stating, “This work is licensed under a [NAME and VERSION] OSS licence”.\nMake the software openly available (for instance in an online repository such as GitHub).\nPlease consider acknowledging support from TU Delft and/or your funding provider.\nRegister the software either in 4TU.ResearchData or in PURE. Registries in 4TU.ResearchData are automatically registered in PURE.\n\n\n\n\n\n\n\nImportant\n\n\n\nThe steps above are mandatory, the TU Delft guidelines state:\n\nPlease note that if the software is not published, and/or if the guidelines have not been followed correctly and/or if the software is not registered in PURE, then this ‘agreement’ is invalid and the software automatically falls under the legal copyright of TU Delft. This instantly nullifies the right of the software developer or researcher to apply for a licence and thus the open source software licence applied never came into existence. This works retroactively.\n\n\n\n\n\nDecision tree for applying for a license\nTU Delft staff members can apply for an open-source license according to the decision tree found in TU Delft Guidelines on Research Software: Licensing, Registration and Commercialisation.\n\n\n\n\n\n\n\nDecision tree to guide software developers, researchers and staff on when they can apply an open source licence to their software (OSS: Open Source Software, IDF: Invention Disclosure Form). From: Bazuine, M. (2021). TU Delft Guidelines on Research Software: Licensing, Registration and Commercialisation. Zenodo. https://doi.org/10.5281/zenodo.4629635",
+    "crumbs": [
+      "Guides",
+      "💻 **Research Software**",
+      "Documentation",
+      "Software license"
+    ]
+  },
+  {
+    "objectID": "docs/software/documentation/license.html#types-of-open-source-licenses",
+    "href": "docs/software/documentation/license.html#types-of-open-source-licenses",
+    "title": "Software license",
+    "section": "Types of open source licenses",
+    "text": "Types of open source licenses\n\nPermissive licenses aka copyright (e.g., MIT, BSD, Apache): These licenses allow users to do almost anything with the code, including using it in proprietary software.\nRestrictive licenses aka copyleft (e.g., GPL, AGPL, LGPL, EUPL): These licenses require any derivative works to be open source and distributed under the same license.\n\n\nCopyright licenses\n\nMIT: Very simple and permissive, allowing almost unrestricted reuse. The software can be freely used, modified, distributed, and sublicensed.\nBSD: Similar to the MIT license, but it may include additional attribution requirements.\n\n\n\n\n\n\n\nBSD license details\n\n\n\n\n\n\nAttribution: Requires that the copyright notice and list of conditions be included in all copies or substantial portions of the software (except for the BSD 0-Clause License, which does not require any attribution). There are different clause variants of the license. For example, a BSD 3-Clause license adds a clause preventing the use of the names of the project or its contributors to endorse or promote derived products without written permission.\nPatent Protection: Does not include explicit provisions for patent protection.\n\n\n\n\n\nApache: Allows for the use, modification, distribution, and sublicensing of the software under certain conditions. It is often used in open-source projects and is often the choice for its balance between permissiveness and the protection of patents. The Innovation and Impact Center recommends this license for industry collaborations.\n\n\n\n\n\n\n\nApache license details\n\n\n\n\n\n\nAttribution: Requires preservation of the original copyright notice and a notice of any modifications made.\nPatent Protection: Includes a patent retaliation clause, which provides an additional layer of protection. This clause terminates the license if the user initiates patent litigation against any entity regarding the licensed software.\nNotice Requirement: Modifications to the original code must be documented, and a NOTICE file must be included with any substantial portions of the software.\n\n\n\n\n\n\n\n\n\n\nKey differences between a BSD and Apache license\n\n\n\n\nThe Apache license includes a patent retaliation clause to protect against patent litigation, but the BSD license does not explicitly address patent rights.\nThe BSD license does not require a specific notice file for modifications, but the Apache License requires a NOTICE file that documents any modifications made to the original code.\n\n\n\n\n\nCopyleft licenses\n\nGPL (GNU General Public License): One of the most widespread copyleft licenses. With the GPL license, any derivative work under this license automatically becomes subject to the same GPL terms, regardless of the size of the contribution. All future modifications and adaptions of code under this license is only compatible with this license and cannot be used in proprietary software.\nDerivatives from GPL (AGPL, LGPL, EUPL): From these, the EUPL license is somewhat more flexible compared to others as it can coexist with other open-source software licenses such as MIT, BSD, and Apache. For instance, if you integrate a portion of software that is licensed under Apache into a project governed by EUPL, that portion can retain its Apache license. In contrast, under the GPL, the entire codebase would need to be licensed under GPL.\n\n\n\n\n\n\n\nNote\n\n\n\nThere are even instances when GPL licenses are incompatible with each other. For example, GPL-2.0 is incompatible with GPL-3.0. If a project uses GPL-2.0 you are essentially forced to use that license.\n\n\n\n\nLicense compatibility\n\n\n\n\n\n\n\nCompatibility of licenses. From: Bazuine, M. (2021). TU Delft Guidelines on Research Software: Licensing, Registration and Commercialisation. Zenodo. https://doi.org/10.5281/zenodo.4629635\n\n\n\n\n\n\n\n\nTip\n\n\n\nDon’t forget to check whether your software’s dependencies have restrictions on re-use.\n\n\nIt is advisable to contact your faculty’s data steward regarding licensing questions. If your project involves complex legal considerations, particularly regarding intellectual property rights or compliance with licensing agreements, the Innovation and Impact Center should also be involved.\n\n\n\n\n\n\nFurther reading\n\n\n\n\nTU Delft Research Software Policy\nTU Delft Guidelines on Research Software - the TU Delft Research Software Policy approved by the Executive Board\nChoose a license - a simplified guide on choosing an open-source license\ntl;drLegal - Plain English summaries of software licenses\nThe Turing Way - Licensing",
+    "crumbs": [
+      "Guides",
+      "💻 **Research Software**",
+      "Documentation",
+      "Software license"
+    ]
+  },
+  {
+    "objectID": "docs/software/documentation/citation.html",
+    "href": "docs/software/documentation/citation.html",
+    "title": "CITATION.cff",
+    "section": "",
+    "text": "It’s straightforward to cite research papers, but with software sometimes it’s not as obvious. It is recommended to place a CITATION.cff file in the root of your repository to inform others about the preferred way to cite the software. GitHub can automatically parse the .cff file to create citation snippets in APA or BibTeX format. If you’d prefer the software to be cited through a journal publication, you can mention this in the README and in the CITATION.cff file.\n\n\n\n\n\n\nAn example of a CITATION.cff\n\n\n\n\n\ncff-version: 1.2.0\nmessage: \"If you are using this software, please cite it as shown below.\"\nauthors:\n- family-names: \"Doe\"\n  given-names: \"Jane\"\n  orcid: \"https://orcid.org/9999-9999-9999-9999\"\ntitle: \"Name of your software\"\nversion: 1.0.1\ndoi: \"11.1111/11111\"\ndate-released: 2024-12-31\nlicense: MIT\nurl: \"https://github.com/your_repo\"\n\n\n\nWhen citing a paper that is linked to the software you can use preferred-citation argument.\n\n\n\n\n\n\nAn example of a CITATION file citing a research article\n\n\n\n\n\ncff-version: 1.2.0\nmessage: \"If you are using this software, please cite it as shown below.\"\nauthors:\n- family-names: \"Doe\"\n  given-names: \"Jane\"\n  orcid: \"https://orcid.org/9999-9999-9999-9999\"\ntitle: \"Name of your software\"\nversion: 1.0.1\ndoi: \"11.1111/11111\"\ndate-released: 2024-12-31\nlicense: MIT\nurl: \"https://github.com/your_repo\"\npreferred-citation:\n    type: article\n    authors:\n    - family-names: \"Doe\"\n      given-names: \"Jane\"\n      orcid: \"https://orcid.org/9999-9999-9999-9999\"\n    doi: \"11.1111/11111\"\n    journal: \"The title of the journal\"\n    month: 12\n    start: 19 # the first page number\n    end: 29 #the last page number\n    title: \"Name of your submitted paper\"\n    issue: 9\n    volume: 2\n    year: 2024\n    \n\n\n\n\n\n\n\n\n\nHow the citation would look on GitHub\n\n\n\n\n\nOn GitHub, it will show in either APA or BibTeX formatting, as they are the currently supported formats. If you add a CITATION.cff file to your repository, then a label for citing will automatically be generated and will show up on the right sidebar of the repository.\nAPA\n\nDoe, J. (2024). Name of your software (Version 1.0.1) [Computer software]. https://doi.org/11.1111/11111\n\nBibTeX\n\n@software{Joe_Name_of_your_software_2024, author = {Doe, Jane}, doi = {11.1111/11111}, month = {12}, title = {{Name of your software}}, url = {https://github.com/your_repo}, version = {1.0.1}, year = {2024} }\n\nThis is an example of software citation.\n\n\n\n\n\n\n\n\n\nFurther reading\n\n\n\n\nCITATION.cff documentation\nGitHub documentation on CITATION files - this resource also includes how to cite something other than software or a journal article.\nGenerate CITATION.cff files\nCitation File Format GitHub",
+    "crumbs": [
+      "Guides",
+      "💻 **Research Software**",
+      "Documentation",
+      "CITATION.cff"
+    ]
+  },
+  {
     "objectID": "docs/software/containers/docker_gui.html",
     "href": "docs/software/containers/docker_gui.html",
     "title": "Using a docker container with a GUI",
@@ -844,7 +896,7 @@
     "href": "docs/data/getting_started.html",
     "title": "Getting started",
     "section": "",
-    "text": "🏗️ Under construction",
+    "text": "The aim of this section is to guide data owners and users through each stage of the data lifecycle—such as data collection, storage, sharing, publication, and archiving—in a responsible and effective manner. By following the Findable, Accessible, Interoperable, and Reproducible (FAIR) principles, users will learn the core concepts and practices of good data management at TU Delft.\nResearch data includes any information observed, generated or created for use in research projects. Though often tied to specific research projects, research data follows its own lifecycle, which is distinct from the project itself. After initial data collection, data may be processed, analyzed, published, shared, archived, reused or destroyed.\nEffective research data management by following FAIR principles ensures efficiency and reproducibility at every step of the data lifecycle. At TU Delft, various tools and resources are available to meet diverse data management needs at any stage in its lifecycle.",
     "crumbs": [
       "Guides",
       "🗃️ **Data Management**",
@@ -1770,13 +1822,100 @@
   {
     "objectID": "docs/software/containers/intro.html",
     "href": "docs/software/containers/intro.html",
-    "title": "Working with containers",
+    "title": "Introduction to containers",
     "section": "",
-    "text": "🏗️ Under construction",
+    "text": "Just as you document your software dependencies, it may be useful to record and manage your development environments. This may involve documenting the specific configurations, tools, and versions used during development to ensure that everything runs consistently across different setups.\nBy recording your environments, you create a reproducible framework that significantly reduces the infamous “it works on my machine” syndrome, where code runs on one machine but fails on others.\nEnvironment management includes specifying your operating system, programming language (and their versions), system libraries, and any other software or tools required. This practice not only helps in maintaining consistency across development, testing, and production stages but also streamlines onboarding for new team members, as they can quickly set up their environment to match the recorded specifications.",
     "crumbs": [
       "Guides",
       "💻 **Research Software**",
       "Working with containers"
+    ]
+  },
+  {
+    "objectID": "docs/software/containers/intro.html#introduction-to-containers",
+    "href": "docs/software/containers/intro.html#introduction-to-containers",
+    "title": "Introduction to containers",
+    "section": "",
+    "text": "Just as you document your software dependencies, it may be useful to record and manage your development environments. This may involve documenting the specific configurations, tools, and versions used during development to ensure that everything runs consistently across different setups.\nBy recording your environments, you create a reproducible framework that significantly reduces the infamous “it works on my machine” syndrome, where code runs on one machine but fails on others.\nEnvironment management includes specifying your operating system, programming language (and their versions), system libraries, and any other software or tools required. This practice not only helps in maintaining consistency across development, testing, and production stages but also streamlines onboarding for new team members, as they can quickly set up their environment to match the recorded specifications.",
+    "crumbs": [
+      "Guides",
+      "💻 **Research Software**",
+      "Working with containers"
+    ]
+  },
+  {
+    "objectID": "docs/software/containers/intro.html#why-use-containers",
+    "href": "docs/software/containers/intro.html#why-use-containers",
+    "title": "Introduction to containers",
+    "section": "Why use containers?",
+    "text": "Why use containers?\nContainers remove the need for manual installation or troubleshooting, ensuring that software runs consistently across different machines. Containers act as a self-contained unit that bundle everything needed to run software, including dependencies and system libraries, into a single package known as an image.\nThe definition files, like Dockerfiles or Singularity definition files, are essentially instruction manuals to build a container image.\n\n\n\n\n\n\nAn analogy for a container image\n\n\n\n\n\nConsider a container image like a detailed movie script that outlines every scene. When the movie is shot (i.e., the container is executed), a temporary set is built where all filming occurs in a controlled environment. Once filming ends, the set is dismantled, but the script remains unchanged, allowing the software to be re-executed with the same consistent results every time, just as each scene is reproduced faithfully with the same script.\n\n\n\nContainers can be useful for various purposes:\n\nIf installing certain software is complex or incompatible with your operating system, you can use a pre-built container image to run the software seamlessly.\nLikewise, if you want to make sure that the people you are working with use the exact same environment, you could provide them with an image of your container.\nIf you are facing issues due to different system architectures you can distribute a definition file to build an image that tailors to different machines. While it might not replicate your environment exactly, it often provides a sufficiently close alternative.\n\nPopular containerisation solutions:\n\nDocker and Podman are great for general software development.\nSingularity is tailored for high-performance computing (HPC) environments.\nFor managing and scaling containers across multiple machines, tools like Kubernetes are commonly used.\n\nDocker’s official samples and examples\n\n\n\n\n\n\nFurther reading\n\n\n\n\nRecording environments lesson on CodeRefinery\nCarpentries incubator lesson on Docker\nGuides and manuals for Docker\nSingularity documentation",
+    "crumbs": [
+      "Guides",
+      "💻 **Research Software**",
+      "Working with containers"
+    ]
+  },
+  {
+    "objectID": "docs/software/containers/intro.html#advantages-and-disadvantages-of-using-containers",
+    "href": "docs/software/containers/intro.html#advantages-and-disadvantages-of-using-containers",
+    "title": "Introduction to containers",
+    "section": "Advantages and disadvantages of using containers",
+    "text": "Advantages and disadvantages of using containers\nContainers have gained widespread popularity due to their significant benefits in solving various challenges:\n\nThey enable a smooth transition of workflows across different operating systems and configurations.\nThey address the common issue of software behaving differently on different machines by providing a consistent runtime environment.\nFor software with nested dependencies, containers can be a vital tool for ensuring long-term reproducibility.\nContainers package software in isolated files, simplifying management, installation, and removal compared to traditional methods.\n\nBut it is important to consider the downsides:\n\nThe convenience of containers might lead to overlooking underlying software installation issues and not adhering to good software development practices.\nThere’s a risk of creating a new form of dependency - software that “only works in a specific container”, which could limit flexibility and interoperability.\nContainer images can grow in size substantially, especially if not carefully managed.\nModifying existing containers can sometimes be challenging, requiring a good understanding of the container’s configuration.\nEnsuring container security is vital, as misconfigurations can expose vulnerabilities.\n\n\n\n\n\n\n\nCaution\n\n\n\nIt’s crucial to source your container images from reputable and official channels. There have been instances where images were found to be malicious, so it is very important to apply the same caution as when installing software packages from untrusted sources.\nAlways download images from trusted sources like Docker Hub. Utilize container scanning tools, such as Docker scanning tools to mitigate risks from malicious images.",
+    "crumbs": [
+      "Guides",
+      "💻 **Research Software**",
+      "Working with containers"
+    ]
+  },
+  {
+    "objectID": "docs/software/documentation/index.html",
+    "href": "docs/software/documentation/index.html",
+    "title": "Software documentation",
+    "section": "",
+    "text": "Documentation serves as a bridge between the developer and user, and effectively communicating and explaining the code is as important as the code itself. Often, two types of documentation are distinguished: User and developer documentation. Both are essential for the success of a software project, and they serve different purposes.\n\nUser documentation\nUser documentation is aimed at those who will use the software, focusing on how to effectively utilize it. This documentation typically includes user manuals and tutorials, possibly FAQs and troubleshooting guides. The emphasis is on simplicity and accessibility, ensuring that anyone can understand how to use the software.\n\n\nDeveloper documentation\nDeveloper documentation targets developers who need to understand the internal parts of the software for purposes of development, maintenance, or integration. It can include additional details such as Application Programming Interface (API) documentation and development guidelines. Developer documentation is more detailed providing insights necessary for modifying and enhancing the software.\n\n\n\n\n\n\nChecklist\n\n\n\n\n\nUser documentation\n\nREADME\nCITATION\nLICENSE\n\nDeveloper documentation\n\nCode comments\nContributing guidelines\nAPI documentation\nOptional: Code of conduct",
+    "crumbs": [
+      "Guides",
+      "💻 **Research Software**",
+      "Documentation"
+    ]
+  },
+  {
+    "objectID": "docs/software/documentation/readme.html",
+    "href": "docs/software/documentation/readme.html",
+    "title": "README",
+    "section": "",
+    "text": "Although the specific content of a README can vary from project to project, several sections are recommended because they address fundamental aspects that are relevant to most projects.\nYou should ensure that your README addresses the following:",
+    "crumbs": [
+      "Guides",
+      "💻 **Research Software**",
+      "Documentation",
+      "README"
+    ]
+  },
+  {
+    "objectID": "docs/software/documentation/readme.html#description",
+    "href": "docs/software/documentation/readme.html#description",
+    "title": "README",
+    "section": "Description",
+    "text": "Description\nAlthough explaining the purpose might sound self-explanatory, it is important to clearly explain the motivations and objectives of your project. This section should serve as an introductory overview that informs potential users and contributors about the essence of your project.\nProvide background information and include links to any references that someone might not be familiar with. If there are alternatives to your project, this is the place to outline what sets your project apart.",
+    "crumbs": [
+      "Guides",
+      "💻 **Research Software**",
+      "Documentation",
+      "README"
+    ]
+  },
+  {
+    "objectID": "docs/software/documentation/readme.html#installation-and-usage",
+    "href": "docs/software/documentation/readme.html#installation-and-usage",
+    "title": "README",
+    "section": "Installation and usage",
+    "text": "Installation and usage\nThis section should detail the steps needed to set up the software in their environment.\nBefore installation, users must be aware of any prerequisites or dependencies required. This can include specific versions of programming languages, libraries, operating systems, and hardware. It is recommended to make use of a dependency manager such as pip or conda for easy and reproducible installation.\nAfter listing the dependencies, describe the installation process step-by-step. This might involve downloading the software from a repository, compiling code, or using a package manager.\nExample: The scikit-learn GitHub repository provides a good example of the Installation section of a README.\nYou can include the simplest possible usage example directly in the README and provide more complex examples in additional files or links.\nExample: The TensorFlow GitHub repository gives a small usage sample after installation instructions and provides a link with additional examples and tutorials.\nIt is recommended to write READMEs in markdown formatting and they should be placed in the top-level directory of your project. It is better that your README is on the side of too much information than too little. If you find your README is becoming too extensive, think about incorporating additional forms of documentation instead of omitting important details.\n\n\n\n\n\n\nFurther reading\n\n\n\n\nMake a README - README 101\nMaking READMEs readable",
+    "crumbs": [
+      "Guides",
+      "💻 **Research Software**",
+      "Documentation",
+      "README"
     ]
   },
   {

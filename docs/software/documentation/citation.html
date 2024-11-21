@@ -6,8 +6,10 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="dcterms.date" content="2024-11-14">
+<meta name="description" content="How to cite software">
 
-<title>FAIR Software</title>
+<title>CITATION.cff</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -23,27 +25,27 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
-<script src="../../site_libs/clipboard/clipboard.min.js"></script>
-<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="../../site_libs/quarto-search/fuse.min.js"></script>
-<script src="../../site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="../../">
-<link href="../../docs/software/checklist.html" rel="next">
-<link href="../../docs/software/getting_started.html" rel="prev">
-<script src="../../site_libs/quarto-html/quarto.js"></script>
-<script src="../../site_libs/quarto-html/popper.min.js"></script>
-<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="../../site_libs/quarto-html/anchor.min.js"></script>
-<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../../site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<script src="../../site_libs/quarto-contrib/iconify-2.1.0/iconify-icon.min.js"></script>
+<script src="../../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../../">
+<link href="../../../docs/software/documentation/license.html" rel="next">
+<link href="../../../docs/software/documentation/readme.html" rel="prev">
+<script src="../../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../../site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<script src="../../../site_libs/quarto-contrib/iconify-2.1.0/iconify-icon.min.js"></script>
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -74,7 +76,7 @@ ul.task-list li input[type="checkbox"] {
 <style>html{ scroll-behavior: smooth; }</style>
 
 
-<link rel="stylesheet" href="../../themes/custom.css">
+<link rel="stylesheet" href="../../../themes/custom.css">
 </head>
 
 <body class="nav-sidebar docked nav-fixed">
@@ -84,8 +86,8 @@ ul.task-list li input[type="checkbox"] {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a href="../../index.html" class="navbar-brand navbar-brand-logo">
-    <img src="../../docs/img/tud/logo_white_crop.png" alt="" class="navbar-logo">
+    <a href="../../../index.html" class="navbar-brand navbar-brand-logo">
+    <img src="../../../docs/img/tud/logo_white_crop.png" alt="" class="navbar-logo">
     </a>
   </div>
             <div id="quarto-search" class="" title="Search"></div>
@@ -95,15 +97,15 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link active" href="../../index.html" aria-current="page"> 
+    <a class="nav-link active" href="../../../index.html" aria-current="page"> 
 <span class="menu-text">Guides</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../docs/tud-support/index.html"> 
+    <a class="nav-link" href="../../../docs/tud-support/index.html"> 
 <span class="menu-text">Support Staff</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../docs/listing.html"> 
+    <a class="nav-link" href="../../../docs/listing.html"> 
 <span class="menu-text">References</span></a>
   </li>  
   <li class="nav-item dropdown ">
@@ -112,11 +114,11 @@ ul.task-list li input[type="checkbox"] {
     </a>
     <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-community">    
         <li>
-    <a class="dropdown-item" href="../../CONTRIBUTING.html">
+    <a class="dropdown-item" href="../../../CONTRIBUTING.html">
  <span class="dropdown-text">Contributing</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../CODE_OF_CONDUCT.html">
+    <a class="dropdown-item" href="../../../CODE_OF_CONDUCT.html">
  <span class="dropdown-text">Code of Conduct</span></a>
   </li>  
         <li>
@@ -138,7 +140,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../docs/software/getting_started.html">💻 <strong>Research Software</strong></a></li><li class="breadcrumb-item"><a href="../../docs/software/fair.html">FAIR Software</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../../docs/software/getting_started.html">💻 <strong>Research Software</strong></a></li><li class="breadcrumb-item"><a href="../../../docs/software/documentation/index.html">Documentation</a></li><li class="breadcrumb-item"><a href="../../../docs/software/documentation/citation.html">CITATION.cff</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -152,7 +154,7 @@ ul.task-list li input[type="checkbox"] {
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../index.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Getting started</span></a>
   </div>
 </li>
@@ -170,7 +172,7 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="../../docs/infrastructure/intro_servers.html" class="sidebar-item-text sidebar-link">
+            <a href="../../../docs/infrastructure/intro_servers.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Remote servers</span></a>
           <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
@@ -179,31 +181,31 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../docs/infrastructure/VPS_request.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../docs/infrastructure/VPS_request.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Request a VPS</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../docs/infrastructure/VPS_SSH.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../docs/infrastructure/VPS_SSH.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Configure SSH Tunneling</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../docs/infrastructure/moving_data.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../docs/infrastructure/moving_data.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Moving data to your server</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../docs/infrastructure/VPS_SSL_Certs.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../docs/infrastructure/VPS_SSL_Certs.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Configure SSL certificates</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../docs/infrastructure/apache_webserver.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../docs/infrastructure/apache_webserver.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Setting up an Apache web server</span></a>
   </div>
 </li>
@@ -211,7 +213,7 @@ ul.task-list li input[type="checkbox"] {
   </li>
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="../../docs/infrastructure/gitlab/gitlab_intro.html" class="sidebar-item-text sidebar-link">
+            <a href="../../../docs/infrastructure/gitlab/gitlab_intro.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">TU Delft GitLab</span></a>
           <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
@@ -220,25 +222,25 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../docs/infrastructure/gitlab/gitlab_groups.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../docs/infrastructure/gitlab/gitlab_groups.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Creating GitLab groups</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../docs/infrastructure/gitlab/gitlab_transfer_ownership.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../docs/infrastructure/gitlab/gitlab_transfer_ownership.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Transfer ownership of a GitLab repository</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../docs/infrastructure/gitlab/gitlab_docker.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../docs/infrastructure/gitlab/gitlab_docker.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Continuous Integration with GitLab</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../docs/infrastructure/gitlab/runner_matlab.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../docs/infrastructure/gitlab/runner_matlab.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Setting up a Gitlab runner for MATLAB</span></a>
   </div>
 </li>
@@ -260,13 +262,13 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../docs/data/getting_started.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../docs/data/getting_started.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Getting started</span></a>
   </div>
 </li>
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="../../docs/data/fair.html" class="sidebar-item-text sidebar-link">
+            <a href="../../../docs/data/fair.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">FAIR Data</span></a>
           <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
@@ -275,7 +277,7 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../docs/data/publishing.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../docs/data/publishing.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Prepare data for publishing</span></a>
   </div>
 </li>
@@ -283,7 +285,7 @@ ul.task-list li input[type="checkbox"] {
   </li>
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="../../docs/data/storage_options.html" class="sidebar-item-text sidebar-link">
+            <a href="../../../docs/data/storage_options.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">TU Delft Data storage</span></a>
           <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
@@ -292,19 +294,19 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../docs/data/project_drive_request.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../docs/data/project_drive_request.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Request Project Drive space</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../docs/data/project_drive_mounting.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../docs/data/project_drive_mounting.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Mount Project Drive on Server</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../docs/data/sync_unison.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../docs/data/sync_unison.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Sync with Project Drive and SURFDrive with Unison</span></a>
   </div>
 </li>
@@ -326,34 +328,34 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-7" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../docs/software/getting_started.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../docs/software/getting_started.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Getting started</span></a>
   </div>
 </li>
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="../../docs/software/fair.html" class="sidebar-item-text sidebar-link active">
+            <a href="../../../docs/software/fair.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">FAIR Software</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" role="navigation" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-8" class="collapse list-unstyled sidebar-section depth2 show">  
+      <ul id="quarto-sidebar-section-8" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../docs/software/checklist.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../docs/software/checklist.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">FAIR checklist for research software</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../docs/software/project_cards.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../docs/software/project_cards.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">FAIR assessment cards</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../docs/software/software_management_plan.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../docs/software/software_management_plan.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Software management plan</span></a>
   </div>
 </li>
@@ -367,28 +369,28 @@ ul.task-list li input[type="checkbox"] {
   </li>
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="../../docs/software/documentation/index.html" class="sidebar-item-text sidebar-link">
+            <a href="../../../docs/software/documentation/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Documentation</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-9" role="navigation" aria-expanded="false" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-9" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-9" class="collapse list-unstyled sidebar-section depth2 ">  
+      <ul id="quarto-sidebar-section-9" class="collapse list-unstyled sidebar-section depth2 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../docs/software/documentation/readme.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../docs/software/documentation/readme.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">README</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../docs/software/documentation/citation.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../docs/software/documentation/citation.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">CITATION.cff</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../docs/software/documentation/license.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../docs/software/documentation/license.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Software license</span></a>
   </div>
 </li>
@@ -396,7 +398,7 @@ ul.task-list li input[type="checkbox"] {
   </li>
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="../../docs/software/testing_intro.html" class="sidebar-item-text sidebar-link">
+            <a href="../../../docs/software/testing_intro.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Software testing</span></a>
           <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-10" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
@@ -405,7 +407,7 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-10" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../docs/software/testing_matlab.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../docs/software/testing_matlab.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Testing with MATLAB</span></a>
   </div>
 </li>
@@ -413,7 +415,7 @@ ul.task-list li input[type="checkbox"] {
   </li>
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="../../docs/software/git/intro.html" class="sidebar-item-text sidebar-link">
+            <a href="../../../docs/software/git/intro.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Version control with git</span></a>
           <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-11" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
@@ -422,7 +424,7 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-11" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../docs/software/git/branch_management.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../docs/software/git/branch_management.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Branch management</span></a>
   </div>
 </li>
@@ -430,7 +432,7 @@ ul.task-list li input[type="checkbox"] {
   </li>
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="../../docs/software/containers/intro.html" class="sidebar-item-text sidebar-link">
+            <a href="../../../docs/software/containers/intro.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Working with containers</span></a>
           <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-12" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
@@ -439,7 +441,7 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-12" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../docs/software/containers/docker_gui.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../docs/software/containers/docker_gui.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Using a docker container with a GUI</span></a>
   </div>
 </li>
@@ -461,19 +463,19 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-13" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../docs/resources/courses.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../docs/resources/courses.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Courses and workshops</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../docs/resources/curriculum.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../docs/resources/curriculum.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Research Software Curriculum</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../docs/resources/tools.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../docs/resources/tools.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Tools</span></a>
   </div>
 </li>
@@ -490,16 +492,26 @@ ul.task-list li input[type="checkbox"] {
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../docs/software/getting_started.html">💻 <strong>Research Software</strong></a></li><li class="breadcrumb-item"><a href="../../docs/software/fair.html">FAIR Software</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../../docs/software/getting_started.html">💻 <strong>Research Software</strong></a></li><li class="breadcrumb-item"><a href="../../../docs/software/documentation/index.html">Documentation</a></li><li class="breadcrumb-item"><a href="../../../docs/software/documentation/citation.html">CITATION.cff</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">FAIR Software</h1>
-</div>
+<h1 class="title">CITATION.cff</h1>
+  <div class="quarto-categories">
+    <div class="quarto-category">documentation</div>
+    <div class="quarto-category">FAIR software</div>
+  </div>
+  </div>
 
 
 
 <div class="quarto-title-meta">
 
     
+    <div>
+    <div class="quarto-title-meta-heading">Last reviewed</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">November 14, 2024</p>
+    </div>
+  </div>
   
     <div>
     <div class="quarto-title-meta-heading">Last modified</div>
@@ -515,7 +527,121 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>🏗️ Under construction</p>
+<p>It’s straightforward to cite research papers, but with software sometimes it’s not as obvious. It is recommended to place a <code>CITATION.cff</code> file in the root of your repository to inform others about the preferred way to cite the software. GitHub can automatically parse the <code>.cff</code> file to create citation snippets in APA or BibTeX format. If you’d prefer the software to be cited through a journal publication, you can mention this in the README and in the <code>CITATION.cff</code> file.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+An example of a <code>CITATION.cff</code>
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-1" class="callout-1-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<pre><code>cff-version: 1.2.0
+message: "If you are using this software, please cite it as shown below."
+authors:
+- family-names: "Doe"
+  given-names: "Jane"
+  orcid: "https://orcid.org/9999-9999-9999-9999"
+title: "Name of your software"
+version: 1.0.1
+doi: "11.1111/11111"
+date-released: 2024-12-31
+license: MIT
+url: "https://github.com/your_repo"</code></pre>
+</div>
+</div>
+</div>
+<p>When citing a paper that is linked to the software you can use <code>preferred-citation</code> argument.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+An example of a <code>CITATION</code> file citing a research article
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-2" class="callout-2-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<pre><code>cff-version: 1.2.0
+message: "If you are using this software, please cite it as shown below."
+authors:
+- family-names: "Doe"
+  given-names: "Jane"
+  orcid: "https://orcid.org/9999-9999-9999-9999"
+title: "Name of your software"
+version: 1.0.1
+doi: "11.1111/11111"
+date-released: 2024-12-31
+license: MIT
+url: "https://github.com/your_repo"
+preferred-citation:
+    type: article
+    authors:
+    - family-names: "Doe"
+      given-names: "Jane"
+      orcid: "https://orcid.org/9999-9999-9999-9999"
+    doi: "11.1111/11111"
+    journal: "The title of the journal"
+    month: 12
+    start: 19 # the first page number
+    end: 29 #the last page number
+    title: "Name of your submitted paper"
+    issue: 9
+    volume: 2
+    year: 2024
+    </code></pre>
+</div>
+</div>
+</div>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+How the citation would look on GitHub
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-3" class="callout-3-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>On GitHub, it will show in either APA or BibTeX formatting, as they are the currently supported formats. If you add a <code>CITATION.cff</code> file to your repository, then a label for citing will automatically be generated and will show up on the right sidebar of the repository.</p>
+<p><strong>APA</strong></p>
+<blockquote class="blockquote">
+<p>Doe, J. (2024). Name of your software (Version 1.0.1) [Computer software]. https://doi.org/11.1111/11111</p>
+</blockquote>
+<p><strong>BibTeX</strong></p>
+<blockquote class="blockquote">
+<p><span class="citation" data-cites="software">@software</span>{Joe_Name_of_your_software_2024, author = {Doe, Jane}, doi = {11.1111/11111}, month = {12}, title = {{Name of your software}}, url = {https://github.com/your_repo}, version = {1.0.1}, year = {2024} }</p>
+</blockquote>
+<p>This is an example of software citation.</p>
+</div>
+</div>
+</div>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<strong>Further reading</strong>
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul>
+<li><a href="https://citation-file-format.github.io">CITATION.cff documentation</a></li>
+<li><a href="https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-citation-files">GitHub documentation on CITATION files</a> - this resource also includes how to cite something other than software or a journal article.</li>
+<li><a href="https://citation-file-format.github.io/cff-initializer-javascript/#/">Generate CITATION.cff files</a></li>
+<li><a href="https://github.com/citation-file-format/citation-file-format">Citation File Format GitHub</a></li>
+</ul>
+</div>
+</div>
 
 
 
@@ -1086,13 +1212,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../../docs/software/getting_started.html" class="pagination-link" aria-label="Getting started">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Getting started</span>
+      <a href="../../../docs/software/documentation/readme.html" class="pagination-link" aria-label="README">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">README</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../../docs/software/checklist.html" class="pagination-link" aria-label="FAIR checklist for research software">
-        <span class="nav-page-text">FAIR checklist for research software</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../../../docs/software/documentation/license.html" class="pagination-link" aria-label="Software license">
+        <span class="nav-page-text">Software license</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
@@ -1116,5 +1242,5 @@ If you find this content useful, please consider giving us a star on GitHub.
 
 
 
-<script src="../../site_libs/quarto-html/zenscroll-min.js"></script>
+<script src="../../../site_libs/quarto-html/zenscroll-min.js"></script>
 </body></html>
