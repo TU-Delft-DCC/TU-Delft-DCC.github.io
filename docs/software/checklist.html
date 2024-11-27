@@ -2,10 +2,11 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.5.57">
+<meta name="generator" content="quarto-1.6.38">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="dcterms.date" content="2024-11-12">
 
 <title>FAIR checklist for research software</title>
 <style>
@@ -37,12 +38,12 @@ ul.task-list li input[type="checkbox"] {
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-59d7b1e32d5886dad68637a69f2e15c7.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark-59d7b1e32d5886dad68637a69f2e15c7.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../../site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../../site_libs/bootstrap/bootstrap-70ebc2d755f33d9680f426f20315c9a9.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-dark-4612134e991624e49d8859868b5b9189.min.css" rel="prefetch" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
 <script src="../../site_libs/quarto-contrib/iconify-2.1.0/iconify-icon.min.js"></script>
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
@@ -501,18 +502,28 @@ ul.task-list li input[type="checkbox"] {
 <header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../docs/software/getting_started.html">💻 <strong>Research Software</strong></a></li><li class="breadcrumb-item"><a href="../../docs/software/fair.html">FAIR Software</a></li><li class="breadcrumb-item"><a href="../../docs/software/checklist.html">FAIR checklist for research software</a></li></ol></nav>
 <div class="quarto-title">
 <h1 class="title">FAIR checklist for research software</h1>
-</div>
+  <div class="quarto-categories">
+    <div class="quarto-category">FAIR Software</div>
+    <div class="quarto-category">Checklist</div>
+  </div>
+  </div>
 
 
 
 <div class="quarto-title-meta">
 
     
+    <div>
+    <div class="quarto-title-meta-heading">Last reviewed</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">November 12, 2024</p>
+    </div>
+  </div>
   
     <div>
     <div class="quarto-title-meta-heading">Last modified</div>
     <div class="quarto-title-meta-contents">
-      <p class="date-modified">November 22, 2024</p>
+      <p class="date-modified">November 27, 2024</p>
     </div>
   </div>
     
@@ -523,31 +534,7 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>The goal of the FAIR principles is to improve research transparency, reproducibility and reusability. To achieve this, your research needs to be described through metadata, should be open for inspection, well-documented, and well structured. This ensures that it can be replicated, expanded upon, merged, reinterpreted, or reimplemented. The acronym FAIR stands for:</p>
-<ul>
-<li><strong>F</strong>indable: Your research software can be easily found (i.e.&nbsp;has rich metadata, unique identifiers).</li>
-<li><strong>A</strong>ccessible: Once found, it can be accessed, ideally through well-defined and open protocols.</li>
-<li><strong>I</strong>nteroperable: Your research is compatible with other datasets, tools, and workflows, allowing for integration and reuse across various applications and fields.</li>
-<li><strong>R</strong>eusable: The ultimate goal is that your research outputs can be reused in different contexts. This requires comprehensive documentation, clear licensing, and a modular structure.</li>
-</ul>
-<p>While originally targetting data management, the FAIR for Research Software (FAIR4RS) extends these principles to research software, which, unlike data, is executable and evolves over time. Ensuring the findability of software involves metadata, identifiers, and version control systems, while accessibility includes guidelines for obtaining, installing, and running the software. Interoperability involves adherence to community-driven standards or protocols, and reusability requires detailed documentation and user guides to effectively apply the software in new research projects.</p>
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<strong>Further reading</strong>
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<ul>
-<li><a href="https://zenodo.org/records/6623556">FAIR Guiding Principles for scientific data management and stewardship to research software</a></li>
-<li><a href="https://zenodo.org/communities/fair4rs/records?q=&amp;l=list&amp;p=1&amp;s=10&amp;sort=newest">FAIR4RS community in Zenodo</a></li>
-<li><a href="https://fair-software.nl/">FAIR Software Checklist</a> - five recommendations for FAIR (scientific) software</li>
-</ul>
-</div>
-</div>
+<p>This checklist provides a set of recommendations for FAIR software. It outlines best practices and guidelines to ensure the quality, reproducibility, and sustainability of software projects. The checklist covers various aspects, such as version control, documentation, testing, licensing, and collaboration, providing a comprehensive framework for improving your software development process.</p>
 <section id="checklist" class="level2">
 <h2 class="anchored" data-anchor-id="checklist">Checklist</h2>
 <div class="callout callout-style-default callout-important no-icon callout-titled" title="Version control">
@@ -977,8 +964,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   });
   clipboard.on('success', onCopySuccess);
   if (window.document.getElementById('quarto-embedded-source-code-modal')) {
-    // For code content inside modals, clipBoardJS needs to be initialized with a container option
-    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
     const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
       text: getTextToCopy,
       container: window.document.getElementById('quarto-embedded-source-code-modal')
@@ -1089,7 +1074,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       if (window.Quarto?.typesetMath) {
         window.Quarto.typesetMath(note);
       }
-      // TODO in 1.5, we should make sure this works without a callout special case
       if (note.classList.contains("callout")) {
         return note.outerHTML;
       } else {
