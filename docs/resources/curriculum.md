@@ -18,7 +18,13 @@ language:
 # Uncomment and populate the next line accordingly
 title: Research Software Curriculum
 
+# Brief overview of the document (will be used in listings) [manual entry]
+# Uncomment and populate the next line and uncomment "hide-description: true".
+#description: Short description of the document
+#hide-description: true
+
 # Authors of the document, will not be parsed [manual entry]
+# Uncomment and populate the next lines accordingly
 author_1: Ashley Cryan
 author_2: Maurits Kok
 
@@ -36,7 +42,6 @@ author_2: Maurits Kok
 #categories: 
 # - 
 # - 
-
 
 ---
 

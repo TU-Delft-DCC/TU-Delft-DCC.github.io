@@ -18,6 +18,11 @@ language:
 # Uncomment and populate the next line accordingly
 title: Testing with MATLAB
 
+# Brief overview of the document (will be used in listings) [manual entry]
+# Uncomment and populate the next line and uncomment "hide-description: true".
+description: Writing and running tests with MATLAB
+hide-description: true
+
 # Authors of the document, will not be parsed [manual entry]
 # Uncomment and populate the next lines accordingly
 author_1: DCC Team
@@ -29,15 +34,14 @@ author_1: DCC Team
 #maintainer_2:
 
 # To whom reach out regarding the document, will not be parsed [manual entry]
+# Uncomment and populate the next line accordingly
 #corresponding:
 
 # Meaningful keywords, newline separated [manual entry]
+# Uncomment and populate the next line and list accordingly
 categories:
-    - testing
-    - matlab
-
-description: "Writing and running tests with MATLAB."
-hide-description: true    
+    - Testing
+    - MATLAB
 
 ---
 
