@@ -1,6 +1,6 @@
 ---
 title: References
-#repo-actions: false
+repo-actions: false
 # listing: 
 #     type: grid
 #     categories: true
