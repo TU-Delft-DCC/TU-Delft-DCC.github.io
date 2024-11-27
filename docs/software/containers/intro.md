@@ -25,8 +25,8 @@ author_1: Elviss Dvinskis
 author_2: Maurits Kok
 
 # Maintainers of the document, will not be parsed [manual entry]
-maintainer_1:
-maintainer_2:
+#maintainer_1:
+#maintainer_2:
 
 # To whom reach out regarding the document, will not be parsed [manual entry]
 corresponding: Elviss Dvinskis

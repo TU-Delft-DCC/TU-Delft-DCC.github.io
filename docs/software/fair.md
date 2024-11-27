@@ -16,20 +16,25 @@ language:
 # Title of the document [manual entry]
 title: FAIR Software
 
+# Brief overview of the document (will be used in listings) [manual entry]
+# Uncomment and populate the next line and uncomment "hide-description: true".
+#description: Short description of the document
+#hide-description: true
+
 # Authors of the document, will not be parsed [manual entry]
 author_1: Maurits Kok
 author_2: Elviss Dvinskis
 
 # Maintainers of the document, will not be parsed [manual entry]
 maintainer_1: Elviss Dvinskis
-maintainer_2:
+#maintainer_2:
 
 # To whom reach out regarding the document, will not be parsed [manual entry]
 corresponding: Elviss Dvinskis
 
 # Meaningful keywords, newline separated [manual entry]
 categories: 
- - FAIR
+ - FAIR Software
 
 ---
 
