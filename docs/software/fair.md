@@ -22,14 +22,14 @@ author_2: Elviss Dvinskis
 
 # Maintainers of the document, will not be parsed [manual entry]
 maintainer_1: Elviss Dvinskis
-maintainer_2:
+#maintainer_2:
 
 # To whom reach out regarding the document, will not be parsed [manual entry]
 corresponding: Elviss Dvinskis
 
 # Meaningful keywords, newline separated [manual entry]
 categories: 
- - FAIR
+ - FAIR Software
 
 ---
 

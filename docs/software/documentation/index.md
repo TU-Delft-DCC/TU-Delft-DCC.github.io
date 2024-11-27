@@ -18,19 +18,20 @@ title: Software documentation
 
 # Authors of the document, will not be parsed [manual entry]
 author_1: Maurits Kok
-author_2: 
+#author_2: 
 
 # Maintainers of the document, will not be parsed [manual entry]
-maintainer_1:
-maintainer_2:
+#maintainer_1:
+#maintainer_2:
 
 # To whom reach out regarding the document, will not be parsed [manual entry]
 corresponding: Elviss Dvinskis
 
 # Meaningful keywords, newline separated [manual entry]
-categories: 
- - 
- - 
+# Uncomment and populate the next line and list accordingly
+#categories: 
+# - 
+# - 
 
 ---
 
