@@ -2,7 +2,8 @@
 # Insert this YAML header (including the opening and closing ---) at the beginning of the document and fill it out accordingly
 
 # We use this key to indicate the last reviewed date [manual entry, use MM/DD/YYYY]
-#date:
+# Uncomment and populate the next line accordingly
+#date: MM/DD/YYYY
 
 # We use this key to indicate the last modified date [automatic entry]
 date-modified: last-modified
@@ -14,23 +15,33 @@ language:
   title-block-modified: "Last modified"
 
 # Title of the document [manual entry]
+# Uncomment and populate the next line accordingly
 title: Research Software Curriculum
 
+# Brief overview of the document (will be used in listings) [manual entry]
+# Uncomment and populate the next line and uncomment "hide-description: true".
+#description: Short description of the document
+#hide-description: true
+
 # Authors of the document, will not be parsed [manual entry]
+# Uncomment and populate the next lines accordingly
 author_1: Ashley Cryan
-author_2: aurits Kok
+author_2: Maurits Kok
 
 # Maintainers of the document, will not be parsed [manual entry]
-maintainer_1:
-maintainer_2:
+# Uncomment and populate the next lines accordingly
+#maintainer_1: Name Surname
+#maintainer_2:
 
 # To whom reach out regarding the document, will not be parsed [manual entry]
-corresponding:
+# Uncomment and populate the next line accordingly
+#corresponding: Name Surname
 
 # Meaningful keywords, newline separated [manual entry]
-categories: 
- - 
- - 
+# Uncomment and populate the next line and list accordingly
+#categories: 
+# - 
+# - 
 
 ---
 
@@ -112,7 +123,7 @@ These materials represent a curated curriculum designed to help you develop and 
 ## Modular Code and testing
 * [Writing tests](https://coderefinery.github.io/testing/) - lesson from CodeRefinery on automated testing
 * [Video testing lesson](https://www.youtube.com/watch?v=s72AqTTi_Y8) - recording from software testing workshop by Code Refinery
-* [Modular coding](http://cicero.xyz/v3/remark/0.14.0/github.com/coderefinery/modular-code-development/master/talk.md) - slides on modular code from Code Refinery
+* [Modular coding](https://coderefinery.github.io/modular-type-along/) - modular code development from Code Refinery
 
 ## Docker
 * [Installing Docker](https://docs.docker.com/get-docker/) - installation instructions for Windows, macOS, and Linux
