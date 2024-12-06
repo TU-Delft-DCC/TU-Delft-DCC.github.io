@@ -40,3 +40,10 @@ The aim of this section is to guide data owners and users through each stage of 
 Research data includes any information observed, generated or created for use in research projects. Though often tied to specific research projects, research data follows its own lifecycle, which is distinct from the project itself. After initial data collection, data may be processed, analyzed, published, shared, archived, reused or destroyed.
 
 Effective research data management by following FAIR principles ensures efficiency and reproducibility at every step of the data lifecycle. At TU Delft, various tools and resources are available to meet diverse data management needs at any stage in its lifecycle.
+
+This guide intends to walk you through the following steps of the data lifecycle at TU Delft, following FAIR principles:
+
+1. **Data Collection**
+2. **Data Processing**
+3. **Data Storage**
+4. **Data Publishing**
