@@ -39,9 +39,9 @@ corresponding: Yasel Quintero
 
 # Meaningful keywords, newline separated [manual entry]
 # Uncomment and populate the next line and list accordingly
-#categories: s
-# - 
-# - 
+categories:
+ - servers
+ - infrastructure
 
 ---
 
