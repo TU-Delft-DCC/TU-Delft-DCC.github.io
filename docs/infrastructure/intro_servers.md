@@ -65,7 +65,7 @@ If additional capacity is needed, it can be requested via the 'ICT malfunction' 
 
 Some considerations:
 
-* ICT provides the server, operating system and network access. 
+* ICT provides the server, operating system, and network access. 
 * Users are granted administrator privileges, allowing them to install any required software, provided it complies with the conditions specified in the request form.
 * Access can be granted to both TU Delft members and external users.
 * ICT provides daily backups, restoration services, and virus scanning for Windows servers.
@@ -78,7 +78,7 @@ Detailed information on managing the server, including network and firewall sett
 **Example Use Cases** 
 
 - Performing computational or data processing tasks that require a dedicated server environment.
-- Running an instance of a service or application, such as ABAQUS, COSMOL or other specialized tools for a lab or research group.
+- Running an instance of a service or application, such as ABAQUS, COMSOL or other specialized tools for a lab or research group.
 - Hosting a static website, a web application, or an API for a project.
 - Hosting databases, such as MySQL, PostgreSQL, MongoDB or other database management systems.
 - Deploying and managing TU Delft GitLab runners for CI/CD pipelines.
