@@ -57,13 +57,7 @@ The initiative resulted in the publication of the [**Practical guide to Software
 
 * [Understanding the Phases of the Software Development Life Cycle](https://resources.github.com/software-development/what-is-sdlc/)
 
-* [Software Management from AcqNotes](https://acqnotes.com/acqnote/careerfields/software-management-overview)
-
 * [Software Development Plan - Template](https://www.acqnotes.com/Attachments/Software%20Development%20Plan%20Template%20-%20SPAWAR.pdf)
-
-* [Software Sustainability Institute - Software Management Plans](https://www.software.ac.uk/software-management-plans)
-
-* [Software Management Plan](https://zenodo.org/record/2159713)
 
 * [Software Development Plan](https://doit.software/blog/software-development-plan)
 
@@ -75,9 +69,19 @@ The initiative resulted in the publication of the [**Practical guide to Software
 
 * [DLR Software Engineering Initiative](https://rse.dlr.de/guidelines/00_dlr-se-guidelines_en.html#anwendungsklassen)
 
-* [Blog on testing for research software](https://www.software.ac.uk/blog/2021-12-22-testing-research-software-review-iccs-2021-and-septembrse)
 
+### Software management
+* [Software Management from AcqNotes](https://acqnotes.com/acqnote/careerfields/software-management-overview)
+
+
+### Software sustainability
 * [A Framework for Understanding Research Software Sustainability](https://doi.org/10.5281/zenodo.4988277 )
+
+* [Software Sustainability Institute - Software Management Plans](https://www.software.ac.uk/software-management-plans)
+
+* [Software Management Plan](https://zenodo.org/record/2159713)
+
+* [Blog on testing for research software](https://www.software.ac.uk/blog/2021-12-22-testing-research-software-review-iccs-2021-and-septembrse)
 
 
 ### Developing open source software
@@ -89,6 +93,6 @@ The initiative resulted in the publication of the [**Practical guide to Software
 
 * [C4 model](https://c4model.com/)
 
-* [C4 model video](https://www.youtube.com/watch?v=x2-rSnhpw0g)
+* [C4 model video explanation](https://www.youtube.com/watch?v=x2-rSnhpw0g)
 
-* [Adopting the C4 model](https://lukemerrett.com/c4-diagrams-as-code-architectural-joy/)
+* [C4 model in practice](https://lukemerrett.com/c4-diagrams-as-code-architectural-joy/)
