@@ -35,10 +35,13 @@ Do you have questions, ideas or ongoing developments on FAIR related aspects, Op
 ## For developers
 
 ### Developing and building the guides locally
-1. Install Quarto if you don't already have it installed on your machine. You can find the installation instructions [here](https://quarto.org/docs/get-started/).
 1. Fork the repository to your own GitHub profile.
 1. Clone the repository.
 1. Navigate to the root of this repository in your terminal.
+1. Install Quarto if you don't already have it installed on your machine. You can find the installation instructions [here](https://quarto.org/docs/get-started/).
+    - Alternative: Install Quarto within a virtual environment using the `environment.yml` file by following the below steps:
+        - Run `conda env create -f environment.yml` in the terminal to create a conda environment with Quarto pre-installed.
+        - Activate the environment by running `conda activate dcc_guides`.  
 1. Run `quarto preview`.
 1. You will see the rendered version in a browser window.
 
