@@ -45,41 +45,50 @@ hide-description: true
 
 ---
 
-Refactoring is the process of **restructuring existing code without changing its external behavior**. Refactoring helps make the code more maintainable and understandable, which in turn makes it easier to build on and less likely to develop bugs. This can include:
 
-- Improving readability - making code easier to understand, which helps future maintainers and external partners.
-- Reducing complexity - simplifying complex code structures, which can involve breaking down large functions into smaller, more manageable pieces or removing unnecessary dependencies.
-- Optimizing software design - making it more robust and adaptable for future needs. 
-- Identifying and eliminating redundancies - removing duplicated or unnecessary code.
-- Ensuring consistency - adhere to a consistent coding style accross the codebase to ensure the code is uniform.
+>"Always leave the code you're editing a little better than you found it."
+>
+> **Robert C. Martin** (Uncle Bob)
 
 
-### Refactoring workflow
+### What is refactoring?
 
-![CC-BY-4.0 © 2021 Balaban et al.](https://journals.plos.org/ploscompbiol/article/figure/image?size=large&id=10.1371/journal.pcbi.1008549.g009&type=medium)
+Refactoring is the process of **restructuring existing code without changing its external behavior**. It improved maintainability, readability, and efficiency, making future developments smoother and reducing the likelihood of bugs. Key benefits include:
 
-#### When to refactor code?
+- **Improving readability** - Writing code that's easier to understand, benefits both yourself and future developers.
+- **Reducing complexity** - Simplifying complex structures by breaking down large functions or removing unnecessary dependencies.
+- **Optimizing design** - Creating a more robust and adaptable codebase for long-term growth. 
+- **Eliminating redundancies** - Removing duplicate or unnecessary code.
+- **Ensuring consistency** - Following a consistent coding style for a cleaner, more maintanable codebase.
 
-1. **Rule of three:** Begin refactoring when the same or very similar code is being written for the third time.
-2. **When adding a feature:** Refactoring existing code before adding new features can help simplify the integration of new functionality.
-3. **When fixing a bug:** Cleaning up code in the areas around a bug can make it easier to identify and fix the issue.
-4. **During a code review:** Refactoring during code reviews can prevent issues from becoming part of the public codebase and streamline the development process.
-5. **Finding a code smell** (see below)
+### When should you refactor?
+![CC-BY-4.0 © 2021 Balaban et al.](https://journals.plos.org/ploscompbiol/article/figure/image?size=large&id=10.1371/journal.pcbi.1008549.g009&type=medium){width=50%}
 
-👉 [Refactoring.Guru - When to refactor?](https://refactoring.guru/refactoring/when)
+1. **Rule of three:** If you find yourself writing the same or similiar code for the third time, it's time to refactor.
+2. **Before adding a feature:** Cleaning up existing code makes it easier to integrate new functionality.
+3. **When fixing a bug:** Cleaning up surrounding code can help uncover and fix the issue faster.
+4. **During code reviews:** Refactoring during code reviews can prevent issues from becoming part of the public codebase and streamline the development process.
+5. **When you sport a code smell** - Addressing [code smells](./code_smells.md) early prevents them from evolving into serious bugs.
 
-#### How to refactor code?
+::: {.learn-more}
+{{< fa arrow-right >}} [Learn more: When to refactor?](https://refactoring.guru/refactoring/when)
+:::
 
-Refactoring should be done through minor changes without breaking the underlying code. Each iteration should make your code slightly better, and could be done according to this checklist:
+### How to refactor code effectively?
 
-1. **Maintain clean code:** Refactor with the aim to make the code cleaner and more efficient.
-2. **Avoid adding new features:** Refactor without introducing new functionalities.
-3. **Keep tests passing:** All existing tests should still be passing after refactoring, ensuring no new bugs are introduced.
+Refactoring should be done gradually, improving code in small controlled 
+steps without introducing new functionalities. Keep these principles in mind:
 
-👉 [Refactoring.Guru - How to refactor?](https://refactoring.guru/refactoring/how-to)
+{{< fa broom >}} **Maintain clean code** - Aim for clarity, simplicity, and readability.  
+{{< fa ban >}} **Avoid adding new features** - Focus on improving structure, not functionality.  
+{{< fa check-double>}} **Ensure tests pass** - Verify that all existing tests still succeed to prevent new bugs.
 
-:::{.callout-note}
-## Further reading
+::: {.lean-more}
+{{< fa arrow-right >}} [Learn more: How to refactor?](https://refactoring.guru/refactoring/how-to)
+:::
+
+:::{.callout-note appearance="simple" icon="false"}
+## {{< fa sings-post >}} Further reading
 
 - [Refactoring techniques from Refactoring.Guru](https://refactoring.guru/refactoring/techniques)
 - [The Alan Turing Institute - Refactoring](https://alan-turing-institute.github.io/rse-course/html/module07_construction_and_design/07_04_refactoring.html)
