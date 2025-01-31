@@ -16,7 +16,7 @@ language:
 
 # Title of the document [manual entry]
 # Uncomment and populate the next line accordingly
-title: Configure SSH Tunneling
+title: Set Up SSH Connection to VPS
 
 # Brief overview of the document (will be used in listings) [manual entry]
 # Uncomment and populate the next line and uncomment "hide-description: true".
@@ -45,11 +45,39 @@ title: Configure SSH Tunneling
 
 ---
 
-To connect to a remote host, TU Delft uses a *proxy server*, know as  **bastion**. To reach a remote host, a user has to connect first to the **bastion** and from there to the remote host. However, a user can connect directly to the remote host using *ssh tunneling*.
+## Overview
+
+The default login procedure to a VPS (a remote *Virtual Private Server*) from TU Delft requires to connect to your VPS via a Bastion Host (an intermediary server that control access). Therefore, it is a **two-step** process: to reach a remote host, a user has to connect first to the **bastion host** and from there to the VPS. However, a user can connect directly to the VPS and other remote hosts using what it is called *ssh tunneling* and *ssh keys*.
+
+Setting up a connection as decribed below simplifies the process of accessing a VPS considerably and allows for secured transfer of files to and from a remote server and a local machine. 
+
+## What will you accomplish?
+This guide explains how to set up a single-step SSH connection to a VPS using SSH Keys. As a result, you will be able to connect to your VPS from you local machine, without the need to log in to the Bastion at TU Delft every time and transfer files between a remote server and a local machine.
+
+## Prerequisites
+Before starting, you need:
+
+* TU Delft netID
+* Access to a VPS provided by TU Delft ICT
+* MacOS, Linux, or Windows
+
+
+## Steps
+
+### Linux and MacOS
+
+:::{.callout-tip}
+## Steps in a nutshell
+1. Create SSH keys.
+2. Copy SSH keys to bastion host and remote server.
+3. Test connection
+:::
+
+CONTINUE HERE
 
 ## Set a Default SSH Tunneling for a Host (Linux Terminal)
 
-1. On your local machine, edit the `~/.ssh/config` file and add the following confuration:
+1. On your local machine, edit the `~/.ssh/config` file and add the following configuration:
 
 ```bash 
 Host <host-nickname>
@@ -57,6 +85,7 @@ Host <host-nickname>
     User <target-username>
     ProxyCommand ssh <bastion-username>@linux-bastion-ex.tudelft.nl -W %h:%p 
 ```
+
 Replace:
 **<host-nickname>:** a name for you choice for the targe host, e.g., `my-server`
 **<target-host>:** the actual name of the target host (FQDM), e.g, `server.tudelft.nl`
@@ -68,6 +97,7 @@ Replace:
 ```bash
 $ ssh-keygen -f ~/.ssh/<my-keyname> -t rsa -b 4096
 ```
+
 You will be promted to crate a *passphrase*, we recommend you to add one to make the connection more secure. The passphrase will be asked every time you connect to the target host.
 
 A private and public keys will be added to `~/.ssh`. The public key is in the `<my-keyname>.pub`

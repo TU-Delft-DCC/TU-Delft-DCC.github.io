@@ -81,7 +81,7 @@ website:
         - section: ⚙️ **Computing Infrastructure**
           contents:
           - section: "Remote servers"
-            href: docs/infrastructure/intro_servers.md
+            href: docs/infrastructure/remote_servers.md
             contents:
               - text: Request a VPS
                 href: docs/infrastructure/VPS_request.md
