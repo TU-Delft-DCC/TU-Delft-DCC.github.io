@@ -49,7 +49,8 @@ hide-description: true
 >
 > **Brian W. Kernighan**
 
-The quality of your research software is an important factor in research software development, affecting maintainability, scalability, and reliability. The practice of writing **clean code** refers to writing code that is simple to understand and easy to read for others, not just for the original author. Clean code should be easy to debug and collaborate on, and it should be accessible to future modifications and extensions. 
+The quality of your research software plays a crucial role in its reliability, maintainability, and scalability. Writing **clean code** means developing code that is easy to read, understand, and with - not just you, but for others as well. Well-structured code simplifies debudding, fosters collaboration, and allows for future modifications and extensions, ensuring your software remains useful and adaptable over time.
+
 
 ::: {.content-block}
 ::: {.features}
