@@ -16,7 +16,7 @@ language:
 
 # Title of the document [manual entry]
 # Uncomment and populate the next line accordingly
-title: Configure one-step SSH to server
+title: Set Up Single-step SSH Connection
 
 # Brief overview of the document (will be used in listings) [manual entry]
 # Uncomment and populate the next line and uncomment "hide-description: true".
@@ -45,25 +45,30 @@ title: Configure one-step SSH to server
 
 ---
 
-## Background
-The default login procedure to VPS from TU Delft is to connect to the Bastion host (an intermediary server) and then to your server, so it is a two-step process.  Steps A and B are described by ICT admin in the email confirming deployment of your server.
+## Overview
+The default login procedure to a VPS (*Virtual Private Server*) from TU Delft requires to connect to your VPS via a Bastion Host (an intermediary server that control access). Therefore, it is a **two-step** process, first you connect to the Bastion Host and from there to your VPS.  The proceedure is described by an ICT admininistrator in the email sent to you when confirming the deployment of your server.
 
-Configuring a one-step SSH connection to a VPS (Virtual Private Server) from your local machine simplifies the process of accessing the VPS considerably and allows for secure transfer of files to and from the virtual and local environments. 
+However, you can set up a **single-step** SSH connection to a VPS (Virtual Private Server) from your local machine simplifies the process of accessing the VPS considerably and allows for secure transfer of files to and from the virtual and local environments. 
 
-The directions below are written for Linux and Mac users. Windows users can configure a VPS connection via SSH using a third-party SSH client like [PuTTY](https://www.putty.org/). We are in the process of drafting documentation for this, its current state is at the bottom of this page.
+Linux and MacOS users can use the terminal to set up a connection, while Windows users can set up a connection using a third-party SSH client like [PuTTY](https://www.putty.org/). See @sec-putty.
 
-## What this documentation will help achieve
-This guide explains how to configure a one-step connection to a VPS from your local machine through the Bastion host managed by TU Delft. 
+## What will you accomplish?
+This guide explains how to set up a single-step SSH connection to a VPS using SSH Keys. As a result, you will be able to connect to your VPS from you local machine, without the need to log in to the Bastion at TU Delft every time. 
 
 ## Prerequisites
-* TU Delft netID
-* VPS provided by TU Delft ICT
-* Mac or Linux OS (Windows users, please see the end of this page for instructions on using a client program to establish a direct SSH connection)
+Before starting, you need:
 
-## Tools/Software
-* If using Windows, PuTTY or cygwin (see bottom of page)
+* TU Delft netID
+* Access to a VPS provided by TU Delft ICT
+* Mac, Linux, Windows OS
 
 ## Steps
+
+### Linux and MacOS
+
+:::{.callout-tip}
+## Steps in a nutshell
+
 1. Enter the `.ssh` directory on your local machine
 2. Edit local `~/.ssh/config` file
 3. Check that your local machine’s `known_hosts` file contains the SSH key for the tu-bastion-ex host 
@@ -74,11 +79,14 @@ This guide explains how to configure a one-step connection to a VPS from your lo
 8. SSH from your local machine to the Bastion host and then to your VPS using its domain name 
 9. Paste contents of public SSH key at the end of the `authorized_keys` file on the VPS
 10. SSH into your VPS directly from your local machine using its alias
+:::
+
 
 ### Step 1: Enter the .ssh directory on your local machine
 
 Open your terminal (click on the magnifying glass in the upper right toolbar and search "terminal") and enter: 
-```
+
+```shell
 username@localmachine ~ % cd .ssh
 ```
 
@@ -224,7 +232,7 @@ and then the Bastion host
 
 `username@localmachine .ssh % ssh <serveralias>`
 
-## Windows using PuTTY
+## Windows using PuTTY {#sec-putty}
 
 1. Open Putty
 2. Paste <net_id>@linux-bastion-ex.tudelft.nl in the Host name field. An intermediary terminal appears
