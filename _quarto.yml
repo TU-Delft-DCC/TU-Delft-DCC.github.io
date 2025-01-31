@@ -148,12 +148,21 @@ website:
                   href: docs/software/documentation/citation.md
                 - text: Software license
                   href: docs/software/documentation/license.md
+            - section: "Code quality"
+              href: docs/software/code_quality/index.md
+              contents:
+                - text: Code style
+                  href: docs/software/code_quality/code_style.md
+                - text: Refactoring
+                  href: docs/software/code_quality/refactoring.md
+                - text: Online services
+                  href: docs/software/code_quality/online_services.md
             - section: "Software testing"
               href: docs/software/testing_intro.md
               contents:
                 - text: Testing with MATLAB
                   href: docs/software/testing_matlab.md
-            - section: "Version control with git"
+            - section: "Version control"
               href: docs/software/git/intro.md
               contents:
                 - text: Branch management
