@@ -163,6 +163,8 @@ website:
               contents:
                 - text: Using a docker container with a GUI
                   href: docs/software/containers/docker_gui.md
+            - text: AI tools
+              href: docs/software/AI_tools.md
         - text: <br>
         - section: "📖 **Resources**"
           contents:
