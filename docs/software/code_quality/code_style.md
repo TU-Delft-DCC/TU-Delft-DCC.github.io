@@ -58,21 +58,12 @@ Formatters are tools that automatically adjust the formatting of your code to ma
 
 | Language  | Style Guide | Static Analysis Tools | Formatters |
 |-----------|------------|----------------------|------------|
-| **Python** | [PEP 8](https://peps.python.org/pep-0008/) | [`pylint`](https://pylint.pycqa.org/), [`flake8`](https://flake8.pycqa.org/) | [`black`](https://black.readthedocs.io/), [`autopep8`](https://github.com/hhatto/autopep8), [`yapf`](https://github.com/google/yapf) |
-| **R** | [Tidyverse Style Guide](https://style.tidyverse.org/) | [`lintr`](https://github.com/jimhester/lintr) | [`styler`](https://github.com/r-lib/styler), [`formatR`](https://github.com/yihui/formatR) |
-| **MATLAB** | [MATLAB Style Guidelines 2.0](https://nl.mathworks.com/matlabcentral/fileexchange/46056-matlab-style-guidelines-2-0) | [`mlint`](https://www.mathworks.com/help/matlab/ref/mlint.html) | [`MATLAB Code Analyzer`](https://www.mathworks.com/help/matlab/matlab_prog/checking-code-for-errors-and-warnings.html) |
+| **Python** | [PEP 8](https://peps.python.org/pep-0008/) | [`pylint`](https://pylint.pycqa.org/), [`flake8`](https://flake8.pycqa.org/), [`prospector`](https://prospector.landscape.io/en/master/) | [`black`](https://black.readthedocs.io/), [`autopep8`](https://github.com/hhatto/autopep8), [`yapf`](https://github.com/google/yapf) |
+| **R** | [Tidyverse Style Guide](https://style.tidyverse.org/) | [`lintr`](https://lintr.r-lib.org/) | [`styler`](https://github.com/r-lib/styler) |
+| **MATLAB** | [MATLAB Style Guidelines 2.0](https://nl.mathworks.com/matlabcentral/fileexchange/46056-matlab-style-guidelines-2-0) | [`checkcode`](https://www.mathworks.com/help/matlab/ref/checkcode.html) | [`Code Analyzer`](https://www.mathworks.com/help/matlab/ref/codeanalyzer-app.html) |
 | **C/C++** | [Google C++ Style Guide](https://google.github.io/styleguide/cppguide.html) | [`cppcheck`](http://cppcheck.sourceforge.net/), [`clang-tidy`](https://clang.llvm.org/extra/clang-tidy/) | [`clang-format`](https://clang.llvm.org/docs/ClangFormat.html), [`astyle`](http://astyle.sourceforge.net/) |
 | **Julia** | [Julia Style Guide](https://docs.julialang.org/en/v1/manual/style-guide/), [Blue Style Guide](https://github.com/invenia/BlueStyle) | [`JET.jl`](https://github.com/aviatesk/JET.jl), [`Aqua.jl`](https://github.com/JuliaTesting/Aqua.jl) | [`JuliaFormatter.jl`](https://github.com/domluna/JuliaFormatter.jl) |
-| **Fortran** | [Fortran Best Practices](https://fortran-lang.org/en/learn/best_practices/) | [`fortran-linter`](https://github.com/fortran-lang/fpm/issues/174), [`LFortran`](https://lfortran.org/) | [`fprettify`](https://github.com/pseewald/fprettify) |
-
-
-
-#### Tools for MATLAB
-
-MISS_HIT is a compiler framework designed for MATLAB, accompanied by a suite of tools aimed at enhancing code quality and accuracy. It provides a range of tools suitable for various levels of static analysis.
-
-- [MISS_HIT Documentation](https://florianschanda.github.io/miss_hit/)
-- [MISS_HIT Website](https://misshit.org)
+| **Fortran** | [Fortran Best Practices](https://fortran-lang.org/en/learn/best_practices/) | [`fortran-linter`](https://github.com/fortran-lang/fpm/issues/174) | [`fprettify`](https://github.com/pseewald/fprettify) |
 
 
 :::{.callout-note appearance="simple" icon="false"}

@@ -48,12 +48,11 @@ categories:
 ### SonarCloud
 [SonarCloud](https://sonarcloud.io/) is a cloud-based service that provides inspection of code quality to perform automatic reviews with static code analysis to detect bugs, code smells and security vulnerabilities in a project. It supports many programming languages and integrates with GitHub (and GitLab and Bitbucket) as part of the Continuous Integration workflows. SonarCloud is particularly useful for projects that require compliance with coding standards or need regular feedback on the quality of the code. 
 
-:::{.callout-caution appearance="simple"}
+{{< fa arrow-right >}} [Learn more: SonarCloud documentation](https://docs.sonarsource.com/sonarcloud/)
+
+:::{.callout-info appearance="simple"}
 ## Consideration
-
 While SonarCloud offers valuable features for code quality analysis, be aware that for **non open-source projects it is a paid service**, and pricing model depends on how many lines of code you want to check.
-
-- [SonarCloud Documentation](https://docs.sonarsource.com/sonarcloud/)
 :::
 
 ### GitHub CodeQL
@@ -74,12 +73,10 @@ Code coverage quantifies the proportion of source code that is run by a software
 - [Codecov - Test coverage](https://about.codecov.io/)
 :::
 
-
-
 ### Dependabot
 Dependabot is a GitHub app that helps you keep your dependencies up to date. It checks for outdated dependencies in your project and automatically creates pull requests to update them. This can help you stay on top of security vulnerabilities and ensure that your project is using the latest features and bug fixes.
 
-- [Enabling Dependabot for your repository](https://docs.github.com/en/code-security/getting-started/dependabot-quickstart-guide#enabling-dependabot-for-your-repository)
+{{< fa arrow-right >}} [Enabling Dependabot for your repository](https://docs.github.com/en/code-security/getting-started/dependabot-quickstart-guide#enabling-dependabot-for-your-repository)
 
 ### OpenSSF
 The Open Source Security Foundation (OpenSSF) Best Practices badge provides a way for Free/Libre and Open Source Software (FLOSS) projects to demonstrate their adherence to best practices. Projects can choose to self-certify for free. Inspired by the numerous badges available on GitHub, the OpenSSF Best Practices Badge allows to quickly identify which FLOSS projects are committed to best practices and are therefore more likely to deliver high-quality and secure software.
@@ -89,5 +86,5 @@ The criteria for earning the passing badge and additional details about the Open
 ::: {.callout-note appearance="simple" icon="false"}
 ## {{< fa link >}} Learn more
 - [OpenSSF - Best Practices](https://www.bestpractices.dev/en)
-- [GitHbub - Best Practices Badge](https://github.com/coreinfrastructure/best-practices-badge)
+- [GitHub - Best Practices Badge](https://github.com/coreinfrastructure/best-practices-badge)
 :::
