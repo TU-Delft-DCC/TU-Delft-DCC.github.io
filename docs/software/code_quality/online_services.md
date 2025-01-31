@@ -50,7 +50,7 @@ categories:
 
 {{< fa arrow-right >}} [Learn more: SonarCloud documentation](https://docs.sonarsource.com/sonarcloud/)
 
-:::{.callout-info appearance="simple"}
+::: {.callout-tip appearance="simple"}
 ## Consideration
 While SonarCloud offers valuable features for code quality analysis, be aware that for **non open-source projects it is a paid service**, and pricing model depends on how many lines of code you want to check.
 :::
