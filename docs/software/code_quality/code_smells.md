@@ -58,7 +58,7 @@ Code smells are software characteristics that suggest there might be an issue wi
 **Problem:** A function is very long and hard to understand or maintain.  
 
 ::: {.refactor-link}
-[{{< fa arrow-right >}} Refactor long methods](./code_smells/long_method.md)
+[{{< fa wrench >}} Refactor long methods](./code_smells/long_method.md)
 :::
 :::
 :::
@@ -69,7 +69,7 @@ Code smells are software characteristics that suggest there might be an issue wi
 **Problem:** A class contains too many responsibilities or functionalities.  
 
 ::: {.refactor-link}
-[{{< fa arrow-right >}} Refactor large classes](./code_smells/monolithic_design.md)
+[{{< fa wrench >}} Refactor large classes](./code_smells/monolithic_design.md)
 :::
 :::
 :::
@@ -80,7 +80,7 @@ Code smells are software characteristics that suggest there might be an issue wi
 **Problem:** The same or very similar code appears in multiple places.  
 
 ::: {.refactor-link}
-[{{< fa arrow-right >}} Refactor duplicate code](./code_smells/duplication.md)
+[{{< fa wrench >}} Refactor duplicate code](./code_smells/duplication.md)
 :::
 :::
 :::
@@ -91,7 +91,7 @@ Code smells are software characteristics that suggest there might be an issue wi
 **Problem:** Literal values (e.g., numeric values or strings) are directly embedded in the code.  
 
 ::: {.refactor-link}
-[{{< fa arrow-right >}} Refactor hard-coded values](./code_smells/hard_coding.md)
+[{{< fa wrench >}} Refactor hard-coded values](./code_smells/hard_coding.md)
 :::
 :::
 :::
@@ -102,7 +102,7 @@ Code smells are software characteristics that suggest there might be an issue wi
 **Problem:** There are excessive levels of nested loops or conditionals.  
 
 ::: {.refactor-link}
-[{{< fa arrow-right >}} Refactor nested logic](./code_smells/deep_nesting.md)
+[{{< fa wrench >}} Refactor nested logic](./code_smells/deep_nesting.md)
 :::
 :::
 :::
@@ -113,7 +113,7 @@ Code smells are software characteristics that suggest there might be an issue wi
 **Problem:** Functions require a long list of parameters.  
 
 ::: {.refactor-link}
-[{{< fa arrow-right >}} Refactor argument lists](./code_smells/many_arguments.md)
+[{{< fa wrench >}} Refactor argument lists](./code_smells/many_arguments.md)
 :::
 :::
 :::
@@ -124,7 +124,7 @@ Code smells are software characteristics that suggest there might be an issue wi
 **Problem:** Two classes or methods depend too much on each other's internals.  
 
 ::: {.refactor-link}
-[{{< fa arrow-right >}} Refactor coupling](./code_smells/inappropriate_intimacy.md)
+[{{< fa wrench >}} Refactor coupling](./code_smells/inappropriate_intimacy.md)
 :::
 :::
 :::
@@ -135,7 +135,7 @@ Code smells are software characteristics that suggest there might be an issue wi
 **Problem:** Changes in one part of the code cause unexpected behavior in another.  
 
 ::: {.refactor-link}
-[{{< fa arrow-right >}} Refactor side effects](./code_smells/side_effects.md)
+[{{< fa wrench >}} Refactor side effects](./code_smells/side_effects.md)
 :::
 :::
 :::
@@ -146,7 +146,7 @@ Code smells are software characteristics that suggest there might be an issue wi
 **Problem:** There is a significant amount of outdated or commented-out code cluttering the source.  
 
 ::: {.refactor-link}
-[{{< fa arrow-right >}} Refactor commented code](./code_smells/dead_code.md)
+[{{< fa wrench >}} Refactor commented code](./code_smells/dead_code.md)
 :::
 :::
 :::
