@@ -75,7 +75,7 @@ Symptoms of poor code quality that can indicate deeper problems in the code.
 
 ::: {.feature}
 ### {{< fa wrench >}} Refactoring
-The process of restructuring existing code without changing its external behavior.
+Restructuring existing code without changing its external behavior.
 
 ::: {.learn-more}
 [Learn more »](./refactoring.md)
