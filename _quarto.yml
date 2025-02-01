@@ -155,8 +155,11 @@ website:
                   href: docs/software/code_quality/code_style.md
                 - text: Refactoring
                   href: docs/software/code_quality/refactoring.md
-                - text: Code smells
+                - section: Code smells
                   href: docs/software/code_quality/code_smells.md
+                  contents: 
+                    - text: Long method
+                      href: docs/software/code_quality/code_smells/long_method.md
                 - text: Online services
                   href: docs/software/code_quality/online_services.md
             - section: "Software testing"
