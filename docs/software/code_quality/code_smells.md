@@ -39,14 +39,13 @@ author_1: Maurits Kok
 
 # Meaningful keywords, newline separated [manual entry]
 # Uncomment and populate the next line and list accordingly
-#categories: 
-# - 
-# - 
+categories: 
+- refactoring 
 
 css: styles.css
 ---
 
-![CC-BY-4.0 © 2021 Balaban et al.](https://journals.plos.org/ploscompbiol/article/file?id=10.1371/journal.pcbi.1008549.g005&type=medium){width=400}
+![CC-BY-4.0 © 2021 Balaban et al.](/docs/img/bad_code_design.PNG){fig-alt="Drawing of a pyramid with various traps resembling code smells." width=600}
 
 Code smells are software characteristics that suggest there might be an issue with the code's design or implementation. While code smells themselves might not always indicate a bug or malfunction, they can make the code harder to understand, maintain, and extend, which can lead to bugs and other issues down the line. Code smells are usually noticed and addressed during code reviews, when writing tests, adding new features, fixing bugs, and during automated code analysis. 
 
