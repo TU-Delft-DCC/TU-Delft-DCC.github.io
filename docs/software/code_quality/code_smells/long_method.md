@@ -307,3 +307,8 @@ verify_data <- function(data) {
 - Adding support for new file types only requires modifying read_data, without changing the entire load_data function.
 
 {{< fa thumbs-up >}} By breaking the long method into smaller helper functions, we improve the overall structure and maintainability of the code.
+
+:::{.callout-note appearance="simple" icon="false"}
+## {{< fa signs-post >}} Learn more
+- [eScience Center - Lesson on writing modular code](https://esciencecenter-digital-skills.github.io/good-practices-lesson/2-modular-code.html)
+:::
