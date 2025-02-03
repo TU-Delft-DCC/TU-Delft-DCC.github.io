@@ -76,7 +76,7 @@ The TU Delft organises courses for researchers on data management, research soft
 
 
 ```{=html}
-<a href="https://www.tudelft.nl/library/research-data-management/r/training-evenementen/training-voor-onderzoekers/coderefinery-workshops" class="btn btn-primary btn-block text-white">Sign up</a>
+<a href="https://www.tudelft.nl/en/library/research-data-management/r/training-events/training-for-researchers/coderefinery-workshops-good-practices-in-research-software-development" class="btn btn-primary btn-block text-white">Sign up</a>
 ```
 :::
 :::
