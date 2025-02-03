@@ -44,7 +44,9 @@ categories:
 
 ---
 
-
+> "Code is like humor. When you have to explain it, it’s bad."
+>
+> **Cory House**
 
 Deep nesting occurs when there are too many levels of indentation in the code, making it harder to understand, maintain, and debug. It can lead to reduced readability, and increases cognitive load for developers. 
 
