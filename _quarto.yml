@@ -160,6 +160,8 @@ website:
                   contents: 
                     - text: Long method
                       href: docs/software/code_quality/code_smells/long_method.md
+                    - text: Hardcoded values
+                      href: docs/software/code_quality/code_smells/hardcoded_values.md
                     - text: Deep nesting
                       href: docs/software/code_quality/code_smells/deep_nesting.md
                 - text: Online services

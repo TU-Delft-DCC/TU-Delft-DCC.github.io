@@ -90,7 +90,7 @@ Code smells are software characteristics that suggest there might be an issue wi
 **Problem:** Literal values (e.g., numeric values or strings) are directly embedded in the code.  
 
 ::: {.refactor-link}
-[{{< fa wrench >}} Refactor hard-coded values](./code_smells/hard_coding.md)
+[{{< fa wrench >}} Refactor hard-coded values](./code_smells/hardcoded_values.md)
 :::
 :::
 :::
