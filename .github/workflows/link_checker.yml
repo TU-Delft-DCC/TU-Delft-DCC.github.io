@@ -35,10 +35,10 @@ jobs:
         uses: lycheeverse/lychee-action@v2
         with:
           args: >-
-                --config lychee.toml
-                './**/*.md' 
-                './**/*.qmd' 
-                './**/*.html' 
+            --config lychee.toml
+            './**/*.md' 
+            './**/*.qmd' 
+            './**/*.html' 
           fail: true  # Fail the job if any links are broken
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
