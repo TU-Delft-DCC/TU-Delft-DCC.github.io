@@ -44,16 +44,14 @@ categories:
 
 ---
 
-Hard-coding variables occurs when constants and specific values are directly embedded into the code instead of being defined as variables or passed as arguments. Hard-coding makes the code less flexible and harder to maintain because changing the behavior requires modifying the source code rather than adjusting parameters. 
-
-This smell is often noticed when changing the program's behavior required direct source code modification, rather than simple configuration changes or parameter adjustments.
-
+Hard-coding variables occurs when constants, configuration values, or logic are directly embedded into the code, making changes difficult. Hard-coding leads to rigid systems that require modifying the source code itself to change behavior, rather than adjusting parameters, settings, or external configurations.
 
 ## Symptoms
+- Magic numbers or string literals appear directly in the code.
 - You find yourself searching the codebase for specific values to tweak behavior for different executions.
 - The same constant value appears multiple times, making updates error-prone.
 - The logic is less readable, since magic numbers don’t indicate what they represent.
-- Code cannot easily adapt to different contexts without modification.
+- A small behavior change requires altering the core code, instead of adjusting an input parameters of config file.
 
 ## Example of hard coding and magic numbers
 ```python
@@ -75,10 +73,9 @@ def check_temperature(temperature):
 - The meaning of 30 and 10 is unclear - are they for a specific region, season, or use case?
 
 
-## Solution
+### Solution
 Using named constants and configurable parameters makes the code more readable, maintainable, and flexible.
 
-## Example solution with default parameters
 ```python
 import numpy as np  # Use a library constant
 
@@ -93,5 +90,57 @@ def check_temperature(temperature, hot_threshold=HOT_THRESHOLD, cold_threshold=C
         print("It's too hot!")
     elif temperature < cold_threshold:
         print("It's too cold!")
+```
+
+## Example - Rigid code
+THis simulation hard-codes the time step and duration, making it rigid.
+
+```python
+def run_simulation():
+    step_size = 0.01  # Fixed timestep
+    total_time = 10  # Fixed total duration
+    for t in range(0, total_time, step_size):
+        update_system(t)
 
 ```
+
+#### Issues
+- Change the step size of total duration required modifying the source code.
+- The code is not reusable across different simulations.
+
+### Solution
+Introduce function parameters or external configuration files for flexibility and reproducibility.
+
+```python
+def run_simulation(step_size=0.01, total_time=10):
+    for t in range(0, total_time, step_size):
+        update_system(t)
+
+# Calling with different configurations
+run_simulation(step_size=0.05, total_time=20)  # Adjust without modifying the underlying code
+```
+
+For larger projects, moving configuration values to a separate file or class can further improve reproducibility and maintainability. Users would then only need to adjust the (text-based) configuration file without touching the core code.
+
+```yaml
+# config.yaml
+simulation:
+  step_size: 0.01
+  total_time: 10
+```
+
+```python
+import yaml
+
+def load_config(file_path="config.yaml"):
+    with open(file_path, 'r') as file:
+        return yaml.safe_load(file)
+
+config = load_config()
+run_simulation(config['simulation']['step_size'], config['simulation']['total_time'])
+```
+
+#### Benefits
+- Settings can be adjusted without modifying the source code.
+- Allows non-programmers to adjust simulation parameters.
+- Enables different configurations for different experiments in a reproducible manner.
