@@ -168,6 +168,8 @@ website:
                       href: docs/software/code_quality/code_smells/deep_nesting.md
                     - text: Many input parameters
                       href: docs/software/code_quality/code_smells/many_arguments.md
+                    - text: Side effects
+                      href: docs/software/code_quality/code_smells/side_effects.md
                 - text: Online services
                   href: docs/software/code_quality/online_services.md
             - section: "Software testing"
