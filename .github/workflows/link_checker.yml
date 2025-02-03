@@ -32,18 +32,13 @@ jobs:
         run: quarto render  # Build the Quarto book to generate the latest content
 
       - name: Link Checker
-        uses: lycheeverse/lychee-action@v1.9.3
+        uses: lycheeverse/lychee-action@v2
         with:
           args: >-
-            --exclude-path 'docs/_under_development'
-            --exclude-path '_site/docs/_under_development' 
-            --accept 429 
-            --verbose 
-            --no-progress 
-            './**/*.md' 
-            './**/*.qmd' 
-            './**/*.html' 
-            # Verbose output and check for both source .md and .qmd files, and then the rendered .html files
+                --config lychee.toml
+                './**/*.md' 
+                './**/*.qmd' 
+                './**/*.html' 
           fail: true  # Fail the job if any links are broken
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
