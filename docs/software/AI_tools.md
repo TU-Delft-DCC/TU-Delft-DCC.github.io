@@ -62,15 +62,7 @@ Cursor IDE is an advanced integrated development environment designed to enhance
   - `Command + L` (macOS) / `Ctrl + L` (Windows)  
     Opens a chat interface for interacting with LLMs.
 
-<!-- ![Normal Chat Window](/img/normal_chat_window.png)
-![Normal Chat Window](/normal_chat_window.png) -->
-<!-- ![Normal Chat Window](normal_chat_window.png) -->
-<!-- <img src="../img/normal_chat_window.png" width="500"> -->
 <img src="../img/normal_chat_window.png" style="margin-left: 70px; width: 400px;">
-
-<!-- ![](../img/normal_chat_window.png) -->
-<!-- <img src="/normal_chat_window.png" width="500">
-<img src="/normal_chat_window.png"> -->
 
 <!-- <img src="https://media.beehiiv.com/cdn-cgi/image/width=400/uploads/asset/file/b45da08d-30a5-4545-92de-7a0235777cce/image.png?t=1728985207" style="margin-left: 70px; width: 400px;"> -->
 
@@ -83,7 +75,6 @@ Cursor IDE is an advanced integrated development environment designed to enhance
 
   
   <img src="../img/inline_editing.png" style="margin-left: 35px; width: 500px;">
-  <!-- ![](../img/inline_editing.png) -->
 
     <!-- <img src="https://lh7-rt.googleusercontent.com/docsz/AD_4nXfF43WERtiSgjh0EZzzIBF9tqV344dfmaOdyjdkBCyLuY-ASG7WKxhSGPsTG_oJt1FgApPeIHyBSd59ikLdwnSIodABiWPfUGzOWMcPIAkRGlNcIOQo08J2hCTVvRDp08a48MdQNkrGMcIbv_Y97z9tRQXP?key=HyD5If9cdm6cekgVxdDsoA" style="margin-left: 0px; width: 500px;"> -->
 
@@ -93,21 +84,16 @@ Cursor IDE is an advanced integrated development environment designed to enhance
   - `Command + I` (macOS) / `Ctrl + I` (Windows)  
     Opens a structured writing tool for creating formatted outputs, such as documents and tables.
 
-    <!-- <img src="composer.png" style="margin-left: 0px; width: 600px;"> -->
-    <!-- ![](../img/composer.png) -->
     <img src="../img/composer.png" style="margin-left: 0px; width: 600px;">
 
 
-<!-- ![Composer](composer.png) -->
 <!-- <img src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/d87da189-c750-444f-a91c-db43fc05d8b7/image.png?t=1728985357" style="margin-left: 0px; width: 600px;"> -->
 
 <!-- Source: https://www.thepromptwarrior.com/p/cursor-ai-tutorial-for-beginners -->
 - **Automatic Code Updates**:  
   - Changes to a variable in one part of the code are automatically propagated to all instances in the codebase.
 
-<!-- ![Automatic Code Updates](automatic_code_updates.png) -->
 <img src="../img/automatic_code_updates.png" style="margin-right: 50px; width: 400px; margin-left: 70px;">
-<!-- ![](../img/automatic_code_updates.png) -->
 
 <!-- <img src="https://miro.medium.com/v2/resize:fit:1156/1*r-T12CR2fAnRlvMXYm4owg.png" style="margin-right: 50px; width: 400px; margin-left: 70px;"> -->
 
