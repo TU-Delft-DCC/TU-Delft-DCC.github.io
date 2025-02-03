@@ -166,6 +166,8 @@ website:
                       href: docs/software/code_quality/code_smells/hardcoded_values.md
                     - text: Deep nesting
                       href: docs/software/code_quality/code_smells/deep_nesting.md
+                    - text: Many input parameters
+                      href: docs/software/code_quality/code_smells/many_arguments.md
                 - text: Online services
                   href: docs/software/code_quality/online_services.md
             - section: "Software testing"
