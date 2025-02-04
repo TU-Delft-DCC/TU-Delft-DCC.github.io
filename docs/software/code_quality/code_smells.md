@@ -53,7 +53,7 @@ Code smells are software characteristics that suggest there might be an issue wi
 :::{.callout-tip appearance="simple" icon="false"}
 ## {{< fa lightbulb >}} How to use these cards
 
-Each card below represents a common code smell based on the symptoms you might observe in your codebase. Each guide provides an overview of the code smell, its symptoms, an example on [how to refactor it](./refactoring.md), and further resources to learn more. We don't intend to cover all refactoring techniques, but we aim to provide a starting point for identifying and addressing common code smells.
+Each card below describes a common code smell based on problems you might encounter in your codebase. Each guide provides an overview of the code smell, its symptoms and an example on [how to refactor it](./refactoring.md). We don't intend to cover all refactoring techniques, but we aim to provide a starting point for identifying and addressing common code smells.
 :::
 
 ::: {.grid}
@@ -75,7 +75,7 @@ Each card below represents a common code smell based on the symptoms you might o
 **Problem:** A class contains too many responsibilities or functionalities.  
 
 ::: {.refactor-link}
-[{{< fa wrench >}} Refactor large classes](./code_smells/monolithic_design.md)
+[{{< fa wrench >}} Refactor large classes](./code_smells/large_class.md)
 :::
 :::
 :::
