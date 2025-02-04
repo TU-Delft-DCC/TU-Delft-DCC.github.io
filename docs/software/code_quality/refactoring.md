@@ -64,10 +64,10 @@ Refactoring is the process of **restructuring existing code without changing its
 ![CC-BY-4.0 © 2021 Balaban et al.](https://journals.plos.org/ploscompbiol/article/figure/image?size=large&id=10.1371/journal.pcbi.1008549.g009&type=medium){width=50%}
 
 1. **Rule of three:** If you find yourself writing the same or similiar code for the third time, it's time to refactor.
-2. **Before adding a feature:** Cleaning up existing code makes it easier to integrate new functionality.
+2. **Before adding a feature:** Cleaning up existing code makes it easier to integrate a new functionality.
 3. **When fixing a bug:** Cleaning up surrounding code can help uncover and fix the issue faster.
 4. **During code reviews:** Refactoring during code reviews can prevent issues from becoming part of the public codebase and streamline the development process.
-5. **When you spot a code smell:** Addressing [code smells](./code_smells.md) early prevents them from evolving into serious bugs.
+5. **When you spot a code smell:** Addressing [code smells](./code_smells.md) early prevents them from evolving into more serious bugs.
 
 ::: {.learn-more}
 {{< fa arrow-right >}} [Learn more: When to refactor?](https://refactoring.guru/refactoring/when)
@@ -87,8 +87,7 @@ steps without introducing new functionalities. Keep these principles in mind:
 :::
 
 :::{.callout-note appearance="simple" icon="false"}
-## {{< fa sings-post >}} Further reading
-
+## {{< fa signs-post >}} Learn more
 - [Refactoring techniques from Refactoring.Guru](https://refactoring.guru/refactoring/techniques)
 - [eScience Center - Lesson on refactoring](https://carpentries-incubator.github.io/python-intermediate-development/34-code-refactoring.html)
 - [The Alan Turing Institute - Refactoring](https://alan-turing-institute.github.io/rse-course/html/module07_construction_and_design/07_04_refactoring.html)

@@ -60,7 +60,7 @@ Deep nesting occurs when there are too many levels of indentation in the code, m
 ## Example deeply nested conditional statements
 
 ```python
-def validate_model_convergence(model) -> bool:
+def validate_model_convergence(model):
     if model.convergence > 1:
         if model.convergence < 0.1:
             if model.secondary_condition == True
@@ -84,7 +84,7 @@ Refactoring deep nesting improves readability and maintainability. Techniques to
 
 #### Solution 1: Using early returns
 ```python
-def validate_model_convergence(model) -> bool:
+def validate_model_convergence(model):
     if model.convergence <= 1:
         return False
     if model.convergence >= 0.1:
@@ -103,7 +103,7 @@ Alternatively, we can use the `all` function to check multiple conditions in a s
 
 
 ```python
-def validate_model_convergence(model) -> bool:
+def validate_model_convergence(model):
     return all([
         model.convergence > 1,
         model.convergence < 0.1,

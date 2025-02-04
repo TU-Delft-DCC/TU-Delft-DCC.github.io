@@ -52,8 +52,7 @@ Code smells are software characteristics that suggest there might be an issue wi
 
 :::{.callout-tip appearance="simple" icon="false"}
 ## {{< fa lightbulb >}} How to use these cards
-
-Each card below describes a common code smell based on problems you might encounter in your codebase. Each guide provides an overview of the code smell, its symptoms and an example on [how to refactor it](./refactoring.md). We don't intend to cover all refactoring techniques, but we aim to provide a starting point for identifying and addressing common code smells.
+Each guide provides an overview of the code smell, its symptoms and an example on [how to refactor it](./refactoring.md). We don't intend to cover all refactoring techniques, but we aim to provide a starting point for identifying and addressing common code smells.
 :::
 
 ::: {.grid}
@@ -93,7 +92,7 @@ Each card below describes a common code smell based on problems you might encoun
 
 ::: {.g-col-4}
 ::: {.code-smell-card}
-##### Hard-Coding
+##### Hard-Coded Values
 **Problem:** Literal values (e.g., numeric values or strings) are directly embedded in the code.  
 
 ::: {.refactor-link}
@@ -115,7 +114,7 @@ Each card below describes a common code smell based on problems you might encoun
 
 ::: {.g-col-4}
 ::: {.code-smell-card}
-##### Long Argument Lists
+##### Many Inputs
 **Problem:** Functions require a long list of parameters.  
 
 ::: {.refactor-link}
@@ -148,7 +147,7 @@ Each card below describes a common code smell based on problems you might encoun
 
 ::: {.g-col-4}
 ::: {.code-smell-card}
-##### Commented Code
+##### Commented out Code
 **Problem:** There is a significant amount of outdated or commented-out code cluttering the source.  
 
 ::: {.refactor-link}

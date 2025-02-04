@@ -44,7 +44,7 @@ categories:
 
 ---
 
-A **monolithic design** is where an entire system is built as a single, tightly coupled unit without clear separation of responsibilities or modularization. This often keads to large, complex classes that hadle multiple responsibilities, making the codebase harder to understand, modify, and maintain.
+A **monolithic design** is where an entire system is built as a single, tightly coupled unit without clear separation of responsibilities or modularization. This often leads to large, complex classes that handle multiple responsibilities, making the codebase harder to understand, modify, and maintain.
 
 
 ## Symptoms
@@ -108,9 +108,9 @@ class Logger:
 
 class AlertSystem:
     def send_alert(self, temperature):
-        temp_threshold = 30
-        if temperature > temp_threshold:
-            print("⚠️ ALERT: High temperature detected!")
+        temperature_threshold = 30
+        if temperature > temperature_threshold:
+            print("ALERT: High temperature detected!")
 
 class SensorSystem:
     def __init__(self, sensor, logger, alert_system):
@@ -150,5 +150,4 @@ if __name__ == "__main__":
 ::: {.callout-note appearance="simple" icon="false"}
 ## {{< fa signs-post >}} Learn more
 - [ArjanCodes - Dependency Injection Best Practices](https://arjancodes.com/blog/python-dependency-injection-best-practices/)
-
 :::

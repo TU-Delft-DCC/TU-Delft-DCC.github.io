@@ -49,7 +49,7 @@ hide-description: true
 >
 > **Brian W. Kernighan**
 
-The quality of your research software plays a crucial role in its reliability, maintainability, and scalability. Writing **clean code** means developing code that is easy to read, understand, and with - not just you, but for others as well. Well-structured code simplifies debudding, fosters collaboration, and allows for future modifications and extensions, ensuring your software remains useful and adaptable over time.
+The quality of your research software plays a crucial role in its reliability, maintainability, and scalability. Writing **clean code** means developing code that is easy to read, understand - not just you, but for others as well. **Well-structured code** simplifies debugging, fosters collaboration, and allows for future modifications and extensions, ensuring your software remains useful and adaptable over time.
 
 
 ::: {.content-block}
@@ -65,20 +65,20 @@ Conventions and guidelines used to write and format code.
 :::
 
 ::: {.feature}
-### {{< fa poo >}} Code Smells
-Symptoms of poor code quality that can indicate deeper problems in the code.
-
-::: {.learn-more}
-[Learn more »](./code_smells.md)
-:::
-:::
-
-::: {.feature}
 ### {{< fa wrench >}} Refactoring
 Restructuring existing code without changing its external behavior.
 
 ::: {.learn-more}
 [Learn more »](./refactoring.md)
+:::
+:::
+
+::: {.feature}
+### {{< fa poo >}} Code Smells
+Symptoms of poor code quality that can indicate deeper problems.
+
+::: {.learn-more}
+[Learn more »](./code_smells.md)
 :::
 :::
 
