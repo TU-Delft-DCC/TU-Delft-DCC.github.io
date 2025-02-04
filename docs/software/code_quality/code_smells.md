@@ -49,6 +49,13 @@ css: styles.css
 
 Code smells are software characteristics that suggest there might be an issue with the code's design or implementation. While code smells themselves might not always indicate a bug or malfunction, they can make the code harder to understand, maintain, and extend, which can lead to bugs and other issues down the line. Code smells are usually noticed and addressed during code reviews, when writing tests, adding new features, fixing bugs, and during automated code analysis. 
 
+
+:::{.callout-tip appearance="simple" icon="false"}
+## {{< fa lightbulb >}} How to use these cards
+
+Each card below represents a common code smell based on the symptoms you might observe in your codebase. Each guide provides an overview of the code smell, its symptoms, an example on [how to refactor it](./refactoring.md), and further resources to learn more. We don't intend to cover all refactoring techniques, but we aim to provide a starting point for identifying and addressing common code smells.
+:::
+
 ::: {.grid}
 
 ::: {.g-col-4}

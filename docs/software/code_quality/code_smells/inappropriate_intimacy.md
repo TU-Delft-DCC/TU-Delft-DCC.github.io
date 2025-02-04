@@ -1,74 +1,144 @@
+---
+# Insert this YAML header (including the opening and closing ---) at the beginning of the document and fill it out accordingly
 
-### Inappropriate intimacy {.unnumbered}
-This smell occurs when one class knows too much about the internal structure of another class, leading to tight coupling. Tight coupling makes the code harder to understand, maintain, and refactor because changes to one class can have ripple effects on other classes.
+# We use this key to indicate the last reviewed date [manual entry, use YYYY-MM-DD]
+# Uncomment and populate the next line accordingly
+date: 2025-02-04
 
-:::{.callout-important collapse="true" appearance="simple"}
-## Example of violating Law of Demeter
+# We use this key to indicate the last modified date [automatic entry]
+date-modified: last-modified
+
+# Do not modify
+lang: en
+language: 
+  title-block-published: "Last reviewed"
+  title-block-modified: "Last modified"
+
+# Title of the document [manual entry]
+# Uncomment and populate the next line accordingly
+title: Inappropriate Intimacy
+
+# Brief overview of the document (will be used in listings) [manual entry]
+# Uncomment and populate the next line and uncomment "hide-description: true".
+#description: Short description of the document
+#hide-description: true
+
+# Authors of the document, will not be parsed [manual entry]
+# Uncomment and populate the next lines accordingly
+#author_1: Name Surname
+#author_2:
+
+# Maintainers of the document, will not be parsed [manual entry]
+# Uncomment and populate the next lines accordingly
+#maintainer_1: Name Surname
+#maintainer_2:
+
+# To whom reach out regarding the document, will not be parsed [manual entry]
+# Uncomment and populate the next line accordingly
+#corresponding: Name Surname
+
+# Meaningful keywords, newline separated [manual entry]
+# Uncomment and populate the next line and list accordingly
+categories: 
+- refactoring
+
+---
+
+This code smell occurs when one part of the system knows too much about the internal details of another, leading to **tight coupling**. When components are too dependent on each other, it becomes difficult to modify or extend the system without breaking other parts.
+
+A good design principle to follow is the [**Law of Demeter**](https://en.wikipedia.org/wiki/Law_of_Demeter), also known as the **"Don't talk to strangers"** rule. It suggests that a module should only interact with its direct dependencies rather than deeply nested objects.
+
+## Symptoms
+- A class accesses properties of another object’s properties, exposing too much detail.
+- Changes in one part of the code require changes in multiple other places.
+- Because multiple classes depend on each other’s internal structures, small changes can cause unintended issues.
+
+## Example - Violating Law of Demeter
+In this example, a `SensorSystem` directly accesses the `TemperatureSensor` internal attributes, creating tight coupling.
 ```python
-class GroundStation:
-    def __init__(self, station_name):
-        self.station_name = station_name
-        self.kite = Kite()
+class TemperatureSensor:
+    def __init__(self, temperature):
+        self.temperature = temperature  # Internal detail exposed
 
-    def get_kite_name(self):
-        # Violation of the Law of Demeter:
-        # Accessing a property of an object returned by another object
-        return self.kite.name        
+class SensorSystem:
+    def __init__(self, sensor):
+        self.sensor = sensor
 
-class Kite:
-    def __init__(self):
-        self.name = "Kite_1"
+    def get_temperature(self):
+        # Law of Demeter violation: Directly accessing sensor's attribute
+        return self.sensor.temperature
 
 # Usage
-ground_station = GroundStation("TUD")
-kite_name = ground_station.get_kite_name()
+sensor = TemperatureSensor(25)
+system = SensorSystem(sensor) 
+temperature = system.get_temperature()
+print(temperature)  # 25
 ```
-:::
+**Problem:** The `SensorSystem` class depends on the internal structure of `TemperatureSensor`. If the way temperature is stored changes (e.g., a new sensor model), `SensorSystem` must also change.
 
-::::{.callout-note appearance="simple"}
-## Solution
-Follow the principles of least knowledge ([**Law of Demeter**](https://en.wikipedia.org/wiki/Law_of_Demeter)). Each unit should have only limited knowledge about other units, i.e. don't talk to strangers.
 
-:::{.callout-tip collapse="true" appearance="simple"}
-## Example solution - using a getter method
+### Solutions
+
+#### Example solution - Using getter methods
+Instead of directly accessing attributes, define **getter methods** in `TemperatureSensor` to limit exposure.
+
 ```python
-class GroundStation:
-    def __init__(self, station_name, kite):
-        self.station_name = station_name
-        self.kite = kite
+class TemperatureSensor:
+    def __init__(self, temperature):
+        self._temperature = temperature  # Use a private variable
 
-    def get_kite_name(self):
-        return self.kite.get_name()
+    def get_temperature(self):
+        return self._temperature  # Encapsulated access
 
-class Kite:
-    def __init__(self, name):
-        self.name = name
-        
-    def get_name(self):
-        return self.name    
+class SensorSystem:
+    def __init__(self, sensor):
+        self.sensor = sensor
+
+    def get_temperature(self):
+        return self.sensor.get_temperature()  # Indirect access through method
 
 # Usage
-kite = Kite("Kite_1")
-ground_station = GroundStation("TUD", kite)
-kite_name = ground_station.get_kite_name()
+sensor = TemperatureSensor(25)
+system = SensorSystem(sensor)
+print(system.get_temperature())  # 25
 ```
-:::
+**Why is this better?**
 
-:::{.callout-tip collapse="true" appearance="simple"}
-## Example solution - limiting access
+- The `SensorSystem` no longer needs to know the internal structure of `TemperatureSensor`.
+- If `TemperatureSensor` changes, only `get_temperature()` needs to be updated, not every place it’s used.
+
+
+#### Example solution - Removing the dependency
+A better design is to pass only the needed data instead of an entire object.
 ```python
-class GroundStation:
-    def __init__(self, station_name, kite_name):
-        self.station_name = station_name
-        self.kite_name = kite_name
+class SensorSystem:
+    def __init__(self, temperature):
+        self.temperature = temperature
 
-    def get_kite_name(self):
-        return self.kite_name
+    def get_temperature(self):
+        return self.temperature  # Works directly with the value
 
 # Usage
-ground_station = GroundStation("TUD", "Kite_1")
-kite_name = ground_station.get_kite_name()
+temperature = 25
+system = SensorSystem(temperature)
+print(system.get_temperature())  # 25
 ```
+**Why is this better?**
+
+- `SensorSystem` no longer depends on `TemperatureSensor`, making it more modular and reusable.
+- Works even if the source of temperature data changes (e.g., from a file, API, or another sensor).
+
+:::{.callout-tip appearance="simple"}
+Balance between dependecy injection and encapsulation. If the data is simple and does not require complex operations, pass it directly. If the data is complex or requires additional logic, encapsulate it in a class.
 :::
 
-::::
+## Key Takeaways
+- Follow the Law of Demeter - Only interact with direct dependencies.
+- Encapsulate data - Use getters and setters to access and modify data.
+- Reduce dependencies - pass only the necessary information to other components.
+
+::: {.callout-note appearance="simple" icon="false"}
+## {{< fa signs-post >}} Learn more
+- [RealPython - Python Classes](https://realpython.com/python-classes/)
+- [RealPython - Getters and Setters](https://realpython.com/python-getter-setter/)
+:::
