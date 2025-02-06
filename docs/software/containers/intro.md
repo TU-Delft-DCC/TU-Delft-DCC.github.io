@@ -1,7 +1,7 @@
 ---
 # Insert this YAML header (including the opening and closing ---) at the beginning of the document and fill it out accordingly
 
-# We use this key to indicate the last reviewed date [manual entry, use YYYY-MM-dd]
+# We use this key to indicate the last reviewed date [manual entry, use YYYY-MM-DD]
 date: 2024-11-14
 
 # We use this key to indicate the last modified date [automatic entry]

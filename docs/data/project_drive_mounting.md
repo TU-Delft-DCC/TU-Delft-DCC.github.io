@@ -1,9 +1,9 @@
 ---
 # Insert this YAML header (including the opening and closing ---) at the beginning of the document and fill it out accordingly
 
-# We use this key to indicate the last reviewed date [manual entry, use MM/DD/YYYY]
+# We use this key to indicate the last reviewed date [manual entry, use YYYY-MM-DD]
 # Uncomment and populate the next line accordingly
-#date: MM/DD/YYYY
+#date: YYYY-MM-DD
 
 # We use this key to indicate the last modified date [automatic entry]
 date-modified: last-modified
@@ -50,7 +50,7 @@ Project drive storage from TU Delft ICT can be mounted and made accessible in yo
 
 ## Prerequisites
 - A (TU Delft) [Virtual Private Server](../infrastructure/VPS_request.md)
-- (TU Delft) [Project Drive](./project_drive_request.md)
+- A (TU Delft) [Project Drive](./project_drive_request.md)
 
 ## Steps
 1. Locate the URL of your project storage
@@ -63,9 +63,24 @@ Project drive storage from TU Delft ICT can be mounted and made accessible in yo
 ### Step 1. Locate the URL of your project storage
 The URL for your project drive can be obtained from either 
 - the email from TU Delft ICT with the confirmation of your project drive request, or 
-- by navigating to https://webdata.tudelft.nl/, and then through **WebDav Web Links > Staff-Umbrella > "Enter your netID and password"** to retrieve a list of your project drives. 
+- by using a web browser to navigate into https://webdata.tudelft.nl/ 
 
-Copy everything after "https://webdata.tudelft.nl/" (this will be staff-umbrella/`<your_project_name>`)
+:::{.callout-note}
+https://webdata.tudelft.nl/ can only be accessed in campus or using eduVPN
+:::
+
+::: {.panel-tabset}
+### chrome
+1. Navigate into https://webdata.tudelft.nl/staff-umbrella/  
+1. A pop-up should appear asking for Username and Password.   
+1. Provide your netID in the Username field, provide your password accordingly.  
+1. You should now see a list of your project drives.  
+1. Click on the project drive of your choice.  
+1. Copy everything after "https://webdata.tudelft.nl/"
+
+### edge
+Content within webdata is under password protection. Typing your username and password in only possible with a pop-up message which is disabled in systems managed by TU Delft, please try the instructions provided for chrome
+:::
 
 ### Step 2. Connect to your TU Delft VPS via SSH 
 Follow instructions in TU Delft ICT email from initial server setup or [configure a 1-step connection via SSH](../infrastructure/VPS_SSH.md).
