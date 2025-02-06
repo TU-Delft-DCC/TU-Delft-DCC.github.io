@@ -29,6 +29,12 @@ website:
   # google-analytics: "UA-XXXXXXXX"
   # cookie-consent: true
   #
+  announcement: 
+    icon: pencil
+    dismissable: true
+    content: "**Information!** We are now actively updating our content. Please be aware that content and locations are subject to change. Thank you for your patience!"
+    type: success
+    position: below-navbar
   site-url: https://tu-delft-dcc.github.io/
   repo-url: https://github.com/TU-Delft-DCC/TU-Delft-DCC.github.io/
   issue-url: https://github.com/TU-Delft-DCC/TU-Delft-DCC.github.io/issues/new/choose
