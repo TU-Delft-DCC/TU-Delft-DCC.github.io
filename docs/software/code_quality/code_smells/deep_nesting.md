@@ -1,9 +1,9 @@
 ---
 # Insert this YAML header (including the opening and closing ---) at the beginning of the document and fill it out accordingly
 
-# We use this key to indicate the last reviewed date [manual entry, use YYYY/MM/DD]
+# We use this key to indicate the last reviewed date [manual entry, use YYYY-MM-DD]
 # Uncomment and populate the next line accordingly
-date: 2025/02/03
+date: 2025-02-03
 
 # We use this key to indicate the last modified date [automatic entry]
 date-modified: last-modified
@@ -57,7 +57,7 @@ Deep nesting occurs when there are too many levels of indentation in the code, m
 - Slow performance due to inefficient code.
 - Increased likelihood of bugs due to complexity.
 
-## Example deeply nested conditional statements
+## Example - Deeply nested conditional statements
 
 ```python
 def validate_model_convergence(model):
@@ -73,7 +73,7 @@ def validate_model_convergence(model):
         return False
 ```
 
-### Solution
+### Solutions
 
 Refactoring deep nesting improves readability and maintainability. Techniques to reduce deep nesting include:
 
@@ -114,7 +114,7 @@ def validate_model_convergence(model):
 
 
 
-## Example deeply nested loops
+## Example - Deeply nested loops
 In this example, we have three nested loops to iterate over three 3D arrays and sum their corresponding elements. This code can be refactored using NumPy to improve performance and readability.
 
 ```python
@@ -144,10 +144,11 @@ C = np.random.rand(10, 10, 10)
 result = A + B + C
 ```
 
-## Benefits
-By restructuring nested code using these techniques, we create cleaner, more maintainable software while reducing the risk of logical errors.
+## Key takeaways
+- Deep nesting makes code harder to read and maintain.
+- Techniques like early returns, helper functions, and built-in functions can simplify complex logic.
 
 ::: {.callout-note appearance="simple" icon="false"}
-## {{< fa signs-post >}} **Learn more:**
+## {{< fa signs-post >}} Learn more
 - [RealPython - "Look Ma, No For-Loops"](https://realpython.com/numpy-array-programming/)
 :::

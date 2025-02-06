@@ -1,9 +1,9 @@
 ---
 # Insert this YAML header (including the opening and closing ---) at the beginning of the document and fill it out accordingly
 
-# We use this key to indicate the last reviewed date [manual entry, use YYYY/MM/DD]
+# We use this key to indicate the last reviewed date [manual entry, use YYYY-MM-DD]
 # Uncomment and populate the next line accordingly
-date: 2025/01/31
+date: 2025-02-06
 
 # We use this key to indicate the last modified date [automatic entry]
 date-modified: last-modified
@@ -39,9 +39,10 @@ hide-description: true
 
 # Meaningful keywords, newline separated [manual entry]
 # Uncomment and populate the next line and list accordingly
-#categories: 
-# - 
-# - 
+categories: 
+- code quality
+- refactoring 
+
 
 ---
 
@@ -52,7 +53,7 @@ hide-description: true
 
 ### What is refactoring?
 
-Refactoring is the process of **restructuring existing code without changing its external behavior**. It improved maintainability, readability, and efficiency, making future developments smoother and reducing the likelihood of bugs. Key benefits include:
+Refactoring is the process of **restructuring existing code without changing its external behavior**. It improves maintainability and readability, making future developments smoother and reducing the likelihood of bugs. Key benefits include:
 
 - **Improving readability** - Writing code that's easier to understand, benefits both yourself and future developers.
 - **Reducing complexity** - Simplifying complex structures by breaking down large functions or removing unnecessary dependencies.
@@ -61,7 +62,7 @@ Refactoring is the process of **restructuring existing code without changing its
 - **Ensuring consistency** - Following a consistent coding style for a cleaner, more maintanable codebase.
 
 ### When should you refactor?
-![CC-BY-4.0 © 2021 Balaban et al.](https://journals.plos.org/ploscompbiol/article/figure/image?size=large&id=10.1371/journal.pcbi.1008549.g009&type=medium){width=50%}
+![CC-BY-4.0 © 2021 Balaban et al.](/docs/img/refactoring.PNG){width=50%}
 
 1. **Rule of three:** If you find yourself writing the same or similiar code for the third time, it's time to refactor.
 2. **Before adding a feature:** Cleaning up existing code makes it easier to integrate a new functionality.
@@ -80,7 +81,7 @@ steps without introducing new functionalities. Keep these principles in mind:
 
 {{< fa broom >}} **Maintain clean code** - Aim for clarity, simplicity, and readability.  
 {{< fa ban >}} **Avoid adding new features** - Focus on improving structure, not functionality.  
-{{< fa check-double>}} **Ensure tests pass** - Verify that all existing tests still succeed to prevent new bugs.
+{{< fa check-double >}} **Ensure tests pass** - Verify that all existing tests still succeed to prevent new bugs.
 
 ::: {.lean-more}
 {{< fa arrow-right >}} [Learn more: How to refactor?](https://refactoring.guru/refactoring/how-to)

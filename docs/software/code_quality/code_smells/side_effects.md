@@ -1,9 +1,9 @@
 ---
 # Insert this YAML header (including the opening and closing ---) at the beginning of the document and fill it out accordingly
 
-# We use this key to indicate the last reviewed date [manual entry, use MM/DD/YYYY]
+# We use this key to indicate the last reviewed date [manual entry, use YYYY-MM-DD]
 # Uncomment and populate the next line accordingly
-date: 2025/02/03
+date: 2025-02-06
 
 # We use this key to indicate the last modified date [automatic entry]
 date-modified: last-modified
@@ -64,7 +64,7 @@ Instead, non-pure functions often:
 - Depend on external state, meaning results may change due to external factors.
 :::
 
-### Example of function with side effects
+## Example - Function with side effects
 ```python
 # Modifies global state (side effect)
 data = []
@@ -107,13 +107,10 @@ data = []
 data = add_item(data, "A")  # Safe: no side effects
 ```
 
-#### 3. Use dependency injection
-Instead of relying on global state, pass dependencies explicitly.
+## Key takeaways
 
-```python
+- Ensure that each function or module has a single responsibility. 
+- Break down complex functions into smaller, focused functions that perform specific tasks. 
+- Isolate non-pure functions with side effects from pure functions.
 
-```
-
-Ensure that each function or module has a single responsibility. Break down complex functions into smaller, focused functions that perform specific tasks. This helps in isolating non-pure functions with side effects from pure functions.
-
-![*CC-BY-4.0 CodeRefinery*](https://raw.githubusercontent.com/coderefinery/modular-code-development/61517f7f01a0ff49c441f7dee731be4f6799ec03/img/good-vs-bad.svg)
+![*CC-BY-4.0 CodeRefinery*](/docs/img/good-vs-bad.svg)

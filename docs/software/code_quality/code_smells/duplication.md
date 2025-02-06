@@ -1,9 +1,9 @@
 ---
 # Insert this YAML header (including the opening and closing ---) at the beginning of the document and fill it out accordingly
 
-# We use this key to indicate the last reviewed date [manual entry, use YYYY/MM/DD]
+# We use this key to indicate the last reviewed date [manual entry, use YYYY-MM-DD]
 # Uncomment and populate the next line accordingly
-date: 2025/02/03
+date: 2025-02-03
 
 # We use this key to indicate the last modified date [automatic entry]
 date-modified: last-modified
@@ -55,7 +55,7 @@ Duplicated code occurs when similar or identical blocks of code appear multiple 
 - Fixing a bug required modifying the same code in multiple places.
 - Adding a new feature results in copy-pasting existing code rather than reusing it.
 
-## Example: Duplicate code in functions
+## Example - Duplicate code in functions
 ```python
 def time_of_flight_ball(initial_velocity, launch_angle):
     g = 9.81  # Earth's gravity (m/s²)
@@ -71,7 +71,7 @@ def time_of_flight_satellite(initial_velocity, launch_angle):
 
 ```
 
-## Solution 
+### Solution 
 - Refactor the code to accept parameters as arguments, instead of hard-coding them.
 - Extract common functionality into functions or methods.
 - Refactor duplicated code into higher-level abstractions.
@@ -88,9 +88,12 @@ tof_rocket = time_of_flight(100, np.pi/3)    # Time of flight for a rocket
 tof_mars_probe = time_of_flight(300, np.pi/6, gravity=3.71)  # Gravity adjusted for Mars
 ```	
 
+## Key takeaways
+- Extracting common functionality into functions or methods can help reduce duplication and improve code reuse.
 
-<!-- :::{.callout-note appearance="simple" icon="false"}
+
+:::{.callout-note appearance="simple" icon="false"}
 ## {{< fa signs-post >}} Learn more
 
 
-::: -->
+:::

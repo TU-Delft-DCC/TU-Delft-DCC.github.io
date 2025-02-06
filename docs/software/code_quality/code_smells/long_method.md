@@ -1,9 +1,9 @@
 ---
 # Insert this YAML header (including the opening and closing ---) at the beginning of the document and fill it out accordingly
 
-# We use this key to indicate the last reviewed date [manual entry, use YYYY/MM/DD]
+# We use this key to indicate the last reviewed date [manual entry, use YYYY-MM-DD]
 # Uncomment and populate the next line accordingly
-date: 2025/02/01
+date: 2025-02-01
 
 # We use this key to indicate the last modified date [automatic entry]
 date-modified: last-modified
@@ -58,12 +58,8 @@ A long method often:
 - Has deeply nested control structures, making it harder to follow.
 - Includes multiple sections of logic that could be extracted into separate functions.
 
-### Example long method
+## Example - Long method
 Below is an example of a function that is doing too much:
-
-
-::: panel-tabset
-#### Python
 
 ```python
 def load_data(filepath: str):
@@ -94,73 +90,20 @@ def load_data(filepath: str):
 
     return data
 ```
-#### MATLAB
-```matlab
-function data = load_data(filepath)
-    if ~isfile(filepath)
-        error('File not found');
-    end
-    
-    [~, ~, ext] = fileparts(filepath);
-    
-    if strcmp(ext, '.json')
-        data = read_json(filepath);
-    elseif strcmp(ext, '.mat')
-        data = read_mat(filepath);
-    elseif strcmp(ext, '.csv')
-        data = read_csv(filepath);
-    else
-        error('Unsupported file format: %s', ext);
-    end
-    
-    if ~validate_data(data)
-        error('Invalid data format');
-    end
-end
-```
 
-#### R
-```r
-load_data <- function(filepath) {
-  if (!file.exists(filepath)) {
-    stop("File not found")
-  }
-  
-  ext <- tools::file_ext(filepath)
-  
-  if (ext == "json") {
-    data <- read_json(filepath)
-  } else if (ext == "rds") {
-    data <- read_rds(filepath)
-  } else if (ext == "csv") {
-    data <- read_csv(filepath)
-  } else {
-    stop("Unsupported file format: ", ext)
-  }
-  
-  if (!validate_data(data)) {
-    stop("Invalid data format")
-  }
-  
-  return(data)
-}
-```
-:::
 
-### Issues
+#### Issues
 - The function is handling file validation, data loading, and data verification, which are separate concerns.
 - It is now difficult to test individual parts in isolation.
 - Adding support for new file types requires modifying a large function.
 
 
-## Solution
+### Solution
 Identify logical blocks of code within the long method/function and extract them into separate methods with descriptive names. We should aim to make each method responsible for a singular task and compose more complex functionalities from modular components.
 
-### Example solution long method
+#### Example solution long method
 
-::: panel-tabset
 
-#### Python
 ```python
 def load_data(filepath: str) -> Data:
     verify_filepath(filepath: str)  
@@ -198,113 +141,10 @@ def read_from_pickle(filepath: str): pass
 def read_from_csv(filepath: str): pass
 ```
 
-#### MATLAB
-```matlab
-function data = load_data(filepath)
-    verify_filepath(filepath);
-    data = read_data(filepath);
-    verify_data(data);
-end
-
-function verify_filepath(filepath)
-    if ~isfile(filepath)
-        error('File not found');
-    end
-end
-
-function data = read_data(filepath)
-    [~, ~, ext] = fileparts(filepath);
-    
-    data_types = struct('.json', @read_json, ...
-                         '.mat', @read_mat, ...
-                         '.csv', @read_csv);
-    
-    if isfield(data_types, ext)
-        read_function = data_types.(ext);
-        data = read_function(filepath);
-    else
-        error('Unsupported file format: %s', ext);
-    end
-end
-
-function data = read_json(filepath)
-    fid = fopen(filepath, 'r');
-    raw = fread(fid, inf, '*char')';
-    fclose(fid);
-    data = jsondecode(raw);
-end
-
-function data = read_mat(filepath)
-    dataStruct = load(filepath);
-    data = dataStruct.data;
-end
-
-function data = read_csv(filepath)
-    data = readtable(filepath);
-end
-
-function verify_data(data)
-    if ~iscell(data) && ~isstruct(data) && ~istable(data)
-        error('Invalid data format');
-    end
-end
-```
-
-#### R
-```r
-load_data <- function(filepath) {
-  verify_filepath(filepath)
-  data <- read_data(filepath)
-  verify_data(data)
-  return(data)
-}
-
-verify_filepath <- function(filepath) {
-  if (!file.exists(filepath)) {
-    stop("File not found")
-  }
-}
-
-read_data <- function(filepath) {
-  ext <- tools::file_ext(filepath)
-  
-  data_types <- list(
-    json = read_json,
-    rds = read_rds,
-    csv = read_csv
-  )
-  
-  if (ext %in% names(data_types)) {
-    return(data_types[[ext]](filepath))
-  } else {
-    stop("Unsupported file format: ", ext)
-  }
-}
-
-read_json <- function(filepath) {
-  jsonlite::fromJSON(filepath)
-}
-
-read_rds <- function(filepath) {
-  readRDS(filepath)
-}
-
-read_csv <- function(filepath) {
-  read.csv(filepath, stringsAsFactors = FALSE)
-}
-
-verify_data <- function(data) {
-  if (!is.data.frame(data) && !is.list(data)) {
-    stop("Invalid data format")
-  }
-}
-```
-:::
-
-### Benefits of refactoring
-- Each function now has a **single responsibility**, making the code easier to understand.
-- Each function can be **tested independently**, making debugging more efficient.
-- Adding support for new file types only requires modifying read_data, without changing the entire load_data function.
+### Key takeaways
+- Breaking a long method into smaller, well-named helper functions makes the code easier to read and understand.
+– Each function now has a single responsibility, reducing complexity and making future modifications more manageable.
+– With isolated functions, individual components can be tested independently, leading to more reliable and maintainable code.
 
 {{< fa thumbs-up >}} By breaking the long method into smaller helper functions, we improve the overall structure and maintainability of the code.
 

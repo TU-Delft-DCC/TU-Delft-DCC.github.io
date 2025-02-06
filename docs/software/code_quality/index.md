@@ -1,9 +1,9 @@
 ---
 # Insert this YAML header (including the opening and closing ---) at the beginning of the document and fill it out accordingly
 
-# We use this key to indicate the last reviewed date [manual entry, use MM/DD/YYYY]
+# We use this key to indicate the last reviewed date [manual entry, use YYYY-MM-DD]
 # Uncomment and populate the next line accordingly
-date: 2025/01/31
+date: 2025-02-06
 
 # We use this key to indicate the last modified date [automatic entry]
 date-modified: last-modified
@@ -49,7 +49,7 @@ hide-description: true
 >
 > **Brian W. Kernighan**
 
-The quality of your research software plays a crucial role in its reliability, maintainability, and scalability. Writing **clean code** means developing code that is easy to read, understand - not just you, but for others as well. **Well-structured code** simplifies debugging, fosters collaboration, and allows for future modifications and extensions, ensuring your software remains useful and adaptable over time.
+The quality of your research software plays a crucial role in its reliability, maintainability, and scalability. Writing **clean code** means developing code that is easy to read, understand - not for just you, but for others as well. **Well-structured code** simplifies debugging  and allows for future modifications and extensions, ensuring your software remains useful and adaptable over time.
 
 
 ::: {.content-block}
@@ -95,8 +95,7 @@ Services that provide code quality analysis.
 :::
 
 :::{.callout-note appearance="simple" icon="false"}
-## {{< fa signs-post >}} Other resources
+## {{< fa signs-post >}} Learn more
 - [The Turing Way - Writing Robust Code](https://the-turing-way.netlify.app/reproducible-research/code-quality/code-quality-robust.html?highlight=error)
 - [Utrecht University - Workshop on Writing Reproducible Code](https://utrechtuniversity.github.io/workshop-computational-reproducibility/)
-- [A set of Common Software Quality Assurance Baseline Criteria for Research Projects](https://indigo-dc.github.io/sqa-baseline/)
 :::

@@ -47,12 +47,12 @@ css: styles.css
 
 ![CC-BY-4.0 © 2021 Balaban et al.](/docs/img/bad_code_design.PNG){fig-alt="Drawing of a pyramid with various traps resembling code smells." width=600}
 
-Code smells are software characteristics that suggest there might be an issue with the code's design or implementation. While code smells themselves might not always indicate a bug or malfunction, they can make the code harder to understand, maintain, and extend, which can lead to bugs and other issues down the line. Code smells are usually noticed and addressed during code reviews, when writing tests, adding new features, fixing bugs, and during automated code analysis. 
+Code smells are software characteristics that suggest there might be an issue with the code's design or implementation. While code smells themselves might not always indicate a bug or malfunction, they can make the code harder to understand and extend, which can lead to bugs and other issues down the line. Code smells are usually noticed and addressed during code reviews, when writing tests, adding new features, fixing bugs, and during automated code analysis. 
 
 
 :::{.callout-tip appearance="simple" icon="false"}
-## {{< fa lightbulb >}} How to use these cards
-Each guide provides an overview of the code smell, its symptoms and an example on [how to refactor it](./refactoring.md). We don't intend to cover all refactoring techniques, but we aim to provide a starting point for identifying and addressing common code smells.
+## {{< fa lightbulb >}} How to use these cards?
+Each guide provides an overview of a code smell, its symptoms and an example on [how to refactor it](./refactoring.md). We don't intend to cover all refactoring techniques, but we aim to provide a starting point for identifying and addressing common code smells.
 :::
 
 ::: {.grid}
@@ -60,7 +60,7 @@ Each guide provides an overview of the code smell, its symptoms and an example o
 ::: {.g-col-4}
 ::: {.code-smell-card}
 ##### Long Method
-**Problem:** A function is very long and hard to understand or maintain.  
+**Problem:** A function is very long and hard to understand.  
 
 ::: {.refactor-link}
 [{{< fa wrench >}} Refactor long methods](./code_smells/long_method.md)
@@ -104,7 +104,7 @@ Each guide provides an overview of the code smell, its symptoms and an example o
 ::: {.g-col-4}
 ::: {.code-smell-card}
 ##### Deep Nesting
-**Problem:** There are excessive levels of nested loops or conditionals.  
+**Problem:** There are excessive levels of nested for-loops or if-statements.  
 
 ::: {.refactor-link}
 [{{< fa wrench >}} Refactor nested logic](./code_smells/deep_nesting.md)
@@ -148,7 +148,7 @@ Each guide provides an overview of the code smell, its symptoms and an example o
 ::: {.g-col-4}
 ::: {.code-smell-card}
 ##### Commented out Code
-**Problem:** There is a significant amount of outdated or commented-out code cluttering the source.  
+**Problem:** There is a significant amount of outdated or commented-out code.  
 
 ::: {.refactor-link}
 [{{< fa wrench >}} Refactor commented code](./code_smells/dead_code.md)
@@ -156,12 +156,10 @@ Each guide provides an overview of the code smell, its symptoms and an example o
 :::
 :::
 
-
 :::
 
-
-:::{.callout-note}
-## Further reading
+:::{.callout-note appearance="simple" icon="false"}
+## {{< fa signs-post >}} Learn more
 - [Ten simple rules for quick and dirty scientific programming](https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1008549)
 - [Good enough practices in scientific computing](https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1005510)
 :::

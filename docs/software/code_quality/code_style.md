@@ -1,9 +1,9 @@
 ---
 # Insert this YAML header (including the opening and closing ---) at the beginning of the document and fill it out accordingly
 
-# We use this key to indicate the last reviewed date [manual entry, use YYYY/MM/DD]
+# We use this key to indicate the last reviewed date [manual entry, use YYYY-MM-DD]
 # Uncomment and populate the next line accordingly
-date: 2025/01/31
+date: 2025-02-06
 
 # We use this key to indicate the last modified date [automatic entry]
 date-modified: last-modified
@@ -39,11 +39,15 @@ author_1: Maurits Kok
 
 # Meaningful keywords, newline separated [manual entry]
 # Uncomment and populate the next line and list accordingly
-#categories: 
-# - 
+categories: 
+- code quality
 # - 
 
 ---
+
+> "Programs must be written for people to read, and only incidentally for machines to execute."
+>
+> **Harold Abelson**
 
 ## Style guide
 Style guides are a set of rules and conventions that define how code should be written in a particular programming language. They cover aspects such as naming conventions, indentation, line length, and other formatting rules. Style guides help to ensure that code is consistent, readable, and maintainable, and they are often enforced by static analysis tools and formatters. Many programming languages have official style guides, and there are also community-driven style guides that provide additional recommendations and best practices.
@@ -67,7 +71,7 @@ Formatters are tools that automatically adjust the formatting of your code to ma
 
 
 :::{.callout-note appearance="simple" icon="false"}
-## {{< fa signs-post >}} More information
+## {{< fa signs-post >}} Learn more
 - [The Turing Way - Code Quality](https://the-turing-way.netlify.app/reproducible-research/code-quality)
 - [The Turing Way - Code Style](https://the-turing-way.netlify.app/reproducible-research/code-quality/code-quality-style)
 - [RealPython - Python Code Quality](https://realpython.com/python-code-quality/)

@@ -57,7 +57,6 @@ Dead code refers to unused or unreachable code that remains in the codebase but 
 Do not use comments to change the behavior of the code. Instead, make use of input parameters or configuration settings to control the behavior of the code.
 :::
 
-
 ## Solution
 - If code is not needed, delete it. Use version control (e.g., Git) to restore it if necessary. Commit the removal of the commented-out code with a meaningful commit message explaining why it was removed. This allows you to track the change and easily revert it if necessary.
 - To change the executation of your code, use [input parameters or configuration settings](./hardcoded_values.md) to control the behavior of the code. This makes the code more readable and maintainable.

@@ -1,9 +1,9 @@
 ---
 # Insert this YAML header (including the opening and closing ---) at the beginning of the document and fill it out accordingly
 
-# We use this key to indicate the last reviewed date [manual entry, use YYYY/MM/DD]
+# We use this key to indicate the last reviewed date [manual entry, use YYYY-MM-DD]
 # Uncomment and populate the next line accordingly
-date: 2025/02/03
+date: 2025-02-06
 
 # We use this key to indicate the last modified date [automatic entry]
 date-modified: last-modified
@@ -59,7 +59,7 @@ When a function or method takes many parameters (inputs), it can become difficul
 - 6+ parameters: Strongly consider refactoring the function or method.
 :::
 
-## Example of long parameter list
+## Example - Long parameter list
 Here’s an example of a function that takes many parameters:
 
 ```python	
@@ -72,19 +72,24 @@ def process_machine_operation(machine_id, temperature, pressure, speed, duration
     print("Operation Duration:", duration)
 
 # Usage
-process_machine_operation(machine_id="M001", temperature=100.5, pressure=200.0, speed=1500.0, duration=5.0)
+process_machine_operation(
+    machine_id="M001", 
+    temperature=100.5, 
+    pressure=200.0, 
+    speed=1500.0, 
+    duration=5.0)
 ```	
 This function takes a lot of information at once: the machine ID, temperature, pressure, speed, and duration. If the function grows even more complex, it will become very hard to keep track of what each parameter means, and it could make the code difficult to maintain.
 
 
-### Solution
+### Solutions
 To solve this problem, we can do one or both of the following:
 
 1. **Simplify the Function:** Break the function into smaller parts that do one thing each.
 2. **Use Objects to Group Related Data:** Instead of passing many individual pieces of information, we can group them together into one object or structure that holds related information.
 
 
-### Solution with a Dataclass
+### 1. Using a Dataclass
 ```python
 from dataclasses import dataclass
 
@@ -109,7 +114,12 @@ def process_machine_operation(operation_data):
     print("Operation Duration:", operation_data.duration)
 
 # Usage 
-operation_data = MachineOperationData(machine_id="M001", temperature=100.5, pressure=200.0, speed=1500.0, duration=5.0)
+operation_data = MachineOperationData(
+    machine_id="M001", 
+    temperature=100.5, 
+    pressure=200.0, 
+    speed=1500.0, 
+    duration=5.0)
 process_machine_operation(operation_data)
 ```
 
@@ -117,7 +127,7 @@ process_machine_operation(operation_data)
 You can combine dataclasses with data validation through [**Pydantic**](https://docs.pydantic.dev/latest/).
 :::
 
-### Divide and conquer
+### 2. Divide and conquer
 
 Although using a single dataclass is a good start, we don’t want our data structure to become too big and complicated. If the dataclass starts holding too much data, it can make the code harder to understand. Instead, we can break it into smaller, simpler data classes that work together. For example:
 

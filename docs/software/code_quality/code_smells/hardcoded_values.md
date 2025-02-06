@@ -1,9 +1,9 @@
 ---
 # Insert this YAML header (including the opening and closing ---) at the beginning of the document and fill it out accordingly
 
-# We use this key to indicate the last reviewed date [manual entry, use YYYY/MM/DD]
+# We use this key to indicate the last reviewed date [manual entry, use YYYY-MM-DD]
 # Uncomment and populate the next line accordingly
-date: 2025/02/03
+date: 2025-02-03
 
 # We use this key to indicate the last modified date [automatic entry]
 date-modified: last-modified
@@ -53,7 +53,7 @@ Hard-coding variables occurs when constants, configuration values, or logic are 
 - The logic is less readable, since magic numbers don’t indicate what they represent.
 - A small behavior change requires altering the core code, instead of adjusting an input parameters of config file.
 
-## Example of hard coding and magic numbers
+## Example - Hard coding and magic numbers
 ```python
 def calculate_area(radius):
     # Hard-coded value of pi
@@ -140,7 +140,13 @@ config = load_config()
 run_simulation(config['simulation']['step_size'], config['simulation']['total_time'])
 ```
 
-#### Benefits
-- Settings can be adjusted without modifying the source code.
-- Allows non-programmers to adjust simulation parameters.
-- Enables different configurations for different experiments in a reproducible manner.
+#### Key takeaways
+- Use named constants for improved readability.
+- Externalize configuration values to allow easy adjustments without modifying the source code.
+- Configuration files or classes can further improve maintainability and reproducibility.
+
+
+<!-- ::: {.callout-note appearance="simple" icon="false"}
+## {{< fa signs-post >}} Learn more
+- 
+::: -->
