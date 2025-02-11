@@ -24,9 +24,9 @@ title: FAIR data
 #hide-description: true
 
 # Authors of the document, will not be parsed [manual entry]
-# Uncomment and populate the next lines accordingly
-#author_1: Name Surname
-#author_2:
+author_1: Selin Kubilay
+author_2:
+
 
 # Maintainers of the document, will not be parsed [manual entry]
 # Uncomment and populate the next lines accordingly
@@ -45,4 +45,14 @@ title: FAIR data
 
 ---
 
-Under construction
+FAIR data stands for **Findable, Accessible, Interoperable, and Reusable** data—principles essential for ensuring that research data can be efficiently and sustainably used and reused. Beyond meeting funding and publishing requirements, FAIR data enhances research reliability, impact, and visibility, creating new collaboration opportunities for researchers.
+
+- **Findable**: Data should be findable by users. A straightforward and reliable way to achieve this is by depositing data in a repository with appropriate metadata, tags, and identifiers to improve searchability.
+
+- **Accessible**: Data should be accessible to authorized users. This does not mean all data must be publicly available; rather, it should be “as open as possible, as closed as necessary.” If data cannot be made publicly available due to sensitive information or commercial restrictions, the metadata should still be made public to indicate where and how the data can be accessed if needed.
+
+- **Interoperable**: Data should be in standardized formats with a clear structure to allow it to be interoperable across different systems, enabling data to be used in various applications by both the data owners and other users.
+
+- **Reusable**: For data to be reusable, users must understand what the data represents, the information it contains, and how to interpret its structure and format. Good documentation and an appropriate license are key in reusability, as these enable others to understand and work with your dataset, especially upon publication.
+
+Choosing a repository for publishing your data depends on factors such as storage costs, funding or publication requirements, and security needs. TU Delft provides an in-house data repository, [4TU.ResearchData](https://data.4tu.nl/), as one of many available options. You can read more about publishing data at TU Delft in [Publishing](publishing.md) section. 
