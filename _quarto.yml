@@ -13,7 +13,7 @@ project:
     # Do not render
     - "!_under_development/**"
     - "!slides/**"
-    - "!docs/infrastructure/getting_started.md"
+    - "!docs/infrastructure/getting_started_susan.md"
     - "!docs/infrastructure/VPS_SSH_connect.md"
     - "!docs/infrastructure/giving_sudo_privilages.md"
     - "!docs/infrastructure/configure_passwordless_login.md"
@@ -86,6 +86,8 @@ website:
         - text: <br>
         - section: ⚙️ **Computing Infrastructure**
           contents:
+          - text: Getting started
+            href: docs/infrastructure/getting_started.md
           - section: "Remote servers"
             href: docs/infrastructure/intro_servers.md
             contents:
@@ -145,6 +147,17 @@ website:
                   href: docs/software/software_management_plan.md
                 - text: FAIR for Research Software Program Spring 2023
                   url: https://tu-delft-dcc.github.io/FAIR4RS/
+            - section: "Development workflow"
+              href: docs/software/development_workflow/index.md
+              contents:
+                - text: Project management
+                  href: docs/software/development_workflow/project_management.md
+                - text: Project organisation
+                  href: docs/software/development_workflow/project_organisation.md
+                - section: Branch management
+                  href: docs/software/development_workflow/branch_management.md
+                - text: Collaboration
+                  href: docs/software/development_workflow/collaboration.md
             - section: "Documentation"
               href: docs/software/documentation/index.md
               contents:
