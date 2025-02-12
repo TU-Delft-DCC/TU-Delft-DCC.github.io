@@ -45,14 +45,14 @@ categories:
 
 ---
 
-### SonarCloud
-[SonarCloud](https://sonarcloud.io/) is a cloud-based service that provides inspection of code quality to perform automatic reviews with static code analysis to detect bugs, code smells and security vulnerabilities in a project. It supports many programming languages and integrates with GitHub (and GitLab and Bitbucket) as part of the Continuous Integration workflows. SonarCloud is particularly useful for projects that require compliance with coding standards or need regular feedback on the quality of the code. 
+### Sonar
+[Sonar](https://www.sonarsource.com/products/sonarcloud/) is a cloud-based service that provides inspection of code quality to perform automatic reviews with static code analysis to detect bugs, code smells and security vulnerabilities in a project. It supports many programming languages and integrates with GitHub (and GitLab and Bitbucket) as part of the Continuous Integration workflows. Sonar is particularly useful for projects that require compliance with coding standards or need regular feedback on the quality of the code. 
 
-{{< fa arrow-right >}} [Learn more: SonarCloud documentation](https://docs.sonarsource.com/sonarcloud/)
+{{< fa arrow-right >}} [Learn more: SonarQube Cloud documentation](https://docs.sonarsource.com/sonarqube-cloud/)
 
 ::: {.callout-tip appearance="simple"}
 ## Consideration
-While SonarCloud offers valuable features for code quality analysis, be aware that for **non open-source projects it is a paid service**, and pricing model depends on how many lines of code you want to check.
+While Sonar offers valuable features for code quality analysis, be aware that for **non open-source projects it is a paid service**, and pricing model depends on how many lines of code you want to check.
 :::
 
 ### GitHub CodeQL
@@ -69,7 +69,7 @@ Code coverage quantifies the proportion of source code that is run by a software
 
 ::: {.callout-note appearance="simple" icon="false"}
 ## {{< fa link >}} Learn more
-- [SonarCloud - Test coverage](https://docs.sonarsource.com/sonarcloud/enriching/test-coverage/overview/)
+- [Sonar - Test coverage](https://docs.sonarsource.com/sonarcloud/enriching/test-coverage/overview/)
 - [Codecov - Test coverage](https://about.codecov.io/)
 :::
 
