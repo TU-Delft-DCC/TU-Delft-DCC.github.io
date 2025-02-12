@@ -91,7 +91,7 @@ MATLAB supports **script-based**, **function-based**, and **class-based** unit t
     - [Function-based testing](https://nl.mathworks.com/help/matlab/matlab_prog/write-function-based-unit-tests.html)
     - [Class-based testing](https://nl.mathworks.com/help/matlab/matlab_prog/author-class-based-unit-tests-in-matlab.html)
 
-Because of the limiting features of the script- and function-based testing, this guide will discuss **class-based testing**. Class-based tests give you  access to shared test fixtures, test parameterization, and grouping tests into categories.
+Because of the limiting features of the script- and function-based testing, this guide will discuss **class-based testing**. Class-based tests give you access to shared test fixtures, test parameterization, and grouping tests into categories. Check out our [intermediate testing concepts](/docs/software/testing/intermediate.md) for more information.
 
 
 ### Writing tests in MATLAB
@@ -151,7 +151,7 @@ MATLAB Test provides tools for developing, executing, measuring, and managing dy
 
 ### MATLAB Simulink
     
-In addition to script, function, and class-based unit tests, MATLAB offers [Simulink Test](https://nl.mathworks.com/products/simulink-test.html) for comprehensive simulation-based testing for Simulink.
+In addition to script, function, and class-based unit tests, MATLAB offers [Simulink Test](https://nl.mathworks.com/products/simulink-test.html) for simulation-based testing for Simulink.
 
 - Simulink Test - [Introduction video](https://nl.mathworks.com/videos/simulink-test-overview-99891.html)
 - Simulink Test - [Examples](https://nl.mathworks.com/help/sltest/examples.html)

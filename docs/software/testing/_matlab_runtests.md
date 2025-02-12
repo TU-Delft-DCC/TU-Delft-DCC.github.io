@@ -1,6 +1,6 @@
 ```matlab
-function result = run_testsuite(varargin)
-%RUNTESTS - Run all tests and produce coverage report
+function result = runTestSuite(varargin)
+%RUNTESTSUITE - Run all tests and produce coverage report
 %
 % Requires Matlab version >= R2017a
 %
@@ -14,9 +14,9 @@ function result = run_testsuite(varargin)
 %   |
 %   \ - tests/
 %       | - reports/    % Folder will be generated during testing
-%       | - run_testsuite.m
-%       | - test_function_1.m
-%       \ - test_function_2.m
+%       | - runTestSuite.m
+%       | - testFunction_1.m
+%       \ - testFunction_2.m
 % 
 % Resources:
 % https://nl.mathworks.com/help/matlab/ref/matlab.unittest.plugins.codecoverageplugin-class.html

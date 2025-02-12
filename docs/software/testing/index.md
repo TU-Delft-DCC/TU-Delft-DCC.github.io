@@ -54,26 +54,7 @@ Testing plays an important role in guaranteeing the ongoing reliability and stab
 - [R Packages - Testing](https://r-pkgs.org/tests.html)
 :::
 
-
-## Approach
-
-<!-- ### What to test?
-When writing tests, ask yourself the following questions:
-- How would you manually check the correctness of the code? 
-- Do you need to test a particular parameter space?
-- What do you compare the result to?
-- How much time would it take to run the module (and therefore the test)?
-
-### Type of tests
-
-* **Unit test**: testing of individual units of source code (scripts, functions, classes).
-* **Integration test**: testing of a combination of individual units as a group.
-* **Regression test**: re-running all tests to ensure that the previously developed and tested code still performs after a code change.
-* **End-to-end test**: testing the complete system from start to finish. -->
-
-## Introduction to writing tests
-
-### What to test?
+## What to test?
 In designing test cases for research software, it can be useful to conceptually differentiate between tests that verify **the technical correctness** of the code and tests that check **the scientific validity** of the results. With technical software tests, you can for example check whether a function behaves correctly for multiple input data types and produces errors and exceptions accordingly. With a scientific test, you could compare the outcome of a function to known experimental results. 
 
 The following questions can help you decide what to test in your software:
@@ -83,7 +64,6 @@ The following questions can help you decide what to test in your software:
 - How does the software behave at boundary conditions and extreme values of input parameters?
 - How does the software perform under varying workloads and dataset sizes, and is it scalable for large-scale simulations or data processing tasks?
 - How do I compare the software's results against existing literature, experimental data, or validated simulations to validate their accuracy?
-
 
 ### Types of tests
 In writing tests for research software, we can differentiate between four types of tests: **unit tests**, **integration tests**, **regression tests**, and **end-to-end tests**.
@@ -123,11 +103,10 @@ For more complex integration, regression, or end-to-end tests, it can be useful 
 
 ::: {.callout-tip}
 ## Tips and good practices
-- Choose descriptive and meaningful names for your test files and functions that clearly indicate what aspect of the code they are testing. For example, tests for the function `draw_random_number()` should be contained in the file `test_draw_random_number.py`. This file will then contain all tests for this function.
 - Large functions are difficult to test. Aim to write modular code consisting of small functions.
 - Ensure that each test case is independent and does not rely on the state of other tests or external factors.
 - Limit the number of assert statements per test. The execution of a test function is terminated after an assert statement fails.
-- Aim for comprehensive test coverage to ensure that critical parts of your codebase are thoroughly tested. A good benchmark is to test at least 70% of your code base with unit tests.
-- Design tests to run quickly to encourage frequent execution during development and continuous integration.
+- Aim for comprehensive test coverage to ensure that **critical parts** of your codebase are thoroughly tested. A good benchmark is to test at least 70% of your code base with unit tests.
+- Design tests to run quickly to encourage frequent execution during development and continuous integration. A test that takes a long time to run is less likely to be executed frequently.
 - Store your tests in a separate folder, either in the root of your repository called `tests/` or in `src/tests/`.
 :::
