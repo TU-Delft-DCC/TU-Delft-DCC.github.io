@@ -80,7 +80,7 @@ print(data)  # ['A'] - Output depends on previous calls
 ### Solutions
 
 #### 1. Separate pure and non-pure functions
-Keep business logic (pure) separate from side-effect operations (non-pure).
+Keep your computational logic (pure) separate from side-effect operations (non-pure).
 
 ```python
 def process_data(data):  # Pure function: no external state modification
