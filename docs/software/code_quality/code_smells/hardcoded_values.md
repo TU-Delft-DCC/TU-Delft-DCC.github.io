@@ -93,7 +93,7 @@ def check_temperature(temperature, hot_threshold=HOT_THRESHOLD, cold_threshold=C
 ```
 
 ## Example - Rigid code
-THis simulation hard-codes the time step and duration, making it rigid.
+This simulation hard-codes the time step and duration, making it rigid.
 
 ```python
 def run_simulation():
@@ -140,7 +140,7 @@ config = load_config()
 run_simulation(config['simulation']['step_size'], config['simulation']['total_time'])
 ```
 
-#### Key takeaways
+## Key takeaways
 - Use named constants for improved readability.
 - Externalize configuration values to allow easy adjustments without modifying the source code.
 - Configuration files or classes can further improve maintainability and reproducibility.

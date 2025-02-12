@@ -89,7 +89,7 @@ To solve this problem, we can do one or both of the following:
 2. **Use Objects to Group Related Data:** Instead of passing many individual pieces of information, we can group them together into one object or structure that holds related information.
 
 
-### 1. Using a Dataclass
+#### 1. Using a Dataclass
 ```python
 from dataclasses import dataclass
 
@@ -127,7 +127,7 @@ process_machine_operation(operation_data)
 You can combine dataclasses with data validation through [**Pydantic**](https://docs.pydantic.dev/latest/).
 :::
 
-### 2. Divide and conquer
+#### 2. Divide and conquer
 
 Although using a single dataclass is a good start, we don’t want our data structure to become too big and complicated. If the dataclass starts holding too much data, it can make the code harder to understand. Instead, we can break it into smaller, simpler data classes that work together. For example:
 

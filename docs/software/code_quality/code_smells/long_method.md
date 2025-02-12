@@ -141,7 +141,7 @@ def read_from_pickle(filepath: str): pass
 def read_from_csv(filepath: str): pass
 ```
 
-### Key takeaways
+## Key takeaways
 - Breaking a long method into smaller, well-named helper functions makes the code easier to read and understand.
 – Each function now has a single responsibility, reducing complexity and making future modifications more manageable.
 – With isolated functions, individual components can be tested independently, leading to more reliable and maintainable code.

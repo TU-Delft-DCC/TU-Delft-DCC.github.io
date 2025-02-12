@@ -91,9 +91,10 @@ tof_mars_probe = time_of_flight(300, np.pi/6, gravity=3.71)  # Gravity adjusted 
 ## Key takeaways
 - Extracting common functionality into functions or methods can help reduce duplication and improve code reuse.
 
-
+<!-- 
 :::{.callout-note appearance="simple" icon="false"}
 ## {{< fa signs-post >}} Learn more
 
 
 :::
+ -->
