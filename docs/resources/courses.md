@@ -1,9 +1,9 @@
 ---
 # Insert this YAML header (including the opening and closing ---) at the beginning of the document and fill it out accordingly
 
-# We use this key to indicate the last reviewed date [manual entry, use MM/DD/YYYY]
+# We use this key to indicate the last reviewed date [manual entry, use YYYY-MM-DD]
 # Uncomment and populate the next line accordingly
-#date: MM/DD/YYYY
+#date: YYYY-MM-DD
 
 # We use this key to indicate the last modified date [automatic entry]
 date-modified: last-modified
@@ -76,7 +76,7 @@ The TU Delft organises courses for researchers on data management, research soft
 
 
 ```{=html}
-<a href="https://www.tudelft.nl/library/research-data-management/r/training-evenementen/training-voor-onderzoekers/coderefinery-workshops" class="btn btn-primary btn-block text-white">Sign up</a>
+<a href="https://www.tudelft.nl/en/library/research-data-management/r/training-events/training-for-researchers/coderefinery-workshops-good-practices-in-research-software-development" class="btn btn-primary btn-block text-white">Sign up</a>
 ```
 :::
 :::

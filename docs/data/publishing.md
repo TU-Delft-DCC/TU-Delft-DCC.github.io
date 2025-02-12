@@ -1,9 +1,9 @@
 ---
 # Insert this YAML header (including the opening and closing ---) at the beginning of the document and fill it out accordingly
 
-# We use this key to indicate the last reviewed date [manual entry, use MM/DD/YYYY]
+# We use this key to indicate the last reviewed date [manual entry, use YYYY-MM-DD]
 # Uncomment and populate the next line accordingly
-#date: MM/DD/YYYY
+#date: YYYY-MM-DD
 
 # We use this key to indicate the last modified date [automatic entry]
 date-modified: last-modified
@@ -57,6 +57,6 @@ If you would like to publish your data collection in 4TU.ResearchData or another
 To prepare the data, see [TU Delft Library recommendations](https://www.tudelft.nl/en/library/research-data-management/r/manage/collect-and-document) regarding data documentation:
 
 - Make sure to include metadata document in the data package. Follow 4TU.ResearchData guide on writing [README](https://data.4tu.nl/s/documents/Guidelines_for_creating_a_README_file.pdf) file.
-- For tabular data, consider creating a [code book](https://ddialliance.org/training/getting-started-new-content/create-a-codebook).  
+- For tabular data, consider creating a codebook.
 - Determine whether there is a defined/ preferred metadata standard for your discipline and follow the standard. You can browse through existing standards [here](https://fairsharing.org/).  
 - Consider the file format of the data. Data repositories might have preferred file formats, that ensure interoperability  and long-term preservation of the files. See the list of [4TU.ResearchData preferred file formats](https://data.4tu.nl/s/documents/Preferred_File_Formats_2019.pdf) or [UK Data Archive recommended and acceptable file formats](https://ukdataservice.ac.uk/learning-hub/research-data-management/format-your-data/recommended-formats/). The list might vary by repository, so it is important to cross-reference your file formats with the list of recommended formats of the repository of your choice.
