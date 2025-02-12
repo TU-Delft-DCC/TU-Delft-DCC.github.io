@@ -25,7 +25,7 @@ title: Commented-out code
 
 # Authors of the document, will not be parsed [manual entry]
 # Uncomment and populate the next lines accordingly
-#author_1: Name Surname
+author_1: Maurits Kok
 #author_2:
 
 # Maintainers of the document, will not be parsed [manual entry]
