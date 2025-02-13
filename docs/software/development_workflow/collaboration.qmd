@@ -1,0 +1,130 @@
+---
+# Insert this YAML header (including the opening and closing ---) at the beginning of the document and fill it out accordingly
+
+# We use this key to indicate the last reviewed date [manual entry, use YYYY-MM-DD]
+# Uncomment and populate the next line accordingly
+#date: YYYY-MM-DD
+
+# We use this key to indicate the last modified date [automatic entry]
+date-modified: last-modified
+
+# Do not modify
+lang: en
+language: 
+  title-block-published: "Last reviewed"
+  title-block-modified: "Last modified"
+
+# Title of the document [manual entry]
+# Uncomment and populate the next line accordingly
+title: Collaboration
+
+# Brief overview of the document (will be used in listings) [manual entry]
+# Uncomment and populate the next line and uncomment "hide-description: true".
+#description: Short description of the document
+#hide-description: true
+
+# Authors of the document, will not be parsed [manual entry]
+# Uncomment and populate the next lines accordingly
+author_1: Elviss Dvinskis
+author_2: Maurits Kok
+
+# Maintainers of the document, will not be parsed [manual entry]
+# Uncomment and populate the next lines accordingly
+maintainer_1: Elviss Dvinskis
+#maintainer_2:
+
+# To whom reach out regarding the document, will not be parsed [manual entry]
+# Uncomment and populate the next line accordingly
+corresponding: Elviss Dvinskis
+
+# Meaningful keywords, newline separated [manual entry]
+# Uncomment and populate the next line and list accordingly
+#categories: 
+# - collaboration
+# - forks
+# - pull requests
+# - github flow
+# - branches
+
+---
+
+Effective collaboration is a fundamental aspect of any successful software development project.
+
+**Key points:**
+
+1. **Identifying your collaboration needs:** Understand the specific requirements of your project that necessitate collaboration.
+1. **Setting up a contribution workflow:** Establish clear guidelines for how contributors can participate in your project.
+1. **Documenting the workflow!:** Ensure that your collaborative workflow is well-documented.
+
+## Collaborative workflow
+
+Following the GitHub Flow model, everything starts from the `main` branch. Developers can create feature branches from the main branch to isolate their work. Once ready, changes are merged back to `main`. 
+
+::: {.callout-tip appearance="simple"}
+## Workflow variations
+While the GitHub Flow workflow focuses on `main`, some opt for a hybrid approach to include a `develop` branch either as a staging area for pre-release testing or ongoing integration (aggregating features before merging to `main`). This approach borrows elements from GitFlow  (e.g., a long-lived `develop` branch) without adopting its full branching model.
+:::
+
+A common workflow in a collaborative development project.
+
+1. **Create a feature branch:** Start by creating a new branch of the `main` branch (or `develop` if used). This branch should have a descriptive name to give an idea of the work that will be done, such as a new feature or a bug fix. This separation allows you to work independently without affecting the main codebase.
+2. **Make changes and commit:** Work on your branch, making the necessary changes to the code. Commit these changes with clear, descriptive messages.
+3. **Open a pull request:** Once you have made your changes, open a pull request (PR). PRs allow for discussion, review, and additional changes if necessary. 
+4. **Review:** Before merging, your changes might go through a review process where other team members can give feedback. Some projects may require a review before merging is allowed.
+5. **Merge:** Finally, once your changes are reviewed and tested, you can merge the pull request into `main` (or `develop`, if applicable). This incorporates your contributions into the project, making them part of the official codebase.
+6. **Delete feature branch:** Feature branches should be short-lived, thus avoiding potential conflicts due to the divergence of the code.
+
+::: {.callout-note collapse="true"} 
+## Sequence diagram of workflow 
+```{mermaid}
+sequenceDiagram
+    participant A as Author
+    participant R as Reviewer
+    A->>A: Write some code in your branch or fork
+    A->>R: Open a pull request
+    R->>R: Add comments to a review
+    R->>A: Submit a review
+    loop Until approved
+        A->>R: Address or respond to review comments
+        R->>A: Clarify or resolve comments
+    end
+    R->>A: Approve pull request
+    A->>A: Merge pull request
+    A->>A: Delete branch
+```
+:::
+
+### Forking
+External collaborators who do not have the same administrative rights to the repository can fork the project. They make their changes on their forked repository in a new feature branch. Steps 3-5 remain the same.
+
+::: {.callout-tip appearance="simple"}
+## Create "Draft" Pull Requests!
+
+With Draft PR's you:
+
+- want to signal that a pull request is just the start of the conversation and your code isn’t in any state to be judged.
+- or have no intention of ever merging it, but you’d still like people to check it out locally and give you feedback.
+- or opened a pull request without any code at all in order to get the discussion started.
+:::
+
+### Conflict resolution
+
+Conflicts occur when two or more changes compete with each other, typically during a merge or rebase operation in Git. With pull requests, code reviews and testing you can catch potential conflicts before they are merged into the main codebase. 
+
+Conflicts usually come up and are resolved during a pull request:
+
+1. **Review Conflicts:** When a conflict is detected in a pull request, GitHub will alert you. Start by reviewing the conflicting files to understand the nature of the conflict.
+2. **Pull and Merge Locally:** Fetch the latest changes from the `main` branch and attempt to merge them into your `feature/develop` branch locally. This will allow you to resolve conflicts on your local machine.
+3. **Resolve Conflicts:** This might involve choosing one change over another or merging the changes manually.
+4. **Test Changes:** After resolving conflicts, thoroughly test your changes to ensure that the merged code works as expected.
+5. **Commit and Push:** Once conflicts are resolved and changes are tested, commit the resolved conflicts and push your changes back to the `feature/develop` branch on GitHub.
+6. **Complete the Pull Request:** After resolving conflicts and pushing your changes, review the pull request again to ensure everything is in order. If all checks pass and your team approves the changes, you can complete the merge into the `main` branch.
+
+Effective conflict resolution ensures that changes can be integrated smoothly and that the project remains on track. Conflicts cannot always be avoided, but they can be managed. Clear communication and adherence to established practices is the way to go.
+
+::: {.callout-note appearance="simple" icon=false}
+## {{< fa signs-post >}} Learn more
+- For more information on Draft PRs - [Introducing Draft Pull Requests](https://github.blog/2019-02-14-introducing-draft-pull-requests/).
+- [GitHub - Resolving a merge conflict](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/addressing-merge-conflicts/resolving-a-merge-conflict-on-github)
+- Code Refinery - [Lesson on conflict resolution](https://coderefinery.github.io/git-intro/conflicts/)
+:::
