@@ -154,7 +154,7 @@ website:
                   href: docs/software/development_workflow/project_management.md
                 - text: Project organisation
                   href: docs/software/development_workflow/project_organisation.md
-                - section: Branch management
+                - text: Branch management
                   href: docs/software/development_workflow/branch_management.md
                 - text: Collaboration
                   href: docs/software/development_workflow/collaboration.md
