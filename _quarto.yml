@@ -10,6 +10,7 @@ project:
     - "CONTRIBUTING.md"
     - "CODE_OF_CONDUCT.md"
     - "docs/**/*.md"
+    - "docs/**/*.qmd"
     # Do not render
     - "!_under_development/**"
     - "!slides/**"
@@ -154,10 +155,12 @@ website:
                   href: docs/software/development_workflow/project_management.md
                 - text: Project organisation
                   href: docs/software/development_workflow/project_organisation.md
+                - text: Environments and dependencies
+                  href: docs/software/development_workflow/envs_dependencies.md
                 - text: Branch management
-                  href: docs/software/development_workflow/branch_management.md
+                  href: docs/software/development_workflow/branch_management.qmd
                 - text: Collaboration
-                  href: docs/software/development_workflow/collaboration.md
+                  href: docs/software/development_workflow/collaboration.qmd
             - section: "Documentation"
               href: docs/software/documentation/index.md
               contents:
