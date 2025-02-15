@@ -3,7 +3,7 @@
 
 # We use this key to indicate the last reviewed date [manual entry, use YYYY-MM-DD]
 # Uncomment and populate the next line accordingly
-#date: YYYY-MM-DD
+date: 2025-02-14
 
 # We use this key to indicate the last modified date [automatic entry]
 date-modified: last-modified
@@ -16,7 +16,7 @@ language:
 
 # Title of the document [manual entry]
 # Uncomment and populate the next line accordingly
-title: Version control with Git
+title: Environment and dependency management in MATLAB
 
 # Brief overview of the document (will be used in listings) [manual entry]
 # Uncomment and populate the next line and uncomment "hide-description: true".
@@ -25,8 +25,8 @@ title: Version control with Git
 
 # Authors of the document, will not be parsed [manual entry]
 # Uncomment and populate the next lines accordingly
-#author_1: Name Surname
-#author_2:
+author_1: Maurits Kok
+author_2: Elviss Dvinskis
 
 # Maintainers of the document, will not be parsed [manual entry]
 # Uncomment and populate the next lines accordingly
@@ -40,21 +40,12 @@ title: Version control with Git
 # Meaningful keywords, newline separated [manual entry]
 # Uncomment and populate the next line and list accordingly
 #categories: 
-# - 
-# - 
+# - matlab
+# - environments
+# - dependencies
 
 ---
 
-Using a version control system provides better management to your code. It allows tracing back changes made, facilitates collaboration and dissemination of the code files. As using a version control system is becoming standard, some scientific journals (e.g. Science and Nature) require code used for modelling or data analysis to be available in a publicly accessible repository. Git is the most popular and commonly used version control software.   
+MATLAB does not use virtual environments in the same sense as Python, but it allows for setting up paths and toolboxes that act similarly by organizing and encapsulating project-specific functions and scripts. Dependency management in MATLAB often involves ensuring the correct toolboxes are licensed and available, and using MATLAB's Project feature to manage and share paths and environments with others.
 
-Following are the different ways in which you can learn version control with Git: 
-
-- [Sign up](https://www.tudelft.nl/library/research-data-management/r/training-evenementen/training-voor-onderzoekers/software-carpentry-workshops) for the software carpentry workshop (free of cost) at TU Delft.  
-
-- Learn at your own pace using the publicly available training material from the [Software Carpentry](https://swcarpentry.github.io/git-novice/) and [Code Refinery](https://coderefinery.github.io/git-intro/)
-
-- Use the [Repository Template](https://github.com/manuGil/fair-code) to make your code more compliant with FAIR principles 
-
-<!-- ## Table of contents
-```{tableofcontents}
-``` -->
+MATLAB toolbox requirements can be found with the function [**`requiredfilesandproducts`**](https://nl.mathworks.com/help/matlab/ref/matlab.codetools.requiredfilesandproducts.html) or with the [**Dependency Analyzer**](https://nl.mathworks.com/help/matlab/matlab_prog/analyze-project-dependencies.html).
