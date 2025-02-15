@@ -69,7 +69,7 @@ Structuring your project.
 :::
 
 ::: {.feature}
-### {{< fa cube >}} Environments and Dependencies
+### {{< fa cubes >}} Environments and Dependencies
 Managing your environments and dependencies.
 
 ::: {.learn-more}
