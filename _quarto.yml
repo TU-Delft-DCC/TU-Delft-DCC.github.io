@@ -155,8 +155,15 @@ website:
                   href: docs/software/development_workflow/project_management.md
                 - text: Project organisation
                   href: docs/software/development_workflow/project_organisation.md
-                - text: Environments and dependencies
+                - section: Environments and dependencies
                   href: docs/software/development_workflow/envs_dependencies.md
+                  contents:
+                    - text: Python
+                      href: docs/software/development_workflow/envs_dependencies/python_envs_dependencies.md
+                    - text: R
+                      href: docs/software/development_workflow/envs_dependencies/r_envs_dependencies.md
+                    - text: MATLAB
+                      href: docs/software/development_workflow/envs_dependencies/matlab_envs_dependencies.md
                 - text: Branch management
                   href: docs/software/development_workflow/branch_management.qmd
                 - text: Collaboration
