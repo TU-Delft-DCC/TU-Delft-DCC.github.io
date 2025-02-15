@@ -151,7 +151,7 @@ _Optional_
 - [ ] [Continuous Integration](https://the-turing-way.netlify.app/reproducible-research/ci/ci-options.html) for automated build and release
 :::
 
-## Example repositories
+### Example repositories
 * [eScience Center - matchms](https://github.com/matchms/matchms) - Matchms is an open-source Python package to import, process, clean, and compare mass spectrometry data.
 * [TU Delft - Transposonmapper](https://github.com/SATAY-LL/Transposonmapper) - Transposonmapper is an open-source python package and Docker image for mapping transposons from sequencing data.
 
@@ -164,5 +164,5 @@ For more information on the principles behind FAIR software, please have a look 
 - [FAIR Principles for Research Software](https://zenodo.org/records/6623556)
 :::
 
-## Acknowledgements
+### Acknowledgements
 The checklist was in part based on the checklist provided by the [eScience Center](https://guide.esciencecenter.nl/#/nlesc_specific/checklist_matrix), licensed under CC BY 4.0.

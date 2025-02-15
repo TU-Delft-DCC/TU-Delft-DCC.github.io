@@ -41,7 +41,7 @@ categories:
 
 Add the cards below as issues to your repository to track the progress of adopting the best practices for FAIR research software.
 
-## **Version Control**
+### **Version Control**
 
 ```md
 _Essential_
@@ -55,7 +55,7 @@ _Recommended_
 - [ ] Use [meaningful commit messages](https://www.git-scm.com/book/en/v2/Distributed-Git-Contributing-to-a-Project#_commit_guidelines)
 ```
 
-## **Collaboration**
+### **Collaboration**
 
 ```md
 _Essential_  
@@ -66,7 +66,7 @@ _Recommended_
 - [ ] [Code of conduct](https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contributions/adding-a-code-of-conduct-to-your-project)
 ```
 
-## **Project documentation**
+### **Project documentation**
 
 ```md
 _Essential_  
@@ -75,7 +75,7 @@ _Essential_
 - [ ] [CITATION](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-citation-files)
 ```
 
-## **Software documentation**
+### **Software documentation**
 
 ```md
 _Essential_  
@@ -94,7 +94,7 @@ _Optional_
 - [ ] Hosting ([GitHub Pages](https://pages.github.com/), [Readthedocs](https://readthedocs.org/))
 ```
 
-## **Software testing**
+### **Software testing**
 
 ```md
 _Essential_
@@ -109,7 +109,7 @@ _Optional_
 - [ ] Code coverage check (e.g. [Sonarcloud](https://sonarcloud.io/), [codecov](https://about.codecov.io))
 ```
 
-## **Software quality**
+### **Software quality**
 
 ```md
 _Essential_
@@ -127,7 +127,7 @@ _Recommended for Python_
 - [ ] Use a formatter (e.g. [black](https://github.com/psf/black))
 ```
 
-## **Releases**
+### **Releases**
 
 ```md
 _Essential_  
