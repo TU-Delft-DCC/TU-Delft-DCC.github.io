@@ -212,11 +212,6 @@ website:
               contents:
                 - text: Testing with MATLAB
                   href: docs/software/testing_matlab.md
-            - section: "Version control"
-              href: docs/software/git/intro.md
-              contents:
-                - text: Branch management
-                  href: docs/software/git/branch_management.md
             - section: "Working with containers"
               href: docs/software/containers/intro.md
               contents:
