@@ -1,9 +1,9 @@
 ---
 # Insert this YAML header (including the opening and closing ---) at the beginning of the document and fill it out accordingly
 
-# We use this key to indicate the last reviewed date [manual entry, use MM/DD/YYYY]
+# We use this key to indicate the last reviewed date (yyyy-mm-dd)
 # Uncomment and populate the next line accordingly
-#date: MM/DD/YYYY
+date: 2025-02-18
 
 # We use this key to indicate the last modified date [automatic entry]
 # date-modified: last-modified
@@ -30,22 +30,22 @@ author_2:
 
 # Maintainers of the document, will not be parsed [manual entry]
 # Uncomment and populate the next lines accordingly
-#maintainer_1: Name Surname
+maintainer_1: Elviss Dvinskis
 #maintainer_2:
 
 # To whom reach out regarding the document, will not be parsed [manual entry]
 # Uncomment and populate the next line accordingly
-#corresponding: Name Surname
+corresponding: Elviss Dvinskis
 
 # Meaningful keywords, newline separated [manual entry]
 # Uncomment and populate the next line and list accordingly
 #categories: 
-# - 
-# - 
+# - fair
+# - data
 
 ---
 
-FAIR data stands for **Findable, Accessible, Interoperable, and Reusable** dataâ€”principles essential for ensuring that research data can be efficiently and sustainably used and reused. Beyond meeting funding and publishing requirements, FAIR data enhances research reliability, impact, and visibility, creating new collaboration opportunities for researchers.
+The goal of the FAIR principles is to improve research transparency, reproducibility and reusability. FAIR data enhances research reliability, impact, and visibility, creating new collaboration opportunities for researchers. The acronym FAIR stands for:
 
 - **Findable**: Data should be findable by users. A straightforward and reliable way to achieve this is by depositing data in a repository with appropriate metadata, tags, and identifiers to improve searchability.
 
@@ -55,4 +55,4 @@ FAIR data stands for **Findable, Accessible, Interoperable, and Reusable** dataâ
 
 - **Reusable**: For data to be reusable, users must understand what the data represents, the information it contains, and how to interpret its structure and format. Good documentation and an appropriate license are key in reusability, as these enable others to understand and work with your dataset, especially upon publication.
 
-Choosing a repository for publishing your data depends on factors such as storage costs, funding or publication requirements, and security needs. TU Delft provides an in-house data repository, [4TU.ResearchData](https://data.4tu.nl/), as one of many available options. You can read more about publishing data at TU Delft in [Publishing](publishing.md) section. 
+Choosing a repository for publishing your data depends on factors such as storage costs, funding or publication requirements, and security needs. TU Delft provides an in-house data repository, [4TU.ResearchData](https://data.4tu.nl/), as one of many available options. You can read more about publishing data at TU Delft in [Publishing](publishing.md) section.
