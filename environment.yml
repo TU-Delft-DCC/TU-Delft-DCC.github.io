@@ -1,0 +1,5 @@
+name: dcc_guides
+channels:
+  - conda-forge
+dependencies:
+  - quarto
