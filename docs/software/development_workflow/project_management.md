@@ -53,14 +53,17 @@ Git is a distributed version control system that allows developers to track chan
 
 The choice between GitHub, GitLab and Bitbucket depends on your feature, privacy and other preferences, but they all are Git-based platforms for version control. While numerous detailed comparisons exist online, here we will focus on GitHub.
 
-:::{.callout-important appearance="simple"}
-## TU Delft GitLab
+::: {.callout-important appearance="simple" icon="false"}
+## {{< fa info-circle >}} TU Delft GitLab
+
 TU Delft has its own [GitLab instance](https://gitlab.tudelft.nl/) hosted on campus. For more information, please visit the [documentation](https://gitlab.tudelft.nl/help) and our TU Delft GitLab guides in the [Computing Infrastracture](../../infrastructure/getting_started.md) section.
 :::
 
 Similarly, whether you are using a version control system through your terminal or IDE, or using a GUI like GitHub Desktop, the core functionality remains the same.
 
-:::{.callout-tip appearance="simple"}
+::: {.callout-tip appearance="simple" icon="false"}
+## {{< fa lightbulb >}} Tip
+
 GitHub Desktop is a great choice if you are just starting out with version control. It provides a user-friendly graphical interface that simplifies Git operations. It makes it easy to visualize changes, create branches, and manage pull requests without needing to use command-line Git commands.
 :::
 
@@ -103,7 +106,8 @@ Getting started this way would be similar to this:
 
 Issues are a fundamental component of project management on GitHub, serving as a versatile tool for tracking tasks, bugs, feature requests, and more.
 
-:::{.callout-tip appearance="simple"}
+::: {.callout-tip appearance="simple" icon="false"}
+## {{< fa lightbulb >}} 
 
 Integrating issues with project boards streamlines the tracking of tasks from beginning to end, ensuring each task is closely monitored and helping you achieve your set milestones.
 
@@ -130,7 +134,8 @@ You can effectively use GitHub Issues to manage your project, improve collaborat
 
 Project boards on GitHub are designed for planning, organizing, and tracking work within a project. They serve as visual management interfaces that integrate directly with GitHub issues and pull requests. Project boards can be configured as kanban boards, tables, or roadmaps, offering various layouts to suit different project management needs.
 
-:::{.callout-tip appearance="simple" }
+::: {.callout-tip appearance="simple" icon="false"}
+## {{< fa lightbulb >}}
 Project boards can be particularly useful for visualizing the overall progress of your project and identifying bottlenecks in your workflow. They provide a high-level view that complements the detailed tracking offered by issues.
 :::
 
@@ -154,8 +159,10 @@ To qualify for the benefits, you must:
 - Be an educator, faculty member, or researcher at a recognized educational institution
 - Be able to provide documentation from your school which demonstrates your current employment status
 
-:::{.callout-important appearance="simple"}
-[Application page](https://education.github.com/discount_requests/application)
+::: {.callout-important appearance="simple" icon="false"}
+## {{< fa info-circle >}}  [Application page](https://education.github.com/discount_requests/application)
+
+
 :::
 
 Moreover, *Organizations* can access a tier above the free plan. The GitHub Team plan is available at no cost for accredited educational institutions. You can view the benefits included with the Team plan [here](https://github.com/pricing).

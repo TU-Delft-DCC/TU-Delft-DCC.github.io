@@ -95,8 +95,8 @@ your_project/
 └── LICENSE                   # License information
 ```
 
-::: {.callout-tip appearance="simple"}
-## Choosing layout
+::: {.callout-tip appearance="simple" icon="false"}
+## {{< fa lightbulb >}} Choosing layout
 - [Choosing between a `src/` layout and a flat layout for Python](https://packaging.python.org/en/latest/discussions/src-layout-vs-flat-layout/)
 :::
 
@@ -163,10 +163,14 @@ This structure is a guideline and can be adapted based on the specific needs and
 
 - Particular metadata files are often capitalized, such as README, LICENSE, CONTRIBUTING, CODE_OF_CONDUCT, CHANGELOG, CITATION.cff, NOTICE, and MANIFEST.
 - Generally, all content that is generated upon build or runtime processes should be added to `.gitignore`. This likely includes the content of `processed_data` and `results` folder.
+- Git cannot track empty folders. If you want to add empty folders to enforce a folder structure, e.g., `processed_data` or`results`, add the file `.gitkeep` to the folder.
+
+:::{.callout-warning appearance="simple" icon="false"}
+## {{< fa warning >}} **Warning**
 - If your raw data files or any data assets are large (typically more than a few megabytes), it’s usually best not to include them directly in the repository. Instead:
     - Keep such files externally (e.g. cloud storage, Git LFS), and add only a reference or a small sample to the repository.
     - Adding placeholder files or instructions in the README for how to obtain the complete datasets.
-- Git cannot track empty folders. If you want to add empty folders to enforce a folder structure, e.g., `processed_data` or`results`, add the file `.gitkeep` to the folder.
+:::
 
 
 
@@ -232,8 +236,9 @@ To update the submodules to the latest commit use: `git submodule update --remot
 
 You can also point to a specific commit within a submodule by navigating to the submodule's directory and using: `git checkout <specific-commit>`, and then committing the change to the main repository.
 
-::: {.callout-tip appearance="simple"}
-## Tip
+::: {.callout-tip appearance="simple" icon="false"}
+## {{< fa lightbulb >}} Tip
+
 You can use the shorthand command that automatically clones, initializes, and updates all the submodules: `git clone --recurse-submodules <repo-url>`
 
 :::
