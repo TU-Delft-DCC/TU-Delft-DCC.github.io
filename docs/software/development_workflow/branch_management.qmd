@@ -48,8 +48,8 @@ corresponding: Elviss Dvinskis
 
 Branch management is essential for collaborative software development in version-controlled environments. The core advantage of branching is that it provides separate, dedicated environments for code development, independent of the main codebase. This approach enables parallel development streams, allowing for experimentation and modification without impacting the stable main version of the project. This approach is also valuable for projects with just one developer!
 
-::: {.callout-tip appearance="simple"}
-## Consideration
+::: {.callout-tip appearance="simple" icon="false"}
+## {{< fa lightbulb >}} Consideration
 
 For open source projects, details about the branching strategy, how to collaborate and contribute can be communicated in the repository's **contributing guidelines** in the file `CONTRIBUTING.md`.
 

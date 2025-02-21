@@ -107,9 +107,7 @@ Getting started this way would be similar to this:
 Issues are a fundamental component of project management on GitHub, serving as a versatile tool for tracking tasks, bugs, feature requests, and more.
 
 ::: {.callout-tip appearance="simple" icon="false"}
-## {{< fa lightbulb >}} 
-
-Integrating issues with project boards streamlines the tracking of tasks from beginning to end, ensuring each task is closely monitored and helping you achieve your set milestones.
+{{< fa lightbulb >}} Integrating issues with project boards streamlines the tracking of tasks from beginning to end, ensuring each task is closely monitored and helping you achieve your set milestones.
 
 :::
 
@@ -135,8 +133,7 @@ You can effectively use GitHub Issues to manage your project, improve collaborat
 Project boards on GitHub are designed for planning, organizing, and tracking work within a project. They serve as visual management interfaces that integrate directly with GitHub issues and pull requests. Project boards can be configured as kanban boards, tables, or roadmaps, offering various layouts to suit different project management needs.
 
 ::: {.callout-tip appearance="simple" icon="false"}
-## {{< fa lightbulb >}}
-Project boards can be particularly useful for visualizing the overall progress of your project and identifying bottlenecks in your workflow. They provide a high-level view that complements the detailed tracking offered by issues.
+{{< fa lightbulb >}} Project boards can be particularly useful for visualizing the overall progress of your project and identifying bottlenecks in your workflow. They provide a high-level view that complements the detailed tracking offered by issues.
 :::
 
 

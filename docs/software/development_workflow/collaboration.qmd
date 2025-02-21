@@ -60,8 +60,8 @@ Effective collaboration is a fundamental aspect of any successful software devel
 
 Following the GitHub Flow model, everything starts from the `main` branch. Developers can create feature branches from the main branch to isolate their work. Once ready, changes are merged back to `main`. 
 
-::: {.callout-tip appearance="simple"}
-## Workflow variations
+::: {.callout-tip appearance="simple" icon="false"}
+## {{< fa lightbulb >}} Workflow variations
 While the GitHub Flow workflow focuses on `main`, some opt for a hybrid approach to include a `develop` branch either as a staging area for pre-release testing or ongoing integration (aggregating features before merging to `main`). This approach borrows elements from GitFlow  (e.g., a long-lived `develop` branch) without adopting its full branching model.
 :::
 
@@ -97,9 +97,8 @@ sequenceDiagram
 ### Forking
 External collaborators who do not have the same administrative rights to the repository can fork the project. They make their changes on their forked repository in a new feature branch. Steps 3-5 remain the same.
 
-::: {.callout-tip appearance="simple"}
-## Create "Draft" Pull Requests!
-
+::: {.callout-tip appearance="simple" icon="false"}
+## {{< fa lightbulb >}} **Create "Draft" Pull Requests!**
 With Draft PR's you:
 
 - want to signal that a pull request is just the start of the conversation and your code isn’t in any state to be judged.
