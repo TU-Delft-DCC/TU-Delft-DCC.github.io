@@ -149,11 +149,21 @@ website:
               href: docs/software/documentation/index.md
               contents:
                 - text: README
-                  href: docs/software/documentation/readme.md
-                - text: CITATION.cff
-                  href: docs/software/documentation/citation.md
-                - text: Software license
+                  href: docs/software/documentation/write_a_readme.md
+                - text: Software licenses
                   href: docs/software/documentation/license.md
+                - text: CITATION
+                  href: docs/software/documentation/citation.md
+                - text: Code documentation
+                  href: docs/software/documentation/comments_docstrings_api.md
+                - text: Tooling
+                  href: docs/software/documentation/tooling.md
+                - text: Hosting
+                  href: docs/software/documentation/hosting.md
+                - text: Contributing guidelines
+                  href: docs/software/documentation/contributing_guidelines.md
+                - text: Code of conduct
+                  href: docs/software/documentation/code_of_conduct.md
             - section: "Code quality"
               href: docs/software/code_quality/index.md
               contents:
