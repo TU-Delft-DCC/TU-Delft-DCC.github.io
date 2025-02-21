@@ -112,6 +112,11 @@ pip freeze > requirements.txt
 ```
 This provides a snapshot of your dependencies.
 
+::: {.callout-tip appearance="simple" icon="false"}
+## {{< fa lightbulb >}} Tip
+You can use [`pip-chill`](https://pypi.org/project/pip-chill/) instead of `pip freeze` to generate a cleaner `requirements.txt` that lists only your explicitly installed packages, excluding OS-specific dependencies and sub-dependencies. This avoids bloat and ensures reproducibility across environments while allowing version flexibility.
+:::
+
 **To deactivate:**
 ```bash
 deactivate
@@ -165,6 +170,7 @@ Tools like `poetry` and `pipenv` provide a more sophisticated dependency managem
 - [virtualenvwrapper extension](https://virtualenvwrapper.readthedocs.io/en/latest/)
 - [pipenv documentation](https://pipenv.pypa.io/en/latest/)
 - [poetry documentation](https://python-poetry.org/docs/)
+- [pip-chill on PyPI](https://pypi.org/project/pip-chill/)
 :::
 
 
