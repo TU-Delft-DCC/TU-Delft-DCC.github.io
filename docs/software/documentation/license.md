@@ -14,7 +14,7 @@ language:
   title-block-modified: "Last modified"
 
 # Title of the document [manual entry]
-title: Software license
+title: Software licenses
 
 # Short description of the document, will be used in the listing
 description: Licensing software developed at TU Delft
@@ -38,7 +38,7 @@ categories:
 
 ---
 
-:::{.callout-note}
+:::{.callout-important}
 ## **Important**
 For questions about data and software licenses, please consult your [Faculty Data Steward](https://www.tudelft.nl/library/research-data-management/r/support/data-stewardship/contact).
 :::
@@ -85,22 +85,22 @@ TU Delft staff members can apply for an open-source license according to the dec
 1. **MIT:** Very simple and permissive, allowing almost unrestricted reuse. The software can be freely used, modified, distributed, and sublicensed. 
 2. **BSD:** Similar to the MIT license, but it may include additional attribution requirements.
 
-:::{.callout-note collapse="true"}
-### BSD license details
+:::{.callout-note appearance="simple" icon="false" collapse="true"}
+### {{< fa info-circle >}} BSD license details
 - ***Attribution:*** Requires that the copyright notice and list of conditions be included in all copies or substantial portions of the software (except for the BSD 0-Clause License, which does not require any attribution). There are different clause variants of the license. For example, a BSD 3-Clause license adds a clause preventing the use of the names of the project or its contributors to endorse or promote derived products without written permission.
 - ***Patent Protection:*** Does not include explicit provisions for patent protection.
 :::
 3. **Apache:** Allows for the use, modification, distribution, and sublicensing of the software under certain conditions. It is often used in open-source projects and is often the choice for its balance between permissiveness and the protection of patents. The Innovation and Impact Center recommends this license for industry collaborations.
 
-:::{.callout-note collapse="true"}
-### Apache license details
+:::{.callout-note appearance="simple" icon="false" collapse="true"}
+### {{< fa info-circle >}} Apache license details
 - ***Attribution:*** Requires preservation of the original copyright notice and a notice of any modifications made.
 - ***Patent Protection:*** Includes a patent retaliation clause, which provides an additional layer of protection. This clause terminates the license if the user initiates patent litigation against any entity regarding the licensed software.
 - ***Notice Requirement:*** Modifications to the original code must be documented, and a NOTICE file must be included with any substantial portions of the software.
 :::
     
-:::{.callout-tip}
-### **Key differences between a BSD and Apache license**
+:::{.callout-tip appearance="simple" icon="false"}
+### {{< fa lightbulb >}} **Key differences between a BSD and Apache license**
 - The Apache license includes a patent retaliation clause to protect against patent litigation, but the BSD license does not explicitly address patent rights.
 - The BSD license does not require a specific notice file for modifications, but the Apache License requires a NOTICE file that documents any modifications made to the original code.
 :::
@@ -109,21 +109,22 @@ TU Delft staff members can apply for an open-source license according to the dec
 1. **GPL (GNU General Public License):** One of the most widespread copyleft licenses. With the GPL license, any derivative work under this license automatically becomes subject to the same GPL terms, regardless of the size of the contribution. All future modifications and adaptions of code under this license is only compatible with this license and cannot be used in proprietary software.
 2. **Derivatives from GPL (AGPL, LGPL, EUPL)**: From these, the EUPL license is somewhat more flexible compared to others as it can coexist with other open-source software licenses such as MIT, BSD, and Apache. For instance, if you integrate a portion of software that is licensed under Apache into a project governed by EUPL, that portion can retain its Apache license. In contrast, under the GPL, the entire codebase would need to be licensed under GPL.
 
-:::{.callout-note}
- There are even instances when GPL licenses are incompatible with each other. For example, GPL-2.0 is incompatible with GPL-3.0. If a project uses GPL-2.0 you are essentially forced to use that license.
+:::{.callout-note appearance="simple" icon="false"}
+ {{< fa xmark >}} There are even instances when GPL licenses are incompatible with each other. For example, GPL-2.0 is incompatible with GPL-3.0. If a project uses GPL-2.0 you are essentially forced to use that license.
 :::
 
 ### License compatibility
 ![Compatibility of licenses. From: Bazuine, M. (2021). TU Delft Guidelines on Research Software: Licensing, Registration and Commercialisation. Zenodo. https://doi.org/10.5281/zenodo.4629635](tu_delft_license_compatibility.png){width=600 .lightbox fig-align="center"} 
 
-:::{.callout-tip}
+:::{.callout-tip appearance="simple" icon="false"}
+### {{< fa lightbulb >}} Tip
 Don't forget to check whether your software's dependencies have restrictions on re-use.
 :::
 
 It is advisable to contact your faculty's data steward regarding licensing questions. If your project involves complex legal considerations, particularly regarding intellectual property rights or compliance with licensing agreements, the Innovation and Impact Center should also be involved.
 
-::: {.callout-note}
-## **Further reading**
+:::{.callout-note appearance="simple" icon="false"}
+## {{< fa signs-post >}} **Further reading**
 
 - [TU Delft Research Software Policy](https://doi.org/10.5281/zenodo.4629662)
 - [TU Delft Guidelines on Research Software](https://zenodo.org/records/4629635) - the TU Delft Research Software Policy approved by the Executive Board
