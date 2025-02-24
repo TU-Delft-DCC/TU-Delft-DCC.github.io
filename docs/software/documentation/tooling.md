@@ -58,17 +58,17 @@ Some key features of Sphinx include:
 
 :::{.callout-tip appearance="simple" icon="false"}
 ### {{< fa lightbulb >}} Tip
-To get started with sphinx, we recommend the [Coderefinery lesson on Sphinx and Markdown](https://coderefinery.github.io/documentation/sphinx/)
+To get started with Sphinx, we recommend the [Coderefinery lesson on Sphinx and Markdown](https://coderefinery.github.io/documentation/sphinx/)
 :::
 
 1. **Install dependency:** You can [install Sphinx](https://www.sphinx-doc.org/en/master/usage/installation.html) in various ways, either through `apt-get` for Linux, Homebrew for macOS, or through Chocolatey for Windows. Assuming you have Python on your machine you can install it through `conda` or `pip`.
-2. **Setup documentation:** Create a directory for your documentation (`/docs`), and run `sphinx-quickstart` in that directory. The default answers to the questions are fine.
-3. **Configure sphinx:** Once you have the `conf.py` and `index.rst` files, you will need to modify them further. The `index.rst` file acts as the front page of your documentation and the root of the table of contents. The `conf.py` file is the main configuration file for the Sphinx documentation. It holds all your extensions and controls various aspects of the build process that can be customized to suit your needs. For example, `sphinx.ext.autodoc` is used for pulling documentation from docstrings, and `sphinx.ext.mathjax` for displaying mathematical content.
+1. **Setup documentation:** Create a directory for your documentation (`/docs`), and run `sphinx-quickstart` in that directory. The default answers to the questions are fine.
+1. **Configure Sphinx:** Once you have the `conf.py` and `index.rst` files, you will need to modify them further. The `index.rst` file acts as the front page of your documentation and the root of the table of contents. The `conf.py` file is the main configuration file for the Sphinx documentation. It holds all your extensions and controls various aspects of the build process that can be customized to suit your needs. For example, `sphinx.ext.autodoc` is used for pulling documentation from docstrings, and `sphinx.ext.mathjax` for displaying mathematical content.
     - [Built-in extensions](https://www.sphinx-doc.org/en/master/usage/extensions/index.html)
     - [Third-party extensions](https://github.com/sphinx-contrib/)
-5. **Write content:** Add content to your documentation. In addition to reStructureText, sphinx also integrates with Markdown documentation through the [MyST parser](https://myst-parser.readthedocs.io/en/latest/).
-6. **Build documentation:** Once you have added the documentation files, you can build the documentation from the folder `/docs` with `sphinx-build . _build/` or `make html`.
-8. **Further customization:** You can customize the look of your documentation by changing [themes](https://sphinx-themes.org/) in the `conf.py` file.
+1. **Write content:** Add content to your documentation. In addition to reStructureText, Sphinx also integrates with markdown documentation through the [MyST parser](https://myst-parser.readthedocs.io/en/latest/).
+1. **Build documentation:** Once you have added the documentation files, you can build the documentation from the folder `/docs` with `sphinx-build . _build/` or `make html`.
+1. **Further customization:** You can customize the look of your documentation by changing [themes](https://sphinx-themes.org/) in the `conf.py` file.
 
 :::{.callout-tip appearance="simple" icon="false"}
 ### {{< fa lightbulb >}} Sphinx configuration template
@@ -200,10 +200,10 @@ sphinx-rtd-theme
 :::
 
 ### Sphinx autodoc
-Once the sphinx `config.py` is set up, you can generate the API reference documentation by using the [sphinx-autodoc extension](https://www.sphinx-doc.org/en/master/usage/extensions/autodoc.html). By creating `.rst` files with the autodoc syntax, sphinx will build the API reference.
+Once the Sphinx `config.py` is set up, you can generate the API reference documentation by using the [sphinx-autodoc extension](https://www.sphinx-doc.org/en/master/usage/extensions/autodoc.html). By creating `.rst` files with the autodoc syntax, Sphinx will build the API reference.
 
 ### Sphinx-matlabdomain
-For documenting MATLAB projects, Sphinx can be extended for MATLAB. The [**sphinxcontrib-matlabdomain**](https://pypi.org/project/sphinxcontrib-matlabdomain/) extension allows Sphinx to interpret and render MATLAB specific documentation. The extension can be installed through `pip install sphinxcontrib-matlabdomain` and added the extension to the `conf.py` file. 
+For documenting MATLAB projects, Sphinx can be extended for MATLAB. The [**sphinxcontrib-matlabdomain**](https://pypi.org/project/sphinxcontrib-matlabdomain/) extension allows Sphinx to interpret and render MATLAB specific documentation. The extension can be installed through `pip install sphinxcontrib-matlabdomain` and add the extension to the `conf.py` file. 
 
 :::{.callout-tip appearance="simple" icon="false"}
 ### {{< fa lightbulb >}} **Example repositories using sphinx for MATLAB:** 
@@ -256,7 +256,7 @@ MkDocs is a static site generator that uses markdown for all documentation, simp
 :::
 
 ## Quarto
-Similarly to Jupyter Book, Quarto is a publishing framework that allows you to create dynamic documents, presentations, reports, websites, and more. It supports multiple programming languages, including Python, R, and Julia, enabling the inclusion of executable code, interactive visualizations, equations, and rich formatting directly within the documents.
+Similar to Jupyter Book, Quarto is a publishing framework that allows you to create dynamic documents, presentations, reports, websites, and more. It supports multiple programming languages, including Python, R, and Julia, enabling the inclusion of executable code, interactive visualizations, equations, and rich formatting directly within the documents.
 
 ::: {.callout-warning appearance="simple" icon="false"}
 **⮕ All of these guides are created with Quarto!**
