@@ -239,6 +239,22 @@ JupyterBook has extensive documentation on getting [started with building a book
 - [How Jupyter Book and Sphinx relate to one another](https://jupyterbook.org/en/stable/explain/sphinx.html)
 :::
 
+## MkDocs
+MkDocs is a static site generator that uses markdown for all documentation, simplifying the writing process, and is configured with a single YAML file. It is lightweight compared to Sphinx but less feature-rich for complex use cases, and is best suitable for straightforward project documentation without heavy API generation needs.
+
+### Getting started
+
+1. You can install it through pip (`pip install mkdocs`). Then you can initialize your MkDocs project by running `mkdocs new your_project_name`.
+2. Place your markdown documentation in your `docs` directory and define the structure in your `mkdocs.yml` file.
+3. You can preview your site locally and see live updates as you make changes by running `mkdocs serve`.
+4. When you want to publish your documentation run `mkdocs build`.
+5. MkDocs is designed to be hosted on almost any static file server and works well with GitHub Pages.
+
+:::{.callout-note appearance="simple" icon="false"}
+## {{< fa signs-post >}} Learn more
+ - [MkDocs](https://www.mkdocs.org) official site that includes a Getting Started and User Guide.
+:::
+
 ## Quarto
 Similarly to Jupyter Book, Quarto is a publishing framework that allows you to create dynamic documents, presentations, reports, websites, and more. It supports multiple programming languages, including Python, R, and Julia, enabling the inclusion of executable code, interactive visualizations, equations, and rich formatting directly within the documents.
 
@@ -308,6 +324,6 @@ In order to create PDFs you will need to install a LaTeX engine if you do not ha
 
 :::
 
-## R
+## Tools for R
 
 In R, documentation is typically handled differently compared to Python or MATLAB. Instead of deploying standalone documentation sites like with Sphinx, R packages generally include in-line comments and function documentation using Roxygen2. Additionally, comprehensive examples and usage guides are often provided through vignettes, which are included within the package itself.
