@@ -3,7 +3,7 @@
 
 # We use this key to indicate the last reviewed date [manual entry, use YYYY-MM-DD]
 # Uncomment and populate the next line accordingly
-#date: YYYY-MM-DD
+date: 2025-02-24
 
 # We use this key to indicate the last modified date [automatic entry]
 date-modified: last-modified
@@ -60,11 +60,20 @@ Managing your projects through version control platforms.
 :::
 
 ::: {.feature}
-### {{< fa folder-tree >}} Project Organisation
+### {{< fa folder-tree >}} Project Structue
 Structuring your project.
 
 ::: {.learn-more}
-[Learn more »](./project_organisation.md)
+[Learn more »](./project_structure.md)
+:::
+:::
+
+::: {.feature}
+### {{< fa copy >}} Project Templates and Reusability
+Reusing projects and repositories.
+
+::: {.learn-more}
+[Learn more »](./reusing_projects.md)
 :::
 :::
 
