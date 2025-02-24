@@ -45,7 +45,7 @@ corresponding: Elviss Dvinskis
 
 ---
 
-It is important to create a development environment and workflow that not only allows effective collaboration but also sets a foundation for the growth of your project. This involves structuring your project repository effectively and adopting both independent and collaborative workflows.
+A well-structure development environment and workflow is key to effective research. Organizing your project repository clearly and using workflows that enable both independent work and teamwork can improve the quality of your research and allows it to grow.
 
 ::: {.content-block}
 ::: {.features}

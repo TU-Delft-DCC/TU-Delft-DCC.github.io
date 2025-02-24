@@ -47,20 +47,19 @@ corresponding: Elviss Dvinskis
 
 ---
 
-In software development the initial choices will affect the final outcomes of our project. Among these choices, an important one is how to structure your project. To ensure your work is reproducible, a crucial initial step is to systematically organize your projects.
+In software development, the choiches you make at the start will affect your project's final outcome. One key decision is how to structure your project, as a well-organised setup is essential for reproducibility and long-term maintainability.
 
 ### Essential principles
-- **Directory Structure**: Have a consistent and meaningful directory naming convention.
-- **Naming Files and Directories**: Use underscores or hyphens. Use lowercase for folder names.
-- **Handling Access Levels**: Use different Git repositories for public and private parts of your project. Use `.gitignore` or a specific non-tracked folder for sensitive content and/or files that are too large.
-- **Clear Documentation**: Include a `README` at the root to provide a project summary and add an appropriate `LICENSE` to your project. This establishes the terms under which others can engage, reuse, and modify it.
-- **Adhere to Coding Standards**: Follow a consistent coding style to enhance code readability.
-
+- **Consitant directory structure**: Have a consistent and meaningful directory naming convention.
+- **Clear file and folder naming**: Opt for lowercase names combined with underscores or hyphens.
+- **Managing access levels**: Use different Git repositories for public and private parts of your project. Use `.gitignore` or a specific non-tracked folder for sensitive content and/or files that are too large.
+- **Clear documentation**: Include a `README` at the project's root to offer a summary, and add an appropriate `LICENSE` to define the terms for reuse and modification.
+- **Coding standards**: Adhere to a consistent coding style to enhance code readability.
 
 ### Other recommendations
-- **Code Reusability**: Store reusable software elements in a separate repository for efficiency across projects and consider packaging them.
-- **Code Modularity**: Aim for modular code design to improve maintainability and reusability.
-- **Dependency Management**: Use virtual environments to manage project dependencies, ensuring consistent environments.
+- **Code reusability**: Store reusable software elements in a separate repository for efficiency across projects or consider packaging them.
+- **Modular code design**: Aim for modular code design to improve maintainability and reusability.
+- **Dependency management**: Use virtual environments to manage project dependencies, ensuring consistent environments across different setups.
 
 ## Repository structures
 
@@ -105,21 +104,21 @@ your_project/
 ```bash
 your_project/
 │
-├── docs/                   % Documentation and user guides
-├── src/                    % Main MATLAB code
-│   ├── utils/              % Helper functions and scripts
-│   ├── models/             % Core functions or classes implementing models/algorithms
-│   └── main_script.m       % Main script/-s or entry point for the project
+├── docs/                   # Documentation and user guides
+├── src/                    # Main MATLAB code
+│   ├── utils/              # Helper functions and scripts
+│   ├── models/             # Core functions or classes implementing models/algorithms
+│   └── main_script.m       # Main script/-s or entry point for the project
 │
-├── scripts/                % Scripts folder (e.g. for analysis and demo scripts)
-├── tests/                  % Tests folder (e.g. MATLAB unit tests)
-├── data/                   % Raw data files
-├── results/                % Output files (figures, processed data, etc.)
-├── examples/               % Example usage or tutorials
+├── scripts/                # Scripts folder (e.g. for analysis and demo scripts)
+├── tests/                  # Tests folder (e.g. MATLAB unit tests)
+├── data/                   # Raw data files
+├── results/                # Output files (figures, processed data, etc.)
+├── examples/               # Example usage or tutorials
 │
-├── .gitignore              % Specifies files/folders to ignore in version control
-├── README.md               % Project overview and instructions
-└── LICENSE                 % License information
+├── .gitignore              # Specifies files/folders to ignore in version control
+├── README.md               # Project overview and instructions
+└── LICENSE                 # License information
 
 ```
 
@@ -146,7 +145,6 @@ your_project/
 │
 ├── results/                  # output from data analyses etc. (if applicable)
 │
-│
 ├── scripts/                  # high-level scripts for running analyses
 │   └── analysis_script.R     # script running the main analysis
 │
@@ -159,10 +157,10 @@ your_project/
 
 :::
 
-This structure is a guideline and can be adapted based on the specific needs and practices of your project. Additionally:
+This structure is a guideline and should be adapted based on the specific needs and practices of your project. Additionally:
 
 - Particular metadata files are often capitalized, such as README, LICENSE, CONTRIBUTING, CODE_OF_CONDUCT, CHANGELOG, CITATION.cff, NOTICE, and MANIFEST.
-- Generally, all content that is generated upon build or runtime processes should be added to `.gitignore`. This likely includes the content of `processed_data` and `results` folder.
+- Generally, all content that is generated upon building or running your code should be added to `.gitignore`. This likely includes the content of `processed_data` and `results` folder. 
 - Git cannot track empty folders. If you want to add empty folders to enforce a folder structure, e.g., `processed_data` or`results`, add the file `.gitkeep` to the folder.
 
 :::{.callout-warning appearance="simple" icon="false"}
@@ -171,8 +169,6 @@ This structure is a guideline and can be adapted based on the specific needs and
     - Keep such files externally (e.g. cloud storage, Git LFS), and add only a reference or a small sample to the repository.
     - Adding placeholder files or instructions in the README for how to obtain the complete datasets.
 :::
-
-
 
 :::{.callout-note appearance="simple" icon="false"}
 ## {{< fa signs-post >}} Learn more
@@ -185,10 +181,10 @@ This structure is a guideline and can be adapted based on the specific needs and
 
 ## Project templates
 
-Templates are versatile tools that aim to standardize the software development process across various domains.
+Templates can help you to standardize your software development process.
 
 ### GitHub repository templates
-You can make an existing repository a template, so you and others can generate new repositories with the same directory structure, branches, and files. Note, the template repository cannot include files stored using Git LFS.
+You can turn an existing repository into a template, so you and others can generate new repositories with the same directory structure, branches, and files. Note, the template repository cannot include files stored using Git LFS.
 
 :::{.callout-tip appearance="simple" icon="false"}
 ## **{{< fa laptop-file >}} Repository templates**
@@ -217,7 +213,7 @@ You can make an existing repository a template, so you and others can generate n
 
 ## Reusing projects and repositories
 
-One of the most straightforward ways to reuse code across projects is by packaging it into an installable library that can be managed as a dependency. However, you can also use Git submodules or Git subtree to integrate external code into your project.
+One of the most straightforward ways to reuse code across projects is by packaging it into an installable library that can be managed as a dependency. You can also use Git submodules or Git subtree to integrate external code into your project.
 
 ### Git submodules
 

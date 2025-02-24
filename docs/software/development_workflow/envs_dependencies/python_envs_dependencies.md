@@ -51,6 +51,11 @@ corresponding: Elviss Dvinskis
 
 When using Python you have multiple options to manage dependencies and environments, each suited to different needs. To ensure reproducibility and manage dependencies use:
 
+- [Conda environments](#conda-environments)
+- [Virtual environments](#virtual-environments-venvvirtualenv) (`venv`/`virtualenv`)
+- [Dependency files](#dependency-files) (`requirements.txt`/`environment.yml`)
+- [Dependency management tools](#dependency-management-tools) (`poetry`/`pipenv`)
+
 ### Conda Environments
 
 Conda is a popular choice within the research community for managing dependencies and environments. Conda is a system package manager that allows for managing both packages and environments. It is ideal for projects requiring specific Python versions, packages not available via pip.

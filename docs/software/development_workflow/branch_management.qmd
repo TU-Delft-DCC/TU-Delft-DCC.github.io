@@ -46,7 +46,7 @@ corresponding: Elviss Dvinskis
 
 ---
 
-Branch management is essential for collaborative software development in version-controlled environments. The core advantage of branching is that it provides separate, dedicated environments for code development, independent of the main codebase. This approach enables parallel development streams, allowing for experimentation and modification without impacting the stable main version of the project. This approach is also valuable for projects with just one developer!
+Branch management in Git is essential for collaborative software development in version-controlled environments. The core advantage of branching is that it provides separate, dedicated environments for code development, independent of the main (working) version. This approach enables parallel development streams, allowing for experimentation and modification without impacting the stable main version of the project. Note, this approach is also valuable for projects with only one developer!
 
 ::: {.callout-tip appearance="simple" icon="false"}
 ## {{< fa lightbulb >}} Consideration
@@ -63,11 +63,9 @@ Adopting a branching strategy is about establishing a set of practices that gove
 
 While multiple branching strategies exist, GitHub Flow and GitFlow are well-suited for research software projects, depending on collaboration style and release cycle:
 
-- [GitHub Flow](https://docs.github.com/en/get-started/using-github/github-flow) is a simplified and straightforward workflow, relying on a single `main` branch. Developers create feature branches off of the main branch, work on their changes, and then merge them back into the main branch via pull requests. The process is built around the principle of continuous collaboration, and it is particularly useful for projects where regular updates and deployments are common. 
+- [GitHub Flow](https://docs.github.com/en/get-started/using-github/github-flow) is a simplified and straightforward workflow, relying on a single `main` branch. Developers create so-called feature branches off of the main branch, work on their changes, and then merge them back into the main branch via pull requests. The process is built around the principle of continuous collaboration and is particularly useful for projects where regular updates and deployments are common. 
 
-- [Gitflow](https://nvie.com/posts/a-successful-git-branching-model/) involves two main branches - `main` and `develop`. Developers create feature branches off of the develop branch. Once a feature is complete, it is merged back into the develop branch. It might be a better choice for managing larger projects with distinct release cycles and versioning requirements (e.g., tools tied to publications) or requiring parallel development of features and experiments.
-
-For research software, both approaches can be used, depending on the projects' needs.
+- [Gitflow](https://nvie.com/posts/a-successful-git-branching-model/) involves two main branches - `main` and `develop`. Developers create feature branches off of the develop branch. Once a feature is complete, it is merged back into the develop branch, which itself is merged with main for each new release of the software. It can be a better choice for managing larger projects with distinct release cycles and versioning requirements (e.g., tools tied to publications) or requiring parallel development of features and experiments.
 
 ::: {.callout-note appearance="simple" icon="false"}
 ## {{< fa signs-post >}} Learn more
@@ -183,7 +181,7 @@ gitGraph
 
 ### Add additional supporting branches
 
-When a critical bug in a production version must be resolved immediately, a `hotfix` branch may be branched off from the corresponding tag on the `main` branch that marks the production version. After fixing, `hotfix` is then merged with both `main` and `develop`.
+When a critical bug in the stable version must be resolved immediately, a `hotfix` branch may be branched off from the corresponding tag on the `main` branch that marks this version. After fixing, `hotfix` is then merged with both `main` and `develop`.
 
 ```{mermaid}
 %%{init: {'theme': 'base', 'gitGraph': {'showCommitLabel': false}}}%%
