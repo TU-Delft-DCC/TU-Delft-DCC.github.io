@@ -3,7 +3,7 @@
 
 # We use this key to indicate the last reviewed date [manual entry, use YYYY-MM-DD]
 # Uncomment and populate the next line accordingly
-#date: YYYY-MM-DD
+date: 2025-02-20
 
 # We use this key to indicate the last modified date [automatic entry]
 date-modified: last-modified
@@ -51,7 +51,15 @@ The Netherlands eScience Center and NWO, the Dutch Research Council, have taken 
 
 The initiative resulted in the publication of the [**Practical guide to Software Management Plans**](https://zenodo.org/record/7248877) in October 2022. You can read more about the process leading up to the guide in [this blog](https://blog.esciencecenter.nl/how-to-manage-your-software-327c8ac8a937). The DCC is currently evaluating the adoption of these guidelines for TU Delft research software.
 
+As a introduction to Software Management Plans, TU Delft has created a video:
+
+{{< video https://www.youtube.com/watch?v=5Zy3l4dTJd4 >}}
+
+*"Navigating Research Data and Software: A Practical Guide for PhD Supervisors 2025", TU Delft Library. CC-BY-4.0*
+
+:::{.callout-tip}
 The [Intermediate Research Software Development](https://carpentries-incubator.github.io/python-intermediate-development/) course from The Carpentries is a good resource to learn the core principle of intermediate-level software development and best practices collaborating in a team.
+:::
 
 ## Further reading
 
