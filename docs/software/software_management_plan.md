@@ -55,6 +55,8 @@ As a introduction to Software Management Plans, TU Delft has created a video:
 
 {{< video https://www.youtube.com/watch?v=5Zy3l4dTJd4 >}}
 
+*"Navigating Research Data and Software: A Practical Guide for PhD Supervisors 2025", TU Delft Library. CC-BY-4.0*
+
 :::{.callout-tip}
 The [Intermediate Research Software Development](https://carpentries-incubator.github.io/python-intermediate-development/) course from The Carpentries is a good resource to learn the core principle of intermediate-level software development and best practices collaborating in a team.
 :::
