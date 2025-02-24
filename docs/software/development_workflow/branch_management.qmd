@@ -88,7 +88,11 @@ GitHub Flow model:
 
 ```{mermaid}
 
-%%{init: {'theme': 'base', 'gitGraph': {'showCommitLabel': false}}}%%
+%%{init: {'theme': 'base', 'themeVariables': {
+              'git0': '#bfbf40',
+              'git1': '#bf8040',
+              'git2': '#40bfbf'
+              }, 'gitGraph': {'showCommitLabel': false}}}%%
 gitGraph LR:
    commit
    commit
@@ -138,7 +142,12 @@ When you need to distribute releases, your `main` branch will serve as the lates
 
 
 ```{mermaid}
-%%{init: {'theme': 'base', 'gitGraph': {'showCommitLabel': false}}}%%
+%%{init: {'theme': 'base', 'themeVariables': {
+              'git0': '#bfbf40',
+              'git1': '#4080bf',
+              'git2': '#bf8040',
+              'git3': '#40bfbf'
+              }, 'gitGraph': {'showCommitLabel': false}}}%%
 gitGraph
     
    commit tag:"v0.1.0"
@@ -184,7 +193,11 @@ gitGraph
 When a critical bug in the stable version must be resolved immediately, a `hotfix` branch may be branched off from the corresponding tag on the `main` branch that marks this version. After fixing, `hotfix` is then merged with both `main` and `develop`.
 
 ```{mermaid}
-%%{init: {'theme': 'base', 'gitGraph': {'showCommitLabel': false}}}%%
+%%{init: {'theme': 'base', 'themeVariables': {
+              'git0': '#bfbf40',
+              'git1': '#4080bf',
+              'git2': '#7da97a'
+              }, 'gitGraph': {'showCommitLabel': false}}}%%
 gitGraph
     
    commit tag:"v0.2.0"
@@ -215,7 +228,13 @@ gitGraph
 GitFlow's structured approach with parallel production and integration branches, supplemented by feature/release/hotfix branches, was specifically designed for versioned software requiring maintenance of multiple production releases.
 
 ```{mermaid}
-%%{init: {'theme': 'base', 'gitGraph': {'showCommitLabel': false}}}%%
+%%{init: {'theme': 'base', 'themeVariables': {
+              'git0': '#bfbf40',
+              'git1': '#4080bf',
+              'git2': '#bf8040',
+              'git3': '#eae0b8',
+              'git4': '#7da97a'
+              }, 'gitGraph': {'showCommitLabel': false}}}%%
 gitGraph
    commit
    branch develop
