@@ -153,8 +153,10 @@ website:
               contents:
                 - text: Project management
                   href: docs/software/development_workflow/project_management.md
-                - text: Project organisation
-                  href: docs/software/development_workflow/project_organisation.md
+                - text: Project structure
+                  href: docs/software/development_workflow/project_structure.md
+                - text: Project templates and reusability
+                  href: docs/software/development_workflow/reusing_projects.md
                 - section: Environments and dependencies
                   href: docs/software/development_workflow/envs_dependencies.md
                   contents:
