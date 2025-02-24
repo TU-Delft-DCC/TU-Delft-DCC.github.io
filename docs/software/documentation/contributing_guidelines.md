@@ -49,7 +49,7 @@ There are no strict guidelines for a contributing guide and the content will dep
 1. **Introduction**: Welcome the contributors and express appreciation for community contributions. 
 2. **Add a [code of conduct](./code_of_conduct.md):** This helps to maintain a respectful and inclusive environment.
 3. **How to contribute**: Explain precise contribution guidelines
-   - **Issue Tracking:** Explain how to report issues (bugs, feature requests, etc.).
+   - **Issue tracking:** Explain how to report issues (bugs, feature requests, etc.).
    - **Pull requests:** Detail the process for submitting pull requests. This includes instructions on forking the repository, creating a branch, making changes, and the follow-up steps for a successful pull request.
    - **Code review process:** Describe how contributions will be reviewed and integrated.
 4. **Community and communication**: List the channels through which contributors can communicate and set their expectations regarding the responsiveness and availability of project maintainers.
