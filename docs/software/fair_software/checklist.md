@@ -128,7 +128,7 @@ _Recommended_
 _Recommended for Python_
 
 - [ ] Follow [PEP8 guidelines](https://realpython.com/python-pep8/)
-- [ ] Use a tool for dependency management (e.g. [poetry](https://the-turing-way.netlify.app/reproducible-research/renv/renv-package.html))
+- [ ] Use a tool for dependency management (e.g. [poetry](https://python-poetry.org/docs/))
 - [ ] Use linter (e.g. [pylint](https://pypi.org/project/pylint/), [flake8](https://pypi.org/project/flake8/))
 - [ ] Use a formatter (e.g. [black](https://github.com/psf/black))
 :::
