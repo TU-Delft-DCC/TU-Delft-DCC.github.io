@@ -154,6 +154,36 @@ website:
                   href: docs/software/documentation/citation.md
                 - text: Software license
                   href: docs/software/documentation/license.md
+            - section: "Code quality"
+              href: docs/software/code_quality/index.md
+              contents:
+                - text: Code style
+                  href: docs/software/code_quality/code_style.md
+                - text: Refactoring
+                  href: docs/software/code_quality/refactoring.md
+                - section: Code smells
+                  href: docs/software/code_quality/code_smells.md
+                  contents: 
+                    - text: Long method
+                      href: docs/software/code_quality/code_smells/long_method.md
+                    - text: Large classes
+                      href: docs/software/code_quality/code_smells/large_class.md
+                    - text: Code duplication
+                      href: docs/software/code_quality/code_smells/duplication.md
+                    - text: Hard-coded values
+                      href: docs/software/code_quality/code_smells/hardcoded_values.md
+                    - text: Deep nesting
+                      href: docs/software/code_quality/code_smells/deep_nesting.md
+                    - text: Many inputs
+                      href: docs/software/code_quality/code_smells/many_arguments.md
+                    - text: Inappropriate intimacy
+                      href: docs/software/code_quality/code_smells/inappropriate_intimacy.md
+                    - text: Side effects
+                      href: docs/software/code_quality/code_smells/side_effects.md
+                    - text: Commented out code
+                      href: docs/software/code_quality/code_smells/dead_code.md
+                - text: Online services
+                  href: docs/software/code_quality/online_services.md
             - section: "Software testing"
               href: docs/software/testing/index.md
               contents:
