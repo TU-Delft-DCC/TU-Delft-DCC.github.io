@@ -66,7 +66,7 @@ Documenting MATLAB projects.
 
 ::: {.feature}
 ### {{< fa hashtag >}} R projects
-Documenting R projects with Roxygen2.
+Documenting R projects with `roxygen2`.
 
 ::: {.learn-more}
 [Learn more »](./r_documentation.md)
