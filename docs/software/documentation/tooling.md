@@ -326,4 +326,12 @@ In order to create PDFs you will need to install a LaTeX engine if you do not ha
 
 ## Tools for R
 
-In R, documentation is typically handled differently compared to Python or MATLAB. Instead of deploying standalone documentation sites like with Sphinx, R packages generally include in-line comments and function documentation using Roxygen2. Additionally, comprehensive examples and usage guides are often provided through vignettes, which are included within the package itself.
+R project documentation generally includes in-line comments and function documentation using `roxygen2`. Additionally, comprehensive examples and usage guides are often provided through vignettes, which are included within an R package itself.
+
+To extend `roxygen2` documentation into a static website for your package you can use `pkgdown`. `pkgdown` automatically generates a website from your package's documentation and vignettes, similar to how Sphinx is used for Python projects.
+
+
+:::{.callout-note appearance="simple" icon="false"}
+## {{< fa signs-post >}} Learn more
+- [`pkgdown`](https://pkgdown.r-lib.org/index.html)
+:::
