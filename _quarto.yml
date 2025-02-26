@@ -187,6 +187,10 @@ website:
             - section: "Software testing"
               href: docs/software/testing/index.md
               contents:
+                - text: Test types
+                  href: docs/software/testing/test_types.md
+                - test: Strategies
+                  href: docs/software/testing/strategies.md
                 - text: Testing with Python
                   href: docs/software/testing/python.md
                 - text: Testing with MATLAB

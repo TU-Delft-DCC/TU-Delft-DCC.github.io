@@ -44,22 +44,23 @@ categories:
 
 ---
 
-Testing plays an important role in guaranteeing the ongoing reliability and stability of software systems. Beyond merely detecting bugs, it represents a strategic investment in the quality and long-term maintainability of your codebase. By testing your software, you safeguard against unforeseen complications arising from code modifications. For research software, systematic testing can ensure the reliability, accuracy, and scientific validity of the software, thereby enhancing the quality  and reproducibility of research findings.
+When you're writing software — especially for research — it's important to make sure your programs work as expected. Testing is like a safety net: it helps you catch mistakes early and keeps your code reliable as you add new features or make changes. In research software, tests are even more crucial because they help ensure that your results are accurate and that others can reproduce your work. Beyond detecting bugs early, it is an investment in the quality and long-term maintainability of your codebase. 
+
 
 ::: {.content-block}
 ::: {.features}
 
 ::: {.feature}
-### {{< fa file-code >}} Getting started
-Conventions and guidelines used to write and format code.
+### {{< fa file-code >}} Test types
+Different types of tests to ensure your software works as expected.
 
 ::: {.learn-more}
-[Learn more »](./code_style.md)
+[Learn more »](./test_types.md)
 :::
 :::
 
 ::: {.feature}
-### {{< fa file-code >}} Intermediate concepts
+### {{< fa magnifying-glass >}} Additional concepts
 Conventions and guidelines used to write and format code.
 
 ::: {.learn-more}
@@ -68,7 +69,7 @@ Conventions and guidelines used to write and format code.
 :::
 
 ::: {.feature}
-### {{< fa wrench >}} Python testing
+### {{< fa flask >}} Python testing
 Restructuring existing code without changing its external behavior.
 
 ::: {.learn-more}
@@ -77,7 +78,7 @@ Restructuring existing code without changing its external behavior.
 :::
 
 ::: {.feature}
-### {{< fa wrench >}} MATLAB testing
+### {{< fa flask >}} MATLAB testing
 Restructuring existing code without changing its external behavior.
 
 ::: {.learn-more}
@@ -89,8 +90,7 @@ Restructuring existing code without changing its external behavior.
 :::
 
 
-
-::: {.callout-tip title="Recommended resources"}
+::: {.callout-tip title="Recommended courses"}
 - [The Turing Way - Testing](https://book.the-turing-way.org/reproducible-research/testing)
 - [CodeRefinery - Lesson on testing](https://coderefinery.github.io/testing/motivation/)
 - [Software Carpentry - Testing and Continuous Integration with Python](https://carpentries-incubator.github.io/python-testing/)
