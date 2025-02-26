@@ -155,7 +155,14 @@ website:
                 - text: CITATION
                   href: docs/software/documentation/citation.md
                 - text: Code documentation
-                  href: docs/software/documentation/comments_docstrings_api.md
+                  href: docs/software/documentation/code_documentation/code_documentation.md
+                  contents:
+                    - text: Python projects
+                      href: docs/software/documentation/code_documentation/python_documentation.md
+                    - text: MATLAB projects
+                      href: docs/software/documentation/code_documentation/matlab_documentation.md
+                    - text: R projects
+                      href: docs/software/documentation/code_documentation/r_documentation.md           
                 - text: Tooling
                   href: docs/software/documentation/tooling.md
                 - text: Hosting

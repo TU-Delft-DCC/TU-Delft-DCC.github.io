@@ -90,7 +90,7 @@ Developer documentation targets developers who need to understand the internal p
 Code comments, docstrings and API reference.
 
 ::: {.learn-more}
-[Learn more »](./comments_docstrings_api.md)
+[Learn more »](./code_documentation/code_documentation.md)
 :::
 :::
 
