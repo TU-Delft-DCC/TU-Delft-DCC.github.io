@@ -134,7 +134,7 @@ your_project/
 ├── processed_data/           # processed data files (if applicable)
 │
 ├── doc/                      # project documentation
-├── man/                      # manual files for package functions generated from roxygen2 (if applicable)
+├── man/                      # helper files for package functions generated from roxygen2 (if applicable)
 │      
 ├── vignettes/                # explanatory vignettes for the project (if applicable)
 │   └── function_vignette.Rmd # vignettes for each function
