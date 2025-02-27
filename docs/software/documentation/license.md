@@ -131,4 +131,5 @@ It is advisable to contact your faculty's data steward regarding licensing quest
 - [Choose a license](https://choosealicense.com) - a simplified guide on choosing an open-source license
 - [tl;drLegal](https://www.tldrlegal.com) - Plain English summaries of software licenses
 - [The Turing Way - Licensing](https://the-turing-way.netlify.app/reproducible-research/licensing)
+- [GitHub - Adding a license to a repository](https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contributions/adding-a-license-to-a-repository)
 :::
