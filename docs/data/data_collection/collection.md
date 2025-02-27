@@ -53,7 +53,7 @@ Coming soon!
 ::: {.features}
 
 ::: {.feature}
-### {{< fa file-fragment >}} Data conventions
+### {{< fa table >}} Data conventions
 Data standards and types.
 
 ::: {.learn-more}
@@ -71,7 +71,7 @@ Text text text
 :::
 
 ::: {.feature}
-### {{< fa clipboard >}} eLabJournal and Rspace
+### {{< fa clipboard >}} eLabJournal and RSpace
 Text text text
 
 ::: {.learn-more}

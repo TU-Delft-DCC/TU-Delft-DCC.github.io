@@ -45,7 +45,7 @@ categories:
 ---
 
 
-The aim of this section is to guide data owners and users through each stage of the data lifecycle—such as data collection, storage, sharing, publication, and archiving—in a responsible and effective manner. By following the Findable, Accessible, Interoperable, and Reproducible (FAIR) principles, users will learn the core concepts and practices of good data management at TU Delft.
+The aim of this section is to guide data owners and users through each stage of the data lifecycle - such as data collection, storage, sharing, publication, and archiving - in a responsible and effective manner. By following the Findable, Accessible, Interoperable, and Reproducible (FAIR) principles, users will learn the core concepts and practices of good data management at TU Delft.
 
 Research data includes any information observed, generated or created for use in research projects. Though often tied to specific research projects, research data follows its own lifecycle, which is distinct from the project itself. After initial data collection, data may be processed, analyzed, published, shared, archived, reused or destroyed.
 
@@ -56,4 +56,4 @@ This guide intends to walk you through the following steps of the data lifecycle
 1. [**Data Collection**](./data_collection/collection.md)
 1. [**Data Processing**](./data_processing.md)
 1. [**Data Storage**](./data_storage/storage.md)
-1. [**Data Publishing**](./archival_publishing/archival_publishing_index.md)
+1. [**Data Publishing**](./data_publishing/archival_publishing_index.md)

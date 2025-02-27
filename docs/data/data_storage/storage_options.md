@@ -77,7 +77,7 @@ Coming soon!
 :::
 
 ::: {.feature}
-### {{< fa rotate >}} Sync Unison
+### {{< fa rotate >}} Sync Project Drive and SURFDrive with Unison
 
 ::: {.learn-more}
 [Learn more »](./sync_unison.md)

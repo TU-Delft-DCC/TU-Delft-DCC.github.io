@@ -59,3 +59,5 @@ If you would like to publish your data collection in 4TU.ResearchData or another
 Choosing a repository for publishing your data depends on factors such as storage costs, funding or publication requirements, and security needs. TU Delft provides an in-house data repository, [4TU.ResearchData](https://data.4tu.nl/), as one of many available options. 
 
 ## Zenodo
+
+## DOI and citation
