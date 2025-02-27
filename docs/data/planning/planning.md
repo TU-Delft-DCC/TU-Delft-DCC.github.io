@@ -46,3 +46,31 @@ title: Planning
 ---
 
 Coming soon!
+
+- Introduction
+- Data management plan
+
+::: {.content-block}
+::: {.features}
+
+::: {.feature}
+### {{< fa lock >}} Privacy and security
+Text text text
+
+::: {.learn-more}
+[Learn more »](./privacy_and_security.md)
+:::
+:::
+
+::: {.feature}
+### {{< fa landmark >}} Ethics
+Text text text
+
+::: {.learn-more}
+[Learn more »](./ethics.md)
+:::
+:::
+
+:::
+:::
+
