@@ -87,7 +87,7 @@ Developer documentation targets developers who need to understand the internal p
 
 ::: {.feature}
 ### {{< fa laptop-code >}} Code Documentation
-Code comments, docstrings and API reference.
+Documenting your codebase.
 
 ::: {.learn-more}
 [Learn more »](./code_documentation/code_documentation.md)
