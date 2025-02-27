@@ -53,7 +53,7 @@ Effective research data management by following FAIR principles ensures efficien
 
 This guide intends to walk you through the following steps of the data lifecycle at TU Delft, following FAIR principles:
 
-1. **Data Collection**
-2. **Data Processing**
-3. **Data Storage**
-4. **Data Publishing**
+1. [**Data Collection**](./data_collection/collection.md)
+1. [**Data Processing**](./data_processing.md)
+1. [**Data Storage**](./data_storage/storage.md)
+1. [**Data Publishing**](./archival_publishing/archival_publishing_index.md)
