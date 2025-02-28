@@ -154,7 +154,7 @@ website:
                   href: docs/data/data_storage/sharing.md
                 - text: Data backup
                   href: docs/data/data_storage/backup.md
-            - section: Archival and publishing
+            - section: Archive and publish
               href: docs/data/data_publishing/archival_publishing_index.md
               contents:
                 - text: Licensing
