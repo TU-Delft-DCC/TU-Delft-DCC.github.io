@@ -6,7 +6,7 @@
 #date: YYYY-MM-DD
 
 # We use this key to indicate the last modified date [automatic entry]
-# date-modified: last-modified
+date-modified: last-modified
 
 # Do not modify
 lang: en
@@ -16,7 +16,7 @@ language:
 
 # Title of the document [manual entry]
 # Uncomment and populate the next line accordingly
-title: FAIR data
+title: Data sharing
 
 # Brief overview of the document (will be used in listings) [manual entry]
 # Uncomment and populate the next line and uncomment "hide-description: true".
@@ -45,4 +45,4 @@ title: FAIR data
 
 ---
 
-Under construction
+Coming soon!
