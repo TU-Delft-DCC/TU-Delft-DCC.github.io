@@ -57,7 +57,7 @@ For open source projects, details about the branching strategy, how to collabora
 - GitHub - [Documentation contribution guidelines](https://github.com/github/docs/blob/3ef0cdb56f166d9da2cb03229af48df34096fa97/.github/CONTRIBUTING.md)
 :::
 
-Adopting a branching strategy is about establishing a set of practices that govern code writing, merging, and release processes within a version control environment.
+A branching strategy defines a set of best practices for writing, merging, and releasing code. Choosing the right approach helps teams collaborate efficiently while maintaining a stable codebase.
 
 ## Branch models
 
@@ -65,7 +65,7 @@ While multiple branching strategies exist, GitHub Flow and GitFlow are well-suit
 
 - [GitHub Flow](https://docs.github.com/en/get-started/using-github/github-flow) is a simplified and straightforward workflow, relying on a single `main` branch. Developers create so-called feature branches off of the main branch, work on their changes, and then merge them back into the main branch via pull requests. The process is built around the principle of continuous collaboration and is particularly useful for projects where regular updates and deployments are common. 
 
-- [Gitflow](https://nvie.com/posts/a-successful-git-branching-model/) involves two main branches - `main` and `develop`. Developers create feature branches off of the develop branch. Once a feature is complete, it is merged back into the develop branch, which itself is merged with main for each new release of the software. It can be a better choice for managing larger projects with distinct release cycles and versioning requirements (e.g., tools tied to publications) or requiring parallel development of features and experiments.
+- [Gitflow](https://nvie.com/posts/a-successful-git-branching-model/) relies on two primary branches - `main` and `develop`. Developers create feature branches off of the develop branch. Once a feature is complete, it is merged back into the develop branch, which itself is merged with main for each new release of the software. It can be a better choice for managing larger projects with distinct release cycles and versioning requirements (e.g., tools tied to publications) or requiring parallel development of features and experiments.
 
 ::: {.callout-note appearance="simple" icon="false"}
 ## {{< fa signs-post >}} Learn more
@@ -115,7 +115,7 @@ gitGraph LR:
 
 ```
 
-When applying this workflow for projects with a few persons, *you accept things breaking sometimes*. 
+When applying this workflow for small teams, *you accept things breaking sometimes*. 
 
 When there is more control required, follow:
 
