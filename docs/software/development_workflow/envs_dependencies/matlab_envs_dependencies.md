@@ -46,6 +46,20 @@ author_2: Elviss Dvinskis
 
 ---
 
-MATLAB does not use virtual environments in the same sense as Python, but it allows for setting up paths and toolboxes that act similarly by organizing and encapsulating project-specific functions and scripts. Dependency management in MATLAB often involves ensuring the correct toolboxes are licensed and available, and using MATLAB's Project feature to manage and share paths and environments with others.
+MATLAB does not use virtual environments like Python, where isolated environments manage dependencies. Instead, MATLAB handles project-specific dependencies using:
 
-MATLAB toolbox requirements can be found with the function [**`requiredfilesandproducts`**](https://nl.mathworks.com/help/matlab/ref/matlab.codetools.requiredfilesandproducts.html) or with the [**Dependency Analyzer**](https://nl.mathworks.com/help/matlab/matlab_prog/analyze-project-dependencies.html).
+- **Toolboxes** - Pre-packaged libraries that must be licensed and available
+- [**MATLAB projects**](https://mathworks.com/help/matlab/projects.html) - A feature that manages paths and environments for a project
+- **Path management** - Manually adding paths to the MATLAB search path with `addpath` and `rmpath`
+
+To check dependencies in a project:
+
+- Use [**`requiredfilesandproducts`**](https://nl.mathworks.com/help/matlab/ref/matlab.codetools.requiredfilesandproducts.html) to identify required MathWorks toolboxes for a script of function.
+- Use the the [**Dependency Analyzer**](https://nl.mathworks.com/help/matlab/matlab_prog/analyze-project-dependencies.html) to detect file dependencies.
+
+
+## Custom MATLAB Dependency Manager
+
+To offer a solution for managing dependencies in MATLAB through a dependency file, we have created a Dependency Manager: 
+
+{{< fa up-right-from-square >}} [**DependencyManager**](https://github.com/TU-Delft-DCC/matlab_dependency_manager)
