@@ -81,43 +81,69 @@ You can turn an existing repository into a template, so you and others can gener
 
 ## Reusing projects and repositories
 
-One of the most straightforward ways to reuse code across projects is by packaging it into an installable library that can be managed as a dependency. You can also use Git submodules or Git subtree to integrate external code into your project.
+One of the easiest ways to reuse code across projects is by packaging it into an installable library that can be used as a dependency. Alternatively, you can integrate external code into your project using **Git submodules** or **Git subtree**.
+
+::: {.callout-warning}
+## Practices to avoid
+- Storing commonly-used folders in a separate folder on your system and adding the folder to the PATH. Other users/developers will not have access to these folders.
+- Direct copy-and-pasting of code as you lose any upstream changes to the external repository.
+:::
+
+#### What’s the Difference?
+
+| Feature        | Git Submodules | Git Subtree |
+|-----------------|---------------|-------------|
+| **How it works** | Adds an external repository inside your project as a separate Git reference. | Merges an external repository’s contents into your project’s directory structure. |
+| **Version Control** | Tracks a specific commit of the external repository (not automatically updated). | The external repository’s commits are fully merged into your project's commit history. |
+| **Updating** | Requires running `git submodule update --remote` to pull new changes. | Updates by merging changes from the external repository into your project. |
+| **Ideal For** | Keeping external code separate while still using it in your project. | Fully integrating external code while keeping its history. |
+
+: {tbl-colwidths="[20,40, 40]"}
+
+In short:
+
+- Use **Git submodules** when you want to include an external repository but keep it separate, track its exact version, and update it manually.
+- Use **Git subtree** if you want to fully integrate an external repository’s code into your project while keeping its commit history.
 
 ### Git submodules
 
-Git submodules allow you to keep a Git repository as a subdirectory of another Git repository. It is a record that points to a specific commit in another external repository. Submodules are useful for incorporating external code or libraries into your project while keeping them separate and easily updatable.
+A Git submodule allows you to add a separate Git repository inside another repository as a subdirectory. It is a record that points to a specific commit in another external repository. Submodules are useful for incorporating external code or libraries into your project while keeping them separate and easily updatable.
 
-##### **Adding submodules**
+::: {.callout-tip collapse="true"}
+## Git submodule commands
 
-This will add a new submodule to your repository: ` git submodule add <repo-url>`
+##### Adding a submodule
+To add an external repository as a submodule inside your project, use:
+```bash
+git submodule add <repo-url>
+```
 
-##### **Cloning a repository with submodules**
+##### Cloning a repository with submodules
+When cloning a repository that contains submodules, follow these steps:
+1. Clone the repository:
+```bash
+git clone <repo-url>
+```
+2. Initialize the submodules:
+```bash
+git submodule init
+```
+3. Fetch the submodule content:
+```bash
+git submodule update
+```
 
-When you clone a repository that has submodules, you will have to initialize and fetch the submodules: `git submodule init` and then
-`git submodule update`.
+Alternatively, you can use the shorthand command to clone and initialize submodules:
+```bash
+git clone --recurse-submodules <repo-url>
+```
 
-To update the submodules to the latest commit use: `git submodule update --remote`. 
+##### Updating submodules
+To update the submodules to the latest commit, use:
+```bash
+git submodule update --remote
+```
 
-You can also point to a specific commit within a submodule by navigating to the submodule's directory and using: `git checkout <specific-commit>`, and then committing the change to the main repository.
-
-::: {.callout-tip appearance="simple" icon="false"}
-## {{< fa lightbulb >}} Tip
-
-You can use the shorthand command that automatically clones, initializes, and updates all the submodules: `git clone --recurse-submodules <repo-url>`
-
-:::
-
-##### **Check the status of your submodules**
-
-To check the status of your submodules, run: `git submodule status`
-
-There should also be a file called `.gitmodules`, it's important to also version control that similarly to `.gitignore`. Then, commit and push your changes, as you would typically.
-
-::: {.callout-warning collapse="true"}
-## If you are using GitHub Desktop
-If you are using GitHub Desktop, be aware that there might be some limitations when working with submodules. While GitHub Desktop supports basic submodule functionality, some operations may require using the command line. Known issues include difficulties in initializing submodules, switching branches with submodules, and visualizing submodule changes. These limitations are acknowledged and tracked by the GitHub Desktop team. Although some issues have been addressed over time, there might still be case-by-case issues.
-
-See this [discussion](https://github.com/desktop/desktop/issues/7523) as an example. For more details, refer to the official GitHub Desktop documentation or [issue tracker](https://github.com/desktop/desktop/issues).
 :::
 
 :::{.callout-note appearance="simple" icon="false"}
@@ -127,12 +153,19 @@ See this [discussion](https://github.com/desktop/desktop/issues/7523) as an exam
 - [Guide on Git submodules](https://git-scm.com/book/en/v2/Git-Tools-Submodules) - comprehensive guide that covers everything from the basics to advanced workflows
 :::
 
-### Git subtree
-[Git subtree](https://www.atlassian.com/git/tutorials/git-subtree) allows you to merge the history of one repository into another as a subdirectory. It essentially brings the contents of a repository into another as if it were part of the directory structure.
 
-::: {.callout-warning}
-## To be avoided
+::: {.callout-warning collapse="true"}
+## If you are using GitHub Desktop
+If you are using GitHub Desktop, be aware that there can be limitations when working with submodules. While GitHub Desktop supports basic submodule functionality, some operations may require using the command line. Known issues include 
 
-- Storing commonly-used folders in a separate folder on your system and adding the folder to the PATH. Other users/developers will not have access to these folders.
-- Direct copy-and-pasting of code as you lose any upstream changes to the external repository.
+- difficulties in initializing submodules
+- switching branches with submodules
+- visualizing submodule changes. 
+
+For more details, check out [this discussion](https://github.com/desktop/desktop/issues/7523) or visit the [GitHub Desktop issue tracker](https://github.com/desktop/desktop/issues).
 :::
+
+### Git subtree
+Unlike Git submodules, Git subtree merges the history of one repository into another as a subdirectory. This makes the external repository’s files appear as if they are part of your project while still allowing updates.
+
+For more details, check out this [Git subtree guide](https://www.atlassian.com/git/tutorials/git-subtree).
