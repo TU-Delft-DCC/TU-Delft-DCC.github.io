@@ -45,7 +45,7 @@ corresponding: Elviss Dvinskis
 
 ---
 
-A well-structure development environment and workflow is key to effective research. Organizing your project repository clearly and using workflows that enable both independent work and teamwork can improve the quality of your research and allows it to grow.
+A well-organized workspace and clear software development process make research easier and more effective. Organizing your project repository clearly and following steps for working alone or with others can help improve your research and make it easier to expand. This section provides guidance on how to manage your project, structure your project, reuse projects, manage environments and dependencies, choose a branching strategy, and collaborate with others.
 
 ::: {.content-block}
 ::: {.features}
