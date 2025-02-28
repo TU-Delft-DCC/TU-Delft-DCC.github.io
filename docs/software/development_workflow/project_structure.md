@@ -46,14 +46,14 @@ corresponding: Elviss Dvinskis
 
 ---
 
-In software development, the choiches you make at the start will affect your project's final outcome. One key decision is how to structure your project, as a well-organised setup is essential for reproducibility and long-term maintainability.
+In software development, the choices you make at the start will affect your project's final outcome. One key decision is how to structure your project, as a well-organised setup is essential for reproducibility and long-term maintainability.
 
 ### Essential principles
 - **Consitant directory structure**: Have a consistent and meaningful directory naming convention.
 - **Clear file and folder naming**: Opt for lowercase names combined with underscores or hyphens.
 - **Managing access levels**: Use different Git repositories for public and private parts of your project. Use `.gitignore` or a specific non-tracked folder for sensitive content and/or files that are too large.
 - **Clear documentation**: Include a `README` at the project's root to offer a summary, and add an appropriate `LICENSE` to define the terms for reuse and modification.
-- **Coding standards**: Adhere to a consistent coding style to enhance code readability.
+- **Coding standards**: Adhere to a consistent coding style to enhance code readability. Check out our [code style guide](/docs/software/code_quality/code_style.md) for more information.
 
 ### Other recommendations
 - **Code reusability**: Store reusable software elements in a separate repository for efficiency across projects or consider packaging them.
@@ -62,16 +62,11 @@ In software development, the choiches you make at the start will affect your pro
 
 ## Repository structures
 
-A well-organized repository structure would be similar to this:
+The following are recommendations of how you can structure your project repository for Python, MATLAB, and R projects.
 
 ::: {.panel-tabset}
 
 ### Python
-
-::: {.callout-tip appearance="simple" icon="false"}
-## {{< fa lightbulb >}} Choosing layout
-- [Choosing between a `src/` layout and a flat layout for Python](https://packaging.python.org/en/latest/discussions/src-layout-vs-flat-layout/)
-:::
 
 ```bash
 your_project/
@@ -97,6 +92,8 @@ your_project/
 ├── README.md                 # README
 └── LICENSE                   # License information
 ```
+
+{{< fa lightbulb >}} [Choosing between a `src/` layout and a flat layout for Python](https://packaging.python.org/en/latest/discussions/src-layout-vs-flat-layout/)
 
 ### MATLAB
 
@@ -156,17 +153,18 @@ your_project/
 
 :::
 
-This structure is a guideline and should be adapted based on the specific needs and practices of your project. Additionally:
+These structures are a starting point and can be adapted based on the specific needs and practices of your project. Some additional tips:
 
 - Particular metadata files are often capitalized, such as README, LICENSE, CONTRIBUTING, CODE_OF_CONDUCT, CHANGELOG, CITATION.cff, NOTICE, and MANIFEST.
 - Generally, all content that is generated upon building or running your code should be added to `.gitignore`. This likely includes the content of `processed_data` and `results` folder. 
-- Git cannot track empty folders. If you want to add empty folders to enforce a folder structure, e.g., `processed_data` or`results`, add the file `.gitkeep` to the folder.
+- Git cannot track empty folders. If you want to add empty folders to enforce a folder structure, e.g., `processed_data` or`results`, the convention is to add the file `.gitkeep` to the folder.
 
 :::{.callout-warning appearance="simple" icon="false"}
-## {{< fa warning >}} **Warning**
-- If your raw data files or any data assets are large (typically more than a few megabytes), it’s usually best not to include them directly in the repository. Instead:
-    - Keep such files externally (e.g. cloud storage, Git LFS), and add only a reference or a small sample to the repository.
-    - Adding placeholder files or instructions in the README for how to obtain the complete datasets.
+## {{< fa warning >}} **Managing data**
+If your raw data files or any data assets are large (typically more than a few megabytes), it’s usually best not to include them directly in the repository. Instead:  
+
+- Keep such files externally (e.g. cloud storage, Git LFS), and add only a reference or a small sample to the repository.
+- Adding placeholder files or instructions in the README for how to obtain the complete datasets.
 :::
 
 :::{.callout-note appearance="simple" icon="false"}
