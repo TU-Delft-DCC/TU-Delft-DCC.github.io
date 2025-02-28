@@ -2,7 +2,7 @@
 # Insert this YAML header (including the opening and closing ---) at the beginning of the document and fill it out accordingly
 
 # We use this key to indicate the last reviewed date [manual entry, use YYYY-MM-DD]
-date: 2024-11-14
+date: 2025-02-28
 
 # We use this key to indicate the last modified date [automatic entry]
 date-modified: last-modified
@@ -21,8 +21,9 @@ description: Containers are a way to package software and its dependencies into 
 hide-description: true
 
 # Authors of the document, will not be parsed [manual entry]
-author_1: Elviss Dvinskis
-author_2: Maurits Kok
+-author_1: Elviss Dvinskis
+-author_2: Maurits Kok
+-author_3: Jose Carlos Urra Llanusa
 
 # Maintainers of the document, will not be parsed [manual entry]
 #maintainer_1:
@@ -38,66 +39,107 @@ categories:
 
 ---
 
-## Introduction to containers
-Just as you document your software dependencies, it may be useful to record and manage your development environments. This may involve documenting the specific configurations, tools, and versions used during development to ensure that everything runs consistently across different setups. 
+# 🚢 Introduction to Containers
 
-By recording your environments, you create a reproducible framework that significantly reduces the infamous *"it works on my machine"* syndrome, where code runs on one machine but fails on others.
+> Ensuring reproducibility in research is paramount. A key criteria for success is to avoid as much human intervention as possible when reproducing computational environments. **Containers** offer a robust solution for more complex and dependency-heavy software, allowing you to package its environment into a single, portable unit. 🎯
 
-Environment management includes specifying your operating system, programming language (and their versions), system libraries, and any other software or tools required. This practice not only helps in maintaining consistency across development, testing, and production stages but also streamlines onboarding for new team members, as they can quickly set up their environment to match the recorded specifications.
+## 🎯 Key Use Cases for Containers in Researchers
 
-## Why use containers?
-Containers remove the need for manual installation or troubleshooting, ensuring that software runs consistently across different machines. Containers act as a self-contained unit that bundle everything needed to run software, including dependencies and system libraries, into a single package known as an **image**.
+1. **Short-Term Reproducibility and Portability:** 🛠 Share and run applications seamlessly across different systems without compatibility issues. Do you struggle with colleagues reproducing your code, even when your dependencies are well documented?
+2. **Long-Term Preservation:** 🏛 Preserve the exact computational environment to reproduce analyses years later. How would someone reproduce the code in a paper you published 20 years from now with different OS, machine, etc?
+3. **Continuous Integration and Deployment (CI/CD):** 🚀 Automate testing and deployment processes to maintain consistency across various environments. Do you struggle with reinstalling an application, scheduler, or new code in a server that needs to run? Do you currently do it manually?
 
-The definition files, like Dockerfiles or Singularity definition files, are essentially instruction manuals to build a container image.
-
-:::{.callout-tip collapse="true"} 
-## **An analogy for a container image**
-Consider a container image like a detailed movie script that outlines every scene. When the movie is shot (i.e., the container is executed), a temporary set is built where all filming occurs in a controlled environment. Once filming ends, the set is dismantled, but the script remains unchanged, allowing the software to be re-executed with the same consistent results every time, just as each scene is reproduced faithfully with the same script.
+::: {.callout-tip}
+### Why Use Containers?
+- 🏗 **Encapsulate** dependencies, ensuring consistent software execution.
+- 🔄 **Minimize setup time** by eliminating the need for manual installations.
+- 🚀 **Enable reproducibility** across different machines and operating systems.
+- 🏛 **Preserve environments** to ensure results remain valid even years later.
 :::
 
-Containers can be useful for various purposes:
+## 📦 Short-Term Reproducibility and Portability
 
-- If installing certain software is complex or incompatible with your operating system, you can use a pre-built container image to run the software seamlessly.
-- Likewise, if you want to make sure that the people you are working with use the exact same environment, you could provide them with an image of your container.
-- If you are facing issues due to different system architectures you can distribute a definition file to build an image that tailors to different machines. While it might not replicate your environment exactly, it often provides a sufficiently close alternative.
+> Sharing research often involves complex setups. Containers encapsulate the entire environment, allowing others to replicate results without intricate installations.
 
-Popular containerisation solutions:
+### **The Most Basic Research Use Case: Code & Data Publishing**
 
-- [Docker](https://www.docker.com) and [Podman](https://podman.io) are great for general software development.
-- [Singularity](https://sylabs.io/docs/) is tailored for high-performance computing (HPC) environments.
-- For managing and scaling containers across multiple machines, tools like [Kubernetes](https://kubernetes.io/) are commonly used.
+📄 **Scenario:** You publish a research paper that includes code, data, and analysis. Without proper environment control, reproducing the results might be difficult due to dependency mismatches.
 
-[Docker's official samples and examples](https://github.com/dockersamples)
+✅ **Solution:** You can create a **container image** (a snapshot of your computational environment) that includes:
 
-:::{.callout-note}
-## **Further reading**
+- The **operating system** 🖥 (specific Linux distribution)
+- The **programming language** and its version 📌
+- Required **libraries and dependencies** 📚
+- Your **code and dataset** 📊
 
-- [Recording environments lesson on CodeRefinery](https://coderefinery.github.io/reproducible-research/environments/)
-- [Carpentries incubator lesson on Docker](https://carpentries-incubator.github.io/docker-introduction/)
-- [Guides and manuals for Docker](https://docs.docker.com)
-- [Singularity documentation](https://singularity-docs.readthedocs.io/en/latest/)
+Example Tool: Binder allows researchers to create a containerized environment from a GitHub repository, enabling seamless sharing and execution.
 
+### **High-Performance Computing (HPC) Clusters**
+
+Some HPC clusters support containers, allowing users to reproduce complex environments seamlessly. Instead of manually setting up dependencies on an HPC cluster, researchers can package their software into a container and run it directly on the cluster. This eliminates compatibility issues and ensures that the same environment used in development is available during execution on the HPC system.
+
+Popular containerization tools for HPC environments include **Apptainer** (previously Singularity), which provides a secure and scalable way to run containers in environments where Docker may not be supported due to security concerns.
+
+This ensures that all necessary dependencies, including system libraries and hardware drivers, are encapsulated in a portable environment that can be deployed across different HPC clusters.
+
+::: {.callout-caution}
+#### When Containers Might Be Overkill
+- 🔹 Simple scripts that require minimal dependencies.
+- 🔹 Well-documented software that can be installed easily using package managers like Conda or pip.
+- 🔹 Situations where a virtual environment is sufficient (e.g., Python's `venv`).
 :::
 
-## Advantages and disadvantages of using containers
-Containers have gained widespread popularity due to their significant benefits in solving various challenges:
+## 🏛️ Long-Term Preservation
 
-- They enable a smooth transition of workflows across different operating systems and configurations.
-- They address the common issue of software behaving differently on different machines by providing a consistent runtime environment.
-- For software with nested dependencies, containers can be a vital tool for ensuring long-term reproducibility.
-- Containers package software in isolated files, simplifying management, installation, and removal compared to traditional methods.
+> Over time, software dependencies and environments evolve, posing challenges to reproducibility. Containers freeze the computational environment, ensuring that analyses can be rerun accurately in the future.
 
-But it is important to consider the downsides:
+### **Why Containers Ensure Long-Term Reproducibility**
 
-- The convenience of containers might lead to overlooking underlying software installation issues and not adhering to good software development practices.
-- There's a risk of creating a new form of dependency - software that *"only works in a specific container"*, which could limit flexibility and interoperability.
-- Container images can grow in size substantially, especially if not carefully managed.
-- Modifying existing containers can sometimes be challenging, requiring a good understanding of the container's configuration.
-- Ensuring container security is vital, as misconfigurations can expose vulnerabilities.
+🕰️ Unlike Conda or pip environments, which rely on external repositories that may change or disappear, **container images are self-contained**. This guarantees:
 
-:::{.callout-caution}
-## **Caution**
-It's crucial to source your container images from reputable and official channels. There have been instances where images were found to be malicious, so it is very important to apply the same caution as when installing software packages from untrusted sources. 
+- 🎯 **Exact replication** of results even 10 or 20 years later.
+- 🚀 **Environment stability** without worrying about software updates or deprecations.
+- 🔗 **Complete portability** across different computing infrastructures.
 
-Always download images from trusted sources like [Docker Hub](https://hub.docker.com). Utilize container scanning tools, such as [Docker scanning tools](https://www.docker.com/blog/automating-your-containers-security-scanning/) to mitigate risks from malicious images.
-:::
+### **Jupyter Notebooks and Web Application Stacks**
+
+🖥️ Many researchers rely on **Jupyter Notebooks** to conduct and document their analyses. Jupyter is a **complex web application stack** that includes:
+
+- 📡 **A server-side service** that manages notebook execution.
+- 🖥 **A frontend interface** that allows users to interact with their computations.
+- 🐍 **Python-based interactive environments** with rich visualization capabilities.
+
+📄 **Scenario:** A climate scientist packages their **data analysis pipeline and Jupyter Notebook** inside a container. Running the container doesn't just reproduce the analysis, but also:
+
+- Ensures that **Python and all required dependencies** (NumPy, Pandas, Matplotlib, etc.) are properly installed.
+- Preserves **OS-level dependencies** such as shared libraries that Python packages may require.
+- Allows future researchers to **interactively explore and modify the computations** within a controlled, identical environment.
+
+## ☁️ Advanced Use: Cloud Computing and Containers
+
+The cloud is inherently **container-friendly** as it is built on the principle of virtualization. Cloud platforms such as AWS, Google Cloud, and Microsoft Azure provide seamless integration with containerized applications, enabling:
+
+- 🚀 **Easy deployment of research applications** on scalable infrastructure.
+- 📦 **Portability** between different cloud providers and on-premise setups.
+- ⏳ **Efficient use of resources**, reducing the cost of maintaining complex software environments.
+
+For advanced users, running containers in the cloud allows for efficient orchestration of machine learning models, data pipelines, and large-scale simulations without having to worry about system compatibility issues.
+
+## 🚀 Conclusion
+
+While containers provide powerful tools for reproducibility and automation, there is a **learning curve** associated with their use. Many researchers manage just fine with simpler environment management tools. **Only invest in containers when software complexity and runtime require it**—if you find yourself struggling with reproducing, redeploying, or maintaining software, containers may provide a significant advantage.
+
+That said, you can also learn containerization for fun! But always remember: **make things as simple as possible and only as complex as necessary**. 🚀
+
+## 📚 Further Reading
+
+- [Docker Documentation](https://docs.docker.com)
+- [Apptainer User Guide](https://apptainer.org/docs/)
+- [Binder Project](https://mybinder.org/)
+- [AWS Containers](https://aws.amazon.com/containers/)
+- [Google Kubernetes Engine](https://cloud.google.com/kubernetes-engine)
+- [Azure Container Instances](https://azure.microsoft.com/en-us/products/container-instances/)
+
+---
+💡 *By adopting containers, researchers and developers can enhance the reproducibility, portability, and longevity of their projects.* 🚀
+
