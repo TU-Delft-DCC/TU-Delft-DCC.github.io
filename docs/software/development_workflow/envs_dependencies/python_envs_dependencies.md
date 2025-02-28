@@ -49,60 +49,77 @@ corresponding: Elviss Dvinskis
 
 ---
 
-When using Python you have multiple options to manage dependencies and environments, each suited to different needs. To ensure reproducibility and manage dependencies use:
+When working with Python, managing dependencies and environments is important to ensure your project can be reproduced and shared. 
 
-- [Conda environments](#conda-environments)
-- [Virtual environments](#virtual-environments-venvvirtualenv) (`venv`/`virtualenv`)
-- [Dependency files](#dependency-files) (`requirements.txt`/`environment.yml`)
-- [Dependency management tools](#dependency-management-tools) (`poetry`/`pipenv`)
+::: {.callout-note appearance="simple" icon="false"}
+## {{< fa info-circle >}} Definitions:
+A **dependency** is any external library your project needs, and a **virtual environment** is an isolated workspace where dependencies are installed.
+:::
+
+There are several ways to manage dependencies and environments:
+- Conda environments (scientific computing and package management)
+- Virtual environments (`venv`/`virtualenv`) (lightweight, built into Python)
+- Alternative dependency management tools
+
 
 ### Conda Environments
 
-Conda is a popular choice within the research community for managing dependencies and environments. Conda is a system package manager that allows for managing both packages and environments. It is ideal for projects requiring specific Python versions, packages not available via pip.
+Conda is a package and environment manager popular the research and data science community. It allows you to manage both Python and non-Python dependencies.
 
-**To create a conda environment:**
-
+#### Basic commands
 ```bash
+
+# Create a new environment, e.g. with python 3.12
 conda create -n your_env_name python=3.12
-# You can specify your Python version
-```
-**To activate:**
-```bash
-conda activate your_env_name
-```
-**To export your environment:**
-```bash
-conda env export > environment.yml
-```
-**To deactivate:**
-```bash
-conda deactivate
-```
-**To list your conda environments:**
-```bash
+
+# List all environments
 conda env list
-```
-**To delete an environment:**
-```bash
+
+# Activate an environment
+conda activate your_env_name
+
+# Install packages in an environment
+conda install package_name
+
+# Export an environment to a file
+conda env export > environment.yml
+
+# Deactivate an environment
+conda deactivate
+
+# Remove a package from an environment
 conda env remove -n your_env_name
+```	
+
+#### Conda environment files
+Conda environment files (`environment.yml`) are used to specify the dependencies of a project. They can be used to create an environment from scratch, or to update an existing environment.
+
+```bash
+# Export an environment to a file
+conda env export > environment.yml
+
+# Create an environment from a file
+conda env create -f environment.yml
+
+# Update an environment from a file
+conda env update -f environment.yml
 ```
 
 ### Virtual Environments (`venv`/`virtualenv`)
+Python provides `venv` as a buil-in tool for creating virtual environments. `virtualenv` is a third-party tool that provides similar functionality.
 
-If you prefer or need a pip-based solution, tools like `venv` or `virtualenv` allow you to create isolated Python environments. This prevents package versions installed globally from interfering with your project-specific dependencies.
-
-**To create a virtual environment:**
+#### Creating a virtual environment
 
 ```bash
 # Using venv (Python 3.3+ built-in)
 python -m venv your-env-name
 
-# Using virtualenv (requires pip install first)
+# Using virtualenv (must be installed first)
 pip install virtualenv
 virtualenv your-env-name
 ```
 
-**To activate:**
+#### Activating the environment
 
 ```bash
 # Linux/macOS
@@ -110,60 +127,36 @@ source your-env-name/bin/activate
 
 # Windows
 your-env-name\Scripts\activate
+
+# To deactivate
+deactivate
+
 ```
-**Export `requirements.txt` from an activated environment:**
+
+#### Managing dependencies with pip
+
 ```bash
+# Export requirements.txt from an activated environment
 pip freeze > requirements.txt
+
+# Install dependencies from requirements.txt
+pip install -r requirements.txt
+
 ```
-This provides a snapshot of your dependencies.
 
 ::: {.callout-tip appearance="simple" icon="false"}
 ## {{< fa lightbulb >}} Tip
-You can use [`pip-chill`](https://pypi.org/project/pip-chill/) or [`pipreqs`](https://pypi.org/project/pipreqs/) instead of `pip freeze` to exclude OS-specific dependencies and sub-dependencies from your `requirements.txt`. `pip-chill` lists only packages you installed, while `pipreqs` lists packages your code actually uses.
+Use [`pip-chill`](https://pypi.org/project/pip-chill/) or [`pipreqs`](https://pypi.org/project/pipreqs/) instead of `pip freeze` to exclude unnecessary dependencies. `pip-chill` lists only packages you installed, while `pipreqs` lists packages your code actually uses.
 :::
 
-**To deactivate:**
-```bash
-deactivate
-```
-**To list your environments:**
-
-Virtual environments created with `venv` or `virtualenv` must be manually tracked through your filesystem. However, with `virtualenv` you can install the `virtualenvwrapper` extension that allows for easier managing of your development workflow.
-
-**To delete an environment:**
-
-You'll need to manually navigate and remove your environment directories. However, if you are using `virtualenv` with `virtualenvwrapper` you can remove an environment using the `rmvirtualenv` command:
-```bash
-rmvirtualenv your-env-name
-```
-
-### Dependency Files
-
-A `requirements.txt` or `environment.yml` file lists all dependencies with their specific versions. 
-
-**To recreate an environment in conda:**
-```bash
-conda env create -f environment.yml
-```
-**With pip:**
-
-```bash
-python -m venv your-new-env
-#or
-virtualenv your-new-env
-#then (macOS/Linux)
-source your-new-env/bin/activate
-# or (Windows)
-your-new-env\Scripts\activate
-```
-then navigate to where your `requirements.txt` is located, and
-```bash
-pip install -r requirements.txt
-```
 
 ### Dependency Management Tools
 
-Tools like `poetry` and `pipenv` provide a more sophisticated dependency management by handling virtual environment creation and dependency resolution in a more integrated manner. They maintain a project manifest (e.g., `pyproject.toml` for Poetry) that specifies primary dependencies and generate lock files to pin exact versions for reproducibility.
+For more control over dependencies, consider using alternative tool that can provide a more sophisticated dependency management by handling virtual environment creation and dependency resolution in together. They maintain a project manifest (e.g., `pyproject.toml` for Poetry) that specifies primary dependencies and generate lock files to pin exact versions for reproducibility.
+
+- [Pipenv](https://pipenv.pypa.io/en/latest/): Combines `pip` and `virtualenv` into a single tool, with a focus on simplicity and ease of use.
+- [Poetry](https://python-poetry.org/docs/): Manages dependencies, environments, and package building in a streamlined way.
+- [Pixi](https://pixi.sh/latest/tutorials/python/): A new tool that aims to provide a more user-friendly experience for managing Python environments and dependencies.
 
 :::{.callout-note appearance="simple" icon="false"}
 ## {{< fa signs-post >}} Learn more
@@ -173,11 +166,4 @@ Tools like `poetry` and `pipenv` provide a more sophisticated dependency managem
 - [Conda documentation](https://docs.conda.io/projects/conda/en/stable/user-guide/getting-started.html)
 - [virtualenv documentation](https://virtualenv.pypa.io/en/latest/)
 - [virtualenvwrapper extension](https://virtualenvwrapper.readthedocs.io/en/latest/)
-- [pipenv documentation](https://pipenv.pypa.io/en/latest/)
-- [poetry documentation](https://python-poetry.org/docs/)
-- [pip-chill on PyPI](https://pypi.org/project/pip-chill/)
-- [pipreqs on PYPI](https://pypi.org/project/pipreqs/)
 :::
-
-
-
