@@ -125,7 +125,7 @@ website:
                   href: docs/data/planning/privacy_and_security.md
                 - text: Ethics
                   href: docs/data/planning/ethics.md
-            - section: Data collection
+            - section: Collection
               href: docs/data/data_collection/collection.md
               contents:
                 - text: Data conventions
@@ -136,7 +136,7 @@ website:
                   href: docs/data/data_collection/elab_rspace.md
             - text: Data processing
               href: docs/data/data_processing.md
-            - section: Data storage
+            - section: Storage
               href: docs/data/data_storage/storage.md
               contents:
                 - text: Storage options
