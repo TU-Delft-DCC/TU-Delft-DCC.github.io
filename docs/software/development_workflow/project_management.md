@@ -49,12 +49,17 @@ corresponding: Elviss Dvinskis
 
 [Git](https://git-scm.com/) is a distributed version control system that enables you to track changes in your code over time. Platforms like GitHub, GitLab and Bitbucket extend the features of git by providing a centralized location for storing repositories, collaborating, and providing powerful tools to plan, organize, and track your work efficiently.
 
+::: {.callout-tip appearance="simple" icon="false"}
+## New to git?
+If you are new to Git, we recommend starting with the [Software Carpentry lesson on version control with Git](https://swcarpentry.github.io/git-novice/).
+:::
+
 ## Version control platforms
 
-The choice between GitHub, GitLab and Bitbucket depends on your required features, privacy and other preferences, but they all are Git-based platforms for version control. While numerous detailed comparisons exist online, here we will focus on GitHub.
+The choice between GitHub, GitLab and Bitbucket depends on your required features, privacy and other preferences, but all are Git-based platforms for version control. While numerous detailed comparisons exist online, here we will focus on GitHub.
 
-::: {.callout-warning appearance="simple" icon="false"}
-## {{< fa info-circle >}} TU Delft GitLab
+::: {.callout-note appearance="simple" icon="false"}
+## TU Delft GitLab
 
 TU Delft has its own [GitLab instance](https://gitlab.tudelft.nl/) hosted on campus. For more information, please visit the [documentation](https://gitlab.tudelft.nl/help) and our TU Delft GitLab guides in the [Computing Infrastracture](../../infrastructure/getting_started.md) section.
 
@@ -63,25 +68,27 @@ TU Delft has its own [GitLab instance](https://gitlab.tudelft.nl/) hosted on cam
 
 Similarly, whether you are using a version control system through your terminal or Integrated Development Environment (IDE), or using a GUI like [GitHub Desktop](https://github.com/apps/desktop), the core functionality remains the same.
 
-::: {.callout-tip appearance="simple" icon="false"}
-## {{< fa lightbulb >}} Tip
+::: {.callout-tip appearance="simple" icon="false" collapse="true"}
+## {{< fa lightbulb >}} Learn more about GitHub Desktop
 
-GitHub Desktop is a great choice if you are just starting out with version control. It provides a user-friendly graphical interface that simplifies Git operations. It makes it easy to visualize changes, create branches, and manage pull requests without needing to use command-line Git commands.
+GitHub Desktop is a great choice if you are just starting out with version control, providing a user-friendly graphical interface that simplifies Git operations. It makes it easy to visualize changes, create branches, and manage pull requests without needing to use command-line Git commands.
+
+{{< fa share-from-square >}} [Getting started with GitHub Desktop](https://docs.github.com/en/desktop/overview/getting-started-with-github-desktop)
 :::
 
-## Issues
+## GitHub issues
 
-Issues are a fundamental component of project management on GitHub, serving as a versatile tool for tracking tasks, bugs, feature requests, and more.
+GitHub issues help you keep track of tasks, bugs, feature ideas in your project. They are like a to-do list items that everyone on your team can see and update.
 
-Using GitHub issues effectively:
+How to use issues effectively:
 
-1. **Use descriptive titles:** Write clear, concise titles that summarize the issue. This helps others quickly understand the purpose of each issue.
-2. **Provide detailed descriptions:** Include all relevant information, steps to reproduce (if you are bringing up something that is not working), and expected outcomes in the issue description. This ensures that anyone working on the issue has all the necessary context.
-3. **Use labels:** Labels can help filter and sort issues; helps you categorize and prioritize issues.
+1. **Use descriptive titles:** Write short, specific titles that make it easy to understand what the issue is about.
+2. **Provide detailed descriptions:** Include all relevant information, steps to reproduce (if reporting a bug), and expected outcomes in the issue description. This ensures that anyone working on the issue has all the necessary context.
+3. **Use labels:** Labels act like tags to help you organize and prioritize tasks.
 4. **Assign people:** By assigning someone (or yourself) you let others know that you are picking up and working on this issue.
 5. **Link related issues:** Connect related work by linking issues to provide context (add `#issue_number` to reference an issue).
 
-You can use GitHub issues to manage your project, improve collaboration, and maintain a clear overview of your work progress. As your project(/-s) grows, you can easily transition to more structured management using milestones and project boards while still benefitting from well-organized issues.
+GitHub Issues make it easier to manage your project, collaborate with others, and keep track of progress. As your project grows, you can use additional tools like milestones and project boards while still benefiting from well-organized issues.
 
 :::{.callout-note appearance="simple" icon="false"}
 ## {{< fa signs-post >}} Learn more
@@ -93,11 +100,7 @@ You can use GitHub issues to manage your project, improve collaboration, and mai
 
 ## Project boards
 
-Project boards on GitHub are designed for planning, organizing, and tracking work within a project. They serve as visual management interfaces that integrate directly with GitHub issues and pull requests. Project boards can be configured as kanban boards, tables, or roadmaps, offering various layouts to suit different project management needs. Project boards can be particularly useful for visualizing the overall progress of your project and identifying bottlenecks in your workflow. They provide a high-level view that complements the detailed tracking offered by issues.
-
-::: {.callout-tip appearance="simple" icon="false"}
-{{< fa lightbulb >}} Integrating issues with project boards streamlines the tracking of tasks from beginning to end, ensuring each task is closely monitored and helping you achieve your set milestones.
-:::
+Project boards on GitHub are designed for planning, organizing, and tracking work within a project. They serve as visual management interfaces that integrate directly with GitHub issues and pull requests. Project boards can be configured as Kanban boards, tables, or roadmaps, offering various layouts to suit different project management needs. Project boards can be particularly useful for visualizing the overall progress of your project and identifying bottlenecks in your workflow. They provide a high-level view that complements the detailed tracking offered by issues.
 
 ### Milestones
 
@@ -106,8 +109,8 @@ Using milestones you can break down large projects into smaller, more manageable
 :::{.callout-note appearance="simple" icon="false"}
 ## {{< fa signs-post >}} Learn more
 
-- [Example - xarray projects](https://github.com/pydata/xarray/projects?query=is%3Aopen)
-- Define a [milestone](https://docs.github.com/en/issues/using-labels-and-milestones-to-track-work/creating-and-editing-milestones-for-issues-and-pull-requests)
+- [Example project board - TU Delft Astrodynamics Toolkit (Tudat)](https://github.com/orgs/tudat-team/projects/18)
+- [Define a milestone](https://docs.github.com/en/issues/using-labels-and-milestones-to-track-work/creating-and-editing-milestones-for-issues-and-pull-requests)
 - [GitHub Guides for Issues and Projects](https://docs.github.com/en/issues/guides)
 :::
 
@@ -115,11 +118,13 @@ Using milestones you can break down large projects into smaller, more manageable
 
 When managing your project on GitHub, we recommend two approaches:
 
-1. a simplified approach using only issues, or
-2. a more structured approach using milestones and project boards. 
+1. a **simplified approach** using only issues, or
+2. a more **structured approach** using milestones and project boards. 
 
 Both methods have advantages, and the choice depends on the size of the project, its complexity, and your preferences.
 
+::: {.panel-tabset}
+## Simplified approach
 You can use a simplified approach and just track your progress in the form of issues and work without defining milestones or using a project board. This can be particularly useful for smaller projects or when you are just starting out with GitHub. 
 
 In this approach, you would:
@@ -132,17 +137,22 @@ In this approach, you would:
 
 This method allows for a flexible workflow while still maintaining a good level of organization and transparency in your project. If your project grows or becomes more complex, you can always adopt milestones and project boards for more structured project management.
 
-If you plan a large piece of work in your project, it is a good idea to first produce an outline of the work. Your roadmap should include a timeline and order of tasks that need completing. This helps yourself and your collaborators to get an understanding of what is currently happening on the project and what is coming next.
 
-To create a roadmap, it is useful to map out the key milestones and the tasks needed to accomplish the milestones. Getting started this way would be similar to this:
+## Structured approach
+When working on a big project, it's helpful to create **a roadmap** — a simple plan that outlines what needs to be done and when. A roadmap gives you and your team a clear view of what’s happening now and what’s coming next.
 
-1. Create a milestone.
-1. Add issues to your milestone.
-1. Create a project board.
-1. Add issues to your project board.
-1. Use task lists in your issues to break down the work.
-1. When collaborating, assign people to issues.
-1. Consider linking milestones, issues and pull requests to track progress.
+To create a roadmap, it is useful to map out the key milestones and the tasks needed to accomplish the milestones. You can then use GitHub milestones and project boards to track progress and manage your project:
+
+1. Define key milestones.
+2. Create a milestone in GitHub
+3. Add related issues to your milestone.
+4. Set up a project board.
+5. Add issues to your project board.
+6. Use task lists in your issues to break down the work.
+7. Assign tasks to team members.
+8. Linking milestones, issues and pull requests to track progress.
+
+:::
 
 ## GitHub benefits for researchers and organisations
 
