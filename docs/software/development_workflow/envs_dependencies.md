@@ -3,7 +3,7 @@
 
 # We use this key to indicate the last reviewed date [manual entry, use YYYY-MM-DD]
 # Uncomment and populate the next line accordingly
-#date: YYYY-MM-DD
+date: 2025-02-15
 
 # We use this key to indicate the last modified date [automatic entry]
 date-modified: last-modified
@@ -16,7 +16,7 @@ language:
 
 # Title of the document [manual entry]
 # Uncomment and populate the next line accordingly
-title: Version control with Git
+title: Environment and dependency management
 
 # Brief overview of the document (will be used in listings) [manual entry]
 # Uncomment and populate the next line and uncomment "hide-description: true".
@@ -25,36 +25,60 @@ title: Version control with Git
 
 # Authors of the document, will not be parsed [manual entry]
 # Uncomment and populate the next lines accordingly
-#author_1: Name Surname
+author_1: Elviss Dvinskis
 #author_2:
 
 # Maintainers of the document, will not be parsed [manual entry]
 # Uncomment and populate the next lines accordingly
-#maintainer_1: Name Surname
+maintainer_1: Elviss Dvinskis
 #maintainer_2:
 
 # To whom reach out regarding the document, will not be parsed [manual entry]
 # Uncomment and populate the next line accordingly
-#corresponding: Name Surname
+corresponding: Elviss Dvinskis
 
 # Meaningful keywords, newline separated [manual entry]
 # Uncomment and populate the next line and list accordingly
 #categories: 
-# - 
-# - 
+# - environments
+# - dependencies
+# - python
+# - matlab
+# - r
 
 ---
 
-Using a version control system provides better management to your code. It allows tracing back changes made, facilitates collaboration and dissemination of the code files. As using a version control system is becoming standard, some scientific journals (e.g. Science and Nature) require code used for modelling or data analysis to be available in a publicly accessible repository. Git is the most popular and commonly used version control software.   
+Properly managing dependencies and your environment is a critical aspect of any software project. This ensures that your project can be reliably reproduced, simplifies setup for collaborators, and reduces conflicts between third-party libraries.
 
-Following are the different ways in which you can learn version control with Git: 
+::: {.content-block}
+::: {.features}
 
-- [Sign up](https://www.tudelft.nl/library/research-data-management/r/training-evenementen/training-voor-onderzoekers/software-carpentry-workshops) for the software carpentry workshop (free of cost) at TU Delft.  
+::: {.feature}
+### {{< fa cube >}} Python
+Environment and dependency management in Python.
 
-- Learn at your own pace using the publicly available training material from the [Software Carpentry](https://swcarpentry.github.io/git-novice/) and [Code Refinery](https://coderefinery.github.io/git-intro/)
+::: {.learn-more}
+[Learn more »](./envs_dependencies/python_envs_dependencies.md)
+:::
+:::
 
-- Use the [Repository Template](https://github.com/manuGil/fair-code) to make your code more compliant with FAIR principles 
+::: {.feature}
+### {{< fa cube >}} MATLAB
+Environment and dependency management in MATLAB.
 
-<!-- ## Table of contents
-```{tableofcontents}
-``` -->
+::: {.learn-more}
+[Learn more »](./envs_dependencies/matlab_envs_dependencies.md)
+:::
+:::
+
+::: {.feature}
+### {{< fa cube >}} R
+Environment and dependency management in R.
+
+::: {.learn-more}
+[Learn more »](./envs_dependencies/r_envs_dependencies.md)
+:::
+:::
+
+:::
+:::
