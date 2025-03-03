@@ -187,16 +187,16 @@ website:
             - section: "Software testing"
               href: docs/software/testing/index.md
               contents:
+                - test: Roadmap to testing
+                  href: docs/software/testing/strategies.md
                 - text: Test types
                   href: docs/software/testing/test_types.md
-                - test: Strategies
-                  href: docs/software/testing/strategies.md
+                - text: Advanced concepts
+                  href: docs/software/testing/intermediate.md
                 - text: Testing with Python
                   href: docs/software/testing/python.md
                 - text: Testing with MATLAB
                   href: docs/software/testing/matlab.md
-                - text: Advanced concepts
-                  href: docs/software/testing/intermediate.md
             - section: "Version control with git"
               href: docs/software/git/intro.md
               contents:

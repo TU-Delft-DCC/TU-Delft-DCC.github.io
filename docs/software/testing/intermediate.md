@@ -46,19 +46,37 @@ categories:
 ---
 
 #### Code Coverage
-A code coverage report is a tool to measure the effectiveness of testing by providing insights into which parts of the codebase have been executed during testing. 
+Code coverage measures how much of your code is executed during testing. It is a useful metric to ensure that your tests are comprehensive and indicate your code's quality. If your software becomes a dependency for others, a code coverage of 70% or higher is recommended for unit tests.
 
-- MATLAB - [Collect code coverage with Command Window execution](https://nl.mathworks.com/help/matlab/ref/runtests.html#d126e1481788) *(since R2023b)*
-- MATLAB - [Code coverage with Test Browser](https://nl.mathworks.com/help/matlab/ref/testbrowser-app.html#:~:text=Generate%20Code%20Coverage%20Report) *(since R2023a)*
-- MATLAB - [Collect code coverage](https://nl.mathworks.com/help/matlab/matlab_prog/collect-statement-and-function-coverage-metrics-for-matlab-source-code.html)
-- Pytest -  [pytest-cov](https://pypi.org/project/pytest-cov/)
-- Python coverage - [Documentation](https://coverage.readthedocs.io/en/latest/)
+::: {.panel-tabset}
+## Python
+- [pytest-cov plugin](https://pypi.org/project/pytest-cov/) (for pytest)
+- [Coverage.py documentation](https://coverage.readthedocs.io/en/latest/)
+
+## MATLAB
+- [Collect code coverage with Command Window execution](https://nl.mathworks.com/help/matlab/ref/runtests.html#d126e1481788) *(since R2023b)*
+- [Code coverage with Test Browser](https://nl.mathworks.com/help/matlab/ref/testbrowser-app.html#:~:text=Generate%20Code%20Coverage%20Report) *(since R2023a)*
+- [Collect code coverage metrics](https://nl.mathworks.com/help/matlab/matlab_prog/collect-statement-and-function-coverage-metrics-for-matlab-source-code.html)
+:::
 
 #### Error handling
-It is not only useful to test that your code generates the expected behaviour for the appropriate inputs, it is also useful to check that your functions throw the correct exceptions when this is not the case.
+Tests should check if your code behaves as expected when it encounters errors.
+
 
 - MATLAB - [Verify function throws specific exceptions](https://nl.mathworks.com/help/matlab/ref/matlab.unittest.qualifications.verifiable.verifyerror.html)
 - Pytest - [Assert raised exceptions](https://docs.pytest.org/en/stable/how-to/assert.html#assertraises)
+
+Example in Python:
+```python
+def divide(x, y):
+    if y == 0:
+        raise ValueError("Cannot divide by zero")
+    return x / y
+
+def test_divide_by_zero():
+    with pytest.raises(ValueError):
+        divide(1, 0)
+```
 
 #### Fixtures 
 Fixtures are predefined states or sets of data used to set up the testing environment, ensuring consistent conditions for tests to run reliably.

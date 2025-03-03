@@ -51,7 +51,7 @@ When you're writing software — especially for research — it's important to m
 ::: {.features}
 
 ::: {.feature}
-### {{< fa file-code >}} Test types
+### {{< fa cubes >}} Test types
 Different types of tests to ensure your software works as expected.
 
 ::: {.learn-more}
@@ -61,7 +61,7 @@ Different types of tests to ensure your software works as expected.
 
 ::: {.feature}
 ### {{< fa magnifying-glass >}} Additional concepts
-Conventions and guidelines used to write and format code.
+Advanced concepts to help you write better tests.
 
 ::: {.learn-more}
 [Learn more »](./intermediate.md)
@@ -70,7 +70,7 @@ Conventions and guidelines used to write and format code.
 
 ::: {.feature}
 ### {{< fa flask >}} Python testing
-Restructuring existing code without changing its external behavior.
+Testing Python code to ensure it works as expected.
 
 ::: {.learn-more}
 [Learn more »](./python.md)
@@ -79,7 +79,7 @@ Restructuring existing code without changing its external behavior.
 
 ::: {.feature}
 ### {{< fa flask >}} MATLAB testing
-Restructuring existing code without changing its external behavior.
+Testing MATLAB code to ensure it works as expected.
 
 ::: {.learn-more}
 [Learn more »](./matlab.md)

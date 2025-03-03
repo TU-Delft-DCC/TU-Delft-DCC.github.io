@@ -56,9 +56,9 @@ The following questions can help you decide what to test in your software:
 - How can I verify that the input data types, formats, and ranges adhere to expected standards and constraints?
 - How does the software behave at boundary conditions and extreme values of input parameters?
 - How does the software perform under varying workloads and dataset sizes, and is it scalable for large-scale simulations or data processing tasks?
-- How do I compare the software's results against existing literature, experimental data, or validated simulations to validate their accuracy?
+- How do I compare the software's results against existing literature, experimental data, or previous simulations to check their accuracy?
 
-### Testing strategies
+### Roadmap to testing
 
 ::: {.panel-tabset}
 
@@ -111,18 +111,23 @@ Consider methodologies such as Test-Driven Development (TDD) into your workflow.
 
 ::: {.callout-note appearance="simple" icon="false" collapse="true"}
 ## 3. Research-specific testing
-In a research context, certain quality measures become particularly important. Prioritize reproducibility by writing tests that verify experiments yield consistent outputs for a given dataset and configuration. If your work involves statistical methods, use fixed seeds to ensure reproducibility across different runs. Additionally, consider implementing validation tests that compare your results against known benchmarks or experimental data,
+In a research context, certain quality measures become particularly important. Prioritize reproducibility by writing tests that verify experiments yield consistent outputs for a given dataset and configuration. If your code relies on statistical methods, use fixed random seeds to ensure reproducibility across different runs. Additionally, consider implementing validation tests that compare your results against known benchmarks or experimental data.
 :::
 
 ::: {.callout-note appearance="simple" icon="false" collapse="true"}
 ## 4. Consider advanced testing practices
-- **Mocking:**  
-  Use mocks to simulate external systems or heavy computations, isolating tests for faster feedback.
-- **Parameterization:**  
-  Run tests with a range of inputs to validate robustness across different scenarios.
 - **Coverage Analysis:**  
   Employ code coverage tools to identify untested paths and critical areas that require additional testing.
-
+- **Parameterization:**  
+  Run tests with a range of inputs to validate robustness across different scenarios.
+- **Error Handling:**
+  Verify that your code behaves as expected when encountering errors.
+- **Fixtures:**
+  Use fixtures to set up a consistent and reusable testing environment.
+- **Mocking:**  
+  Use mocks to simulate external systems or heavy computations, isolating tests for faster feedback.
+- **Tagging and Filtering:**
+  Organize tests into categories and run specific subsets based on tags or filters.
 {{< fa up-right-from-square>}} [Advanced testing practices](/docs/software/testing/intermediate.md)
 :::
 
