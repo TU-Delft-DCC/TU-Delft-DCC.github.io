@@ -48,7 +48,6 @@ corresponding: Elviss Dvinskis
 # - virtualenv
 
 ---
-
 When working with Python, managing dependencies and environments is important to ensure your project can be reproduced and shared. 
 
 ::: {.callout-note appearance="simple" icon="false"}
@@ -57,18 +56,18 @@ A **dependency** is any external library your project needs, and a **virtual env
 :::
 
 There are several ways to manage dependencies and environments:
-- Conda environments (scientific computing and package management)
-- Virtual environments (`venv`/`virtualenv`) (lightweight, built into Python)
-- Alternative dependency management tools
+
+- [Conda environments](#conda-environments)
+- [Virtual environments](#virtual-environments-venvvirtualenv) (`venv`/`virtualenv`)
+- [Dependency management tools](#dependency-management-tools) (e.g. `poetry`, `pipenv`)
 
 
 ### Conda Environments
 
-Conda is a package and environment manager popular the research and data science community. It allows you to manage both Python and non-Python dependencies.
+Conda is a package and environment manager popular in the research and data science community. It allows you to manage both Python and non-Python dependencies.
 
-#### Basic commands
+#### **Basic commands**
 ```bash
-
 # Create a new environment, e.g. with python 3.12
 conda create -n your_env_name python=3.12
 
@@ -81,17 +80,20 @@ conda activate your_env_name
 # Install packages in an environment
 conda install package_name
 
+# Remove a package
+conda remove package_name
+
 # Export an environment to a file
 conda env export > environment.yml
 
 # Deactivate an environment
 conda deactivate
 
-# Remove a package from an environment
+# Remove an environment
 conda env remove -n your_env_name
 ```	
 
-#### Conda environment files
+#### **Conda environment files**
 Conda environment files (`environment.yml`) are used to specify the dependencies of a project. They can be used to create an environment from scratch, or to update an existing environment.
 
 ```bash
@@ -108,32 +110,37 @@ conda env update -f environment.yml
 ### Virtual Environments (`venv`/`virtualenv`)
 Python provides `venv` as a buil-in tool for creating virtual environments. `virtualenv` is a third-party tool that provides similar functionality.
 
-#### Creating a virtual environment
+#### **Basic commands**
 
 ```bash
+# Creating a virtual environment
 # Using venv (Python 3.3+ built-in)
 python -m venv your-env-name
 
 # Using virtualenv (must be installed first)
 pip install virtualenv
 virtualenv your-env-name
-```
 
-#### Activating the environment
-
-```bash
+#Activating the environment
 # Linux/macOS
 source your-env-name/bin/activate
-
 # Windows
 your-env-name\Scripts\activate
+
+# Installing a library (package)
+pip install lib_name
+
+# Uninstalling a library (package)
+pip uninstall lib_name
 
 # To deactivate
 deactivate
 
 ```
 
-#### Managing dependencies with pip
+#### **Managing dependencies with `pip`**
+
+A `requirements.txt` file lists all dependencies with their specific versions.
 
 ```bash
 # Export requirements.txt from an activated environment
@@ -152,7 +159,7 @@ Use [`pip-chill`](https://pypi.org/project/pip-chill/) or [`pipreqs`](https://py
 
 ### Dependency Management Tools
 
-For more control over dependencies, consider using alternative tool that can provide a more sophisticated dependency management by handling virtual environment creation and dependency resolution in together. They maintain a project manifest (e.g., `pyproject.toml` for Poetry) that specifies primary dependencies and generate lock files to pin exact versions for reproducibility.
+Consider using tools that offer more sophisticated dependency management by integrating virtual environment creation and dependency resolution. They maintain a project manifest (e.g., `pyproject.toml` for Poetry) that specifies primary dependencies and generate lock files to pin exact versions for reproducibility.
 
 - [Pipenv](https://pipenv.pypa.io/en/latest/): Combines `pip` and `virtualenv` into a single tool, with a focus on simplicity and ease of use.
 - [Poetry](https://python-poetry.org/docs/): Manages dependencies, environments, and package building in a streamlined way.

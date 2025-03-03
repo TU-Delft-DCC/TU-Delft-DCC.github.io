@@ -139,7 +139,7 @@ This method allows for a flexible workflow while still maintaining a good level 
 
 
 ## Structured approach
-When working on a big project, it's helpful to create **a roadmap** — a simple plan that outlines what needs to be done and when. A roadmap gives you and your team a clear view of what’s happening now and what’s coming next.
+When working on a big project, it's helpful to create **a roadmap** - a simple plan that outlines what needs to be done and when. A roadmap gives you and your team a clear view of what’s happening now and what’s coming next.
 
 To create a roadmap, it is useful to map out the key milestones and the tasks needed to accomplish the milestones. You can then use GitHub milestones and project boards to track progress and manage your project:
 

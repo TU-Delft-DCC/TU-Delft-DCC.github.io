@@ -161,7 +161,7 @@ These structures are a starting point and can be adapted based on the specific n
 
 :::{.callout-warning appearance="simple" icon="false"}
 ## {{< fa warning >}} **Managing data**
-If your raw data files or any data assets are large (typically more than a few megabytes), it’s usually best not to include them directly in the repository. Instead:  
+If your raw data files or any data assets are large (typically more than a few megabytes), it’s usually best not to include them directly in the repository. Instead:
 
 - Keep such files externally (e.g. cloud storage, Git LFS), and add only a reference or a small sample to the repository.
 - Adding placeholder files or instructions in the README for how to obtain the complete datasets.

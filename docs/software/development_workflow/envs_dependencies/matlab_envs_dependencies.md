@@ -58,7 +58,7 @@ To check dependencies in a project:
 - Use the the [**Dependency Analyzer**](https://nl.mathworks.com/help/matlab/matlab_prog/analyze-project-dependencies.html) to detect file dependencies.
 
 
-## Custom MATLAB Dependency Manager
+### Custom MATLAB Dependency Manager
 
 To offer a solution for managing dependencies in MATLAB through a dependency file, we have created a Dependency Manager: 
 
