@@ -4,6 +4,7 @@ project:
   resources: # Can just specify which folders need to be rendered, see https://github.com/quarto-dev/quarto-web/blob/main/_quarto.yml
     - "*.md"
     - "docs/**/*.md"
+    - "docs/**/*.qmd"
   render:
     # Render
     - "index.md"
