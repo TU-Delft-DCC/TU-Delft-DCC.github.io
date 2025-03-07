@@ -3,7 +3,7 @@
 
 # We use this key to indicate the last reviewed date [manual entry, use YYYY-MM-DD]
 # Uncomment and populate the next line accordingly
-date: 2024-11-14
+date: 2025-03-07
 
 # We use this key to indicate the last modified date [automatic entry]
 date-modified: last-modified
@@ -43,34 +43,51 @@ categories:
     - README
 ---
 
-Although the specific content of a `README` can vary from project to project, several sections are recommended because they address fundamental aspects that are relevant to most projects.
+A **README** file is essential for your software project as it helps users understand the purpose of your project, how to install and use it, and how to contribute. While the specific content of a README can vary from project to project, a good README should always include the following sections:
 
-You should ensure that your README addresses the following:
+1. The purpose of the project.
+2. How to cite the project.
+3. Installation and usage instructions.
+4. The terms under which the software is distributed (license).
+5. Information on how others can contribute or get help.
 
-1. The purpose of the project is explained.
-2. You have described how to install, use, and develop the code.
-3. You have explained the licensing terms for the project.
-4. Information is provided on how to reach out to you, ask questions, or contribute.
+## 1. Project purpose
+Clearly explain the purpose of your project, including its motivation and objectives. This section should serve as an introductory overview, helping users and contributors understand the essence of your project. 
 
-## Description
-Although explaining the purpose might sound self-explanatory, it is important to clearly explain the motivations and objectives of your project. This section should serve as an introductory overview that informs potential users and contributors about the essence of your project. 
+Consider adding:
 
-Provide background information and include links to any references that someone might not be familiar with. If there are alternatives to your project, this is the place to outline what sets your project apart.
+- Background information
+- Comparison with alternatives, highlighting what sets your project apart
+- Links to related references or documentation
 
-## Installation and usage
-This section should detail the steps needed to set up the software in their environment.
+## 2. How to cite
+If you want users to cite your project when they use it, provide a citation in this section, referring to a publication or DOI of the software.
 
-Before installation, users must be aware of any prerequisites or dependencies required. This can include specific versions of programming languages, libraries, operating systems, and hardware. It is recommended to make use of pip or conda for easy and reproducible installation.
+For more information about citing the project, see the [Citation guide](./citation.md).
 
-After the dependencies, describe the installation process step-by-step. This might involve downloading the software from a repository, compiling code, or using a package manager.
+## 3. Installation and usage
+This section should explain the steps needed to set up and use the software. Before installation, users must be aware of any prerequisites or dependencies that are required. This can include specific versions of programming languages, libraries, operating systems, data, and hardware. 
+
+
+#### **Installation steps**
+Provide a step-by-step guide for installation. This can involve downloading the software from a repository, compiling code, or using a package manager. Consider using package managers, such as `pip` or `conda`, to simplify the installation.
 
 **Example:** The [`scikit-learn` GitHub repository](https://github.com/scikit-learn/scikit-learn?tab=readme-ov-file#installation) provides a good example of the *Installation* section of a README.
 
+#### **Usage**
 You can include the simplest possible usage example directly in the README and provide more complex examples in additional files or links.
 
 **Example:** The [`TensorFlow` GitHub repository](https://github.com/tensorflow/tensorflow?tab=readme-ov-file#install) gives a small usage sample after installation instructions and provides a link with additional examples and tutorials. 
 
-It is recommended to write READMEs in markdown formatting and they should be placed in the top-level directory of your project. It is better that your README is on the side of too much information than too little. If you find your README is becoming too extensive, think about incorporating [additional forms of documentation](https://www.makeareadme.com/#more-documentation) instead of omitting important details.
+## 5. License
+Your README should specify the licensing terms. For more information, see the [License guide](./license.md).
+
+
+::: {.callout-tip appearance="simple" icon="false"}
+## {{< fa lightbulb >}} Tip
+
+It is recommended to write README's in markdown (`README.md`) formatting and placed in the project's top-level directory. If you find your README is becoming too long, consider incorporating [additional documentation files](https://www.makeareadme.com/#more-documentation) instead of omitting important details.
+:::
 
 :::{.callout-note appearance="simple" icon="false"}
 ## {{< fa signs-post >}} Learn more
