@@ -16,7 +16,7 @@ language:
 
 # Title of the document [manual entry]
 # Uncomment and populate the next line accordingly
-title: Mount Project Drive on Server
+title: Mount Project Drive on server
 
 # Brief overview of the document (will be used in listings) [manual entry]
 # Uncomment and populate the next line and uncomment "hide-description: true".
@@ -49,7 +49,7 @@ author_2: Maurits Kok
 Project drive storage from TU Delft ICT can be mounted and made accessible in your (TU Delft) Virtual Private Server.
 
 ## Prerequisites
-- A (TU Delft) [Virtual Private Server](../infrastructure/VPS_request.md)
+- A (TU Delft) [Virtual Private Server](../../infrastructure/VPS_request.md)
 - A (TU Delft) [Project Drive](./project_drive_request.md)
 
 ## Steps
@@ -83,7 +83,7 @@ Content within webdata is under password protection. Typing your username and pa
 :::
 
 ### Step 2. Connect to your TU Delft VPS via SSH 
-Follow instructions in TU Delft ICT email from initial server setup or [configure a 1-step connection via SSH](../infrastructure/VPS_SSH.md).
+Follow instructions in TU Delft ICT email from initial server setup or [configure a 1-step connection via SSH](../../infrastructure/VPS_SSH.md).
 
 ### Step 3. Create a new directory as the mounting point
 The convention is to create mounting points in the folder `/media`. Navigate to the folder and create a new folder with
