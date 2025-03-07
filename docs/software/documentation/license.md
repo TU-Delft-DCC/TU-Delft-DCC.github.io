@@ -38,7 +38,7 @@ categories:
 
 ---
 
-:::{.callout-important}
+:::{.callout-warning}
 ## **Important**
 For questions about data and software licenses, please consult your [Faculty Data Steward](https://www.tudelft.nl/library/research-data-management/r/support/data-stewardship/contact).
 :::
@@ -46,30 +46,33 @@ For questions about data and software licenses, please consult your [Faculty Dat
 ## TU Delft licensing policy
 TU Delft, by default, holds the rights to the software created by its employees. In order to apply a **pre-approved open source license**, you have to follow the guidelines in [**TU Delft Guidelines on Research Software: Licensing, Registration and Commercialisation**](https://zenodo.org/records/4629635). It states:
 
-> It is important to remember that in principle TU Delft holds the rights to the software created by its employees (i.e. software developers, researchers and/or staff). So, some formal (legal) steps are needed to arrange matters properly.
+::: {.callout appearance="simple" icon="false"}
 
-> When these guidelines are followed and when the software is published, **TU Delft disclaims its copyright**, allowing software developers, researchers and staff to hold the copyright to their software and thereby having **the right to apply one of the pre-approved licences** when sharing software. The pre-approved open source software licences at TU Delft are Apache, MIT, BSD, EUPL, AGPL, LGPL, GPL, and CC0. 
+*It is important to remember that in principle TU Delft holds the rights to the software created by its employees (i.e. software developers, researchers and/or staff). So, some formal (legal) steps are needed to arrange matters properly.*
+
+*When these guidelines are followed and when the software is published, **TU Delft disclaims its copyright**, allowing software developers, researchers and staff to hold the copyright to their software and thereby having **the right to apply one of the pre-approved licences** when sharing software. The pre-approved open source software licences at TU Delft are Apache, MIT, BSD, EUPL, AGPL, LGPL, GPL, and CC0.*
+:::
 
 ### Steps to apply a pre-approved open-source license
 1. Determine if it is possible to apply an Open Source Software licence to your project (see diagram below).
-2. The waiver of TU Delft should be indicated in the software licence with the following text:
+2. The waiver of TU Delft should be added to the repository, either as a separate file or within the LICENSE file. The waiver text should be as follows:
 
-```{.markdown .code-overflow-wrap}
-Technische Universiteit Delft hereby disclaims all copyright interest in the program “Name program” (one line description of the content or function) written by the Author(s). 
+    ```{.markdown .code-overflow-wrap}
+    Technische Universiteit Delft hereby disclaims all copyright interest in the program “Name program” (one line description of the content or function) written by the Author(s). 
 
-[Name Dean], Dean of [Name Faculty]
-```
+    [Name Dean], Dean of [Name Faculty]
+    ```
 
-3. Assert your own, personal copyright (© YEAR, [NAME], [REFERENCE project, grant or study if desired]. The reason for waiving the copyright and having the software developers, researchers and staff file the copyright in their own name facilitates the use of copyleft licences.
+3. Assert your own, personal copyright (© YEAR, [NAME], [REFERENCE project, grant or study if desired]. Waiving the copyright and having TU Delft staff assert the copyright in their own name facilitates the use of copyleft licences.
 4. Apply one of the TU Delft pre-approved Open Source Software licences in the format and form described in the licence text after stating, “This work is licensed under a [NAME and VERSION] OSS licence”.
 5. Make the software openly available (for instance in an online repository such as GitHub).
 6. Please consider acknowledging support from TU Delft and/or your funding provider.
 7. Register the software either in 4TU.ResearchData or in PURE. Registries in 4TU.ResearchData are automatically registered in PURE.
 
-:::{.callout-important}
+:::{.callout-warning appearance="simple" icon="false"}
 The steps above are **mandatory**, the TU Delft guidelines state:  
 
-> Please note that if the software is not published, and/or if the guidelines have not been followed correctly and/or if the software is not registered in PURE, then this ‘agreement’ is invalid and the software automatically falls under the legal copyright of TU Delft. This instantly nullifies the right of the software developer or researcher to apply for a licence and thus the open source software licence applied never came into existence. This works retroactively.
+*Please note that if the software is not published, and/or if the guidelines have not been followed correctly and/or if the software is not registered in PURE, then this ‘agreement’ is invalid and the software automatically falls under the legal copyright of TU Delft. This instantly nullifies the right of the software developer or researcher to apply for a licence and thus the open source software licence applied never came into existence. This works retroactively.*
 :::
 
 ### Decision tree for applying for a license
