@@ -139,8 +139,6 @@ website:
               contents:
                 - text: FAIR checklist for research software
                   href: docs/software/fair_software/checklist.md
-                - text: FAIR assessment cards
-                  href: docs/software/fair_software/project_cards.md 
                 - text: Software management plan
                   href: docs/software/fair_software/software_management_plan.md
 #                - text: FAIR for Research Software Program Spring 2023
