@@ -2,7 +2,7 @@
 # Insert this YAML header (including the opening and closing ---) at the beginning of the document and fill it out accordingly
 
 # We use this key to indicate the last reviewed date [manual entry, use YYYY-MM-DD]
-date: 2024-11-13
+date: 2025-03-07
 
 # We use this key to indicate the last modified date [automatic entry]
 date-modified: last-modified
@@ -46,19 +46,10 @@ While originally targetting data management, the FAIR for Research Software (FAI
 
 ::: {.feature}
 ### {{< fa list-check >}} FAIR Software Checklist
-Set of recommendations for FAIR software.
+Set of recommendations for FAIR software. Add FAIR cards to your repository to track progress.
 
 ::: {.learn-more}
-[Learn more »](checklist.md)
-:::
-:::
-
-::: {.feature}
-### {{< fa clipboard >}} FAIR Assesment Cards
-Add FAIR cards to your repository to track progress.
-
-::: {.learn-more}
-[Learn more »](project_cards.md)
+[Learn more »](./checklist.md)
 :::
 :::
 
