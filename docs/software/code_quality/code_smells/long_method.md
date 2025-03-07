@@ -150,5 +150,6 @@ def read_from_csv(filepath: str): pass
 
 :::{.callout-note appearance="simple" icon="false"}
 ## {{< fa signs-post >}} Learn more
-- [eScience Center - Lesson on writing modular code](https://esciencecenter-digital-skills.github.io/good-practices-lesson/2-modular-code.html)
+- [eScience Center - Slides on writing modular code](https://esciencecenter-digital-skills.github.io/digital-skills-slides/modules/good-practices-lesson/modular-code-slides)
+- [Carpentries Incubator - Modular Code Development](https://carpentries-incubator.github.io/good-practices-lesson/2-modular-code.html)
 :::

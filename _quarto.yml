@@ -4,16 +4,18 @@ project:
   resources: # Can just specify which folders need to be rendered, see https://github.com/quarto-dev/quarto-web/blob/main/_quarto.yml
     - "*.md"
     - "docs/**/*.md"
+    - "docs/**/*.qmd"
   render:
     # Render
     - "index.md"
     - "CONTRIBUTING.md"
     - "CODE_OF_CONDUCT.md"
     - "docs/**/*.md"
+    - "docs/**/*.qmd"
     # Do not render
     - "!_under_development/**"
     - "!slides/**"
-    - "!docs/infrastructure/getting_started.md"
+    - "!docs/infrastructure/getting_started_susan.md"
     - "!docs/infrastructure/VPS_SSH_connect.md"
     - "!docs/infrastructure/giving_sudo_privilages.md"
     - "!docs/infrastructure/configure_passwordless_login.md"
@@ -21,6 +23,7 @@ project:
     - "!docs/infrastructure/gitlab/runner_docker.md"
     - "!docs/software/documentation.md"
     - "!docs/software/containers/podman.md"
+    - "!docs/data/to_be_deleted_publishing.md"
 execute: 
   freeze: true # When freeze: true is set, it tells Quarto to "freeze" the execution of code chunks.
 
@@ -86,6 +89,8 @@ website:
         - text: <br>
         - section: ⚙️ **Computing Infrastructure**
           contents:
+          - text: Getting started
+            href: docs/infrastructure/getting_started.md
           - section: "Remote servers"
             href: docs/infrastructure/intro_servers.md
             contents:
@@ -115,20 +120,53 @@ website:
           contents:
             - text: Getting started
               href: docs/data/getting_started.md
-            - section: "FAIR Data"
-              href: docs/data/fair.md
+            - text: FAIR Data
+              href: docs/data/fair_data/fair.md
+            - section: Planning
+              href: docs/data/planning/planning.md
               contents:
-                - text: Prepare data for publishing
-                  href: docs/data/publishing.md
-            - section: "TU Delft Data storage"
-              href: docs/data/storage_options.md
+                - text: Privacy and security
+                  href: docs/data/planning/privacy_and_security.md
+                - text: Ethics
+                  href: docs/data/planning/ethics.md
+            - section: Collection
+              href: docs/data/data_collection/collection.md
               contents:
-                - text: Request Project Drive space
-                  href: docs/data/project_drive_request.md
-                - text: Mount Project Drive on Server
-                  href: docs/data/project_drive_mounting.md
-                - text: Sync with Project Drive and SURFDrive with Unison
-                  href: docs/data/sync_unison.md
+                - text: Data conventions
+                  href: docs/data/data_collection/data_conventions.md
+                - text: Access and reuse
+                  href: docs/data/data_collection/access_reuse.md
+                - text: eLabJournal and RSpace
+                  href: docs/data/data_collection/elab_rspace.md
+            - text: Data processing
+              href: docs/data/data_processing.md
+            - section: Storage
+              href: docs/data/data_storage/storage.md
+              contents:
+                - text: Storage options
+                  href: docs/data/data_storage/storage_options.md
+                  contents:
+                    - text: Request Project Drive space
+                      href: docs/data/data_storage/project_drive_request.md
+                    - text: Mount Project Drive on server
+                      href: docs/data/data_storage/project_drive_mounting.md
+                    - text: Sync Project Drive and SURFDrive with Unison
+                      href: docs/data/data_storage/sync_unison.md
+                - text: Data security
+                  href: docs/data/data_storage/security.md
+                - text: Data sharing
+                  href: docs/data/data_storage/sharing.md
+                - text: Data backup
+                  href: docs/data/data_storage/backup.md
+            - section: Archive and publish
+              href: docs/data/data_publishing/archival_publishing_index.md
+              contents:
+                - text: Licensing
+                  href: docs/data/data_publishing/licensing_data.md
+                - text: Publishing data
+                  href: docs/data/data_publishing/publishing.md
+                - text: Offboarding and ownership
+                  href: docs/data/data_publishing/offboarding.md
         - text: <br>
         - section: "💻 **Research Software**"
           contents:
@@ -143,6 +181,28 @@ website:
                   href: docs/software/fair_software/software_management_plan.md
 #                - text: FAIR for Research Software Program Spring 2023
 #                  url: https://tu-delft-dcc.github.io/FAIR4RS/
+            - section: "Development workflow"
+              href: docs/software/development_workflow/index.md
+              contents:
+                - text: Project management
+                  href: docs/software/development_workflow/project_management.md
+                - text: Project structure
+                  href: docs/software/development_workflow/project_structure.md
+                - text: Project templates and reusability
+                  href: docs/software/development_workflow/reusing_projects.md
+                - section: Environments and dependencies
+                  href: docs/software/development_workflow/envs_dependencies.md
+                  contents:
+                    - text: Python
+                      href: docs/software/development_workflow/envs_dependencies/python_envs_dependencies.md
+                    - text: MATLAB
+                      href: docs/software/development_workflow/envs_dependencies/matlab_envs_dependencies.md
+                    - text: R
+                      href: docs/software/development_workflow/envs_dependencies/r_envs_dependencies.md
+                - text: Branch management
+                  href: docs/software/development_workflow/branch_management.qmd
+                - text: Collaboration
+                  href: docs/software/development_workflow/collaboration.qmd
             - section: "Documentation"
               href: docs/software/documentation/index.md
               contents:
@@ -187,11 +247,6 @@ website:
               contents:
                 - text: Testing with MATLAB
                   href: docs/software/testing_matlab.md
-            - section: "Version control"
-              href: docs/software/git/intro.md
-              contents:
-                - text: Branch management
-                  href: docs/software/git/branch_management.md
             - section: "Working with containers"
               href: docs/software/containers/intro.md
               contents:

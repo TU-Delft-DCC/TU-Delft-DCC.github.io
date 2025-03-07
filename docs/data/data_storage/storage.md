@@ -16,7 +16,7 @@ language:
 
 # Title of the document [manual entry]
 # Uncomment and populate the next line accordingly
-title: Overview
+title: Data storage
 
 # Brief overview of the document (will be used in listings) [manual entry]
 # Uncomment and populate the next line and uncomment "hide-description: true".
@@ -25,8 +25,8 @@ title: Overview
 
 # Authors of the document, will not be parsed [manual entry]
 # Uncomment and populate the next lines accordingly
-#author_1: 
-#author_2: 
+#author_1: Name Surname
+#author_2:
 
 # Maintainers of the document, will not be parsed [manual entry]
 # Uncomment and populate the next lines accordingly
@@ -46,3 +46,48 @@ title: Overview
 ---
 
 Coming soon!
+
+- Introduction
+- TU Delft storage finder
+
+::: {.content-block}
+::: {.features}
+
+::: {.feature}
+### {{< fa warehouse >}} Storage options
+Text text text
+
+::: {.learn-more}
+[Learn more »](./storage_options.md)
+:::
+:::
+
+::: {.feature}
+### {{< fa vault >}} Data security
+Text text text
+
+::: {.learn-more}
+[Learn more »](./security.md)
+:::
+:::
+
+::: {.feature}
+### {{< fa arrow-up-from-bracket >}} Data sharing
+Text text text
+
+::: {.learn-more}
+[Learn more »](./sharing.md)
+:::
+:::
+
+::: {.feature}
+### {{< fa hard-drive >}} Data backup
+Text text text
+
+::: {.learn-more}
+[Learn more »](./backup.md)
+:::
+:::
+
+:::
+:::
