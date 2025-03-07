@@ -173,16 +173,14 @@ website:
             - text: Getting started
               href: docs/software/getting_started.md
             - section: "FAIR Software"
-              href: docs/software/fair.md
+              href: docs/software/fair_software/fair.md
               contents:
                 - text: FAIR checklist for research software
-                  href: docs/software/checklist.md
-                - text: FAIR assessment cards
-                  href: docs/software/project_cards.md 
+                  href: docs/software/fair_software/checklist.md
                 - text: Software management plan
-                  href: docs/software/software_management_plan.md
-                - text: FAIR for Research Software Program Spring 2023
-                  url: https://tu-delft-dcc.github.io/FAIR4RS/
+                  href: docs/software/fair_software/software_management_plan.md
+#                - text: FAIR for Research Software Program Spring 2023
+#                  url: https://tu-delft-dcc.github.io/FAIR4RS/
             - section: "Development workflow"
               href: docs/software/development_workflow/index.md
               contents:
