@@ -51,6 +51,15 @@ When you're writing software — especially for research — it's important to m
 ::: {.features}
 
 ::: {.feature}
+### {{< fa route >}} Approach to testing
+A guide to help you get started with testing your software.
+
+::: {.learn-more}
+[Learn more »](./strategies.md)
+:::
+:::
+
+::: {.feature}
 ### {{< fa cubes >}} Test types
 Different types of tests to ensure your software works as expected.
 
@@ -61,7 +70,7 @@ Different types of tests to ensure your software works as expected.
 
 ::: {.feature}
 ### {{< fa magnifying-glass >}} Additional concepts
-Advanced concepts to help you write better tests.
+More concepts to help you write better tests.
 
 ::: {.learn-more}
 [Learn more »](./intermediate.md)
@@ -70,7 +79,7 @@ Advanced concepts to help you write better tests.
 
 ::: {.feature}
 ### {{< fa flask >}} Python testing
-Testing Python code to ensure it works as expected.
+Testing your Python code.
 
 ::: {.learn-more}
 [Learn more »](./python.md)
@@ -79,7 +88,7 @@ Testing Python code to ensure it works as expected.
 
 ::: {.feature}
 ### {{< fa flask >}} MATLAB testing
-Testing MATLAB code to ensure it works as expected.
+Testing your MATLAB code.
 
 ::: {.learn-more}
 [Learn more »](./matlab.md)
