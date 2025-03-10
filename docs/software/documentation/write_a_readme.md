@@ -50,7 +50,7 @@ A **README** file is essential for your software project as it helps users under
 3. Installation and usage instructions.
 4. The terms under which the software is distributed (license).
 
-## 1. Project purpose
+### Project purpose
 Clearly explain the purpose of your project, including its motivation and objectives. This section should serve as an introductory overview, helping users and contributors understand the essence of your project. 
 
 Consider adding:
@@ -59,12 +59,12 @@ Consider adding:
 - Comparison with alternatives, highlighting what sets your project apart
 - Links to related references or documentation
 
-## 2. How to cite
+### How to cite
 If you want users to cite your project when they use it, provide a citation in this section, referring to a publication or DOI of the software.
 
-For more information about citing the project, see the [Citation guide](./citation.md).
+For more information about citing the project, see the [citation guide](./citation.md).
 
-## 3. Installation and usage
+### Installation and usage
 This section should explain the steps needed to set up and use the software. Before installation, users must be aware of any prerequisites or dependencies that are required. This can include specific versions of programming languages, libraries, operating systems, data, and hardware. 
 
 
@@ -78,7 +78,7 @@ You can include the simplest possible usage example directly in the README and p
 
 **Example:** The [`TensorFlow` GitHub repository](https://github.com/tensorflow/tensorflow?tab=readme-ov-file#install) gives a small usage sample after installation instructions and provides a link with additional examples and tutorials. 
 
-## 4. License
+### License
 Your README should specify the licensing terms. For more information, see the [License guide](./license.md).
 
 
