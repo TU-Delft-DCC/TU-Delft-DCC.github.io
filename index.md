@@ -3,10 +3,75 @@ title: Welcome to the DCC Guides!
 toc: true
 page-navigation: false
 repo-actions: false
+
+css: themes/card-styles.css 
 ---
 
+::: {.grid}
 
-These guides are an initiative from TU Delft [Digital Competence Centre](/docs/community/dcc.md) and aim to provide a comprehensive entrypoint to get you started with Research Computing, Research Data, and Research Software at TU Delft. 
+::: {.g-col-6}
+
+::: {.card}
+![](/docs/img/compute_header.jpg){.card-img-top style="margin-bottom: -50px;"}  
+
+::: {.card-body}
+## [Computing infrastructure](./docs/infrastructure/getting_started.md){.card-title style="color: #0077C0;"}
+
+Technical support for all platforms, apps, and software used in teaching at TU Delft.
+
+- [Remote server](#)  
+- [Gitlab](#)  
+
+[More about Computing infrastructure](./docs/infrastructure/getting_started.md){.btn .btn-primary style="background-color: #0077C0; border: none;"}
+:::
+:::
+:::
+
+::: {.g-col-6}
+::: {.card}
+![](/docs/img/compute_header.jpg){.card-img-top style="margin-bottom: -50px; display: flex;"}  
+
+::: {.card-body}
+## [Data management](./docs/data/getting_started.md){.card-title style="color: #0077C0;"}
+
+Technical support for all platforms, apps, and software used in teaching at TU Delft.
+
+- [FAIR data](#)  
+- [Planning](#)  
+- [Collection](#)  
+- [Data processing](#)  
+- [Sotrage](#)  
+- [Archive and publish](#)  
+
+[More about Data management](./docs/data/getting_started.md){.btn .btn-primary style="background-color: #0077C0; border: none;"}
+:::
+:::
+:::
+
+::: {.g-col-6}
+::: {.card}
+![](/docs/img/compute_header.jpg){.card-img-top style="margin-bottom: -50px; display: flex;"}  
+
+::: {.card-body}
+## [Research software](./docs/software/getting_started.md){.card-title style="color: #0077C0;"}
+
+Technical support for all platforms, apps, and software used in teaching at TU Delft.
+
+- [FAIR software](#)  
+- [Development workflow](#)  
+- [Documentation](#)  
+- [Code quality](#)  
+- [Software testing](#)  
+- [Containers](#)  
+
+[More about Research Software](./docs/software/getting_started.md){.btn .btn-primary style="background-color: #0077C0; border: none;"}
+:::
+:::
+:::
+
+:::
+
+<!-- These guides are an initiative from TU Delft [Digital Competence Centre](/docs/community/dcc.md) and aim to provide a comprehensive entrypoint to get you started with Research Computing, Research Data, and Research Software at TU Delft. 
 
 :::{.callout-note} 
 ## **Disclaimer**
@@ -33,4 +98,4 @@ We have community discussions, talk about ideas, share general questions and dev
 
 💡 [**Open an issue**](https://github.com/TU-Delft-DCC/TU-Delft-DCC.github.io/issues/new/choose)  
 We track topic requests and bug-reports via GitHub issues.
-:::
+::: -->

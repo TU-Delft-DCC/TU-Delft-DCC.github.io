@@ -1,0 +1,106 @@
+/* General Card Styling */
+.card {
+    width: 100%;
+    max-width: 350px; /* Adjust max width for responsiveness */
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    background-color: white;
+    text-align: center;
+    margin: auto;
+    padding: 15px;
+  }
+  
+  /* Image Styling */
+  .card-img {
+    width: 100%;
+    height: auto;
+    margin-bottom: -5px;
+  }
+  
+  /* Card Body */
+  .card-body {
+    padding-top: 10px;
+  }
+  
+  /* Title Styling */
+  .card-title {
+    color: #0077C0;
+    font-size: 1.3rem;
+    margin-top: 0;
+  }
+  
+  /* Text Styling */
+  .card-text {
+    font-size: 0.9rem;
+    margin-top: -5px;
+    color: #333;
+  }
+  
+  /* Two-Column Link Section */
+  .card-links {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px;
+  }
+  
+  .col {
+    flex: 1;
+  }
+  
+  ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  li {
+    margin-bottom: 5px;
+  }
+  
+  a {
+    text-decoration: none;
+    color: #0077C0;
+    font-weight: 500;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Button Styling */
+  .btn {
+    display: block;
+    background-color: #0077C0;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 1rem;
+    margin-top: 10px;
+    text-decoration: none;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .btn:hover {
+    background-color: #005a9e;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 400px) {
+    .card {
+      max-width: 90%;
+    }
+    .card-links {
+      flex-direction: column;
+      align-items: center;
+    }
+    .col {
+      width: 100%;
+      text-align: center;
+    }
+  }
+  
