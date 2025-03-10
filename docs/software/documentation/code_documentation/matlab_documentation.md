@@ -40,4 +40,4 @@ corresponding: Elviss Dvinskis
 
 ---
 
-Coming soon!
+🚧 Coming soon! ⏳
