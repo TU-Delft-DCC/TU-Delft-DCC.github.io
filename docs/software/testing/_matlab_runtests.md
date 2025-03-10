@@ -1,4 +1,3 @@
-```matlab
 function result = runTestSuite(varargin)
 %RUNTESTSUITE - Run all tests and produce coverage report
 %
@@ -189,5 +188,3 @@ function printCoverage(coverageFile)
     coverage = str2double(S.Attributes(index).Value)*100;
     formatSpec = '%.2f%% covered \n';
     fprintf(formatSpec, coverage)
-
-```
