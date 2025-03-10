@@ -119,7 +119,7 @@ pytest tests/test_add.py
 The test results displayed in the console will help you to identify any failures or errors. If errors occur, debug the failing tests by examining failure messages and stack traces.
 
 #### Step 6. Run coverage report locally
-Generate a coverage report to gain insights into which parts of the codebase have been executed during testing (see [Code Coverage](#code-coverage)). 
+Generate a coverage report to gain insights into which parts of the codebase have been executed during testing (see [Code Coverage](./intermediate.md#code-coverage)). 
 
 ```bash
 pip install pytest-cov
@@ -129,8 +129,8 @@ pytest --cov=mypkg tests/
 #### Step 7. Automate testing with Continuous Integration
 Integrate youre test suite with a Continuous Integration service (e.g., GitHub Actions) to run tests automatically on every code change.
 
-::: {.callout-note}
-## Learning materials for automated testing
+::: {.callout-tip appearance="simple" icon="false"}
+## {{< fa graduation-cap >}} Learning materials for automated testing
 - [Intermediate Research Software Development - CI for Automated Testing](https://carpentries-incubator.github.io/python-intermediate-development/23-continuous-integration-automated-testing/index.html)
 - [Code Refinery - Automated testing](https://coderefinery.github.io/testing/continuous-integration/)
 :::
@@ -140,8 +140,8 @@ Integrate youre test suite with a Continuous Integration service (e.g., GitHub A
 - eScience Center - [Project `matchms`](https://github.com/matchms/matchms)
 - Pandas library - [Repository tests](https://github.com/pandas-dev/pandas/tree/main/pandas/tests)
 
-::: {.callout-note}
-## Further reading
+::: {.callout-note appearance="simple" icon="false"}
+## {{< fa signs-post >}} Learn more
 - Pytest - [Getting Started](https://docs.pytest.org/en/8.0.x/getting-started.html#get-started)
 - Code Refinery - [Pytest exercise](https://coderefinery.github.io/testing/locally/)
 - RealPython - [Effective testing with pytest](https://realpython.com/pytest-python-testing/)
