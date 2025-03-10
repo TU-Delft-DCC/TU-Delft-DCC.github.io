@@ -4,16 +4,18 @@ project:
   resources: # Can just specify which folders need to be rendered, see https://github.com/quarto-dev/quarto-web/blob/main/_quarto.yml
     - "*.md"
     - "docs/**/*.md"
+    - "docs/**/*.qmd"
   render:
     # Render
     - "index.md"
     - "CONTRIBUTING.md"
     - "CODE_OF_CONDUCT.md"
     - "docs/**/*.md"
+    - "docs/**/*.qmd"
     # Do not render
     - "!_under_development/**"
     - "!slides/**"
-    - "!docs/infrastructure/getting_started.md"
+    - "!docs/infrastructure/getting_started_susan.md"
     - "!docs/infrastructure/VPS_SSH_connect.md"
     - "!docs/infrastructure/giving_sudo_privilages.md"
     - "!docs/infrastructure/configure_passwordless_login.md"
@@ -87,6 +89,8 @@ website:
         - text: <br>
         - section: ⚙️ **Computing Infrastructure**
           contents:
+          - text: Getting started
+            href: docs/infrastructure/getting_started.md
           - section: "Remote servers"
             href: docs/infrastructure/intro_servers.md
             contents:
@@ -169,25 +173,62 @@ website:
             - text: Getting started
               href: docs/software/getting_started.md
             - section: "FAIR Software"
-              href: docs/software/fair.md
+              href: docs/software/fair_software/fair.md
               contents:
                 - text: FAIR checklist for research software
-                  href: docs/software/checklist.md
-                - text: FAIR assessment cards
-                  href: docs/software/project_cards.md 
+                  href: docs/software/fair_software/checklist.md
                 - text: Software management plan
-                  href: docs/software/software_management_plan.md
-                - text: FAIR for Research Software Program Spring 2023
-                  url: https://tu-delft-dcc.github.io/FAIR4RS/
+                  href: docs/software/fair_software/software_management_plan.md
+#                - text: FAIR for Research Software Program Spring 2023
+#                  url: https://tu-delft-dcc.github.io/FAIR4RS/
+            - section: "Development workflow"
+              href: docs/software/development_workflow/index.md
+              contents:
+                - text: Project management
+                  href: docs/software/development_workflow/project_management.md
+                - text: Project structure
+                  href: docs/software/development_workflow/project_structure.md
+                - text: Project templates and reusability
+                  href: docs/software/development_workflow/reusing_projects.md
+                - section: Environments and dependencies
+                  href: docs/software/development_workflow/envs_dependencies.md
+                  contents:
+                    - text: Python
+                      href: docs/software/development_workflow/envs_dependencies/python_envs_dependencies.md
+                    - text: MATLAB
+                      href: docs/software/development_workflow/envs_dependencies/matlab_envs_dependencies.md
+                    - text: R
+                      href: docs/software/development_workflow/envs_dependencies/r_envs_dependencies.md
+                - text: Branch management
+                  href: docs/software/development_workflow/branch_management.qmd
+                - text: Collaboration
+                  href: docs/software/development_workflow/collaboration.qmd
             - section: "Documentation"
               href: docs/software/documentation/index.md
               contents:
                 - text: README
-                  href: docs/software/documentation/readme.md
-                - text: CITATION.cff
-                  href: docs/software/documentation/citation.md
-                - text: Software license
+                  href: docs/software/documentation/write_a_readme.md
+                - text: Software licenses
                   href: docs/software/documentation/license.md
+                - text: CITATION
+                  href: docs/software/documentation/citation.md
+                - text: Code documentation
+                  href: docs/software/documentation/code_documentation/code_documentation.md
+                  contents:
+                    - text: Python projects
+                      href: docs/software/documentation/code_documentation/python_documentation.md
+                    - text: MATLAB projects
+                      href: docs/software/documentation/code_documentation/matlab_documentation.md
+                    - text: R projects
+                      href: docs/software/documentation/code_documentation/r_documentation.md           
+                - text: Tooling
+                  href: docs/software/documentation/tooling.md
+                - text: Hosting
+                  href: docs/software/documentation/hosting.md
+                - text: Contributing guidelines
+                  href: docs/software/documentation/contributing_guidelines.md
+                - text: Code of conduct
+                  href: docs/software/documentation/code_of_conduct.md
             - section: "Code quality"
               href: docs/software/code_quality/index.md
               contents:
@@ -223,11 +264,6 @@ website:
               contents:
                 - text: Testing with MATLAB
                   href: docs/software/testing_matlab.md
-            - section: "Version control"
-              href: docs/software/git/intro.md
-              contents:
-                - text: Branch management
-                  href: docs/software/git/branch_management.md
             - section: "Working with containers"
               href: docs/software/containers/intro.md
               contents:

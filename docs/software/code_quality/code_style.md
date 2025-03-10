@@ -67,7 +67,7 @@ Formatters are tools that automatically adjust the formatting of your code to ma
 | **MATLAB** | [MATLAB Style Guidelines 2.0](https://nl.mathworks.com/matlabcentral/fileexchange/46056-matlab-style-guidelines-2-0) | [`checkcode`](https://www.mathworks.com/help/matlab/ref/checkcode.html) | [`Code Analyzer`](https://www.mathworks.com/help/matlab/ref/codeanalyzer-app.html) |
 | **C/C++** | [Google C++ Style Guide](https://google.github.io/styleguide/cppguide.html) | [`cppcheck`](http://cppcheck.sourceforge.net/), [`clang-tidy`](https://clang.llvm.org/extra/clang-tidy/) | [`clang-format`](https://clang.llvm.org/docs/ClangFormat.html), [`astyle`](http://astyle.sourceforge.net/) |
 | **Julia** | [Julia Style Guide](https://docs.julialang.org/en/v1/manual/style-guide/), [Blue Style Guide](https://github.com/invenia/BlueStyle) | [`JET.jl`](https://github.com/aviatesk/JET.jl), [`Aqua.jl`](https://github.com/JuliaTesting/Aqua.jl) | [`JuliaFormatter.jl`](https://github.com/domluna/JuliaFormatter.jl) |
-| **Fortran** | [Fortran Best Practices](https://fortran-lang.org/en/learn/best_practices/) | [`fortran-linter`](https://github.com/fortran-lang/fpm/issues/174) | [`fprettify`](https://github.com/pseewald/fprettify) |
+| **Fortran** | [Fortran Best Practices](https://fortran-lang.org/learn/best_practices/) | [`fortran-linter`](https://github.com/fortran-lang/fpm/issues/174) | [`fprettify`](https://github.com/pseewald/fprettify) |
 
 
 :::{.callout-note appearance="simple" icon="false"}
