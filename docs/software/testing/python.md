@@ -47,21 +47,24 @@ categories:
 
 ## Testing in Python
 
-In Python, two popular frameworks are used: `pytest` and `unittest`. In this guide, we demonstrate the use of `pytest`. When starting out with testing in Python, it is [**recommended to use `pytest`**](https://realpython.com/pytest-python-testing/#what-makes-pytest-so-useful).
+In Python, two widely used testing frameworks are `pytest` and `unittest`. This guide focuses on `pytest`, which is recommended for its simplicity and readability. If you are new to testing in Python, [**`pytest` is a great starting point**](https://realpython.com/pytest-python-testing/#what-makes-pytest-so-useful).
 
 ::: {.callout-note collapse="true"}
 ## What is the difference between pytest and unittest?
-The main difference between the two frameworks is that `pytest` offers a more user-friendly and less verbose syntax, allowing for simpler test writing and better readability. `unittest` is part of the Python standard library and follows a more traditional object-oriented style of writing tests.
+
+- `pytest` is a third-party testing framework that is more user-friendly, requires less boilerplate, and offers better readability.
+- `unittest` is part of the Python standard library and follows a more traditional object-oriented style of writing tests. 
 :::
 
 #### Step 1. Setup a testing framework
 
-Install pytest using pip
+Install pytest
 
 ```bash
 pip install pytest
 ```
-Setup your test framework with the following structure in your repository:
+
+A good practice is to organize the codebase into a `src` directory for the source code and a `tests` directory for the test suite. For example:
 
 ```markdown
 src/
@@ -76,20 +79,18 @@ tests/
 ```
   
 #### Step 2. Identify testable units
-Identify functions, methods, or classes that need to be tested within the Python codebase.
+Identify functions, methods, or classes on your code that should be tested. Focus on critical computations and potential points of failure.
 
 #### Step 3. Write test cases
-Write test functions using the pytest framework to test the identified units. For example:
+Write test functions using `pytest`. Here's an example:
 
 ```python
 # src/mypkg/add.py
 def add(x,y):
     return x + y
-```
 
-```python
 # tests/test_add.py
-from mypkg import add
+from mypkg.add import add
 
 def test_add():
     assert add(1, 2) == 3
@@ -98,26 +99,35 @@ def test_add():
 ```
 
 ::: {.callout-tip}
-Limit the number of assert statements in a single test function. Otherwise, when an assert fails, pytest will not test the remaining assertions in the test function.
+Limit the number of `assert` statements in a single test function. Otherwise, when a particular assert fails, the remaining assertions in the test function will not be executed.
 :::
 
 #### Step 4. Run tests locally
-Run the test suite locally using the pytest command to ensure it executes correctly. 
+Run all tests in the project by executing the following command:
 
 ```bash
-pytest test_add.py
+pytest
 ```
 
-Pytest will automatically discover all files that are prepended with `test_`. To run all tests, execute `pytest` without any arguments.
+Run a specific test file:
 
-#### Step 5. Interpret and fix tests
-Interpret the test results displayed in the console to identify any failures or errors. If errors occur, debug the failing tests by examining failure messages and stack traces.
+```bash
+pytest tests/test_add.py
+```
+
+#### Step 5. Debug and fix failing tests
+The test results displayed in the console will help you to identify any failures or errors. If errors occur, debug the failing tests by examining failure messages and stack traces.
 
 #### Step 6. Run coverage report locally
 Generate a coverage report to gain insights into which parts of the codebase have been executed during testing (see [Code Coverage](#code-coverage)). 
 
-#### Step 7. Run tests remotely
-Integrate the test suite with a Continuous Integration service (e.g., GitHub Actions) to automate testing. 
+```bash
+pip install pytest-cov
+pytest --cov=mypkg tests/
+```
+
+#### Step 7. Automate testing with Continuous Integration
+Integrate youre test suite with a Continuous Integration service (e.g., GitHub Actions) to run tests automatically on every code change.
 
 ::: {.callout-note}
 ## Learning materials for automated testing

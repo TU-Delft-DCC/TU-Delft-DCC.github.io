@@ -71,7 +71,7 @@ Begin by learning a testing framework that is well-suited for your programming l
 :::
 
 ::: {.callout-note appearance="simple" icon="false" collapse="true"}
-## 2. Identify importants components
+## 2. Identify critical components in your code
 Take the time to inspect your codebase and determine which parts are most important or particularly prone to error. These are the areas where you should focus your testing efforts.
 :::
 
@@ -81,12 +81,12 @@ Begin by writing minimal (unit) tests for individual functions or modules. Creat
 :::
 
 ::: {.callout-note appearance="simple" icon="false" collapse="true"}
-## 4. Incrementally expand test coverage
+## 4. Incrementally expand the number of tests
 As you introduce new functionality, adopt an approach by writing tests alongside your new code. Over time, gradually add tests to your existing code — especially when you make changes or improvements — to steadily increase overall test coverage and improve the reliability of your software. Make sure to focus on testing the critical parts of your codebase first.
 :::
 
 ::: {.callout-note appearance="simple" icon="false" collapse="true"}
-## 5. Refactor for testability
+## 5. Refactor your code for testability
 If you find it difficult to write tests for your codebase, consider [refactoring](/docs/software/code_quality/refactoring.md) it into smaller, more testable units. Clear documentation and comments on your functions will further aid in writing tests by providing a well-defined understanding of each component's intent.
 :::
 
