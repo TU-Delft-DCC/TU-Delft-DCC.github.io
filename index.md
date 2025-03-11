@@ -1,21 +1,42 @@
 ---
-title: Welcome to the DCC Guides!
-toc: true
+# title: Welcome to the DCC Guides!
+toc: false
 page-navigation: false
 repo-actions: false
+page-layout: custom
+# section-divs: false
 
-css: themes/card-styles.css 
+css: [index.css]
 ---
 
+::: {.hero-banner}
+
+::: {.content-block}
+
+::: {.hero-text}
+
+# Welcome to the DCC Guides!
+
+### A practical guide to Digital Research at TU Delft
+
+The guides are under active development and mainly in use as a useful resource for the support provided by the DCC. The content is a compilation of developed solutions, relevant links and resources, and documents produced by colleagues inside and outside TU Delft. This is not an official TU Delft website, but rather a place where we keep note of things we find important and useful to share.
+
+:::
+
+:::
+
+:::
+
+<!-- 
 ::: {.grid}
 
-::: {.g-col-6}
+::: {.g-col-6 .card-container}
 
 ::: {.card}
-![](/docs/img/compute_header.jpg){.card-img-top style="margin-bottom: -50px;"}  
+![](/docs/img/rd_intro.jpg){.card-img}  
 
 ::: {.card-body}
-## [Computing infrastructure](./docs/infrastructure/getting_started.md){.card-title style="color: #0077C0;"}
+## [Computing infrastructure](./docs/infrastructure/getting_started.md){.card-title}
 
 Technical support for all platforms, apps, and software used in teaching at TU Delft.
 
@@ -27,49 +48,49 @@ Technical support for all platforms, apps, and software used in teaching at TU D
 :::
 :::
 
-::: {.g-col-6}
+::: {.g-col-6 }
 ::: {.card}
-![](/docs/img/compute_header.jpg){.card-img-top style="margin-bottom: -50px; display: flex;"}  
+![](/docs/img/compute_header.jpg){.card-img}  
 
 ::: {.card-body}
-## [Data management](./docs/data/getting_started.md){.card-title style="color: #0077C0;"}
+## [Data management](./docs/data/getting_started.md){.card-title}
 
 Technical support for all platforms, apps, and software used in teaching at TU Delft.
 
-- [FAIR data](#)  
-- [Planning](#)  
-- [Collection](#)  
-- [Data processing](#)  
-- [Sotrage](#)  
-- [Archive and publish](#)  
+- [FAIR data](/docs/data/fair_data/fair.md)  
+- [Planning](/docs/data/planning/planning.md)  
+- [Collection](/docs/data/data_collection/collection.md)  
+- [Data processing](/docs/data/data_processing.md)  
+- [Storage](/docs/data/data_storage/storage.md)  
+- [Archive and publish](/docs/data/data_publishing/archival_publishing_index.md)  
 
 [More about Data management](./docs/data/getting_started.md){.btn .btn-primary style="background-color: #0077C0; border: none;"}
 :::
 :::
 :::
 
-::: {.g-col-6}
+::: {.g-col-6 .card-container}
 ::: {.card}
-![](/docs/img/compute_header.jpg){.card-img-top style="margin-bottom: -50px; display: flex;"}  
+![](/docs/img/compute_header.jpg){.card-img}  
 
 ::: {.card-body}
-## [Research software](./docs/software/getting_started.md){.card-title style="color: #0077C0;"}
+## [Research software](./docs/software/getting_started.md){.card-title}
 
 Technical support for all platforms, apps, and software used in teaching at TU Delft.
 
-- [FAIR software](#)  
-- [Development workflow](#)  
-- [Documentation](#)  
-- [Code quality](#)  
+- [FAIR software](/docs/software/fair_software/fair.md)  
+- [Development workflow](/docs/software/development_workflow/index.md)  
+- [Documentation](/docs/software/documentation/index.md)  
+- [Code quality](/docs/software/code_quality/index.md)  
 - [Software testing](#)  
-- [Containers](#)  
+- [Containers](#)
 
 [More about Research Software](./docs/software/getting_started.md){.btn .btn-primary style="background-color: #0077C0; border: none;"}
 :::
 :::
 :::
 
-:::
+::: -->
 
 <!-- These guides are an initiative from TU Delft [Digital Competence Centre](/docs/community/dcc.md) and aim to provide a comprehensive entrypoint to get you started with Research Computing, Research Data, and Research Software at TU Delft. 
 

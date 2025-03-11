@@ -84,9 +84,9 @@ website:
       collapse-level: 2
       align: left
       contents:
-        - text: "Getting started"
-          href: index.md
-        - text: <br>
+        # - text: "Getting started"
+        #   href: index.md
+        # - text: <br>
         - section: ⚙️ **Computing Infrastructure**
           contents:
           - text: Getting started
