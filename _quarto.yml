@@ -268,11 +268,11 @@ website:
                   href: docs/software/testing/test_types.md
                 - text: Advanced concepts
                   href: docs/software/testing/intermediate.md
-                - text: Testing with Python
+                - text: Testing in Python
                   href: docs/software/testing/python.md
-                - text: Testing with MATLAB
+                - text: Testing in MATLAB
                   href: docs/software/testing/matlab.md
-                - text: Testing with R
+                - text: Testing in R
                   href: docs/software/testing/r_test.md
             - section: "Working with containers"
               href: docs/software/containers/intro.md
