@@ -95,6 +95,15 @@ Testing your MATLAB code.
 :::
 :::
 
+::: {.feature}
+### {{< fa flask >}} R testing
+Testing your R code.
+
+::: {.learn-more}
+[Learn more »](./r_test.md)
+:::
+:::
+
 :::
 :::
 

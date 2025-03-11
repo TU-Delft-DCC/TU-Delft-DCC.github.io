@@ -197,6 +197,8 @@ website:
                   href: docs/software/testing/python.md
                 - text: Testing with MATLAB
                   href: docs/software/testing/matlab.md
+                - text: Testing with R
+                  href: docs/software/testing/r_test.md
             - section: "Version control with git"
               href: docs/software/git/intro.md
               contents:
