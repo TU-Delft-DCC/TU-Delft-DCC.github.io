@@ -49,19 +49,19 @@ In writing tests for research software, we often differentiate between four type
 
 [![Testing pyramid © 2023 SketchingDev](/docs/img/testing-pyramid.jpg){width=50%}](https://sketchingdev.co.uk/sketchnotes/testing-pyramid.html)
 
-#### Unit tests
+#### **Unit tests**
 A unit test is a type of test where individual units or components of the software application are tested in isolation from the rest of the application. A unit can be a function, method, or class. The main purpose of unit testing is to validate that each unit of the software performs as designed.
 
-#### Integration tests
+#### **Integration tests**
 Integration testing is a level of software testing where individual units are combined and tested as a group. The purpose is to verify that the units work together as expected and that the interfaces between them function correctly. Integration tests aims to expose defects in the interactions between integrated components.
 
-#### End-to-end tests
+#### **End-to-end tests**
 End-to-end testing is focused on checking the entire system from start to finish, simulating real use cases. The goal is to verify the software functions as a whole from the user's perspective.
 
-#### Regression tests
+#### **Regression tests**
 Regression testing aims to verify that recent code changes haven't adversely affected existing features or functionality. It involves re-running previously executed test cases to ensure that the software still behaves as expected after modifications. The primary purpose of regression testing is to catch unintended side effects of code changes and ensure that new features or bug fixes haven't introduced regressions or broken existing functionality elsewhere in the code. Regression tests can include both unit tests and integration tests, as well as higher-level tests.
 
-## Designing a test case 
+### Designing a test case 
 For more complex integration, regression, or end-to-end tests, it can be useful to first describe the test case in words.
 
 1. **Description:** _Description of test case_

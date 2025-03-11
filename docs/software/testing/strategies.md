@@ -82,7 +82,7 @@ Begin by writing minimal (unit) tests for individual functions or modules. Creat
 
 ::: {.callout-note appearance="simple" icon="false" collapse="true"}
 ## 4. Incrementally expand the number of tests
-As you introduce new functionality, adopt an approach by writing tests alongside your new code. Over time, gradually add tests to your existing code — especially when you make changes or improvements — to steadily increase overall test coverage and improve the reliability of your software. Make sure to focus on testing the critical parts of your codebase first.
+As you introduce new functionality, adopt an approach by writing tests alongside your new code. Over time, gradually add tests to your existing code -- especially when you make changes or improvements -- to steadily increase overall test coverage and improve the reliability of your software. Make sure to focus on testing the critical parts of your codebase first.
 :::
 
 ::: {.callout-note appearance="simple" icon="false" collapse="true"}
