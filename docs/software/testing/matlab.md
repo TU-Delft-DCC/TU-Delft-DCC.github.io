@@ -125,7 +125,7 @@ run_testsuite('TestTag', 'Unit')
 ### 2. Script editor
 You can run tests interactively by opening a test file in the MATLAB Editor and selecting "Run All" or "Run Current Test".
 
-![Script editor testing](https://nl.mathworks.com/help/matlab/matlab_prog/runtests_options.png)
+![MathWorks, Script editor testing, MATLAB Documentation, [link to image.](https://nl.mathworks.com/help/matlab/matlab_prog/run-tests-in-editor.html)](https://nl.mathworks.com/help/matlab/matlab_prog/runtests_options.png)
 
 {{< fa hand-point-right >}} For more details: [Script Editor documentation](https://nl.mathworks.com/help/matlab/matlab_prog/run-tests-in-editor.html)
 
@@ -133,7 +133,7 @@ You can run tests interactively by opening a test file in the MATLAB Editor and 
 ### 3. MATLAB Test Browser App
 The Test Browser app (available since R2023a) enables you to run script-based, function-based, and class-based tests interactively. You can run all tests, selected tests, or individual tests.
 
-![MATLAB test browser](https://nl.mathworks.com/help/matlab/matlab_prog/test_run_results.png)
+![MathWorks, MATLAB test browser, MATLAB Documentation, [link to image.](https://nl.mathworks.com/help/matlab/matlab_prog/run-tests-using-test-browser.html)](https://nl.mathworks.com/help/matlab/matlab_prog/test_run_results.png)
 
 {{< fa hand-point-right >}} For more details: [MATLAB Test browser documentation](https://nl.mathworks.com/help/matlab/matlab_prog/run-tests-using-test-browser.html)
 
