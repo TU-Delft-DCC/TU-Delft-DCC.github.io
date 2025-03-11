@@ -99,7 +99,7 @@ Parameterization involves running the same test with different inputs or configu
     
 ::: {.panel-tabset}
 ## Python
-- [Parameterizing unit tests](https://carpentries-incubator.github.io/python-intermediate-development/22-scaling-up-unit-testing/index.html#parameterising-our-unit-tests)
+- [Parameterizing unit tests](https://carpentries-incubator.github.io/python-intermediate-development/22-scaling-up-unit-testing.html#parameterising-our-unit-tests)
 
 ## MATLAB
 - [Create a basic parameterized test](https://nl.mathworks.com/help/matlab/matlab_prog/create-basic-parameterized-test.html)

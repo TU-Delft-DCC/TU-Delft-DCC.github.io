@@ -130,7 +130,7 @@ Integrate youre test suite with a Continuous Integration service (e.g., GitHub A
 
 ::: {.callout-tip appearance="simple" icon="false"}
 ## {{< fa graduation-cap >}} Learning materials for automated testing
-- [Intermediate Research Software Development - CI for Automated Testing](https://carpentries-incubator.github.io/python-intermediate-development/23-continuous-integration-automated-testing/index.html)
+- [Intermediate Research Software Development - CI for Automated Testing](https://carpentries-incubator.github.io/python-intermediate-development/23-continuous-integration-automated-testing.html)
 - [Code Refinery - Automated testing](https://coderefinery.github.io/testing/continuous-integration/)
 :::
 
