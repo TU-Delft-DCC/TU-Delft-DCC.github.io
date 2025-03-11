@@ -58,9 +58,9 @@ website:
     logo: docs/img/tud/logo_white_crop.png
     collapse-below: lg # It determines at which screen size the navbar should collapse into a mobile-friendly format (typically a hamburger menu)
     right:
-      # - href: index.md
-      #   text: Overview
       - href: index.md
+        text: Home
+      - href: docs/guides.md
         text: Guides
       - href: docs/tud-support/index.md
         text: Support Staff
@@ -84,9 +84,9 @@ website:
       collapse-level: 2
       align: left
       contents:
-        # - text: "Getting started"
-        #   href: index.md
-        # - text: <br>
+        - text: "Getting started"
+          href: docs/guides.md
+        - text: <br>
         - section: ⚙️ **Computing Infrastructure**
           contents:
           - text: Getting started
