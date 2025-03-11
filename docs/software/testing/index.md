@@ -44,7 +44,7 @@ categories:
 
 ---
 
-When you're writing software — especially for research — it's important to make sure your programs work as expected. Testing is like a safety net: it helps you catch mistakes early and keeps your code reliable as you add new features or make changes. In research software, tests are even more crucial because they help ensure that your results are accurate and that others can reproduce your work. Beyond detecting bugs early, it is an investment in the quality and long-term maintainability of your codebase. 
+When you're writing software -- especially for research -- it's important to make sure your programs work as expected. Testing is like a safety net: it helps you catch mistakes early and keeps your code reliable as you add new features or make changes. In research software, tests are even more crucial because they help ensure that your results are accurate and that others can reproduce your work. Beyond detecting bugs early, it is an investment in the quality and long-term maintainability of your codebase. 
 
 
 ::: {.content-block}
@@ -99,7 +99,8 @@ Testing your MATLAB code.
 :::
 
 
-::: {.callout-tip title="Recommended courses"}
+::: {.callout-tip appearance="simple" icon="false"}
+## {{< fa lightbulb>}}Recommended courses
 - [The Turing Way - Testing](https://book.the-turing-way.org/reproducible-research/testing)
 - [CodeRefinery - Lesson on testing](https://coderefinery.github.io/testing/motivation/)
 - [Software Carpentry - Testing and Continuous Integration with Python](https://carpentries-incubator.github.io/python-testing/)
