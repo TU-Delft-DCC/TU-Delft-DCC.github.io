@@ -45,8 +45,6 @@ categories:
 
 ---
 
-## Testing in Python
-
 In Python, two widely used testing frameworks are `pytest` and `unittest`. This guide focuses on `pytest`, which is recommended for its simplicity and readability. If you are new to testing in Python, [**`pytest` is a great starting point**](https://realpython.com/pytest-python-testing/#what-makes-pytest-so-useful).
 
 ::: {.callout-note appearance="simple" icon="false" collapse="true"}
@@ -56,7 +54,7 @@ In Python, two widely used testing frameworks are `pytest` and `unittest`. This 
 - `unittest` is part of the Python standard library and follows a more traditional object-oriented style of writing tests. 
 :::
 
-#### **Step 1. Setup a testing framework**
+### Step 1. Setup a testing framework
 
 Install pytest
 
@@ -78,10 +76,10 @@ tests/
     ...
 ```
   
-#### **Step 2. Identify testable units**
+### Step 2. Identify testable units
 Identify functions, methods, or classes on your code that should be tested. Focus on critical computations and potential points of failure.
 
-#### **Step 3. Write test cases**
+### Step 3. Write test cases
 Write test functions using `pytest`. Here's an example:
 
 ```python
@@ -103,7 +101,7 @@ def test_add():
 Limit the number of `assert` statements in a single test function. Otherwise, when a particular assert fails, the remaining assertions in the test function will not be executed.
 :::
 
-#### **Step 4. Run tests locally**
+### Step 4. Run tests locally
 Run all tests in the project by executing the following command:
 
 ```bash
@@ -116,10 +114,10 @@ Run a specific test file:
 pytest tests/test_add.py
 ```
 
-#### **Step 5. Debug and fix failing tests**
+### Step 5. Debug and fix failing tests
 The test results displayed in the console will help you to identify any failures or errors. If errors occur, debug the failing tests by examining failure messages and stack traces.
 
-#### **Step 6. Run coverage report locally**
+### Step 6. Run coverage report locally
 Generate a coverage report to gain insights into which parts of the codebase have been executed during testing (see [Code Coverage](./intermediate.md#code-coverage)). 
 
 ```bash
@@ -127,7 +125,7 @@ pip install pytest-cov
 pytest --cov=mypkg tests/
 ```
 
-#### **Step 7. Automate testing with Continuous Integration**
+### Step 7. Automate testing with Continuous Integration
 Integrate youre test suite with a Continuous Integration service (e.g., GitHub Actions) to run tests automatically on every code change.
 
 ::: {.callout-tip appearance="simple" icon="false"}
@@ -136,7 +134,7 @@ Integrate youre test suite with a Continuous Integration service (e.g., GitHub A
 - [Code Refinery - Automated testing](https://coderefinery.github.io/testing/continuous-integration/)
 :::
 
-#### **Examples of repositories with tests**
+### Examples of repositories with tests
 
 - eScience Center - [Project `matchms`](https://github.com/matchms/matchms)
 - Pandas library - [Repository tests](https://github.com/pandas-dev/pandas/tree/main/pandas/tests)
