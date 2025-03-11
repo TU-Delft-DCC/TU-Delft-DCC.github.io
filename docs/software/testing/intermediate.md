@@ -108,9 +108,9 @@ Parameterization involves running the same test with different inputs or configu
 #### **Mocking**
 Mocking (or monkeypatching) is a technique used to simulate the behavior of dependencies or external systems during testing, allowing isolated testing of specific components. For example, if your software requires a connection to a database, you can *mock* this interaction during testing.
 
-![MATLAB Mocking Diagram](https://nl.mathworks.com/help/matlab/mocking_overview.png)
+![MathWorks, MATLAB Mocking Diagram, MATLAB Documentation.[Link](https://nl.mathworks.com/help/matlab/matlab_prog/create-mock-object.html)](https://nl.mathworks.com/help/matlab/mocking_overview.png)
 
-::: {.callout-note collapse="true"} 
+::: {.callout-note appearance="simple" icon="false" collapse="true"} 
 ## 🐒 Monkeypatching?
 The term monkey patch seems to have come from an earlier term, guerrilla patch, which referred to changing code sneakily – and possibly incompatibly with other such patches – at runtime. The word guerrilla, nearly homophonous with gorilla, became monkey, possibly to make the patch sound less intimidating.
 :::
