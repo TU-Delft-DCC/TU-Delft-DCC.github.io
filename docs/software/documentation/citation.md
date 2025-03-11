@@ -40,8 +40,8 @@ categories:
 
 It's straightforward to cite research papers, but with software sometimes it's not as obvious. It is recommended to place a `CITATION.cff` file in the root of your repository to inform others about the preferred way to cite the software. GitHub can automatically parse the `.cff` file to create citation snippets in APA or BibTeX format. If you'd prefer the software to be cited through a journal publication, you can mention this in the README and in the `CITATION.cff` file.
 
-:::{.callout-note collapse="true" }
-## An example of a `CITATION.cff`
+:::{.callout-tip appearance="simple" icon="false" collapse="true"}
+### {{< fa lightbulb >}} An example of a `CITATION.cff`
 
 ```
 cff-version: 1.2.0
@@ -61,8 +61,8 @@ url: "https://github.com/your_repo"
 
 When citing a paper that is linked to the software you can use `preferred-citation` argument.
 
-:::{.callout-note collapse="true"}
-## An example of a `CITATION` file citing a research article
+:::{.callout-tip appearance="simple" icon="false" collapse="true"}
+### {{< fa lightbulb >}} An example of a `CITATION` file citing a research article
 
 ```
 cff-version: 1.2.0
@@ -96,8 +96,8 @@ preferred-citation:
 ```
 :::
 
-:::{.callout-note collapse="true"}
-## How the citation would look on GitHub
+:::{.callout-tip appearance="simple" icon="false" collapse="true"}
+### {{< fa lightbulb >}} How the citation would look on GitHub
 On GitHub, it will show in either APA or BibTeX formatting, as they are the currently supported formats. If you add a `CITATION.cff` file to your repository, then a label for citing will automatically be generated and will show up on the right sidebar of the repository.
 
 **APA**
@@ -119,8 +119,8 @@ On GitHub, it will show in either APA or BibTeX formatting, as they are the curr
 This is an example of software citation.  
 :::
 
-::: {.callout-note}
-## **Further reading**
+:::{.callout-note appearance="simple" icon="false"}
+## {{< fa signs-post >}} Learn more
 - [CITATION.cff documentation](https://citation-file-format.github.io)
 - [GitHub documentation on CITATION files](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-citation-files) - this resource also includes how to cite something other than software or a journal article.
 - [Generate CITATION.cff files](https://citation-file-format.github.io/cff-initializer-javascript/#/)

@@ -1,9 +1,8 @@
 ---
 # Insert this YAML header (including the opening and closing ---) at the beginning of the document and fill it out accordingly
 
-# We use this key to indicate the last reviewed date [manual entry, use YYYY-MM-DD]
-# Uncomment and populate the next line accordingly
-#date: YYYY-MM-DD
+# We use this key to indicate the last reviewed date [manual entry, use YYYY-MM-dd]
+#date: 2025-02-19
 
 # We use this key to indicate the last modified date [automatic entry]
 date-modified: last-modified
@@ -15,8 +14,7 @@ language:
   title-block-modified: "Last modified"
 
 # Title of the document [manual entry]
-# Uncomment and populate the next line accordingly
-title: Overview
+title: MATLAB documentation
 
 # Brief overview of the document (will be used in listings) [manual entry]
 # Uncomment and populate the next line and uncomment "hide-description: true".
@@ -24,25 +22,22 @@ title: Overview
 #hide-description: true
 
 # Authors of the document, will not be parsed [manual entry]
-# Uncomment and populate the next lines accordingly
-#author_1: 
-#author_2: 
+author_1: Maurits Kok
+author_2: Elviss Dvinskis
 
 # Maintainers of the document, will not be parsed [manual entry]
-# Uncomment and populate the next lines accordingly
-#maintainer_1: Name Surname
+maintainer_1: Elviss Dvinskis
 #maintainer_2:
 
 # To whom reach out regarding the document, will not be parsed [manual entry]
-# Uncomment and populate the next line accordingly
-#corresponding: Name Surname
+corresponding: Elviss Dvinskis
 
 # Meaningful keywords, newline separated [manual entry]
 # Uncomment and populate the next line and list accordingly
 #categories: 
-# - 
+# - documentation
 # - 
 
 ---
 
-Coming soon!
+🚧 Coming soon! ⏳
