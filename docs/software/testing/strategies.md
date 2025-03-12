@@ -42,10 +42,6 @@ hide-description: true
 #categories: 
 # - testing
 # - 
-
-format:
-  html:
-    css: style.css
 ---
 
 In designing test cases for research software, it can be useful to conceptually differentiate between tests that verify **the technical correctness** of the code and tests that check **the scientific validity** of the results. With technical software tests, you check whether a function behaves as expected. With a scientific test, you compare the outcome of a function to known (experimental) scientific results. 
