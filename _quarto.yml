@@ -86,8 +86,8 @@ website:
       contents:
         - text: "Getting started"
           href: index.md
-        - text: <br>
-        - section: ⚙️ **Computing Infrastructure**
+        - text: "---"
+        - section: <span style="filter:grayscale(100%);">⚙️</span> **Computing Infrastructure**
           contents:
           - text: Getting started
             href: docs/infrastructure/getting_started.md
@@ -115,8 +115,8 @@ website:
                 href: docs/infrastructure/gitlab/gitlab_docker.md
               - text: Setting up a Gitlab runner for MATLAB
                 href: docs/infrastructure/gitlab/runner_matlab.md
-        - text: <br>
-        - section: "🗃️ **Data Management**"
+        - text: "---"
+        - section: <span style="filter:grayscale(100%);">🗃️</span> **Data Management**
           contents:
             - text: Getting started
               href: docs/data/getting_started.md
@@ -167,8 +167,8 @@ website:
                   href: docs/data/data_publishing/publishing.md
                 - text: Offboarding and ownership
                   href: docs/data/data_publishing/offboarding.md
-        - text: <br>
-        - section: "💻 **Research Software**"
+        - text: "---"
+        - section: <span style="filter:grayscale(100%);">💻</span> **Research Software**
           contents:
             - text: Getting started
               href: docs/software/getting_started.md
@@ -274,19 +274,28 @@ website:
                   href: docs/software/testing/matlab.md
                 - text: Testing in R
                   href: docs/software/testing/r_test.md
-            - section: "Working with containers"
-              href: docs/software/containers/intro.md
+#            - section: "Working with containers"
+#              href: docs/software/containers/intro.md
+#              contents:
+#                - text: Using a docker container with a GUI
+#                  href: docs/software/containers/docker_gui.md
+            - section: "Publish and share"
+              href: docs/software/releases_archiving/index.md
               contents:
-                - text: Using a docker container with a GUI
-                  href: docs/software/containers/docker_gui.md
-        - text: <br>
-        - section: "📖 **Resources**"
+                - text: Packaging
+                  href: docs/software/releases_archiving/packaging.md
+                - text: Releases
+                  href: docs/software/releases_archiving/releases.md
+                - text: Archiving
+                  href: docs/software/releases_archiving/archiving.md
+        - text: "---"
+        - section: <span style="filter:grayscale(100%);">📖</span> **Resources**
           contents:
             - text: Courses and workshops
               href: docs/resources/courses.md
-            - text: Research Software Curriculum
-              href: docs/resources/curriculum.md
-            - text: Tools
+#            - text: Research Software Curriculum
+#              href: docs/resources/curriculum.md
+            - text: AI tooling
               href: docs/resources/tools.md
 
     # - title: "TU Delft Support"
