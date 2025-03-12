@@ -49,7 +49,7 @@ The goal of the FAIR principles is to improve research transparency, reproducibi
 
 - **Findable**: Data should be findable by users. A straightforward and reliable way to achieve this is by depositing data in a repository with appropriate metadata, tags, and identifiers to improve searchability.
 
-- **Accessible**: Data should be accessible to authorized users. This does not mean all data must be publicly available; rather, it should be “as open as possible, as closed as necessary.” If data cannot be made publicly available due to sensitive information or commercial restrictions, the metadata should still be made public to indicate where and how the data can be accessed if needed.
+- **Accessible**: Data should be accessible to authorized users. This does not mean all data must be publicly available; rather, it should be “as open as possible, as closed as necessary”. If data cannot be made publicly available due to sensitive information or commercial restrictions, the metadata should still be made public to indicate where and how the data can be accessed if needed.
 
 - **Interoperable**: Data should be in standardized formats with a clear structure to allow it to be interoperable across different systems, enabling data to be used in various applications by both the data owners and other users.
 

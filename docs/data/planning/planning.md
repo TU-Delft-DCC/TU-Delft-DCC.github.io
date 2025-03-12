@@ -45,17 +45,21 @@ title: Planning
 
 ---
 
-Coming soon!
+🚧 Under construction! 🏗️
+
+<!--
 
 - Introduction
 - Data management plan
+
+-->
 
 ::: {.content-block}
 ::: {.features}
 
 ::: {.feature}
 ### {{< fa lock >}} Privacy and security
-Text text text
+Coming soon! ⏰
 
 ::: {.learn-more}
 [Learn more »](./privacy_and_security.md)
@@ -64,7 +68,7 @@ Text text text
 
 ::: {.feature}
 ### {{< fa landmark >}} Ethics
-Text text text
+Coming soon! ⏰
 
 ::: {.learn-more}
 [Learn more »](./ethics.md)

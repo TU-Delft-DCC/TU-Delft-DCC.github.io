@@ -45,17 +45,21 @@ title: Data storage
 
 ---
 
-Coming soon!
+Under construction! 🏗️
 
+<!--
 - Introduction
 - TU Delft storage finder
+
+-->
 
 ::: {.content-block}
 ::: {.features}
 
 ::: {.feature}
 ### {{< fa warehouse >}} Storage options
-Text text text
+
+Coming soon! ⏳
 
 ::: {.learn-more}
 [Learn more »](./storage_options.md)
@@ -64,7 +68,8 @@ Text text text
 
 ::: {.feature}
 ### {{< fa vault >}} Data security
-Text text text
+
+Coming soon! ⏳
 
 ::: {.learn-more}
 [Learn more »](./security.md)
@@ -73,7 +78,8 @@ Text text text
 
 ::: {.feature}
 ### {{< fa arrow-up-from-bracket >}} Data sharing
-Text text text
+
+Coming soon! ⏳
 
 ::: {.learn-more}
 [Learn more »](./sharing.md)
@@ -82,7 +88,8 @@ Text text text
 
 ::: {.feature}
 ### {{< fa hard-drive >}} Data backup
-Text text text
+
+Coming soon! ⏳
 
 ::: {.learn-more}
 [Learn more »](./backup.md)
