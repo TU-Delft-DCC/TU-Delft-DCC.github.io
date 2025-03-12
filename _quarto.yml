@@ -86,7 +86,7 @@ website:
       contents:
         - text: "Getting started"
           href: index.md
-        - text: "---"
+        - text: <br>
         - section: <span style="filter:grayscale(100%);">⚙️</span> **Computing Infrastructure**
           contents:
           - text: Getting started
@@ -115,7 +115,7 @@ website:
                 href: docs/infrastructure/gitlab/gitlab_docker.md
               - text: Setting up a Gitlab runner for MATLAB
                 href: docs/infrastructure/gitlab/runner_matlab.md
-        - text: "---"
+        - text: <br>
         - section: <span style="filter:grayscale(100%);">🗃️</span> **Data Management**
           contents:
             - text: Getting started
@@ -167,7 +167,7 @@ website:
                   href: docs/data/data_publishing/publishing.md
                 - text: Offboarding and ownership
                   href: docs/data/data_publishing/offboarding.md
-        - text: "---"
+        - text: <br>
         - section: <span style="filter:grayscale(100%);">💻</span> **Research Software**
           contents:
             - text: Getting started
@@ -288,7 +288,7 @@ website:
                   href: docs/software/releases_archiving/releases.md
                 - text: Archiving
                   href: docs/software/releases_archiving/archiving.md
-        - text: "---"
+        - text: <br>
         - section: <span style="filter:grayscale(100%);">📖</span> **Resources**
           contents:
             - text: Courses and workshops
