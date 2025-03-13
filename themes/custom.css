@@ -22,3 +22,41 @@
     border-bottom: 1px solid #dee2e6;
   }
 }
+
+.content-block {
+  padding-top: 20px;
+  padding-bottom: 10px;
+  margin-left: 30px;
+  margin-right: 30px;
+}
+
+.features {
+  padding-bottom: 2em;
+}
+
+.feature {
+  margin-top: 20px;
+}
+
+@media (min-width: 800px) { 
+.features {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin: 0 0 0 -30px;
+  width: calc(100% + 30px);
+}
+.feature {
+  width: calc(33% - 30px);
+  margin: 20px 0 0 30px;
+}
+}
+
+.feature h3 {
+  margin-top: 0;
+}
+
+.feature p:first-of-type {
+  margin-bottom: 0.2rem;
+  color: rgb(84, 85, 85);
+}

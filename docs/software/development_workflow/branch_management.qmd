@@ -1,0 +1,276 @@
+---
+# Insert this YAML header (including the opening and closing ---) at the beginning of the document and fill it out accordingly
+
+# We use this key to indicate the last reviewed date [manual entry, use YYYY-MM-DD]
+# Uncomment and populate the next line accordingly
+date: 2025-02-13
+
+# We use this key to indicate the last modified date [automatic entry]
+date-modified: last-modified
+
+# Do not modify
+lang: en
+language: 
+  title-block-published: "Last reviewed"
+  title-block-modified: "Last modified"
+
+# Title of the document [manual entry]
+# Uncomment and populate the next line accordingly
+title: Branch management
+
+# Brief overview of the document (will be used in listings) [manual entry]
+# Uncomment and populate the next line and uncomment "hide-description: true".
+#description: Short description of the document
+#hide-description: true
+
+# Authors of the document, will not be parsed [manual entry]
+# Uncomment and populate the next lines accordingly
+author_1: Elviss Dvinskis
+author_2: Maurits Kok
+
+# Maintainers of the document, will not be parsed [manual entry]
+# Uncomment and populate the next lines accordingly
+maintainer_1: Elviss Dvinskis
+#maintainer_2:
+
+# To whom reach out regarding the document, will not be parsed [manual entry]
+# Uncomment and populate the next line accordingly
+corresponding: Elviss Dvinskis
+
+# Meaningful keywords, newline separated [manual entry]
+# Uncomment and populate the next line and list accordingly
+#categories: 
+# - branches
+# - gitflow
+# - github flow
+
+---
+
+Branch management in Git is essential for collaborative software development in version-controlled environments. The core advantage of branching is that it provides separate, dedicated environments for code development, independent of the main (working) version. This approach enables parallel development streams, allowing for experimentation and modification without impacting the stable main version of the project. Note, this approach is also valuable for projects with only one developer!
+
+::: {.callout-tip appearance="simple" icon="false"}
+## {{< fa lightbulb >}} Consideration
+
+For open source projects, details about the branching strategy, how to collaborate and contribute can be communicated in the repository's **contributing guidelines** in the file `CONTRIBUTING.md`.
+
+- eScience Center - [Example project contributing guidelines](https://github.com/eWaterCycle/ewatercycle/blob/main/CONTRIBUTING.md)
+- GitHub - [Documentation contribution guidelines](https://github.com/github/docs/blob/3ef0cdb56f166d9da2cb03229af48df34096fa97/.github/CONTRIBUTING.md)
+:::
+
+A branching strategy defines a set of best practices for writing, merging, and releasing code. Choosing the right approach helps teams collaborate efficiently while maintaining a stable codebase.
+
+## Branch models
+
+While multiple branching strategies exist, GitHub Flow and GitFlow are well-suited for research software projects, depending on collaboration style and release cycle:
+
+- [GitHub Flow](https://docs.github.com/en/get-started/using-github/github-flow) is a simplified and straightforward workflow, relying on a single `main` branch. Developers create so-called feature branches off of the main branch, work on their changes, and then merge them back into the main branch via pull requests. The process is built around the principle of continuous collaboration and is particularly useful for projects where regular updates and deployments are common. 
+
+- [Gitflow](https://nvie.com/posts/a-successful-git-branching-model/) relies on two primary branches - `main` and `develop`. Developers create feature branches off of the develop branch. Once a feature is complete, it is merged back into the develop branch, which itself is merged with main for each new release of the software. It can be a better choice for managing larger projects with distinct release cycles and versioning requirements (e.g., tools tied to publications) or requiring parallel development of features and experiments.
+
+::: {.callout-note appearance="simple" icon="false"}
+## {{< fa signs-post >}} Learn more
+
+- [GitHub Flow getting started](https://docs.github.com/get-started/quickstart/github-flow)
+- [Introduction GitHub Flow](https://education.github.com/experiences/series_intro_github_flow)
+:::
+
+## Branch management in action
+
+### Personal projects and small teams
+
+GitHub Flow model:
+
+- Typically starts with just the `main` branch.
+- Use branches for unfinished/untested ideas.
+- Use branches when you are not sure about a change.
+- Add [**tags**](https://git-scm.com/book/en/v2/Git-Basics-Tagging) to mark important milestones.
+
+
+```{mermaid}
+
+%%{init: {'theme': 'base', 'themeVariables': {
+              'git0': '#bfbf40',
+              'git1': '#bf8040',
+              'git2': '#40bfbf'
+              }, 'gitGraph': {'showCommitLabel': false}}}%%
+gitGraph LR:
+   commit
+   commit
+   branch "feature_a"
+   checkout "feature_a"
+   commit
+   commit type:REVERSE
+   checkout main
+
+   commit
+   branch "feature_b"
+   checkout "feature_b"
+   commit
+   commit
+   commit
+
+   checkout main
+   merge "feature_b"
+   commit tag:"v1.0.0"
+
+```
+
+When applying this workflow for small teams, *you accept things breaking sometimes*. 
+
+When there is more control required, follow:
+
+- The `main` branch is write-protected.
+- You create new feature branches for changes.
+- Changes are reviewed before they are merged to the `main` branch.
+- Only merges to main branch through pull requests (and optionally code reviews).
+
+::: {.callout-tip collapse="true"}
+## What is the difference between `master` and `main` branches?
+
+GitHub decided to rename the default branch from `master` to `main` for new repositories after October 2020. This change was part of a broader industry move to replace terms that may be considered insensitive or non-inclusive. It's important to note that while the terms `main` and `master` refer to the default branch in a repository, they are functionally the same. Be aware that repositories created before October 2020 may still use `master` instead of `main`.
+:::
+
+
+### Distributing releases
+When you need to distribute releases, your `main` branch will serve as the latest stable version. 
+
+- The `main` branch is protected and read-only.
+- You set up a `develop` branch for active development.
+- Create feature branches of the `develop` branch.
+- Merge feature branches (through Pull Requests) back to `develop`.
+- Only merge `develop` into `main` when releasing a new stable (and tested) version. 
+
+
+```{mermaid}
+%%{init: {'theme': 'base', 'themeVariables': {
+              'git0': '#bfbf40',
+              'git1': '#4080bf',
+              'git2': '#bf8040',
+              'git3': '#40bfbf'
+              }, 'gitGraph': {'showCommitLabel': false}}}%%
+gitGraph
+    
+   commit tag:"v0.1.0"
+   branch develop
+   commit
+
+   checkout develop
+   commit
+   branch feature_a
+   checkout feature_a
+   commit
+   checkout develop
+   merge feature_a
+   commit
+   commit
+   branch feature_b
+   checkout feature_b
+   commit
+   commit
+   checkout develop
+   merge feature_b
+   commit
+
+   checkout main
+   merge develop tag:"v0.2.0"
+
+   checkout develop
+   commit
+   commit
+   checkout main
+   merge develop tag:"v0.3.0"
+
+   checkout develop
+   commit
+   commit
+
+```
+
+
+
+### Add additional supporting branches
+
+When a critical bug in the stable version must be resolved immediately, a `hotfix` branch may be branched off from the corresponding tag on the `main` branch that marks this version. After fixing, `hotfix` is then merged with both `main` and `develop`.
+
+```{mermaid}
+%%{init: {'theme': 'base', 'themeVariables': {
+              'git0': '#bfbf40',
+              'git1': '#4080bf',
+              'git2': '#7da97a'
+              }, 'gitGraph': {'showCommitLabel': false}}}%%
+gitGraph
+    
+   commit tag:"v0.2.0"
+   branch develop
+   commit
+   commit
+   commit
+   commit
+   checkout main
+   branch hotfix
+   commit
+   commit
+   checkout develop
+   merge hotfix
+   checkout main
+   merge hotfix tag:"v0.2.1"
+   checkout develop
+   commit
+   commit
+   checkout main
+   merge develop tag:"v0.3.0"
+   
+```
+
+
+### The complete Gitflow model in action
+
+GitFlow's structured approach with parallel production and integration branches, supplemented by feature/release/hotfix branches, was specifically designed for versioned software requiring maintenance of multiple production releases.
+
+```{mermaid}
+%%{init: {'theme': 'base', 'themeVariables': {
+              'git0': '#bfbf40',
+              'git1': '#4080bf',
+              'git2': '#bf8040',
+              'git3': '#eae0b8',
+              'git4': '#7da97a'
+              }, 'gitGraph': {'showCommitLabel': false}}}%%
+gitGraph
+   commit
+   branch develop
+   commit
+   checkout develop
+   commit
+   branch feature
+   checkout feature
+   commit
+   commit
+   checkout develop
+   merge feature
+   commit
+   branch release
+   checkout release
+   commit
+   commit
+   checkout main
+   merge release
+   checkout develop
+   merge release
+   checkout main
+   branch hotfix/security
+   checkout hotfix/security
+   commit
+   checkout main
+   merge hotfix/security
+   checkout develop
+   merge hotfix/security
+```
+
+::: {.callout-note appearance="simple" icon=false}
+## {{< fa signs-post >}} Learn more
+
+- Code Refinery - [Branching models](https://coderefinery.github.io/git-branch-design/05-branching-models/)
+- GitHub - [Branch protection rules](https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/managing-protected-branches/managing-a-branch-protection-rule)
+- [Tag names following semantic versioning](https://semver.org/)
+- [GitHub tags and releases](https://docs.github.com/en/repositories/releasing-projects-on-github/about-releases)
+:::
