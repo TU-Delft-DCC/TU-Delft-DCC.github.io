@@ -52,7 +52,8 @@ The TU Delft organises training for researchers on data management, research sof
 ::: {.grid}
 
 ::: {.card}
-![](/docs/img/thecarpentries-opengraph.png){.card-image}
+<div style="text-align: center;">![](/docs/img/thecarpentries-opengraph.png){.card-image}</div>
+<br>
 
 [The Carpentries](https://carpentries.org/) teaches foundational coding and data science skills to researchers worldwide.
 
@@ -65,7 +66,8 @@ The TU Delft organises training for researchers on data management, research sof
 :::
 
 ::: {.card}
-![](/docs/img/DCSE.png){.card-image}
+<div style="text-align: center;">![](/docs/img/DCSE.png){.card-image}</div>
+<br>
 
 The [Delft Institute for Computational Science and Engineering](https://www.tudelft.nl/en/tu-delft-institute-for-computational-science-and-engineering) offers courses on supercomputing through the [Delft High Performance Computing Center](https://www.tudelft.nl/en/dhpc). 
 
@@ -75,7 +77,8 @@ The [Delft Institute for Computational Science and Engineering](https://www.tude
 :::
 
 ::: {.card}
-### REIT
+<div style="text-align: center; font-size: 24px;"> **REIT** </div>
+<br>
 
 The [Research Engineering and Infrastructure Team](https://reit.tudelft.nl/) offers support on software engineering, data science, and high-performance computing.  They offer courses on Rust for Research, Python best practices, and Working with a cluster.
 
@@ -90,7 +93,8 @@ The [Research Engineering and Infrastructure Team](https://reit.tudelft.nl/) off
 ::: {.grid}
 
 ::: {.card}
-![](/docs/img/esciencecenter.png){.card-image}
+<div style="text-align: center;">![](/docs/img/esciencecenter.png){.card-image}</div>
+<br>
 
 [The eScience Center](https://www.esciencecenter.nl/) offers regular workshops on good practices for research software development and on intermediate-level topics such as GPU programming, Deep Learning, and Image Processing. Check out the overview of the [**training materials**](https://www.esciencecenter.nl/training-materials/).
 
@@ -100,7 +104,8 @@ The [Research Engineering and Infrastructure Team](https://reit.tudelft.nl/) off
 :::
 
 ::: {.card}
-![](/docs/img/surf.svg){.card-image}
+<div style="text-align: center;">![](/docs/img/surf.svg){.card-image}</div>
+<br>
 
 SURF is the IT cooperative of Dutch education and research institutions and offers various workshops on using the supercomputers and storage solutions. 
 
@@ -110,7 +115,8 @@ SURF is the IT cooperative of Dutch education and research institutions and offe
 :::
 
 ::: {.card}
-![](/docs/img/coderefinery.png){.card-image}
+<div style="text-align: center;">![](/docs/img/coderefinery.png){.card-image}</div>
+<br>
 
 [CodeRefinery](https://coderefinery.org/) teaches good practices for writing and maintaining research software, focussed on open source software. Their [**lessons**](https://coderefinery.org/lessons/) cover version control, testing, continuous integration, documentation, and more.
 
@@ -120,7 +126,8 @@ SURF is the IT cooperative of Dutch education and research institutions and offe
 :::
 
 ::: {.card}
-![](/docs/img/SSI.png){.card-image}
+<div style="text-align: center;">![](/docs/img/SSI.png){.card-image}</div>
+<br>
 
 [The Software Sustainability Institute](https://www.software.ac.uk/) in the UK provides training and resources to improve the quality of research software. 
 
@@ -131,7 +138,8 @@ SURF is the IT cooperative of Dutch education and research institutions and offe
 
 ::: {.card}
 
-![](/docs/img/taxila.svg){.card-image}
+<div style="text-align: center;">![](/docs/img/taxila.svg){.card-image}</div>
+<br>
 
 [Taxila](https://taxila.nl/) provides an overview of training, learning, and teaching materials for trainers and trainees in the Netherlands.
 
@@ -149,7 +157,8 @@ SURF is the IT cooperative of Dutch education and research institutions and offe
 ::: {.grid}
 
 ::: {.card}
-![](/docs/img/rcafe.png){.card-image}
+<div style="text-align: center;">![](/docs/img/rcafe.png){.card-image}</div>
+<br>
 
 Are you learning R or looking for a friendly community to practice with? The R Café is a welcoming space for R users of all levels - from absolute beginners to experienced programmers.
 
@@ -159,7 +168,8 @@ Are you learning R or looking for a friendly community to practice with? The R C
 :::
 
 ::: {.card}
-![](/docs/img/4TU.png){.card-image}
+<div style="text-align: center;">![](/docs/img/4TU.png){.card-image}</div>
+<br>
 
 [4TU.ResearchData](https://data.4tu.nl/) offers training resources and [community](https://community.data.4tu.nl/join-our-community/) engagement to research and research-support professionals working to make their research data FAIR.
 
