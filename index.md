@@ -5,7 +5,7 @@ page-navigation: false
 repo-actions: false
 page-layout: custom
 
-css: [index.css, themes/card-deck.css]
+css: index.css
 ---
 
 ::: {.hero-banner}
@@ -16,149 +16,80 @@ css: [index.css, themes/card-deck.css]
 
 # Welcome to the DCC Guides!
 
-### A practical guide to applying best practices in your research
+These guides are an initiative from the [**TU Delft Digital Competence Centre**](/docs/community/dcc.md) and aim to provide a practical resource to support research support staff and researchers.
 
-These guides are an initiative from the [**TU Delft Digital Competence Centre**](/docs/community/dcc.md) and aim to provide a practical resource to support research support staff and researchers on **Computing Infrastructure**, **Research Data**, and **Research Software** at TU Delft. 
+{{< fa check >}} Shared solutions for research support staff  
+{{< fa check >}} Practical guides for researchers
 
-{{< fa check >}} Shared knowledge base for research support staff  
-{{< fa check >}} Practical entrypoint for researchers
-
-:::
-:::
-:::
-
-::: {.content-block}
-
-::: {.features}
-
-::: {.feature}
-### [Computing Infrastructure](/docs/infrastructure/getting_started.md)
-
-[Remote server](/docs/infrastructure/intro_servers.md)  
-[Gitlab](/docs/infrastructure/gitlab/gitlab_intro.md)  
-:::
-
-
-::: {.feature}
-### [Data Management](/docs/data/getting_started.md)
-
-::: {.grid}
-::: {.g-col-6}
-[FAIR data](/docs/data/fair_data/fair.md)  
-[Planning](/docs/data/planning/planning.md)  
-[Collection](/docs/data/data_collection/collection.md)  
-:::
-::: {.g-col-6}
-[Data processing](/docs/data/data_processing.md)  
-[Storage](/docs/data/data_storage/storage.md)  
-[Archive & publish](/docs/data/data_publishing/archival_publishing_index.md)  
-:::
-:::
-
-:::
-
-::: {.feature}
-### [Research Software](/docs/software/getting_started.md)
-
-::: {.grid}
-::: {.g-col-6}
-[FAIR software](/docs/software/fair_software/fair.md)  
-[Workflow](/docs/software/development_workflow/index.md)  
-[Documentation](/docs/software/documentation/index.md)  
-:::
-::: {.g-col-6}
-[Code quality](/docs/software/code_quality/index.md)  
-[Software testing](#)  
-[Containers](#)
-:::
-:::
+::: {.hero-buttons}
+[Guides](/docs/guides.md){#btn-guides .btn-action .btn .btn-info .btn-lg role="button"}
+[Courses](/docs/resources/courses.md){#btn-courses .btn-action .btn .btn-info .btn-lg role="button"}
+::: 
 
 :::
 :::
 :::
 
-<!-- 
 ::: {.grid .grid-container}
-::: {.g-col-4 .container}
+
 ::: {.card}
+![](/docs/img/compute_header.jpg){.card-image}
 
-![](/docs/img/compute_header.jpg){.card-img-top}  
+## [Computing Infrastructure](/docs/infrastructure/getting_started.md)
 
-::: {.card-body}
-## [Computing Infrastructure](./docs/infrastructure/getting_started.md){.card-title style="color: #0077C0;"}
+[{{< fa chevron-right >}} TUD servers](/docs/infrastructure/intro_servers.md)<br>
+[{{< fa chevron-right >}} TUD Gitlab](/docs/infrastructure/gitlab/gitlab_intro.md)<br> 
+<br> 
 
-Technical support for all platforms, apps, and software used in teaching at TU Delft.
-
-[Remote server](/docs/infrastructure/intro_servers.md)  
-[Gitlab](/docs/infrastructure/gitlab/gitlab_intro.md)  
-
-<div style="margin-top: auto;">
-[Getting started](/docs/infrastructure/getting_started.md){.btn .btn-primary}
-</div>
-:::
+::: {.link}
+[Getting started](/docs/infrastructure/getting_started.md){.btn .btn-custom}
 :::
 :::
 
-::: {.g-col-4 .container}
 ::: {.card}
+![](/docs/img/compute_header.jpg){.card-image}
 
-![](/docs/img/compute_header.jpg){.card-img-top}  
+## [Data Management](/docs/data/getting_started.md)
 
-::: {.card-body}
-## [Data Management](/docs/data/getting_started.md){.card-title style="color: #0077C0;"}
-
-Technical support for all platforms, apps, and software used in teaching at TU Delft.
-
-::: {.grid}
+::: {.grid style="grid-gap: 10px;"}
 ::: {.g-col-6}
-
-[FAIR data](/docs/data/fair_data/fair.md)  
-[Planning](/docs/data/planning/planning.md)  
-[Collection](/docs/data/data_collection/collection.md) 
+[{{< fa chevron-right >}} FAIR data](/docs/data/fair_data/fair.md)<br>
+[{{< fa chevron-right >}} Planning](/docs/data/planning/planning.md)<br>
+[{{< fa chevron-right >}} Collection](/docs/data/data_collection/collection.md)<br>
 :::
 ::: {.g-col-6}
-[Data processing](/docs/data/data_processing.md)  
-[Storage](/docs/data/data_storage/storage.md)  
-[Archive & publish](/docs/data/data_publishing/archival_publishing_index.md)  
+[{{< fa chevron-right >}} Data processing](/docs/data/data_processing.md)<br>
+[{{< fa chevron-right >}} Storage](/docs/data/data_storage/storage.md)<br>
+[{{< fa chevron-right >}} Archive & publish](/docs/data/data_publishing/archival_publishing_index.md)<br>
 :::
 :::
 
-<div style="margin-top: auto;">
-[Getting started](/docs/data/getting_started.md){.btn .btn-primary}
-</div>
-:::
+::: {.link}
+[Getting started](/docs/data/getting_started.md){.btn .btn-custom}
 :::
 :::
 
-
-::: {.g-col-4 .container}
 ::: {.card}
+![](/docs/img/compute_header.jpg){.card-image}
 
-![](/docs/img/compute_header.jpg){.card-img-top}  
+## [Research Software](/docs/software/getting_started.md)
 
-::: {.card-body}
-## [Research Software](/docs/software/getting_started.md){.card-title style="color: #0077C0;"}
-
-Technical support for all platforms, apps, and software used in teaching at TU Delft.
-
-::: {.grid}
+::: {.grid style="grid-gap: 10px;"}
 ::: {.g-col-6}
-[FAIR software](/docs/software/fair_software/fair.md)  
-[Development workflow](/docs/software/development_workflow/index.md)  
-[Documentation](/docs/software/documentation/index.md)  
+[{{< fa chevron-right >}} FAIR software](/docs/software/fair_software/fair.md)<br>
+[{{< fa chevron-right >}} Workflow](/docs/software/development_workflow/index.md)<br>
+[{{< fa chevron-right >}} Documentation](/docs/software/documentation/index.md)<br>
 :::
 ::: {.g-col-6}
-[Code quality](/docs/software/code_quality/index.md)  
-[Software testing](#)  
-[Containers](#)
+[{{< fa chevron-right >}} Code quality](/docs/software/code_quality/index.md)<br>
+[{{< fa chevron-right >}} Software testing](#)<br>
+[{{< fa chevron-right >}} Containers](#)<br>
 :::
 :::
 
-<div style="margin-top: auto;">
-[Getting started](/docs/software/getting_started.md){.btn .btn-primary}
-</div>
+::: {.link}
+[Getting started](/docs/software/getting_started.md){.btn .btn-custom}
 :::
 :::
+
 :::
-:::
--->
