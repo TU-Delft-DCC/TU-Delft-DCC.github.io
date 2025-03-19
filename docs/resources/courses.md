@@ -47,73 +47,61 @@ css: /themes/cards.css
 ---
 
 ## Training for researchers at the TU Delft
-The TU Delft organises courses for researchers on data management, research software development, and open science. For an overview of available courses, please visit the [website](https://www.tudelft.nl/en/library/research-data-management/r/training-events/training-for-researchers).
+The TU Delft organises training for researchers on data management, research software development, and open science. For an overview of available courses, please visit the [TU Delft Library website](https://www.tudelft.nl/en/library/current-topics/research-data-management/r/training-events/training-for-researchers).
 
 ::: {.grid}
-::: {.g-col-6}
 ::: {.card}
 
 ![](/docs/img/thecarpentries-opengraph.png){.card-image}
 
+[The Carpentries](https://carpentries.org/) teaches foundational coding and data science skills to researchers worldwide.
 
-[The Carpentries](https://carpentries.org/) teaches foundational coding and data science skills to researchers worldwide. You can also sign up as a helper.
-
-[Software Carpentry](https://software-carpentry.org/lessons/)<br>
-[Data Carpentry](https://datacarpentry.org/lessons/)<br>
-[Library Carpentry](https://librarycarpentry.org/lessons/)<br>
+[Software Carpentry Lesson](https://software-carpentry.org/lessons/)<br>
+[Data Carpentry Lesson](https://datacarpentry.org/lessons/)<br>
 
 ::: {.link}
-[Sign up](https://www.tudelft.nl/library/actuele-themas/research-data-management/r/training-evenementen/training-voor-onderzoekers){.btn}
+[Learn more](https://www.tudelft.nl/library/actuele-themas/research-data-management/r/training-evenementen/training-voor-onderzoekers){.btn}
 :::
 
 :::
-:::
 
-::: {.g-col-6}
 ::: {.card}
-
-![](/docs/img/coderefinery.png){.card-image}
-
-[CodeRefinery](https://coderefinery.org/) acts as a hub for FAIR (Findable, Accessible, Interoperable, and Reusable) software practices. The main focus is on professional tools for efficiently writing and maintaining research software, focussed on open source software. You can also sign up as a helper.
-
-::: {.link}
-[Sign up](https://www.tudelft.nl/en/library/research-data-management/r/training-events/training-for-researchers/coderefinery-workshops-good-practices-in-research-software-development){.btn}
-:::
-
-:::
-:::
-
-::: {.g-col-6}
-::: {.card}
-![](/docs/img/esciencecenter.png){.card-image}
-
-[The eScience Center](https://www.esciencecenter.nl/) offers has open-source [training materials](https://www.esciencecenter.nl/training-materials/) available and offers regular workshops.
-
-::: {.link}
-[Upcoming workshops](https://www.esciencecenter.nl/events/?f=workshops){.btn}
-:::
-
-:::
-:::
-
-::: {.g-col-6}
-::: {.card}
-
 ![](/docs/img/dcse.png){.card-image}
-
 
 The [Delft Institute for Computational Science and Engineering](https://www.tudelft.nl/en/tu-delft-institute-for-computational-science-and-engineering) offers courses on supercomputing through the [Delft High Performance Computing Center](https://www.tudelft.nl/en/dhpc). 
 
 ::: {.link}
-[Course list](https://www.tudelft.nl/en/tu-delft-institute-for-computational-science-and-engineering/education/courses){.btn}
+[Learn more](https://www.tudelft.nl/en/tu-delft-institute-for-computational-science-and-engineering/education/courses){.btn}
 :::
 
 :::
-:::
 
-::: {.g-col-6}
 ::: {.card}
+<!-- ![](/docs/img/dcse.png){.card-image} -->
+### REIT
 
+The [Research Engineering and Infrastructure Team](https://reit.tudelft.nl/) offers support on software engineering, data science, and high-performance computing.  They offer courses on Rust for Research, Python best practices, and Working with a cluster.
+
+::: {.link}
+[Learn more](https://reit.tudelft.nl/#/#courses){.btn}
+:::
+
+:::
+:::
+
+## External training opportunities
+::: {.grid}
+::: {.card}
+![](/docs/img/esciencecenter.png){.card-image}
+
+[The eScience Center](https://www.esciencecenter.nl/) offers offers regular workshops on good practices for research software development and on intermediate-level topics such as GPU programming, Deep Learning, and Image Processing. Check out the overview of [training materials](https://www.esciencecenter.nl/training-materials/).
+
+::: {.link}
+[Upcoming workshops](https://www.esciencecenter.nl/events/?f=workshops){.btn}
+:::
+:::
+
+::: {.card}
 ![](/docs/img/surf.svg){.card-image}
 
 SURF offers various workshops on using SURF infratructure, such as the supercomputers and storage solutions. 
@@ -123,15 +111,41 @@ SURF offers various workshops on using SURF infratructure, such as the supercomp
 :::
 
 :::
+
+
+::: {.card}
+![](/docs/img/coderefinery.png){.card-image}
+
+[CodeRefinery](https://coderefinery.org/) teaches good practices for writing and maintaining research software, focussed on open source software. Their [lessons](https://coderefinery.org/lessons/) cover version control, testing, continuous integration, documentation, and more.
+
+
+::: {.link}
+[Upcoming workshops](https://coderefinery.org/workshops/upcoming/){.btn}
+:::
+
+
+:::
+
+::: {.card}
+<!-- ![](/docs/img/coderefinery.png){.card-image} -->
+
+### Taxila
+
+[CodeRefinery](https://coderefinery.org/) teaches good practices for writing and maintaining research software, focussed on open source software. Their [lessons](https://coderefinery.org/lessons/) cover version control, testing, continuous integration, documentation, and more.
+
+
+::: {.link}
+[Upcoming workshops](https://coderefinery.org/workshops/upcoming/){.btn}
+:::
+
 :::
 :::
 
-## Community initiatives
+
+## Community training opportunities
 
 ::: {.grid}
-::: {.g-col-6}
 ::: {.card}
-
 ![](/docs/img/rcafe.png){.card-image}
 
 Do you want to build your R skills, write R code with others, or ask questions about working with R? To join the [TU Delft R Café](https://delft-rcafe.github.io/home/Index.html).
@@ -141,11 +155,9 @@ Do you want to build your R skills, write R code with others, or ask questions a
 :::
 
 :::
-:::
 
-::: {.g-col-6}
+
 ::: {.card}
-
 ![](/docs/img/4TU.png){.card-image}
 
 [4TU.ResearchData](https://data.4tu.nl/) offers training and [community](https://community.data.4tu.nl/join-our-community/) engagement resources to research and research-support professionals working to make their research data findable, accessible, interoperable and reproducible (FAIR).
@@ -154,7 +166,6 @@ Do you want to build your R skills, write R code with others, or ask questions a
 [Upcoming events](https://community.data.4tu.nl/category/training-events/){.btn}
 :::
 
-:::
 :::
 :::
 

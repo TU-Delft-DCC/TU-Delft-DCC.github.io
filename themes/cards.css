@@ -1,6 +1,23 @@
 /* grid layout */
-.g-col-6 {
+.grid {
     display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px;
+    padding: 20px;
+}
+
+/* For smaller screens: 1 column */
+@media (max-width: 600px) {
+    .grid {
+        grid-template-columns: 1fr; /* 1 column on smaller screens */
+    }
+}
+
+/* For larger screens: 3 columns */
+@media (min-width: 1500px) {
+    .grid {
+        grid-template-columns: repeat(3, 1fr); /* 3 columns on larger screens */
+    }
 }
 
 .card {
