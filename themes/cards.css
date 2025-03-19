@@ -37,10 +37,13 @@
 .card h3 {    
     height: 50px;
     margin: 7.5px;
+    text-align: center;
 }
 
 .card-image {
+    display: block;
     height: 50px;
+    margin: 0 auto;
 }
 
 /* Button Styling */
