@@ -1,0 +1,45 @@
+/* grid layout */
+.g-col-6 {
+    display: grid;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #ccc;
+    border-left: solid #00A6D6 .3rem;
+    border-radius: 8px;
+    padding: 20px;
+    padding-bottom: 0px;
+    background-color: #f9f9f9;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    font-size: 0.9rem; 
+    font-weight: 500;
+    }
+
+.card-image {
+    max-height: 50px;
+}
+
+/* Button Styling */
+.btn {
+    background-color: #00A6D6;
+    color: white;
+    text-align: center;
+    padding: 5px;    
+    border-radius: 5px;
+    font-size: 1rem;
+    text-decoration: none;
+    width: 100%;
+    display: block;
+    margin: auto; 
+}
+
+.btn:hover {
+    background-color: #333;
+    color: white;
+}
+
+.link {
+    margin-top: auto;
+  }
