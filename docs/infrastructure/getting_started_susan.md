@@ -69,7 +69,7 @@ _Do you have the kind of prickly problem we like to sink our teeth into?_
 
 - Each faculty has its own Faculty IT Manager (FIM). You can find your FIM at intranet.tudelft.nl/en/-/faculty-it-manager (log into intranet.tudelft.nl first and then copy/paste this link). If you need to discuss your IT requirements, your FIM is your first point of contact.
 
-- Is your problem more data related? Each faculty has a Data Steward. You can find your Data Steward at https://www.tudelft.nl/en/library/research-data-management/r/support/data-stewardship/contact/.
+- Is your problem more data related? Each faculty has a Data Steward. You can find your Data Steward at https://www.tudelft.nl/en/library/current-topics/research-data-management/r/support/data-stewardship/contact.
 
 - Perhaps one of your fellow researchers has already solved your type of problem. Maybe it’s worth contacting a Data Champion close to home via https://openworking.wordpress.com/data-champions/.
 
