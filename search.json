@@ -734,7 +734,7 @@
     "href": "docs/resources/courses.html",
     "title": "Courses and workshops",
     "section": "",
-    "text": "The TU Delft organises courses for researchers on data management, research software development, and open science. For an overview of available courses, please visit the website.\n\n\n\n\n\n\n\n\n\nThe Carpentries\n\n\n\n\n\n\nThe Carpentries teaches foundational coding and data science skills to researchers worldwide. You can also sign up as a helper.\n\nSoftware Carpentry\nData Carpentry\nLibrary Carpentry\n\nSign up\n\n\n\n\n\n\n\n\n\n\nCodeRefinery\n\n\n\n\n\n\nCodeRefinery acts as a hub for FAIR (Findable, Accessible, Interoperable, and Reusable) software practices. The main focus is on professional tools for efficiently writing and maintaining research software, focussed on open source software. You can also sign up as a helper.\nSign up\n\n\n\n\n\n\n\n\n\n\neScience Center\n\n\n\n\n\n\nThe eScience Center offers has open-source training materials available and offers regular workshops.\nUpcoming events\n\n\n\n\n\n\n\n\n\n\nDCSE\n\n\n\n\n\n\nThe Delft Institute for Computational Science and Engineering offers courses on supercomputing through the Delft High Performance Computing Center.\nCourse list\n\n\n\n\n\n\n\n\n\n\nSURF\n\n\n\n\n\n\nSURF offers various workshops for researchers.\nUpcoming events",
+    "text": "The TU Delft organises training for researchers on data management, research software development, and open science. For an overview of available courses, please visit the TU Delft Library website.\n\n\n\nThe Carpentries teaches foundational coding and data science skills to researchers worldwide.\n Software Carpentry Lesson  Data Carpentry Lesson\n\nCourses overview\n\n\n\n\nThe Delft Institute for Computational Science and Engineering offers courses on supercomputing through the Delft High Performance Computing Center.\n\nCourses overview\n\n\n\n\nCodeRefinery teaches good practices for writing and maintaining research software, focussed on open source software. Their lessons cover version control, testing, continuous integration, documentation, and more.\n\nUpcoming workshops\n\n\n\n\nThe Research Engineering and Infrastructure Team offers support on software engineering, data science, and high-performance computing. They offer courses on Rust for Research, Python best practices, and Working with a cluster.\n\nCourses overview",
     "crumbs": [
       "Guides",
       "<span style=\"filter:grayscale(100%);\">📖</span> **Resources**",
@@ -746,7 +746,7 @@
     "href": "docs/resources/courses.html#training-for-researchers-at-the-tu-delft",
     "title": "Courses and workshops",
     "section": "",
-    "text": "The TU Delft organises courses for researchers on data management, research software development, and open science. For an overview of available courses, please visit the website.\n\n\n\n\n\n\n\n\n\nThe Carpentries\n\n\n\n\n\n\nThe Carpentries teaches foundational coding and data science skills to researchers worldwide. You can also sign up as a helper.\n\nSoftware Carpentry\nData Carpentry\nLibrary Carpentry\n\nSign up\n\n\n\n\n\n\n\n\n\n\nCodeRefinery\n\n\n\n\n\n\nCodeRefinery acts as a hub for FAIR (Findable, Accessible, Interoperable, and Reusable) software practices. The main focus is on professional tools for efficiently writing and maintaining research software, focussed on open source software. You can also sign up as a helper.\nSign up\n\n\n\n\n\n\n\n\n\n\neScience Center\n\n\n\n\n\n\nThe eScience Center offers has open-source training materials available and offers regular workshops.\nUpcoming events\n\n\n\n\n\n\n\n\n\n\nDCSE\n\n\n\n\n\n\nThe Delft Institute for Computational Science and Engineering offers courses on supercomputing through the Delft High Performance Computing Center.\nCourse list\n\n\n\n\n\n\n\n\n\n\nSURF\n\n\n\n\n\n\nSURF offers various workshops for researchers.\nUpcoming events",
+    "text": "The TU Delft organises training for researchers on data management, research software development, and open science. For an overview of available courses, please visit the TU Delft Library website.\n\n\n\nThe Carpentries teaches foundational coding and data science skills to researchers worldwide.\n Software Carpentry Lesson  Data Carpentry Lesson\n\nCourses overview\n\n\n\n\nThe Delft Institute for Computational Science and Engineering offers courses on supercomputing through the Delft High Performance Computing Center.\n\nCourses overview\n\n\n\n\nCodeRefinery teaches good practices for writing and maintaining research software, focussed on open source software. Their lessons cover version control, testing, continuous integration, documentation, and more.\n\nUpcoming workshops\n\n\n\n\nThe Research Engineering and Infrastructure Team offers support on software engineering, data science, and high-performance computing. They offer courses on Rust for Research, Python best practices, and Working with a cluster.\n\nCourses overview",
     "crumbs": [
       "Guides",
       "<span style=\"filter:grayscale(100%);\">📖</span> **Resources**",
@@ -754,11 +754,11 @@
     ]
   },
   {
-    "objectID": "docs/resources/courses.html#community-initiatives",
-    "href": "docs/resources/courses.html#community-initiatives",
+    "objectID": "docs/resources/courses.html#external-training-opportunities",
+    "href": "docs/resources/courses.html#external-training-opportunities",
     "title": "Courses and workshops",
-    "section": "Community initiatives",
-    "text": "Community initiatives\n\n\n\n\n\n\n\n\n\nR Café\n\n\n\n\n\n\nDo you want to build your R skills, write R code with others, or ask questions about working with R? To join the TU Delft R Café.\nUpcoming events\n\n\n\n\n\n\n\n\n\n\n4TU.ResearchData\n\n\n\n\n\n\n4TU.ResearchData offers training and community engagement resources to research and research-support professionals working to make their research data findable, accessible, interoperable and reproducible (FAIR).\nUpcoming events\n\n\n\n\nSoftware Sustainability Institute\nSince 2010, the Software Sustainability Institute has facilitated the advancement of software in research by cultivating better, more sustainable, research software to enable world-class research (“Better software, better research”). The Institute is based at the Universities of Edinburgh, Manchester, Oxford and Southampton, and draws on a team of experts with a breadth of experience in software development, project and programme management, research facilitation, publicity and community engagement.\nYou can view their upcoming workshops here.",
+    "section": "External training opportunities",
+    "text": "External training opportunities\n\n\n\nThe eScience Center offers regular workshops on good practices for research software development and on intermediate-level topics such as GPU programming, Deep Learning, and Image Processing. Check out the overview of the training materials.\n\nUpcoming workshops\n\n\n\n\nSURF is the IT cooperative of Dutch education and research institutions and offers various workshops on using the supercomputers and storage solutions.\n\nUpcoming events\n\n\n\n\nThe Software Sustainability Institute in the UK provides training and resources to improve the quality of research software.\n\nTraining Hub\n\n\n\n\nTaxila provides an overview of training, learning, and teaching materials for trainers and trainees in the Netherlands.\n\nUpcoming workshops",
     "crumbs": [
       "Guides",
       "<span style=\"filter:grayscale(100%);\">📖</span> **Resources**",
@@ -766,11 +766,11 @@
     ]
   },
   {
-    "objectID": "docs/resources/courses.html#dcc-project-workshops",
-    "href": "docs/resources/courses.html#dcc-project-workshops",
+    "objectID": "docs/resources/courses.html#community-training-opportunities",
+    "href": "docs/resources/courses.html#community-training-opportunities",
     "title": "Courses and workshops",
-    "section": "DCC project workshops",
-    "text": "DCC project workshops\nAs part of the support it provides, the DCC also develops tailor-made workshops to address specific needs of researchers not covered by general workshop materials. We always aim to have our workshops publicaly available.",
+    "section": "Community training opportunities",
+    "text": "Community training opportunities\n\n\n\nAre you learning R or looking for a friendly community to practice with? The R Café is a welcoming space for R users of all levels - from absolute beginners to experienced programmers.\n\nUpcoming events\n\n\n\n\n4TU.ResearchData offers training resources and community engagement to research and research-support professionals working to make their research data FAIR.\n\nUpcoming events",
     "crumbs": [
       "Guides",
       "<span style=\"filter:grayscale(100%);\">📖</span> **Resources**",
