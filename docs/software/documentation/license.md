@@ -40,7 +40,7 @@ categories:
 
 :::{.callout-warning}
 ## **Important**
-For questions about data and software licenses, please consult your [Faculty Data Steward](https://www.tudelft.nl/library/research-data-management/r/support/data-stewardship/contact).
+For questions about data and software licenses, please consult your [Faculty Data Steward](https://www.tudelft.nl/en/library/current-topics/research-data-management/r/support/data-stewardship/contact).
 :::
 
 ## TU Delft licensing policy
