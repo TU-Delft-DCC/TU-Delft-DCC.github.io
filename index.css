@@ -138,19 +138,16 @@
     }
 }
 
-  
-
-  
 .hero-banner a[role="button"] {
     margin-right: 17px;
     margin-top: 0.6rem;
     margin-bottom: 1.6rem;
-    border-radius: 25px;
+    border-radius: 10px;
     width: 150px;
 }
   
 .hero-banner #btn-guides {
-  background-color: #009B77 !important;
+  background-color: #009b48 !important;
   border: none;
 }
   
@@ -219,8 +216,7 @@
   display: block;
   margin: 0 auto;
   width: 100%; /* Ensures it doesn’t exceed the card width */
-  height: auto; /* Maintains aspect ratio */
-  max-height: 100px; /* Prevents excessive stretching */
+  height: 100px; /* Maintains aspect ratio */
   object-fit: contain; /* Ensures the image fits well */
 }
 

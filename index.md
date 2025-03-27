@@ -49,7 +49,7 @@ These guides are an initiative from the [**TU Delft Digital Competence Centre**]
 ::: {.card}
 ![](/docs/img/compute_header.jpg){.card-image}
 
-## [Data Management](/docs/data/getting_started.md)
+## [ Data Management](/docs/data/getting_started.md)
 
 ::: {.grid style="grid-gap: 10px;"}
 ::: {.g-col-6}
