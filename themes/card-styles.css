@@ -1,0 +1,94 @@
+.card-container {
+    gap: 20px;
+    padding: 20px;
+    display: flex; 
+    flex-direction: column;
+    align-items: stretch; 
+}
+
+/* General Card Styling */
+.card {
+    width: 100%;
+    max-width: 350px; /* Adjust max width for responsiveness */
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    background-color: white;
+    text-align: left;
+    margin: auto;
+    padding: 10px;
+    /* flex-direction: column; */
+    justify-content: center;
+    flex-grow: 1;
+}
+  
+  /* Image Styling */
+  .card-img {
+    width: 100%;
+    height:auto;
+    /* margin-bottom: -25px;
+    margin-top: 10px; */
+  }
+  
+  /* Card Body */
+  .card-body {
+    display: flex;
+    justify-content: space-between; /* Ensures elements stay aligned */
+    padding: 15px;
+    padding-top: 10px;
+  }
+  
+  /* Title Styling */
+  .card-title {
+    color: #0077C0;
+    font-size: 1.3rem;
+  }
+  
+  /* Text Styling */
+  .card-text {
+    font-size: 0.9rem;
+    margin-top: -5px;
+    border: none;
+  }
+   
+  /* Button Styling */
+  .btn {
+    /* display: block; */
+    background-color: #0077C0;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 1rem;
+    margin-top: 10px;
+    text-decoration: none;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: auto;
+  }
+  
+  .btn:hover {
+    background-color: #333;
+  }
+  
+  /* Responsive Design */
+  /* @media (max-width: 400px) {
+    .card-container {
+      flex-direction: column;
+      align-items: center;
+    }
+    .card {
+      max-width: 90%;
+    }
+    .card-links {
+      flex-direction: column;
+      align-items: center;
+    }
+    .col {
+      width: 100%;
+      text-align: center;
+    }
+  }
+   */
