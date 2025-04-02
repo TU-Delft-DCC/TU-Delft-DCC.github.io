@@ -87,6 +87,15 @@ Managing your environments and dependencies.
 :::
 
 ::: {.feature}
+### {{< fa cubes >}} Workflow Management 
+Tools for writing and managing workflows.
+
+::: {.learn-more}
+[Learn more »](./workflow_management.md)
+:::
+:::
+
+::: {.feature}
 ### {{< fa code-branch >}} Branch Management
 Choosing a branching strategy.
 
