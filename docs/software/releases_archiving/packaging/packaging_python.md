@@ -324,4 +324,6 @@ You can use `pip` to install your package in editable mode (`-e`). This way, cha
 pip install -e .
 ```
 
+## Next steps
 
+Once you have your package ready, you can publish it. Visit our [*Release your Python package*](../releases/releases_pypi.md) guide for information on how to publish your package to PyPI.
