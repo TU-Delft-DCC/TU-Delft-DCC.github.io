@@ -283,9 +283,19 @@ website:
               href: docs/software/releases_archiving/index.md
               contents:
                 - text: Packaging
-                  href: docs/software/releases_archiving/packaging.md
+                  href: docs/software/releases_archiving/packaging/packaging.md
+                  contents:
+                    - text: Create a Python package
+                      href: docs/software/releases_archiving/packaging/packaging_python.md
+                    - text: Create an R package
+                      href: docs/software/releases_archiving/packaging/packaging_r.md
                 - text: Releases
-                  href: docs/software/releases_archiving/releases.md
+                  href: docs/software/releases_archiving/releases/releases.md
+                  contents: 
+                    - text: Release your Python package on PyPI
+                      href: docs/software/releases_archiving/releases/releases_pypi.md
+                    - text: Release your R package on CRAN
+                      href: docs/software/releases_archiving/releases/releases_cran.md
                 - text: Archiving
                   href: docs/software/releases_archiving/archiving.md
         - text: <br>
