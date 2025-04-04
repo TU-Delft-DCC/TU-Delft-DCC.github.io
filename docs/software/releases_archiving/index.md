@@ -47,7 +47,7 @@ categories:
 
 ---
 
-Eventually your software will be at a sharable and publishable point. One way to distribute your software is to package it and release it on a platform like PyPI (for Python) or CRAN (for R). Additionally, you want to archive your software for long-term preservation in repositories like Zenodo or 4TU.
+Eventually your software will be at a sharable and publishable point. One way to distribute your software is to package it and release it on a platform like PyPI (Python Package Index), or CRAN (Comprehensive R Archive Network). Additionally, you want to archive your software for long-term preservation in repositories like Zenodo or 4TU.
 
 ::: {.content-block}
 ::: {.features}
