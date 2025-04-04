@@ -55,7 +55,7 @@ title: Releases
 Publish your Python package on PyPI.
 
 ::: {.learn-more}
-[Learn more »](./packaging_python.md)
+[Learn more »](./releases_pypi.md)
 :::
 :::
 
@@ -64,7 +64,7 @@ Publish your Python package on PyPI.
 Publish your R package on CRAN.
 
 ::: {.learn-more}
-[Learn more »](./packaging_r.md)
+[Learn more »](./releases_cran.md)
 :::
 :::
 
