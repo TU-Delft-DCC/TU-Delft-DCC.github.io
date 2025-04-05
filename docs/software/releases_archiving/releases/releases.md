@@ -42,8 +42,10 @@ corresponding: Elviss Dvinskis
 categories: 
  - package
  - release
- - r
  - python
+ - r
+ - changelog
+ - semver
 
 ---
 
