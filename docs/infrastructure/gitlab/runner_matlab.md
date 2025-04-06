@@ -64,7 +64,7 @@ To learn more about Docker containers, please look at the [Reproducible Computat
 
 ## Glossary of terms
 **CI/CD pipeline**  
-_A CI/CD pipeline automates your software delivery process. The pipeline builds code, runs tests (Continuous Intergation), and safely deploys a new version of the application (Continuous Delivery). See this [introduction](https://semaphoreci.com/blog/cicd-pipeline)._
+_A CI/CD pipeline automates your software delivery process. The pipeline builds code, runs tests (Continuous Intergation), and safely deploys a new version of the application (Continuous Delivery)._
 
 **Docker**  
 _We use a Docker container to run the Gitlab runner and initialise the CI/CD pipeline._

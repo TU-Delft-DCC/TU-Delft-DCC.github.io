@@ -46,8 +46,9 @@ author_3: Aleksandra Wilczynska
 
 ---
 
-Coming soon!
+🚧 Coming soon! ⏳
 
+<!--
 
 :::{.callout-important appearance="simple" icon="false"}
 ### {{< fa exclamation >}} Important
@@ -61,3 +62,5 @@ Choosing a repository for publishing your data depends on factors such as storag
 ## Zenodo
 
 ## DOI and citation
+
+-->

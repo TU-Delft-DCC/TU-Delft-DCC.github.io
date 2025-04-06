@@ -3,7 +3,7 @@
 
 # We use this key to indicate the last reviewed date [manual entry, use YYYY-MM-DD]
 # Uncomment and populate the next line accordingly
-#date: YYYY-MM-DD
+date: 2025-02-12
 
 # We use this key to indicate the last modified date [automatic entry]
 date-modified: last-modified
@@ -16,7 +16,7 @@ language:
 
 # Title of the document [manual entry]
 # Uncomment and populate the next line accordingly
-title: Archive and publish
+title: Testing in R
 
 # Brief overview of the document (will be used in listings) [manual entry]
 # Uncomment and populate the next line and uncomment "hide-description: true".
@@ -39,50 +39,10 @@ title: Archive and publish
 
 # Meaningful keywords, newline separated [manual entry]
 # Uncomment and populate the next line and list accordingly
-#categories: 
-# - 
-# - 
+categories: 
+- testing 
+- R
 
 ---
 
-🚧 Under construction! 🏗️
-
-<!--
-- An introduction paragraph
--->
-
-::: {.content-block}
-::: {.features}
-
-::: {.feature}
-### {{< fa scale-balanced >}} Licensing
-<!--Data licenses.-->
-⏰ Coming soon!
-
-::: {.learn-more}
-[Learn more »](./licensing_data.md)
-:::
-:::
-
-::: {.feature}
-### {{< fa wave-square >}} Publishing data
-<!--Learn how to publish your data.-->
-⏰ Coming soon!
-
-::: {.learn-more}
-[Learn more »](./publishing.md)
-:::
-:::
-
-::: {.feature}
-### {{< fa mitten >}} Offboarding and ownership
-
-⏰ Coming soon!
-
-::: {.learn-more}
-[Learn more »](./offboarding.md)
-:::
-:::
-
-:::
-:::
+🚧 Coming soon! ⏳

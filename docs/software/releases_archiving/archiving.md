@@ -16,7 +16,7 @@ language:
 
 # Title of the document [manual entry]
 # Uncomment and populate the next line accordingly
-title: Archive and publish
+title: Archiving
 
 # Brief overview of the document (will be used in listings) [manual entry]
 # Uncomment and populate the next line and uncomment "hide-description: true".
@@ -45,44 +45,4 @@ title: Archive and publish
 
 ---
 
-🚧 Under construction! 🏗️
-
-<!--
-- An introduction paragraph
--->
-
-::: {.content-block}
-::: {.features}
-
-::: {.feature}
-### {{< fa scale-balanced >}} Licensing
-<!--Data licenses.-->
-⏰ Coming soon!
-
-::: {.learn-more}
-[Learn more »](./licensing_data.md)
-:::
-:::
-
-::: {.feature}
-### {{< fa wave-square >}} Publishing data
-<!--Learn how to publish your data.-->
-⏰ Coming soon!
-
-::: {.learn-more}
-[Learn more »](./publishing.md)
-:::
-:::
-
-::: {.feature}
-### {{< fa mitten >}} Offboarding and ownership
-
-⏰ Coming soon!
-
-::: {.learn-more}
-[Learn more »](./offboarding.md)
-:::
-:::
-
-:::
-:::
+🚧 Coming soon! ⏳
