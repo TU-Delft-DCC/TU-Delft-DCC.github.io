@@ -94,6 +94,21 @@ The [Research Engineering and Infrastructure Team](https://reit.tudelft.nl/) off
 :::
 :::
 
+::: {.card}
+### TU Delft MOOCs
+
+The TU Delft offers a variety of Massive Open Online Courses.
+
+[{{< fa chevron-right >}} Open Science](https://online-learning.tudelft.nl/courses/open-science-sharing-your-research-with-the-world/)<br>
+[{{< fa chevron-right >}} Automated Software Testing](https://online-learning.tudelft.nl/courses/automated-software-testing-unit-testing-coverage-criteria-and-design-for-testability/)<br>
+[{{< fa chevron-right >}} AI, Data & Digitalization](https://online-learning.tudelft.nl/topic/ai-data-digitalization/)<br>
+[{{< fa chevron-right >}} Unix Tools](https://online-learning.tudelft.nl/courses/unix-tools-data-software-and-production-engineering/)
+
+::: {.link}
+[MOOC overview](https://online-learning.tudelft.nl/){.btn}
+:::
+:::
+
 :::
 
 ## External training opportunities
