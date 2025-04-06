@@ -41,7 +41,7 @@ title: Data processing
 # Uncomment and populate the next line and list accordingly
 categories: 
  - data processing
- - version contro 
+ - version control
 
 --- 
 
