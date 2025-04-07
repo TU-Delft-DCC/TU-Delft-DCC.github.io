@@ -39,20 +39,28 @@ title: Planning
 
 # Meaningful keywords, newline separated [manual entry]
 # Uncomment and populate the next line and list accordingly
-#categories: 
-# - 
-# - 
+categories: 
+ - planning
+ - data management plan
+ - privacy and security
+ - ethics
 
 ---
 
-🚧 Under construction! 🏗️
+Planning for managing your data throughout its lifecycle (collection, storage, sharing, publication, and archiving) is, more than recommended, a requirement that TU Delft and [research funders](https://www.tudelft.nl/en/library/current-topics/research-data-management/r/policies/funders-policies) expect nowadays from researchers when referring to their research. By default, this requirement is fulfilled by the writing of a **data management plan (DMP)**.
 
-<!--
+**Do you need to write a DMP?** TU Delft Library helps you with that step via [DMPonline](https://www.tudelft.nl/en/library/current-topics/research-data-management/r/plan/dmponline/dmponline). For advice and assistance on writing your DMP, contact your [faculty Data Steward](https://www.tudelft.nl/en/library/current-topics/research-data-management/r/support/data-stewardship/contact).
 
-- Introduction
-- Data management plan
+Through the writing of your DMP you will have to reflect upon/take into account ethics, privacy and security concerns that your data may arise. We expand on these concerns in two separate subsections that you can find bellow.
 
--->
+:::{.callout-tip} 
+## **Learn more**
+
+[**Check TU Delft Library's information on planning your research data management**](https://www.tudelft.nl/en/library/current-topics/research-data-management/r/plan)  
+We recomend you to first have a look at the section with [general information on DMPs](https://www.tudelft.nl/en/library/current-topics/research-data-management/r/plan/data-management-plans) and then browse through the remaining more specific sections.
+
+[**Check also Research Data Management 101's Module 5: How to plan for RDM**](https://tu-delft-library.github.io/rdm101-book/modules/module5.html)
+:::
 
 ::: {.content-block}
 ::: {.features}
