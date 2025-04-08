@@ -52,7 +52,7 @@ Proper data collection practices are essential for ensuring the integrity and re
 :::{.callout-important appearance="simple" icon="false"}
 ## {{< fa info-circle >}} Learn more
 - We would like to refer you to the [Discover & Reuse](https://phdsupervisors.tudl.tudelft.nl/phase/discover-reuse/) and [Gather/Create & Analyse](https://phdsupervisors.tudl.tudelft.nl/phase/gather-create-analyse/) and sections of the *TU Delft Navigating Research Data and Software: A Practical Guide for PhD Supervisors* guide for more information. 
-- Additionally, we would like to refer you to [Module 2](https://tu-delft-library.github.io/rdm101-book/modules/module2.html#data-within-the-research-workflow) of the RDM 101 book for more information on this topic.
+- Additionally, we would like to refer you to the [RDM 101](https://tu-delft-library.github.io/rdm101-book/intro.html) book for more information on this topic.
 :::
 
 
