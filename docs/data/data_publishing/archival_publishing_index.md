@@ -16,7 +16,7 @@ language:
 
 # Title of the document [manual entry]
 # Uncomment and populate the next line accordingly
-title: Archive and publish
+title: Archiving and publishing data
 
 # Brief overview of the document (will be used in listings) [manual entry]
 # Uncomment and populate the next line and uncomment "hide-description: true".
@@ -45,19 +45,14 @@ title: Archive and publish
 
 ---
 
-🚧 Under construction! 🏗️
-
-<!--
-- An introduction paragraph
--->
+Towards the end of the research cycle, data archiving—and publishing, when possible—is essential to ensure that data remains accessible, reproducible, and reusable. Therefore, understanding how to effectively publish and archive data is crucial for maintaining data integrity, facilitating collaboration, and promoting transparency.
 
 ::: {.content-block}
 ::: {.features}
 
 ::: {.feature}
 ### {{< fa scale-balanced >}} Licensing
-<!--Data licenses.-->
-⏰ Coming soon!
+Enables access and promotes adherence
 
 ::: {.learn-more}
 [Learn more »](./licensing_data.md)
@@ -66,8 +61,7 @@ title: Archive and publish
 
 ::: {.feature}
 ### {{< fa wave-square >}} Publishing data
-<!--Learn how to publish your data.-->
-⏰ Coming soon!
+Broadens reach
 
 ::: {.learn-more}
 [Learn more »](./publishing.md)
@@ -76,8 +70,7 @@ title: Archive and publish
 
 ::: {.feature}
 ### {{< fa mitten >}} Offboarding and ownership
-
-⏰ Coming soon!
+Ensures accountability and longevity
 
 ::: {.learn-more}
 [Learn more »](./offboarding.md)
