@@ -93,7 +93,7 @@ In the field of geosciences, the [NetCDF](https://www.unidata.ucar.edu/software/
 
 In the field of engineering, data is often stored in formats such as [HDF5](https://www.hdfgroup.org/solutions/hdf5/). It is widely used for storing large amounts of numerical data and are supported by many programming languages and software tools.
 
-In addition, 4TU.ResearchData has a list of [preffered file formats](https://data.4tu.nl/s/documents/Preferred_File_Formats_2019.pdf), and they have a [data collection policy](https://data.4tu.nl/s/docs/data-collection-policy.pdf) that outlines the preferred file formats for data submission.
+In addition, 4TU.ResearchData has a list of [preferred file formats](https://data.4tu.nl/s/documents/Preferred_File_Formats_2019.pdf), and they have a [data collection policy](https://data.4tu.nl/s/docs/data-collection-policy.pdf) that outlines the preferred file formats for data submission.
 
 :::{.callout-note appearance="simple" icon="false"}
 ## {{< fa signs-post >}} Further reading
