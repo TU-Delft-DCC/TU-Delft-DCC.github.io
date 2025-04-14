@@ -45,4 +45,9 @@ title: Offboarding and ownership
 
 ---
 
-🚧 Coming soon! ⏳
+Offboarding and ownership are crucial for ensuring the continuity and integrity of research data when team members leave or transition roles. Establishing clear ownership protocols and conducting thorough offboarding processes help maintain data accessibility, prevent loss, and ensure compliance with institutional policies. To achieve effective offboarding, document data responsibilities, transfer access rights promptly, and conduct exit interviews to capture essential knowledge.
+
+:::{.callout-important appearance="simple" icon="false"}
+### {{< fa exclamation >}} Read More
+- [Data Managment Offboarding by Harvard RDM](https://datamanagement.hms.harvard.edu/about/where-start/data-management-offboarding#:~:text=Offboarding%20Checklist%20Document)
+:::
