@@ -1,0 +1,38 @@
+.grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px;
+} 
+
+.tool {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;  
+  }
+  
+  .tool a[role="button"] {
+    width: 300px;
+    color: rgb(55, 58, 60);
+    text-align: center;
+    border: 3px solid rgb(222, 226, 230);
+    border-radius: 10px;
+    margin-right: 20px;
+    margin-bottom: 0;
+    margin-top: 10px;
+    font-size: 1em;
+  }
+  
+  .tool .btn-outline-light:hover {
+    border-color: rgb(80,146,221);
+    background-color: transparent;
+  }
+  
+  .tool a[role="button"] img {
+    display: block;
+    width: 100px;
+    height: 100px;
+    margin: auto;
+    margin-bottom: 5px;
+  }
