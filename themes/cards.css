@@ -1,0 +1,70 @@
+/* grid layout */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px;
+    padding: 20px;
+}
+
+/* For smaller screens: 1 column */
+@media (max-width: 600px) {
+    .grid {
+        grid-template-columns: 1fr; /* 1 column on smaller screens */
+    }
+}
+
+/* For larger screens: 3 columns */
+@media (min-width: 1500px) {
+    .grid {
+        grid-template-columns: repeat(3, 1fr); /* 3 columns on larger screens */
+    }
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #ccc;
+    border-left: solid #00A6D6 .3rem;
+    border-radius: 8px;
+    padding: 20px;
+    padding-bottom: 0px;
+    background-color: #f9f9f9;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    font-size: 0.9rem; 
+    font-weight: 500;
+    }
+
+.card h3 {    
+    height: 50px;
+    margin: 7.5px;
+    text-align: center;
+}
+
+.card-image {
+    display: block;
+    height: 50px;
+    margin: 0 auto;
+}
+
+/* Button Styling */
+.btn {
+    background-color: #00A6D6;
+    color: white;
+    text-align: center;
+    padding: 5px;    
+    border-radius: 5px;
+    font-size: 1rem;
+    text-decoration: none;
+    width: 100%;
+    display: block;
+    margin: auto; 
+}
+
+.btn:hover {
+    background-color: #333;
+    color: white;
+}
+
+.link {
+    margin-top: auto;
+  }

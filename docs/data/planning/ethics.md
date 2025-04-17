@@ -45,4 +45,4 @@ title: Ethics
 
 ---
 
-Coming soon!
+🚧 Coming soon! ⏳

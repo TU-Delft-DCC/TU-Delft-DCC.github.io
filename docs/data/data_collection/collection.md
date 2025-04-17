@@ -45,16 +45,21 @@ title: Data collection
 
 ---
 
-Coming soon!
+Under construction! 🏗️
 
-- Introduction
+<!--
+
+- Introduction paragrpah goes here.
+
+-->
 
 ::: {.content-block}
 ::: {.features}
 
 ::: {.feature}
 ### {{< fa table >}} Data conventions
-Data standards and types.
+<!--Data standards and types.-->
+🚧 Coming soon! ⏳
 
 ::: {.learn-more}
 [Learn more »](./data_conventions.md)
@@ -63,7 +68,7 @@ Data standards and types.
 
 ::: {.feature}
 ### {{< fa eye >}} Data access and reuse
-Text text text
+🚧 Coming soon! ⏳
 
 ::: {.learn-more}
 [Learn more »](./access_reuse.md)
@@ -72,7 +77,7 @@ Text text text
 
 ::: {.feature}
 ### {{< fa clipboard >}} eLabJournal and RSpace
-Text text text
+🚧 Coming soon! ⏳
 
 ::: {.learn-more}
 [Learn more »](./elab_rspace.md)

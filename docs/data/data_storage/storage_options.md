@@ -45,9 +45,9 @@ title: Storage options
 
 ---
 
-Coming soon!
+Under construction! 🏗️
 
----
+<!--
 
 Storing your data in a secure location is a key element of a successful project with a data component. TU Delft recommends using a [Project Drive](https://tudelft.topdesk.net/tas/public/ssp/content/detail/service?unid=846ebb16181c43b5836c063a917dd199&from=03aa10b9-c5aa-4e0a-80b1-28ee7ab383df) for storing research data. This solution enables secure data storage with controlled access for collaborators during the project lifecycle, while ensuring continued availability to TU Delft researchers after project completion. 
 
@@ -57,11 +57,15 @@ TU Delft offers various data storage options and solutions with varying access p
 
 Coming soon!
 
+-->
+
 ::: {.content-block}
 ::: {.features}
 
 ::: {.feature}
 ### {{< fa hard-drive >}} Request Project Drive space
+
+Update coming soon! 🛠️
 
 ::: {.learn-more}
 [Learn more »](./project_drive_request.md)
@@ -71,6 +75,8 @@ Coming soon!
 ::: {.feature}
 ### {{< fa server >}} Mount Project Drive on server
 
+Update coming soon! 🛠️
+
 ::: {.learn-more}
 [Learn more »](./project_drive_mounting.md)
 :::
@@ -78,6 +84,8 @@ Coming soon!
 
 ::: {.feature}
 ### {{< fa rotate >}} Sync Project Drive and SURFDrive with Unison
+
+Update coming soon! 🛠️
 
 ::: {.learn-more}
 [Learn more »](./sync_unison.md)
@@ -87,7 +95,11 @@ Coming soon!
 :::
 :::
 
+<!--
 
 ## Cloud
 
 Coming soon!
+
+
+-->
