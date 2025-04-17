@@ -4,7 +4,7 @@
 
 - Teams channel - [DCC Community](https://teams.microsoft.com/l/team/19%3ade0b543b375b4703a9537b030f220522%40thread.tacv2/conversations?groupId=cb8b8f86-0f54-4616-ad5c-94f0be874aec&tenantId=096e524d-6929-4030-8cd3-8ab42de0887b)
 
-- [Data Stewards](https://www.tudelft.nl/library/research-data-management/r/support/data-stewardship)
+- [Data Stewards](https://www.tudelft.nl/en/library/current-topics/research-data-management/r/support/data-stewardship/contact)
 
 - [Open Science Program](https://www.tudelft.nl/open-science)
 
