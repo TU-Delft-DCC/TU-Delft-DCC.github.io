@@ -1,7 +1,6 @@
 .grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-gap: 20px;
 } 
 
 .tool {
@@ -27,6 +26,9 @@
   .tool .btn-outline-light:hover {
     border-color: rgb(80,146,221);
     background-color: transparent;
+    text-decoration: underline;
+    text-decoration-color: rgb(80,146,221);
+    text-decoration-thickness: 2px;    
   }
   
   .tool a[role="button"] img {
@@ -35,4 +37,5 @@
     height: 100px;
     margin: auto;
     margin-bottom: 5px;
+    margin-top: 5px;
   }
