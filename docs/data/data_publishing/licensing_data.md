@@ -55,7 +55,7 @@ For more detailed information on data licenses, please visit the [4TU.ResearchDa
 - **CC BY:** Attribution required, allows sharing and adaptation with appropriate citations.
 - **CC SA:** Derivatives must have the same license
 - **CC NC:** Non-commercial use only.
-- **CC NC:** No derivatives allowed
+- **CC ND:** No derivatives allowed
 - **Restrictive License:** Limits usage, often prohibiting commercial use or modifications.
 
 :::{.callout-important appearance="simple" icon="false"}
