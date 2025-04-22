@@ -49,5 +49,5 @@ Offboarding and ownership are crucial for ensuring the continuity and integrity 
 
 :::{.callout-important appearance="simple" icon="false"}
 ### {{< fa exclamation >}} Read More
-- [Data Managment Offboarding by Harvard RDM](https://datamanagement.hms.harvard.edu/about/where-start/data-management-offboarding#:~:text=Offboarding%20Checklist%20Document)
+- [Data Management Offboarding by Harvard RDM](https://datamanagement.hms.harvard.edu/about/where-start/data-management-offboarding#:~:text=Offboarding%20Checklist%20Document)
 :::
