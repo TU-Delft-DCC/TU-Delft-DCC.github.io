@@ -1,6 +1,6 @@
 .grid {
     display: flex;
-    gap: 10px;
+    width: 100%;
 } 
 
 .tool {
@@ -12,12 +12,12 @@
   }
   
   .tool a[role="button"] {
-    width: 200px;  /* Reduced from 300px to 200px */
+    width: 210px;  /* Reduced from 300px to 200px */
     color: rgb(55, 58, 60);
     text-align: center;
     border: 3px solid rgb(222, 226, 230);
     border-radius: 10px;
-    margin-right: 20px;
+    margin-right: 10px;
     margin-bottom: 0;
     margin-top: 10px;
     font-size: 0.9em;  /* Slightly smaller font */
