@@ -16,11 +16,11 @@ These guides provide an starting point for Research Computing, Research Data, an
 ::: {.tool .g-col-lg-2}
 
 <a href="docs/infrastructure/getting_started.html" role="button" class="btn btn-outline-light">
-![](docs/img/gears-solid.svg)Computing Infrastructure
+![](docs/img/gear.svg)Computing Infrastructure
 </a>
 
 <a href="docs/data/getting_started.html" role="button" class="btn btn-outline-light">
-![](docs/img/database-solid.svg)Data Management
+![](docs/img/folder-regular.svg)Data Management
 </a>
 
 <a href="docs/software/getting_started.html" role="button" class="btn btn-outline-light">
@@ -28,7 +28,7 @@ These guides provide an starting point for Research Computing, Research Data, an
 </a>
 
 <a href="docs/resources/courses.html" role="button" class="btn btn-outline-light">
-![](docs/img/graduation-cap-solid.svg)Courses and Workshops
+![](docs/img/cap.svg)Courses and Workshops
 </a>
 
 :::
@@ -37,12 +37,12 @@ These guides provide an starting point for Research Computing, Research Data, an
 :::{.callout-tip} 
 ## **How to get involved**
 
-🙌 [**Join the community**](CONTRIBUTING.md)  
+<span style="filter:grayscale(100%);">🙌</span> [**Join the community**](CONTRIBUTING.md)  
 We welcome anyone to join us in improving our guides. To join, check out our [contributing guide](CONTRIBUTING.md).
 
-💬 [**Join the discussion**](https://github.com/TU-Delft-DCC/TU-Delft-DCC.github.io/discussions)  
+<span style="filter:grayscale(100%);">💬</span> [**Join the discussion**](https://github.com/TU-Delft-DCC/TU-Delft-DCC.github.io/discussions)  
 We have community discussions, talk about ideas, share general questions and develop solutions and feedback in our [community forum](https://github.com/TU-Delft-DCC/TU-Delft-DCC.github.io/discussions).
 
-💡 [**Open an issue**](https://github.com/TU-Delft-DCC/TU-Delft-DCC.github.io/issues/new/choose)  
+<span style="filter:grayscale(100%);">💡</span> [**Open an issue**](https://github.com/TU-Delft-DCC/TU-Delft-DCC.github.io/issues/new/choose)  
 We track topic requests and bug-reports via GitHub issues.
 :::

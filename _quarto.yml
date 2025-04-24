@@ -116,7 +116,7 @@ website:
               - text: Setting up a Gitlab runner for MATLAB
                 href: docs/infrastructure/gitlab/runner_matlab.md
         - text: <br>
-        - section: <span style="filter:grayscale(100%);">🗃️</span> **Data Management**
+        - section: <span style="filter:grayscale(100%);">📁</span> **Data Management**
           contents:
             - text: Getting started
               href: docs/data/getting_started.md
