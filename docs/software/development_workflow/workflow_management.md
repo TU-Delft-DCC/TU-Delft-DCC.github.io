@@ -25,7 +25,7 @@ title: Workflow management
 
 # Authors of the document, will not be parsed [manual entry]
 # Uncomment and populate the next lines accordingly
-author_1: Aysun urhan
+author_1: Aysun Urhan
 
 # Maintainers of the document, will not be parsed [manual entry]
 # Uncomment and populate the next lines accordingly
@@ -191,7 +191,7 @@ There are 3 main reasons why bioinformatics workflows are different than those d
 - [Snakemake documentation](https://snakemake.readthedocs.io/en/stable/): an extensive documentation that includes in depth tutorials and edge cases.
 - [An Introduction to Snakemake with R for Economics](https://lachlandeer.github.io/snakemake-econ-r-tutorial/index.html)
 - [Sustainable data analysis with Snakemake](https://doi.org/10.12688/f1000research.29032.2): A general overview article about Snakemake published in *F1000Research*.
-- [A review of bioinformatic pipeline frameworks.](https://doi.org/10.1093/bib/bbw020): A review article published in *Briefings in Bionformatics*, focused on Bionformatics pipelines.
+- [A review of bioinformatic pipeline frameworks.](https://doi.org/10.1093/bib/bbw020): A review article published in *Briefings in Bioinformatics*, focused on Bioinformatics pipelines.
 - [Airflow vs Snakemake](https://learn.flowdeploy.com/blog/airflow-vs-snakemake): A direct comparison between Airflow and Snakemake for data pipelines, while promoting FlowDeploy.
 - [Why are bioinformatics workflows different?](https://www.bsiranosian.com/bioinformatics/why-are-bioinformatics-workflows-different/)
 :::
