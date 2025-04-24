@@ -87,7 +87,7 @@ Managing your environments and dependencies.
 :::
 
 ::: {.feature}
-### {{< fa cubes >}} Workflow Management 
+### {{< fa diagram-successor >}} Workflow Management 
 Tools for writing and managing workflows.
 
 ::: {.learn-more}
