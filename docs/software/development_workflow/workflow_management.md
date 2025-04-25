@@ -90,7 +90,7 @@ Workflow managers come in many forms, from simple scripting approaches to full-f
 
 - **GUI-Based Workflow Managers** <br>
   These tools provide a visual interface for building and executing workflows, making them ideal for users with little or no programming background:
-  - [Galaxy](https://usegalaxy.org)
+  - [Galaxy](https://galaxyproject.org)
   - [KNIME](https://www.knime.com)
 
 ::: {.callout-tip appearance="simple" icon="true"}
