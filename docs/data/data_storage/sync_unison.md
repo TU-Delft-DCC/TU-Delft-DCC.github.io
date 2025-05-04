@@ -63,7 +63,7 @@ This documentation will help you create bi-directional backups between your loca
 
 ## Steps for Windows
 1. Unison requires .dll's from GTK+ for Windows Runtime Environment. [Download it]( https://sourceforge.net/projects/gtk-win/) and install it (to C:\Program Files (x86)\GTK2-Runtime).
-2. Install [Unison 2.48.4](https://www.irif.fr/~vouillon/unison/) and extract it in a folder.
+2. Install [Unison](https://www.cis.upenn.edu/~bcpierce/unison/) and extract it in a folder.
 3. Download [desktop client for SurfDrive](https://www.surf.nl/en/surfdrive-store-and-share-your-files-securely-in-the-cloud/downloads-for-surfdrive?dst=n1463)
 4. If not already there, mount H: Drive or Project Drive folder in your local machine from WebDAV link https://webdata.tudelft.nl/ 
 5. Navigate to Unison folder via command prompt and then enter "unison 2.48.4 GTK.exe" to run the Unison GUI.

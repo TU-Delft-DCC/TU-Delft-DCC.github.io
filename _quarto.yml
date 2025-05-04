@@ -199,6 +199,8 @@ website:
                       href: docs/software/development_workflow/envs_dependencies/matlab_envs_dependencies.md
                     - text: R
                       href: docs/software/development_workflow/envs_dependencies/r_envs_dependencies.md
+                - text: Workflow management
+                  href: docs/software/development_workflow/workflow_management.md                
                 - text: Branch management
                   href: docs/software/development_workflow/branch_management.qmd
                 - text: Collaboration
@@ -262,7 +264,7 @@ website:
             - section: "Software testing"
               href: docs/software/testing/index.md
               contents:
-                - test: Roadmap to testing
+                - text: Roadmap to testing
                   href: docs/software/testing/strategies.md
                 - text: Test types
                   href: docs/software/testing/test_types.md

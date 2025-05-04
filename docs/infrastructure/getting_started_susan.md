@@ -46,7 +46,7 @@ author_2: Jose Urra
 ---
 
 ```{note}
- The following content has been adapted from [Susan Branchett’s](https://www.tudelft.nl/staff/s.e.branchett/?cHash=245b0ce9092ea7f97c549dd5bda8b221) March 2020 blogpost:["How can the TU Delft support your research computing needs?"](https://sebranchett.github.io/TUDlife/2020/03/18/Support-for-Research-Computing.html)
+ The following content has been adapted from [Susan Branchett’s](https://www.tudelft.nl/en/staff/s.e.branchett/?cHash=78c4d8deff176afda691d465376b88e5) March 2020 blogpost:["How can the TU Delft support your research computing needs?"](https://sebranchett.github.io/TUDlife/2020/03/18/Support-for-Research-Computing.html)
 ```
 
 **The laptop can’t keep up with your research needs? Try these resources…**
@@ -150,7 +150,7 @@ By the time you read this blog, a lot of the links may no longer work and the in
 You can find me here [TU Delft](https://www.tudelft.nl/staff/s.e.branchett/) and here [LinkedIn](https://nl.linkedin.com/in/sebranchett/) and here [Twitter](https://twitter.com/sebranchett) and here [github](https://github.com/sebranchett).
 
 ## Acknowledgements
-This blog expresses the views of the author, [Susan Branchett](https://www.tudelft.nl/en/staff/s.e.branchett/?cHash=245b0ce9092ea7f97c549dd5bda8b221).
+This blog expresses the views of the author, [Susan Branchett](https://www.tudelft.nl/en/staff/s.e.branchett/?cHash=78c4d8deff176afda691d465376b88e5).
 
 The FIMs, Data Stewards and ICT-Innovation staff are kindly acknowledged for their help in collecting the information provided above.
 
