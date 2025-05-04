@@ -84,7 +84,7 @@ website:
       collapse-level: 2
       align: left
       contents:
-        - text: "Home"
+        - text: <span style="filter:grayscale(100%);">⌂</span> **Home**
           href: index.md
         - text: <br>
         - section: <span style="filter:grayscale(100%);">⚙️</span> **Computing Infrastructure**
