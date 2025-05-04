@@ -47,6 +47,11 @@ categories:
 
 In this guide we will briefly touch the necessary steps to create an R package. For a more detailed guide, please refer to the excellent [R packages book](https://r-pkgs.org/) written by Hadley Wickham and Jennifer Bryan. The book is available online for free and is licensed under the [CC BY-NC-ND 4.0](https://creativecommons.org/licenses/by-nc-nd/4.0/) license. The book covers everything from the basics of package creation to advanced topics. It provides clear explanations, practical examples, and helpful tips to guide you through the process of building high-quality R packages.
 
+:::{.callout-tip appearance="simple" icon="false"}
+## {{< fa lightbulb >}} Tip
+[The Carpentries](https://carpentries.org) has an R packaging lesson in a beta stage. You can find the lesson [here](https://carpentries-incubator.github.io/lesson-R-packaging/). The lesson is suitable as introductory material for those who are new to R packaging.
+:::
+
 ## Prerequisites
 
 You will need the following packages installed to develop R packages:
