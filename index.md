@@ -15,19 +15,19 @@ These guides provide a starting point for Research Computing, Research Data, and
 
 ::: {.tool .g-col-lg-2}
 
-<a href="docs/infrastructure/getting_started.html" role="button" class="btn btn-outline-light">
+<a href="docs/infrastructure/getting_started.md" role="button" class="btn btn-outline-light">
 ![](docs/img/gear.svg)**Computing Infrastructure**
 </a>
 
-<a href="docs/data/getting_started.html" role="button" class="btn btn-outline-light">
+<a href="docs/data/getting_started.md" role="button" class="btn btn-outline-light">
 ![](docs/img/folder-regular.svg)**Data Management**
 </a>
 
-<a href="docs/software/getting_started.html" role="button" class="btn btn-outline-light">
+<a href="docs/software/getting_started.md" role="button" class="btn btn-outline-light">
 ![](docs/img/laptop-code-solid.svg)**Research Software**
 </a>
 
-<a href="docs/resources/courses.html" role="button" class="btn btn-outline-light">
+<a href="docs/resources/courses.md" role="button" class="btn btn-outline-light">
 ![](docs/img/cap.svg)**Courses and Workshops**
 </a>
 
