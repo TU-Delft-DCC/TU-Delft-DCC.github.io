@@ -61,7 +61,9 @@ website:
       # - href: index.md
       #   text: Overview
       - href: index.md
-        text: Guides
+        text: <ins>Guides</ins>
+      - href: docs/resources/courses.md
+        text: <ins>Courses and Workshops</ins>
       - href: docs/tud-support/index.md
         text: Support Staff
       - href: docs/listing.md
