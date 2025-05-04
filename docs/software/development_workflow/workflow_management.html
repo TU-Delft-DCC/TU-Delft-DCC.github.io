@@ -6,8 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="dcterms.date" content="2025-04-24">
 
-<title>Set up an Apache web server</title>
+<title>Workflow management</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,68 +21,35 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-/* CSS for syntax highlighting */
-html { -webkit-text-size-adjust: 100%; }
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-  }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
-}
 </style>
 
 
-<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
-<script src="../../site_libs/clipboard/clipboard.min.js"></script>
-<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="../../site_libs/quarto-search/fuse.min.js"></script>
-<script src="../../site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="../../">
-<link href="../../docs/infrastructure/gitlab/gitlab_intro.html" rel="next">
-<link href="../../docs/infrastructure/VPS_SSL_Certs.html" rel="prev">
-<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="../../site_libs/quarto-html/popper.min.js"></script>
-<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="../../site_libs/quarto-html/anchor.min.js"></script>
-<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-6c63763c1ae9bd01aad4ba4dab843f5b.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark-6c63763c1ae9bd01aad4ba4dab843f5b.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-6c63763c1ae9bd01aad4ba4dab843f5b.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
-<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-7c7ce6bf4a386dd1c6674eda7a9c6b64.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../../site_libs/bootstrap/bootstrap-dark-66212d2b220d4d645035744573b559bf.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="../../site_libs/bootstrap/bootstrap-7c7ce6bf4a386dd1c6674eda7a9c6b64.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
-<script src="../../site_libs/quarto-contrib/iconify-2.1.0/iconify-icon.min.js"></script>
+<script src="../../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../../">
+<link href="../../../docs/software/development_workflow/branch_management.html" rel="next">
+<link href="../../../docs/software/development_workflow/envs_dependencies/r_envs_dependencies.html" rel="prev">
+<script src="../../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-6c63763c1ae9bd01aad4ba4dab843f5b.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-dark-6c63763c1ae9bd01aad4ba4dab843f5b.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-6c63763c1ae9bd01aad4ba4dab843f5b.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../../site_libs/bootstrap/bootstrap-7c7ce6bf4a386dd1c6674eda7a9c6b64.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../../site_libs/bootstrap/bootstrap-dark-66212d2b220d4d645035744573b559bf.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../../../site_libs/bootstrap/bootstrap-7c7ce6bf4a386dd1c6674eda7a9c6b64.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<script src="../../../site_libs/quarto-contrib/iconify-2.1.0/iconify-icon.min.js"></script>
+<link href="../../../site_libs/quarto-contrib/fontawesome6-1.2.0/all.min.css" rel="stylesheet">
+<link href="../../../site_libs/quarto-contrib/fontawesome6-1.2.0/latex-fontsize.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -112,7 +80,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <style>html{ scroll-behavior: smooth; }</style>
 
 
-<link rel="stylesheet" href="../../themes/custom.css">
+<link rel="stylesheet" href="../../../themes/custom.css">
 </head>
 
 <body class="nav-sidebar docked nav-fixed quarto-light"><script id="quarto-html-before-body" type="application/javascript">
@@ -283,8 +251,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a href="../../index.html" class="navbar-brand navbar-brand-logo">
-    <img src="../../docs/img/tud/logo_white_crop.png" alt="" class="navbar-logo">
+    <a href="../../../index.html" class="navbar-brand navbar-brand-logo">
+    <img src="../../../docs/img/tud/logo_white_crop.png" alt="" class="navbar-logo">
     </a>
   </div>
             <div id="quarto-search" class="" title="Search"></div>
@@ -294,15 +262,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link active" href="../../index.html" aria-current="page"> 
+    <a class="nav-link active" href="../../../index.html" aria-current="page"> 
 <span class="menu-text">Guides</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../docs/tud-support/index.html"> 
+    <a class="nav-link" href="../../../docs/tud-support/index.html"> 
 <span class="menu-text">Support Staff</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../docs/listing.html"> 
+    <a class="nav-link" href="../../../docs/listing.html"> 
 <span class="menu-text">References</span></a>
   </li>  
   <li class="nav-item dropdown ">
@@ -311,11 +279,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     </a>
     <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-community">    
         <li>
-    <a class="dropdown-item" href="../../CONTRIBUTING.html">
+    <a class="dropdown-item" href="../../../CONTRIBUTING.html">
  <span class="dropdown-text">Contributing</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../CODE_OF_CONDUCT.html">
+    <a class="dropdown-item" href="../../../CODE_OF_CONDUCT.html">
  <span class="dropdown-text">Code of Conduct</span></a>
   </li>  
         <li>
@@ -337,7 +305,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../docs/infrastructure/getting_started.html"><span style="filter:grayscale(100%);">⚙️</span> <strong>Computing Infrastructure</strong></a></li><li class="breadcrumb-item"><a href="../../docs/infrastructure/intro_servers.html">Remote servers</a></li><li class="breadcrumb-item"><a href="../../docs/infrastructure/apache_webserver.html">Setting up an Apache web server</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../../docs/software/getting_started.html"><span style="filter:grayscale(100%);">💻</span> <strong>Research Software</strong></a></li><li class="breadcrumb-item"><a href="../../../docs/software/development_workflow/index.html">Development workflow</a></li><li class="breadcrumb-item"><a href="../../../docs/software/development_workflow/workflow_management.html">Workflow management</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -354,7 +322,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../index.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Getting started</span></a>
   </div>
 </li>
@@ -372,46 +340,46 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../docs/infrastructure/getting_started.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../docs/infrastructure/getting_started.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Getting started</span></a>
   </div>
 </li>
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="../../docs/infrastructure/intro_servers.html" class="sidebar-item-text sidebar-link">
+            <a href="../../../docs/infrastructure/intro_servers.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Remote servers</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth2 show">  
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../docs/infrastructure/VPS_request.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../docs/infrastructure/VPS_request.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Request a VPS</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../docs/infrastructure/VPS_SSH.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../docs/infrastructure/VPS_SSH.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Configure SSH Tunneling</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../docs/infrastructure/moving_data.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../docs/infrastructure/moving_data.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Moving data to your server</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../docs/infrastructure/VPS_SSL_Certs.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../docs/infrastructure/VPS_SSL_Certs.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Configure SSL certificates</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../docs/infrastructure/apache_webserver.html" class="sidebar-item-text sidebar-link active">
+  <a href="../../../docs/infrastructure/apache_webserver.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Setting up an Apache web server</span></a>
   </div>
 </li>
@@ -419,7 +387,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </li>
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="../../docs/infrastructure/gitlab/gitlab_intro.html" class="sidebar-item-text sidebar-link">
+            <a href="../../../docs/infrastructure/gitlab/gitlab_intro.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">TU Delft GitLab</span></a>
           <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
@@ -428,25 +396,25 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../docs/infrastructure/gitlab/gitlab_groups.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../docs/infrastructure/gitlab/gitlab_groups.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Creating GitLab groups</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../docs/infrastructure/gitlab/gitlab_transfer_ownership.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../docs/infrastructure/gitlab/gitlab_transfer_ownership.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Transfer ownership of a GitLab repository</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../docs/infrastructure/gitlab/gitlab_docker.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../docs/infrastructure/gitlab/gitlab_docker.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Continuous Integration with GitLab</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../docs/infrastructure/gitlab/runner_matlab.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../docs/infrastructure/gitlab/runner_matlab.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Setting up a Gitlab runner for MATLAB</span></a>
   </div>
 </li>
@@ -468,19 +436,19 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../docs/data/getting_started.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../docs/data/getting_started.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Getting started</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../docs/data/fair_data/fair.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../docs/data/fair_data/fair.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">FAIR Data</span></a>
   </div>
 </li>
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="../../docs/data/planning/planning.html" class="sidebar-item-text sidebar-link">
+            <a href="../../../docs/data/planning/planning.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Planning</span></a>
           <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
@@ -489,13 +457,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../docs/data/planning/privacy_and_security.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../docs/data/planning/privacy_and_security.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Privacy and security</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../docs/data/planning/ethics.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../docs/data/planning/ethics.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Ethics</span></a>
   </div>
 </li>
@@ -503,7 +471,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </li>
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="../../docs/data/data_collection/collection.html" class="sidebar-item-text sidebar-link">
+            <a href="../../../docs/data/data_collection/collection.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Collection</span></a>
           <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
@@ -512,19 +480,19 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../docs/data/data_collection/data_conventions.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../docs/data/data_collection/data_conventions.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Data conventions</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../docs/data/data_collection/access_reuse.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../docs/data/data_collection/access_reuse.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Access and reuse</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../docs/data/data_collection/elab_rspace.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../docs/data/data_collection/elab_rspace.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">eLabJournal and RSpace</span></a>
   </div>
 </li>
@@ -532,13 +500,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../docs/data/data_processing.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../docs/data/data_processing.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Data processing</span></a>
   </div>
 </li>
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="../../docs/data/data_storage/storage.html" class="sidebar-item-text sidebar-link">
+            <a href="../../../docs/data/data_storage/storage.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Storage</span></a>
           <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
@@ -547,7 +515,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <ul id="quarto-sidebar-section-7" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="../../docs/data/data_storage/storage_options.html" class="sidebar-item-text sidebar-link">
+            <a href="../../../docs/data/data_storage/storage_options.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Storage options</span></a>
           <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
@@ -556,19 +524,19 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <ul id="" class="collapse list-unstyled sidebar-section depth3 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../docs/data/data_storage/project_drive_request.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../docs/data/data_storage/project_drive_request.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Request Project Drive space</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../docs/data/data_storage/project_drive_mounting.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../docs/data/data_storage/project_drive_mounting.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Mount Project Drive on server</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../docs/data/data_storage/sync_unison.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../docs/data/data_storage/sync_unison.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Sync Project Drive and SURFDrive with Unison</span></a>
   </div>
 </li>
@@ -576,19 +544,19 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../docs/data/data_storage/security.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../docs/data/data_storage/security.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Data security</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../docs/data/data_storage/sharing.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../docs/data/data_storage/sharing.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Data sharing</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../docs/data/data_storage/backup.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../docs/data/data_storage/backup.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Data backup</span></a>
   </div>
 </li>
@@ -596,7 +564,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </li>
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="../../docs/data/data_publishing/archival_publishing_index.html" class="sidebar-item-text sidebar-link">
+            <a href="../../../docs/data/data_publishing/archival_publishing_index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Archive and publish</span></a>
           <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
@@ -605,19 +573,19 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <ul id="quarto-sidebar-section-8" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../docs/data/data_publishing/licensing_data.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../docs/data/data_publishing/licensing_data.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Licensing</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../docs/data/data_publishing/publishing.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../docs/data/data_publishing/publishing.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Publishing data</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../docs/data/data_publishing/offboarding.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../docs/data/data_publishing/offboarding.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Offboarding and ownership</span></a>
   </div>
 </li>
@@ -639,13 +607,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <ul id="quarto-sidebar-section-9" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../docs/software/getting_started.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../docs/software/getting_started.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Getting started</span></a>
   </div>
 </li>
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="../../docs/software/fair_software/fair.html" class="sidebar-item-text sidebar-link">
+            <a href="../../../docs/software/fair_software/fair.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">FAIR Software</span></a>
           <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-10" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
@@ -654,13 +622,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <ul id="quarto-sidebar-section-10" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../docs/software/fair_software/checklist.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../docs/software/fair_software/checklist.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">FAIR checklist for research software</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../docs/software/fair_software/software_management_plan.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../docs/software/fair_software/software_management_plan.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Software management plan</span></a>
   </div>
 </li>
@@ -668,34 +636,34 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </li>
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="../../docs/software/development_workflow/index.html" class="sidebar-item-text sidebar-link">
+            <a href="../../../docs/software/development_workflow/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Development workflow</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-11" role="navigation" aria-expanded="false" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-11" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-11" class="collapse list-unstyled sidebar-section depth2 ">  
+      <ul id="quarto-sidebar-section-11" class="collapse list-unstyled sidebar-section depth2 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../docs/software/development_workflow/project_management.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../docs/software/development_workflow/project_management.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Project management</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../docs/software/development_workflow/project_structure.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../docs/software/development_workflow/project_structure.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Project structure</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../docs/software/development_workflow/reusing_projects.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../docs/software/development_workflow/reusing_projects.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Project templates and reusability</span></a>
   </div>
 </li>
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="../../docs/software/development_workflow/envs_dependencies.html" class="sidebar-item-text sidebar-link">
+            <a href="../../../docs/software/development_workflow/envs_dependencies.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Environments and dependencies</span></a>
           <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-12" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
@@ -704,19 +672,19 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <ul id="quarto-sidebar-section-12" class="collapse list-unstyled sidebar-section depth3 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../docs/software/development_workflow/envs_dependencies/python_envs_dependencies.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../docs/software/development_workflow/envs_dependencies/python_envs_dependencies.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Python</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../docs/software/development_workflow/envs_dependencies/matlab_envs_dependencies.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../docs/software/development_workflow/envs_dependencies/matlab_envs_dependencies.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">MATLAB</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../docs/software/development_workflow/envs_dependencies/r_envs_dependencies.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../docs/software/development_workflow/envs_dependencies/r_envs_dependencies.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">R</span></a>
   </div>
 </li>
@@ -724,19 +692,19 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../docs/software/development_workflow/workflow_management.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../docs/software/development_workflow/workflow_management.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Workflow management</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../docs/software/development_workflow/branch_management.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../docs/software/development_workflow/branch_management.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Branch management</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../docs/software/development_workflow/collaboration.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../docs/software/development_workflow/collaboration.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Collaboration</span></a>
   </div>
 </li>
@@ -744,7 +712,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </li>
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="../../docs/software/documentation/index.html" class="sidebar-item-text sidebar-link">
+            <a href="../../../docs/software/documentation/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Documentation</span></a>
           <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-13" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
@@ -753,25 +721,25 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <ul id="quarto-sidebar-section-13" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../docs/software/documentation/write_a_readme.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../docs/software/documentation/write_a_readme.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">README</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../docs/software/documentation/license.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../docs/software/documentation/license.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Software licenses</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../docs/software/documentation/citation.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../docs/software/documentation/citation.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">CITATION</span></a>
   </div>
 </li>
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="../../docs/software/documentation/code_documentation/code_documentation.html" class="sidebar-item-text sidebar-link">
+            <a href="../../../docs/software/documentation/code_documentation/code_documentation.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Code documentation</span></a>
           <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
@@ -780,19 +748,19 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <ul id="" class="collapse list-unstyled sidebar-section depth3 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../docs/software/documentation/code_documentation/python_documentation.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../docs/software/documentation/code_documentation/python_documentation.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Python projects</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../docs/software/documentation/code_documentation/matlab_documentation.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../docs/software/documentation/code_documentation/matlab_documentation.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">MATLAB projects</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../docs/software/documentation/code_documentation/r_documentation.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../docs/software/documentation/code_documentation/r_documentation.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">R projects</span></a>
   </div>
 </li>
@@ -800,25 +768,25 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../docs/software/documentation/tooling.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../docs/software/documentation/tooling.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Tooling</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../docs/software/documentation/hosting.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../docs/software/documentation/hosting.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Hosting</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../docs/software/documentation/contributing_guidelines.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../docs/software/documentation/contributing_guidelines.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Contributing guidelines</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../docs/software/documentation/code_of_conduct.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../docs/software/documentation/code_of_conduct.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Code of conduct</span></a>
   </div>
 </li>
@@ -826,7 +794,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </li>
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="../../docs/software/code_quality/index.html" class="sidebar-item-text sidebar-link">
+            <a href="../../../docs/software/code_quality/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Code quality</span></a>
           <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-14" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
@@ -835,19 +803,19 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <ul id="quarto-sidebar-section-14" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../docs/software/code_quality/code_style.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../docs/software/code_quality/code_style.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Code style</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../docs/software/code_quality/refactoring.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../docs/software/code_quality/refactoring.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Refactoring</span></a>
   </div>
 </li>
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="../../docs/software/code_quality/code_smells.html" class="sidebar-item-text sidebar-link">
+            <a href="../../../docs/software/code_quality/code_smells.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Code smells</span></a>
           <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-15" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
@@ -856,55 +824,55 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <ul id="quarto-sidebar-section-15" class="collapse list-unstyled sidebar-section depth3 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../docs/software/code_quality/code_smells/long_method.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../docs/software/code_quality/code_smells/long_method.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Long method</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../docs/software/code_quality/code_smells/large_class.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../docs/software/code_quality/code_smells/large_class.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Large classes</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../docs/software/code_quality/code_smells/duplication.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../docs/software/code_quality/code_smells/duplication.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Code duplication</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../docs/software/code_quality/code_smells/hardcoded_values.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../docs/software/code_quality/code_smells/hardcoded_values.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Hard-coded values</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../docs/software/code_quality/code_smells/deep_nesting.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../docs/software/code_quality/code_smells/deep_nesting.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Deep nesting</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../docs/software/code_quality/code_smells/many_arguments.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../docs/software/code_quality/code_smells/many_arguments.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Many inputs</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../docs/software/code_quality/code_smells/inappropriate_intimacy.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../docs/software/code_quality/code_smells/inappropriate_intimacy.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Inappropriate intimacy</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../docs/software/code_quality/code_smells/side_effects.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../docs/software/code_quality/code_smells/side_effects.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Side effects</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../docs/software/code_quality/code_smells/dead_code.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../docs/software/code_quality/code_smells/dead_code.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Commented out code</span></a>
   </div>
 </li>
@@ -912,7 +880,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../docs/software/code_quality/online_services.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../docs/software/code_quality/online_services.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Online services</span></a>
   </div>
 </li>
@@ -920,7 +888,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </li>
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="../../docs/software/testing/index.html" class="sidebar-item-text sidebar-link">
+            <a href="../../../docs/software/testing/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Software testing</span></a>
           <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-16" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
@@ -929,37 +897,37 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <ul id="quarto-sidebar-section-16" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../docs/software/testing/strategies.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../docs/software/testing/strategies.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Roadmap to testing</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../docs/software/testing/test_types.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../docs/software/testing/test_types.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Test types</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../docs/software/testing/intermediate.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../docs/software/testing/intermediate.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Advanced concepts</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../docs/software/testing/python.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../docs/software/testing/python.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Testing in Python</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../docs/software/testing/matlab.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../docs/software/testing/matlab.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Testing in MATLAB</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../docs/software/testing/r_test.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../docs/software/testing/r_test.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Testing in R</span></a>
   </div>
 </li>
@@ -967,7 +935,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </li>
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="../../docs/software/releases_archiving/index.html" class="sidebar-item-text sidebar-link">
+            <a href="../../../docs/software/releases_archiving/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Publish and share</span></a>
           <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-17" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
@@ -976,19 +944,19 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <ul id="quarto-sidebar-section-17" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../docs/software/releases_archiving/packaging.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../docs/software/releases_archiving/packaging.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Packaging</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../docs/software/releases_archiving/releases.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../docs/software/releases_archiving/releases.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Releases</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../docs/software/releases_archiving/archiving.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../docs/software/releases_archiving/archiving.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Archiving</span></a>
   </div>
 </li>
@@ -1010,13 +978,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <ul id="quarto-sidebar-section-18" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../docs/resources/courses.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../docs/resources/courses.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Courses and workshops</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../docs/resources/tools.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../docs/resources/tools.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">AI tooling</span></a>
   </div>
 </li>
@@ -1032,19 +1000,19 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#background" id="toc-background" class="nav-link active" data-scroll-target="#background">Background</a></li>
-  <li><a href="#what-this-documentation-will-help-achieve" id="toc-what-this-documentation-will-help-achieve" class="nav-link" data-scroll-target="#what-this-documentation-will-help-achieve">What this documentation will help achieve</a></li>
-  <li><a href="#prerequisites" id="toc-prerequisites" class="nav-link" data-scroll-target="#prerequisites">Prerequisites</a></li>
-  <li><a href="#tools-software" id="toc-tools-software" class="nav-link" data-scroll-target="#tools-software">Tools / Software</a></li>
-  <li><a href="#steps" id="toc-steps" class="nav-link" data-scroll-target="#steps">Steps</a>
+  <li><a href="#workflow-management-tools" id="toc-workflow-management-tools" class="nav-link active" data-scroll-target="#workflow-management-tools">Workflow management tools</a>
   <ul class="collapse">
-  <li><a href="#step-1.-request-a-virtual-private-server-from-tu-delft-ict" id="toc-step-1.-request-a-virtual-private-server-from-tu-delft-ict" class="nav-link" data-scroll-target="#step-1.-request-a-virtual-private-server-from-tu-delft-ict">Step 1. Request a Virtual Private Server from TU Delft ICT</a></li>
-  <li><a href="#step-2.-install-apache-web-server-on-the-vps" id="toc-step-2.-install-apache-web-server-on-the-vps" class="nav-link" data-scroll-target="#step-2.-install-apache-web-server-on-the-vps">Step 2. Install Apache web server on the VPS</a></li>
-  <li><a href="#step-3.-request-an-ssl-certificate-from-tu-delft-ict" id="toc-step-3.-request-an-ssl-certificate-from-tu-delft-ict" class="nav-link" data-scroll-target="#step-3.-request-an-ssl-certificate-from-tu-delft-ict">Step 3. Request an SSL certificate from TU Delft ICT</a></li>
-  <li><a href="#step-4.-configure-the-ssl-certificate-on-your-vps" id="toc-step-4.-configure-the-ssl-certificate-on-your-vps" class="nav-link" data-scroll-target="#step-4.-configure-the-ssl-certificate-on-your-vps">Step 4. Configure the SSL certificate on your VPS</a></li>
-  <li><a href="#step-5.-redirect-all-incoming-web-traffic-to-https" id="toc-step-5.-redirect-all-incoming-web-traffic-to-https" class="nav-link" data-scroll-target="#step-5.-redirect-all-incoming-web-traffic-to-https">Step 5. Redirect all incoming web traffic to HTTPS</a></li>
+  <li><a href="#some-examples-of-workflow-managers" id="toc-some-examples-of-workflow-managers" class="nav-link" data-scroll-target="#some-examples-of-workflow-managers">Some examples of workflow managers</a></li>
   </ul></li>
-  <li><a href="#notes-and-next-steps" id="toc-notes-and-next-steps" class="nav-link" data-scroll-target="#notes-and-next-steps">Notes and Next Steps</a></li>
+  <li><a href="#snakemake-a-python-esque-make" id="toc-snakemake-a-python-esque-make" class="nav-link" data-scroll-target="#snakemake-a-python-esque-make">Snakemake: a Python-esque make</a>
+  <ul class="collapse">
+  <li><a href="#noteworthy-features-of-snakemake" id="toc-noteworthy-features-of-snakemake" class="nav-link" data-scroll-target="#noteworthy-features-of-snakemake">Noteworthy features of Snakemake</a></li>
+  </ul></li>
+  <li><a href="#what-about-airflow" id="toc-what-about-airflow" class="nav-link" data-scroll-target="#what-about-airflow">What about Airflow?</a>
+  <ul class="collapse">
+  <li><a href="#a-summary-of-workflow-management-tools-discussed" id="toc-a-summary-of-workflow-management-tools-discussed" class="nav-link" data-scroll-target="#a-summary-of-workflow-management-tools-discussed">A summary of workflow management tools discussed</a></li>
+  <li><a href="#other-fields-that-already-use-or-can-benefit-from-snakemake" id="toc-other-fields-that-already-use-or-can-benefit-from-snakemake" class="nav-link" data-scroll-target="#other-fields-that-already-use-or-can-benefit-from-snakemake">Other fields that already use or can benefit from Snakemake</a></li>
+  </ul></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/TU-Delft-DCC/TU-Delft-DCC.github.io/issues/new/choose" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div></nav>
     </div>
@@ -1052,9 +1020,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <main class="content" id="quarto-document-content">
 
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../docs/infrastructure/getting_started.html"><span style="filter:grayscale(100%);">⚙️</span> <strong>Computing Infrastructure</strong></a></li><li class="breadcrumb-item"><a href="../../docs/infrastructure/intro_servers.html">Remote servers</a></li><li class="breadcrumb-item"><a href="../../docs/infrastructure/apache_webserver.html">Setting up an Apache web server</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../../docs/software/getting_started.html"><span style="filter:grayscale(100%);">💻</span> <strong>Research Software</strong></a></li><li class="breadcrumb-item"><a href="../../../docs/software/development_workflow/index.html">Development workflow</a></li><li class="breadcrumb-item"><a href="../../../docs/software/development_workflow/workflow_management.html">Workflow management</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">Set up an Apache web server</h1>
+<h1 class="title">Workflow management</h1>
 </div>
 
 
@@ -1062,6 +1030,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="quarto-title-meta">
 
     
+    <div>
+    <div class="quarto-title-meta-heading">Last reviewed</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">April 24, 2025</p>
+    </div>
+  </div>
   
     <div>
     <div class="quarto-title-meta-heading">Last modified</div>
@@ -1077,167 +1051,262 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<section id="background" class="level2">
-<h2 class="anchored" data-anchor-id="background">Background</h2>
-<p>If you want to host a website for your lab, or a web application of some sort, you are going to need to work with a webserver. Apache Web Server is a software package that turns a computer into an HTTP server. That is, it sends web pages – stored as HTML files – to people on the internet who request them. It is open-source software, which means it can be used and modified freely.</p>
-<blockquote class="blockquote">
-<p>The job of a web server is to serve websites on the internet. To achieve that goal, it acts as a middleman between the server and client machines. It pulls content from the server on each user request and delivers it to the web…..One of the most popular web servers, Apache allows you to run a secure website without too much of a headache. It is free and open-source, making it a frequent choice of solopreneurs and small businesses who want a presence on the web…..The way Apache HTTP server works is that it will accept requests from the web browser, such as Google Chrome and Microsoft Edge, and turn programming scripts into web pages which contents are visible by the visitors.</p>
-</blockquote>
-</section>
-<section id="what-this-documentation-will-help-achieve" class="level2">
-<h2 class="anchored" data-anchor-id="what-this-documentation-will-help-achieve">What this documentation will help achieve</h2>
-<p>This guide will help you install the Apache web server on Ubuntu Linux and configure a HTTPS secure connection for all incoming web traffic.</p>
-<p>The steps outlined below will ensure that all incoming web traffic to your server from port 80 (HTTP) will be redirected to port 443 (HTTPS). Port 80 is still accessible but redirects automatically. Redirection is configured after the SSL certificate is in place.</p>
-</section>
-<section id="prerequisites" class="level2">
-<h2 class="anchored" data-anchor-id="prerequisites">Prerequisites</h2>
+<p>Workflow management for research software is the practice of organizing series of tasks related to research, such as how scientific code, data and experiments are developed, executed and shared to ensure reproducible, collaborative and efficient research. An example research workflow might include data processing, model training or running simulations, as well as recording and publishing the results. The main objective is not only about making the code run successfully, but about making it <strong>reproducible</strong>, <strong>trackable</strong> and <strong>adaptable</strong>.</p>
+<div class="callout callout-style-simple callout-tip no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<i class="fa-solid fa-circle-question" aria-label="circle-question"></i> Why workflow management is important in research
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Research software development differs from traditional software development. Workflow management is crucial to:</p>
 <ul>
-<li>A system running Ubuntu Server</li>
-<li>An internet connection</li>
-<li>Access to a user account with sudo privileges</li>
+<li>Keep <strong>track</strong> of the development progress</li>
+<li>Ensure <strong>reproducible</strong> results</li>
+<li>Allow <strong>experiments</strong> with variable inputs or settings with minimal overhead</li>
+<li><strong>Reduce errors</strong> when running large or complex pipelines</li>
+<li>Facilitate <strong>collaborative research</strong> as others can easily join the project and understand its structure</li>
+</ul>
+</div>
+</div>
+<section id="workflow-management-tools" class="level2">
+<h2 class="anchored" data-anchor-id="workflow-management-tools">Workflow management tools</h2>
+<p>A workflow management tool (or simply a workflow manager) is a tool to help researchers build and manage computational workflows in a structured and reproducible way.</p>
+<ul>
+<li>These tools assist in defining, organizing, executing and tracking sequences of computational steps which are typically represented as a series of commands or scripts.</li>
+<li>By explicitly recording how data is processed, including the parameters and software environments used, workflow managers make it easier to replicate analyses, debug issues, and share work with collaborators.</li>
+<li>This level of structure helps avoid the all-too-common situation where a result is produced but the exact steps to generate it are lost or unclear.</li>
+</ul>
+<p>The <strong>bioinformatics</strong> field is a prominent example where workflow management has become essential since research relies heavily on pipelines to analyze genomic data; usually you perform a sequence of analyses on several files. Hence, there are many workflow managers niche to the field.</p>
+<ul>
+<li>But workflow management is a general need in many other applications involving data to support reproducible analysis.</li>
+<li><strong>Any research field</strong> involving data analysis, simulations, or modeling can benefit from adopting workflow managers.</li>
+<li>Fields like <strong>climate science</strong>, <strong>neuroscience</strong>, <strong>physics</strong>, and even <strong>digital humanities</strong> face similar challenges of organizing code, managing data dependencies, and ensuring that computational results are reproducible.</li>
+<li>As scientific computing becomes more complex and collaborative, workflow management is emerging as a foundational practice to support open science, reproducibility, and long-term maintainability of research software.</li>
+</ul>
+<section id="some-examples-of-workflow-managers" class="level3">
+<h3 class="anchored" data-anchor-id="some-examples-of-workflow-managers">Some examples of workflow managers</h3>
+<p>Workflow managers come in many forms, from simple scripting approaches to full-featured platforms with graphical user interfaces (GUIs) or domain-specific languages (DSLs). Here are some examples, categorized by interface and complexity:</p>
+<ul>
+<li><p><strong>Script-based or Classic Tools</strong> <br></p>
+<ul>
+<li>Shell scripts / Python scripts (<em>“good old scripts”</em>)</li>
+<li><a href="https://en.wikipedia.org/wiki/Make_(software)">Make</a> – a traditional build automation tool still used in research for its simplicity</li>
+</ul></li>
+<li><p><strong>Code-Based Workflow Managers</strong> <br> These systems are primarily driven by writing code in general-purpose languages (like Python), often using functions, decorators, or object-oriented patterns:</p>
+<ul>
+<li><a href="https://snakemake.readthedocs.io/en/stable/">Snakemake</a> (Python-based)</li>
+<li><a href="https://www.nextflow.io">Nextflow</a> (DSL based on Groovy)</li>
+<li><a href="https://airflow.apache.org">Airflow</a> (Python-based)</li>
+<li><a href="http://www.ruffus.org.uk">Ruffus</a>, <a href="https://scipipe.org">SciPipe</a>, and many others</li>
+</ul>
+<p>Snakemake, Nextflow, and Airflow are examples of DSL-based workflow managers that allow users to define workflows in a concise and human-readable syntax.</p></li>
+<li><p><strong>GUI-Based Workflow Managers</strong> <br> These tools provide a visual interface for building and executing workflows, making them ideal for users with little or no programming background:</p>
+<ul>
+<li><a href="https://galaxyproject.org">Galaxy</a></li>
+<li><a href="https://www.knime.com">KNIME</a></li>
+</ul></li>
+</ul>
+<div class="callout callout-style-simple callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Choose the right workflow manager for you
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul>
+<li><strong>DSLs</strong> can make workflows easier to read, document, and debug - especially for complex pipelines.</li>
+<li><strong>GUI-based workflow systems</strong>, with drag-and-drop interfaces and visual feedback, are often the most accessible option for beginners or interdisciplinary teams.</li>
+</ul>
+</div>
+</div>
+</section>
+</section>
+<section id="snakemake-a-python-esque-make" class="level2">
+<h2 class="anchored" data-anchor-id="snakemake-a-python-esque-make">Snakemake: a Python-esque make</h2>
+<p>Snakemake essentially builds on the implicit wildcard rule approach of Make, and it extends its capabilities by allowing the use of Python in a pipeline. Just like Make, its goal is to produce a set of requested output files based on predefined rules and steps.</p>
+<p>Although it was originally developed to create scalable bioinformatics and genomics pipelines, it can be generalized to other applications as well. It has become a standard tool in reproducible research; being cited more than <a href="https://home.cern/events/snakemake-hackathon-march-2025">12 times per week in 2023</a>, and has been used extensively in scientific publications in several different fields. Currently, it has <a href="https://anaconda.org/bioconda/snakemake">over one million downloads on Conda</a>.</p>
+<section id="noteworthy-features-of-snakemake" class="level3">
+<h3 class="anchored" data-anchor-id="noteworthy-features-of-snakemake">Noteworthy features of Snakemake</h3>
+<ul>
+<li>If Python and Make were to have a baby.</li>
+<li>You can describe workflows using a <strong>human readable</strong>, <strong>Python based language</strong>.</li>
+<li>It has <strong>built-in caching</strong>: if some steps of your workflow have already been run, Snakemake can recognize that and avoid rerunning the same analyses.</li>
+<li>It can accommodate both <strong>serial and parallel jobs</strong> since each “work units” in a workflow can be run independently of one another.</li>
+<li>It makes <strong>debugging</strong> easier since it keeps track of all files generated, you can identify which steps in your workflow have failed.</li>
+<li><strong>Integration with conda</strong> allows you to define conda environments for both the whole workflow and individual steps.</li>
+<li>You can incorporate tools or methods written in different scripting languages.</li>
+<li>Workflows can be scaled to <strong>server, cluster, grid and cloud environments</strong>, without modifying the workflow itself.</li>
+<li>It has an <strong>active user and developer base</strong> in mainly bioinformatics, and other scientific research community. It’s development is driven by the needs of scientists and their needs of reproducible research.</li>
 </ul>
 </section>
-<section id="tools-software" class="level2">
-<h2 class="anchored" data-anchor-id="tools-software">Tools / Software</h2>
+</section>
+<section id="what-about-airflow" class="level2">
+<h2 class="anchored" data-anchor-id="what-about-airflow">What about Airflow?</h2>
+<p>Airflow has become the go-to tool for building data pipelines, it started at Airbnb and was later adopted by the Apache project. Being backed by the Apache project, and a growing community of contributors, it’s the most popular workflow manager in software engineering.</p>
 <ul>
-<li>A command-line utility (Use keyboard shortcut CTRL-ALT-T, or right-click the desktop and left-click Open Terminal)</li>
-<li>A firewall – the default UFW (Uncomplicated Firewall) in Ubuntu is fine</li>
-<li>The APT package manager, installed by default on Ubuntu</li>
+<li><i class="fa-solid fa-thumbs-up" aria-label="thumbs-up"></i> <strong>Pros:</strong>
+<ul>
+<li>It is the most popular choice of workflow management system in software engineering.</li>
+<li>It has a bigger community support and hence more detailed tutorials and documentation.</li>
+<li>It offers more features, especially enterprise integrations used in industry.</li>
+<li>It integrates well with databases, APIs, cloud services and data warehouse like Google BigQuery, AWS S3 and Snowflake.</li>
+<li>It is more production friendly with built-in scheduling and monitoring features.</li>
+</ul></li>
+<li><i class="fa-solid fa-thumbs-down" aria-label="thumbs-down"></i> <strong>Cons:</strong>
+<ul>
+<li>It has a complex infrastructure and a steeper learning curve.</li>
+<li>It is more difficult to share pipelines between different environments.</li>
+<li>It lacks native support for conda.</li>
+<li>It has a more convoluted approach to parallel computation.</li>
+<li>It has limited support for HPC.</li>
+</ul></li>
 </ul>
+<section id="a-summary-of-workflow-management-tools-discussed" class="level3">
+<h3 class="anchored" data-anchor-id="a-summary-of-workflow-management-tools-discussed">A summary of workflow management tools discussed</h3>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 24%">
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+</colgroup>
+<thead>
+<tr class="header">
+<th><strong>Feature</strong></th>
+<th><strong>Snakemake</strong></th>
+<th><strong>Nextflow</strong></th>
+<th><strong>Airflow</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Target Audience</strong></td>
+<td>Scientists, researchers</td>
+<td>Bioinformaticians, scientists</td>
+<td>Data engineers, DevOps</td>
+</tr>
+<tr class="even">
+<td><strong>Ease of Use</strong></td>
+<td>High</td>
+<td>Medium</td>
+<td>Low</td>
+</tr>
+<tr class="odd">
+<td><strong>Reproducibility Focus</strong></td>
+<td>Strong</td>
+<td>Medium</td>
+<td>Low</td>
+</tr>
+<tr class="even">
+<td><strong>HPC Support</strong></td>
+<td>Excellent</td>
+<td>Good</td>
+<td>Minimal</td>
+</tr>
+<tr class="odd">
+<td><strong>Cloud-Native Support</strong></td>
+<td>Moderate</td>
+<td>Strong</td>
+<td>Excellent</td>
+</tr>
+<tr class="even">
+<td><strong>Community</strong></td>
+<td>Scientific community</td>
+<td>Bioinformatics</td>
+<td>Data engineering, cloud-native</td>
+</tr>
+</tbody>
+</table>
+<div class="callout callout-style-simple callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Snakemake vs Airflow
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Snakemake is a gentle introduction to workflow management for most researchers. Airflow produces well defined production level workflows that are meant to be run continually, and hence Snakemake is much better suited for the needs of researchers who want to run reproducible analyses for a particular project or an application.</p>
+</div>
+</div>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-4-contents" aria-controls="callout-4" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Sidenote: What is special about bioinformatics workflows?
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-4" class="callout-4-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>In bioinformatics, a workflow is a collection of steps run in series to transform raw data input to processed results (figures, insights, decisions etc.). Each step can be made up of different tools, programs, parameters, databases and dependencies/requirements.</p>
+<p>There are 3 main reasons why bioinformatics workflows are different than those data engineering workflows in the industry:</p>
+<p><strong>1. Differences in data type, shape and scale</strong></p>
+<ul>
+<li>Bioinformatics datasets are typically very large and come from various sources (DNA sequences, RNA sequencing, proteomics data, imaging data)</li>
+<li>Different data types have different structures and different preprocessing/analysis needs</li>
+</ul>
+<p><strong>2. Differences in programs and tooling</strong></p>
+<ul>
+<li>Bioinformatics pipelines often involve numerous steps with intricate dependencies</li>
+<li>Different steps use different, specialized tools</li>
+<li>Open source, highly specialized tools that are not meant to be integrated natively, there are no software packages or standalone platforms to run analyses from start to finish</li>
+<li>New algorithms, tools and reference databases are updated frequently, researchers need flexible pipelines that can be adapted easily</li>
+<li>Many bioinformatics tasks and tools are computationally expensive (genome assembly, alignment, sequence search) and require HPC</li>
+</ul>
+<p><strong>3. Community support behind bioinformatics workflow managers and open source software</strong></p>
+<ul>
+<li>Field of bioinformatics has a strong emphasis on open science, reproducible and transparent research. All of which are achieved using workflow managers</li>
+</ul>
+</div>
+</div>
+</div>
 </section>
-<section id="steps" class="level2">
-<h2 class="anchored" data-anchor-id="steps">Steps</h2>
-<ol type="1">
-<li>Request a Virtual Private Server (VPS) from TU Delft ICT</li>
-<li>Install Apache web server on the VPS</li>
-<li>Request an SSL certificate from TU Delft ICT</li>
-<li>Configure the SSL certificate file on your VPS</li>
-<li>Redirect all incoming web traffic to HTTPS</li>
-</ol>
-<section id="step-1.-request-a-virtual-private-server-from-tu-delft-ict" class="level3">
-<h3 class="anchored" data-anchor-id="step-1.-request-a-virtual-private-server-from-tu-delft-ict">Step 1. Request a Virtual Private Server from TU Delft ICT</h3>
-<p>You can make a request for a server via the <a href="https://tudelft.topdesk.net/tas/public/ssp/content/serviceflow?unid=418c986f186d4934848dc2712039ed34">TopDesk self service portal</a>. If you would like more information, documentation can be found here ___</p>
-<p><em>Note:</em> to run a web server, ports 80 (HTTP) and 443 (HTTPS) must be opened.</p>
-</section>
-<section id="step-2.-install-apache-web-server-on-the-vps" class="level3">
-<h3 class="anchored" data-anchor-id="step-2.-install-apache-web-server-on-the-vps">Step 2. Install Apache web server on the VPS</h3>
-<p><a href="https://ubuntu.com/tutorials/install-and-configure-apache#1-overview">Apache</a> is an open source web server that’s available for Linux servers. It is one of the most commonly used softwares for creating a web server. And, it’s free!</p>
-<p><a href="https://phoenixnap.com/kb/install-apache-ubuntu">Installing Apache</a> can be done using commands in the terminal. These instructions are documented with further information at the link in the beginning of this paragraph. First, make sure your local software packages are up to date by running:</p>
-<p><code>sudo apt-get update</code></p>
-<p>When that has finished, install the Apache package using:</p>
-<p><code>sudo apt-get install apache2</code></p>
-<p>The system prompts for confirmation – do so, and allow the system to complete the installation.</p>
-<p>Find the IP address of your VPS by running:</p>
-<p><code>hostname -I | awk '{print $1}'</code></p>
-<p>Use this IP address to enter the following command in your terminal, replacing local.server.ip with the actual IP address of your server:</p>
-<p><code>http://local.server.ip</code></p>
-<p>If the installation was completed successfully, you should see the Apache2 Ubuntu Default page in your web browser.</p>
-<p>Although the Apache installation process is complete, there is one more additional step. Configure the default UFW firewall to allow traffic on port 80.</p>
-<p>Start by displaying available app profiles on UFW:</p>
-<p><code>sudo ufw show app list</code></p>
-<p>Use the following command to allow normal web traffic on port 80:</p>
-<p><code>sudo ufw allow 'Apache Full'</code></p>
-<p>Verify the changes by checking UFW status:</p>
-<p><code>sudo ufw status</code></p>
-<p>At this point, your Apache web server is serving over HTTP, which is a good first step! But remember, we need to secure the connection over HTTPS. So, we still have a few more steps.</p>
-</section>
-<section id="step-3.-request-an-ssl-certificate-from-tu-delft-ict" class="level3">
-<h3 class="anchored" data-anchor-id="step-3.-request-an-ssl-certificate-from-tu-delft-ict">Step 3. Request an SSL certificate from TU Delft ICT</h3>
-<p>Detailed directions on how to do this can be found here ___</p>
-<p>You can create the .csr file directly on the VPS by first create a directory on /etc/apache2 called ssl:</p>
-<p><code>mkdir /etc/apache2/ssl</code></p>
-<p>Then, generate a CSR and private key using:</p>
-<p><code>openssl req -x509 -newkey rsa:4096 -keyout &lt;server_domain&gt;.key -out &lt;server_domain&gt;.csr -nodes</code></p>
-<p>After successfully running the command it will ask for the information of certificate request. Complete it using the appropriate information and then <server_domain>.key and <server_domain>.csr files will be generated.</server_domain></server_domain></p>
-<p>The .csr file must be sent to TU Delft ICT using this TopDesk form: <a href="https://tudelft.topdesk.net/tas/public/ssp/content/serviceflow?unid=62aeef08314247f3aba7ff2297d011da">TOPdesk SSL certificate server request</a>.</p>
-</section>
-<section id="step-4.-configure-the-ssl-certificate-on-your-vps" class="level3">
-<h3 class="anchored" data-anchor-id="step-4.-configure-the-ssl-certificate-on-your-vps">Step 4. Configure the SSL certificate on your VPS</h3>
-<p>When you receive SSL certificate files from the signing authority via TU Delft ICT, you need to put the information from this certificate in a specific place on your VPS in order to securely expose the web server. These instructions come from here: - <a href="https://hostadvice.com/how-to/configure-apache-with-tls-ssl-certificate-on-ubuntu-18/">Configure ssl for https</a></p>
-<p>Navigate to the default Apache site config directory using the following command:</p>
-<p><code>sudo nano /etc/apache2/sites-available/default-ssl.conf</code></p>
-<p>This config file tells the server where to find SSL certificate. It should look like this:</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>                <span class="op">&lt;</span>IfModule <span class="ex">mod_ssl.c</span><span class="op">&gt;</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>                <span class="op">&lt;</span>VirtualHost <span class="ex">_default_:443</span><span class="op">&gt;</span></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>                <span class="ex">ServerAdmin</span> webmaster@localhost</span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>                <span class="ex">DocumentRoot</span> /var/www/html</span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>                <span class="ex">ErrorLog</span> <span class="va">${APACHE_LOG_DIR}</span>/error.log</span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>                <span class="ex">CustomLog</span> <span class="va">${APACHE_LOG_DIR}</span>/access.log combined</span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>                <span class="ex">SSLEngine</span> on</span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>                <span class="ex">SSLCertificateFile</span>    /etc/ssl/certs/ssl-cert-snakeoil.pem</span>
-<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>                <span class="ex">SSLCertificateKeyFile</span> /etc/ssl/private/ssl-cert-snakeoil.key</span>
-<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>                <span class="op">&lt;</span>FilesMatch <span class="st">".(cgi|shtml|phtml|php)$"</span><span class="op">&gt;</span></span>
-<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>                <span class="ex">SSLOptions</span> +StdEnvVars</span>
-<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>                <span class="op">&lt;</span>/FilesMatch<span class="op">&gt;</span></span>
-<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>                <span class="op">&lt;</span>Directory <span class="ex">/usr/lib/cgi-bin</span><span class="op">&gt;</span></span>
-<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>                <span class="ex">SSLOptions</span> +StdEnvVars</span>
-<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>                <span class="op">&lt;</span>/Directory<span class="op">&gt;</span></span>
-<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a>                <span class="op">&lt;</span>/VirtualHost<span class="op">&gt;</span></span>
-<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a>                <span class="op">&lt;</span>/IfModule<span class="op">&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>Edit this: <code>ServerAdmin webmaster@localhost</code> to this: <code>ServerAdmin email@example.net</code></p>
-<p>Add this right below the ServerAdmin line:</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>                <span class="ex">ServerName</span> ADD_YOUR_IP_OR_DOMAIN_NAME_HERE</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>Now, edit these lines with our certificate location:</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>                <span class="ex">SSLCertificateFile</span>    /etc/apache2/ssl/apache.crt</span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>                <span class="ex">SSLCertificateKeyFile</span> /etc/apache2/ssl/apache.key</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>Our file should look like this:</p>
-<div class="sourceCode" id="cb4"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>                <span class="op">&lt;</span>IfModule <span class="ex">mod_ssl.c</span><span class="op">&gt;</span></span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>                <span class="op">&lt;</span>VirtualHost <span class="ex">_default_:443</span><span class="op">&gt;</span></span>
-<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>                <span class="ex">ServerAdmin</span> email@example.net</span>
-<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>                <span class="ex">ServerName</span> 203.0.113.122</span>
-<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>                <span class="ex">DocumentRoot</span> /var/www/html</span>
-<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>                <span class="ex">ErrorLog</span> <span class="va">${APACHE_LOG_DIR}</span>/error.log</span>
-<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a>                <span class="ex">CustomLog</span> <span class="va">${APACHE_LOG_DIR}</span>/access.log combined</span>
-<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a>                <span class="ex">SSLEngine</span> on</span>
-<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a>                <span class="ex">SSLCertificateFile</span>    /etc/apache2/ssl/apache.crt</span>
-<span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a>                <span class="ex">SSLCertificateKeyFile</span> /etc/apache2/ssl/apache.key</span>
-<span id="cb4-15"><a href="#cb4-15" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-16"><a href="#cb4-16" aria-hidden="true" tabindex="-1"></a>                <span class="op">&lt;</span>FilesMatch <span class="st">".(cgi|shtml|phtml|php)$"</span><span class="op">&gt;</span></span>
-<span id="cb4-17"><a href="#cb4-17" aria-hidden="true" tabindex="-1"></a>                <span class="ex">SSLOptions</span> +StdEnvVars</span>
-<span id="cb4-18"><a href="#cb4-18" aria-hidden="true" tabindex="-1"></a>                <span class="op">&lt;</span>/FilesMatch<span class="op">&gt;</span></span>
-<span id="cb4-19"><a href="#cb4-19" aria-hidden="true" tabindex="-1"></a>                <span class="op">&lt;</span>Directory <span class="ex">/usr/lib/cgi-bin</span><span class="op">&gt;</span></span>
-<span id="cb4-20"><a href="#cb4-20" aria-hidden="true" tabindex="-1"></a>                <span class="ex">SSLOptions</span> +StdEnvVars</span>
-<span id="cb4-21"><a href="#cb4-21" aria-hidden="true" tabindex="-1"></a>                <span class="op">&lt;</span>/Directory<span class="op">&gt;</span></span>
-<span id="cb4-22"><a href="#cb4-22" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-23"><a href="#cb4-23" aria-hidden="true" tabindex="-1"></a>                <span class="op">&lt;</span>/VirtualHost<span class="op">&gt;</span></span>
-<span id="cb4-24"><a href="#cb4-24" aria-hidden="true" tabindex="-1"></a>                <span class="op">&lt;</span>/IfModule<span class="op">&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p><strong>Save the file</strong>, and close it.</p>
-<p><em>Note: If you are using something other than Apache Web Server (like, nginx for example) you can also create the SSL config file from scratch. Each application will have different syntax that should be used in this file. You can see how the syntax is set up by using <a href="https://ssl-config.mozilla.org/#server=apache&amp;version=2.4.41&amp;config=intermediate&amp;openssl=1.1.1d&amp;guideline=5.6">this tool</a></em></p>
-<p>Enable the SSL module using following command:</p>
-<p><code>sudo a2enmod ssl</code></p>
-<p>Now enable the site we have just edited:</p>
-<p><code>sudo a2ensite default-ssl.conf</code></p>
-<p>Restart Apache:</p>
-<p><code>sudo service apache2 restart</code></p>
-<p>The website is now secure, access it using following address in the browser</p>
-<p><code>https://YOUR_SERVER_IP</code></p>
-</section>
-<section id="step-5.-redirect-all-incoming-web-traffic-to-https" class="level3">
-<h3 class="anchored" data-anchor-id="step-5.-redirect-all-incoming-web-traffic-to-https">Step 5. Redirect all incoming web traffic to HTTPS</h3>
-<p><code>sudo a2enmod proxy</code></p>
-<p><code>sudo a2enmod proxy_http</code></p>
-<p><code>sudo a2enmod rewrite</code></p>
-<p>Add in apache conf:</p>
-<div class="sourceCode" id="cb5"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>                <span class="ex">ProxyPass</span> /thredds http://localhost:8080/thredds</span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>                <span class="ex">ProxyPassReverse</span> /thredds http://localhost:8080/thredds</span>
-<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>                <span class="ex">RedirectMatch</span> ^/$ /thredds/</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</section>
-</section>
-<section id="notes-and-next-steps" class="level2">
-<h2 class="anchored" data-anchor-id="notes-and-next-steps">Notes and Next Steps</h2>
-<p>Test that your web server is secured by HTTPS by typing the Fully Qualified Domain Name (FQDN) of your server in a web browser. If HTTPS is enabled, the URL should begin with it - if it still says HTTP, something will need to be reconfigured.</p>
+<section id="other-fields-that-already-use-or-can-benefit-from-snakemake" class="level3">
+<h3 class="anchored" data-anchor-id="other-fields-that-already-use-or-can-benefit-from-snakemake">Other fields that already use or can benefit from Snakemake</h3>
+<ul>
+<li><a href="https://waterdata.usgs.gov/blog/snakemake-for-ml-experiments">Large, parallel deep learning experiments using Snakemake</a>: The USGS demonstrates how Snakemake can be used to perform deep learning experiments on environmental data.</li>
+<li><a href="https://archive.fosdem.org/2024/events/attachments/fosdem-2024-3415-workflow-managers-in-high-energy-physics-enhancing-analyses-with-snakemake/slides/22450/FOSDEM-HEP-workflow-managers_hcQO9j3.pdf">Workflow managers in high-energy physics - Enhancing analyses with Snakemake: Physics and high-energy particle research:</a> Large scale HEP experiments with complex dependencies on cloud.</li>
+<li><a href="https://www.nature.com/articles/s41598-024-77615-z">Neuroscience:</a> Using Snakemake to process and analyze MRI data.</li>
+<li><a href="https://doi.org/10.1111/2041-210X.14113">Ecology and evolutionary research:</a> Article outlining the specific benefits of using Snakemake to manage data analysis workflows in ecology and evolutionary research, and demonstrating its use through case studies.</li>
+<li>Earth and Climate Science: Preprocessing large datasets from climate models (NetCDF format) for regional climate projections.</li>
+<li>Automating preprocessing EEG/MEG data, MRI and fMRI data analysis and predictive modeling for thousands of neuroimaging files.</li>
+<li>Chemistry: Running large-scale molecular dynamics simulations with different parameter combinations and collecting results in a reproducible framework.</li>
+</ul>
+<div class="callout callout-style-simple callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<i class="fa-solid fa-signs-post" aria-label="signs-post"></i> Further reading
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul>
+<li><a href="https://github.com/pditommaso/awesome-pipeline">Awesome pipeline repository</a>: a curated list of tools for creating pipelines.</li>
+<li><a href="https://snakemake.readthedocs.io/en/stable/">Snakemake documentation</a>: an extensive documentation that includes in depth tutorials and edge cases.</li>
+<li><a href="https://lachlandeer.github.io/snakemake-econ-r-tutorial/index.html">An Introduction to Snakemake with R for Economics</a></li>
+<li><a href="https://doi.org/10.12688/f1000research.29032.2">Sustainable data analysis with Snakemake</a>: A general overview article about Snakemake published in <em>F1000Research</em>.</li>
+<li><a href="https://doi.org/10.1093/bib/bbw020">A review of bioinformatic pipeline frameworks.</a>: A review article published in <em>Briefings in Bioinformatics</em>, focused on Bioinformatics pipelines.</li>
+<li><a href="https://learn.flowdeploy.com/blog/airflow-vs-snakemake">Airflow vs Snakemake</a>: A direct comparison between Airflow and Snakemake for data pipelines, while promoting FlowDeploy.</li>
+<li><a href="https://www.bsiranosian.com/bioinformatics/why-are-bioinformatics-workflows-different/">Why are bioinformatics workflows different?</a></li>
+</ul>
+</div>
+</div>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->
@@ -1655,13 +1724,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../../docs/infrastructure/VPS_SSL_Certs.html" class="pagination-link" aria-label="Configure SSL certificates">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Configure SSL certificates</span>
+      <a href="../../../docs/software/development_workflow/envs_dependencies/r_envs_dependencies.html" class="pagination-link" aria-label="R">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">R</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../../docs/infrastructure/gitlab/gitlab_intro.html" class="pagination-link" aria-label="TU Delft GitLab">
-        <span class="nav-page-text">TU Delft GitLab</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../../../docs/software/development_workflow/branch_management.html" class="pagination-link" aria-label="Branch management">
+        <span class="nav-page-text">Branch management</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
@@ -1685,5 +1754,5 @@ If you find this content useful, please consider giving us a star on GitHub.
 
 
 
-<script src="../../site_libs/quarto-html/zenscroll-min.js"></script>
+<script src="../../../site_libs/quarto-html/zenscroll-min.js"></script>
 </body></html>

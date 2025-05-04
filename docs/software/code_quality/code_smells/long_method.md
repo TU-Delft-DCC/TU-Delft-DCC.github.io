@@ -142,9 +142,10 @@ def read_from_csv(filepath: str): pass
 ```
 
 ## Key takeaways
+
 - Breaking a long method into smaller, well-named helper functions makes the code easier to read and understand.
-– Each function now has a single responsibility, reducing complexity and making future modifications more manageable.
-– With isolated functions, individual components can be tested independently, leading to more reliable and maintainable code.
+- Each function now has a single responsibility, reducing complexity and making future modifications more manageable.
+- With isolated functions, individual components can be tested independently, leading to more reliable and maintainable code.
 
 {{< fa thumbs-up >}} By breaking the long method into smaller helper functions, we improve the overall structure and maintainability of the code.
 
