@@ -288,15 +288,17 @@ website:
                   href: docs/software/releases_archiving/releases.md
                 - text: Archiving
                   href: docs/software/releases_archiving/archiving.md
-        - text: <br>
-        - section: <span style="filter:grayscale(100%);">📖</span> **Resources**
-          contents:
-            - text: Courses and workshops
-              href: docs/resources/courses.md
+            - text: Tooling
+              href: docs/software/tools/tools.md
+#        - text: <br>
+#        - section: <span style="filter:grayscale(100%);">📖</span> **Resources**
+#          contents:
+#            - text: Courses and workshops
+#              href: docs/resources/courses.md
 #            - text: Research Software Curriculum
 #              href: docs/resources/curriculum.md
-            - text: AI tooling
-              href: docs/resources/tools.md
+#            - text: AI tooling
+#              href: docs/resources/tools.md
 
     # - title: "TU Delft Support"
     #   contents: 
