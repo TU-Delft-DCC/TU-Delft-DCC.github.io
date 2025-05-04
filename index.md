@@ -35,14 +35,14 @@ These guides provide a starting point for Research Computing, Research Data, and
 :::
 
 :::{.callout-tip appearance="simple" icon="false"}
-## {{< fa lightbulb >}} **How to get involved**
+## {{< fa lightbulb >}} **Want to get involved?**
 ---
-<span style="filter:grayscale(100%);">🙌</span> [**Join the community**](CONTRIBUTING.md)  
-We welcome anyone to join us in improving our guides. To join, check out our [contributing guide](CONTRIBUTING.md).
+<span style="color: #00A6D6;">{{< fa user-group >}}</span> [**Join the community**](CONTRIBUTING.md)
+We welcome anyone to join us in improving our guides! Find out how in our [contributing guide](CONTRIBUTING.md).
 
-<span style="filter:grayscale(100%);">💬</span> [**Join the discussion**](https://github.com/TU-Delft-DCC/TU-Delft-DCC.github.io/discussions)  
-We have community discussions, talk about ideas, share general questions and develop solutions and feedback in our [community forum](https://github.com/TU-Delft-DCC/TU-Delft-DCC.github.io/discussions).
+<span style="color: #00A6D6;">{{< fa comments >}}</span> [**Join the discussion**](https://github.com/TU-Delft-DCC/TU-Delft-DCC.github.io/discussions)  
+We welcome community discussions, ideas, and general questions to develop solutions and receive feedback in our [community forum](https://github.com/TU-Delft-DCC/TU-Delft-DCC.github.io/discussions).
 
-<span style="filter:grayscale(100%);">💡</span> [**Open an issue**](https://github.com/TU-Delft-DCC/TU-Delft-DCC.github.io/issues/new/choose)  
+<span style="color: #00A6D6;">{{< fa circle-info >}}</span> [**Open an issue**](https://github.com/TU-Delft-DCC/TU-Delft-DCC.github.io/issues/new/choose)  
 We track topic requests and bug-reports via GitHub issues.
 :::
