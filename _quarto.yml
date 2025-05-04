@@ -87,7 +87,7 @@ website:
         - text: <span style="filter:grayscale(100%);">⌂</span> **Home**
           href: index.md
         - text: <br>
-        - section: <span style="filter:grayscale(100%);">⚙️</span> **Computing Infrastructure**
+        - section: "![](/docs/img/gear.svg){height=1em style='filter: invert(0.5) sepia(1) saturate(5) hue-rotate(175deg)'} **Computing Infrastructure**"
           contents:
           - text: Getting started
             href: docs/infrastructure/getting_started.md
@@ -116,7 +116,7 @@ website:
               - text: Setting up a Gitlab runner for MATLAB
                 href: docs/infrastructure/gitlab/runner_matlab.md
         - text: <br>
-        - section: <span style="filter:grayscale(100%);">📁</span> **Data Management**
+        - section: "![](/docs/img/folder-regular.svg){height=1em style='filter: invert(0.5) sepia(1) saturate(5) hue-rotate(175deg)'} **Data Management**"
           contents:
             - text: Getting started
               href: docs/data/getting_started.md
@@ -168,7 +168,7 @@ website:
                 - text: Offboarding and ownership
                   href: docs/data/data_publishing/offboarding.md
         - text: <br>
-        - section: <span style="filter:grayscale(100%);">💻</span> **Research Software**
+        - section: "![](/docs/img/laptop-code-solid.svg){height=1em style='filter: invert(0.5) sepia(1) saturate(5) hue-rotate(175deg)'} **Research Software**"
           contents:
             - text: Getting started
               href: docs/software/getting_started.md
