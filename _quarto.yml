@@ -262,7 +262,7 @@ website:
             - section: "Software testing"
               href: docs/software/testing/index.md
               contents:
-                - test: Roadmap to testing
+                - text: Roadmap to testing
                   href: docs/software/testing/strategies.md
                 - text: Test types
                   href: docs/software/testing/test_types.md
