@@ -49,9 +49,7 @@ website:
     center: |
       &copy; 2024 [TU Delft Digital Competence Centre](https://dcc.tudelft.nl). Licensed under [CC-BY-4.0](https://creativecommons.org/licenses/by/4.0/).
     right: 
-          If you find this content useful, please consider giving us a star on GitHub.
-          <script async defer src="https://buttons.github.io/buttons.js"></script>
-          <a class="github-button" href="https://github.com/TU-Delft-DCC/TU-Delft-DCC.github.io" data-icon="star" data-size="small" data-show-count="false" aria-label="Star TU-Delft-DCC/TU-Delft-DCC.github.io on GitHub">Star</a>
+          If you find this content useful, please consider giving us a [{{<fa regular star>}} on GitHub](https://github.com/TU-Delft-DCC/TU-Delft-DCC.github.io).
     border: false
   bread-crumbs: true # Breadcrumbs in Quarto websites are a type of secondary navigation that shows the user's current location within the site hierarchy
   navbar:
