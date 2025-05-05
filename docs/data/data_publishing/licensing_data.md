@@ -25,23 +25,22 @@ title: Data licensing
 
 # Authors of the document, will not be parsed [manual entry]
 # Uncomment and populate the next lines accordingly
-#author_1: Name Surname
-#author_2:
+author_1: Elviss Dvinskis
+author_2: Selin Kubilay
 
 # Maintainers of the document, will not be parsed [manual entry]
 # Uncomment and populate the next lines accordingly
-#maintainer_1: Name Surname
+maintainer_1: Elviss Dvinskis
 #maintainer_2:
 
 # To whom reach out regarding the document, will not be parsed [manual entry]
 # Uncomment and populate the next line accordingly
-#corresponding: Name Surname
+corresponding: Elviss Dvinskis
 
 # Meaningful keywords, newline separated [manual entry]
 # Uncomment and populate the next line and list accordingly
-#categories: 
-# - 
-# - 
+categories: 
+ - licenses
 
 ---
 
