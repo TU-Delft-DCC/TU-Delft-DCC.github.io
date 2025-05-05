@@ -45,7 +45,14 @@ categories:
  - pyproject.toml
 ---
 
-By turning your code into a package and hosting it on a platform like PyPI (Python Package Index), you enhance the quality and sustainability of your software, promote reuse and embrace contributions from external collaborators. 
+By turning your code into a package and hosting it on a platform like PyPI (Python Package Index), you enhance the quality and sustainability of your software, promote reuse and embrace contributions from external collaborators.
+
+:::{.callout-tip appearance="simple" icon="false"}
+## {{< fa lightbulb >}} Comprehensive introduction to Python packaging
+
+- If you are new to Python packaging, please start with the [Python Packaging User Guide](https://packaging.python.org/en/latest/tutorials/packaging-projects/) and the [Real Python packaging guide](https://realpython.com/pypi-publish-python-package/). 
+- This guide is intended for those who have some experience with Python packages and focuses on the essentials of `pyproject.toml`.
+:::
 
 ## `pyproject.toml`
 
@@ -310,7 +317,6 @@ It is possible that you might have `lib/` and `build/` directories in your proje
 :::{.callout-note appearance="simple" icon="false"}
 ## {{< fa signs-post >}} Learn more
 
-- [Packaging projects](https://packaging.python.org/en/latest/tutorials/packaging-projects/)
 - [Good integration practices](https://docs.pytest.org/en/7.2.x/explanation/goodpractices.html)
 - [Python documentation packages](https://docs.python.org/3/tutorial/modules.html#packages)
 :::
