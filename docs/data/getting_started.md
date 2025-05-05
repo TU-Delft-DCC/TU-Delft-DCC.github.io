@@ -30,12 +30,12 @@ author_1: Selin Kubilay
 
 # Maintainers of the document, will not be parsed [manual entry]
 # Uncomment and populate the next lines accordingly
-#maintainer_1: Name Surname
+maintainer_1: Elviss Dvinskis
 #maintainer_2:
 
 # To whom reach out regarding the document, will not be parsed [manual entry]
 # Uncomment and populate the next line accordingly
-#corresponding: Name Surname
+corresponding: Elviss Dvinskis
 
 # Meaningful keywords, newline separated [manual entry]
 # Uncomment and populate the next line and list accordingly
@@ -57,7 +57,7 @@ Effective research data management by following FAIR principles ensures efficien
 
 :::{.callout-important appearance="simple" icon="false"}
 ## {{< fa info-circle >}} Important note
-**Please note that useful and practical information on data management is covered by other TU Delft resources, such as the RDM 101 book, PhD Supervisors guide, the RDM and TU Delft library pages. We want to refer you to these resources throughout this section, and where applicable, an admonition will be placed at the beginning of a page.**
+**Please note that useful and practical information on data management is covered by other TU Delft resources, such as the RDM 101 book, PhD Supervisors guide, the RDM and TU Delft library pages. We want to refer you to these resources throughout this section, and where applicable, an admonition (like this one) will be placed at the beginning of a page.**
 :::
 
 :::{.callout-note appearance="simple" icon="false"}
