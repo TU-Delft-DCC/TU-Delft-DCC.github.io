@@ -55,6 +55,11 @@ Effective research data management by following FAIR principles ensures efficien
 
 **This section intends to walk you through the steps of the data lifecycle at TU Delft, following FAIR principles.**
 
+:::{.callout-important appearance="simple" icon="false"}
+## {{< fa info-circle >}} Important note
+**Please note that useful and practical information on data management is covered by other TU Delft resources, such as the RDM 101 book, PhD Supervisors guide, the RDM and TU Delft library pages. We want to refer you to these resources throughout this section, and where applicable, an admonition will be placed at the beginning of a page.**
+:::
+
 :::{.callout-note appearance="simple" icon="false"}
 ## {{< fa signs-post >}} Further reading
 - [TU Delft Research Data Management landing page](https://www.tudelft.nl/en/library/research-data-management)
