@@ -53,7 +53,7 @@ Towards the end of the research cycle, data archiving (and publishing, when poss
 
 ::: {.feature}
 ### {{< fa scale-balanced >}} Licensing
-Apply an open-source license for your data.
+Choose a license for your data.
 
 ::: {.learn-more}
 [Learn more »](./licensing_data.md)
