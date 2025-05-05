@@ -3,7 +3,7 @@
 
 # We use this key to indicate the last reviewed date [manual entry, use YYYY-MM-DD]
 # Uncomment and populate the next line accordingly
-#date: YYYY-MM-DD
+date: 2025-05-05
 
 # We use this key to indicate the last modified date [automatic entry]
 date-modified: last-modified
@@ -45,9 +45,6 @@ title: Offboarding and ownership
 
 ---
 
-Offboarding and ownership are crucial for ensuring the continuity and integrity of research data when team members leave or transition roles. Establishing clear ownership protocols and conducting thorough offboarding processes help maintain data accessibility, prevent loss, and ensure compliance with institutional policies. To achieve effective offboarding, document data responsibilities, transfer access rights promptly, and conduct exit interviews to capture essential knowledge.
+Offboarding procedures are necessary for ensuring the continuity and integrity of research data when team members leave or transition roles. Establishing clear ownership protocols and conducting thorough offboarding processes help maintain data accessibility, prevent loss, and ensure compliance with institutional policies. To achieve effective offboarding, document data responsibilities, transfer access rights, and conduct exit interviews to capture essential knowledge and insights. 
 
-:::{.callout-important appearance="simple" icon="false"}
-### {{< fa exclamation >}} Read More
-- [Data Management Offboarding by Harvard RDM](https://datamanagement.hms.harvard.edu/about/where-start/data-management-offboarding#:~:text=Offboarding%20Checklist%20Document)
-:::
+This guide serves primarily as a reminder that there should be a plan in place for offboarding. Different research groups will have different practices, and there is no single definitive checklist or procedure. However, we would like to refer you to the [*Data Management Offboarding by Harvard RDM*](https://datamanagement.hms.harvard.edu/about/where-start/data-management-offboarding#:~:text=Offboarding%20Checklist%20Document) site for ideas on how to approach offboarding and preserve knowledge when colleagues leave.
