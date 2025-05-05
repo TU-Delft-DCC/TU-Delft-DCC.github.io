@@ -45,14 +45,15 @@ title: Archiving and publishing data
 
 ---
 
-Towards the end of the research cycle, data archiving—and publishing, when possible—is essential to ensure that data remains accessible, reproducible, and reusable. Therefore, understanding how to effectively publish and archive data is crucial for maintaining data integrity, facilitating collaboration, and promoting transparency.
+Towards the end of the research cycle, data archiving (and publishing, when possible) is an essential step for the longevity and accessibility of your research. Archiving data means that it is preserved and remains accessible for future use. This process not only helps with the visibility of your work but also contributes to the advancement of knowledge in your field. Other researchers have the data available and can build upon your work. Learning how to effectively preserve and share your research isn't just good scientific practice - it's how your work makes a lasting impact.
+
 
 ::: {.content-block}
 ::: {.features}
 
 ::: {.feature}
 ### {{< fa scale-balanced >}} Licensing
-Enables access and promotes adherence
+Apply an open-source license for your data.
 
 ::: {.learn-more}
 [Learn more »](./licensing_data.md)
@@ -61,7 +62,7 @@ Enables access and promotes adherence
 
 ::: {.feature}
 ### {{< fa wave-square >}} Publishing data
-Broadens reach
+Broaden the reach of your research.
 
 ::: {.learn-more}
 [Learn more »](./publishing.md)
@@ -70,7 +71,7 @@ Broadens reach
 
 ::: {.feature}
 ### {{< fa mitten >}} Offboarding and ownership
-Ensures accountability and longevity
+Ensures accountability and longevity.
 
 ::: {.learn-more}
 [Learn more »](./offboarding.md)
