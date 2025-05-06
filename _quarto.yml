@@ -62,10 +62,10 @@ website:
         text: <ins>Guides</ins>
       - href: docs/resources/courses.md
         text: <ins>Courses and Workshops</ins>
-      - href: docs/tud-support/index.md
-        text: Support Staff
-      - href: docs/listing.md
-        text: References
+      # - href: docs/tud-support/index.md
+      #   text: Support Staff
+      # - href: docs/listing.md
+      #   text: References
       - text: Community
         menu:
           - text: Contributing
