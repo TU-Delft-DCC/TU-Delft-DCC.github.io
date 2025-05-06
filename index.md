@@ -35,7 +35,7 @@ These guides provide a starting point for Research Computing, Research Data, and
 :::
 
 :::{.callout-tip icon="false" appearance="minimal"}
-{{< fa lightbulb >}} **Want to get involved?**
+<span style="color: gray;">{{< fa lightbulb >}} **Want to get involved?**</span>
 <br>
 
 <span style="color: #00A6D6;">{{< fa user-group >}}</span> [**Join the community**](CONTRIBUTING.md)<br>
