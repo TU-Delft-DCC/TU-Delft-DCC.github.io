@@ -3,34 +3,47 @@ title: Welcome to the DCC Guides!
 toc: true
 page-navigation: false
 repo-actions: false
+css: /themes/landing-page.css
 ---
 
+These guides provide a starting point for Research Computing, Research Data, and Research Software at TU Delft. This is an initiative from the TU Delft [Digital Competence Centre](/docs/community/dcc.md). 
 
-These guides are an initiative from TU Delft [Digital Competence Centre](/docs/community/dcc.md) and aim to provide a comprehensive entrypoint to get you started with Research Computing, Research Data, and Research Software at TU Delft. 
+{{< fa check >}} Shared solutions for **research support staff**<br>
+{{< fa check >}} Practical guides for **researchers**<br>
 
-:::{.callout-note} 
-## **Disclaimer**
+::: {.grid}
 
-The guides are under active development and mainly in use as a useful resource for the support provided by the DCC. The content is a compilation of developed solutions, relevant links and resources, and documents produced by colleagues inside and outside TU Delft. This is not an official TU Delft website, but rather a place where we keep note of things we find important and useful to share.
+::: {.tool .g-col-lg-2}
+
+<a href="docs/infrastructure/getting_started.md" role="button" class="btn btn-outline-light">
+![](docs/img/gear.svg)**Computing Infrastructure**
+</a>
+
+<a href="docs/data/getting_started.md" role="button" class="btn btn-outline-light">
+![](docs/img/folder-regular.svg)**Data Management**
+</a>
+
+<a href="docs/software/getting_started.md" role="button" class="btn btn-outline-light">
+![](docs/img/laptop-code-solid.svg)**Research Software**
+</a>
+
+<a href="docs/resources/courses.md" role="button" class="btn btn-outline-light">
+![](docs/img/cap.svg)**Courses and Workshops**
+</a>
+
+:::
 :::
 
-The guides are split into a few major sections:
+:::{.callout-tip icon="false" appearance="minimal"}
+<span style="color: gray;">{{< fa lightbulb >}} **Want to get involved?**</span>
+<br>
 
-- **Computing Infrastructure** contains information and guides on TU Delft ICT infrastructure.
-- **Data Management** contains information and guides on using TU Delft data storage options and best-practices for FAIR data. 
-- **Research Software** contains information for creating FAIR research software.
-- **Resources** contains a collection of courses, workshops, and references.
+<span style="color: #00A6D6;">{{< fa user-group >}}</span> [**Join the community**](CONTRIBUTING.md)<br>
+We welcome anyone to join us in improving our guides! Find out how in our [contributing guide](CONTRIBUTING.md).
 
+<span style="color: #00A6D6;">{{< fa comments >}}</span> [**Join the discussion**](https://github.com/TU-Delft-DCC/TU-Delft-DCC.github.io/discussions)<br>
+We welcome community discussions, ideas, and general questions to develop solutions and receive feedback in our [community forum](https://github.com/TU-Delft-DCC/TU-Delft-DCC.github.io/discussions).
 
-:::{.callout-tip} 
-## **Learn more and get involved**
-
-🙌 [**Join the community**](CONTRIBUTING.md)  
-We welcome anyone to join us in improving our guides. To join, check out our [contributing guide](CONTRIBUTING.md).
-
-💬 [**Join the discussion**](https://github.com/TU-Delft-DCC/TU-Delft-DCC.github.io/discussions)  
-We have community discussions, talk about ideas, share general questions and develop solutions and feedback in our [community forum](https://github.com/TU-Delft-DCC/TU-Delft-DCC.github.io/discussions).
-
-💡 [**Open an issue**](https://github.com/TU-Delft-DCC/TU-Delft-DCC.github.io/issues/new/choose)  
+<span style="color: #00A6D6;">{{< fa circle-info >}}</span> [**Open an issue**](https://github.com/TU-Delft-DCC/TU-Delft-DCC.github.io/issues/new/choose)<br>
 We track topic requests and bug-reports via GitHub issues.
 :::

@@ -88,6 +88,7 @@ if __name__ == "__main__":
 
 ### Solution
 We should split this class into smaller, focused classes:
+
 - `TemperatureSensor` – Handles sensor readings.
 - `Logger` – Handles logging.
 - `AlertSystem` – Handles alerts.

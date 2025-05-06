@@ -47,11 +47,9 @@ website:
     left: |
       Powered by [{{< iconify simple-icons:quarto >}} Quarto](https://quarto.org).
     center: |
-      &copy; 2024 [TU Delft Digital Competence Centre](https://dcc.tudelft.nl). Licensed under [CC-BY-4.0](https://creativecommons.org/licenses/by/4.0/).
+      &copy; 2025 [TU Delft DCC](https://dcc.tudelft.nl). Licensed under [CC-BY-4.0](https://creativecommons.org/licenses/by/4.0/).
     right: 
-          If you find this content useful, please consider giving us a star on GitHub.
-          <script async defer src="https://buttons.github.io/buttons.js"></script>
-          <a class="github-button" href="https://github.com/TU-Delft-DCC/TU-Delft-DCC.github.io" data-icon="star" data-size="small" data-show-count="false" aria-label="Star TU-Delft-DCC/TU-Delft-DCC.github.io on GitHub">Star</a>
+          Found these guides helpful? [{{<fa regular star>}} us on GitHub](https://github.com/TU-Delft-DCC/TU-Delft-DCC.github.io).
     border: false
   bread-crumbs: true # Breadcrumbs in Quarto websites are a type of secondary navigation that shows the user's current location within the site hierarchy
   navbar:
@@ -61,11 +59,13 @@ website:
       # - href: index.md
       #   text: Overview
       - href: index.md
-        text: Guides
-      - href: docs/tud-support/index.md
-        text: Support Staff
-      - href: docs/listing.md
-        text: References
+        text: <ins>Guides</ins>
+      - href: docs/resources/courses.md
+        text: <ins>Courses and Workshops</ins>
+      # - href: docs/tud-support/index.md
+      #   text: Support Staff
+      # - href: docs/listing.md
+      #   text: References
       - text: Community
         menu:
           - text: Contributing
@@ -84,10 +84,10 @@ website:
       collapse-level: 2
       align: left
       contents:
-        - text: "Getting started"
+        - text: <span style="filter:grayscale(100%);">⌂</span> **Home**
           href: index.md
         - text: <br>
-        - section: <span style="filter:grayscale(100%);">⚙️</span> **Computing Infrastructure**
+        - section: "![](/docs/img/gear.svg){height=1em style='filter: invert(0.5) sepia(1) saturate(5) hue-rotate(175deg)'} **Computing Infrastructure**"
           contents:
           - text: Getting started
             href: docs/infrastructure/getting_started.md
@@ -116,7 +116,7 @@ website:
               - text: Setting up a Gitlab runner for MATLAB
                 href: docs/infrastructure/gitlab/runner_matlab.md
         - text: <br>
-        - section: <span style="filter:grayscale(100%);">🗃️</span> **Data Management**
+        - section: "![](/docs/img/folder-regular.svg){height=1em style='filter: invert(0.5) sepia(1) saturate(5) hue-rotate(175deg)'} **Data Management**"
           contents:
             - text: Getting started
               href: docs/data/getting_started.md
@@ -168,7 +168,7 @@ website:
                 - text: Offboarding and ownership
                   href: docs/data/data_publishing/offboarding.md
         - text: <br>
-        - section: <span style="filter:grayscale(100%);">💻</span> **Research Software**
+        - section: "![](/docs/img/laptop-code-solid.svg){height=1em style='filter: invert(0.5) sepia(1) saturate(5) hue-rotate(175deg)'} **Research Software**"
           contents:
             - text: Getting started
               href: docs/software/getting_started.md
@@ -199,6 +199,8 @@ website:
                       href: docs/software/development_workflow/envs_dependencies/matlab_envs_dependencies.md
                     - text: R
                       href: docs/software/development_workflow/envs_dependencies/r_envs_dependencies.md
+                - text: Workflow management
+                  href: docs/software/development_workflow/workflow_management.md                
                 - text: Branch management
                   href: docs/software/development_workflow/branch_management.qmd
                 - text: Collaboration
@@ -262,7 +264,7 @@ website:
             - section: "Software testing"
               href: docs/software/testing/index.md
               contents:
-                - test: Roadmap to testing
+                - text: Roadmap to testing
                   href: docs/software/testing/strategies.md
                 - text: Test types
                   href: docs/software/testing/test_types.md
@@ -288,15 +290,17 @@ website:
                   href: docs/software/releases_archiving/releases.md
                 - text: Archiving
                   href: docs/software/releases_archiving/archiving.md
-        - text: <br>
-        - section: <span style="filter:grayscale(100%);">📖</span> **Resources**
-          contents:
-            - text: Courses and workshops
-              href: docs/resources/courses.md
+            - text: Tooling
+              href: docs/software/tools/tools.md
+#        - text: <br>
+#        - section: <span style="filter:grayscale(100%);">📖</span> **Resources**
+#          contents:
+#            - text: Courses and workshops
+#              href: docs/resources/courses.md
 #            - text: Research Software Curriculum
 #              href: docs/resources/curriculum.md
-            - text: AI tooling
-              href: docs/resources/tools.md
+#            - text: AI tooling
+#              href: docs/resources/tools.md
 
     # - title: "TU Delft Support"
     #   contents: 

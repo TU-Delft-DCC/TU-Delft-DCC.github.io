@@ -1,0 +1,42 @@
+.grid {
+    display: flex;
+    width: 100%;
+} 
+
+.tool {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;  
+  }
+  
+  .tool a[role="button"] {
+    width: 210px;  /* Reduced from 300px to 200px */
+    color: rgb(55, 58, 60);
+    text-align: center;
+    border: 3px solid rgb(222, 226, 230);
+    border-radius: 10px;
+    margin-right: 10px;
+    margin-bottom: 0;
+    margin-top: 10px;
+    font-size: 0.9em;  /* Slightly smaller font */
+    background-color: #f5f5f5;
+  }
+  
+  .tool .btn-outline-light:hover {
+    border-color: rgb(80,146,221);
+    background-color: #e8f0fe;  /* added a background colour so it also works for the dark theme */
+    text-decoration: underline;
+    text-decoration-color: rgb(80,146,221);
+    text-decoration-thickness: 2px;    
+  }
+  
+  .tool a[role="button"] img {
+    display: block;
+    width: 80px;  /* Reduced from 100px to 80px */
+    height: 80px;  /* Reduced from 100px to 80px */
+    margin: auto;
+    margin-bottom: 5px;
+    margin-top: 5px;
+  }
