@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.7.29">
+<meta name="generator" content="quarto-1.7.30">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -39,9 +39,9 @@ ul.task-list li input[type="checkbox"] {
 <script src="../../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-6c63763c1ae9bd01aad4ba4dab843f5b.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-dark-6c63763c1ae9bd01aad4ba4dab843f5b.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-6c63763c1ae9bd01aad4ba4dab843f5b.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-1456680686c67bd47a766edffe5b8ea0.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-dark-1456680686c67bd47a766edffe5b8ea0.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-1456680686c67bd47a766edffe5b8ea0.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="../../../site_libs/bootstrap/bootstrap-7c7ce6bf4a386dd1c6674eda7a9c6b64.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
@@ -237,6 +237,7 @@ ul.task-list li input[type="checkbox"] {
       toggleColorMode(toAlternate);
       setStyleSentinel(toAlternate);
       toggleGiscusIfUsed(toAlternate, darkModeDefault);
+      window.dispatchEvent(new Event('resize'));
     };
     // Switch to dark mode if need be
     if (hasAlternateSentinel()) {
@@ -263,15 +264,11 @@ ul.task-list li input[type="checkbox"] {
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
     <a class="nav-link active" href="../../../index.html" aria-current="page"> 
-<span class="menu-text">Guides</span></a>
+<span class="menu-text"><ins>Guides</ins></span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../../docs/tud-support/index.html"> 
-<span class="menu-text">Support Staff</span></a>
-  </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="../../../docs/listing.html"> 
-<span class="menu-text">References</span></a>
+    <a class="nav-link" href="../../../docs/resources/courses.html"> 
+<span class="menu-text"><ins>Courses and Workshops</ins></span></a>
   </li>  
   <li class="nav-item dropdown ">
     <a class="nav-link dropdown-toggle" href="#" id="nav-menu-community" role="link" data-bs-toggle="dropdown" aria-expanded="false">
@@ -305,7 +302,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../../docs/software/getting_started.html"><span style="filter:grayscale(100%);">💻</span> <strong>Research Software</strong></a></li><li class="breadcrumb-item"><a href="../../../docs/software/development_workflow/index.html">Development workflow</a></li><li class="breadcrumb-item"><a href="../../../docs/software/development_workflow/envs_dependencies.html">Environments and dependencies</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../../docs/software/getting_started.html"><img src="../../../docs/img/laptop-code-solid.svg" style="filter: invert(0.5) sepia(1) saturate(5) hue-rotate(175deg);height:1em"> <strong>Research Software</strong></a></li><li class="breadcrumb-item"><a href="../../../docs/software/development_workflow/index.html">Development workflow</a></li><li class="breadcrumb-item"><a href="../../../docs/software/development_workflow/envs_dependencies.html">Environments and dependencies</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -323,7 +320,7 @@ ul.task-list li input[type="checkbox"] {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../../index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Getting started</span></a>
+ <span class="menu-text"><span style="filter:grayscale(100%);">⌂</span> <strong>Home</strong></span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -332,7 +329,7 @@ ul.task-list li input[type="checkbox"] {
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
- <span class="menu-text"><span style="filter:grayscale(100%);">⚙️</span> <strong>Computing Infrastructure</strong></span></a>
+ <span class="menu-text"><img src="../../../docs/img/gear.svg" style="filter: invert(0.5) sepia(1) saturate(5) hue-rotate(175deg);height:1em"> <strong>Computing Infrastructure</strong></span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -428,7 +425,7 @@ ul.task-list li input[type="checkbox"] {
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true">
- <span class="menu-text"><span style="filter:grayscale(100%);">🗃️</span> <strong>Data Management</strong></span></a>
+ <span class="menu-text"><img src="../../../docs/img/folder-regular.svg" style="filter: invert(0.5) sepia(1) saturate(5) hue-rotate(175deg);height:1em"> <strong>Data Management</strong></span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -599,7 +596,7 @@ ul.task-list li input[type="checkbox"] {
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-9" role="navigation" aria-expanded="true">
- <span class="menu-text"><span style="filter:grayscale(100%);">💻</span> <strong>Research Software</strong></span></a>
+ <span class="menu-text"><img src="../../../docs/img/laptop-code-solid.svg" style="filter: invert(0.5) sepia(1) saturate(5) hue-rotate(175deg);height:1em"> <strong>Research Software</strong></span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-9" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -962,30 +959,10 @@ ul.task-list li input[type="checkbox"] {
 </li>
       </ul>
   </li>
-      </ul>
-  </li>
-        <li class="sidebar-item">
- <span class="menu-text"><br></span>
-  </li>
-        <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-18" role="navigation" aria-expanded="true">
- <span class="menu-text"><span style="filter:grayscale(100%);">📖</span> <strong>Resources</strong></span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-18" role="navigation" aria-expanded="true" aria-label="Toggle section">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-18" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../docs/resources/courses.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Courses and workshops</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../../docs/resources/tools.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">AI tooling</span></a>
+  <a href="../../../docs/software/tools/tools.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Tooling</span></a>
   </div>
 </li>
       </ul>
@@ -1002,7 +979,7 @@ ul.task-list li input[type="checkbox"] {
 <main class="content" id="quarto-document-content">
 
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../../docs/software/getting_started.html"><span style="filter:grayscale(100%);">💻</span> <strong>Research Software</strong></a></li><li class="breadcrumb-item"><a href="../../../docs/software/development_workflow/index.html">Development workflow</a></li><li class="breadcrumb-item"><a href="../../../docs/software/development_workflow/envs_dependencies.html">Environments and dependencies</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../../docs/software/getting_started.html"><img src="../../../docs/img/laptop-code-solid.svg" style="filter: invert(0.5) sepia(1) saturate(5) hue-rotate(175deg);height:1em"> <strong>Research Software</strong></a></li><li class="breadcrumb-item"><a href="../../../docs/software/development_workflow/index.html">Development workflow</a></li><li class="breadcrumb-item"><a href="../../../docs/software/development_workflow/envs_dependencies.html">Environments and dependencies</a></li></ol></nav>
 <div class="quarto-title">
 <h1 class="title">Environment and dependency management</h1>
 </div>
@@ -1022,7 +999,7 @@ ul.task-list li input[type="checkbox"] {
     <div>
     <div class="quarto-title-meta-heading">Last modified</div>
     <div class="quarto-title-meta-contents">
-      <p class="date-modified">May 4, 2025</p>
+      <p class="date-modified">May 6, 2025</p>
     </div>
   </div>
     
@@ -1494,12 +1471,10 @@ ul.task-list li input[type="checkbox"] {
 <p>Powered by <a href="https://quarto.org"><iconify-icon role="img" inline="" icon="simple-icons:quarto" aria-label="Icon quarto from simple-icons Iconify.design set." title="Icon quarto from simple-icons Iconify.design set."></iconify-icon> Quarto</a>.</p>
 </div>   
     <div class="nav-footer-center">
-<p>© 2024 <a href="https://dcc.tudelft.nl">TU Delft Digital Competence Centre</a>. Licensed under <a href="https://creativecommons.org/licenses/by/4.0/">CC-BY-4.0</a>.</p>
+<p>© 2025 <a href="https://dcc.tudelft.nl">TU Delft DCC</a>. Licensed under <a href="https://creativecommons.org/licenses/by/4.0/">CC-BY-4.0</a>.</p>
 <div class="toc-actions"><ul><li><a href="https://github.com/TU-Delft-DCC/TU-Delft-DCC.github.io/issues/new/choose" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div></div>
     <div class="nav-footer-right">
-If you find this content useful, please consider giving us a star on GitHub.
-<script async="" defer="" src="https://buttons.github.io/buttons.js"></script>
-<p><a class="github-button" href="https://github.com/TU-Delft-DCC/TU-Delft-DCC.github.io" data-icon="star" data-size="small" data-show-count="false" aria-label="Star TU-Delft-DCC/TU-Delft-DCC.github.io on GitHub">Star</a></p>
+<p>Found these guides helpful? <a href="https://github.com/TU-Delft-DCC/TU-Delft-DCC.github.io"><i class="fa-regular fa-star" aria-label="star"></i> us on GitHub</a>.</p>
 </div>
   </div>
 </footer>

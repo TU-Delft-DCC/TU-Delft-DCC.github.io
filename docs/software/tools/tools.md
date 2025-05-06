@@ -16,7 +16,7 @@ language:
 
 # Title of the document [manual entry]
 # Uncomment and populate the next line accordingly
-title: Tools
+title: Tooling
 
 # Brief overview of the document (will be used in listings) [manual entry]
 # Uncomment and populate the next line and uncomment "hide-description: true".

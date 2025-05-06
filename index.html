@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.7.29">
+<meta name="generator" content="quarto-1.7.30">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -36,15 +36,17 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-6c63763c1ae9bd01aad4ba4dab843f5b.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-6c63763c1ae9bd01aad4ba4dab843f5b.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-6c63763c1ae9bd01aad4ba4dab843f5b.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-1456680686c67bd47a766edffe5b8ea0.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-1456680686c67bd47a766edffe5b8ea0.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-1456680686c67bd47a766edffe5b8ea0.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="site_libs/bootstrap/bootstrap-7c7ce6bf4a386dd1c6674eda7a9c6b64.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
 <link href="site_libs/bootstrap/bootstrap-dark-66212d2b220d4d645035744573b559bf.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
 <link href="site_libs/bootstrap/bootstrap-7c7ce6bf4a386dd1c6674eda7a9c6b64.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script src="site_libs/quarto-contrib/iconify-2.1.0/iconify-icon.min.js"></script>
+<link href="site_libs/quarto-contrib/fontawesome6-1.2.0/all.min.css" rel="stylesheet">
+<link href="site_libs/quarto-contrib/fontawesome6-1.2.0/latex-fontsize.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -76,6 +78,7 @@ ul.task-list li input[type="checkbox"] {
 
 
 <link rel="stylesheet" href="themes/custom.css">
+<link rel="stylesheet" href="./themes/landing-page.css">
 </head>
 
 <body class="nav-sidebar docked nav-fixed quarto-light"><script id="quarto-html-before-body" type="application/javascript">
@@ -232,6 +235,7 @@ ul.task-list li input[type="checkbox"] {
       toggleColorMode(toAlternate);
       setStyleSentinel(toAlternate);
       toggleGiscusIfUsed(toAlternate, darkModeDefault);
+      window.dispatchEvent(new Event('resize'));
     };
     // Switch to dark mode if need be
     if (hasAlternateSentinel()) {
@@ -258,15 +262,11 @@ ul.task-list li input[type="checkbox"] {
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
     <a class="nav-link active" href="./index.html" aria-current="page"> 
-<span class="menu-text">Guides</span></a>
+<span class="menu-text"><ins>Guides</ins></span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./docs/tud-support/index.html"> 
-<span class="menu-text">Support Staff</span></a>
-  </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="./docs/listing.html"> 
-<span class="menu-text">References</span></a>
+    <a class="nav-link" href="./docs/resources/courses.html"> 
+<span class="menu-text"><ins>Courses and Workshops</ins></span></a>
   </li>  
   <li class="nav-item dropdown ">
     <a class="nav-link dropdown-toggle" href="#" id="nav-menu-community" role="link" data-bs-toggle="dropdown" aria-expanded="false">
@@ -300,7 +300,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./index.html">Getting started</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./index.html"><span style="filter:grayscale(100%);">⌂</span> <strong>Home</strong></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -318,7 +318,7 @@ ul.task-list li input[type="checkbox"] {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./index.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text">Getting started</span></a>
+ <span class="menu-text"><span style="filter:grayscale(100%);">⌂</span> <strong>Home</strong></span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -327,7 +327,7 @@ ul.task-list li input[type="checkbox"] {
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
- <span class="menu-text"><span style="filter:grayscale(100%);">⚙️</span> <strong>Computing Infrastructure</strong></span></a>
+ <span class="menu-text"><img src="./docs/img/gear.svg" style="filter: invert(0.5) sepia(1) saturate(5) hue-rotate(175deg);height:1em"> <strong>Computing Infrastructure</strong></span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -423,7 +423,7 @@ ul.task-list li input[type="checkbox"] {
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true">
- <span class="menu-text"><span style="filter:grayscale(100%);">🗃️</span> <strong>Data Management</strong></span></a>
+ <span class="menu-text"><img src="./docs/img/folder-regular.svg" style="filter: invert(0.5) sepia(1) saturate(5) hue-rotate(175deg);height:1em"> <strong>Data Management</strong></span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -594,7 +594,7 @@ ul.task-list li input[type="checkbox"] {
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-9" role="navigation" aria-expanded="true">
- <span class="menu-text"><span style="filter:grayscale(100%);">💻</span> <strong>Research Software</strong></span></a>
+ <span class="menu-text"><img src="./docs/img/laptop-code-solid.svg" style="filter: invert(0.5) sepia(1) saturate(5) hue-rotate(175deg);height:1em"> <strong>Research Software</strong></span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-9" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -957,30 +957,10 @@ ul.task-list li input[type="checkbox"] {
 </li>
       </ul>
   </li>
-      </ul>
-  </li>
-        <li class="sidebar-item">
- <span class="menu-text"><br></span>
-  </li>
-        <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-18" role="navigation" aria-expanded="true">
- <span class="menu-text"><span style="filter:grayscale(100%);">📖</span> <strong>Resources</strong></span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-18" role="navigation" aria-expanded="true" aria-label="Toggle section">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-18" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./docs/resources/courses.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Courses and workshops</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./docs/resources/tools.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">AI tooling</span></a>
+  <a href="./docs/software/tools/tools.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Tooling</span></a>
   </div>
 </li>
       </ul>
@@ -1016,43 +996,29 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>These guides are an initiative from TU Delft <a href="./docs/community/dcc.html">Digital Competence Centre</a> and aim to provide a comprehensive entrypoint to get you started with Research Computing, Research Data, and Research Software at TU Delft.</p>
-<div class="callout callout-style-default callout-note callout-titled">
+<p>These guides provide a starting point for Research Computing, Research Data, and Research Software at TU Delft. This is an initiative from the TU Delft <a href="./docs/community/dcc.html">Digital Competence Centre</a>.</p>
+<p><i class="fa-solid fa-check" aria-label="check"></i> Shared solutions for <strong>research support staff</strong><br> <i class="fa-solid fa-check" aria-label="check"></i> Practical guides for <strong>researchers</strong><br></p>
+<div class="grid">
+<div class="tool g-col-lg-2">
+<p><a href="./docs/infrastructure/getting_started.html" role="button" class="btn btn-outline-light"> <img src="docs/img/gear.svg" class="img-fluid"><strong>Computing Infrastructure</strong> </a></p>
+<p><a href="./docs/data/getting_started.html" role="button" class="btn btn-outline-light"> <img src="docs/img/folder-regular.svg" class="img-fluid"><strong>Data Management</strong> </a></p>
+<p><a href="./docs/software/getting_started.html" role="button" class="btn btn-outline-light"> <img src="docs/img/laptop-code-solid.svg" class="img-fluid"><strong>Research Software</strong> </a></p>
+<p><a href="./docs/resources/courses.html" role="button" class="btn btn-outline-light"> <img src="docs/img/cap.svg" class="img-fluid"><strong>Courses and Workshops</strong> </a></p>
+</div>
+</div>
+<div class="callout callout-style-simple callout-tip no-icon callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
-<i class="callout-icon"></i>
+<i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<strong>Disclaimer</strong>
+## <i class="fa-solid fa-lightbulb" aria-label="lightbulb"></i> <strong>Want to get involved?</strong>
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>The guides are under active development and mainly in use as a useful resource for the support provided by the DCC. The content is a compilation of developed solutions, relevant links and resources, and documents produced by colleagues inside and outside TU Delft. This is not an official TU Delft website, but rather a place where we keep note of things we find important and useful to share.</p>
-</div>
-</div>
-<p>The guides are split into a few major sections:</p>
-<ul>
-<li><strong>Computing Infrastructure</strong> contains information and guides on TU Delft ICT infrastructure.</li>
-<li><strong>Data Management</strong> contains information and guides on using TU Delft data storage options and best-practices for FAIR data.</li>
-<li><strong>Research Software</strong> contains information for creating FAIR research software.</li>
-<li><strong>Resources</strong> contains a collection of courses, workshops, and references.</li>
-</ul>
-<div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<strong>Learn more and get involved</strong>
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>🙌 <a href="./CONTRIBUTING.html"><strong>Join the community</strong></a><br>
-We welcome anyone to join us in improving our guides. To join, check out our <a href="./CONTRIBUTING.html">contributing guide</a>.</p>
-<p>💬 <a href="https://github.com/TU-Delft-DCC/TU-Delft-DCC.github.io/discussions"><strong>Join the discussion</strong></a><br>
-We have community discussions, talk about ideas, share general questions and develop solutions and feedback in our <a href="https://github.com/TU-Delft-DCC/TU-Delft-DCC.github.io/discussions">community forum</a>.</p>
-<p>💡 <a href="https://github.com/TU-Delft-DCC/TU-Delft-DCC.github.io/issues/new/choose"><strong>Open an issue</strong></a><br>
-We track topic requests and bug-reports via GitHub issues.</p>
+<p><span style="color: #00A6D6;"><i class="fa-solid fa-user-group" aria-label="user-group"></i></span> <a href="./CONTRIBUTING.html"><strong>Join the community</strong></a><br> We welcome anyone to join us in improving our guides! Find out how in our <a href="./CONTRIBUTING.html">contributing guide</a>.</p>
+<p><span style="color: #00A6D6;"><i class="fa-solid fa-comments" aria-label="comments"></i></span> <a href="https://github.com/TU-Delft-DCC/TU-Delft-DCC.github.io/discussions"><strong>Join the discussion</strong></a><br> We welcome community discussions, ideas, and general questions to develop solutions and receive feedback in our <a href="https://github.com/TU-Delft-DCC/TU-Delft-DCC.github.io/discussions">community forum</a>.</p>
+<p><span style="color: #00A6D6;"><i class="fa-solid fa-circle-info" aria-label="circle-info"></i></span> <a href="https://github.com/TU-Delft-DCC/TU-Delft-DCC.github.io/issues/new/choose"><strong>Open an issue</strong></a><br> We track topic requests and bug-reports via GitHub issues.</p>
 </div>
 </div>
 
@@ -1478,12 +1444,10 @@ We track topic requests and bug-reports via GitHub issues.</p>
 <p>Powered by <a href="https://quarto.org"><iconify-icon role="img" inline="" icon="simple-icons:quarto" aria-label="Icon quarto from simple-icons Iconify.design set." title="Icon quarto from simple-icons Iconify.design set."></iconify-icon> Quarto</a>.</p>
 </div>   
     <div class="nav-footer-center">
-<p>© 2024 <a href="https://dcc.tudelft.nl">TU Delft Digital Competence Centre</a>. Licensed under <a href="https://creativecommons.org/licenses/by/4.0/">CC-BY-4.0</a>.</p>
+<p>© 2025 <a href="https://dcc.tudelft.nl">TU Delft DCC</a>. Licensed under <a href="https://creativecommons.org/licenses/by/4.0/">CC-BY-4.0</a>.</p>
 </div>
     <div class="nav-footer-right">
-If you find this content useful, please consider giving us a star on GitHub.
-<script async="" defer="" src="https://buttons.github.io/buttons.js"></script>
-<p><a class="github-button" href="https://github.com/TU-Delft-DCC/TU-Delft-DCC.github.io" data-icon="star" data-size="small" data-show-count="false" aria-label="Star TU-Delft-DCC/TU-Delft-DCC.github.io on GitHub">Star</a></p>
+<p>Found these guides helpful? <a href="https://github.com/TU-Delft-DCC/TU-Delft-DCC.github.io"><i class="fa-regular fa-star" aria-label="star"></i> us on GitHub</a>.</p>
 </div>
   </div>
 </footer>

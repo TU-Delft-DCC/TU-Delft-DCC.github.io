@@ -52,7 +52,7 @@ categories:
 ## Style guide
 Style guides are a set of rules and conventions that define how code should be written in a particular programming language. They cover aspects such as naming conventions, indentation, line length, and other formatting rules. Style guides help to ensure that code is consistent, readable, and maintainable, and they are often enforced by static analysis tools and formatters. Many programming languages have official style guides, and there are also community-driven style guides that provide additional recommendations and best practices.
 
-## Static analysis tool
+## Static analysis tools
 Static analysis tools are used to analyze source code without executing it. They can identify potential issues in the code, such as syntax errors, bugs, and [code smells](./code_smells.md). Static analysis tools can also enforce coding standards and best practices, and help to identify security vulnerabilities. They are often integrated into Continuous Integration workflows to ensure that code quality is maintained throughout the development process.
 
 ## Formatters

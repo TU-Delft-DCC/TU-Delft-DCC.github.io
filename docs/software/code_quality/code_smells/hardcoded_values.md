@@ -67,7 +67,8 @@ def check_temperature(temperature):
         print("It's too cold!")
 ```
 
-### Issues
+#### Issues
+
 - The value of pi is hard-coded as `3.14`, which can lead to precision issues.
 - The temperature thresholds (30, 10) are buried in the logic, making them difficult to modify.
 - The meaning of 30 and 10 is unclear - are they for a specific region, season, or use case?
