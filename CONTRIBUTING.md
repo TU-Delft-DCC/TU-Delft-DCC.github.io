@@ -1,3 +1,9 @@
+---
+format:
+    html:
+        page-layout: full
+---
+
 # Contributing guidelines
 
 ## 👋 Welcome!
