@@ -1,16 +1,25 @@
 .grid {
     display: flex;
     width: 100%;
+    justify-content: center; 
 } 
 
 .tool {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
     flex-direction: row;
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;  
   }
   
+/* For wide screens: 4 columns */
+@media (min-width: 1500px) {
+  .tool {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
   .tool a[role="button"] {
     width: 210px;  /* Reduced from 300px to 200px */
     color: rgb(55, 58, 60);
@@ -27,9 +36,9 @@
   .tool .btn-outline-light:hover {
     border-color: rgb(80,146,221);
     background-color: #e8f0fe;  /* added a background colour so it also works for the dark theme */
-    text-decoration: underline;
-    text-decoration-color: rgb(80,146,221);
-    text-decoration-thickness: 2px;    
+    /* text-decoration: underline; */
+    /* text-decoration-color: rgb(80,146,221); */
+    /* text-decoration-thickness: 2px;     */
   }
   
   .tool a[role="button"] img {
