@@ -44,6 +44,10 @@ title: Courses and workshops
 # - 
 
 css: /themes/cards.css
+
+format:
+    html:
+        page-layout: full
 ---
 
 ## Training for researchers at the TU Delft
