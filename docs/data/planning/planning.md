@@ -52,7 +52,7 @@ When planning your research, it is important to consider how you will manage you
 As in other sections we would like to refer you to other TU Delft resources:
 
 
-- Check the [Think & Plan](https://phdsupervisors.tudl.tudelft.nl/phase/think-plan/) section from the *TU Delft Navigating Research Data and Software: A Practical Guide for PhD Supervisors* guide for more information on the planning stage of your research project.
+- The [Think & Plan](https://phdsupervisors.tudl.tudelft.nl/phase/think-plan/) section from the *TU Delft Navigating Research Data and Software: A Practical Guide for PhD Supervisors* guide for more information on the planning stage of your research project.
 - [TU Delft RDM page - *Plan* section](https://www.tudelft.nl/en/library/current-topics/research-data-management/r/plan)
 - [RDM 101 course - Module 5 - How to plan for RDM](https://tu-delft-library.github.io/rdm101-book/modules/module5.html)
 
