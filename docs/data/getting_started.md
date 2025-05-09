@@ -26,7 +26,7 @@ title: Getting started
 # Authors of the document, will not be parsed [manual entry]
 # Uncomment and populate the next lines accordingly
 author_1: Selin Kubilay
-#author_2:
+author_2: Elviss Dvinskis
 
 # Maintainers of the document, will not be parsed [manual entry]
 # Uncomment and populate the next lines accordingly
