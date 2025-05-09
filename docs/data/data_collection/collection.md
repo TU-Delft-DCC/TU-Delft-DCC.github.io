@@ -60,6 +60,15 @@ Proper data collection practices are essential for ensuring the integrity and re
 ::: {.features}
 
 ::: {.feature}
+### {{< fa lock >}} Privacy
+Handle sensitive data.
+
+::: {.learn-more}
+[Learn more »](./privacy.md)
+:::
+:::
+
+::: {.feature}
 ### {{< fa table >}} Data conventions
 Data standards and types.
 
