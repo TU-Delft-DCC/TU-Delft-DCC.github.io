@@ -52,7 +52,7 @@ By adhering to domain-aligned data conventions, you can enhance the quality and 
 Again, we would like to refer you to modules from the RDM 101 course. Please explore:
 
 - [RDM 101 - Module 2 - Data within the research workflow](https://tu-delft-library.github.io/rdm101-book/modules/module2.html#data-within-the-research-workflow)
-- [RDM 101 - Module 3](https://tu-delft-library.github.io/rdm101-book/modules/module3.html) 
+- [RDM 101 - Module 3 - FAIR data principles and their main elements](https://tu-delft-library.github.io/rdm101-book/modules/module3.html) 
 
 for more information on this topic.
 :::
