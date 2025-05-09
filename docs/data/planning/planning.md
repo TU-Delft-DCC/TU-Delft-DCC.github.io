@@ -45,36 +45,34 @@ title: Planning
 
 ---
 
-🚧 Under construction! 🏗️
+When planning your research, it is important to consider how you will manage your data. This is the very first step in the research data lifecycle; you define your research question, and pinpoint relevant data sources. This includes planning how you will collect, store, and share your data, as well as how you will ensure its security and privacy. You formulate a plan for your data management, which is a living document that you can update as your research progresses.
 
-<!--
+:::{.callout-important appearance="simple" icon="false"}
+## {{< fa info-circle >}} Important
+As in other sections we would like to refer you to other TU Delft resources:
 
-- Introduction
-- Data management plan
 
--->
-
-::: {.content-block}
-::: {.features}
-
-::: {.feature}
-### {{< fa lock >}} Privacy and security
-Coming soon! ⏰
-
-::: {.learn-more}
-[Learn more »](./privacy_and_security.md)
-:::
-:::
-
-::: {.feature}
-### {{< fa landmark >}} Ethics
-Coming soon! ⏰
-
-::: {.learn-more}
-[Learn more »](./ethics.md)
-:::
-:::
+- Check the [Think & Plan](https://phdsupervisors.tudl.tudelft.nl/phase/think-plan/) section from the *TU Delft Navigating Research Data and Software: A Practical Guide for PhD Supervisors* guide for more information on the planning stage of your research project.
+- [TU Delft RDM page - *Plan* section](https://www.tudelft.nl/en/library/current-topics/research-data-management/r/plan)
+- [RDM 101 course - Module 5 - How to plan for RDM](https://tu-delft-library.github.io/rdm101-book/modules/module5.html)
 
 :::
+
+
+## Data management plan
+
+TU Delft emphasizes the importance of data management planning and asks researchers to create a data management plan (DMP) at the start of their research project. In many cases this is also a formal [requirement](https://www.tudelft.nl/en/library/current-topics/research-data-management/r/policies/funders-policies). TU Delft provides a dedicated tool called [DMPonline](https://dmponline.tudelft.nl/) to help you write a DMP.
+
+
+:::{.callout-important appearance="simple" icon="false"}
+## {{< fa info-circle >}} Important
+**Please consult your faculty [data steward](https://www.tudelft.nl/library/research-data-management/r/support/data-stewardship/contact) for more information regarding DMPs and the specific requirements for your faculty.**
+
+Also, you can find more information on DMPs:
+
+- [PhD Supervisors guide - Data management plan](https://phdsupervisors.tudl.tudelft.nl/phase/data-management-plan/)
+- [TU Delft RDM page - *"Data Management Plans"*](https://www.tudelft.nl/en/library/current-topics/research-data-management/r/plan/data-management-plans)
+- [TU Delft RDM page - *"DMPonline"*](https://www.tudelft.nl/en/library/current-topics/research-data-management/r/plan/dmponline/dmponline)
+- [RDM 101 course - Module 5 - DMP](https://tu-delft-library.github.io/rdm101-book/modules/module5.html#data-management-plan-dmp)
 :::
 
