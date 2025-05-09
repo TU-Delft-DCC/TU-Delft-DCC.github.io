@@ -122,13 +122,14 @@ website:
               href: docs/data/getting_started.md
             - text: FAIR Data
               href: docs/data/fair_data/fair.md
-            - text: Planning
+            - section: Planning
               href: docs/data/planning/planning.md
+              contents:
+                - text: Privacy
+                  href: docs/data/planning/privacy.md
             - section: Collection
               href: docs/data/data_collection/collection.md
               contents:
-                - text: Privacy and security
-                  href: docs/data/data_collection/privacy.md
                 - text: Data conventions
                   href: docs/data/data_collection/data_conventions.md
                 - text: Access and reuse
