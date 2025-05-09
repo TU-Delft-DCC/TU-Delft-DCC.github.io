@@ -70,7 +70,7 @@ Data standards and types.
 
 ::: {.feature}
 ### {{< fa eye >}} Data access and reuse
-Where and how to find data available for reuse.
+Making your data accessible and reusable.
 
 ::: {.learn-more}
 [Learn more »](./access_reuse.md)
