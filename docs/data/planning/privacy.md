@@ -55,5 +55,5 @@ TU Delft has resources to help you with these matters, and they are listed below
 
 - [**TU Delft personal research data workflow**](https://www.tudelft.nl/en/library/current-topics/research-data-management/r/manage/confidential-data/personal-data)
 - [**TU Delft privacy SharePoint site**](https://tud365.sharepoint.com/sites/SecurityPrivacyTUD/SitePages/en/Privacy.aspx)
-- [PhD Supervisors guide - PPersonal data and human subjects in research](https://phdsupervisors.tudl.tudelft.nl/phase/personal-data-and-human-subjects-in-research/)
+- [PhD Supervisors guide - Personal data and human subjects in research](https://phdsupervisors.tudl.tudelft.nl/phase/personal-data-and-human-subjects-in-research/)
 :::
