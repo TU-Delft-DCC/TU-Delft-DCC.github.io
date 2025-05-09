@@ -76,3 +76,20 @@ Also, you can find more information on DMPs:
 - [RDM 101 course - Module 5 - DMP](https://tu-delft-library.github.io/rdm101-book/modules/module5.html#data-management-plan-dmp)
 :::
 
+## What to do if you have sensitive data?
+
+If your datasets contains personal, confidential, or otherwise sensitive information, you need to consider how to handle this data appropriately.
+
+::: {.content-block}
+::: {.features}
+
+::: {.feature}
+### {{< fa lock >}} Privacy
+Handle sensitive data.
+
+::: {.learn-more}
+[Learn more »](./privacy.md)
+:::
+:::
+:::
+:::
