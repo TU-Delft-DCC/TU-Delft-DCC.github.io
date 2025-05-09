@@ -39,9 +39,10 @@ title: Access and reuse
 
 # Meaningful keywords, newline separated [manual entry]
 # Uncomment and populate the next line and list accordingly
-#categories: 
-# - 
-# - 
+categories: 
+ - data
+ - access
+ - reuse
 
 ---
 
