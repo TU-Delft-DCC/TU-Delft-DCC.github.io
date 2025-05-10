@@ -125,10 +125,8 @@ website:
             - section: Planning
               href: docs/data/planning/planning.md
               contents:
-                - text: Privacy and security
-                  href: docs/data/planning/privacy_and_security.md
-                - text: Ethics
-                  href: docs/data/planning/ethics.md
+                - text: Privacy
+                  href: docs/data/planning/privacy.md
             - section: Collection
               href: docs/data/data_collection/collection.md
               contents:
