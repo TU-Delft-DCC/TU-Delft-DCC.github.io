@@ -62,9 +62,9 @@ for more information on this topic.
 
 Establishing consistent naming conventions and metadata practices for your data files is essential for long-term project maintainability. Similarly, as mentioned in the [Project structure](../../software/development_workflow/project_structure.md) guide in the *Research Software* section, some essential principles apply, like:
 
-- using descriptive, concise and consistent names
-- avoiding special characters and spaces (instead use underscores `_` or hyphens `-`)
-- following [`ISO 8601`](https://www.iso.org/iso-8601-date-and-time-format.html) date formatting (`YYYY-MM-DD`)
+- use descriptive, concise and consistent names
+- avoid special characters and spaces (instead use underscores `_` or hyphens `-`)
+- follow [`ISO 8601`](https://www.iso.org/iso-8601-date-and-time-format.html) date formatting (`YYYY-MM-DD`)
 - the order matters - order elements in the name from least to most specific
 - include versioning in the name (where applicable)
 
