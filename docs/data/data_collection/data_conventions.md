@@ -75,7 +75,7 @@ However, the specific conventions you choose should align with the needs of your
 Maintaining a consistent folder structure across your research group and project phases prevents confusion, reduces errors in data analysis, and significantly improves research reproducibility. Remember that folder structure should complement your file naming (data) conventions to create a cohesive data organization system. Some practices to consider include:
 
 - Use a consistent and descriptive naming convention for folders, similar to file naming conventions
-- Similarly, avoid using spaces or special characters in folder names
+- Avoid using spaces or special characters in folder names
 - Create a hierarchical structure that moves from general to specific, making navigation intuitive
 - Establish consistent naming patterns across all levels of your folder hierarchy
 - Separate raw and processed data into distinct folders to preserve original data integrity
