@@ -74,7 +74,7 @@ To ensure that your data can be accessed and reused in the future, consider the 
 **{{< fa lightbulb >}} Tip:** Explore our section [*Data storage*](/docs/data/data_storage/storage.md) for more information on data storage options.
 :::
 
-6. **Archive in a trusted repositorye**: Deposit your data in a trusted data repository. Repositories like 4TU.ResearchData provide long-term storage, preservation, and access services, making it easier for others to find and reuse your data.
+6. **Archive in a trusted repository**: Deposit your data in a trusted data repository. Repositories like 4TU.ResearchData provide long-term storage, preservation, and access services, making it easier for others to find and reuse your data.
 
 :::{.callout-tip appearance="simple" icon="false"}
 **{{< fa lightbulb >}} Tip:** Explore our section [*Archive and publish*](/docs/data/data_publishing/archival_publishing_index.md) for information on archiving your research data.
