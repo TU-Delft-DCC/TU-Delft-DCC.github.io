@@ -193,5 +193,5 @@ There are 3 main reasons why bioinformatics workflows are different than those d
 - [Sustainable data analysis with Snakemake](https://doi.org/10.12688/f1000research.29032.2): A general overview article about Snakemake published in *F1000Research*.
 - [A review of bioinformatic pipeline frameworks.](https://doi.org/10.1093/bib/bbw020): A review article published in *Briefings in Bioinformatics*, focused on Bioinformatics pipelines.
 - [Airflow vs Snakemake](https://learn.flowdeploy.com/blog/airflow-vs-snakemake): A direct comparison between Airflow and Snakemake for data pipelines, while promoting FlowDeploy.
-- [Why are bioinformatics workflows different?](https://www.bsiranosian.com/bioinformatics/why-are-bioinformatics-workflows-different/)
+- [Why are bioinformatics workflows different?](https://www.deeporigin.com/blog/why-are-bioinformatics-workflows-different)
 :::
