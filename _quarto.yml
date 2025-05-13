@@ -51,6 +51,10 @@ website:
     right: 
           Found these guides helpful? [{{<fa regular star>}} us on GitHub](https://github.com/TU-Delft-DCC/TU-Delft-DCC.github.io).
     border: false
+  body-header: |
+    <!-- 100% privacy-first analytics -->
+    <script async defer src="https://scripts.simpleanalyticscdn.com/latest.js"></script>
+    <noscript><img src="https://queue.simpleanalyticscdn.com/noscript.gif" alt="" referrerpolicy="no-referrer-when-downgrade" /></noscript>
   bread-crumbs: true # Breadcrumbs in Quarto websites are a type of secondary navigation that shows the user's current location within the site hierarchy
   navbar:
     logo: docs/img/tud/logo_white_crop.png
