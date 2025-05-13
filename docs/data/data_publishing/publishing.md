@@ -46,7 +46,8 @@ categories:
  - zenodo
 
 ---
-Data repositories are where research data can be stored for long term preservation. When data is published in a repository, it is often assigned a persistent digital object identifier (DOI), which ensures that the data is discoverable and accessible over time. When published, the data should be accompanied by an appropriate license and metadata describing your data. 
+Data repositories are online locations for storing research data long term. When data is published in a repository, it is (often) assigned a persistent digital object identifier (DOI), which ensures that the data is discoverable and accessible over time. When published, the data should be accompanied by an appropriate license and metadata describing your data. 
+
 
 :::{.callout-important appearance="simple" icon="false"}
 ## {{< fa info-circle >}} Important
