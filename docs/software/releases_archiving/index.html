@@ -6,6 +6,7 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="dcterms.date" content="2025-03-20">
 
 <title>Packaging, releases and archiving</title>
 <style>
@@ -30,7 +31,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="../../../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../../../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../../../">
-<link href="../../../docs/software/releases_archiving/packaging.html" rel="next">
+<link href="../../../docs/software/releases_archiving/packaging/packaging.html" rel="next">
 <link href="../../../docs/software/testing/r_test.html" rel="prev">
 <script src="../../../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
@@ -43,9 +44,9 @@ ul.task-list li input[type="checkbox"] {
 <link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-ae0b5334a1ec0bf99af3d0c304a697d2.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../../site_libs/bootstrap/bootstrap-b12692f92b3e6cbba0f236e88a76b9c9.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../../../site_libs/bootstrap/bootstrap-dark-bf0b5b7a55f69f0d888dfbc85e238e96.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="../../../site_libs/bootstrap/bootstrap-b12692f92b3e6cbba0f236e88a76b9c9.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="../../../site_libs/bootstrap/bootstrap-7c7ce6bf4a386dd1c6674eda7a9c6b64.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../../site_libs/bootstrap/bootstrap-dark-66212d2b220d4d645035744573b559bf.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../../../site_libs/bootstrap/bootstrap-7c7ce6bf4a386dd1c6674eda7a9c6b64.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script src="../../../site_libs/quarto-contrib/iconify-2.1.0/iconify-icon.min.js"></script>
 <link href="../../../site_libs/quarto-contrib/fontawesome6-1.2.0/all.min.css" rel="stylesheet">
 <link href="../../../site_libs/quarto-contrib/fontawesome6-1.2.0/latex-fontsize.css" rel="stylesheet">
@@ -938,18 +939,52 @@ ul.task-list li input[type="checkbox"] {
           </a> 
       </div>
       <ul id="quarto-sidebar-section-17" class="collapse list-unstyled sidebar-section depth2 show">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../../docs/software/releases_archiving/packaging.html" class="sidebar-item-text sidebar-link">
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../../docs/software/releases_archiving/packaging/packaging.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Packaging</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="" class="collapse list-unstyled sidebar-section depth3 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../docs/software/releases_archiving/packaging/packaging_python.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Create a Python package</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../docs/software/releases_archiving/releases.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Releases</span></a>
+  <a href="../../../docs/software/releases_archiving/packaging/packaging_r.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Create an R package</span></a>
   </div>
 </li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../../docs/software/releases_archiving/releases/releases.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Releases</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="" class="collapse list-unstyled sidebar-section depth3 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../docs/software/releases_archiving/releases/releases_pypi.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Release your Python package on PyPI</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../docs/software/releases_archiving/releases/releases_cran.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Release your R package on CRAN</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../../docs/software/releases_archiving/archiving.html" class="sidebar-item-text sidebar-link">
@@ -981,13 +1016,24 @@ ul.task-list li input[type="checkbox"] {
 <header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../../docs/software/getting_started.html"><img src="../../../docs/img/laptop-code-solid.svg" style="filter: invert(0.5) sepia(1) saturate(5) hue-rotate(175deg);height:1em"> <strong>Research Software</strong></a></li><li class="breadcrumb-item"><a href="../../../docs/software/releases_archiving/index.html">Publish and share</a></li></ol></nav>
 <div class="quarto-title">
 <h1 class="title">Packaging, releases and archiving</h1>
-</div>
+  <div class="quarto-categories">
+    <div class="quarto-category">package</div>
+    <div class="quarto-category">release</div>
+    <div class="quarto-category">archive</div>
+  </div>
+  </div>
 
 
 
 <div class="quarto-title-meta">
 
     
+    <div>
+    <div class="quarto-title-meta-heading">Last reviewed</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">March 20, 2025</p>
+    </div>
+  </div>
   
     <div>
     <div class="quarto-title-meta-heading">Last modified</div>
@@ -1003,7 +1049,32 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<script async="" defer="" src="https://scripts.simpleanalyticscdn.com/latest.js"></script><p>🏗️ Under construction!</p>
+<script async="" defer="" src="https://scripts.simpleanalyticscdn.com/latest.js"></script><p>Eventually your software will be at a sharable and publishable point. One way to distribute your software is to package it and release it on a platform like PyPI (Python Package Index), or CRAN (Comprehensive R Archive Network). Additionally, you want to archive your software for long-term preservation in repositories like Zenodo or 4TU.</p>
+<div class="content-block">
+<div class="features">
+<section id="packaging" class="level3 feature">
+<h3 class="anchored" data-anchor-id="packaging"><i class="fa-solid fa-box-open" aria-label="box-open"></i> Packaging</h3>
+<p>Package your software.</p>
+<div class="learn-more">
+<p><a href="../../../docs/software/releases_archiving/packaging/packaging.html">Learn more »</a></p>
+</div>
+</section>
+<section id="releases" class="level3 feature">
+<h3 class="anchored" data-anchor-id="releases"><i class="fa-solid fa-box" aria-label="box"></i> Releases</h3>
+<p>Publish your software.</p>
+<div class="learn-more">
+<p><a href="../../../docs/software/releases_archiving/releases/releases.html">Learn more »</a></p>
+</div>
+</section>
+<section id="archiving" class="level3 feature">
+<h3 class="anchored" data-anchor-id="archiving"><i class="fa-solid fa-box-archive" aria-label="box-archive"></i> Archiving</h3>
+<p>Archive your software.</p>
+<div class="learn-more">
+<p><a href="../../../docs/software/releases_archiving/archiving.html">Learn more »</a></p>
+</div>
+</section>
+</div>
+</div>
 
 
 
@@ -1427,7 +1498,7 @@ ul.task-list li input[type="checkbox"] {
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../../../docs/software/releases_archiving/packaging.html" class="pagination-link" aria-label="Packaging">
+      <a href="../../../docs/software/releases_archiving/packaging/packaging.html" class="pagination-link" aria-label="Packaging">
         <span class="nav-page-text">Packaging</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>

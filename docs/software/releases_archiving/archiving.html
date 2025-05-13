@@ -6,6 +6,7 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="dcterms.date" content="2025-04-04">
 
 <title>Archiving</title>
 <style>
@@ -31,7 +32,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="../../../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../../../">
 <link href="../../../docs/software/tools/tools.html" rel="next">
-<link href="../../../docs/software/releases_archiving/releases.html" rel="prev">
+<link href="../../../docs/software/releases_archiving/releases/releases_cran.html" rel="prev">
 <script src="../../../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="../../../site_libs/quarto-html/popper.min.js"></script>
@@ -43,9 +44,9 @@ ul.task-list li input[type="checkbox"] {
 <link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-ae0b5334a1ec0bf99af3d0c304a697d2.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../../site_libs/bootstrap/bootstrap-b12692f92b3e6cbba0f236e88a76b9c9.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../../../site_libs/bootstrap/bootstrap-dark-bf0b5b7a55f69f0d888dfbc85e238e96.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="../../../site_libs/bootstrap/bootstrap-b12692f92b3e6cbba0f236e88a76b9c9.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="../../../site_libs/bootstrap/bootstrap-7c7ce6bf4a386dd1c6674eda7a9c6b64.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../../site_libs/bootstrap/bootstrap-dark-66212d2b220d4d645035744573b559bf.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../../../site_libs/bootstrap/bootstrap-7c7ce6bf4a386dd1c6674eda7a9c6b64.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script src="../../../site_libs/quarto-contrib/iconify-2.1.0/iconify-icon.min.js"></script>
 <link href="../../../site_libs/quarto-contrib/fontawesome6-1.2.0/all.min.css" rel="stylesheet">
 <link href="../../../site_libs/quarto-contrib/fontawesome6-1.2.0/latex-fontsize.css" rel="stylesheet">
@@ -938,18 +939,52 @@ ul.task-list li input[type="checkbox"] {
           </a> 
       </div>
       <ul id="quarto-sidebar-section-17" class="collapse list-unstyled sidebar-section depth2 show">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../../docs/software/releases_archiving/packaging.html" class="sidebar-item-text sidebar-link">
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../../docs/software/releases_archiving/packaging/packaging.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Packaging</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="" class="collapse list-unstyled sidebar-section depth3 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../docs/software/releases_archiving/packaging/packaging_python.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Create a Python package</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../docs/software/releases_archiving/releases.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Releases</span></a>
+  <a href="../../../docs/software/releases_archiving/packaging/packaging_r.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Create an R package</span></a>
   </div>
 </li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../../docs/software/releases_archiving/releases/releases.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Releases</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="" class="collapse list-unstyled sidebar-section depth3 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../docs/software/releases_archiving/releases/releases_pypi.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Release your Python package on PyPI</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../docs/software/releases_archiving/releases/releases_cran.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Release your R package on CRAN</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../../docs/software/releases_archiving/archiving.html" class="sidebar-item-text sidebar-link active">
@@ -971,8 +1006,15 @@ ul.task-list li input[type="checkbox"] {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#zenodo" id="toc-zenodo" class="nav-link active" data-scroll-target="#zenodo">Zenodo</a></li>
+  <li><a href="#tu.researchdata" id="toc-tu.researchdata" class="nav-link" data-scroll-target="#tu.researchdata">4TU.ResearchData</a></li>
+  </ul>
+<div class="toc-actions"><ul><li><a href="https://github.com/TU-Delft-DCC/TU-Delft-DCC.github.io/issues/new/choose" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -981,13 +1023,25 @@ ul.task-list li input[type="checkbox"] {
 <header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../../docs/software/getting_started.html"><img src="../../../docs/img/laptop-code-solid.svg" style="filter: invert(0.5) sepia(1) saturate(5) hue-rotate(175deg);height:1em"> <strong>Research Software</strong></a></li><li class="breadcrumb-item"><a href="../../../docs/software/releases_archiving/index.html">Publish and share</a></li><li class="breadcrumb-item"><a href="../../../docs/software/releases_archiving/archiving.html">Archiving</a></li></ol></nav>
 <div class="quarto-title">
 <h1 class="title">Archiving</h1>
-</div>
+  <div class="quarto-categories">
+    <div class="quarto-category">archive</div>
+    <div class="quarto-category">software</div>
+    <div class="quarto-category">zenodo</div>
+    <div class="quarto-category">4tu</div>
+  </div>
+  </div>
 
 
 
 <div class="quarto-title-meta">
 
     
+    <div>
+    <div class="quarto-title-meta-heading">Last reviewed</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">April 4, 2025</p>
+    </div>
+  </div>
   
     <div>
     <div class="quarto-title-meta-heading">Last modified</div>
@@ -1002,10 +1056,103 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
+<script async="" defer="" src="https://scripts.simpleanalyticscdn.com/latest.js"></script>
+<p>Archiving your software ensures long-term availability and accessibility. By archiving your software, you can preserve its state at a specific point in time, making it easier for others to access and use it in the future.</p>
+<section id="zenodo" class="level2">
+<h2 class="anchored" data-anchor-id="zenodo">Zenodo</h2>
+<p><a href="https://zenodo.org">Zenodo</a> supports the archiving of research outputs, including software releases. Zenodo can automatically archive releases from GitHub repositories and assign a DOI, making each version citable.</p>
+<p>To use Zenodo with GitHub:</p>
+<ol type="1">
+<li>Link your GitHub account to Zenodo to allow access to repository information.</li>
+<li>Enable the repository you want to archive on the Zenodo dashboard.</li>
+<li>Create a new release on GitHub. Zenodo will automatically archive this release and issue a DOI.</li>
+<li>You can then share the DOI link provided by Zenodo in your project’s README or documentation, or paper, so a specific version of your software can be referenced.</li>
+</ol>
+<div class="callout callout-style-simple callout-tip no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<i class="fa-solid fa-lightbulb" aria-label="lightbulb"></i> Tips
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul>
+<li>Zenodo can only access public repositories.</li>
+<li>If you need to archive a repository from an organization, the owner of the organization might have to authorize the Zenodo application to access it.</li>
+<li>You can also try out <a href="https://sandbox.zenodo.org">Zenodo Sandbox</a> before archiving your projects to Zenodo. Zenodo Sandbox mimics the main Zenodo platform and is designed to test out the functionality of Zenodo without accidentally making mistakes with the real software/data and the main site. Since it’s an exact mirror of Zenodo it provides the same user experience and all the same tools and the same interface.</li>
+</ul>
+</div>
+</div>
+<div class="callout callout-style-simple callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<i class="fa-solid fa-signs-post" aria-label="signs-post"></i> Learn more
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul>
+<li><a href="https://docs.github.com/en/repositories/archiving-a-github-repository/referencing-and-citing-content">Referencing and citing content</a></li>
+</ul>
+</div>
+</div>
+</section>
+<section id="tu.researchdata" class="level2">
+<h2 class="anchored" data-anchor-id="tu.researchdata">4TU.ResearchData</h2>
+<p><a href="https://data.4tu.nl">4TU.ResearchData</a> is another platform that offers reliable archiving of research data and software. Their servers are located in the Netherlands, and they are committed to long-term preservation. 4TU.ResearchData offers at least 15 years of archival storage.</p>
+<p>To get started:</p>
+<ol type="1">
+<li>Log in to your 4TU.ResearchData account (using institutional access).</li>
+<li>From the dashboard navigate to upload a new project.</li>
+<li>Either choose open access or you also have the option to choose embargoed or restricted access.</li>
+<li>Upload your relevant files. 4TU.ResearchData supports Git for version control. Either just drag and drop datasets, or to deposit software you can push your Git repository to the 4TU remote. Add the remote:
+<ul>
+<li><code>git remote add 4tu [link automatically generated by 4TU]</code> Then, push your repository:</li>
+<li><code>git push 4tu --all</code></li>
+<li><code>git push 4tu --tags</code></li>
+</ul></li>
+<li>You will have a DOI number reserved, and versioning is also supported.</li>
+<li>Maintain and update your archive as necessary to reflect any significant changes or additions to the software.</li>
+</ol>
+<div class="callout callout-style-simple callout-tip no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<i class="fa-solid fa-info-circle" aria-label="info-circle"></i> <strong>Information</strong>
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul>
+<li>When you are ready to publish your software on 4TU.ResearchData, ensure to choose the “Software deposit” option in the ‘Files’ section at the bottom of the upload form. This option allows you to upload your software files directly from your Git repository. If you have additional files, you can also manually drag your software files from your local drive into the upload box.</li>
+<li>4TU.ResearchData also has a <a href="https://next.data.4tu.nl">sandbox</a> available.<br>
+</li>
+</ul>
+</div>
+</div>
+<div class="callout callout-style-simple callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<i class="fa-solid fa-signs-post" aria-label="signs-post"></i> Learn more
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul>
+<li>More information on 4TU.ResearchData can be found in their <a href="https://data.4tu.nl/info/about-4turesearchdata/frequently-asked-questions">FAQ</a>.</li>
+</ul>
+</div>
+</div>
 
-<script async="" defer="" src="https://scripts.simpleanalyticscdn.com/latest.js"></script><p>🚧 Coming soon! ⏳</p>
 
-
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -1422,8 +1569,8 @@ ul.task-list li input[type="checkbox"] {
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../../../docs/software/releases_archiving/releases.html" class="pagination-link" aria-label="Releases">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Releases</span>
+      <a href="../../../docs/software/releases_archiving/releases/releases_cran.html" class="pagination-link" aria-label="Release your R package on CRAN">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Release your R package on CRAN</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
@@ -1440,7 +1587,7 @@ ul.task-list li input[type="checkbox"] {
 </div>   
     <div class="nav-footer-center">
 <p>© 2025 <a href="https://dcc.tudelft.nl">TU Delft DCC</a>. Licensed under <a href="https://creativecommons.org/licenses/by/4.0/">CC-BY-4.0</a>.</p>
-<div class="toc-actions"><ul><li><a href="https://github.com/TU-Delft-DCC/TU-Delft-DCC.github.io/issues/new/choose" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div></div>
+<div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/TU-Delft-DCC/TU-Delft-DCC.github.io/issues/new/choose" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div></div>
     <div class="nav-footer-right">
 <p>Found these guides helpful? <a href="https://github.com/TU-Delft-DCC/TU-Delft-DCC.github.io"><i class="fa-regular fa-star" aria-label="star"></i> us on GitHub</a>.</p>
 </div>

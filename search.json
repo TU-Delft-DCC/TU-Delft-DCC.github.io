@@ -162,11 +162,137 @@
     ]
   },
   {
-    "objectID": "docs/software/releases_archiving/packaging.html",
-    "href": "docs/software/releases_archiving/packaging.html",
+    "objectID": "docs/software/releases_archiving/releases/releases_cran.html",
+    "href": "docs/software/releases_archiving/releases/releases_cran.html",
+    "title": "Release your R package",
+    "section": "",
+    "text": "After building and testing your R package, you can release it to CRAN. This process involves several steps to ensure that your package is ready for distribution. Unlike PyPI for Python, CRAN has specific requirements and guidelines that must be followed.",
+    "crumbs": [
+      "<ins>Guides</ins>",
+      "![](/docs/img/laptop-code-solid.svg){height=1em style='filter: invert(0.5) sepia(1) saturate(5) hue-rotate(175deg)'} **Research Software**",
+      "Publish and share",
+      "Releases",
+      "Release your R package on CRAN"
+    ]
+  },
+  {
+    "objectID": "docs/software/releases_archiving/releases/releases_cran.html#preparing-for-a-cran-submission",
+    "href": "docs/software/releases_archiving/releases/releases_cran.html#preparing-for-a-cran-submission",
+    "title": "Release your R package",
+    "section": "Preparing for a CRAN submission",
+    "text": "Preparing for a CRAN submission\nEnsure that your package is well-documented, tested, and follows CRAN policies. This includes having a DESCRIPTION file with all necessary fields filled out, a NAMESPACE file, and proper documentation for all functions. We already mentioned the use of devtools::check() and devtools::build() in the R packaging guide. These functions will help you prepare your package for submission. The package should pass all tests and checks without errors or warnings. The tarball created by devtools::build() will be used for submission.\nAdditionally, you would want to run devtools::check_rhub() to check your package on different platforms and R versions. The difference between devtools::check() and devtools::check_rhub() is that the former checks your package on your local machine, while the latter checks it on a remote server with different configurations.\nThis will help you identify any potential issues that may arise when users try to install your package on different systems. It can check your package on various platforms, including Windows, macOS, and different Linux distributions. It will also check for common issues that may arise when users try to install your package on different systems. While R-hub includes Windows builders, many developers specifically use devtools::check_win_devel() and devtools::check_win_release() before CRAN submission, as Windows compatibility issues are common.\nReview the CRAN policies and guidelines to ensure your package complies with their requirements. You can find the policies here.",
+    "crumbs": [
+      "<ins>Guides</ins>",
+      "![](/docs/img/laptop-code-solid.svg){height=1em style='filter: invert(0.5) sepia(1) saturate(5) hue-rotate(175deg)'} **Research Software**",
+      "Publish and share",
+      "Releases",
+      "Release your R package on CRAN"
+    ]
+  },
+  {
+    "objectID": "docs/software/releases_archiving/releases/releases_cran.html#submitting-to-cran",
+    "href": "docs/software/releases_archiving/releases/releases_cran.html#submitting-to-cran",
+    "title": "Release your R package",
+    "section": "Submitting to CRAN",
+    "text": "Submitting to CRAN\nEnsure that your package size is within the limits set by CRAN. You can check the size of your package using file.info() on the tarball created in the previous step. Then:\n\nCreate a CRAN account: If you don’t already have one, create an account on the CRAN website.\nSubmit your package: Use devtools::submit_cran() to submit your package to CRAN. This function will prompt you to enter your CRAN username and password, and it will automatically upload your package tarball to CRAN.\nFill out the submission form: After submitting your package, you will be directed to a web form where you can provide additional information about your package, such as a description, title, and any other relevant details.\nWait for CRAN review: After submitting your package, it will be reviewed by CRAN. This is an important distinction from PyPI, where packages are typically available immediately after submission. The CRAN team will check your package for compliance with their policies and guidelines.\n\nIf your package passes the review, it will be published on CRAN.\nIf there are issues, they will contact you for additional information or to request changes to your package.\n\nRespond to feedback: If the CRAN team requests changes or has questions about your package, make any necessary adjustments.\nRelease your package: Once your package has been approved, it will be available on CRAN for others to install and use.\n\n\nAdditional resources\nThe R packages book also has a detailed section on the CRAN submission process, including how to handle feedback from CRAN maintainers and how to respond to requests for changes.\n\n\n\n\n\n\n Learn more\n\n\n\n\nR packages book - CRAN submission\nCRAN policies\nCRAN submission process",
+    "crumbs": [
+      "<ins>Guides</ins>",
+      "![](/docs/img/laptop-code-solid.svg){height=1em style='filter: invert(0.5) sepia(1) saturate(5) hue-rotate(175deg)'} **Research Software**",
+      "Publish and share",
+      "Releases",
+      "Release your R package on CRAN"
+    ]
+  },
+  {
+    "objectID": "docs/software/releases_archiving/packaging/packaging_r.html",
+    "href": "docs/software/releases_archiving/packaging/packaging_r.html",
+    "title": "Creating an R package",
+    "section": "",
+    "text": "In this guide we will briefly touch the necessary steps to create an R package. For a more detailed guide, please refer to the excellent R packages book written by Hadley Wickham and Jennifer Bryan. The book is available online for free and is licensed under the CC BY-NC-ND 4.0 license. The book covers everything from the basics of package creation to advanced topics. It provides clear explanations, practical examples, and helpful tips to guide you through the process of building high-quality R packages.",
+    "crumbs": [
+      "<ins>Guides</ins>",
+      "![](/docs/img/laptop-code-solid.svg){height=1em style='filter: invert(0.5) sepia(1) saturate(5) hue-rotate(175deg)'} **Research Software**",
+      "Publish and share",
+      "Packaging",
+      "Create an R package"
+    ]
+  },
+  {
+    "objectID": "docs/software/releases_archiving/packaging/packaging_r.html#prerequisites",
+    "href": "docs/software/releases_archiving/packaging/packaging_r.html#prerequisites",
+    "title": "Creating an R package",
+    "section": "Prerequisites",
+    "text": "Prerequisites\nYou will need the following packages installed to develop R packages:\ninstall.packages(c(\"devtools\", \"roxygen2\", \"testthat\", \"usethis\"))\n\n\n\n\n\n\n Tip\n\n\n\nPlease refer to our R code documentation guide on how to document your R code. The guide covers the use of roxygen2 for generating documentation, which is a key part of creating an R package.",
+    "crumbs": [
+      "<ins>Guides</ins>",
+      "![](/docs/img/laptop-code-solid.svg){height=1em style='filter: invert(0.5) sepia(1) saturate(5) hue-rotate(175deg)'} **Research Software**",
+      "Publish and share",
+      "Packaging",
+      "Create an R package"
+    ]
+  },
+  {
+    "objectID": "docs/software/releases_archiving/packaging/packaging_r.html#creating-the-package-structure",
+    "href": "docs/software/releases_archiving/packaging/packaging_r.html#creating-the-package-structure",
+    "title": "Creating an R package",
+    "section": "Creating the package structure",
+    "text": "Creating the package structure\nTo create an R package, we can use the devtools and usethis packages which include a variety of tools aimed at package development. The devtools package provides a set of functions that simplify the process of package development in R. The usethis package is another option for creating an R package structure. It provides a set of functions that help you create and manage R packages, including functions for creating package skeletons, adding dependencies, and managing package metadata. The two packages are often used together. For example, you can use usethis to create a package structure and then use devtools to add functions, tests, and documentation.\nEither way, you can create a package structure using the following command:\n# Using devtools\ndevtools::create(\"your_package_name\")\n# Using usethis\nusethis::create_package(\"your_package_name\")\nAlternatively, you can create a package structure using the RStudio IDE. This is a more user-friendly option for those who prefer a graphical interface. To create a package structure in RStudio, follow these steps:\n\nOpen RStudio and create a new project.\nSelect “New Directory” and then “R Package”.\nChoose a name for your package and select the location where you want to create it.\nClick “Create Project” to generate the package structure.\n\nEvery option will create a basic folder structure with essential files including DESCRIPTION, NAMESPACE, and R/ directory. The DESCRIPTION file contains metadata about your package, such as its name, version, author, and dependencies. The NAMESPACE file defines the functions and objects that will be exported from your package. The R/ directory is where you will write your package functions.\n\n\n\n\n\n\n Tip\n\n\n\nPlease visit our Project structure guide for a recommendation on how to structure your R project.",
+    "crumbs": [
+      "<ins>Guides</ins>",
+      "![](/docs/img/laptop-code-solid.svg){height=1em style='filter: invert(0.5) sepia(1) saturate(5) hue-rotate(175deg)'} **Research Software**",
+      "Publish and share",
+      "Packaging",
+      "Create an R package"
+    ]
+  },
+  {
+    "objectID": "docs/software/releases_archiving/packaging/packaging_r.html#adding-functions-and-documentation",
+    "href": "docs/software/releases_archiving/packaging/packaging_r.html#adding-functions-and-documentation",
+    "title": "Creating an R package",
+    "section": "Adding functions and documentation",
+    "text": "Adding functions and documentation\nOnce you have the package structure for your R project, you will need to:\n\nEdit the DESCRIPTION file and fill in the package metadata, including the package name, version, author, licensing information and dependencies.\nAll your package functions should be placed in the R/ directory. You can create multiple R scripts in this directory to organize your functions logically.\nUse roxygen2 and devtools::document() to generate the documentation for your package based on the comments in your code. This will create .Rd files in the man/ directory.\nThe NAMESPACE file should be generated automatically by roxygen2 based on @export tags.\nUse devtools::build_vignettes() to build the package vignettes. This will create HTML files in the vignettes/ directory.",
+    "crumbs": [
+      "<ins>Guides</ins>",
+      "![](/docs/img/laptop-code-solid.svg){height=1em style='filter: invert(0.5) sepia(1) saturate(5) hue-rotate(175deg)'} **Research Software**",
+      "Publish and share",
+      "Packaging",
+      "Create an R package"
+    ]
+  },
+  {
+    "objectID": "docs/software/releases_archiving/packaging/packaging_r.html#testing-and-building-the-package",
+    "href": "docs/software/releases_archiving/packaging/packaging_r.html#testing-and-building-the-package",
+    "title": "Creating an R package",
+    "section": "Testing and building the package",
+    "text": "Testing and building the package\nOnce you have added your functions and documentation, you can test and build your package using the following steps:\n\nUse devtools::test() to run your package tests. This will run any tests you have written in the tests/ directory.\nTo load and test your package, use devtools::load_all(). This will load your package into the R session, allowing you to test it interactively.\nUse devtools::check() to check your package for any issues or errors. This will run a series of checks on your package and report any problems.\nUse devtools::build() to create a tarball of your package. This will create a .tar.gz file in the parent directory of your package.\nUse devtools::install() to install your package locally for testing. This will install the package from the tarball you just created.\n\n\n\n\n\n\n\n Learn more\n\n\n\n\nR packages book\nusethis package\ndevtools package",
+    "crumbs": [
+      "<ins>Guides</ins>",
+      "![](/docs/img/laptop-code-solid.svg){height=1em style='filter: invert(0.5) sepia(1) saturate(5) hue-rotate(175deg)'} **Research Software**",
+      "Publish and share",
+      "Packaging",
+      "Create an R package"
+    ]
+  },
+  {
+    "objectID": "docs/software/releases_archiving/packaging/packaging_r.html#next-steps",
+    "href": "docs/software/releases_archiving/packaging/packaging_r.html#next-steps",
+    "title": "Creating an R package",
+    "section": "Next steps",
+    "text": "Next steps\nThe next step would be to publish your package. Visit our Release your R package guide for information on how to publish your package to CRAN.",
+    "crumbs": [
+      "<ins>Guides</ins>",
+      "![](/docs/img/laptop-code-solid.svg){height=1em style='filter: invert(0.5) sepia(1) saturate(5) hue-rotate(175deg)'} **Research Software**",
+      "Publish and share",
+      "Packaging",
+      "Create an R package"
+    ]
+  },
+  {
+    "objectID": "docs/software/releases_archiving/packaging/packaging.html",
+    "href": "docs/software/releases_archiving/packaging/packaging.html",
     "title": "Packaging",
     "section": "",
-    "text": "🚧 Coming soon! ⏳",
+    "text": "Packaging allows developers to bundle their code into a format that is easily installable and manageable across different environments. By creating a package/library, you ensure that all necessary components, including dependencies and configuration files, are included in a single unit, simplifying the installation process for users. Here you can find how to package your Python or R projects for distribution.\n\n\n\n Create a Python package\nBundle your Python project.\n\nLearn more »\n\n\n\n Create an R package\nBundle your R project.\n\nLearn more »",
     "crumbs": [
       "<ins>Guides</ins>",
       "![](/docs/img/laptop-code-solid.svg){height=1em style='filter: invert(0.5) sepia(1) saturate(5) hue-rotate(175deg)'} **Research Software**",
@@ -179,7 +305,33 @@
     "href": "docs/software/releases_archiving/archiving.html",
     "title": "Archiving",
     "section": "",
-    "text": "🚧 Coming soon! ⏳",
+    "text": "Archiving your software ensures long-term availability and accessibility. By archiving your software, you can preserve its state at a specific point in time, making it easier for others to access and use it in the future.",
+    "crumbs": [
+      "<ins>Guides</ins>",
+      "![](/docs/img/laptop-code-solid.svg){height=1em style='filter: invert(0.5) sepia(1) saturate(5) hue-rotate(175deg)'} **Research Software**",
+      "Publish and share",
+      "Archiving"
+    ]
+  },
+  {
+    "objectID": "docs/software/releases_archiving/archiving.html#zenodo",
+    "href": "docs/software/releases_archiving/archiving.html#zenodo",
+    "title": "Archiving",
+    "section": "Zenodo",
+    "text": "Zenodo\nZenodo supports the archiving of research outputs, including software releases. Zenodo can automatically archive releases from GitHub repositories and assign a DOI, making each version citable.\nTo use Zenodo with GitHub:\n\nLink your GitHub account to Zenodo to allow access to repository information.\nEnable the repository you want to archive on the Zenodo dashboard.\nCreate a new release on GitHub. Zenodo will automatically archive this release and issue a DOI.\nYou can then share the DOI link provided by Zenodo in your project’s README or documentation, or paper, so a specific version of your software can be referenced.\n\n\n\n\n\n\n\n Tips\n\n\n\n\nZenodo can only access public repositories.\nIf you need to archive a repository from an organization, the owner of the organization might have to authorize the Zenodo application to access it.\nYou can also try out Zenodo Sandbox before archiving your projects to Zenodo. Zenodo Sandbox mimics the main Zenodo platform and is designed to test out the functionality of Zenodo without accidentally making mistakes with the real software/data and the main site. Since it’s an exact mirror of Zenodo it provides the same user experience and all the same tools and the same interface.\n\n\n\n\n\n\n\n\n\n Learn more\n\n\n\n\nReferencing and citing content",
+    "crumbs": [
+      "<ins>Guides</ins>",
+      "![](/docs/img/laptop-code-solid.svg){height=1em style='filter: invert(0.5) sepia(1) saturate(5) hue-rotate(175deg)'} **Research Software**",
+      "Publish and share",
+      "Archiving"
+    ]
+  },
+  {
+    "objectID": "docs/software/releases_archiving/archiving.html#tu.researchdata",
+    "href": "docs/software/releases_archiving/archiving.html#tu.researchdata",
+    "title": "Archiving",
+    "section": "4TU.ResearchData",
+    "text": "4TU.ResearchData\n4TU.ResearchData is another platform that offers reliable archiving of research data and software. Their servers are located in the Netherlands, and they are committed to long-term preservation. 4TU.ResearchData offers at least 15 years of archival storage.\nTo get started:\n\nLog in to your 4TU.ResearchData account (using institutional access).\nFrom the dashboard navigate to upload a new project.\nEither choose open access or you also have the option to choose embargoed or restricted access.\nUpload your relevant files. 4TU.ResearchData supports Git for version control. Either just drag and drop datasets, or to deposit software you can push your Git repository to the 4TU remote. Add the remote:\n\ngit remote add 4tu [link automatically generated by 4TU] Then, push your repository:\ngit push 4tu --all\ngit push 4tu --tags\n\nYou will have a DOI number reserved, and versioning is also supported.\nMaintain and update your archive as necessary to reflect any significant changes or additions to the software.\n\n\n\n\n\n\n\n Information\n\n\n\n\nWhen you are ready to publish your software on 4TU.ResearchData, ensure to choose the “Software deposit” option in the ‘Files’ section at the bottom of the upload form. This option allows you to upload your software files directly from your Git repository. If you have additional files, you can also manually drag your software files from your local drive into the upload box.\n4TU.ResearchData also has a sandbox available.\n\n\n\n\n\n\n\n\n\n\n Learn more\n\n\n\n\nMore information on 4TU.ResearchData can be found in their FAQ.",
     "crumbs": [
       "<ins>Guides</ins>",
       "![](/docs/img/laptop-code-solid.svg){height=1em style='filter: invert(0.5) sepia(1) saturate(5) hue-rotate(175deg)'} **Research Software**",
@@ -3103,7 +3255,7 @@
     "href": "docs/software/releases_archiving/index.html",
     "title": "Packaging, releases and archiving",
     "section": "",
-    "text": "🏗️ Under construction!",
+    "text": "Eventually your software will be at a sharable and publishable point. One way to distribute your software is to package it and release it on a platform like PyPI (Python Package Index), or CRAN (Comprehensive R Archive Network). Additionally, you want to archive your software for long-term preservation in repositories like Zenodo or 4TU.\n\n\n\n Packaging\nPackage your software.\n\nLearn more »\n\n\n\n Releases\nPublish your software.\n\nLearn more »\n\n\n\n Archiving\nArchive your software.\n\nLearn more »",
     "crumbs": [
       "<ins>Guides</ins>",
       "![](/docs/img/laptop-code-solid.svg){height=1em style='filter: invert(0.5) sepia(1) saturate(5) hue-rotate(175deg)'} **Research Software**",
@@ -3111,16 +3263,167 @@
     ]
   },
   {
-    "objectID": "docs/software/releases_archiving/releases.html",
-    "href": "docs/software/releases_archiving/releases.html",
+    "objectID": "docs/software/releases_archiving/packaging/packaging_python.html",
+    "href": "docs/software/releases_archiving/packaging/packaging_python.html",
+    "title": "Creating a Python package",
+    "section": "",
+    "text": "By turning your code into a package and hosting it on a platform like PyPI (Python Package Index), you enhance the quality and sustainability of your software, promote reuse and embrace contributions from external collaborators.",
+    "crumbs": [
+      "<ins>Guides</ins>",
+      "![](/docs/img/laptop-code-solid.svg){height=1em style='filter: invert(0.5) sepia(1) saturate(5) hue-rotate(175deg)'} **Research Software**",
+      "Publish and share",
+      "Packaging",
+      "Create a Python package"
+    ]
+  },
+  {
+    "objectID": "docs/software/releases_archiving/packaging/packaging_python.html#pyproject.toml",
+    "href": "docs/software/releases_archiving/packaging/packaging_python.html#pyproject.toml",
+    "title": "Creating a Python package",
+    "section": "pyproject.toml",
+    "text": "pyproject.toml\nIn the Development workflow section we looked at how to structure your project. Here we will focus on the pyproject.toml file, which is a configuration file used in Python projects to define build system requirements and project metadata. It is part of the PEP 517 and PEP 518 specifications, which aim to standardize the way Python projects are built and packaged. The pyproject.toml consists of TOML tables, and can include [build-system], [project], or [tools] tables.\n\n[build-system]\nThe [build-system] table is essential because it defines which build backend you will be using, and also which dependencies are required to build your project. This is needed because frontend tools like pip are not responsible for transforming your source code into a distributable package, and this is handled by one of the build backends (e.g. setuptools, Hatchling).\n\n\n\n\n\n\n Example\n\n\n\n\n\n[build-system]\nrequires = [\"setuptools&gt;=64.0\"]\nbuild-backend = \"setuptools.build_meta\"\n\n\n\n\n\n[project]\nUnder the [project] table you can describe your metadata. It can become quite extensive, but this is where you would list the name of your project, version, authors, licensing, dependencies specific to your project, and other requirements, as well as other optional information. For a detailed list of what can be included under [project] check the Declaring project metadata section of Python Packaging Guide.\n\n\n\n\n\n\n Example\n\n\n\n\n\n[project]\n\nname = \"exampleproject\"\n# Define the name of your project here. This is mandatory. Once you publish your package for the first time,\n# this name will be locked and associated with your project. It affects how users will\n# install your package via pip, like so:\n#\n# $ pip install exampleproject\n#\n# Your project will be accessible at: https://pypi.org/project/exampleproject/\n#\nversion = \"2.0.0\"\n# Version numbers should conform to PEP 440, and are also mandatory (but they can be set dynamic)\n# https://www.python.org/dev/peps/pep-0440/\n#\ndescription = \"Short description of your project\"\n# Provide a short, one-line description of what your project does. This is known as the\n# \"Summary\" metadata field:\n# https://packaging.python.org/specifications/core-metadata/#summary\n#\nreadme = \"README.md\"\n# Here, you can include a longer description which often mirrors your README file.\n# This description will appear on PyPI when your project is published.\n# This corresponds to the \"Description\" metadata field:\n# https://packaging.python.org/en/latest/guides/writing-pyproject-toml/#readme\n#\nrequires-python = \"&gt;=3.10\"\n# Indicate the versions of Python your project is compatible with. Unlike the\n# 'Programming Language' classifiers, 'pip install' will verify this field\n# and prevent installation if the Python version does not match.\n#\nlicense = {file = \"LICENSE.txt\"}\n# This specifies the license.\n# It can be a text (e.g. license = {text = \"MIT License\"}) or a reference to a file with the license text as shown above.\n#\nkeywords = [\"field_specific_keyword1\", \"field_specific_keyword2\"]\n# Keywords that describe your project. These assist users in discovering your project on PyPI searches.\n# These should be a comma-separated list reflecting the nature or domain of the project.\n#\nauthors = [\n  {name = \"A. Doe\", email = \"author@tudelft.nl\" }\n]\n# Information about the original authors of the project and their contact details.\n#\nmaintainers = [\n  {name = \"B. Smith\", email = \"maintainer@tudelft.nl\" }\n]\n# Information about the current maintainers of the project and their contact details.\n#\n#\n#\n# Classifiers help categorize the project on PyPI and aid in discoverability.\n# For a full list of valid classifiers, see https://pypi.org/classifiers/\nclassifiers = [\n  # Indicate the development status of your project (maturity). Commonly, this is\n  #   3 - Alpha\n  #   4 - Beta\n  #   5 - Stable\n  #.  6 - Mature\n  \"Development Status :: 4 - Beta\",\n\n  # Target audience\n  \"Intended Audience :: Developers\",\n  \"Topic :: Scientific/Engineering\",\n\n  # License type\n  \"License :: OSI Approved :: MIT License\",\n\n  # Python versions your software supports. This is not checked by pip install, and is different from \"requires-python\".\n  \"Programming Language :: Python :: 3\",\n  \"Programming Language :: Python :: 3.8\",\n  \"Programming Language :: Python :: 3.9\",\n  \"Programming Language :: Python :: 3.10\",\n  \"Programming Language :: Python :: 3.11\",\n  \"Programming Language :: Python :: 3 :: Only\",\n]\n\n# Dependencies needed by your project. These packages will be installed by pip when\n# your project is installed. Ensure these are existing, valid packages.\n#\n# For more on how this field compares to pip's requirements files, see:\n# https://packaging.python.org/discussions/install-requires-vs-requirements/\ndependencies = [\n  \"numpy\", \n  \"pandas&gt;=1.5.3\", \n  \"matplotlib&gt;=3.7.1\"\n]\n#\n# You can define additional groups of dependencies here (e.g., development dependencies).\n# These can be installed using the \"extras\" feature of pip, like so:\n#\n#   $ pip install exampleproject[dev]\n#\n# These are often referred to as \"extras\" and provide optional functionality.\n[project.optional-dependencies]\ntest = [\"coverage\"]\n#\n[project.urls]\n\"Homepage\" = \"https://github.com/your_handle_or_organisation\"\n\"Source\" = \"https://github.com/your_handle_or_organisation/exampleproject\"\n#\n# List of relevant URLs for your project. These are displayed on the left sidebar of your PyPI page.\n# This can include links to the homepage, source code, changelog, funding, etc.\n#\n#\n# This [project] example was adopted from https://github.com/pypa/sampleproject/blob/main/pyproject.toml\n\n\n\n\n\n[tools]\nThe [tool] table contains subtables specific to each tool. For example, Poetry uses the [tool.poetry] table instead of the [project] table.\n\n\n\n\n\n\n Example: Poetry project setup\n\n\n\n\n\n\n\n\n\n\n\n\n Difference between [build system] and [project]\n\n\n\n The [build-system] and [project] tables serve distinct roles. The [build-system] table must always be included, as it specifies the build tool used, regardless of the backend. On the other hand, the [project] table is recognized by most build backends for defining project metadata, though some backends may not and use a different format.\n\n\n\n\n\n\n\n\n Learn more\n\n\n\n\nWriting your pyproject.toml\npyproject.toml specification\nConfiguring setuptools using pyproject.toml files\n\n\n\nBefore shifting to pyproject.toml, a common approach was to use a setup.py build script. You might encounter them in legacy projects.\n\n\n\n\n\n\n Learn more\n\n\n\n\nIs setup.py deprecated?\nHow to modernize a setup.py based project?",
+    "crumbs": [
+      "<ins>Guides</ins>",
+      "![](/docs/img/laptop-code-solid.svg){height=1em style='filter: invert(0.5) sepia(1) saturate(5) hue-rotate(175deg)'} **Research Software**",
+      "Publish and share",
+      "Packaging",
+      "Create a Python package"
+    ]
+  },
+  {
+    "objectID": "docs/software/releases_archiving/packaging/packaging_python.html#package-structuring",
+    "href": "docs/software/releases_archiving/packaging/packaging_python.html#package-structuring",
+    "title": "Creating a Python package",
+    "section": "Package structuring",
+    "text": "Package structuring\nIf you want to distribute your Python code as a package, you will need to have an __init__.py file in the root directory of your package. This allows Python to treat that directory as a package that can be imported. Every subfolder should also contain an __init__.py file.\nWhen importing a package, Python searches through the directories on sys.path looking for the package subdirectory. The presence of __init__.py files within these directories is crucial, as it tells Python that these directories should be treated as packages. This mechanism helps avoid the scenario where directories with commonplace names accidentally overshadow valid modules that appear later in the search path.\nWhile __init__.py can simply be an empty file, serving just to mark a directory as a package, it can also contain code that runs when the package is imported. This code can initialize package-level variables, import submodules, and other tasks.\nReferring to the project structure in our Development workflow guide, we can build on top of that structure.\n\n\n\n\n\n\n Reminder about flat vs src layout\n\n\n\n\n\nIn a flat layout, the project’s root directory directly contains the package directories and modules. This layout is straightforward and works well for simple projects.\nyour_project/\n│\n├── your_pkg_name/ \n│   ├── __init__.py\n│   ├── module.py\n│   └── subpkg1/\n│       └── __init__.py\n│\n...\nThe src layout places the package directory inside a top-level src directory. This layout helps prevent accidental imports from the current working directory, ensuring that you always import from the installed package rather than the source directory.\nyour_project/\n│\n├── src/\n│   └── your_pkg_name/ \n│       ├── __init__.py\n│       ├── module.py\n│       └── subpkg1/\n│           └── __init__.py\n│\n...\n\n\n\nSo our example package structure would now look like this:\n\nPython\n\n\nyour_project/\n│\n├── docs/                     # Documentation directory\n├── notebooks/                # Jupyter notebooks\n├── src/                      # Contains your main code\n│   └── your_pkg_name/        # A folder where your organized code lives - your package\n│       ├── __init__.py       # A marker file for package initialization\n│       ├── module.py         # A nested module\n│       └── subpkg1/          # A sub-package\n│           └── __init__.py   # A marker file for sub-package initialization\n├── tests/                    # Your test directory  \n│\n├── data/                     # Data files used in the project (if applicable)\n├── processed_data/           # Files from your analysis (if applicable)\n├── results/                  # Results (if applicable)\n│\n├── .gitignore                # Untracked files \n├── pyproject.toml            # TOML file\n│\n│\n├── README.md                 # README\n└── LICENSE                   # License information\n\n\n\nYou might notice that in our updated structure the requirements.txt is absent. In many cases, if you have a pyproject.toml file, you may not need a requirements.txt file anymore, since the pyproject.toml file is part of the new standardized Python packaging format (defined in PEP 518) and can include dependencies.\nHowever, some deployment and CI/CD pipelines might still expect a requirements.txt file, because a set of fixed dependency versions creates more stable pipelines. For simple projects, you can still prefer to use a requirements.txt for its simplicity and wide adoption.\n\nIt is not considered best practice to use the pyproject.toml to pin dependencies to specific versions or to specify sub-dependencies (i.e. dependencies of your dependencies). This is overly-restrictive, and prevents a user from gaining the benefit of dependency upgrades. For more info, see this discussion.\n\n\nlib/ and build/ directories\nIt is possible that you might have lib/ and build/ directories in your project. These directories are not part of the standard Python package structure, but they can be created by certain tools or processes.\n\nThe build/ directory is typically used to store compiled or built artifacts of your project, such as binary executables, wheels, or other distribution files. This directory is usually not part of your source code repository and is generated during the (automated) build or packaging process.\nThe lib/ directory stores third-party libraries or dependencies that are not installed through a package manager. By specifying your project’s dependencies in the pyproject.toml file, and using a package manager like pip or poetry to install and manage them, these dependencies will be automatically downloaded and installed in the appropriate location (usually the site packages directory).\n\n\n\n\n\n\n\n Learn more\n\n\n\n\nGood integration practices\nPython documentation packages",
+    "crumbs": [
+      "<ins>Guides</ins>",
+      "![](/docs/img/laptop-code-solid.svg){height=1em style='filter: invert(0.5) sepia(1) saturate(5) hue-rotate(175deg)'} **Research Software**",
+      "Publish and share",
+      "Packaging",
+      "Create a Python package"
+    ]
+  },
+  {
+    "objectID": "docs/software/releases_archiving/packaging/packaging_python.html#local-package-installation",
+    "href": "docs/software/releases_archiving/packaging/packaging_python.html#local-package-installation",
+    "title": "Creating a Python package",
+    "section": "Local package installation",
+    "text": "Local package installation\nBy installing a Python package locally during development you can test your changes in an environment that mimics how the package will be used once it is deployed. This process allows you to ensure that your package works correctly when installed and imported by others.\nYou can use pip to install your package in editable mode (-e). This way, changes you make to the source code are immediately available without needing to reinstall the package.\npip install -e .",
+    "crumbs": [
+      "<ins>Guides</ins>",
+      "![](/docs/img/laptop-code-solid.svg){height=1em style='filter: invert(0.5) sepia(1) saturate(5) hue-rotate(175deg)'} **Research Software**",
+      "Publish and share",
+      "Packaging",
+      "Create a Python package"
+    ]
+  },
+  {
+    "objectID": "docs/software/releases_archiving/packaging/packaging_python.html#next-steps",
+    "href": "docs/software/releases_archiving/packaging/packaging_python.html#next-steps",
+    "title": "Creating a Python package",
+    "section": "Next steps",
+    "text": "Next steps\nOnce you have your package ready, you can publish it. Visit our Release your Python package guide for information on how to publish your package to PyPI.",
+    "crumbs": [
+      "<ins>Guides</ins>",
+      "![](/docs/img/laptop-code-solid.svg){height=1em style='filter: invert(0.5) sepia(1) saturate(5) hue-rotate(175deg)'} **Research Software**",
+      "Publish and share",
+      "Packaging",
+      "Create a Python package"
+    ]
+  },
+  {
+    "objectID": "docs/software/releases_archiving/releases/releases.html",
+    "href": "docs/software/releases_archiving/releases/releases.html",
     "title": "Releases",
     "section": "",
-    "text": "🚧 Coming soon! ⏳",
+    "text": "Once you have your software packaged, you can release it to platforms like PyPI or CRAN. While your software might be already publicly available on GitHub, releasing it to a package repository allows easy access and installation for users. The most common platforms for releasing software packages are PyPI for Python packages and CRAN for R packages.",
     "crumbs": [
       "<ins>Guides</ins>",
       "![](/docs/img/laptop-code-solid.svg){height=1em style='filter: invert(0.5) sepia(1) saturate(5) hue-rotate(175deg)'} **Research Software**",
       "Publish and share",
       "Releases"
+    ]
+  },
+  {
+    "objectID": "docs/software/releases_archiving/releases/releases.html#changelog",
+    "href": "docs/software/releases_archiving/releases/releases.html#changelog",
+    "title": "Releases",
+    "section": "Changelog",
+    "text": "Changelog\nMaintaining a changelog provides a clear history of changes made to your software and version information. It helps users and developers understand what has changed between versions, what modifications, fixes, and enhancements have been made.\n\nHow do I make a good changelog?\nExample from eScience Center",
+    "crumbs": [
+      "<ins>Guides</ins>",
+      "![](/docs/img/laptop-code-solid.svg){height=1em style='filter: invert(0.5) sepia(1) saturate(5) hue-rotate(175deg)'} **Research Software**",
+      "Publish and share",
+      "Releases"
+    ]
+  },
+  {
+    "objectID": "docs/software/releases_archiving/releases/releases.html#semantic-versioning",
+    "href": "docs/software/releases_archiving/releases/releases.html#semantic-versioning",
+    "title": "Releases",
+    "section": "Semantic versioning",
+    "text": "Semantic versioning\nSemantic Versioning (SemVer) is a versioning scheme that reflects changes in your software systematically. It consists of three numbers: major, minor, and patch (e.g., 1.9.1).\n\nMajor version increments are meant for significant changes that may make backward-incompatible changes.\nMinor version increments add functionality in a backward-compatible manner.\nPatch version increments are for backward-compatible bug fixes only.\n\nAdopting this practice helps both users and developers anticipate the impact of updating the software. It clearly communicates the nature of the changes.",
+    "crumbs": [
+      "<ins>Guides</ins>",
+      "![](/docs/img/laptop-code-solid.svg){height=1em style='filter: invert(0.5) sepia(1) saturate(5) hue-rotate(175deg)'} **Research Software**",
+      "Publish and share",
+      "Releases"
+    ]
+  },
+  {
+    "objectID": "docs/software/releases_archiving/releases/releases.html#release-notification",
+    "href": "docs/software/releases_archiving/releases/releases.html#release-notification",
+    "title": "Releases",
+    "section": "Release notification",
+    "text": "Release notification\nAfter a release, it is important to communicate what has changed. Release notes are detailed descriptions of the new changes, fixes, and sometimes known issues. They are usually published alongside the changelog in repositories. You could use GitHub Releases, it is a feature that allows you to present your software, along with the corresponding source code, changelog, and release notes.\nIt is typical for a release on PyPI or CRAN to mirror what was put under a GitHub release. This is not a requirement, but it is a good practice to keep the information consistent across platforms.\n\nAutomatically generated release notes\nGitHub provides a useful feature to automatically generate release notes for new versions of your software. It scans the commits between your releases and compiles a summary of the changes, fixes, and enhancements made. This can not only save time but also help to avoid undocumenting changes.\nHow to enable automatic release notes:\n\nGo to your repository on GitHub and navigate to the releases section.\nDraft a new release. When you select a tag, GitHub will offer an option to auto-generate the release notes based on the commits since the last release.\nCustomize the release notes. You can edit the auto-generated content to add more details or format it according to your preferences.\nWhen publishing, the release notes will be attached to your release.\n\nThis feature is particularly helpful for maintaining accurate and up-to-date release documentation.",
+    "crumbs": [
+      "<ins>Guides</ins>",
+      "![](/docs/img/laptop-code-solid.svg){height=1em style='filter: invert(0.5) sepia(1) saturate(5) hue-rotate(175deg)'} **Research Software**",
+      "Publish and share",
+      "Releases"
+    ]
+  },
+  {
+    "objectID": "docs/software/releases_archiving/releases/releases_pypi.html",
+    "href": "docs/software/releases_archiving/releases/releases_pypi.html",
+    "title": "Release your Python package",
+    "section": "",
+    "text": "After bundling your source code into a package, you can publish it to PyPI. This will allow others to easily install your package using pip.",
+    "crumbs": [
+      "<ins>Guides</ins>",
+      "![](/docs/img/laptop-code-solid.svg){height=1em style='filter: invert(0.5) sepia(1) saturate(5) hue-rotate(175deg)'} **Research Software**",
+      "Publish and share",
+      "Releases",
+      "Release your Python package on PyPI"
+    ]
+  },
+  {
+    "objectID": "docs/software/releases_archiving/releases/releases_pypi.html#testing-packaging-on-testpypi-before-publishing-to-pypi",
+    "href": "docs/software/releases_archiving/releases/releases_pypi.html#testing-packaging-on-testpypi-before-publishing-to-pypi",
+    "title": "Release your Python package",
+    "section": "Testing packaging on TestPyPI before publishing to PyPI",
+    "text": "Testing packaging on TestPyPI before publishing to PyPI\nBy testing your package on TestPyPI before publishing it to PyPI, you can identify and address any issues with your package metadata, dependencies, or distribution files before making your package publicly available.\nYou’ll need to create an account for TestPyPI. The next step is to create distribution packages for your package. These packages are archives that can be uploaded to TestPyPI/PyPI and installed using pip. Then you can use Twine to upload your package to TestPyPI.\n\nRegister on TestPyPI.\nCheck if PyPA build is installed:\npip install --upgrade build\nTo create distribution packages, navigate to the directory where your pyproject.toml file is located, and run:\n\n\nLinux/macOSWindows\n\n\npython3 -m build\n\n\npy -m build\n\n\n\n\n\n\n\n\n\n Output\n\n\n\nAfter running this command, you’ll see a substantial amount of text output. Upon completion, it will generate two files (a wheel and .tar.gz file) in the dist/ directory. The .tar.gz file represents a source distribution, while the .whl file is a built distribution. More recent versions of pip prioritize the installation of built distributions, reverting to source distributions if necessary. It’s advisable to always upload a source distribution and include built distributions compatible with the platforms your project supports.\n\n\n\nThen, install Twine:\npip install twine\nUpload to TestPyPI by specifying the --repository flag:\ntwine upload --repository testpypi dist/*\n\nYou will be prompted to enter your username and password for TestPyPI.\nIf you have a ~/.pypirc file, Twine will use the credentials from there.\n\nYou will find your package on https://test.pypi.org/project/your_pkg_name. You can then pip install it by adding the --index-url flag:\npip install --index-url https://test.pypi.org/simple/your_pkg_name",
+    "crumbs": [
+      "<ins>Guides</ins>",
+      "![](/docs/img/laptop-code-solid.svg){height=1em style='filter: invert(0.5) sepia(1) saturate(5) hue-rotate(175deg)'} **Research Software**",
+      "Publish and share",
+      "Releases",
+      "Release your Python package on PyPI"
+    ]
+  },
+  {
+    "objectID": "docs/software/releases_archiving/releases/releases_pypi.html#publishing-to-pypi",
+    "href": "docs/software/releases_archiving/releases/releases_pypi.html#publishing-to-pypi",
+    "title": "Release your Python package",
+    "section": "Publishing to PyPI",
+    "text": "Publishing to PyPI\nOnce you have tested your package on TestPyPI and ensured everything works as expected, you can publish it to the official PyPI repository. It will be accessible to anyone in the Python community, allowing them to install your package using a simple pip install your_pkg_name command.\nYou’ll also need an account for PyPI. TestPyPI and PyPI use separate databases so you need to register on both sites. However, the workflow is about the same:\n\nRegister on PyPI.\nRun pip install --upgrade build to ensure you have the latest version of the build tool.\nNavigate to the directory where your pyproject.toml file is located, and run:\n\n\nLinux/macOSWindows\n\n\npython3 -m build\n\n\npy -m build\n\n\n\n\nUpload your package to PyPI:\ntwine upload dist/*\n\nInput your credentials associated with the account you registered on the official PyPI platform.\n\nYour package is live on PyPI!\nYou can now install it by simply pip install your_pkg_name.\n\n\n\n\n\n\n\n Tip\n\n\n\nIf you need a particular name for your package, check whether it is taken on PyPI and claim it as soon as possible if available.\n\n\n\n\n\n\n\n\n Learn more\n\n\n\n\nRealPython Packaging guide\nTwine Read the Docs\nUsing TestPyPI",
+    "crumbs": [
+      "<ins>Guides</ins>",
+      "![](/docs/img/laptop-code-solid.svg){height=1em style='filter: invert(0.5) sepia(1) saturate(5) hue-rotate(175deg)'} **Research Software**",
+      "Publish and share",
+      "Releases",
+      "Release your Python package on PyPI"
     ]
   },
   {
