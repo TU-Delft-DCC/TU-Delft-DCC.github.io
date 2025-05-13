@@ -453,14 +453,8 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../docs/data/planning/privacy_and_security.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Privacy and security</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../docs/data/planning/ethics.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Ethics</span></a>
+  <a href="../../docs/data/planning/privacy.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Privacy</span></a>
   </div>
 </li>
       </ul>
@@ -1005,8 +999,17 @@ ul.task-list li input[type="checkbox"] {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#data-versioning" id="toc-data-versioning" class="nav-link active" data-scroll-target="#data-versioning">Data versioning</a>
+  <ul class="collapse">
+  <li><a href="#dvc" id="toc-dvc" class="nav-link" data-scroll-target="#dvc">DVC</a></li>
+  </ul></li>
+  </ul>
+<div class="toc-actions"><ul><li><a href="https://github.com/TU-Delft-DCC/TU-Delft-DCC.github.io/issues/new/choose" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -1015,7 +1018,11 @@ ul.task-list li input[type="checkbox"] {
 <header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../docs/data/getting_started.html"><img src="../../docs/img/folder-regular.svg" style="filter: invert(0.5) sepia(1) saturate(5) hue-rotate(175deg);height:1em"> <strong>Data Management</strong></a></li><li class="breadcrumb-item"><a href="../../docs/data/data_processing.html">Data processing</a></li></ol></nav>
 <div class="quarto-title">
 <h1 class="title">Data processing</h1>
-</div>
+  <div class="quarto-categories">
+    <div class="quarto-category">data processing</div>
+    <div class="quarto-category">version control</div>
+  </div>
+  </div>
 
 
 
@@ -1036,16 +1043,32 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
+<script async="" defer="" src="https://scripts.simpleanalyticscdn.com/latest.js"></script>
+<p>Data processing is a broad term and is often conflated with related terms. It typically includes steps like data cleaning and data transformation. Some workflows may extend this to preliminary analysis, though visualizations are generally considered a separate stage. The term data wrangling is frequently used interchangeably with early processing stages. The specific steps involved can vary depending on the type of data and the goals of the analysis.</p>
+<div class="callout callout-style-simple callout-important no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<i class="fa-solid fa-info-circle" aria-label="info-circle"></i> Learn more
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>We would like to refer you to the <a href="https://phdsupervisors.tudl.tudelft.nl/phase/gather-create-analyse/">Gather/Create &amp; Analyse</a> section of the <em>TU Delft Navigating Research Data and Software: A Practical Guide for PhD Supervisors</em> guide for more information.</p>
+</div>
+</div>
+<section id="data-versioning" class="level2">
+<h2 class="anchored" data-anchor-id="data-versioning">Data versioning</h2>
+<p>Data versioning is the process of assigning unique version numbers to different iterations of a dataset. This practice is important when working with machine learning models, as it allows to track changes made to the data over time and ensure that the correct version of the data is used for training and testing. Data versioning can also help with reproducibility, because it allows to recreate previous versions of the data and compare results across different iterations.</p>
+<p>There are a couple of techniques and tools for data versioning. For example, Git is typically used to track source code and software versions, but is not well-suited for large datasets. However, Git LFS (Large File Storage) can be used to manage large files in a Git repository. Other tools like DVC (Data Version Control) are specifically designed for data versioning and can be used to track changes to datasets and models over time. DVC integrates with Git and allows to version control data files, models, and experiments in a way that is similar to how Git works for source code.</p>
+<section id="dvc" class="level3">
+<h3 class="anchored" data-anchor-id="dvc">DVC</h3>
+<p>DVC has very comprehensive documentation, tutorials and videos available, most of the resources are available on their <a href="https://dvc.org/doc">homepage</a>. It covers how to get started with data versioning, how to integrate it with Git, and how to use DVC with different cloud storage providers (e.g.&nbsp;AWS S3).</p>
 
-<script async="" defer="" src="https://scripts.simpleanalyticscdn.com/latest.js"></script><p>🏗️ Under construction! 🚧</p>
-<!--
 
-- Introduction
-- Data versioning
-
--->
-
-
+</section>
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -1480,7 +1503,7 @@ ul.task-list li input[type="checkbox"] {
 </div>   
     <div class="nav-footer-center">
 <p>© 2025 <a href="https://dcc.tudelft.nl">TU Delft DCC</a>. Licensed under <a href="https://creativecommons.org/licenses/by/4.0/">CC-BY-4.0</a>.</p>
-<div class="toc-actions"><ul><li><a href="https://github.com/TU-Delft-DCC/TU-Delft-DCC.github.io/issues/new/choose" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div></div>
+<div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/TU-Delft-DCC/TU-Delft-DCC.github.io/issues/new/choose" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div></div>
     <div class="nav-footer-right">
 <p>Found these guides helpful? <a href="https://github.com/TU-Delft-DCC/TU-Delft-DCC.github.io"><i class="fa-regular fa-star" aria-label="star"></i> us on GitHub</a>.</p>
 </div>

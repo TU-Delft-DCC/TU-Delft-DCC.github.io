@@ -6,6 +6,7 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="dcterms.date" content="2025-05-05">
 
 <title>Publishing data</title>
 <style>
@@ -453,14 +454,8 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../docs/data/planning/privacy_and_security.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Privacy and security</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../../docs/data/planning/ethics.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Ethics</span></a>
+  <a href="../../../docs/data/planning/privacy.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Privacy</span></a>
   </div>
 </li>
       </ul>
@@ -1005,8 +1000,15 @@ ul.task-list li input[type="checkbox"] {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#tu.researchdata" id="toc-tu.researchdata" class="nav-link active" data-scroll-target="#tu.researchdata">4TU.ResearchData</a></li>
+  <li><a href="#zenodo" id="toc-zenodo" class="nav-link" data-scroll-target="#zenodo">Zenodo</a></li>
+  </ul>
+<div class="toc-actions"><ul><li><a href="https://github.com/TU-Delft-DCC/TU-Delft-DCC.github.io/issues/new/choose" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -1015,13 +1017,24 @@ ul.task-list li input[type="checkbox"] {
 <header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../../docs/data/getting_started.html"><img src="../../../docs/img/folder-regular.svg" style="filter: invert(0.5) sepia(1) saturate(5) hue-rotate(175deg);height:1em"> <strong>Data Management</strong></a></li><li class="breadcrumb-item"><a href="../../../docs/data/data_publishing/archival_publishing_index.html">Archive and publish</a></li><li class="breadcrumb-item"><a href="../../../docs/data/data_publishing/publishing.html">Publishing data</a></li></ol></nav>
 <div class="quarto-title">
 <h1 class="title">Publishing data</h1>
-</div>
+  <div class="quarto-categories">
+    <div class="quarto-category">publishing</div>
+    <div class="quarto-category">4tu.researchdata</div>
+    <div class="quarto-category">zenodo</div>
+  </div>
+  </div>
 
 
 
 <div class="quarto-title-meta">
 
     
+    <div>
+    <div class="quarto-title-meta-heading">Last reviewed</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">May 5, 2025</p>
+    </div>
+  </div>
   
     <div>
     <div class="quarto-title-meta-heading">Last modified</div>
@@ -1036,26 +1049,67 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
+<script async="" defer="" src="https://scripts.simpleanalyticscdn.com/latest.js"></script>
+<p>Data repositories are online locations for storing research data long term. When data is published in a repository, it is (often) assigned a persistent digital object identifier (DOI), which ensures that the data is discoverable and accessible over time. When published, the data should be accompanied by an appropriate license and metadata describing your data.</p>
+<div class="callout callout-style-simple callout-important no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<i class="fa-solid fa-info-circle" aria-label="info-circle"></i> Important
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul>
+<li>Check the <a href="https://phdsupervisors.tudl.tudelft.nl/phase/write-publish/">Write &amp; Publish</a> section from the <em>TU Delft Navigating Research Data and Software: A Practical Guide for PhD Supervisors</em> guide for more information on publishing your data. It also includes a <a href="https://phdsupervisors.tudl.tudelft.nl/knowledge-base/publishing-requirements-for-data-and-code-for-tu-delft-phd-candidates/?parent_phaseid=0&amp;phaseid=250">list of requirements</a> for publishing data.</li>
+<li>If you would like to publish your data collection in 4TU.ResearchData or in another data repository, it is advisable that you discuss the publishing process, including the reuse and <a href="https://www.tudelft.nl/en/library/research-data-management/r/publish/cite-your-data">citation</a> of the original datasets and appropriate <a href="https://data.4tu.nl/info/en/use/publish-cite/upload-your-data-in-our-data-repository/licencing">licensing</a> options with your faculty <a href="https://www.tudelft.nl/library/research-data-management/r/support/data-stewardship/contact">data steward</a>.</li>
+</ul>
+</div>
+</div>
+<section id="tu.researchdata" class="level2">
+<h2 class="anchored" data-anchor-id="tu.researchdata">4TU.ResearchData</h2>
+<p>Choosing a repository for publishing your data depends on factors such as storage costs, funding or publication requirements, and security needs. TU Delft provides an in-house data repository, <a href="https://data.4tu.nl/">4TU.ResearchData</a>, supporting versioning and a GitHub remote as part of their services. Additionally, when publishing your data, your submission <strong>is reviewed</strong> to ensure that repository requirements are met. You will receive a DOI for your dataset, which can be used to cite your data in publications. All data <strong>is stored in the Netherlands</strong>, with two locations in Delft and a backup in Leiden.</p>
+<div class="callout callout-style-simple callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<i class="fa-solid fa-signs-post" aria-label="signs-post"></i> Learn more
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><a href="https://data.4tu.nl/info/about-your-data/getting-started">Getting started with 4TU.ResearchData</a></p>
+</div>
+</div>
+</section>
+<section id="zenodo" class="level2">
+<h2 class="anchored" data-anchor-id="zenodo">Zenodo</h2>
+<p>Developed by CERN, <a href="https://zenodo.org/">Zenodo</a> is an open repository that allows researchers to upload and share their research outputs, including datasets, publications, and software. Similarly to 4TU.ResearchData you will receive a DOI for your dataset. Zenodo supports versioning and has GitHub integration.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../../../docs/img/data-repo.jpeg" class="img-fluid figure-img"></p>
+<figcaption>Selecting a data repository. The Turing Way Community. This illustration is created by Scriberia with The Turing Way community, used under a CC-BY 4.0 licence. DOI: 10.5281/zenodo.3332807</figcaption>
+</figure>
+</div>
+<p>Regardless of the repository you choose, it is important to ensure that your data is properly documented. This includes describing the content, structure, and context of your data, as well as any relevant documentation that is needed to understand and use the data.</p>
+<div class="callout callout-style-simple callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<i class="fa-solid fa-signs-post" aria-label="signs-post"></i> Learn more
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>For a more comprehensive list of repositories and how to select one, you can check the <a href="https://book.the-turing-way.org/reproducible-research/rdm/rdm-repository">Turing Way book</a> or the <a href="https://www.tudelft.nl/en/library/research-data-management/r/publish/publish-research-data">TU Delft Library Guidelines</a></p>
+</div>
+</div>
 
-<script async="" defer="" src="https://scripts.simpleanalyticscdn.com/latest.js"></script><p>🚧 Coming soon! ⏳</p>
-<!--
 
-:::{.callout-important appearance="simple" icon="false"}
-###  Important
-If you would like to publish your data collection in 4TU.ResearchData or another data repository, it is advisable that you discuss the publishing process, including the reuse and [citation](https://www.tudelft.nl/en/library/research-data-management/r/publish/cite-your-data) of the original datasets and appropriate [licensing](https://data.4tu.nl/info/en/use/publish-cite/upload-your-data-in-our-data-repository/licencing) options with your faculty [data steward](https://www.tudelft.nl/library/research-data-management/r/support/data-stewardship/contact).
-:::
-
-## 4TU.ResearchData
-
-Choosing a repository for publishing your data depends on factors such as storage costs, funding or publication requirements, and security needs. TU Delft provides an in-house data repository, [4TU.ResearchData](https://data.4tu.nl/), as one of many available options. 
-
-## Zenodo
-
-## DOI and citation
-
--->
-
-
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -1490,7 +1544,7 @@ Choosing a repository for publishing your data depends on factors such as storag
 </div>   
     <div class="nav-footer-center">
 <p>© 2025 <a href="https://dcc.tudelft.nl">TU Delft DCC</a>. Licensed under <a href="https://creativecommons.org/licenses/by/4.0/">CC-BY-4.0</a>.</p>
-<div class="toc-actions"><ul><li><a href="https://github.com/TU-Delft-DCC/TU-Delft-DCC.github.io/issues/new/choose" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div></div>
+<div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/TU-Delft-DCC/TU-Delft-DCC.github.io/issues/new/choose" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div></div>
     <div class="nav-footer-right">
 <p>Found these guides helpful? <a href="https://github.com/TU-Delft-DCC/TU-Delft-DCC.github.io"><i class="fa-regular fa-star" aria-label="star"></i> us on GitHub</a>.</p>
 </div>

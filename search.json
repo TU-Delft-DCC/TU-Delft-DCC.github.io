@@ -1535,517 +1535,28 @@
     "text": "testing-pyramid.jpg\n\n\n\n\ntesting-pyramid.jpg\n\n\nPermission: “All I ask is that you provide attribution to me (e.g., credit @SketchingDev and link back to the original source).” See https://github.com/SketchingDev/sketchingdev.github.io/issues/20#issuecomment-2690689502"
   },
   {
-    "objectID": "docs/data/planning/privacy_and_security.html",
-    "href": "docs/data/planning/privacy_and_security.html",
-    "title": "Privacy and security",
+    "objectID": "docs/data/planning/privacy.html",
+    "href": "docs/data/planning/privacy.html",
+    "title": "Privacy",
     "section": "",
-    "text": "🚧 Coming soon! ⏳",
+    "text": "In case you are working with sensitive data, it is important to consider the privacy of the individuals involved. This includes ensuring that personal data is collected, stored, and processed in compliance with relevant laws and regulations.\nYou might need to obtain informed consent from participants before collecting their data, and you should also need to anonymize or pseudonymize data to protect the privacy of individuals. Additionally, you should be aware of the ethical implications of your research and ensure that you are conducting it in a responsible manner.\n\n\n\n\n\n\n Important\n\n\n\n\nReach out to your faculty data steward for more information.\nExplore TU Delft privacy related resources:\n\nTU Delft Personal Data page\nTU Delft Personal Research Data Workflow Guide\nTU Delft Privacy SharePoint site\nPhD Supervisors guide - Personal data and human subjects in research\n\nAdditionally, Utrecht University has a Data Privacy handbook that covers and explains many privacy topics in detail!",
     "crumbs": [
       "<ins>Guides</ins>",
       "![](/docs/img/folder-regular.svg){height=1em style='filter: invert(0.5) sepia(1) saturate(5) hue-rotate(175deg)'} **Data Management**",
       "Planning",
-      "Privacy and security"
+      "Privacy"
     ]
   },
   {
-    "objectID": "docs/data/planning/ethics.html",
-    "href": "docs/data/planning/ethics.html",
-    "title": "Ethics",
+    "objectID": "docs/data/getting_started.html",
+    "href": "docs/data/getting_started.html",
+    "title": "Getting started",
     "section": "",
-    "text": "🚧 Coming soon! ⏳",
+    "text": "This section provides resources to support data owners and users at various stages of the data lifecycle. It highlights important information and available tooling at TU Delft that can help you implement the Findable, Accessible, Interoperable, and Reproducible (FAIR) principles in your research data management practices.\nTU Delft emphasizes researchers’ adherence to best practices in Research Data and Software Management (RDSM) as crucial to research quality. The university has maintained policies for a structured framework clarifying roles, responsibilities, and procedural standards for RDSM.\nResearch data includes any information observed, generated or created for use in research projects. Though often tied to specific research projects, research data follows its own lifecycle, which is distinct from the project itself. After initial data collection, data may be processed, analyzed, published, shared, archived, reused or destroyed.\nEffective research data management by following FAIR principles ensures efficiency and reproducibility at every step of the data lifecycle. At TU Delft, various tools and resources are available to meet diverse data management needs at any stage in its lifecycle.\n\n\n\n\n\n\n Important note\n\n\n\nPlease note that useful and practical information on research data management (RDM) is covered by other TU Delft resources, such as the RDM 101 book, PhD Supervisors guide, the RDM and TU Delft library pages. We want to refer you to these resources throughout this section, and where applicable, an admonition (like this one) will be placed at the beginning of a page.\n\n\n\n\n\n\n\n\n Further reading\n\n\n\n\nTU Delft Research Data Management landing page\nTU Delft - The goal of data management\nTU Delft Research Data framework policy\nResearch data management policies per faculty",
     "crumbs": [
       "<ins>Guides</ins>",
       "![](/docs/img/folder-regular.svg){height=1em style='filter: invert(0.5) sepia(1) saturate(5) hue-rotate(175deg)'} **Data Management**",
-      "Planning",
-      "Ethics"
-    ]
-  },
-  {
-    "objectID": "docs/data/fair_data/fair.html",
-    "href": "docs/data/fair_data/fair.html",
-    "title": "FAIR data",
-    "section": "",
-    "text": "The goal of the FAIR principles is to improve research transparency, reproducibility and reusability. FAIR data enhances research reliability, impact, and visibility, creating new collaboration opportunities for researchers. The acronym FAIR stands for:\n\nFindable: Data should be findable by users. A straightforward and reliable way to achieve this is by depositing data in a repository with appropriate metadata, tags, and identifiers to improve searchability.\nAccessible: Data should be accessible to authorized users. This does not mean all data must be publicly available; rather, it should be “as open as possible, as closed as necessary”. If data cannot be made publicly available due to sensitive information or commercial restrictions, the metadata should still be made public to indicate where and how the data can be accessed if needed.\nInteroperable: Data should be in standardized formats with a clear structure to allow it to be interoperable across different systems, enabling data to be used in various applications by both the data owners and other users.\nReusable: For data to be reusable, users must understand what the data represents, the information it contains, and how to interpret its structure and format. Good documentation and an appropriate license are key in reusability, as these enable others to understand and work with your dataset, especially upon publication.",
-    "crumbs": [
-      "<ins>Guides</ins>",
-      "![](/docs/img/folder-regular.svg){height=1em style='filter: invert(0.5) sepia(1) saturate(5) hue-rotate(175deg)'} **Data Management**",
-      "FAIR Data"
-    ]
-  },
-  {
-    "objectID": "docs/data/data_storage/storage_options.html",
-    "href": "docs/data/data_storage/storage_options.html",
-    "title": "Storage options",
-    "section": "",
-    "text": "Under construction! 🏗️\n\n\n\n\n Request Project Drive space\nUpdate coming soon! 🛠️\n\nLearn more »\n\n\n\n Mount Project Drive on server\nUpdate coming soon! 🛠️\n\nLearn more »\n\n\n\n Sync Project Drive and SURFDrive with Unison\nUpdate coming soon! 🛠️\n\nLearn more »",
-    "crumbs": [
-      "<ins>Guides</ins>",
-      "![](/docs/img/folder-regular.svg){height=1em style='filter: invert(0.5) sepia(1) saturate(5) hue-rotate(175deg)'} **Data Management**",
-      "Storage",
-      "Storage options"
-    ]
-  },
-  {
-    "objectID": "docs/data/data_storage/sharing.html",
-    "href": "docs/data/data_storage/sharing.html",
-    "title": "Data sharing",
-    "section": "",
-    "text": "🚧 Coming soon! ⏳",
-    "crumbs": [
-      "<ins>Guides</ins>",
-      "![](/docs/img/folder-regular.svg){height=1em style='filter: invert(0.5) sepia(1) saturate(5) hue-rotate(175deg)'} **Data Management**",
-      "Storage",
-      "Data sharing"
-    ]
-  },
-  {
-    "objectID": "docs/data/data_storage/project_drive_request.html",
-    "href": "docs/data/data_storage/project_drive_request.html",
-    "title": "Request Project Drive space",
-    "section": "",
-    "text": "TU Delft offers several options for researchers to store their data. One of the most commonly recommended options is the Project Drive (Project Data, U:) for its large storage capacity and secure backups from the University.",
-    "crumbs": [
-      "<ins>Guides</ins>",
-      "![](/docs/img/folder-regular.svg){height=1em style='filter: invert(0.5) sepia(1) saturate(5) hue-rotate(175deg)'} **Data Management**",
-      "Storage",
-      "Storage options",
-      "Request Project Drive space"
-    ]
-  },
-  {
-    "objectID": "docs/data/data_storage/project_drive_request.html#background",
-    "href": "docs/data/data_storage/project_drive_request.html#background",
-    "title": "Request Project Drive space",
-    "section": "",
-    "text": "TU Delft offers several options for researchers to store their data. One of the most commonly recommended options is the Project Drive (Project Data, U:) for its large storage capacity and secure backups from the University.",
-    "crumbs": [
-      "<ins>Guides</ins>",
-      "![](/docs/img/folder-regular.svg){height=1em style='filter: invert(0.5) sepia(1) saturate(5) hue-rotate(175deg)'} **Data Management**",
-      "Storage",
-      "Storage options",
-      "Request Project Drive space"
-    ]
-  },
-  {
-    "objectID": "docs/data/data_storage/project_drive_request.html#what-this-documentation-will-help-achieve",
-    "href": "docs/data/data_storage/project_drive_request.html#what-this-documentation-will-help-achieve",
-    "title": "Request Project Drive space",
-    "section": "What this documentation will help achieve",
-    "text": "What this documentation will help achieve\nThis documentation will walk through the steps needed to request Project Drive storage from TU Delft ICT. This storage can then be accessed directly through webdata.tudelft.nl (uses WebDAV protocol), through a client like WebDrive on your local machine (click on the link and then the WebDrive heading to download and install this software for your operating system), or mounted to a TU Delft Virtual Private Server following the instructions here.",
-    "crumbs": [
-      "<ins>Guides</ins>",
-      "![](/docs/img/folder-regular.svg){height=1em style='filter: invert(0.5) sepia(1) saturate(5) hue-rotate(175deg)'} **Data Management**",
-      "Storage",
-      "Storage options",
-      "Request Project Drive space"
-    ]
-  },
-  {
-    "objectID": "docs/data/data_storage/project_drive_request.html#prerequisites",
-    "href": "docs/data/data_storage/project_drive_request.html#prerequisites",
-    "title": "Request Project Drive space",
-    "section": "Prerequisites",
-    "text": "Prerequisites\n\nTU Delft netID\nAn Excel file with the netIDs of TU Delft collaborators who should have read/write access to the Project Drive storage space you are requesting (optional)",
-    "crumbs": [
-      "<ins>Guides</ins>",
-      "![](/docs/img/folder-regular.svg){height=1em style='filter: invert(0.5) sepia(1) saturate(5) hue-rotate(175deg)'} **Data Management**",
-      "Storage",
-      "Storage options",
-      "Request Project Drive space"
-    ]
-  },
-  {
-    "objectID": "docs/data/data_storage/project_drive_request.html#toolssoftware",
-    "href": "docs/data/data_storage/project_drive_request.html#toolssoftware",
-    "title": "Request Project Drive space",
-    "section": "Tools/Software",
-    "text": "Tools/Software\n\nWebDrive (optional GUI to access data on Project Drive)",
-    "crumbs": [
-      "<ins>Guides</ins>",
-      "![](/docs/img/folder-regular.svg){height=1em style='filter: invert(0.5) sepia(1) saturate(5) hue-rotate(175deg)'} **Data Management**",
-      "Storage",
-      "Storage options",
-      "Request Project Drive space"
-    ]
-  },
-  {
-    "objectID": "docs/data/data_storage/project_drive_request.html#steps",
-    "href": "docs/data/data_storage/project_drive_request.html#steps",
-    "title": "Request Project Drive space",
-    "section": "Steps",
-    "text": "Steps\n\nRequest Project Drive storage via the TU Delft ICT form on TopDesk\nFill and send the form according to your data storage preferences and requirements\nAccess your data storage on Project Drive\n\n\nStep 1. Request Project Drive storage via the TU Delft ICT form on TopDesk\nYou can make a request for data storage via the TopDesk self service portal. Navigate to this form (requires netID sign in) and see below for guidance on how to fill in each of the sections.\n\n\nStep 2. Fill and send the form according to your data storage preferences and requirements\nThe form is divided into three sections: “Caller”, “Information about Requester and Data”, and “Data for a Research Project”.\nThe Caller section should contain the contact information of the main administrator of this server. If you select your name, the fields below should be auto-populated with your building, phone number, email, department/program, organizational unit, and (sometimes) room.\n\n\nIn the next part you choose your preferences about data preservation. The first question asks whether you are setting up new storage on the Project Drive, or want to change existing storage. The next question is about the availability - see below for more information. The usual choice here is “Standard”.\n\nFor the next question, you need to determine if your data is critical, sensitive, or standard, using these criteria:\n\nThere are two options for backup retention: standard and high. Data are backed up by ICT on a daily basis, so the retention time refers to the period for which these backups are stored. The standard option refers to 14 days of retention while in the other one the retention period is one year. In other words, if the retention time is set to 14 days (Standard) and you delete a file, you can restore it within those two weeks. If retention time is 1 year (High), you can restore it anytime within the year. For most situations, a Standard backup retention time is suitable.\n\nIn the final section, you need to provide some information about your research project. Depending on your research needs, you should specify how much space you will need on the Project Drive to hold all your data, initially and into the planned future. It is important to know that the Project Drive storage is able to expand as your data grows, but you should make your best guess when requesting the space.\nAt the bottom of this section you can attach an Excel file that contains the netIDs of TU Delft affiliated employees that should have read/write access to the storage you are requesting on the Project Drive. If access to the storage is required for TU Delft external researchers, this information can be added as well. Note that it is unusual that non-TU Delft personnel are added to Project Drive storage, and if you would like to do so you should provide a company-affiliated email address for each person you want to add.",
-    "crumbs": [
-      "<ins>Guides</ins>",
-      "![](/docs/img/folder-regular.svg){height=1em style='filter: invert(0.5) sepia(1) saturate(5) hue-rotate(175deg)'} **Data Management**",
-      "Storage",
-      "Storage options",
-      "Request Project Drive space"
-    ]
-  },
-  {
-    "objectID": "docs/data/data_storage/backup.html",
-    "href": "docs/data/data_storage/backup.html",
-    "title": "Data backup",
-    "section": "",
-    "text": "🚧 Coming soon! ⏳",
-    "crumbs": [
-      "<ins>Guides</ins>",
-      "![](/docs/img/folder-regular.svg){height=1em style='filter: invert(0.5) sepia(1) saturate(5) hue-rotate(175deg)'} **Data Management**",
-      "Storage",
-      "Data backup"
-    ]
-  },
-  {
-    "objectID": "docs/data/data_publishing/offboarding.html",
-    "href": "docs/data/data_publishing/offboarding.html",
-    "title": "Offboarding and ownership",
-    "section": "",
-    "text": "🚧 Coming soon! ⏳",
-    "crumbs": [
-      "<ins>Guides</ins>",
-      "![](/docs/img/folder-regular.svg){height=1em style='filter: invert(0.5) sepia(1) saturate(5) hue-rotate(175deg)'} **Data Management**",
-      "Archive and publish",
-      "Offboarding and ownership"
-    ]
-  },
-  {
-    "objectID": "docs/data/data_publishing/archival_publishing_index.html",
-    "href": "docs/data/data_publishing/archival_publishing_index.html",
-    "title": "Archive and publish",
-    "section": "",
-    "text": "🚧 Under construction! 🏗️\n\n\n\n\n Licensing\n\n⏰ Coming soon!\n\nLearn more »\n\n\n\n Publishing data\n\n⏰ Coming soon!\n\nLearn more »\n\n\n\n Offboarding and ownership\n⏰ Coming soon!\n\nLearn more »",
-    "crumbs": [
-      "<ins>Guides</ins>",
-      "![](/docs/img/folder-regular.svg){height=1em style='filter: invert(0.5) sepia(1) saturate(5) hue-rotate(175deg)'} **Data Management**",
-      "Archive and publish"
-    ]
-  },
-  {
-    "objectID": "docs/data/data_collection/elab_rspace.html",
-    "href": "docs/data/data_collection/elab_rspace.html",
-    "title": "eLabJournal and RSpace",
-    "section": "",
-    "text": "Coming soon! ⚙️",
-    "crumbs": [
-      "<ins>Guides</ins>",
-      "![](/docs/img/folder-regular.svg){height=1em style='filter: invert(0.5) sepia(1) saturate(5) hue-rotate(175deg)'} **Data Management**",
-      "Collection",
-      "eLabJournal and RSpace"
-    ]
-  },
-  {
-    "objectID": "docs/data/data_collection/collection.html",
-    "href": "docs/data/data_collection/collection.html",
-    "title": "Data collection",
-    "section": "",
-    "text": "Under construction! 🏗️\n\n\n\n\n Data conventions\n\n🚧 Coming soon! ⏳\n\nLearn more »\n\n\n\n Data access and reuse\n🚧 Coming soon! ⏳\n\nLearn more »\n\n\n\n eLabJournal and RSpace\n🚧 Coming soon! ⏳\n\nLearn more »",
-    "crumbs": [
-      "<ins>Guides</ins>",
-      "![](/docs/img/folder-regular.svg){height=1em style='filter: invert(0.5) sepia(1) saturate(5) hue-rotate(175deg)'} **Data Management**",
-      "Collection"
-    ]
-  },
-  {
-    "objectID": "docs/community/maintainers.html",
-    "href": "docs/community/maintainers.html",
-    "title": "Guide maintainers",
-    "section": "",
-    "text": "Guide maintainers\nThis content is automatically generated, all changes made will be lost.\n\n\n\n\n\n\n\n\n\nSection\nTitle\nLead maintainer\nBackup maintainer\n\n\n\n\ncontainers\nDocker users\nMaurits Kok\n\n\n\ndata\nRequestProject Drive\nAshley Cryan\n\n\n\ndata\nSync with Unison\nAshley Cryan\n\n\n\ndata\nMount Project Drive\nRaúl Ortiz Merino\nMaurits Kok\n\n\ndata\nData publishing\nAleksandra Wilczynska\n\n\n\ngitlab\nTransfer ownership of a GitLab repository\nLora Armstrong\nMaurits Kok\n\n\ngitlab\nCI with Gitlab\nAshley Cryan\nMaurits Kok\n\n\ngitlab\nGitLab runner for MATLAB\nMaurits Kok\n\n\n\ninfrastructure\nOverview\nMaurits Kok\nJose Urra\n\n\ninfrastructure\nRequest SSL Certificate\nAshley Cryan\n\n\n\ninfrastructure\nRequest VPS\nAshley Cryan\n\n\n\ninfrastructure\nSet up an Apache web server\nAshley Cryan\n\n\n\nresources\nCurriculum\nAshley Cryan\nMaurits Kok\n\n\nsoftware\nFAIR4RS checklist\nMaurits Kok\nElviss Dvinskis\n\n\nsoftware\nSoftware Management Plan\nMaurits Kok\n\n\n\nsoftware\nBranch management\nMaurits Kok\n\n\n\ntesting\nTesting with MATLAB\nMaurits Kok"
-  },
-  {
-    "objectID": "docs/community/community.html",
-    "href": "docs/community/community.html",
-    "title": "Community",
-    "section": "",
-    "text": "Teams channel - DCC Community\nData Stewards\nOpen Science Program\nOpen Science Community\nDelft HPC\nData Champions\nICT Innovation\nStatistical Helpdesk\n\n\n\n\n4TU.ResearchData is an international data repository for science, engineering and design. Its services include curation, sharing, long-term access and preservation of research datasets. These services are available to anyone around the world. In addition, 4TU.ResearchData also offers training and resources to researchers to support them in making research data findable, accessible, interoperable and reproducible (FAIR).\n\n\n\nFounded in 2012 as an independent foundation by NWO and SURF, the Netherlands eScience Center is the national centre with the digital skills to create innovative software solutions in academic research. They award research projects based on calls for proposals, and train researchers in the use of research software. They offer our expertise in the form of research software engineers (RSEs), the technology specialists with expert digital skills who work with us at the Center.\n\n\n\nNL-RSE brings together the community of people writing and contributing to research software from Dutch universities, knowledge institutes, companies and other organizations to share knowledge, to organize meetings, and raise awareness for the scientific recognition of research software."
-  },
-  {
-    "objectID": "docs/community/community.html#partners-within-the-tu-delft",
-    "href": "docs/community/community.html#partners-within-the-tu-delft",
-    "title": "Community",
-    "section": "",
-    "text": "Teams channel - DCC Community\nData Stewards\nOpen Science Program\nOpen Science Community\nDelft HPC\nData Champions\nICT Innovation\nStatistical Helpdesk"
-  },
-  {
-    "objectID": "docs/community/community.html#tu.researchdata",
-    "href": "docs/community/community.html#tu.researchdata",
-    "title": "Community",
-    "section": "",
-    "text": "4TU.ResearchData is an international data repository for science, engineering and design. Its services include curation, sharing, long-term access and preservation of research datasets. These services are available to anyone around the world. In addition, 4TU.ResearchData also offers training and resources to researchers to support them in making research data findable, accessible, interoperable and reproducible (FAIR)."
-  },
-  {
-    "objectID": "docs/community/community.html#escience-center",
-    "href": "docs/community/community.html#escience-center",
-    "title": "Community",
-    "section": "",
-    "text": "Founded in 2012 as an independent foundation by NWO and SURF, the Netherlands eScience Center is the national centre with the digital skills to create innovative software solutions in academic research. They award research projects based on calls for proposals, and train researchers in the use of research software. They offer our expertise in the form of research software engineers (RSEs), the technology specialists with expert digital skills who work with us at the Center."
-  },
-  {
-    "objectID": "docs/community/community.html#nl-rse",
-    "href": "docs/community/community.html#nl-rse",
-    "title": "Community",
-    "section": "",
-    "text": "NL-RSE brings together the community of people writing and contributing to research software from Dutch universities, knowledge institutes, companies and other organizations to share knowledge, to organize meetings, and raise awareness for the scientific recognition of research software."
-  },
-  {
-    "objectID": "CONTRIBUTING.html",
-    "href": "CONTRIBUTING.html",
-    "title": "Contributing guidelines",
-    "section": "",
-    "text": "Do you have issues, tips, ideas, events, or questions related to Research Computing, Research Data, and Research Software at TU Delft?\nAre you a researcher interested in these topics?\nDo you work and collaborate with researchers on these topics?\n\nWe’re using GitHub Discussions as a place to connect with other members of our community. We hope that you:\n\nAsk questions about challenges you encounter\nShare ideas and solutions\nEngage with other community members\nBe welcoming and open-minded. Remember that this is a community we build together. See our Code of Conduct for more information.\n\n\n\n\nDo you have questions, ideas or ongoing developments on FAIR related aspects, Open Science, training, etc? Would you like to point to specific resources and potential solutions or ideas?\n\nUse the Q&A to ask a question on a specific topic, such as\n\nHow do I generate a reproducible software development environment?\nWhere can I find information on creating a Python package?\nHow should I archive my software?\nHow do I get started with git?\n\nUse Ideas to make proposals, for instance\n\nUsing jupyter hub for a workshop\nUsing jupyter books to create educational resources\nRunning monthly webinars for the community to transfer FAIR practices\n\nUse Solutions to point people to existing solutions or share your own. These solutions might end up on our Guides website to share with our community.\nShow and tell things you have done that you are proud of and like other to be aware of.\n\n\n\n\n\n\n\nFork the repository to your own GitHub profile.\nClone the repository.\nNavigate to the root of this repository in your terminal.\nInstall Quarto if you don’t already have it installed on your machine. You can find the installation instructions here.\n\nAlternative: Install Quarto within a virtual environment using the environment.yml file by following the below steps:\n\nRun conda env create -f environment.yml in the terminal to create a conda environment with Quarto pre-installed.\nActivate the environment by running conda activate dcc_guides.\n\n\n\nRun quarto preview.\nYou will see the rendered version in a browser window.\n\n\n\n\n\nFork the repository to your own GitHub profile.\nEither commit a new change to the repository to trigger the build action or manually trigger the action. To manually trigger the action, go to Actions -&gt; Quarto Publish Guides and press Run workflow and Run workflow.\nIn your forked repository, under Settings -&gt; Pages set Source to gh-pages and /(root) and press Save.\n\n\n\n\n\n(important) announce your plan to the rest of the community before you start working. This announcement should be in the form of a (new) issue;\n(important) wait until some kind of consensus is reached about your idea being a good idea;\nif needed, fork the repository to your own GitHub profile and create your own feature branch off of the latest main commit. While working on your feature branch, make sure to stay up to date with the main branch by pulling in changes, possibly from the ‘upstream’ repository (follow the instructions here and here);\npush your feature branch to (your fork of) the DCC guides repository on GitHub;\ncreate the pull request, e.g. following the instructions here. If needed, provide a link to the gh-pages in your forked repository: https://&lt;your-username&gt;.github.io/TU-Delft-DCC.github.io/."
-  },
-  {
-    "objectID": "CONTRIBUTING.html#welcome",
-    "href": "CONTRIBUTING.html#welcome",
-    "title": "Contributing guidelines",
-    "section": "",
-    "text": "Do you have issues, tips, ideas, events, or questions related to Research Computing, Research Data, and Research Software at TU Delft?\nAre you a researcher interested in these topics?\nDo you work and collaborate with researchers on these topics?\n\nWe’re using GitHub Discussions as a place to connect with other members of our community. We hope that you:\n\nAsk questions about challenges you encounter\nShare ideas and solutions\nEngage with other community members\nBe welcoming and open-minded. Remember that this is a community we build together. See our Code of Conduct for more information."
-  },
-  {
-    "objectID": "CONTRIBUTING.html#how-to-participate",
-    "href": "CONTRIBUTING.html#how-to-participate",
-    "title": "Contributing guidelines",
-    "section": "",
-    "text": "Do you have questions, ideas or ongoing developments on FAIR related aspects, Open Science, training, etc? Would you like to point to specific resources and potential solutions or ideas?\n\nUse the Q&A to ask a question on a specific topic, such as\n\nHow do I generate a reproducible software development environment?\nWhere can I find information on creating a Python package?\nHow should I archive my software?\nHow do I get started with git?\n\nUse Ideas to make proposals, for instance\n\nUsing jupyter hub for a workshop\nUsing jupyter books to create educational resources\nRunning monthly webinars for the community to transfer FAIR practices\n\nUse Solutions to point people to existing solutions or share your own. These solutions might end up on our Guides website to share with our community.\nShow and tell things you have done that you are proud of and like other to be aware of."
-  },
-  {
-    "objectID": "CONTRIBUTING.html#for-developers",
-    "href": "CONTRIBUTING.html#for-developers",
-    "title": "Contributing guidelines",
-    "section": "",
-    "text": "Fork the repository to your own GitHub profile.\nClone the repository.\nNavigate to the root of this repository in your terminal.\nInstall Quarto if you don’t already have it installed on your machine. You can find the installation instructions here.\n\nAlternative: Install Quarto within a virtual environment using the environment.yml file by following the below steps:\n\nRun conda env create -f environment.yml in the terminal to create a conda environment with Quarto pre-installed.\nActivate the environment by running conda activate dcc_guides.\n\n\n\nRun quarto preview.\nYou will see the rendered version in a browser window.\n\n\n\n\n\nFork the repository to your own GitHub profile.\nEither commit a new change to the repository to trigger the build action or manually trigger the action. To manually trigger the action, go to Actions -&gt; Quarto Publish Guides and press Run workflow and Run workflow.\nIn your forked repository, under Settings -&gt; Pages set Source to gh-pages and /(root) and press Save.\n\n\n\n\n\n(important) announce your plan to the rest of the community before you start working. This announcement should be in the form of a (new) issue;\n(important) wait until some kind of consensus is reached about your idea being a good idea;\nif needed, fork the repository to your own GitHub profile and create your own feature branch off of the latest main commit. While working on your feature branch, make sure to stay up to date with the main branch by pulling in changes, possibly from the ‘upstream’ repository (follow the instructions here and here);\npush your feature branch to (your fork of) the DCC guides repository on GitHub;\ncreate the pull request, e.g. following the instructions here. If needed, provide a link to the gh-pages in your forked repository: https://&lt;your-username&gt;.github.io/TU-Delft-DCC.github.io/."
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Welcome to the DCC Guides!",
-    "section": "",
-    "text": "These guides provide a starting point for Research Computing, Research Data, and Research Software at TU Delft. This is an initiative from the TU Delft Digital Competence Centre.\n Shared solutions for research support staff  Practical guides for researchers\n\n\n Computing Infrastructure \n Data Management \n Research Software \n Courses and Workshops \n\n\n\n\n\n\n\n\n Want to get involved? \n Join the community We welcome anyone to join us in improving our guides! Find out how in our contributing guide.\n Join the discussion We welcome community discussions, ideas, and general questions to develop solutions and receive feedback in our community forum.\n Open an issue We track topic requests and bug-reports via GitHub issues.",
-    "crumbs": [
-      "<ins>Guides</ins>",
-      "<span style=\"filter:grayscale(100%);\">⌂</span> **Home**"
-    ]
-  },
-  {
-    "objectID": "CODE_OF_CONDUCT.html",
-    "href": "CODE_OF_CONDUCT.html",
-    "title": "Code of Conduct",
-    "section": "",
-    "text": "We as members, contributors, and leaders pledge to make participation in our community a harassment-free experience for everyone, regardless of age, body size, visible or invisible disability, ethnicity, sex characteristics, gender identity and expression, level of experience, education, socio-economic status, nationality, personal appearance, race, caste, color, religion, or sexual identity and orientation.\nWe pledge to act and interact in ways that contribute to an open, welcoming, diverse, inclusive, and healthy community.\n\n\n\nExamples of behavior that contributes to a positive environment for our community include:\n\nDemonstrating empathy and kindness toward other people\nBeing respectful of differing opinions, viewpoints, and experiences\nGiving and gracefully accepting constructive feedback\nAccepting responsibility and apologizing to those affected by our mistakes, and learning from the experience\nFocusing on what is best not just for us as individuals, but for the overall community\n\nExamples of unacceptable behavior include:\n\nThe use of sexualized language or imagery, and sexual attention or advances of any kind\nTrolling, insulting or derogatory comments, and personal or political attacks\nPublic or private harassment\nPublishing others’ private information, such as a physical or email address, without their explicit permission\nOther conduct which could reasonably be considered inappropriate in a professional setting\n\n\n\n\nCommunity leaders are responsible for clarifying and enforcing our standards of acceptable behavior and will take appropriate and fair corrective action in response to any behavior that they deem inappropriate, threatening, offensive, or harmful.\nCommunity leaders have the right and responsibility to remove, edit, or reject comments, commits, code, wiki edits, issues, and other contributions that are not aligned to this Code of Conduct, and will communicate reasons for moderation decisions when appropriate.\n\n\n\nThis Code of Conduct applies within all community spaces, and also applies when an individual is officially representing the community in public spaces. Examples of representing our community include using an official email address, posting via an official social media account, or acting as an appointed representative at an online or offline event.\n\n\n\nInstances of abusive, harassing, or otherwise unacceptable behavior may be reported to the community leaders responsible for enforcement at dcc@tudelft.nl. All complaints will be reviewed and investigated promptly and fairly.\nAll community leaders are obligated to respect the privacy and security of the reporter of any incident.\n\n\n\nCommunity leaders will follow these Community Impact Guidelines in determining the consequences for any action they deem in violation of this Code of Conduct:\n\n\nCommunity Impact: Use of inappropriate language or other behavior deemed unprofessional or unwelcome in the community.\nConsequence: A private, written warning from community leaders, providing clarity around the nature of the violation and an explanation of why the behavior was inappropriate. A public apology may be requested.\n\n\n\nCommunity Impact: A violation through a single incident or series of actions.\nConsequence: A warning with consequences for continued behavior. No interaction with the people involved, including unsolicited interaction with those enforcing the Code of Conduct, for a specified period of time. This includes avoiding interactions in community spaces as well as external channels like social media. Violating these terms may lead to a temporary or permanent ban.\n\n\n\nCommunity Impact: A serious violation of community standards, including sustained inappropriate behavior.\nConsequence: A temporary ban from any sort of interaction or public communication with the community for a specified period of time. No public or private interaction with the people involved, including unsolicited interaction with those enforcing the Code of Conduct, is allowed during this period. Violating these terms may lead to a permanent ban.\n\n\n\nCommunity Impact: Demonstrating a pattern of violation of community standards, including sustained inappropriate behavior, harassment of an individual, or aggression toward or disparagement of classes of individuals.\nConsequence: A permanent ban from any sort of public interaction within the community.\n\n\n\n\nThis Code of Conduct is adapted from the Contributor Covenant, version 2.1, available at https://www.contributor-covenant.org/version/2/1/code_of_conduct.html.\nCommunity Impact Guidelines were inspired by Mozilla’s code of conduct enforcement ladder.\nFor answers to common questions about this code of conduct, see the FAQ at https://www.contributor-covenant.org/faq. Translations are available at https://www.contributor-covenant.org/translations."
-  },
-  {
-    "objectID": "CODE_OF_CONDUCT.html#our-pledge",
-    "href": "CODE_OF_CONDUCT.html#our-pledge",
-    "title": "Code of Conduct",
-    "section": "",
-    "text": "We as members, contributors, and leaders pledge to make participation in our community a harassment-free experience for everyone, regardless of age, body size, visible or invisible disability, ethnicity, sex characteristics, gender identity and expression, level of experience, education, socio-economic status, nationality, personal appearance, race, caste, color, religion, or sexual identity and orientation.\nWe pledge to act and interact in ways that contribute to an open, welcoming, diverse, inclusive, and healthy community."
-  },
-  {
-    "objectID": "CODE_OF_CONDUCT.html#our-standards",
-    "href": "CODE_OF_CONDUCT.html#our-standards",
-    "title": "Code of Conduct",
-    "section": "",
-    "text": "Examples of behavior that contributes to a positive environment for our community include:\n\nDemonstrating empathy and kindness toward other people\nBeing respectful of differing opinions, viewpoints, and experiences\nGiving and gracefully accepting constructive feedback\nAccepting responsibility and apologizing to those affected by our mistakes, and learning from the experience\nFocusing on what is best not just for us as individuals, but for the overall community\n\nExamples of unacceptable behavior include:\n\nThe use of sexualized language or imagery, and sexual attention or advances of any kind\nTrolling, insulting or derogatory comments, and personal or political attacks\nPublic or private harassment\nPublishing others’ private information, such as a physical or email address, without their explicit permission\nOther conduct which could reasonably be considered inappropriate in a professional setting"
-  },
-  {
-    "objectID": "CODE_OF_CONDUCT.html#enforcement-responsibilities",
-    "href": "CODE_OF_CONDUCT.html#enforcement-responsibilities",
-    "title": "Code of Conduct",
-    "section": "",
-    "text": "Community leaders are responsible for clarifying and enforcing our standards of acceptable behavior and will take appropriate and fair corrective action in response to any behavior that they deem inappropriate, threatening, offensive, or harmful.\nCommunity leaders have the right and responsibility to remove, edit, or reject comments, commits, code, wiki edits, issues, and other contributions that are not aligned to this Code of Conduct, and will communicate reasons for moderation decisions when appropriate."
-  },
-  {
-    "objectID": "CODE_OF_CONDUCT.html#scope",
-    "href": "CODE_OF_CONDUCT.html#scope",
-    "title": "Code of Conduct",
-    "section": "",
-    "text": "This Code of Conduct applies within all community spaces, and also applies when an individual is officially representing the community in public spaces. Examples of representing our community include using an official email address, posting via an official social media account, or acting as an appointed representative at an online or offline event."
-  },
-  {
-    "objectID": "CODE_OF_CONDUCT.html#enforcement",
-    "href": "CODE_OF_CONDUCT.html#enforcement",
-    "title": "Code of Conduct",
-    "section": "",
-    "text": "Instances of abusive, harassing, or otherwise unacceptable behavior may be reported to the community leaders responsible for enforcement at dcc@tudelft.nl. All complaints will be reviewed and investigated promptly and fairly.\nAll community leaders are obligated to respect the privacy and security of the reporter of any incident."
-  },
-  {
-    "objectID": "CODE_OF_CONDUCT.html#enforcement-guidelines",
-    "href": "CODE_OF_CONDUCT.html#enforcement-guidelines",
-    "title": "Code of Conduct",
-    "section": "",
-    "text": "Community leaders will follow these Community Impact Guidelines in determining the consequences for any action they deem in violation of this Code of Conduct:\n\n\nCommunity Impact: Use of inappropriate language or other behavior deemed unprofessional or unwelcome in the community.\nConsequence: A private, written warning from community leaders, providing clarity around the nature of the violation and an explanation of why the behavior was inappropriate. A public apology may be requested.\n\n\n\nCommunity Impact: A violation through a single incident or series of actions.\nConsequence: A warning with consequences for continued behavior. No interaction with the people involved, including unsolicited interaction with those enforcing the Code of Conduct, for a specified period of time. This includes avoiding interactions in community spaces as well as external channels like social media. Violating these terms may lead to a temporary or permanent ban.\n\n\n\nCommunity Impact: A serious violation of community standards, including sustained inappropriate behavior.\nConsequence: A temporary ban from any sort of interaction or public communication with the community for a specified period of time. No public or private interaction with the people involved, including unsolicited interaction with those enforcing the Code of Conduct, is allowed during this period. Violating these terms may lead to a permanent ban.\n\n\n\nCommunity Impact: Demonstrating a pattern of violation of community standards, including sustained inappropriate behavior, harassment of an individual, or aggression toward or disparagement of classes of individuals.\nConsequence: A permanent ban from any sort of public interaction within the community."
-  },
-  {
-    "objectID": "CODE_OF_CONDUCT.html#attribution",
-    "href": "CODE_OF_CONDUCT.html#attribution",
-    "title": "Code of Conduct",
-    "section": "",
-    "text": "This Code of Conduct is adapted from the Contributor Covenant, version 2.1, available at https://www.contributor-covenant.org/version/2/1/code_of_conduct.html.\nCommunity Impact Guidelines were inspired by Mozilla’s code of conduct enforcement ladder.\nFor answers to common questions about this code of conduct, see the FAQ at https://www.contributor-covenant.org/faq. Translations are available at https://www.contributor-covenant.org/translations."
-  },
-  {
-    "objectID": "docs/community/dcc.html",
-    "href": "docs/community/dcc.html",
-    "title": "About the DCC",
-    "section": "",
-    "text": "About the DCC\nThe TU Delft Digital Competence Centre (DCC) is an on-campus initiative to help researchers make research data FAIR, improve research software, and apply computing practices to increase the efficiency of the research process. The DCC is an initiative of the Open Science Programme at TU Delft designed to benefit researchers at all levels.\nFor more information, please visit our website at dcc.tudelft.nl or email us at dcc@tudelft.nl."
-  },
-  {
-    "objectID": "docs/data/data_collection/access_reuse.html",
-    "href": "docs/data/data_collection/access_reuse.html",
-    "title": "Access and reuse",
-    "section": "",
-    "text": "Coming soon! 🏗️",
-    "crumbs": [
-      "<ins>Guides</ins>",
-      "![](/docs/img/folder-regular.svg){height=1em style='filter: invert(0.5) sepia(1) saturate(5) hue-rotate(175deg)'} **Data Management**",
-      "Collection",
-      "Access and reuse"
-    ]
-  },
-  {
-    "objectID": "docs/data/data_collection/data_conventions.html",
-    "href": "docs/data/data_collection/data_conventions.html",
-    "title": "Data conventions",
-    "section": "",
-    "text": "Coming soon! ⚙️",
-    "crumbs": [
-      "<ins>Guides</ins>",
-      "![](/docs/img/folder-regular.svg){height=1em style='filter: invert(0.5) sepia(1) saturate(5) hue-rotate(175deg)'} **Data Management**",
-      "Collection",
-      "Data conventions"
-    ]
-  },
-  {
-    "objectID": "docs/data/data_processing.html",
-    "href": "docs/data/data_processing.html",
-    "title": "Data processing",
-    "section": "",
-    "text": "🏗️ Under construction! 🚧",
-    "crumbs": [
-      "<ins>Guides</ins>",
-      "![](/docs/img/folder-regular.svg){height=1em style='filter: invert(0.5) sepia(1) saturate(5) hue-rotate(175deg)'} **Data Management**",
-      "Data processing"
-    ]
-  },
-  {
-    "objectID": "docs/data/data_publishing/licensing_data.html",
-    "href": "docs/data/data_publishing/licensing_data.html",
-    "title": "Data licensing",
-    "section": "",
-    "text": "🚧 Coming soon! ⏳",
-    "crumbs": [
-      "<ins>Guides</ins>",
-      "![](/docs/img/folder-regular.svg){height=1em style='filter: invert(0.5) sepia(1) saturate(5) hue-rotate(175deg)'} **Data Management**",
-      "Archive and publish",
-      "Licensing"
-    ]
-  },
-  {
-    "objectID": "docs/data/data_publishing/publishing.html",
-    "href": "docs/data/data_publishing/publishing.html",
-    "title": "Publishing data",
-    "section": "",
-    "text": "🚧 Coming soon! ⏳",
-    "crumbs": [
-      "<ins>Guides</ins>",
-      "![](/docs/img/folder-regular.svg){height=1em style='filter: invert(0.5) sepia(1) saturate(5) hue-rotate(175deg)'} **Data Management**",
-      "Archive and publish",
-      "Publishing data"
-    ]
-  },
-  {
-    "objectID": "docs/data/data_storage/project_drive_mounting.html",
-    "href": "docs/data/data_storage/project_drive_mounting.html",
-    "title": "Mount Project Drive on server",
-    "section": "",
-    "text": "Project drive storage from TU Delft ICT can be mounted and made accessible in your (TU Delft) Virtual Private Server.",
-    "crumbs": [
-      "<ins>Guides</ins>",
-      "![](/docs/img/folder-regular.svg){height=1em style='filter: invert(0.5) sepia(1) saturate(5) hue-rotate(175deg)'} **Data Management**",
-      "Storage",
-      "Storage options",
-      "Mount Project Drive on server"
-    ]
-  },
-  {
-    "objectID": "docs/data/data_storage/project_drive_mounting.html#what-this-documentation-will-help-achieve",
-    "href": "docs/data/data_storage/project_drive_mounting.html#what-this-documentation-will-help-achieve",
-    "title": "Mount Project Drive on server",
-    "section": "",
-    "text": "Project drive storage from TU Delft ICT can be mounted and made accessible in your (TU Delft) Virtual Private Server.",
-    "crumbs": [
-      "<ins>Guides</ins>",
-      "![](/docs/img/folder-regular.svg){height=1em style='filter: invert(0.5) sepia(1) saturate(5) hue-rotate(175deg)'} **Data Management**",
-      "Storage",
-      "Storage options",
-      "Mount Project Drive on server"
-    ]
-  },
-  {
-    "objectID": "docs/data/data_storage/project_drive_mounting.html#prerequisites",
-    "href": "docs/data/data_storage/project_drive_mounting.html#prerequisites",
-    "title": "Mount Project Drive on server",
-    "section": "Prerequisites",
-    "text": "Prerequisites\n\nA (TU Delft) Virtual Private Server\nA (TU Delft) Project Drive",
-    "crumbs": [
-      "<ins>Guides</ins>",
-      "![](/docs/img/folder-regular.svg){height=1em style='filter: invert(0.5) sepia(1) saturate(5) hue-rotate(175deg)'} **Data Management**",
-      "Storage",
-      "Storage options",
-      "Mount Project Drive on server"
-    ]
-  },
-  {
-    "objectID": "docs/data/data_storage/project_drive_mounting.html#steps",
-    "href": "docs/data/data_storage/project_drive_mounting.html#steps",
-    "title": "Mount Project Drive on server",
-    "section": "Steps",
-    "text": "Steps\n\nLocate the URL of your project storage\nConnect to your TU Delft VPS via SSH\nCreate a new directory as a mounting point\nRetrieve your Linux user and group details\nEdit the fstab file to include project storage technical details\nMount the project drive\n\n\nStep 1. Locate the URL of your project storage\nThe URL for your project drive can be obtained from either - the email from TU Delft ICT with the confirmation of your project drive request, or - by using a web browser to navigate into https://webdata.tudelft.nl/\n\n\n\n\n\n\nNote\n\n\n\nhttps://webdata.tudelft.nl/ can only be accessed in campus or using eduVPN\n\n\n\nchromeedge\n\n\n\nNavigate into https://webdata.tudelft.nl/staff-umbrella/\n\nA pop-up should appear asking for Username and Password.\n\nProvide your netID in the Username field, provide your password accordingly.\n\nYou should now see a list of your project drives.\n\nClick on the project drive of your choice.\n\nCopy everything after “https://webdata.tudelft.nl/”\n\n\n\nContent within webdata is under password protection. Typing your username and password in only possible with a pop-up message which is disabled in systems managed by TU Delft, please try the instructions provided for chrome\n\n\n\n\n\nStep 2. Connect to your TU Delft VPS via SSH\nFollow instructions in TU Delft ICT email from initial server setup or configure a 1-step connection via SSH.\n\n\nStep 3. Create a new directory as the mounting point\nThe convention is to create mounting points in the folder /media. Navigate to the folder and create a new folder with\ncd /media\nmkdir &lt;server_mount_point&gt;\nReplace &lt;server_mount_point&gt; with the name of your choice. This will be the name of the folder where your project drive will be mounted.\n\n\nStep 4. Find and save your user and group details\nIn the terminal, you can retrieve your local user and group details with:\nid -u &lt;your_netID&gt; # User ID\nid -g &lt;your_netID&gt; # Group ID\nYou may need the values for uid and gid for step 5.\n\n\n\n\n\n\nNote\n\n\n\nThese commands are server-specific, so make sure to execute them on the server where the project drives will be mounted.\n\n\n\n\nStep 5. Edit the fstab file to include project storage technical details\nThe fstab file containes a list of the addresses of external file systems. In this file, the details of your project drive will need to be added in a single line. This line consists of four parts: 1. filesystem - the address of the project drive 2. mount point - the location in the VPS where you want to mount the project drive 3. type - the type of the filesystem 4. options - additional option such as user privileges\nThe fstab file must be in the /etc/ directory and can be opened with the vi or nano editor:\n\nvinano\n\n\nIn the terminal, enter the following command to open the fstab file in the vi editor:\nsudo vi /etc/fstab\nThen, switch to the insert mode (hit “i” to switch to insert mode and be able to type)\n\n\nIn the terminal, enter the following command to open the fstab file in the nano editor:\nsudo nano /etc/fstab\n\n\n\nAdd the following line to the file:\n&lt;your_netID&gt;@sftp.tudelft.nl:/staff-umbrella/&lt;project_drive_name&gt;  /media/&lt;server_mount_point&gt; fuse.sshfs  rw,noauto,users,_netdev  0  0\nreplacing the values between &lt; and &gt; with your NetID, the name of your project drive, and the name of the folder you created in step 3.\n\n\n\n\n\n\nNote\n\n\n\nIf this configuration throws a permission error during mounting, try:\n//tudelft.net/staff-umbrella/&lt;project_drive_name&gt;/ /media/&lt;server_mount_point&gt; cifs username=&lt;your_netID&gt;,noauto,uid=&lt;your_uid&gt;,gid=&lt;your_gid&gt;,forcegid,rw,_netdev\nUse the values for uid and gid from step 4.\n\n\nClose the file editor and save the changes:\n\nvinano\n\n\nUse Control+C followed by :wq to save the file and close it to get back to your terminal.\n\n\nAs indicated by the nano interface, use Control+O to write the file. Then, confirm your choice of filename by hitting enter. Finally, exit the file with Control+X\n\n\n\n\n\nStep 6. Mount the project drive\nTo mount the project drive execute the command\nsudo mount /media/&lt;server_mount_point&gt;\nYou can also unmount the drive with\nfusermount -u /media/&lt;server_mount_point&gt;\nThe project drive will not mount automatically, so you will need to remount it manually each time you restart the server.\n\n\n\n\n\n\nNote\n\n\n\nIf the step above does not work, it probably means that the packages for mounting cifs-type filesystems haven’t been installed. Depending on your linux flavour you will need to install them using:\n\nUbuntu/DebianRedhat/Centos/Fedora\n\n\nsudo apt install cifs-utils\n\n\nsudo yum install cifs-utils",
-    "crumbs": [
-      "<ins>Guides</ins>",
-      "![](/docs/img/folder-regular.svg){height=1em style='filter: invert(0.5) sepia(1) saturate(5) hue-rotate(175deg)'} **Data Management**",
-      "Storage",
-      "Storage options",
-      "Mount Project Drive on server"
-    ]
-  },
-  {
-    "objectID": "docs/data/data_storage/project_drive_mounting.html#notes-and-next-steps",
-    "href": "docs/data/data_storage/project_drive_mounting.html#notes-and-next-steps",
-    "title": "Mount Project Drive on server",
-    "section": "Notes and next steps",
-    "text": "Notes and next steps\nThe steps above can also be used to mount any storage offered by TU Delft with a WebDav link (staff-homes, staff-groups, staff-bulk, student-homes, student-groups and apps). Simply use the latter half of the URL from the WebDav web link of your storage drive, which will change from staff-umbrella (project drive) to something else depending on the storage drive you would like to mount.",
-    "crumbs": [
-      "<ins>Guides</ins>",
-      "![](/docs/img/folder-regular.svg){height=1em style='filter: invert(0.5) sepia(1) saturate(5) hue-rotate(175deg)'} **Data Management**",
-      "Storage",
-      "Storage options",
-      "Mount Project Drive on server"
-    ]
-  },
-  {
-    "objectID": "docs/data/data_storage/security.html",
-    "href": "docs/data/data_storage/security.html",
-    "title": "Data security",
-    "section": "",
-    "text": "🚧 Coming soon! ⏳",
-    "crumbs": [
-      "<ins>Guides</ins>",
-      "![](/docs/img/folder-regular.svg){height=1em style='filter: invert(0.5) sepia(1) saturate(5) hue-rotate(175deg)'} **Data Management**",
-      "Storage",
-      "Data security"
-    ]
-  },
-  {
-    "objectID": "docs/data/data_storage/storage.html",
-    "href": "docs/data/data_storage/storage.html",
-    "title": "Data storage",
-    "section": "",
-    "text": "Under construction! 🏗️\n\n\n\n\n Storage options\nComing soon! ⏳\n\nLearn more »\n\n\n\n Data security\nComing soon! ⏳\n\nLearn more »\n\n\n\n Data sharing\nComing soon! ⏳\n\nLearn more »\n\n\n\n Data backup\nComing soon! ⏳\n\nLearn more »",
-    "crumbs": [
-      "<ins>Guides</ins>",
-      "![](/docs/img/folder-regular.svg){height=1em style='filter: invert(0.5) sepia(1) saturate(5) hue-rotate(175deg)'} **Data Management**",
-      "Storage"
+      "Getting started"
     ]
   },
   {
@@ -2147,15 +1658,594 @@
     ]
   },
   {
-    "objectID": "docs/data/getting_started.html",
-    "href": "docs/data/getting_started.html",
-    "title": "Getting started",
+    "objectID": "docs/data/data_storage/storage.html",
+    "href": "docs/data/data_storage/storage.html",
+    "title": "Data storage",
     "section": "",
-    "text": "The aim of this section is to guide data owners and users through each stage of the data lifecycle - such as data collection, storage, sharing, publication, and archiving - in a responsible and effective manner. By following the Findable, Accessible, Interoperable, and Reproducible (FAIR) principles, users will learn the core concepts and practices of good data management at TU Delft.\nResearch data includes any information observed, generated or created for use in research projects. Though often tied to specific research projects, research data follows its own lifecycle, which is distinct from the project itself. After initial data collection, data may be processed, analyzed, published, shared, archived, reused or destroyed.\nEffective research data management by following FAIR principles ensures efficiency and reproducibility at every step of the data lifecycle. At TU Delft, various tools and resources are available to meet diverse data management needs at any stage in its lifecycle.\nThis guide intends to walk you through the following steps of the data lifecycle at TU Delft, following FAIR principles:\n\nData Collection\nData Processing\nData Storage\nData Publishing",
+    "text": "Under construction! 🏗️\n\n\n\n\n Storage options\nComing soon! ⏳\n\nLearn more »\n\n\n\n Data security\nComing soon! ⏳\n\nLearn more »\n\n\n\n Data sharing\nComing soon! ⏳\n\nLearn more »\n\n\n\n Data backup\nComing soon! ⏳\n\nLearn more »",
     "crumbs": [
       "<ins>Guides</ins>",
       "![](/docs/img/folder-regular.svg){height=1em style='filter: invert(0.5) sepia(1) saturate(5) hue-rotate(175deg)'} **Data Management**",
-      "Getting started"
+      "Storage"
+    ]
+  },
+  {
+    "objectID": "docs/data/data_storage/security.html",
+    "href": "docs/data/data_storage/security.html",
+    "title": "Data security",
+    "section": "",
+    "text": "🚧 Coming soon! ⏳",
+    "crumbs": [
+      "<ins>Guides</ins>",
+      "![](/docs/img/folder-regular.svg){height=1em style='filter: invert(0.5) sepia(1) saturate(5) hue-rotate(175deg)'} **Data Management**",
+      "Storage",
+      "Data security"
+    ]
+  },
+  {
+    "objectID": "docs/data/data_storage/project_drive_mounting.html",
+    "href": "docs/data/data_storage/project_drive_mounting.html",
+    "title": "Mount Project Drive on server",
+    "section": "",
+    "text": "Project drive storage from TU Delft ICT can be mounted and made accessible in your (TU Delft) Virtual Private Server.",
+    "crumbs": [
+      "<ins>Guides</ins>",
+      "![](/docs/img/folder-regular.svg){height=1em style='filter: invert(0.5) sepia(1) saturate(5) hue-rotate(175deg)'} **Data Management**",
+      "Storage",
+      "Storage options",
+      "Mount Project Drive on server"
+    ]
+  },
+  {
+    "objectID": "docs/data/data_storage/project_drive_mounting.html#what-this-documentation-will-help-achieve",
+    "href": "docs/data/data_storage/project_drive_mounting.html#what-this-documentation-will-help-achieve",
+    "title": "Mount Project Drive on server",
+    "section": "",
+    "text": "Project drive storage from TU Delft ICT can be mounted and made accessible in your (TU Delft) Virtual Private Server.",
+    "crumbs": [
+      "<ins>Guides</ins>",
+      "![](/docs/img/folder-regular.svg){height=1em style='filter: invert(0.5) sepia(1) saturate(5) hue-rotate(175deg)'} **Data Management**",
+      "Storage",
+      "Storage options",
+      "Mount Project Drive on server"
+    ]
+  },
+  {
+    "objectID": "docs/data/data_storage/project_drive_mounting.html#prerequisites",
+    "href": "docs/data/data_storage/project_drive_mounting.html#prerequisites",
+    "title": "Mount Project Drive on server",
+    "section": "Prerequisites",
+    "text": "Prerequisites\n\nA (TU Delft) Virtual Private Server\nA (TU Delft) Project Drive",
+    "crumbs": [
+      "<ins>Guides</ins>",
+      "![](/docs/img/folder-regular.svg){height=1em style='filter: invert(0.5) sepia(1) saturate(5) hue-rotate(175deg)'} **Data Management**",
+      "Storage",
+      "Storage options",
+      "Mount Project Drive on server"
+    ]
+  },
+  {
+    "objectID": "docs/data/data_storage/project_drive_mounting.html#steps",
+    "href": "docs/data/data_storage/project_drive_mounting.html#steps",
+    "title": "Mount Project Drive on server",
+    "section": "Steps",
+    "text": "Steps\n\nLocate the URL of your project storage\nConnect to your TU Delft VPS via SSH\nCreate a new directory as a mounting point\nRetrieve your Linux user and group details\nEdit the fstab file to include project storage technical details\nMount the project drive\n\n\nStep 1. Locate the URL of your project storage\nThe URL for your project drive can be obtained from either - the email from TU Delft ICT with the confirmation of your project drive request, or - by using a web browser to navigate into https://webdata.tudelft.nl/\n\n\n\n\n\n\nNote\n\n\n\nhttps://webdata.tudelft.nl/ can only be accessed in campus or using eduVPN\n\n\n\nchromeedge\n\n\n\nNavigate into https://webdata.tudelft.nl/staff-umbrella/\n\nA pop-up should appear asking for Username and Password.\n\nProvide your netID in the Username field, provide your password accordingly.\n\nYou should now see a list of your project drives.\n\nClick on the project drive of your choice.\n\nCopy everything after “https://webdata.tudelft.nl/”\n\n\n\nContent within webdata is under password protection. Typing your username and password in only possible with a pop-up message which is disabled in systems managed by TU Delft, please try the instructions provided for chrome\n\n\n\n\n\nStep 2. Connect to your TU Delft VPS via SSH\nFollow instructions in TU Delft ICT email from initial server setup or configure a 1-step connection via SSH.\n\n\nStep 3. Create a new directory as the mounting point\nThe convention is to create mounting points in the folder /media. Navigate to the folder and create a new folder with\ncd /media\nmkdir &lt;server_mount_point&gt;\nReplace &lt;server_mount_point&gt; with the name of your choice. This will be the name of the folder where your project drive will be mounted.\n\n\nStep 4. Find and save your user and group details\nIn the terminal, you can retrieve your local user and group details with:\nid -u &lt;your_netID&gt; # User ID\nid -g &lt;your_netID&gt; # Group ID\nYou may need the values for uid and gid for step 5.\n\n\n\n\n\n\nNote\n\n\n\nThese commands are server-specific, so make sure to execute them on the server where the project drives will be mounted.\n\n\n\n\nStep 5. Edit the fstab file to include project storage technical details\nThe fstab file containes a list of the addresses of external file systems. In this file, the details of your project drive will need to be added in a single line. This line consists of four parts: 1. filesystem - the address of the project drive 2. mount point - the location in the VPS where you want to mount the project drive 3. type - the type of the filesystem 4. options - additional option such as user privileges\nThe fstab file must be in the /etc/ directory and can be opened with the vi or nano editor:\n\nvinano\n\n\nIn the terminal, enter the following command to open the fstab file in the vi editor:\nsudo vi /etc/fstab\nThen, switch to the insert mode (hit “i” to switch to insert mode and be able to type)\n\n\nIn the terminal, enter the following command to open the fstab file in the nano editor:\nsudo nano /etc/fstab\n\n\n\nAdd the following line to the file:\n&lt;your_netID&gt;@sftp.tudelft.nl:/staff-umbrella/&lt;project_drive_name&gt;  /media/&lt;server_mount_point&gt; fuse.sshfs  rw,noauto,users,_netdev  0  0\nreplacing the values between &lt; and &gt; with your NetID, the name of your project drive, and the name of the folder you created in step 3.\n\n\n\n\n\n\nNote\n\n\n\nIf this configuration throws a permission error during mounting, try:\n//tudelft.net/staff-umbrella/&lt;project_drive_name&gt;/ /media/&lt;server_mount_point&gt; cifs username=&lt;your_netID&gt;,noauto,uid=&lt;your_uid&gt;,gid=&lt;your_gid&gt;,forcegid,rw,_netdev\nUse the values for uid and gid from step 4.\n\n\nClose the file editor and save the changes:\n\nvinano\n\n\nUse Control+C followed by :wq to save the file and close it to get back to your terminal.\n\n\nAs indicated by the nano interface, use Control+O to write the file. Then, confirm your choice of filename by hitting enter. Finally, exit the file with Control+X\n\n\n\n\n\nStep 6. Mount the project drive\nTo mount the project drive execute the command\nsudo mount /media/&lt;server_mount_point&gt;\nYou can also unmount the drive with\nfusermount -u /media/&lt;server_mount_point&gt;\nThe project drive will not mount automatically, so you will need to remount it manually each time you restart the server.\n\n\n\n\n\n\nNote\n\n\n\nIf the step above does not work, it probably means that the packages for mounting cifs-type filesystems haven’t been installed. Depending on your linux flavour you will need to install them using:\n\nUbuntu/DebianRedhat/Centos/Fedora\n\n\nsudo apt install cifs-utils\n\n\nsudo yum install cifs-utils",
+    "crumbs": [
+      "<ins>Guides</ins>",
+      "![](/docs/img/folder-regular.svg){height=1em style='filter: invert(0.5) sepia(1) saturate(5) hue-rotate(175deg)'} **Data Management**",
+      "Storage",
+      "Storage options",
+      "Mount Project Drive on server"
+    ]
+  },
+  {
+    "objectID": "docs/data/data_storage/project_drive_mounting.html#notes-and-next-steps",
+    "href": "docs/data/data_storage/project_drive_mounting.html#notes-and-next-steps",
+    "title": "Mount Project Drive on server",
+    "section": "Notes and next steps",
+    "text": "Notes and next steps\nThe steps above can also be used to mount any storage offered by TU Delft with a WebDav link (staff-homes, staff-groups, staff-bulk, student-homes, student-groups and apps). Simply use the latter half of the URL from the WebDav web link of your storage drive, which will change from staff-umbrella (project drive) to something else depending on the storage drive you would like to mount.",
+    "crumbs": [
+      "<ins>Guides</ins>",
+      "![](/docs/img/folder-regular.svg){height=1em style='filter: invert(0.5) sepia(1) saturate(5) hue-rotate(175deg)'} **Data Management**",
+      "Storage",
+      "Storage options",
+      "Mount Project Drive on server"
+    ]
+  },
+  {
+    "objectID": "docs/data/data_publishing/publishing.html",
+    "href": "docs/data/data_publishing/publishing.html",
+    "title": "Publishing data",
+    "section": "",
+    "text": "Data repositories are online locations for storing research data long term. When data is published in a repository, it is (often) assigned a persistent digital object identifier (DOI), which ensures that the data is discoverable and accessible over time. When published, the data should be accompanied by an appropriate license and metadata describing your data.",
+    "crumbs": [
+      "<ins>Guides</ins>",
+      "![](/docs/img/folder-regular.svg){height=1em style='filter: invert(0.5) sepia(1) saturate(5) hue-rotate(175deg)'} **Data Management**",
+      "Archive and publish",
+      "Publishing data"
+    ]
+  },
+  {
+    "objectID": "docs/data/data_publishing/publishing.html#tu.researchdata",
+    "href": "docs/data/data_publishing/publishing.html#tu.researchdata",
+    "title": "Publishing data",
+    "section": "4TU.ResearchData",
+    "text": "4TU.ResearchData\nChoosing a repository for publishing your data depends on factors such as storage costs, funding or publication requirements, and security needs. TU Delft provides an in-house data repository, 4TU.ResearchData, supporting versioning and a GitHub remote as part of their services. Additionally, when publishing your data, your submission is reviewed to ensure that repository requirements are met. You will receive a DOI for your dataset, which can be used to cite your data in publications. All data is stored in the Netherlands, with two locations in Delft and a backup in Leiden.\n\n\n\n\n\n\n Learn more\n\n\n\nGetting started with 4TU.ResearchData",
+    "crumbs": [
+      "<ins>Guides</ins>",
+      "![](/docs/img/folder-regular.svg){height=1em style='filter: invert(0.5) sepia(1) saturate(5) hue-rotate(175deg)'} **Data Management**",
+      "Archive and publish",
+      "Publishing data"
+    ]
+  },
+  {
+    "objectID": "docs/data/data_publishing/publishing.html#zenodo",
+    "href": "docs/data/data_publishing/publishing.html#zenodo",
+    "title": "Publishing data",
+    "section": "Zenodo",
+    "text": "Zenodo\nDeveloped by CERN, Zenodo is an open repository that allows researchers to upload and share their research outputs, including datasets, publications, and software. Similarly to 4TU.ResearchData you will receive a DOI for your dataset. Zenodo supports versioning and has GitHub integration.\n\n\n\nSelecting a data repository. The Turing Way Community. This illustration is created by Scriberia with The Turing Way community, used under a CC-BY 4.0 licence. DOI: 10.5281/zenodo.3332807\n\n\nRegardless of the repository you choose, it is important to ensure that your data is properly documented. This includes describing the content, structure, and context of your data, as well as any relevant documentation that is needed to understand and use the data.\n\n\n\n\n\n\n Learn more\n\n\n\nFor a more comprehensive list of repositories and how to select one, you can check the Turing Way book or the TU Delft Library Guidelines",
+    "crumbs": [
+      "<ins>Guides</ins>",
+      "![](/docs/img/folder-regular.svg){height=1em style='filter: invert(0.5) sepia(1) saturate(5) hue-rotate(175deg)'} **Data Management**",
+      "Archive and publish",
+      "Publishing data"
+    ]
+  },
+  {
+    "objectID": "docs/data/data_publishing/licensing_data.html",
+    "href": "docs/data/data_publishing/licensing_data.html",
+    "title": "Data licensing",
+    "section": "",
+    "text": "When depositing data, selecting an appropriate license cannot be overlooked, as it defines the permissions and restrictions for others using your data. Clear labelling of licensing terms ensures that data can be shared and reused legally and ethically.\nSimilarly to software licenses, data licenses can be divided depending on their restrictiveness. The most common licenses are Creative Commons (CC) licenses, which are widely used for data and other creative works. These licenses can be categorized into permissive and restrictive types.",
+    "crumbs": [
+      "<ins>Guides</ins>",
+      "![](/docs/img/folder-regular.svg){height=1em style='filter: invert(0.5) sepia(1) saturate(5) hue-rotate(175deg)'} **Data Management**",
+      "Archive and publish",
+      "Licensing"
+    ]
+  },
+  {
+    "objectID": "docs/data/data_publishing/licensing_data.html#cc-licenses",
+    "href": "docs/data/data_publishing/licensing_data.html#cc-licenses",
+    "title": "Data licensing",
+    "section": "CC licenses",
+    "text": "CC licenses\nPermissive licenses allow for broad reuse with minimal restrictions, while restrictive licenses impose limitations on how the data can be used. CC licenses are further divided into the following categories:\n\nPublic Domain (CC0): No restrictions, data can be used for any purpose.\nAttribution (CC-BY): Requires attribution to the original creator, allows for sharing and adaptation with appropriate citations.\nAttribution-ShareAlike (CC-BY-SA): Requires attribution and allows for derivatives under the same license.\nNon-Commercial (CC-BY-NC): Allows use for non-commercial purposes only.\nNo Derivatives (CC-BY-ND): No derivatives allowed.\n\n\n\n\n\n\n\n Learn more\n\n\n\n\nCreative Commons Licenses",
+    "crumbs": [
+      "<ins>Guides</ins>",
+      "![](/docs/img/folder-regular.svg){height=1em style='filter: invert(0.5) sepia(1) saturate(5) hue-rotate(175deg)'} **Data Management**",
+      "Archive and publish",
+      "Licensing"
+    ]
+  },
+  {
+    "objectID": "docs/data/data_publishing/licensing_data.html#other-data-licenses",
+    "href": "docs/data/data_publishing/licensing_data.html#other-data-licenses",
+    "title": "Data licensing",
+    "section": "Other data licenses",
+    "text": "Other data licenses\nIn addition to CC licenses, Open Data Commons provides a set of licenses that are specifically designed for data. These licenses are similar to CC licenses but are tailored for data and databases.\n\nPublic Domain Dedication and License (PDDL): Similar to CC0, it allows for unrestricted use of the data.\nOpen Data Commons Attribution License (ODC-BY): Requires attribution to the original creator, allows for sharing and adaptation with appropriate citations.\nOpen Data Commons Open Database License (ODbL): Allows for sharing, modification, and use of the database, but requires attribution and share-alike for derivatives. Similar to CC-BY-SA, but specifically designed for databases.\nRestrictive Licenses: Limits usage, often prohibiting commercial use or modifications.\n\nWhile Creative Commons and Open Data Commons license might seem similar, the difference between them is that CC licenses are more general and can be applied to any type of work, while Open Data Commons licenses are specifically designed for data and databases and therefore cover different rights.\n\n\n\n\n\n\n Learn more\n\n\n\n\nTuring Way - Data Licenses",
+    "crumbs": [
+      "<ins>Guides</ins>",
+      "![](/docs/img/folder-regular.svg){height=1em style='filter: invert(0.5) sepia(1) saturate(5) hue-rotate(175deg)'} **Data Management**",
+      "Archive and publish",
+      "Licensing"
+    ]
+  },
+  {
+    "objectID": "docs/data/data_processing.html",
+    "href": "docs/data/data_processing.html",
+    "title": "Data processing",
+    "section": "",
+    "text": "Data processing is a broad term and is often conflated with related terms. It typically includes steps like data cleaning and data transformation. Some workflows may extend this to preliminary analysis, though visualizations are generally considered a separate stage. The term data wrangling is frequently used interchangeably with early processing stages. The specific steps involved can vary depending on the type of data and the goals of the analysis.",
+    "crumbs": [
+      "<ins>Guides</ins>",
+      "![](/docs/img/folder-regular.svg){height=1em style='filter: invert(0.5) sepia(1) saturate(5) hue-rotate(175deg)'} **Data Management**",
+      "Data processing"
+    ]
+  },
+  {
+    "objectID": "docs/data/data_processing.html#data-versioning",
+    "href": "docs/data/data_processing.html#data-versioning",
+    "title": "Data processing",
+    "section": "Data versioning",
+    "text": "Data versioning\nData versioning is the process of assigning unique version numbers to different iterations of a dataset. This practice is important when working with machine learning models, as it allows to track changes made to the data over time and ensure that the correct version of the data is used for training and testing. Data versioning can also help with reproducibility, because it allows to recreate previous versions of the data and compare results across different iterations.\nThere are a couple of techniques and tools for data versioning. For example, Git is typically used to track source code and software versions, but is not well-suited for large datasets. However, Git LFS (Large File Storage) can be used to manage large files in a Git repository. Other tools like DVC (Data Version Control) are specifically designed for data versioning and can be used to track changes to datasets and models over time. DVC integrates with Git and allows to version control data files, models, and experiments in a way that is similar to how Git works for source code.\n\nDVC\nDVC has very comprehensive documentation, tutorials and videos available, most of the resources are available on their homepage. It covers how to get started with data versioning, how to integrate it with Git, and how to use DVC with different cloud storage providers (e.g. AWS S3).",
+    "crumbs": [
+      "<ins>Guides</ins>",
+      "![](/docs/img/folder-regular.svg){height=1em style='filter: invert(0.5) sepia(1) saturate(5) hue-rotate(175deg)'} **Data Management**",
+      "Data processing"
+    ]
+  },
+  {
+    "objectID": "docs/data/data_collection/data_conventions.html",
+    "href": "docs/data/data_collection/data_conventions.html",
+    "title": "Data conventions",
+    "section": "",
+    "text": "By adhering to domain-aligned data conventions, you can enhance the quality and reproducibility of your work, promote collaboration, data sharing and reuse. While flexibility exists to accommodate the specific needs of your research project, it is important to establish a consistent framework for data collection and management. This section outlines some key considerations for data conventions, including naming conventions, folder structure, and file standards.",
+    "crumbs": [
+      "<ins>Guides</ins>",
+      "![](/docs/img/folder-regular.svg){height=1em style='filter: invert(0.5) sepia(1) saturate(5) hue-rotate(175deg)'} **Data Management**",
+      "Collection",
+      "Data conventions"
+    ]
+  },
+  {
+    "objectID": "docs/data/data_collection/data_conventions.html#data-conventions",
+    "href": "docs/data/data_collection/data_conventions.html#data-conventions",
+    "title": "Data conventions",
+    "section": "Data conventions",
+    "text": "Data conventions\nEstablishing consistent naming conventions and metadata practices for your data files is essential for long-term project maintainability. Similarly, as mentioned in the Project structure guide in the Research Software section, some essential principles apply, like:\n\nuse descriptive, concise and consistent names\navoid special characters and spaces (instead use underscores _ or hyphens -)\nfollow ISO 8601 date formatting (YYYY-MM-DD)\nthe order matters - order elements in the name from least to most specific\ninclude versioning in the name (where applicable)\n\nHowever, the specific conventions you choose should align with the needs of your research project, collaborators, and established practices within your field.",
+    "crumbs": [
+      "<ins>Guides</ins>",
+      "![](/docs/img/folder-regular.svg){height=1em style='filter: invert(0.5) sepia(1) saturate(5) hue-rotate(175deg)'} **Data Management**",
+      "Collection",
+      "Data conventions"
+    ]
+  },
+  {
+    "objectID": "docs/data/data_collection/data_conventions.html#folder-structure",
+    "href": "docs/data/data_collection/data_conventions.html#folder-structure",
+    "title": "Data conventions",
+    "section": "Folder structure",
+    "text": "Folder structure\nMaintaining a consistent folder structure across your research group and project phases prevents confusion, reduces errors in data analysis, and significantly improves research reproducibility. Remember that folder structure should complement your file naming (data) conventions to create a cohesive data organization system. Some practices to consider include:\n\nUse a consistent and descriptive naming convention for folders, similar to file naming conventions\nAvoid using spaces or special characters in folder names\nCreate a hierarchical structure that moves from general to specific, making navigation intuitive\nEstablish consistent naming patterns across all levels of your folder hierarchy\nSeparate raw and processed data into distinct folders to preserve original data integrity\nLimit folder nesting to 3-5 levels to prevent excessive complexity\nGroup related files into logical categories rather than creating folders for individual files\nDocument your folder structure in your data management plan for reference\nFor time-series or versioned data, consider incorporating date-based folder organization\nConsider adding a README file in your data/ folder to provide an overview of the folder structure and its contents",
+    "crumbs": [
+      "<ins>Guides</ins>",
+      "![](/docs/img/folder-regular.svg){height=1em style='filter: invert(0.5) sepia(1) saturate(5) hue-rotate(175deg)'} **Data Management**",
+      "Collection",
+      "Data conventions"
+    ]
+  },
+  {
+    "objectID": "docs/data/data_collection/data_conventions.html#file-standards",
+    "href": "docs/data/data_collection/data_conventions.html#file-standards",
+    "title": "Data conventions",
+    "section": "File standards",
+    "text": "File standards\nFiles commonly use standardised formats depending on their knowledge domain, and/or the platfrom through which they are made available. For example, FASTA format files are widely used in bioinformatics workflows for sequence alignment, database searches, genome assembly and more. Several major biological databases and tooling use and support the FASTA format, like NCBI, EMBL-EBI, and UniProt.\nIn the field of geosciences, the NetCDF format is widely used for array-oriented scientific data. It is particularly useful for storing multidimensional data such as temperature, pressure, and humidity in a single file. NetCDF files are self-describing and can be compressed to save space, making them ideal for large datasets.\nIn the field of engineering, data is often stored in formats such as HDF5. It is widely used for storing large amounts of numerical data and are supported by many programming languages and software tools.\nIn addition, 4TU.ResearchData has a list of preferred file formats, and they have a data collection policy that outlines the preferred file formats for data submission.\n\n\n\n\n\n\n Further reading\n\n\n\n\nThe FAIR Guiding Principles for scientific data management and stewardship",
+    "crumbs": [
+      "<ins>Guides</ins>",
+      "![](/docs/img/folder-regular.svg){height=1em style='filter: invert(0.5) sepia(1) saturate(5) hue-rotate(175deg)'} **Data Management**",
+      "Collection",
+      "Data conventions"
+    ]
+  },
+  {
+    "objectID": "docs/data/data_collection/access_reuse.html",
+    "href": "docs/data/data_collection/access_reuse.html",
+    "title": "Access and reuse",
+    "section": "",
+    "text": "Access and reuse depends on a variety of factors, including the format in which your data is stored, the tools used to create and manage it, and the policies governing its use. The key consideration is planning who, and under what conditions, can access your data.\n\n\n\n\n\n\n Learn more\n\n\n\nAgain, we would like to refer you to modules from the RDM 101 course and links from the PhD Supervisors guide for more information on this topic:\n\nRDM 101 - Module 3 - Access to Data\nRDM 101 - Module 4 - Data access and Data publication\nPhD Supervisors guide - Discover & Reuse\n\n\n\nTo ensure that your data can be accessed and reused in the future, consider the following practices:\n\nChoose the right format: Opting for widely accepted, non-proprietary, and open formats ensures that your data remains accessible and usable over time, even as technology evolves. Formats such as CSV for tabular data, TXT or Markdown for text, and PNG for images are examples of formats that are more likely to be supported in the long term. This increases the likelihood that your data will be accessible in the future, regardless of changes in technology or software.\nDocument your data: Documenting the context and structure of your data to enhance its reusability. Providing metadata, clear file naming conventions, and a README file explaining the dataset can significantly improve the chances of your data being understood and reused by others, including your future self.\nFollow data management best practices: Implement data management best practices, such as version control, regular backups, and secure storage. This will help ensure that your data remains accessible and usable over time.\nConsider data sharing policies: Be aware of any data sharing policies or regulations that may apply to your data. This includes understanding the rights and permissions associated with your data, as well as any restrictions on its use or distribution.\n\n\n\n\n\n\n\n Tip: Explore our Data sharing guide for more information.\n\n\n\n\nPlan for long-term storage: Consider how your data will be stored and accessed in the long term. This may involve using cloud storage solutions, institutional repositories, or other platforms that provide reliable access to your data over time.\n\n\n\n\n\n\n\n Tip: Explore our section Data storage for more information on data storage options.\n\n\n\n\nArchive in a trusted repository: Deposit your data in a trusted data repository. Repositories like 4TU.ResearchData provide long-term storage, preservation, and access services, making it easier for others to find and reuse your data.\n\n\n\n\n\n\n\n Tip: Explore our section Archive and publish for information on archiving your research data.",
+    "crumbs": [
+      "<ins>Guides</ins>",
+      "![](/docs/img/folder-regular.svg){height=1em style='filter: invert(0.5) sepia(1) saturate(5) hue-rotate(175deg)'} **Data Management**",
+      "Collection",
+      "Access and reuse"
+    ]
+  },
+  {
+    "objectID": "docs/community/dcc.html",
+    "href": "docs/community/dcc.html",
+    "title": "About the DCC",
+    "section": "",
+    "text": "About the DCC\nThe TU Delft Digital Competence Centre (DCC) is an on-campus initiative to help researchers make research data FAIR, improve research software, and apply computing practices to increase the efficiency of the research process. The DCC is an initiative of the Open Science Programme at TU Delft designed to benefit researchers at all levels.\nFor more information, please visit our website at dcc.tudelft.nl or email us at dcc@tudelft.nl."
+  },
+  {
+    "objectID": "CODE_OF_CONDUCT.html",
+    "href": "CODE_OF_CONDUCT.html",
+    "title": "Code of Conduct",
+    "section": "",
+    "text": "We as members, contributors, and leaders pledge to make participation in our community a harassment-free experience for everyone, regardless of age, body size, visible or invisible disability, ethnicity, sex characteristics, gender identity and expression, level of experience, education, socio-economic status, nationality, personal appearance, race, caste, color, religion, or sexual identity and orientation.\nWe pledge to act and interact in ways that contribute to an open, welcoming, diverse, inclusive, and healthy community.\n\n\n\nExamples of behavior that contributes to a positive environment for our community include:\n\nDemonstrating empathy and kindness toward other people\nBeing respectful of differing opinions, viewpoints, and experiences\nGiving and gracefully accepting constructive feedback\nAccepting responsibility and apologizing to those affected by our mistakes, and learning from the experience\nFocusing on what is best not just for us as individuals, but for the overall community\n\nExamples of unacceptable behavior include:\n\nThe use of sexualized language or imagery, and sexual attention or advances of any kind\nTrolling, insulting or derogatory comments, and personal or political attacks\nPublic or private harassment\nPublishing others’ private information, such as a physical or email address, without their explicit permission\nOther conduct which could reasonably be considered inappropriate in a professional setting\n\n\n\n\nCommunity leaders are responsible for clarifying and enforcing our standards of acceptable behavior and will take appropriate and fair corrective action in response to any behavior that they deem inappropriate, threatening, offensive, or harmful.\nCommunity leaders have the right and responsibility to remove, edit, or reject comments, commits, code, wiki edits, issues, and other contributions that are not aligned to this Code of Conduct, and will communicate reasons for moderation decisions when appropriate.\n\n\n\nThis Code of Conduct applies within all community spaces, and also applies when an individual is officially representing the community in public spaces. Examples of representing our community include using an official email address, posting via an official social media account, or acting as an appointed representative at an online or offline event.\n\n\n\nInstances of abusive, harassing, or otherwise unacceptable behavior may be reported to the community leaders responsible for enforcement at dcc@tudelft.nl. All complaints will be reviewed and investigated promptly and fairly.\nAll community leaders are obligated to respect the privacy and security of the reporter of any incident.\n\n\n\nCommunity leaders will follow these Community Impact Guidelines in determining the consequences for any action they deem in violation of this Code of Conduct:\n\n\nCommunity Impact: Use of inappropriate language or other behavior deemed unprofessional or unwelcome in the community.\nConsequence: A private, written warning from community leaders, providing clarity around the nature of the violation and an explanation of why the behavior was inappropriate. A public apology may be requested.\n\n\n\nCommunity Impact: A violation through a single incident or series of actions.\nConsequence: A warning with consequences for continued behavior. No interaction with the people involved, including unsolicited interaction with those enforcing the Code of Conduct, for a specified period of time. This includes avoiding interactions in community spaces as well as external channels like social media. Violating these terms may lead to a temporary or permanent ban.\n\n\n\nCommunity Impact: A serious violation of community standards, including sustained inappropriate behavior.\nConsequence: A temporary ban from any sort of interaction or public communication with the community for a specified period of time. No public or private interaction with the people involved, including unsolicited interaction with those enforcing the Code of Conduct, is allowed during this period. Violating these terms may lead to a permanent ban.\n\n\n\nCommunity Impact: Demonstrating a pattern of violation of community standards, including sustained inappropriate behavior, harassment of an individual, or aggression toward or disparagement of classes of individuals.\nConsequence: A permanent ban from any sort of public interaction within the community.\n\n\n\n\nThis Code of Conduct is adapted from the Contributor Covenant, version 2.1, available at https://www.contributor-covenant.org/version/2/1/code_of_conduct.html.\nCommunity Impact Guidelines were inspired by Mozilla’s code of conduct enforcement ladder.\nFor answers to common questions about this code of conduct, see the FAQ at https://www.contributor-covenant.org/faq. Translations are available at https://www.contributor-covenant.org/translations."
+  },
+  {
+    "objectID": "CODE_OF_CONDUCT.html#our-pledge",
+    "href": "CODE_OF_CONDUCT.html#our-pledge",
+    "title": "Code of Conduct",
+    "section": "",
+    "text": "We as members, contributors, and leaders pledge to make participation in our community a harassment-free experience for everyone, regardless of age, body size, visible or invisible disability, ethnicity, sex characteristics, gender identity and expression, level of experience, education, socio-economic status, nationality, personal appearance, race, caste, color, religion, or sexual identity and orientation.\nWe pledge to act and interact in ways that contribute to an open, welcoming, diverse, inclusive, and healthy community."
+  },
+  {
+    "objectID": "CODE_OF_CONDUCT.html#our-standards",
+    "href": "CODE_OF_CONDUCT.html#our-standards",
+    "title": "Code of Conduct",
+    "section": "",
+    "text": "Examples of behavior that contributes to a positive environment for our community include:\n\nDemonstrating empathy and kindness toward other people\nBeing respectful of differing opinions, viewpoints, and experiences\nGiving and gracefully accepting constructive feedback\nAccepting responsibility and apologizing to those affected by our mistakes, and learning from the experience\nFocusing on what is best not just for us as individuals, but for the overall community\n\nExamples of unacceptable behavior include:\n\nThe use of sexualized language or imagery, and sexual attention or advances of any kind\nTrolling, insulting or derogatory comments, and personal or political attacks\nPublic or private harassment\nPublishing others’ private information, such as a physical or email address, without their explicit permission\nOther conduct which could reasonably be considered inappropriate in a professional setting"
+  },
+  {
+    "objectID": "CODE_OF_CONDUCT.html#enforcement-responsibilities",
+    "href": "CODE_OF_CONDUCT.html#enforcement-responsibilities",
+    "title": "Code of Conduct",
+    "section": "",
+    "text": "Community leaders are responsible for clarifying and enforcing our standards of acceptable behavior and will take appropriate and fair corrective action in response to any behavior that they deem inappropriate, threatening, offensive, or harmful.\nCommunity leaders have the right and responsibility to remove, edit, or reject comments, commits, code, wiki edits, issues, and other contributions that are not aligned to this Code of Conduct, and will communicate reasons for moderation decisions when appropriate."
+  },
+  {
+    "objectID": "CODE_OF_CONDUCT.html#scope",
+    "href": "CODE_OF_CONDUCT.html#scope",
+    "title": "Code of Conduct",
+    "section": "",
+    "text": "This Code of Conduct applies within all community spaces, and also applies when an individual is officially representing the community in public spaces. Examples of representing our community include using an official email address, posting via an official social media account, or acting as an appointed representative at an online or offline event."
+  },
+  {
+    "objectID": "CODE_OF_CONDUCT.html#enforcement",
+    "href": "CODE_OF_CONDUCT.html#enforcement",
+    "title": "Code of Conduct",
+    "section": "",
+    "text": "Instances of abusive, harassing, or otherwise unacceptable behavior may be reported to the community leaders responsible for enforcement at dcc@tudelft.nl. All complaints will be reviewed and investigated promptly and fairly.\nAll community leaders are obligated to respect the privacy and security of the reporter of any incident."
+  },
+  {
+    "objectID": "CODE_OF_CONDUCT.html#enforcement-guidelines",
+    "href": "CODE_OF_CONDUCT.html#enforcement-guidelines",
+    "title": "Code of Conduct",
+    "section": "",
+    "text": "Community leaders will follow these Community Impact Guidelines in determining the consequences for any action they deem in violation of this Code of Conduct:\n\n\nCommunity Impact: Use of inappropriate language or other behavior deemed unprofessional or unwelcome in the community.\nConsequence: A private, written warning from community leaders, providing clarity around the nature of the violation and an explanation of why the behavior was inappropriate. A public apology may be requested.\n\n\n\nCommunity Impact: A violation through a single incident or series of actions.\nConsequence: A warning with consequences for continued behavior. No interaction with the people involved, including unsolicited interaction with those enforcing the Code of Conduct, for a specified period of time. This includes avoiding interactions in community spaces as well as external channels like social media. Violating these terms may lead to a temporary or permanent ban.\n\n\n\nCommunity Impact: A serious violation of community standards, including sustained inappropriate behavior.\nConsequence: A temporary ban from any sort of interaction or public communication with the community for a specified period of time. No public or private interaction with the people involved, including unsolicited interaction with those enforcing the Code of Conduct, is allowed during this period. Violating these terms may lead to a permanent ban.\n\n\n\nCommunity Impact: Demonstrating a pattern of violation of community standards, including sustained inappropriate behavior, harassment of an individual, or aggression toward or disparagement of classes of individuals.\nConsequence: A permanent ban from any sort of public interaction within the community."
+  },
+  {
+    "objectID": "CODE_OF_CONDUCT.html#attribution",
+    "href": "CODE_OF_CONDUCT.html#attribution",
+    "title": "Code of Conduct",
+    "section": "",
+    "text": "This Code of Conduct is adapted from the Contributor Covenant, version 2.1, available at https://www.contributor-covenant.org/version/2/1/code_of_conduct.html.\nCommunity Impact Guidelines were inspired by Mozilla’s code of conduct enforcement ladder.\nFor answers to common questions about this code of conduct, see the FAQ at https://www.contributor-covenant.org/faq. Translations are available at https://www.contributor-covenant.org/translations."
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Welcome to the DCC Guides!",
+    "section": "",
+    "text": "These guides provide a starting point for Research Computing, Research Data, and Research Software at TU Delft. This is an initiative from the TU Delft Digital Competence Centre.\n Shared solutions for research support staff  Practical guides for researchers\n\n\n Computing Infrastructure \n Data Management \n Research Software \n Courses and Workshops \n\n\n\n\n\n\n\n\n Want to get involved? \n Join the community We welcome anyone to join us in improving our guides! Find out how in our contributing guide.\n Join the discussion We welcome community discussions, ideas, and general questions to develop solutions and receive feedback in our community forum.\n Open an issue We track topic requests and bug-reports via GitHub issues.",
+    "crumbs": [
+      "<ins>Guides</ins>",
+      "<span style=\"filter:grayscale(100%);\">⌂</span> **Home**"
+    ]
+  },
+  {
+    "objectID": "CONTRIBUTING.html",
+    "href": "CONTRIBUTING.html",
+    "title": "Contributing guidelines",
+    "section": "",
+    "text": "Do you have issues, tips, ideas, events, or questions related to Research Computing, Research Data, and Research Software at TU Delft?\nAre you a researcher interested in these topics?\nDo you work and collaborate with researchers on these topics?\n\nWe’re using GitHub Discussions as a place to connect with other members of our community. We hope that you:\n\nAsk questions about challenges you encounter\nShare ideas and solutions\nEngage with other community members\nBe welcoming and open-minded. Remember that this is a community we build together. See our Code of Conduct for more information.\n\n\n\n\nDo you have questions, ideas or ongoing developments on FAIR related aspects, Open Science, training, etc? Would you like to point to specific resources and potential solutions or ideas?\n\nUse the Q&A to ask a question on a specific topic, such as\n\nHow do I generate a reproducible software development environment?\nWhere can I find information on creating a Python package?\nHow should I archive my software?\nHow do I get started with git?\n\nUse Ideas to make proposals, for instance\n\nUsing jupyter hub for a workshop\nUsing jupyter books to create educational resources\nRunning monthly webinars for the community to transfer FAIR practices\n\nUse Solutions to point people to existing solutions or share your own. These solutions might end up on our Guides website to share with our community.\nShow and tell things you have done that you are proud of and like other to be aware of.\n\n\n\n\n\n\n\nFork the repository to your own GitHub profile.\nClone the repository.\nNavigate to the root of this repository in your terminal.\nInstall Quarto if you don’t already have it installed on your machine. You can find the installation instructions here.\n\nAlternative: Install Quarto within a virtual environment using the environment.yml file by following the below steps:\n\nRun conda env create -f environment.yml in the terminal to create a conda environment with Quarto pre-installed.\nActivate the environment by running conda activate dcc_guides.\n\n\n\nRun quarto preview.\nYou will see the rendered version in a browser window.\n\n\n\n\n\nFork the repository to your own GitHub profile.\nEither commit a new change to the repository to trigger the build action or manually trigger the action. To manually trigger the action, go to Actions -&gt; Quarto Publish Guides and press Run workflow and Run workflow.\nIn your forked repository, under Settings -&gt; Pages set Source to gh-pages and /(root) and press Save.\n\n\n\n\n\n(important) announce your plan to the rest of the community before you start working. This announcement should be in the form of a (new) issue;\n(important) wait until some kind of consensus is reached about your idea being a good idea;\nif needed, fork the repository to your own GitHub profile and create your own feature branch off of the latest main commit. While working on your feature branch, make sure to stay up to date with the main branch by pulling in changes, possibly from the ‘upstream’ repository (follow the instructions here and here);\npush your feature branch to (your fork of) the DCC guides repository on GitHub;\ncreate the pull request, e.g. following the instructions here. If needed, provide a link to the gh-pages in your forked repository: https://&lt;your-username&gt;.github.io/TU-Delft-DCC.github.io/."
+  },
+  {
+    "objectID": "CONTRIBUTING.html#welcome",
+    "href": "CONTRIBUTING.html#welcome",
+    "title": "Contributing guidelines",
+    "section": "",
+    "text": "Do you have issues, tips, ideas, events, or questions related to Research Computing, Research Data, and Research Software at TU Delft?\nAre you a researcher interested in these topics?\nDo you work and collaborate with researchers on these topics?\n\nWe’re using GitHub Discussions as a place to connect with other members of our community. We hope that you:\n\nAsk questions about challenges you encounter\nShare ideas and solutions\nEngage with other community members\nBe welcoming and open-minded. Remember that this is a community we build together. See our Code of Conduct for more information."
+  },
+  {
+    "objectID": "CONTRIBUTING.html#how-to-participate",
+    "href": "CONTRIBUTING.html#how-to-participate",
+    "title": "Contributing guidelines",
+    "section": "",
+    "text": "Do you have questions, ideas or ongoing developments on FAIR related aspects, Open Science, training, etc? Would you like to point to specific resources and potential solutions or ideas?\n\nUse the Q&A to ask a question on a specific topic, such as\n\nHow do I generate a reproducible software development environment?\nWhere can I find information on creating a Python package?\nHow should I archive my software?\nHow do I get started with git?\n\nUse Ideas to make proposals, for instance\n\nUsing jupyter hub for a workshop\nUsing jupyter books to create educational resources\nRunning monthly webinars for the community to transfer FAIR practices\n\nUse Solutions to point people to existing solutions or share your own. These solutions might end up on our Guides website to share with our community.\nShow and tell things you have done that you are proud of and like other to be aware of."
+  },
+  {
+    "objectID": "CONTRIBUTING.html#for-developers",
+    "href": "CONTRIBUTING.html#for-developers",
+    "title": "Contributing guidelines",
+    "section": "",
+    "text": "Fork the repository to your own GitHub profile.\nClone the repository.\nNavigate to the root of this repository in your terminal.\nInstall Quarto if you don’t already have it installed on your machine. You can find the installation instructions here.\n\nAlternative: Install Quarto within a virtual environment using the environment.yml file by following the below steps:\n\nRun conda env create -f environment.yml in the terminal to create a conda environment with Quarto pre-installed.\nActivate the environment by running conda activate dcc_guides.\n\n\n\nRun quarto preview.\nYou will see the rendered version in a browser window.\n\n\n\n\n\nFork the repository to your own GitHub profile.\nEither commit a new change to the repository to trigger the build action or manually trigger the action. To manually trigger the action, go to Actions -&gt; Quarto Publish Guides and press Run workflow and Run workflow.\nIn your forked repository, under Settings -&gt; Pages set Source to gh-pages and /(root) and press Save.\n\n\n\n\n\n(important) announce your plan to the rest of the community before you start working. This announcement should be in the form of a (new) issue;\n(important) wait until some kind of consensus is reached about your idea being a good idea;\nif needed, fork the repository to your own GitHub profile and create your own feature branch off of the latest main commit. While working on your feature branch, make sure to stay up to date with the main branch by pulling in changes, possibly from the ‘upstream’ repository (follow the instructions here and here);\npush your feature branch to (your fork of) the DCC guides repository on GitHub;\ncreate the pull request, e.g. following the instructions here. If needed, provide a link to the gh-pages in your forked repository: https://&lt;your-username&gt;.github.io/TU-Delft-DCC.github.io/."
+  },
+  {
+    "objectID": "docs/community/community.html",
+    "href": "docs/community/community.html",
+    "title": "Community",
+    "section": "",
+    "text": "Teams channel - DCC Community\nData Stewards\nOpen Science Program\nOpen Science Community\nDelft HPC\nData Champions\nICT Innovation\nStatistical Helpdesk\n\n\n\n\n4TU.ResearchData is an international data repository for science, engineering and design. Its services include curation, sharing, long-term access and preservation of research datasets. These services are available to anyone around the world. In addition, 4TU.ResearchData also offers training and resources to researchers to support them in making research data findable, accessible, interoperable and reproducible (FAIR).\n\n\n\nFounded in 2012 as an independent foundation by NWO and SURF, the Netherlands eScience Center is the national centre with the digital skills to create innovative software solutions in academic research. They award research projects based on calls for proposals, and train researchers in the use of research software. They offer our expertise in the form of research software engineers (RSEs), the technology specialists with expert digital skills who work with us at the Center.\n\n\n\nNL-RSE brings together the community of people writing and contributing to research software from Dutch universities, knowledge institutes, companies and other organizations to share knowledge, to organize meetings, and raise awareness for the scientific recognition of research software."
+  },
+  {
+    "objectID": "docs/community/community.html#partners-within-the-tu-delft",
+    "href": "docs/community/community.html#partners-within-the-tu-delft",
+    "title": "Community",
+    "section": "",
+    "text": "Teams channel - DCC Community\nData Stewards\nOpen Science Program\nOpen Science Community\nDelft HPC\nData Champions\nICT Innovation\nStatistical Helpdesk"
+  },
+  {
+    "objectID": "docs/community/community.html#tu.researchdata",
+    "href": "docs/community/community.html#tu.researchdata",
+    "title": "Community",
+    "section": "",
+    "text": "4TU.ResearchData is an international data repository for science, engineering and design. Its services include curation, sharing, long-term access and preservation of research datasets. These services are available to anyone around the world. In addition, 4TU.ResearchData also offers training and resources to researchers to support them in making research data findable, accessible, interoperable and reproducible (FAIR)."
+  },
+  {
+    "objectID": "docs/community/community.html#escience-center",
+    "href": "docs/community/community.html#escience-center",
+    "title": "Community",
+    "section": "",
+    "text": "Founded in 2012 as an independent foundation by NWO and SURF, the Netherlands eScience Center is the national centre with the digital skills to create innovative software solutions in academic research. They award research projects based on calls for proposals, and train researchers in the use of research software. They offer our expertise in the form of research software engineers (RSEs), the technology specialists with expert digital skills who work with us at the Center."
+  },
+  {
+    "objectID": "docs/community/community.html#nl-rse",
+    "href": "docs/community/community.html#nl-rse",
+    "title": "Community",
+    "section": "",
+    "text": "NL-RSE brings together the community of people writing and contributing to research software from Dutch universities, knowledge institutes, companies and other organizations to share knowledge, to organize meetings, and raise awareness for the scientific recognition of research software."
+  },
+  {
+    "objectID": "docs/community/maintainers.html",
+    "href": "docs/community/maintainers.html",
+    "title": "Guide maintainers",
+    "section": "",
+    "text": "Guide maintainers\nThis content is automatically generated, all changes made will be lost.\n\n\n\n\n\n\n\n\n\nSection\nTitle\nLead maintainer\nBackup maintainer\n\n\n\n\ncontainers\nDocker users\nMaurits Kok\n\n\n\ndata\nRequestProject Drive\nAshley Cryan\n\n\n\ndata\nSync with Unison\nAshley Cryan\n\n\n\ndata\nMount Project Drive\nRaúl Ortiz Merino\nMaurits Kok\n\n\ndata\nData publishing\nAleksandra Wilczynska\n\n\n\ngitlab\nTransfer ownership of a GitLab repository\nLora Armstrong\nMaurits Kok\n\n\ngitlab\nCI with Gitlab\nAshley Cryan\nMaurits Kok\n\n\ngitlab\nGitLab runner for MATLAB\nMaurits Kok\n\n\n\ninfrastructure\nOverview\nMaurits Kok\nJose Urra\n\n\ninfrastructure\nRequest SSL Certificate\nAshley Cryan\n\n\n\ninfrastructure\nRequest VPS\nAshley Cryan\n\n\n\ninfrastructure\nSet up an Apache web server\nAshley Cryan\n\n\n\nresources\nCurriculum\nAshley Cryan\nMaurits Kok\n\n\nsoftware\nFAIR4RS checklist\nMaurits Kok\nElviss Dvinskis\n\n\nsoftware\nSoftware Management Plan\nMaurits Kok\n\n\n\nsoftware\nBranch management\nMaurits Kok\n\n\n\ntesting\nTesting with MATLAB\nMaurits Kok"
+  },
+  {
+    "objectID": "docs/data/data_collection/collection.html",
+    "href": "docs/data/data_collection/collection.html",
+    "title": "Data collection",
+    "section": "",
+    "text": "Data collection is one of the first steps in the data lifecycle. It involves gathering and recording data from various sources, which can include (but are not limited to) experiments, observations, simulations or existing datasets. These can come from various sources being both public and private. The data collected can be quantitative or qualitative, and it can be structured or unstructured. The choice of data collection methods and tools depends on the research objectives, the type of data needed, and the resources available.\nProper data collection practices are essential for ensuring the integrity and reliability of the data, as well as for its use later analysis and interpretation. This section provides an overview of important aspects of data collection, including data conventions, data access and reuse, and the use of eLabJournal and RSpace. These elements are essential for maintaining the quality and usability of research data, and they play a significant role in the overall research process.\n\n\n\n\n\n\n Learn more\n\n\n\n\nWe would like to refer you to the Discover & Reuse and Gather/Create & Analyse and sections of the TU Delft Navigating Research Data and Software: A Practical Guide for PhD Supervisors guide for more information.\nAdditionally, we would like to refer you to the RDM 101 book for more information on this topic.\n\n\n\n\n\n\n Data conventions\nData standards and types.\n\nLearn more »\n\n\n\n Data access and reuse\nMaking your data accessible and reusable.\n\nLearn more »\n\n\n\n eLabJournal and RSpace\nTools made available by TU Delft to document the research process.\n\nLearn more »",
+    "crumbs": [
+      "<ins>Guides</ins>",
+      "![](/docs/img/folder-regular.svg){height=1em style='filter: invert(0.5) sepia(1) saturate(5) hue-rotate(175deg)'} **Data Management**",
+      "Collection"
+    ]
+  },
+  {
+    "objectID": "docs/data/data_collection/elab_rspace.html",
+    "href": "docs/data/data_collection/elab_rspace.html",
+    "title": "eLabJournal and RSpace",
+    "section": "",
+    "text": "Jones recounts her frustration with relying on paper notebooks to record experiments. “It becomes problematic when you need to replicate experiments or continue a research project conducted by a researcher who has since left your institution without documenting their work properly.” Jones identifies some difficulties of understanding handwritten information (including her own!) “Locating and interpreting data from past experiments can be challenging using paper notebooks”, she admits. “Finally, after rifling through pages of scribbled diagrams, photocopies and post-it notes you find the experiment you’ve been searching for and it can be impossible to decipher the handwriting and bridge the gaps of missing information”. These problems sound all too familiar to most lab-based scientists and have increased the demand for digital solutions, such as ELNs, that can improve the rigour, robustness and reproducibility of scientific research.\nDr. Siân Jones, quote taken from Keep calm and go paperless: Electronic lab notebooks can improve your research. CC-BY-4.0\n\nAn electronic laboratory notebook (ELN), also called a digital lab notebook, offers a text editor for writing notes similar to a paper notebook, along with spreadsheet tools for calculations and formatting tables and graphs. They include protocol templates to record standard procedures and laboratory inventories to keep track of samples, reagents, and equipment. Additionally, ELNs provide collaboration tools to share experimental information with others, making them a straightforward solution to research documentation.\nTU Delft has a subscription to eLABJournal and RSpace ELNs, and both offer similar functionalities.\n\n\n\n\n\n\n\n Learn more\n\n\n\nFor instructions on getting started with RSpace and eLabJournal, along with other essential information about ELNs, visit the TU Delft Library website’s Electronic Lab Notebook page.",
+    "crumbs": [
+      "<ins>Guides</ins>",
+      "![](/docs/img/folder-regular.svg){height=1em style='filter: invert(0.5) sepia(1) saturate(5) hue-rotate(175deg)'} **Data Management**",
+      "Collection",
+      "eLabJournal and RSpace"
+    ]
+  },
+  {
+    "objectID": "docs/data/data_publishing/archival_publishing_index.html",
+    "href": "docs/data/data_publishing/archival_publishing_index.html",
+    "title": "Archiving and publishing data",
+    "section": "",
+    "text": "Towards the end of the research cycle, data archiving (and publishing, when possible) is an essential step for the longevity and accessibility of your research. Archiving data means that it is preserved and remains accessible for future use. This process not only helps with the visibility of your work but also contributes to the advancement of knowledge in your field. Other researchers have the data available and can build upon your work. Learning how to effectively preserve and share your research isn’t just good scientific practice - it’s how your work makes a lasting impact.\n\n\n\n Licensing\nChoose a license for your data.\n\nLearn more »\n\n\n\n Publishing data\nBroaden the reach of your research.\n\nLearn more »\n\n\n\n Offboarding and ownership\nEnsures accountability and longevity.\n\nLearn more »",
+    "crumbs": [
+      "<ins>Guides</ins>",
+      "![](/docs/img/folder-regular.svg){height=1em style='filter: invert(0.5) sepia(1) saturate(5) hue-rotate(175deg)'} **Data Management**",
+      "Archive and publish"
+    ]
+  },
+  {
+    "objectID": "docs/data/data_publishing/offboarding.html",
+    "href": "docs/data/data_publishing/offboarding.html",
+    "title": "Offboarding and ownership",
+    "section": "",
+    "text": "Offboarding procedures are necessary for ensuring the continuity and integrity of research data when team members leave or transition roles. Establishing clear ownership protocols and conducting thorough offboarding processes help maintain data accessibility, prevent loss, and ensure compliance with institutional policies. To achieve effective offboarding, document data responsibilities, transfer access rights, and conduct exit interviews to capture essential knowledge and insights.\nThis guide serves primarily as a reminder that there should be a plan in place for offboarding. Different research groups will have different practices, and there is no single definitive checklist or procedure. However, we would like to refer you to the Data Management Offboarding by Harvard RDM site for ideas on how to approach offboarding and preserve knowledge when colleagues leave.",
+    "crumbs": [
+      "<ins>Guides</ins>",
+      "![](/docs/img/folder-regular.svg){height=1em style='filter: invert(0.5) sepia(1) saturate(5) hue-rotate(175deg)'} **Data Management**",
+      "Archive and publish",
+      "Offboarding and ownership"
+    ]
+  },
+  {
+    "objectID": "docs/data/data_storage/backup.html",
+    "href": "docs/data/data_storage/backup.html",
+    "title": "Data backup",
+    "section": "",
+    "text": "🚧 Coming soon! ⏳",
+    "crumbs": [
+      "<ins>Guides</ins>",
+      "![](/docs/img/folder-regular.svg){height=1em style='filter: invert(0.5) sepia(1) saturate(5) hue-rotate(175deg)'} **Data Management**",
+      "Storage",
+      "Data backup"
+    ]
+  },
+  {
+    "objectID": "docs/data/data_storage/project_drive_request.html",
+    "href": "docs/data/data_storage/project_drive_request.html",
+    "title": "Request Project Drive space",
+    "section": "",
+    "text": "TU Delft offers several options for researchers to store their data. One of the most commonly recommended options is the Project Drive (Project Data, U:) for its large storage capacity and secure backups from the University.",
+    "crumbs": [
+      "<ins>Guides</ins>",
+      "![](/docs/img/folder-regular.svg){height=1em style='filter: invert(0.5) sepia(1) saturate(5) hue-rotate(175deg)'} **Data Management**",
+      "Storage",
+      "Storage options",
+      "Request Project Drive space"
+    ]
+  },
+  {
+    "objectID": "docs/data/data_storage/project_drive_request.html#background",
+    "href": "docs/data/data_storage/project_drive_request.html#background",
+    "title": "Request Project Drive space",
+    "section": "",
+    "text": "TU Delft offers several options for researchers to store their data. One of the most commonly recommended options is the Project Drive (Project Data, U:) for its large storage capacity and secure backups from the University.",
+    "crumbs": [
+      "<ins>Guides</ins>",
+      "![](/docs/img/folder-regular.svg){height=1em style='filter: invert(0.5) sepia(1) saturate(5) hue-rotate(175deg)'} **Data Management**",
+      "Storage",
+      "Storage options",
+      "Request Project Drive space"
+    ]
+  },
+  {
+    "objectID": "docs/data/data_storage/project_drive_request.html#what-this-documentation-will-help-achieve",
+    "href": "docs/data/data_storage/project_drive_request.html#what-this-documentation-will-help-achieve",
+    "title": "Request Project Drive space",
+    "section": "What this documentation will help achieve",
+    "text": "What this documentation will help achieve\nThis documentation will walk through the steps needed to request Project Drive storage from TU Delft ICT. This storage can then be accessed directly through webdata.tudelft.nl (uses WebDAV protocol), through a client like WebDrive on your local machine (click on the link and then the WebDrive heading to download and install this software for your operating system), or mounted to a TU Delft Virtual Private Server following the instructions here.",
+    "crumbs": [
+      "<ins>Guides</ins>",
+      "![](/docs/img/folder-regular.svg){height=1em style='filter: invert(0.5) sepia(1) saturate(5) hue-rotate(175deg)'} **Data Management**",
+      "Storage",
+      "Storage options",
+      "Request Project Drive space"
+    ]
+  },
+  {
+    "objectID": "docs/data/data_storage/project_drive_request.html#prerequisites",
+    "href": "docs/data/data_storage/project_drive_request.html#prerequisites",
+    "title": "Request Project Drive space",
+    "section": "Prerequisites",
+    "text": "Prerequisites\n\nTU Delft netID\nAn Excel file with the netIDs of TU Delft collaborators who should have read/write access to the Project Drive storage space you are requesting (optional)",
+    "crumbs": [
+      "<ins>Guides</ins>",
+      "![](/docs/img/folder-regular.svg){height=1em style='filter: invert(0.5) sepia(1) saturate(5) hue-rotate(175deg)'} **Data Management**",
+      "Storage",
+      "Storage options",
+      "Request Project Drive space"
+    ]
+  },
+  {
+    "objectID": "docs/data/data_storage/project_drive_request.html#toolssoftware",
+    "href": "docs/data/data_storage/project_drive_request.html#toolssoftware",
+    "title": "Request Project Drive space",
+    "section": "Tools/Software",
+    "text": "Tools/Software\n\nWebDrive (optional GUI to access data on Project Drive)",
+    "crumbs": [
+      "<ins>Guides</ins>",
+      "![](/docs/img/folder-regular.svg){height=1em style='filter: invert(0.5) sepia(1) saturate(5) hue-rotate(175deg)'} **Data Management**",
+      "Storage",
+      "Storage options",
+      "Request Project Drive space"
+    ]
+  },
+  {
+    "objectID": "docs/data/data_storage/project_drive_request.html#steps",
+    "href": "docs/data/data_storage/project_drive_request.html#steps",
+    "title": "Request Project Drive space",
+    "section": "Steps",
+    "text": "Steps\n\nRequest Project Drive storage via the TU Delft ICT form on TopDesk\nFill and send the form according to your data storage preferences and requirements\nAccess your data storage on Project Drive\n\n\nStep 1. Request Project Drive storage via the TU Delft ICT form on TopDesk\nYou can make a request for data storage via the TopDesk self service portal. Navigate to this form (requires netID sign in) and see below for guidance on how to fill in each of the sections.\n\n\nStep 2. Fill and send the form according to your data storage preferences and requirements\nThe form is divided into three sections: “Caller”, “Information about Requester and Data”, and “Data for a Research Project”.\nThe Caller section should contain the contact information of the main administrator of this server. If you select your name, the fields below should be auto-populated with your building, phone number, email, department/program, organizational unit, and (sometimes) room.\n\n\nIn the next part you choose your preferences about data preservation. The first question asks whether you are setting up new storage on the Project Drive, or want to change existing storage. The next question is about the availability - see below for more information. The usual choice here is “Standard”.\n\nFor the next question, you need to determine if your data is critical, sensitive, or standard, using these criteria:\n\nThere are two options for backup retention: standard and high. Data are backed up by ICT on a daily basis, so the retention time refers to the period for which these backups are stored. The standard option refers to 14 days of retention while in the other one the retention period is one year. In other words, if the retention time is set to 14 days (Standard) and you delete a file, you can restore it within those two weeks. If retention time is 1 year (High), you can restore it anytime within the year. For most situations, a Standard backup retention time is suitable.\n\nIn the final section, you need to provide some information about your research project. Depending on your research needs, you should specify how much space you will need on the Project Drive to hold all your data, initially and into the planned future. It is important to know that the Project Drive storage is able to expand as your data grows, but you should make your best guess when requesting the space.\nAt the bottom of this section you can attach an Excel file that contains the netIDs of TU Delft affiliated employees that should have read/write access to the storage you are requesting on the Project Drive. If access to the storage is required for TU Delft external researchers, this information can be added as well. Note that it is unusual that non-TU Delft personnel are added to Project Drive storage, and if you would like to do so you should provide a company-affiliated email address for each person you want to add.",
+    "crumbs": [
+      "<ins>Guides</ins>",
+      "![](/docs/img/folder-regular.svg){height=1em style='filter: invert(0.5) sepia(1) saturate(5) hue-rotate(175deg)'} **Data Management**",
+      "Storage",
+      "Storage options",
+      "Request Project Drive space"
+    ]
+  },
+  {
+    "objectID": "docs/data/data_storage/sharing.html",
+    "href": "docs/data/data_storage/sharing.html",
+    "title": "Data sharing",
+    "section": "",
+    "text": "🚧 Coming soon! ⏳",
+    "crumbs": [
+      "<ins>Guides</ins>",
+      "![](/docs/img/folder-regular.svg){height=1em style='filter: invert(0.5) sepia(1) saturate(5) hue-rotate(175deg)'} **Data Management**",
+      "Storage",
+      "Data sharing"
+    ]
+  },
+  {
+    "objectID": "docs/data/data_storage/storage_options.html",
+    "href": "docs/data/data_storage/storage_options.html",
+    "title": "Storage options",
+    "section": "",
+    "text": "Under construction! 🏗️\n\n\n\n\n Request Project Drive space\nUpdate coming soon! 🛠️\n\nLearn more »\n\n\n\n Mount Project Drive on server\nUpdate coming soon! 🛠️\n\nLearn more »\n\n\n\n Sync Project Drive and SURFDrive with Unison\nUpdate coming soon! 🛠️\n\nLearn more »",
+    "crumbs": [
+      "<ins>Guides</ins>",
+      "![](/docs/img/folder-regular.svg){height=1em style='filter: invert(0.5) sepia(1) saturate(5) hue-rotate(175deg)'} **Data Management**",
+      "Storage",
+      "Storage options"
+    ]
+  },
+  {
+    "objectID": "docs/data/fair_data/fair.html",
+    "href": "docs/data/fair_data/fair.html",
+    "title": "FAIR data",
+    "section": "",
+    "text": "The goal of the FAIR principles is to improve research transparency, reproducibility and reusability. FAIR data enhances research reliability, impact, and visibility, creating new collaboration opportunities for researchers. The acronym FAIR stands for:\n\nFindable: Data should be findable by users. A straightforward and reliable way to achieve this is by depositing data in a repository with appropriate metadata, tags, and identifiers to improve searchability.\nAccessible: Data should be accessible to authorized users. This does not mean all data must be publicly available; rather, it should be “as open as possible, as closed as necessary”. If data cannot be made publicly available due to sensitive information or commercial restrictions, the metadata should still be made public to indicate where and how the data can be accessed if needed.\nInteroperable: Data should be in standardized formats with a clear structure to allow it to be interoperable across different systems, enabling data to be used in various applications by both the data owners and other users.\nReusable: For data to be reusable, users must understand what the data represents, the information it contains, and how to interpret its structure and format. Good documentation and an appropriate license are key in reusability, as these enable others to understand and work with your dataset, especially upon publication.",
+    "crumbs": [
+      "<ins>Guides</ins>",
+      "![](/docs/img/folder-regular.svg){height=1em style='filter: invert(0.5) sepia(1) saturate(5) hue-rotate(175deg)'} **Data Management**",
+      "FAIR Data"
     ]
   },
   {
@@ -2163,7 +2253,31 @@
     "href": "docs/data/planning/planning.html",
     "title": "Planning",
     "section": "",
-    "text": "🚧 Under construction! 🏗️\n\n\n\n\n Privacy and security\nComing soon! ⏰\n\nLearn more »\n\n\n\n Ethics\nComing soon! ⏰\n\nLearn more »",
+    "text": "When planning your research, it is important to consider how you will manage your data. This is the very first step in the research data lifecycle; you define your research question, and pinpoint relevant data sources. This includes planning how you will collect, store, and share your data, as well as how you will ensure its security and privacy. You formulate a plan for your data management, which is a living document that you can update as your research progresses.",
+    "crumbs": [
+      "<ins>Guides</ins>",
+      "![](/docs/img/folder-regular.svg){height=1em style='filter: invert(0.5) sepia(1) saturate(5) hue-rotate(175deg)'} **Data Management**",
+      "Planning"
+    ]
+  },
+  {
+    "objectID": "docs/data/planning/planning.html#data-management-plan",
+    "href": "docs/data/planning/planning.html#data-management-plan",
+    "title": "Planning",
+    "section": "Data management plan",
+    "text": "Data management plan\nTU Delft emphasizes the importance of data management planning and asks researchers to create a data management plan (DMP) at the start of their research project. In many cases this is also a formal requirement. TU Delft provides a dedicated tool called DMPonline to help you write a DMP.\n\n\n\n\n\n\n Important\n\n\n\nPlease consult your faculty data steward for more information regarding DMPs and the specific requirements for your faculty.\nAlso, you can find more information on DMPs:\n\nPhD Supervisors guide - Data management plan\nTU Delft RDM page - “Data Management Plans”\nTU Delft RDM page - “DMPonline”\nRDM 101 course - Module 5 - DMP",
+    "crumbs": [
+      "<ins>Guides</ins>",
+      "![](/docs/img/folder-regular.svg){height=1em style='filter: invert(0.5) sepia(1) saturate(5) hue-rotate(175deg)'} **Data Management**",
+      "Planning"
+    ]
+  },
+  {
+    "objectID": "docs/data/planning/planning.html#what-to-do-if-you-have-sensitive-data",
+    "href": "docs/data/planning/planning.html#what-to-do-if-you-have-sensitive-data",
+    "title": "Planning",
+    "section": "What to do if you have sensitive data?",
+    "text": "What to do if you have sensitive data?\nIf your datasets contains personal, confidential, or otherwise sensitive information, you need to consider how to handle this data appropriately.\n\n\n\n Privacy\nHandle sensitive data.\n\nLearn more »",
     "crumbs": [
       "<ins>Guides</ins>",
       "![](/docs/img/folder-regular.svg){height=1em style='filter: invert(0.5) sepia(1) saturate(5) hue-rotate(175deg)'} **Data Management**",

@@ -6,6 +6,7 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="dcterms.date" content="2025-04-07">
 
 <title>Data conventions</title>
 <style>
@@ -453,14 +454,8 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../docs/data/planning/privacy_and_security.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Privacy and security</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../../docs/data/planning/ethics.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Ethics</span></a>
+  <a href="../../../docs/data/planning/privacy.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Privacy</span></a>
   </div>
 </li>
       </ul>
@@ -1005,8 +1000,16 @@ ul.task-list li input[type="checkbox"] {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#data-conventions" id="toc-data-conventions" class="nav-link active" data-scroll-target="#data-conventions">Data conventions</a></li>
+  <li><a href="#folder-structure" id="toc-folder-structure" class="nav-link" data-scroll-target="#folder-structure">Folder structure</a></li>
+  <li><a href="#file-standards" id="toc-file-standards" class="nav-link" data-scroll-target="#file-standards">File standards</a></li>
+  </ul>
+<div class="toc-actions"><ul><li><a href="https://github.com/TU-Delft-DCC/TU-Delft-DCC.github.io/issues/new/choose" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -1015,13 +1018,23 @@ ul.task-list li input[type="checkbox"] {
 <header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../../docs/data/getting_started.html"><img src="../../../docs/img/folder-regular.svg" style="filter: invert(0.5) sepia(1) saturate(5) hue-rotate(175deg);height:1em"> <strong>Data Management</strong></a></li><li class="breadcrumb-item"><a href="../../../docs/data/data_collection/collection.html">Collection</a></li><li class="breadcrumb-item"><a href="../../../docs/data/data_collection/data_conventions.html">Data conventions</a></li></ol></nav>
 <div class="quarto-title">
 <h1 class="title">Data conventions</h1>
-</div>
+  <div class="quarto-categories">
+    <div class="quarto-category">data</div>
+    <div class="quarto-category">conventions</div>
+  </div>
+  </div>
 
 
 
 <div class="quarto-title-meta">
 
     
+    <div>
+    <div class="quarto-title-meta-heading">Last reviewed</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">April 7, 2025</p>
+    </div>
+  </div>
   
     <div>
     <div class="quarto-title-meta-heading">Last modified</div>
@@ -1036,17 +1049,78 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
+<script async="" defer="" src="https://scripts.simpleanalyticscdn.com/latest.js"></script>
+<p>By adhering to domain-aligned data conventions, you can enhance the quality and reproducibility of your work, promote collaboration, data sharing and reuse. While flexibility exists to accommodate the specific needs of your research project, it is important to establish a consistent framework for data collection and management. This section outlines some key considerations for data conventions, including naming conventions, folder structure, and file standards.</p>
+<div class="callout callout-style-simple callout-important no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<i class="fa-solid fa-info-circle" aria-label="info-circle"></i> Learn more
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Again, we would like to refer you to modules from the RDM 101 course. Please explore:</p>
+<ul>
+<li><a href="https://tu-delft-library.github.io/rdm101-book/modules/module2.html#data-within-the-research-workflow">RDM 101 - Module 2 - Data within the research workflow</a></li>
+<li><a href="https://tu-delft-library.github.io/rdm101-book/modules/module3.html">RDM 101 - Module 3 - FAIR data principles and their main elements</a></li>
+</ul>
+<p>for more information on this topic.</p>
+</div>
+</div>
+<section id="data-conventions" class="level2">
+<h2 class="anchored" data-anchor-id="data-conventions">Data conventions</h2>
+<p>Establishing consistent naming conventions and metadata practices for your data files is essential for long-term project maintainability. Similarly, as mentioned in the <a href="../../../docs/software/development_workflow/project_structure.html">Project structure</a> guide in the <em>Research Software</em> section, some essential principles apply, like:</p>
+<ul>
+<li>use descriptive, concise and consistent names</li>
+<li>avoid special characters and spaces (instead use underscores <code>_</code> or hyphens <code>-</code>)</li>
+<li>follow <a href="https://www.iso.org/iso-8601-date-and-time-format.html"><code>ISO 8601</code></a> date formatting (<code>YYYY-MM-DD</code>)</li>
+<li>the order matters - order elements in the name from least to most specific</li>
+<li>include versioning in the name (where applicable)</li>
+</ul>
+<p>However, the specific conventions you choose should align with the needs of your research project, collaborators, and established practices within your field.</p>
+</section>
+<section id="folder-structure" class="level2">
+<h2 class="anchored" data-anchor-id="folder-structure">Folder structure</h2>
+<p>Maintaining a consistent folder structure across your research group and project phases prevents confusion, reduces errors in data analysis, and significantly improves research reproducibility. Remember that folder structure should complement your file naming (data) conventions to create a cohesive data organization system. Some practices to consider include:</p>
+<ul>
+<li>Use a consistent and descriptive naming convention for folders, similar to file naming conventions</li>
+<li>Avoid using spaces or special characters in folder names</li>
+<li>Create a hierarchical structure that moves from general to specific, making navigation intuitive</li>
+<li>Establish consistent naming patterns across all levels of your folder hierarchy</li>
+<li>Separate raw and processed data into distinct folders to preserve original data integrity</li>
+<li>Limit folder nesting to 3-5 levels to prevent excessive complexity</li>
+<li>Group related files into logical categories rather than creating folders for individual files</li>
+<li>Document your folder structure in your data management plan for reference</li>
+<li>For time-series or versioned data, consider incorporating date-based folder organization</li>
+<li>Consider adding a README file in your <code>data/</code> folder to provide an overview of the folder structure and its contents</li>
+</ul>
+</section>
+<section id="file-standards" class="level2">
+<h2 class="anchored" data-anchor-id="file-standards">File standards</h2>
+<p>Files commonly use standardised formats depending on their knowledge domain, and/or the platfrom through which they are made available. For example, <a href="https://www.bioinformatics.nl/tools/crab_fasta.html">FASTA</a> format files are widely used in bioinformatics workflows for sequence alignment, database searches, genome assembly and more. Several major biological databases and tooling use and support the FASTA format, like <a href="https://www.ncbi.nlm.nih.gov">NCBI</a>, <a href="https://www.ebi.ac.uk">EMBL-EBI</a>, and <a href="https://www.uniprot.org/">UniProt</a>.</p>
+<p>In the field of geosciences, the <a href="https://www.unidata.ucar.edu/software/netcdf/">NetCDF</a> format is widely used for array-oriented scientific data. It is particularly useful for storing multidimensional data such as temperature, pressure, and humidity in a single file. NetCDF files are self-describing and can be compressed to save space, making them ideal for large datasets.</p>
+<p>In the field of engineering, data is often stored in formats such as <a href="https://www.hdfgroup.org/solutions/hdf5/">HDF5</a>. It is widely used for storing large amounts of numerical data and are supported by many programming languages and software tools.</p>
+<p>In addition, 4TU.ResearchData has a list of <a href="https://data.4tu.nl/s/documents/Preferred_File_Formats_2019.pdf">preferred file formats</a>, and they have a <a href="https://data.4tu.nl/s/docs/data-collection-policy.pdf">data collection policy</a> that outlines the preferred file formats for data submission.</p>
+<div class="callout callout-style-simple callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<i class="fa-solid fa-signs-post" aria-label="signs-post"></i> Further reading
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul>
+<li><a href="https://doi.org/10.1038/sdata.2016.18">The FAIR Guiding Principles for scientific data management and stewardship</a></li>
+</ul>
+</div>
+</div>
 
-<script async="" defer="" src="https://scripts.simpleanalyticscdn.com/latest.js"></script><p>Coming soon! ⚙️</p>
-<!--
 
-- File standards
-- Folder structure
-- Naming conventions
-
--->
-
-
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -1481,7 +1555,7 @@ ul.task-list li input[type="checkbox"] {
 </div>   
     <div class="nav-footer-center">
 <p>© 2025 <a href="https://dcc.tudelft.nl">TU Delft DCC</a>. Licensed under <a href="https://creativecommons.org/licenses/by/4.0/">CC-BY-4.0</a>.</p>
-<div class="toc-actions"><ul><li><a href="https://github.com/TU-Delft-DCC/TU-Delft-DCC.github.io/issues/new/choose" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div></div>
+<div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/TU-Delft-DCC/TU-Delft-DCC.github.io/issues/new/choose" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div></div>
     <div class="nav-footer-right">
 <p>Found these guides helpful? <a href="https://github.com/TU-Delft-DCC/TU-Delft-DCC.github.io"><i class="fa-regular fa-star" aria-label="star"></i> us on GitHub</a>.</p>
 </div>
