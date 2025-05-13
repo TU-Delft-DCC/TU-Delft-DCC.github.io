@@ -48,7 +48,8 @@ When depositing data, selecting an appropriate license cannot be overlooked, as 
 
 :::{.callout-important appearance="simple" icon="false"}
 ## {{< fa info-circle >}} Important
-- If your data includes accompanying software (or vice versa), it is important to license the software separately to clearly define its usage rights distinct from the data!
+- If your data includes accompanying software (or vice versa), it is important to license the software separately to clearly define its usage rights distinct from the data! For more information, refer to our [Software Licenses](../../software/documentation/license.md) guide.
+- For guidance on selecting appropriate data licenses, consult your faculty [data steward](https://www.tudelft.nl/library/research-data-management/r/support/data-stewardship/contact). 
 - For more detailed information on data licenses, please visit the [4TU.ResearchData Licensing Guide](https://data.4tu.nl/info/en/use/publish-cite/upload-your-data-in-our-data-repository/licencing) or read on [Data Licenses](https://book.the-turing-way.org/reproducible-research/licensing/licensing-data) in The Turing Way book. You can also use [Creative Commons License Chooser](https://chooser-beta.creativecommons.org/) to help you select a data license. 
 :::
 
