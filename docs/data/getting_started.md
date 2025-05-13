@@ -54,8 +54,6 @@ Research data includes any information observed, generated or created for use in
 
 Effective research data management by following FAIR principles ensures efficiency and reproducibility at every step of the data lifecycle. At TU Delft, various tools and resources are available to meet diverse data management needs at any stage in its lifecycle.
 
-**This section intends to walk you through the steps of the data lifecycle at TU Delft, following FAIR principles.**
-
 :::{.callout-important appearance="simple" icon="false"}
 ## {{< fa info-circle >}} Important note
 **Please note that useful and practical information on research data management (RDM) is covered by other TU Delft resources, such as the RDM 101 book, PhD Supervisors guide, the RDM and TU Delft library pages. We want to refer you to these resources throughout this section, and where applicable, an admonition (like this one) will be placed at the beginning of a page.**
