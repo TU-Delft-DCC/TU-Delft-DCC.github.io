@@ -44,8 +44,7 @@ categories:
 
 ---
 
-
-The aim of this section is to guide data owners and users through each stage of the data lifecycle - such as data collection, storage, sharing, publication, and archiving - in a responsible and effective manner. By following the Findable, Accessible, Interoperable, and Reproducible (FAIR) principles, you can learn the core concepts and practices of good data management at TU Delft.
+This section provides resources to support data owners and users at various stages of the data lifecycle. It highlights important information and available tooling at TU Delft that can help you implement the Findable, Accessible, Interoperable, and Reproducible (FAIR) principles in your research data management practices.
 
 TU Delft emphasizes researchers’ adherence to best practices in Research Data and Software Management (RDSM) as crucial to research quality. The university has maintained policies for a structured framework clarifying roles, responsibilities, and procedural standards for RDSM.
 
