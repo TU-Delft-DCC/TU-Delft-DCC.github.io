@@ -86,6 +86,8 @@ website:
       contents:
         - text: <span style="filter:grayscale(100%);">⌂</span> **Home**
           href: index.md
+        - text: "About the guides"
+          href: docs/about.md
         - text: <br>
         - section: "![](/docs/img/gear.svg){height=1em style='filter: invert(0.5) sepia(1) saturate(5) hue-rotate(175deg)'} **Computing Infrastructure**"
           contents:
