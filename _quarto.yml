@@ -32,6 +32,7 @@ website:
   # google-analytics: "UA-XXXXXXXX"
   # cookie-consent: true
   #
+  favicon: docs/img/cone.png
   announcement: 
     icon: pencil
     dismissable: true
