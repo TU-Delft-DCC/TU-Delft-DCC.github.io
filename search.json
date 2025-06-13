@@ -1927,6 +1927,78 @@
     "text": "About the DCC\nThe TU Delft Digital Competence Centre (DCC) is an on-campus initiative to help researchers make research data FAIR, improve research software, and apply computing practices to increase the efficiency of the research process. The DCC is an initiative of the Open Science Programme at TU Delft designed to benefit researchers at all levels.\nFor more information, please visit our website at dcc.tudelft.nl or email us at dcc@tudelft.nl."
   },
   {
+    "objectID": "docs/about.html",
+    "href": "docs/about.html",
+    "title": "About these guides",
+    "section": "",
+    "text": "The DCC Guides are a curated, well-maintained online resource tailored for research support staff and researchers at TU Delft. They provide guidance on data management, research software development, and computing practices. By incorporating best practices from both internal and external sources, the guides will offer a centralized, comprehensive collection of solutions and resources specific to the TU Delft research environment.\nThe DCC Guides support research support staff by:\n\nEnabling the collection, curation, and sharing of developed solutions and relevant resources.\nPromoting a consistent, unified approach to delivering research support.\n\nThe DCC Guides support researchers by:\n\nHelping them understand the key challenges and requirements of digital research.\nGuiding researchers towards compliance with TU Delft policies on data management and research software.\nProviding standalone documentation for resolving digital research challenges independently.",
+    "crumbs": [
+      "<ins>Guides</ins>",
+      "About the guides"
+    ]
+  },
+  {
+    "objectID": "docs/about.html#purpose-and-benefits",
+    "href": "docs/about.html#purpose-and-benefits",
+    "title": "About these guides",
+    "section": "",
+    "text": "The DCC Guides are a curated, well-maintained online resource tailored for research support staff and researchers at TU Delft. They provide guidance on data management, research software development, and computing practices. By incorporating best practices from both internal and external sources, the guides will offer a centralized, comprehensive collection of solutions and resources specific to the TU Delft research environment.\nThe DCC Guides support research support staff by:\n\nEnabling the collection, curation, and sharing of developed solutions and relevant resources.\nPromoting a consistent, unified approach to delivering research support.\n\nThe DCC Guides support researchers by:\n\nHelping them understand the key challenges and requirements of digital research.\nGuiding researchers towards compliance with TU Delft policies on data management and research software.\nProviding standalone documentation for resolving digital research challenges independently.",
+    "crumbs": [
+      "<ins>Guides</ins>",
+      "About the guides"
+    ]
+  },
+  {
+    "objectID": "docs/about.html#audience",
+    "href": "docs/about.html#audience",
+    "title": "About these guides",
+    "section": "Audience",
+    "text": "Audience\nThe DCC Guides are primarily designed for the DCC and TU Delft research support staff, with researchers as a secondary audience. Usability for support processes is a core focus. Success is assessed through increased user engagement (measured by feedback and site analytics) and improved support outcomes (evaluated internally).\n\n1. DCC team members\nAs the main contributors and maintainers, the DCC team is the primary audience. A key goal is to document and preserve developed solutions for reuse, avoiding redundant effort. The team is responsible for regularly updating the guides, integrating user feedback, and ensuring content quality.\n\n\n2. TU Delft research support staff\nThis group includes Faculty Data Stewards, ICT Innovation, and the Library’s Research and Data Services team. These staff members can use the guides as a trusted resource to support researchers more effectively and stay up to date with best practices.\n\n\n3. TU Delft researchers\nResearchers can benefit from easy access to current, reliable information to support their research workflows. The guides are not intended as a complete training pathway and will link to trustworthy external resources where appropriate.",
+    "crumbs": [
+      "<ins>Guides</ins>",
+      "About the guides"
+    ]
+  },
+  {
+    "objectID": "CONTRIBUTING.html",
+    "href": "CONTRIBUTING.html",
+    "title": "Contributing guidelines",
+    "section": "",
+    "text": "Do you have issues, tips, ideas, events, or questions related to Research Computing, Research Data, and Research Software at TU Delft?\nAre you a researcher interested in these topics?\nDo you work and collaborate with researchers on these topics?\n\nWe’re using GitHub Discussions as a place to connect with other members of our community. We hope that you:\n\nAsk questions about challenges you encounter\nShare ideas and solutions\nEngage with other community members\nBe welcoming and open-minded. Remember that this is a community we build together. See our Code of Conduct for more information.\n\n\n\n\nDo you have questions, ideas or ongoing developments on FAIR related aspects, Open Science, training, etc? Would you like to point to specific resources and potential solutions or ideas?\n\nUse the Q&A to ask a question on a specific topic, such as\n\nHow do I generate a reproducible software development environment?\nWhere can I find information on creating a Python package?\nHow should I archive my software?\nHow do I get started with git?\n\nUse Ideas to make proposals, for instance\n\nUsing jupyter hub for a workshop\nUsing jupyter books to create educational resources\nRunning monthly webinars for the community to transfer FAIR practices\n\nUse Solutions to point people to existing solutions or share your own. These solutions might end up on our Guides website to share with our community.\nShow and tell things you have done that you are proud of and like other to be aware of.\n\n\n\n\n\n\n\nFork the repository to your own GitHub profile.\nClone the repository.\nNavigate to the root of this repository in your terminal.\nInstall Quarto if you don’t already have it installed on your machine. You can find the installation instructions here.\n\nAlternative: Install Quarto within a virtual environment using the environment.yml file by following the below steps:\n\nRun conda env create -f environment.yml in the terminal to create a conda environment with Quarto pre-installed.\nActivate the environment by running conda activate dcc_guides.\n\n\n\nRun quarto preview.\nYou will see the rendered version in a browser window.\n\n\n\n\n\nFork the repository to your own GitHub profile.\nEither commit a new change to the repository to trigger the build action or manually trigger the action. To manually trigger the action, go to Actions -&gt; Quarto Publish Guides and press Run workflow and Run workflow.\nIn your forked repository, under Settings -&gt; Pages set Source to gh-pages and /(root) and press Save.\n\n\n\n\n\n(important) announce your plan to the rest of the community before you start working. This announcement should be in the form of a (new) issue;\n(important) wait until some kind of consensus is reached about your idea being a good idea;\nif needed, fork the repository to your own GitHub profile and create your own feature branch off of the latest main commit. While working on your feature branch, make sure to stay up to date with the main branch by pulling in changes, possibly from the ‘upstream’ repository (follow the instructions here and here);\npush your feature branch to (your fork of) the DCC guides repository on GitHub;\ncreate the pull request, e.g. following the instructions here. If needed, provide a link to the gh-pages in your forked repository: https://&lt;your-username&gt;.github.io/TU-Delft-DCC.github.io/."
+  },
+  {
+    "objectID": "CONTRIBUTING.html#welcome",
+    "href": "CONTRIBUTING.html#welcome",
+    "title": "Contributing guidelines",
+    "section": "",
+    "text": "Do you have issues, tips, ideas, events, or questions related to Research Computing, Research Data, and Research Software at TU Delft?\nAre you a researcher interested in these topics?\nDo you work and collaborate with researchers on these topics?\n\nWe’re using GitHub Discussions as a place to connect with other members of our community. We hope that you:\n\nAsk questions about challenges you encounter\nShare ideas and solutions\nEngage with other community members\nBe welcoming and open-minded. Remember that this is a community we build together. See our Code of Conduct for more information."
+  },
+  {
+    "objectID": "CONTRIBUTING.html#how-to-participate",
+    "href": "CONTRIBUTING.html#how-to-participate",
+    "title": "Contributing guidelines",
+    "section": "",
+    "text": "Do you have questions, ideas or ongoing developments on FAIR related aspects, Open Science, training, etc? Would you like to point to specific resources and potential solutions or ideas?\n\nUse the Q&A to ask a question on a specific topic, such as\n\nHow do I generate a reproducible software development environment?\nWhere can I find information on creating a Python package?\nHow should I archive my software?\nHow do I get started with git?\n\nUse Ideas to make proposals, for instance\n\nUsing jupyter hub for a workshop\nUsing jupyter books to create educational resources\nRunning monthly webinars for the community to transfer FAIR practices\n\nUse Solutions to point people to existing solutions or share your own. These solutions might end up on our Guides website to share with our community.\nShow and tell things you have done that you are proud of and like other to be aware of."
+  },
+  {
+    "objectID": "CONTRIBUTING.html#for-developers",
+    "href": "CONTRIBUTING.html#for-developers",
+    "title": "Contributing guidelines",
+    "section": "",
+    "text": "Fork the repository to your own GitHub profile.\nClone the repository.\nNavigate to the root of this repository in your terminal.\nInstall Quarto if you don’t already have it installed on your machine. You can find the installation instructions here.\n\nAlternative: Install Quarto within a virtual environment using the environment.yml file by following the below steps:\n\nRun conda env create -f environment.yml in the terminal to create a conda environment with Quarto pre-installed.\nActivate the environment by running conda activate dcc_guides.\n\n\n\nRun quarto preview.\nYou will see the rendered version in a browser window.\n\n\n\n\n\nFork the repository to your own GitHub profile.\nEither commit a new change to the repository to trigger the build action or manually trigger the action. To manually trigger the action, go to Actions -&gt; Quarto Publish Guides and press Run workflow and Run workflow.\nIn your forked repository, under Settings -&gt; Pages set Source to gh-pages and /(root) and press Save.\n\n\n\n\n\n(important) announce your plan to the rest of the community before you start working. This announcement should be in the form of a (new) issue;\n(important) wait until some kind of consensus is reached about your idea being a good idea;\nif needed, fork the repository to your own GitHub profile and create your own feature branch off of the latest main commit. While working on your feature branch, make sure to stay up to date with the main branch by pulling in changes, possibly from the ‘upstream’ repository (follow the instructions here and here);\npush your feature branch to (your fork of) the DCC guides repository on GitHub;\ncreate the pull request, e.g. following the instructions here. If needed, provide a link to the gh-pages in your forked repository: https://&lt;your-username&gt;.github.io/TU-Delft-DCC.github.io/."
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Welcome to the DCC Guides!",
+    "section": "",
+    "text": "These guides provide a starting point for Research Computing, Research Data, and Research Software at TU Delft. This is an initiative from the TU Delft Digital Competence Centre.\n Shared solutions for research support staff  Practical guides for researchers\n\n\n Computing Infrastructure \n Data Management \n Research Software \n Courses and Workshops \n\n\n\n\n\n\n\n\n Want to get involved? \n Join the community We welcome anyone to join us in improving our guides! Find out how in our contributing guide.\n Join the discussion We welcome community discussions, ideas, and general questions to develop solutions and receive feedback in our community forum.\n Open an issue We track topic requests and bug-reports via GitHub issues.",
+    "crumbs": [
+      "<ins>Guides</ins>",
+      "<span style=\"filter:grayscale(100%);\">⌂</span> **Home**"
+    ]
+  },
+  {
     "objectID": "CODE_OF_CONDUCT.html",
     "href": "CODE_OF_CONDUCT.html",
     "title": "Code of Conduct",
@@ -1981,45 +2053,6 @@
     "title": "Code of Conduct",
     "section": "",
     "text": "This Code of Conduct is adapted from the Contributor Covenant, version 2.1, available at https://www.contributor-covenant.org/version/2/1/code_of_conduct.html.\nCommunity Impact Guidelines were inspired by Mozilla’s code of conduct enforcement ladder.\nFor answers to common questions about this code of conduct, see the FAQ at https://www.contributor-covenant.org/faq. Translations are available at https://www.contributor-covenant.org/translations."
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Welcome to the DCC Guides!",
-    "section": "",
-    "text": "These guides provide a starting point for Research Computing, Research Data, and Research Software at TU Delft. This is an initiative from the TU Delft Digital Competence Centre.\n Shared solutions for research support staff  Practical guides for researchers\n\n\n Computing Infrastructure \n Data Management \n Research Software \n Courses and Workshops \n\n\n\n\n\n\n\n\n Want to get involved? \n Join the community We welcome anyone to join us in improving our guides! Find out how in our contributing guide.\n Join the discussion We welcome community discussions, ideas, and general questions to develop solutions and receive feedback in our community forum.\n Open an issue We track topic requests and bug-reports via GitHub issues.",
-    "crumbs": [
-      "<ins>Guides</ins>",
-      "<span style=\"filter:grayscale(100%);\">⌂</span> **Home**"
-    ]
-  },
-  {
-    "objectID": "CONTRIBUTING.html",
-    "href": "CONTRIBUTING.html",
-    "title": "Contributing guidelines",
-    "section": "",
-    "text": "Do you have issues, tips, ideas, events, or questions related to Research Computing, Research Data, and Research Software at TU Delft?\nAre you a researcher interested in these topics?\nDo you work and collaborate with researchers on these topics?\n\nWe’re using GitHub Discussions as a place to connect with other members of our community. We hope that you:\n\nAsk questions about challenges you encounter\nShare ideas and solutions\nEngage with other community members\nBe welcoming and open-minded. Remember that this is a community we build together. See our Code of Conduct for more information.\n\n\n\n\nDo you have questions, ideas or ongoing developments on FAIR related aspects, Open Science, training, etc? Would you like to point to specific resources and potential solutions or ideas?\n\nUse the Q&A to ask a question on a specific topic, such as\n\nHow do I generate a reproducible software development environment?\nWhere can I find information on creating a Python package?\nHow should I archive my software?\nHow do I get started with git?\n\nUse Ideas to make proposals, for instance\n\nUsing jupyter hub for a workshop\nUsing jupyter books to create educational resources\nRunning monthly webinars for the community to transfer FAIR practices\n\nUse Solutions to point people to existing solutions or share your own. These solutions might end up on our Guides website to share with our community.\nShow and tell things you have done that you are proud of and like other to be aware of.\n\n\n\n\n\n\n\nFork the repository to your own GitHub profile.\nClone the repository.\nNavigate to the root of this repository in your terminal.\nInstall Quarto if you don’t already have it installed on your machine. You can find the installation instructions here.\n\nAlternative: Install Quarto within a virtual environment using the environment.yml file by following the below steps:\n\nRun conda env create -f environment.yml in the terminal to create a conda environment with Quarto pre-installed.\nActivate the environment by running conda activate dcc_guides.\n\n\n\nRun quarto preview.\nYou will see the rendered version in a browser window.\n\n\n\n\n\nFork the repository to your own GitHub profile.\nEither commit a new change to the repository to trigger the build action or manually trigger the action. To manually trigger the action, go to Actions -&gt; Quarto Publish Guides and press Run workflow and Run workflow.\nIn your forked repository, under Settings -&gt; Pages set Source to gh-pages and /(root) and press Save.\n\n\n\n\n\n(important) announce your plan to the rest of the community before you start working. This announcement should be in the form of a (new) issue;\n(important) wait until some kind of consensus is reached about your idea being a good idea;\nif needed, fork the repository to your own GitHub profile and create your own feature branch off of the latest main commit. While working on your feature branch, make sure to stay up to date with the main branch by pulling in changes, possibly from the ‘upstream’ repository (follow the instructions here and here);\npush your feature branch to (your fork of) the DCC guides repository on GitHub;\ncreate the pull request, e.g. following the instructions here. If needed, provide a link to the gh-pages in your forked repository: https://&lt;your-username&gt;.github.io/TU-Delft-DCC.github.io/."
-  },
-  {
-    "objectID": "CONTRIBUTING.html#welcome",
-    "href": "CONTRIBUTING.html#welcome",
-    "title": "Contributing guidelines",
-    "section": "",
-    "text": "Do you have issues, tips, ideas, events, or questions related to Research Computing, Research Data, and Research Software at TU Delft?\nAre you a researcher interested in these topics?\nDo you work and collaborate with researchers on these topics?\n\nWe’re using GitHub Discussions as a place to connect with other members of our community. We hope that you:\n\nAsk questions about challenges you encounter\nShare ideas and solutions\nEngage with other community members\nBe welcoming and open-minded. Remember that this is a community we build together. See our Code of Conduct for more information."
-  },
-  {
-    "objectID": "CONTRIBUTING.html#how-to-participate",
-    "href": "CONTRIBUTING.html#how-to-participate",
-    "title": "Contributing guidelines",
-    "section": "",
-    "text": "Do you have questions, ideas or ongoing developments on FAIR related aspects, Open Science, training, etc? Would you like to point to specific resources and potential solutions or ideas?\n\nUse the Q&A to ask a question on a specific topic, such as\n\nHow do I generate a reproducible software development environment?\nWhere can I find information on creating a Python package?\nHow should I archive my software?\nHow do I get started with git?\n\nUse Ideas to make proposals, for instance\n\nUsing jupyter hub for a workshop\nUsing jupyter books to create educational resources\nRunning monthly webinars for the community to transfer FAIR practices\n\nUse Solutions to point people to existing solutions or share your own. These solutions might end up on our Guides website to share with our community.\nShow and tell things you have done that you are proud of and like other to be aware of."
-  },
-  {
-    "objectID": "CONTRIBUTING.html#for-developers",
-    "href": "CONTRIBUTING.html#for-developers",
-    "title": "Contributing guidelines",
-    "section": "",
-    "text": "Fork the repository to your own GitHub profile.\nClone the repository.\nNavigate to the root of this repository in your terminal.\nInstall Quarto if you don’t already have it installed on your machine. You can find the installation instructions here.\n\nAlternative: Install Quarto within a virtual environment using the environment.yml file by following the below steps:\n\nRun conda env create -f environment.yml in the terminal to create a conda environment with Quarto pre-installed.\nActivate the environment by running conda activate dcc_guides.\n\n\n\nRun quarto preview.\nYou will see the rendered version in a browser window.\n\n\n\n\n\nFork the repository to your own GitHub profile.\nEither commit a new change to the repository to trigger the build action or manually trigger the action. To manually trigger the action, go to Actions -&gt; Quarto Publish Guides and press Run workflow and Run workflow.\nIn your forked repository, under Settings -&gt; Pages set Source to gh-pages and /(root) and press Save.\n\n\n\n\n\n(important) announce your plan to the rest of the community before you start working. This announcement should be in the form of a (new) issue;\n(important) wait until some kind of consensus is reached about your idea being a good idea;\nif needed, fork the repository to your own GitHub profile and create your own feature branch off of the latest main commit. While working on your feature branch, make sure to stay up to date with the main branch by pulling in changes, possibly from the ‘upstream’ repository (follow the instructions here and here);\npush your feature branch to (your fork of) the DCC guides repository on GitHub;\ncreate the pull request, e.g. following the instructions here. If needed, provide a link to the gh-pages in your forked repository: https://&lt;your-username&gt;.github.io/TU-Delft-DCC.github.io/."
   },
   {
     "objectID": "docs/community/community.html",
