@@ -3,7 +3,7 @@ title: Welcome to the DCC Guides!
 toc: true
 page-navigation: false
 repo-actions: false
-css: /themes/landing-page.css
+css: /themes/tiles.css
 ---
 
 These guides provide a starting point for Research Computing, Research Data, and Research Software at TU Delft. This is an initiative from the TU Delft [Digital Competence Centre](/docs/community/dcc.md). 
@@ -11,6 +11,8 @@ These guides provide a starting point for Research Computing, Research Data, and
 {{< fa check >}} Shared solutions for **research support staff**<br>
 {{< fa check >}} Practical guides for **researchers**<br>
 
+
+::: {.light-content}
 ::: {.grid}
 
 ::: {.tool .g-col-lg-2}
@@ -28,8 +30,11 @@ These guides provide a starting point for Research Computing, Research Data, and
 </a>
 
 <a href="docs/resources/courses.md" role="button" class="btn btn-outline-light">
-![](docs/img/cap.svg)**Courses and Workshops**
+  <img src="docs/img/cap.svg" class="img-light" alt="Courses (light)">
+  <img src="docs/img/cap-dark.svg" class="img-dark" alt="Courses (dark)">
+  <strong>Courses and Workshops</strong>
 </a>
+:::
 
 :::
 :::
