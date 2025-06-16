@@ -12,7 +12,7 @@ These guides provide a starting point for Research Computing, Research Data, and
 {{< fa check >}} Practical guides for **researchers**<br>
 
 
-::: {.light-content}
+
 ::: {.grid}
 
 ::: {.tool .g-col-lg-2}
@@ -42,7 +42,6 @@ These guides provide a starting point for Research Computing, Research Data, and
 </a>
 :::
 
-:::
 :::
 
 :::{.callout-tip icon="false" appearance="minimal"}
