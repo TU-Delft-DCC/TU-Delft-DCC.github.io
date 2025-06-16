@@ -50,7 +50,7 @@
 /* Dark theme adjustments */
 body.quarto-dark .tool a[role="button"]{
   color: #fdf6e3;                  /* solar text color */
-  background-color: #2a2a2a;       /* dark neutral box */
+  background-color: #284c54;       /* dark neutral box */
   border: 2px solid #444;          /* subdued dark border */
 }
 
