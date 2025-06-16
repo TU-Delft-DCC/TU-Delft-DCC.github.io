@@ -71,10 +71,10 @@
 
 /* Dark theme overrides */
 body.quarto-dark .card {
-  background-color: #222;              /* Dark card background */
+  background-color: #223b41;              /* Dark card background */
   color: #fdf6e3;                      /* Solar text color */
   border-color: #444;                 /* Subtle border */
-  border-left: solid #FFB81C 0.3rem;  /* Amber accent for left border */
+  border-left: solid #BA8E23 0.3rem;  /* Amber accent for left border */
   box-shadow: 2px 2px 5px rgba(255, 255, 255, 0.05); /* Softer shadow */
 }
 
@@ -83,7 +83,7 @@ body.quarto-dark .card h3 {
 }
 
 body.quarto-dark .btn {
-  background-color: #FFB81C;          /* Solar accent */
+  background-color: #BA8E23;          /* Solar accent */
   color: #222;                        /* Contrast text */
 }
 
