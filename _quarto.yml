@@ -334,8 +334,8 @@ format:
       - cosmo
       - themes/tud-light.scss
       dark: 
-        - solar
-        # - themes/tud-dark.scss
+      - solar
+      - themes/tud-dark.scss
     css: themes/custom.css
     lang: en
     toc: true

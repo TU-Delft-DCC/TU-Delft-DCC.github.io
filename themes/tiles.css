@@ -36,9 +36,6 @@
   .tool .btn-outline-light:hover {
     border-color: rgb(80,146,221);
     background-color: #e8f0fe;  /* added a background colour so it also works for the dark theme */
-    /* text-decoration: underline; */
-    /* text-decoration-color: rgb(80,146,221); */
-    /* text-decoration-thickness: 2px;     */
   }
   
   .tool a[role="button"] img {
@@ -49,3 +46,42 @@
     margin-bottom: 5px;
     margin-top: 5px;
   }
+
+/* Dark theme adjustments */
+body.quarto-dark .tool a[role="button"]{
+  color: #fdf6e3;                  /* solar text color */
+  background-color: #284c54;       /* dark neutral box */
+  border: 2px solid #444;          /* subdued dark border */
+}
+
+body.quarto-dark .tool a[role="button"]:hover {
+  background-color: #3a3a3a;       /* slightly lighter background */
+  border-color: rgb(255, 184, 28);           /* tud-yellow */
+}
+
+.img-dark,
+.img-light {
+  position: absolute;
+  visibility: hidden;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+}
+
+body.quarto-light .img-light {
+  position: static;
+  visibility: visible;
+  width: 80px;
+  height: 80px;
+  margin: auto;
+  display: block;
+}
+
+body.quarto-dark .img-dark {
+  position: static;
+  visibility: visible;
+  width: 80px;
+  height: 80px;
+  margin: auto;
+  display: block;
+}
