@@ -48,7 +48,7 @@ website:
     left: |
       Powered by [{{< iconify simple-icons:quarto >}} Quarto](https://quarto.org).
     center: |
-      &copy; 2025 [TU Delft DCC](https://dcc.tudelft.nl). Licensed under [CC-BY-4.0](https://creativecommons.org/licenses/by/4.0/).
+      &copy; 2025 [TU Delft DCC](https://www.tudelft.nl/digital-competence-centre). Licensed under [CC-BY-4.0](https://creativecommons.org/licenses/by/4.0/).
     right: 
           Found these guides helpful? [{{<fa regular star>}} us on GitHub](https://github.com/TU-Delft-DCC/TU-Delft-DCC.github.io).
     border: false
