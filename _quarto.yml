@@ -78,7 +78,7 @@ website:
           - text: Code of Conduct
             href: CODE_OF_CONDUCT.md
           - text: About the DCC
-            href: https://www.tudelft.nl/library/support/library-voor-onderzoekers/onderzoek-starten/dcc/contact
+            href: https://www.tudelft.nl/digital-competence-centre
     tools:
       - icon: github
         href: https://github.com/TU-Delft-DCC/TU-Delft-DCC.github.io/
