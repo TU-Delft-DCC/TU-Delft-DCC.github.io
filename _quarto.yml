@@ -48,10 +48,14 @@ website:
     left: |
       Powered by [{{< iconify simple-icons:quarto >}} Quarto](https://quarto.org).
     center: |
-      &copy; 2025 [TU Delft DCC](https://dcc.tudelft.nl). Licensed under [CC-BY-4.0](https://creativecommons.org/licenses/by/4.0/).
+      &copy; 2025 [TU Delft DCC](https://www.tudelft.nl/digital-competence-centre). Licensed under [CC-BY-4.0](https://creativecommons.org/licenses/by/4.0/).
     right: 
           Found these guides helpful? [{{<fa regular star>}} us on GitHub](https://github.com/TU-Delft-DCC/TU-Delft-DCC.github.io).
     border: false
+  body-header: |
+    <!-- 100% privacy-first analytics -->
+    <script async defer src="https://scripts.simpleanalyticscdn.com/latest.js"></script>
+    <noscript><img src="https://queue.simpleanalyticscdn.com/noscript.gif" alt="" referrerpolicy="no-referrer-when-downgrade" /></noscript>
   bread-crumbs: true # Breadcrumbs in Quarto websites are a type of secondary navigation that shows the user's current location within the site hierarchy
   navbar:
     logo: docs/img/tud/logo_white_crop.png
@@ -74,7 +78,7 @@ website:
           - text: Code of Conduct
             href: CODE_OF_CONDUCT.md
           - text: About the DCC
-            href: https://www.tudelft.nl/library/support/library-voor-onderzoekers/onderzoek-starten/dcc/contact
+            href: https://www.tudelft.nl/digital-competence-centre
     tools:
       - icon: github
         href: https://github.com/TU-Delft-DCC/TU-Delft-DCC.github.io/
