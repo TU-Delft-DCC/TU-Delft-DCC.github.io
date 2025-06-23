@@ -65,7 +65,7 @@ Local and networked, institutional and national.
 
 ::: {.feature}
 ### {{< fa vault >}} Data security
-Ensuring confidentiality, integrity, and availability
+Ensuring confidentiality, integrity, and availability.
 
 ::: {.learn-more}
 [Learn more »](./security.md)
@@ -74,7 +74,7 @@ Ensuring confidentiality, integrity, and availability
 
 ::: {.feature}
 ### {{< fa arrow-up-from-bracket >}} Data sharing
-Making active data available to internal and/or external collaborators
+Making active data available to internal and/or external collaborators.
 
 ::: {.learn-more}
 [Learn more »](./sharing.md)
@@ -83,7 +83,7 @@ Making active data available to internal and/or external collaborators
 
 ::: {.feature}
 ### {{< fa hard-drive >}} Data backup
-Strategies to prevent data loss
+Strategies to prevent data loss.
 
 ::: {.learn-more}
 [Learn more »](./backup.md)
