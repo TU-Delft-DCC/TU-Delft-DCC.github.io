@@ -57,7 +57,7 @@ A widely recommended strategy for data backup is the 3-2-1 Rule:
 
 - **1 Off-site:** At least one copy should be stored off-site or remotely. Cloud services or an external drive stored in a different physical location can fulfill this requirement, providing protection against localized disasters. 
 
-When deciding on backup frequency, you should consider how often the data changes, the amount of work that would be lost between backups, the cost (time and money) to replace lost work, and the effort required for the backup process. Automated backup solutions are often more efficient than manual processes. Please refer to the section on [Storage options](../storage_options.md) for more information on which options involve automated backup or not.
+When deciding on backup frequency, you should consider how often the data changes, the amount of work that would be lost between backups, the cost (time and money) to replace lost work, and the effort required for the backup process. Automated backup solutions are often more efficient than manual processes. Please refer to the section on [Storage options](./storage_options.md) for more information on which options involve automated backup or not.
 
 # Using `rsync` in the command line for Data Backup
 
@@ -103,7 +103,7 @@ Here are simple steps to use `rsync` for data backup:
 
 :::{.callout-important appearance="simple" icon="false"}
 ## {{< fa info-circle >}} Important
-These steps are similar to those recommended in [Moving data to your server](../infrastructure/moving_data.md) and in the [Transfer Data](https://doc.dhpc.tudelft.nl/delftblue/Data-transfer-to-DelftBlue/) section of the DelftBlue documentation.
+These steps are similar to those recommended in [Moving data to your server](../../infrastructure/moving_data.md) and in the [Transfer Data](https://doc.dhpc.tudelft.nl/delftblue/Data-transfer-to-DelftBlue/) section of the DelftBlue documentation.
 :::
 
 
