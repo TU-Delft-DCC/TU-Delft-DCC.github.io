@@ -102,24 +102,5 @@ A Project Drive is a TU Delft managed network drive that allows you to store and
 :::
 :::
 
-<!--
-
-::: {.feature}
-### {{< fa rotate >}} Sync Project Drive and SURFDrive with Unison
-
-Update coming soon! 🛠️
-
-::: {.learn-more}
-[Learn more »](./sync_unison.md)
 :::
 :::
-
-:::
-:::
-
-## Cloud
-
-Coming soon!
-
-
--->
