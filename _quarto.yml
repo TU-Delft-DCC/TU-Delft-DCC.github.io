@@ -155,8 +155,6 @@ website:
                       href: docs/data/data_storage/project_drive_request.md
                     - text: Mount Project Drive on server
                       href: docs/data/data_storage/project_drive_mounting.md
-                    - text: Sync Project Drive and SURFDrive with Unison
-                      href: docs/data/data_storage/sync_unison.md
                 - text: Data security
                   href: docs/data/data_storage/security.md
                 - text: Data sharing
