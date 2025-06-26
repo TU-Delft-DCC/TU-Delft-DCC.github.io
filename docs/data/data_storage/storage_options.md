@@ -47,9 +47,8 @@ categories:
 
 Storing your data in a secure location is a key element of a successful project with a data component. As a TU Delft researcher, you have several options. Below you can find an overview of the available storage options, depending on whether they are local, networked, or cloud-based, how secure they are, whether they can be shared with internal or external partners, and whether they are automatically backed up or not. Please visit the sections on [Data Security](../data_storage/security.md), [Data Sharing](../data_storage/sharing.md) and [Data Backup](../data_storage/backup.md) for more information on these topics.
 
-:::{.callout-important appearance="simple" icon="false"}
-## {{< fa info-circle >}} Important
-Options listed here refer to research data in its *active* phase. For long-term preservations, please refer to the [Archive and Publish](../data_publishing/archival_publishing_index.md) section.
+:::{.callout-note appearance="simple" icon="false"}
+## {{< fa info-circle >}} Options listed in this guide refer to research data in its *active* phase. For long-term preservations, please refer to the [Archive and Publish](../data_publishing/archival_publishing_index.md) section.
 :::
 
 ## Overview of storage options
