@@ -51,6 +51,11 @@ The default login procedure to a VPS (a remote *Virtual Private Server*) from TU
 
 Setting up a connection as decribed below simplifies the process of accessing a VPS considerably and allows for secured transfer of files to and from a remote server and a local machine. 
 
+:::{.callout-important}
+## Accessing a VPS
+Depending on your geogaphic location, access to a VPS via SSH may be blocked by the TU Delft firewall. In such cases, you must use a VPN connection via [eduVPN](https://www.eduvpn.org/). Access if usally blocked if you are connecting from your home network. 
+:::
+
 ## What will you accomplish?
 This guide explains how to set up a single-step SSH connection to a VPS using SSH Tunneling. As a result, you will be able to connect to your VPS from you local machine without the need to log in to the Bastion Host. This also enables the transfering of files between a local machine and the VPS.
 
