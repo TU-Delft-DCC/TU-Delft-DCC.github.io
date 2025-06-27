@@ -1,0 +1,87 @@
+.grid {
+    display: flex;
+    width: 100%;
+    justify-content: center; 
+} 
+
+.tool {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;  
+  }
+  
+/* For wide screens: 4 columns */
+@media (min-width: 1500px) {
+  .tool {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+  .tool a[role="button"] {
+    width: 210px;  /* Reduced from 300px to 200px */
+    color: rgb(55, 58, 60);
+    text-align: center;
+    border: 3px solid rgb(222, 226, 230);
+    border-radius: 10px;
+    margin-right: 10px;
+    margin-bottom: 0;
+    margin-top: 10px;
+    font-size: 0.9em;  /* Slightly smaller font */
+    background-color: #f5f5f5;
+  }
+  
+  .tool .btn-outline-light:hover {
+    border-color: rgb(80,146,221);
+    background-color: #e8f0fe;  /* added a background colour so it also works for the dark theme */
+  }
+  
+  .tool a[role="button"] img {
+    display: block;
+    width: 80px;  /* Reduced from 100px to 80px */
+    height: 80px;  /* Reduced from 100px to 80px */
+    margin: auto;
+    margin-bottom: 5px;
+    margin-top: 5px;
+  }
+
+/* Dark theme adjustments */
+body.quarto-dark .tool a[role="button"]{
+  color: #fdf6e3;                  /* solar text color */
+  background-color: #284c54;       /* dark neutral box */
+  border: 2px solid #444;          /* subdued dark border */
+}
+
+body.quarto-dark .tool a[role="button"]:hover {
+  background-color: #3a3a3a;       /* slightly lighter background */
+  border-color: rgb(255, 184, 28);           /* tud-yellow */
+}
+
+.img-dark,
+.img-light {
+  position: absolute;
+  visibility: hidden;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+}
+
+body.quarto-light .img-light {
+  position: static;
+  visibility: visible;
+  width: 80px;
+  height: 80px;
+  margin: auto;
+  display: block;
+}
+
+body.quarto-dark .img-dark {
+  position: static;
+  visibility: visible;
+  width: 80px;
+  height: 80px;
+  margin: auto;
+  display: block;
+}

@@ -1,9 +1,9 @@
 ---
 # Insert this YAML header (including the opening and closing ---) at the beginning of the document and fill it out accordingly
 
-# We use this key to indicate the last reviewed date [manual entry, use MM/DD/YYYY]
+# We use this key to indicate the last reviewed date [manual entry, use YYYY-MM-DD]
 # Uncomment and populate the next line accordingly
-#date: MM/DD/YYYY
+#date: YYYY-MM-DD
 
 # We use this key to indicate the last modified date [automatic entry]
 date-modified: last-modified
@@ -65,7 +65,7 @@ The documentation below will help you deploy GitLab runner in a Docker container
 
 **GitLab repository:** A remote repository that can store your code and keeps track of your project development. You're on one right now! :) If you haven’t already, you use your netID and password to login to TU Delft’s GitLab instance at gitlab.tudelft.nl and create a repository containing your project code.
 
-**CI/CD pipeline:** “A CI/CD pipeline automates your software delivery process. The pipeline builds code, runs tests (CI), and safely deploys a new version of the application (CD)” [Link](https://semaphoreci.com/blog/cicd-pipeline).
+**CI/CD pipeline:** “A CI/CD pipeline automates your software delivery process. The pipeline builds code, runs tests (CI), and safely deploys a new version of the application (CD)”.
 
 ## Tools/Software
 * GitLab (TU Delft instance)

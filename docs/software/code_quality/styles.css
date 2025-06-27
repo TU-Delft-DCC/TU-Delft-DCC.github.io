@@ -1,0 +1,47 @@
+.g-col-4 {
+    display: flex;
+  }
+  
+/* Card styling */
+.code-smell-card {
+display: flex;
+flex-direction: column;
+border: 1px solid #ccc;
+border-radius: 8px;
+padding: 16px;
+background-color: #f9f9f9;
+box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.code-smell-card h5 {
+margin-top: 0;
+color: #2a2a2a;
+}
+
+.code-smell-card p {
+margin: 8px 0;
+line-height: 1.5;
+}
+
+.code-smell-card .label {
+font-weight: bold;
+}
+  
+.refactor-link {
+    margin-top: auto;
+  }
+/* Dark theme overrides for code-smell-card */
+body.quarto-dark .code-smell-card {
+  background-color: #284c54;
+  color: #fdf6e3;
+  border-color: #444;
+  box-shadow: 0 2px 4px rgba(255, 255, 255, 0.05);
+}
+
+body.quarto-dark .code-smell-card h5 {
+  color: #fdf6e3;
+}
+
+body.quarto-dark .code-smell-card .label {
+  color: #BA8E23;
+}

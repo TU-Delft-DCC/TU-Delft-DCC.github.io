@@ -4,16 +4,18 @@ project:
   resources: # Can just specify which folders need to be rendered, see https://github.com/quarto-dev/quarto-web/blob/main/_quarto.yml
     - "*.md"
     - "docs/**/*.md"
+    - "docs/**/*.qmd"
   render:
     # Render
     - "index.md"
     - "CONTRIBUTING.md"
     - "CODE_OF_CONDUCT.md"
     - "docs/**/*.md"
+    - "docs/**/*.qmd"
     # Do not render
     - "!_under_development/**"
     - "!slides/**"
-    - "!docs/infrastructure/getting_started.md"
+    - "!docs/infrastructure/getting_started_susan.md"
     - "!docs/infrastructure/VPS_SSH_connect.md"
     - "!docs/infrastructure/giving_sudo_privilages.md"
     - "!docs/infrastructure/configure_passwordless_login.md"
@@ -21,6 +23,7 @@ project:
     - "!docs/infrastructure/gitlab/runner_docker.md"
     - "!docs/software/documentation.md"
     - "!docs/software/containers/podman.md"
+    - "!docs/data/to_be_deleted_publishing.md"
 execute: 
   freeze: true # When freeze: true is set, it tells Quarto to "freeze" the execution of code chunks.
 
@@ -29,6 +32,13 @@ website:
   # google-analytics: "UA-XXXXXXXX"
   # cookie-consent: true
   #
+  favicon: docs/img/cone.png
+  announcement: 
+    icon: pencil
+    dismissable: true
+    content: "**Information!** We are now actively updating our content. Please be aware that content and locations are subject to change. Thank you for your patience!"
+    type: success
+    position: below-navbar
   site-url: https://tu-delft-dcc.github.io/
   repo-url: https://github.com/TU-Delft-DCC/TU-Delft-DCC.github.io/
   issue-url: https://github.com/TU-Delft-DCC/TU-Delft-DCC.github.io/issues/new/choose
@@ -38,12 +48,14 @@ website:
     left: |
       Powered by [{{< iconify simple-icons:quarto >}} Quarto](https://quarto.org).
     center: |
-      &copy; 2024 [TU Delft Digital Competence Centre](https://dcc.tudelft.nl). Licensed under [CC-BY-4.0](https://creativecommons.org/licenses/by/4.0/).
+      &copy; 2025 [TU Delft DCC](https://www.tudelft.nl/digital-competence-centre). Licensed under [CC-BY-4.0](https://creativecommons.org/licenses/by/4.0/).
     right: 
-          If you find this content useful, please consider giving us a star on GitHub.
-          <script async defer src="https://buttons.github.io/buttons.js"></script>
-          <a class="github-button" href="https://github.com/TU-Delft-DCC/TU-Delft-DCC.github.io" data-icon="star" data-size="small" data-show-count="false" aria-label="Star TU-Delft-DCC/TU-Delft-DCC.github.io on GitHub">Star</a>
+          Found these guides helpful? [{{<fa regular star>}} us on GitHub](https://github.com/TU-Delft-DCC/TU-Delft-DCC.github.io).
     border: false
+  body-header: |
+    <!-- 100% privacy-first analytics -->
+    <script async defer src="https://scripts.simpleanalyticscdn.com/latest.js"></script>
+    <noscript><img src="https://queue.simpleanalyticscdn.com/noscript.gif" alt="" referrerpolicy="no-referrer-when-downgrade" /></noscript>
   bread-crumbs: true # Breadcrumbs in Quarto websites are a type of secondary navigation that shows the user's current location within the site hierarchy
   navbar:
     logo: docs/img/tud/logo_white_crop.png
@@ -52,11 +64,13 @@ website:
       # - href: index.md
       #   text: Overview
       - href: index.md
-        text: Guides
-      - href: docs/tud-support/index.md
-        text: Support Staff
-      - href: docs/listing.md
-        text: References
+        text: <ins>Guides</ins>
+      - href: docs/resources/courses.md
+        text: <ins>Courses and Workshops</ins>
+      # - href: docs/tud-support/index.md
+      #   text: Support Staff
+      # - href: docs/listing.md
+      #   text: References
       - text: Community
         menu:
           - text: Contributing
@@ -64,7 +78,7 @@ website:
           - text: Code of Conduct
             href: CODE_OF_CONDUCT.md
           - text: About the DCC
-            href: https://www.tudelft.nl/library/support/library-voor-onderzoekers/onderzoek-starten/dcc/contact
+            href: https://www.tudelft.nl/digital-competence-centre
     tools:
       - icon: github
         href: https://github.com/TU-Delft-DCC/TU-Delft-DCC.github.io/
@@ -75,11 +89,15 @@ website:
       collapse-level: 2
       align: left
       contents:
-        - text: "Getting started"
+        - text: <span style="filter:grayscale(100%);">⌂</span> **Home**
           href: index.md
+        - text: "About the guides"
+          href: docs/about.md
         - text: <br>
-        - section: ⚙️ **Computing Infrastructure**
+        - section: "![](/docs/img/gear.svg){height=1em style='filter: invert(0.5) sepia(1) saturate(5) hue-rotate(175deg)'} **Computing Infrastructure**"
           contents:
+          - text: Getting started
+            href: docs/infrastructure/getting_started.md
           - section: "Remote servers"
             href: docs/infrastructure/intro_servers.md
             contents:
@@ -105,73 +123,197 @@ website:
               - text: Setting up a Gitlab runner for MATLAB
                 href: docs/infrastructure/gitlab/runner_matlab.md
         - text: <br>
-        - section: "🗃️ **Data Management**"
+        - section: "![](/docs/img/folder-regular.svg){height=1em style='filter: invert(0.5) sepia(1) saturate(5) hue-rotate(175deg)'} **Data Management**"
           contents:
             - text: Getting started
               href: docs/data/getting_started.md
-            - section: "FAIR Data"
-              href: docs/data/fair.md
+            - text: FAIR Data
+              href: docs/data/fair_data/fair.md
+            - section: Planning
+              href: docs/data/planning/planning.md
               contents:
-                - text: Prepare data for publishing
-                  href: docs/data/publishing.md
-            - section: "TU Delft Data storage"
-              href: docs/data/storage_options.md
+                - text: Privacy
+                  href: docs/data/planning/privacy.md
+            - section: Collection
+              href: docs/data/data_collection/collection.md
               contents:
-                - text: Request Project Drive space
-                  href: docs/data/project_drive_request.md
-                - text: Mount Project Drive on Server
-                  href: docs/data/project_drive_mounting.md
-                - text: Sync with Project Drive and SURFDrive with Unison
-                  href: docs/data/sync_unison.md
+                - text: Data conventions
+                  href: docs/data/data_collection/data_conventions.md
+                - text: Access and reuse
+                  href: docs/data/data_collection/access_reuse.md
+                - text: eLabJournal and RSpace
+                  href: docs/data/data_collection/elab_rspace.md
+            - text: Data processing
+              href: docs/data/data_processing.md
+            - section: Storage
+              href: docs/data/data_storage/storage.md
+              contents:
+                - text: Storage options
+                  href: docs/data/data_storage/storage_options.md
+                  contents:
+                    - text: Request Project Drive space
+                      href: docs/data/data_storage/project_drive_request.md
+                    - text: Mount Project Drive on server
+                      href: docs/data/data_storage/project_drive_mounting.md
+                - text: Data security
+                  href: docs/data/data_storage/security.md
+                - text: Data sharing
+                  href: docs/data/data_storage/sharing.md
+                - text: Data backup
+                  href: docs/data/data_storage/backup.md
+            - section: Archive and publish
+              href: docs/data/data_publishing/archival_publishing_index.md
+              contents:
+                - text: Licensing
+                  href: docs/data/data_publishing/licensing_data.md
+                - text: Publishing data
+                  href: docs/data/data_publishing/publishing.md
+                - text: Offboarding and ownership
+                  href: docs/data/data_publishing/offboarding.md
         - text: <br>
-        - section: "💻 **Research Software**"
+        - section: "![](/docs/img/laptop-code-solid.svg){height=1em style='filter: invert(0.5) sepia(1) saturate(5) hue-rotate(175deg)'} **Research Software**"
           contents:
             - text: Getting started
               href: docs/software/getting_started.md
             - section: "FAIR Software"
-              href: docs/software/fair.md
+              href: docs/software/fair_software/fair.md
               contents:
                 - text: FAIR checklist for research software
-                  href: docs/software/checklist.md
-                - text: FAIR assessment cards
-                  href: docs/software/project_cards.md 
+                  href: docs/software/fair_software/checklist.md
                 - text: Software management plan
-                  href: docs/software/software_management_plan.md
-                - text: FAIR for Research Software Program Spring 2023
-                  url: https://tu-delft-dcc.github.io/FAIR4RS/
+                  href: docs/software/fair_software/software_management_plan.md
+#                - text: FAIR for Research Software Program Spring 2023
+#                  url: https://tu-delft-dcc.github.io/FAIR4RS/
+            - section: "Development workflow"
+              href: docs/software/development_workflow/index.md
+              contents:
+                - text: Project management
+                  href: docs/software/development_workflow/project_management.md
+                - text: Project structure
+                  href: docs/software/development_workflow/project_structure.md
+                - text: Project templates and reusability
+                  href: docs/software/development_workflow/reusing_projects.md
+                - section: Environments and dependencies
+                  href: docs/software/development_workflow/envs_dependencies.md
+                  contents:
+                    - text: Python
+                      href: docs/software/development_workflow/envs_dependencies/python_envs_dependencies.md
+                    - text: MATLAB
+                      href: docs/software/development_workflow/envs_dependencies/matlab_envs_dependencies.md
+                    - text: R
+                      href: docs/software/development_workflow/envs_dependencies/r_envs_dependencies.md
+                - text: Workflow management
+                  href: docs/software/development_workflow/workflow_management.md                
+                - text: Branch management
+                  href: docs/software/development_workflow/branch_management.qmd
+                - text: Collaboration
+                  href: docs/software/development_workflow/collaboration.qmd
             - section: "Documentation"
               href: docs/software/documentation/index.md
               contents:
                 - text: README
-                  href: docs/software/documentation/readme.md
-                - text: CITATION.cff
-                  href: docs/software/documentation/citation.md
-                - text: Software license
+                  href: docs/software/documentation/write_a_readme.md
+                - text: Software licenses
                   href: docs/software/documentation/license.md
+                - text: CITATION
+                  href: docs/software/documentation/citation.md
+                - text: Code documentation
+                  href: docs/software/documentation/code_documentation/code_documentation.md
+                  contents:
+                    - text: Python projects
+                      href: docs/software/documentation/code_documentation/python_documentation.md
+                    - text: MATLAB projects
+                      href: docs/software/documentation/code_documentation/matlab_documentation.md
+                    - text: R projects
+                      href: docs/software/documentation/code_documentation/r_documentation.md           
+                - text: Tooling
+                  href: docs/software/documentation/tooling.md
+                - text: Hosting
+                  href: docs/software/documentation/hosting.md
+                - text: Contributing guidelines
+                  href: docs/software/documentation/contributing_guidelines.md
+                - text: Code of conduct
+                  href: docs/software/documentation/code_of_conduct.md
+            - section: "Code quality"
+              href: docs/software/code_quality/index.md
+              contents:
+                - text: Code style
+                  href: docs/software/code_quality/code_style.md
+                - text: Refactoring
+                  href: docs/software/code_quality/refactoring.md
+                - section: Code smells
+                  href: docs/software/code_quality/code_smells.md
+                  contents: 
+                    - text: Long method
+                      href: docs/software/code_quality/code_smells/long_method.md
+                    - text: Large classes
+                      href: docs/software/code_quality/code_smells/large_class.md
+                    - text: Code duplication
+                      href: docs/software/code_quality/code_smells/duplication.md
+                    - text: Hard-coded values
+                      href: docs/software/code_quality/code_smells/hardcoded_values.md
+                    - text: Deep nesting
+                      href: docs/software/code_quality/code_smells/deep_nesting.md
+                    - text: Many inputs
+                      href: docs/software/code_quality/code_smells/many_arguments.md
+                    - text: Inappropriate intimacy
+                      href: docs/software/code_quality/code_smells/inappropriate_intimacy.md
+                    - text: Side effects
+                      href: docs/software/code_quality/code_smells/side_effects.md
+                    - text: Commented out code
+                      href: docs/software/code_quality/code_smells/dead_code.md
+                - text: Online services
+                  href: docs/software/code_quality/online_services.md
             - section: "Software testing"
-              href: docs/software/testing_intro.md
+              href: docs/software/testing/index.md
               contents:
-                - text: Testing with MATLAB
-                  href: docs/software/testing_matlab.md
-            - section: "Version control with git"
-              href: docs/software/git/intro.md
+                - text: Roadmap to testing
+                  href: docs/software/testing/strategies.md
+                - text: Test types
+                  href: docs/software/testing/test_types.md
+                - text: Advanced concepts
+                  href: docs/software/testing/intermediate.md
+                - text: Testing in Python
+                  href: docs/software/testing/python.md
+                - text: Testing in MATLAB
+                  href: docs/software/testing/matlab.md
+                - text: Testing in R
+                  href: docs/software/testing/r_test.md
+#            - section: "Working with containers"
+#              href: docs/software/containers/intro.md
+#              contents:
+#                - text: Using a docker container with a GUI
+#                  href: docs/software/containers/docker_gui.md
+            - section: "Publish and share"
+              href: docs/software/releases_archiving/index.md
               contents:
-                - text: Branch management
-                  href: docs/software/git/branch_management.md
-            - section: "Working with containers"
-              href: docs/software/containers/intro.md
-              contents:
-                - text: Using a docker container with a GUI
-                  href: docs/software/containers/docker_gui.md
-        - text: <br>
-        - section: "📖 **Resources**"
-          contents:
-            - text: Courses and workshops
-              href: docs/resources/courses.md
-            - text: Research Software Curriculum
-              href: docs/resources/curriculum.md
-            - text: Tools
-              href: docs/resources/tools.md
+                - text: Packaging
+                  href: docs/software/releases_archiving/packaging/packaging.md
+                  contents:
+                    - text: Create a Python package
+                      href: docs/software/releases_archiving/packaging/packaging_python.md
+                    - text: Create an R package
+                      href: docs/software/releases_archiving/packaging/packaging_r.md
+                - text: Releases
+                  href: docs/software/releases_archiving/releases/releases.md
+                  contents: 
+                    - text: Release your Python package on PyPI
+                      href: docs/software/releases_archiving/releases/releases_pypi.md
+                    - text: Release your R package on CRAN
+                      href: docs/software/releases_archiving/releases/releases_cran.md
+                - text: Archiving
+                  href: docs/software/releases_archiving/archiving.md
+            - text: Tooling
+              href: docs/software/tools/tools.md
+#        - text: <br>
+#        - section: <span style="filter:grayscale(100%);">📖</span> **Resources**
+#          contents:
+#            - text: Courses and workshops
+#              href: docs/resources/courses.md
+#            - text: Research Software Curriculum
+#              href: docs/resources/curriculum.md
+#            - text: AI tooling
+#              href: docs/resources/tools.md
 
     # - title: "TU Delft Support"
     #   contents: 
@@ -190,8 +332,8 @@ format:
       - cosmo
       - themes/tud-light.scss
       dark: 
-        - solar
-        # - themes/tud-dark.scss
+      - solar
+      - themes/tud-dark.scss
     css: themes/custom.css
     lang: en
     toc: true

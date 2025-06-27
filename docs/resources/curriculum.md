@@ -1,9 +1,9 @@
 ---
 # Insert this YAML header (including the opening and closing ---) at the beginning of the document and fill it out accordingly
 
-# We use this key to indicate the last reviewed date [manual entry, use MM/DD/YYYY]
+# We use this key to indicate the last reviewed date [manual entry, use YYYY-MM-DD]
 # Uncomment and populate the next line accordingly
-#date: MM/DD/YYYY
+#date: YYYY-MM-DD
 
 # We use this key to indicate the last modified date [automatic entry]
 date-modified: last-modified
@@ -95,7 +95,7 @@ These materials represent a curated curriculum designed to help you develop and 
 ## Pandas
 * [Getting started with Pandas](https://pandas.pydata.org/getting_started.html) - documentation and quick start guide for Pandas, an essential Python library used for working with data sets. It has functions for analyzing, cleaning, exploring, and manipulating data
 * [Pandas Tutorial](https://www.w3schools.com/python/pandas/default.asp) - 14-part tutorial series featuring live code examples and tests of your knowledge
-* [Pandas Data Wrangling Cheat Sheet](https://towardsdatascience.com/pandas-data-wrangling-cheat-sheet-2021-cf70f577bcdd) - to excel data analysis/data science/machine learning in Python, Pandas is a library you need to master. Here is a cheat sheet of some of the most used syntax that you probably don’t want to miss
+* [Pandas Data Wrangling Cheat Sheet](https://media.datacamp.com/legacy/image/upload/v1676302827/Marketing/Blog/Data_Wrangling_Cheat_Sheet.pdf) - a cheat sheet of some of the most used syntax that you probably don’t want to miss
 * [Pandas Cheat Sheet - Visual](https://pandas.pydata.org/Pandas_Cheat_Sheet.pdf) - visual, printable 2-page reference guide on commonly performed operations using Pandas
 * [Ultimate Pandas Guide — Inspecting Data Like a Pro](https://medium.com/towards-data-science/ultimate-pandas-guide-inspecting-data-like-a-pro-9b4f13c39c94) - Whether you’re working on a simple analysis or a complex machine learning model, there’s a lot of value in being able to answer quick, exploratory questions about the nature of your data. This is a walk through of several DataFrame attributes and methods that make data inspection painless and productive
 * [10 Efficient Ways for Inspecting a Pandas DataFrame Object](https://medium.com/codex/10-efficient-ways-for-inspecting-a-pandas-dataframe-object-3f66563e2f2) - A guide to using pandas effectively and efficiently
