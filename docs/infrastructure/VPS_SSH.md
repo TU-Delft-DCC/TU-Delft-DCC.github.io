@@ -60,7 +60,7 @@ Before starting, you need:
 * TU Delft netID
 * Access to a VPS provided by TU Delft ICT, including username and password.
 * SSH client installed on your local machine. This is usually the case for most Linux and MacOS distributions. For Windows, you can use a third-party SSH client like [PuTTY](https://www.putty.org/).
-* MacOS, Linux, or Windows
+* Linux or MacOS terminal
 
 ## Steps: Linux and MacOS
 
