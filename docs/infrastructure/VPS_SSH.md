@@ -116,7 +116,7 @@ Similarly to passwords, it is adviced to rotate your SSH keys regularly, e.g., e
 :::
 
 
-2. Log in to your VPS and, copy the content of your public key to the VPS `~/.ssh/authorized_keys` file. You can achieve this by copying the content of the public key file to the clipboard and pasting it into the `authorized_keys` file on the VPS. Finally, save the file.
+2. Log in to your VPS and, copy the **content** of your **public key** into the VPS `~/.ssh/authorized_keys` file. You can achieve this by copying the content of the public key file to the clipboard and pasting it into the `authorized_keys` file on the VPS. Be mindful of now removing anything form this file or other SSH connection might stop working. Finally, save the file.
 
 
 
