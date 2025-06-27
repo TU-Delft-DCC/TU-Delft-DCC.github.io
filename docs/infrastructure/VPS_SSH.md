@@ -62,9 +62,7 @@ Before starting, you need:
 * SSH client installed on your local machine. This is usually the case for most Linux and MacOS distributions. For Windows, you can use a third-party SSH client like [PuTTY](https://www.putty.org/).
 * MacOS, Linux, or Windows
 
-## Steps
-
-### Linux and MacOS
+## Steps: Linux and MacOS
 
 :::{.callout-tip}
 ## Steps in a nutshell
@@ -75,7 +73,7 @@ Before starting, you need:
 :::
 
 
-## Set a  SSH Tunneling for a Host (Linux Terminal)
+### Set a  SSH Tunneling for a Host (Linux Terminal)
 
 1. If you do not have an SSH key-pair, create one on the local machine. Go to the terminal and enter the following command. Replace `<my-keyname>` with a name of your choice for the SSH key, e.g., `id_rsa` or `id_ed25519`.
 
@@ -118,11 +116,11 @@ Similarly to passwords, it is adviced to rotate your SSH keys regularly, e.g., e
 :::
 
 
-1. Log in to your VPS and, copy the content of your public key to the VPS `~/.ssh/authorized_keys` file. You can achieve this by copying the content of the public key file to the clipboard and pasting it into the `authorized_keys` file on the VPS. Finally, save the file.
+2. Log in to your VPS and, copy the content of your public key to the VPS `~/.ssh/authorized_keys` file. You can achieve this by copying the content of the public key file to the clipboard and pasting it into the `authorized_keys` file on the VPS. Finally, save the file.
 
 
 
-1. Create a new host for SSH connection. On your local machine, edit the `~/.ssh/config` file and add the following configuration. If the file does not exist, create it.
+3. Create a new host for SSH connection. On your local machine, edit the `~/.ssh/config` file and add the following configuration. If the file does not exist, create it.
 
 ```bash 
 Host <host-nickname>
@@ -140,59 +138,10 @@ Replace:
 **<my-keyname>:** the name of the SSH private key you created, e.g., `id_rsa`. If your private key is stored in a different location, replace the path accordingly.
 
 
-3. Test the SSH Tuneling connection. Connect to the VPS using *ssh tunneling* by typing the command below. Use your *bastion-password* when asked. That is usually the password associate to your NetID.
+4. Test the SSH Tuneling connection. Connect to the VPS using *ssh tunneling* by typing the command below. Use your *bastion-password* when asked. That is usually the password associate to your NetID.
 
 ```bash
 $ ssh <host-nickname>
 ```
 
 If you encounter problems with the connection. Use the debug mode `ssh -vvv <host-nickname>` to find out what might have gone wrong. This command will provide detailed information about the connection process and can help you troubleshoot any issues.
-
-
-## Tunneling with WinSCP
-
-WinSCP is a GUI that makes it very easy to inspect, edit and transfer files on the webserver. Instructions for setting this up on a hypothetical server from the CiTG faculty are provided below. General documentation on tunneling with WinSCP are here: https://winscp.net/eng/docs/ui_login_tunnel
-
-_These instructions were tested with an existing `id_ed25519` key, assume you already have WinSCP installed and can modify a text file on the server in your user directory using the terminal._
-
-Do the following:
-
-1. As explained above, log in to the server and add your public key to the file `/home/<username>/.ssh/authorized_keys` (this only needs to be done once).
-
-It should look like this with your own keys `XXXXXXX` and NetID filled between the `<...>` (note the `<XXXXXXX>` is much longer in reality):
-
-```bash
-ssh-rsa <XXXXXXX> ICT-SYSTEMS-<NETID>
-ssh-rsa <XXXXXXX> ICT-SYSTEMS-<NETID>
-ssh-ed25519 <XXXXXXX> <NETID>@tudelft.nl
-```
-
-2. Using WinSCP, the following fields should be entered:
-
-On the main login settings page:
-- File protocol: `SFTP`
-- Host name: `<server>.citg.tudelft.nl`
-- User name: your NetID
-
-3. Open the "Advanced..." window
-
-4. On the page "Tunnel" (under heading "Connection," still in the Advanced window):
-- Host name: `linux-bastion-ex.tudelft.nl`
-- User name: your NetID
-
-5. On the page "Authentication" (under heading "SSH," still in the Advanced window):
-- Private key file: select your private key file, for example `C:..../<username>/.ssh/id_ed25519`
-- Note that the app may ask you to convert your existing key to a Putty format (for example "Do you want to convert OpenSSH private key to PuTTY format?"). Click "OK" then make sure you select the new PuTTY file (e.g., `C:..../<username>/.ssh/id_ed25519.ppk`)
-
-6. Save the setting and click "Login", using your NetID password to authenticate.
-
-### Using WinSCP with sudo rights
-
-If you have sudo rights on the webserver you can use this via WinSCP as follows:
-
-1. Once agin go to the "Advanced..." window to the "SFTP" page under heading "Environment"
-2. In field "SFTP server" enter the following: `sudo /usr/lib/openssh/sftp-server`
-3. Save the changes
-4. Use with caution!
-
-Note that the path to `sftp-server` may be different but can be easily checked and arranged. This will not work if you change the setting and continue to use an open session.
