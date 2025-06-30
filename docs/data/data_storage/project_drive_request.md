@@ -3,7 +3,7 @@
 
 # We use this key to indicate the last reviewed date [manual entry, use YYYY-MM-DD]
 # Uncomment and populate the next line accordingly
-#date: YYYY-MM-DD
+date: 2025-06-30
 
 # We use this key to indicate the last modified date [automatic entry]
 date-modified: last-modified
@@ -26,37 +26,40 @@ title: Request Project Drive space
 # Authors of the document, will not be parsed [manual entry]
 # Uncomment and populate the next lines accordingly
 author_1: Ashley Cryan
-#author_2:
+author_2: Raúl Ortiz Merino
 
 # Maintainers of the document, will not be parsed [manual entry]
 # Uncomment and populate the next lines accordingly
-#maintainer_1: Name Surname
+maintainer_1: Raúl Ortiz Merino
 #maintainer_2:
 
 # To whom reach out regarding the document, will not be parsed [manual entry]
 # Uncomment and populate the next line accordingly
-#corresponding: Name Surname
+corresponding: Raúl Ortiz Merino
 
 # Meaningful keywords, newline separated [manual entry]
 # Uncomment and populate the next line and list accordingly
-#categories: 
-# - 
-# - 
+categories: 
+ - data
+ - storage
 
 ---
 
 ## Background
-TU Delft offers several options for researchers to store their data. One of the most commonly recommended options is the Project Drive (Project Data, U:) for its large storage capacity and secure backups from the University. 
+TU Delft offers several options for researchers to store their data. One of the most commonly recommended options is the Project Drive (Project Data, U:) for its  storage capacity and secure backups from the University. 
 
 ## What this documentation will help achieve
-This documentation will walk through the steps needed to request Project Drive storage from TU Delft ICT. This storage can then be accessed directly through [webdata.tudelft.nl](https://webdata.tudelft.nl/) (uses WebDAV protocol), through a client like [WebDrive](https://webdata.tudelft.nl/) on your local machine (click on the link and then the WebDrive heading to download and install this software for your operating system), or mounted to a TU Delft Virtual Private Server following the instructions [here](/docs/infrastructure/VPS_request.md). 
+This documentation will walk through the steps needed to request Project Drive storage from TU Delft ICT. 
+
+This storage is automatically mounted on TU Delft managed computers when connected to the TU Delft network (dastud, [eduVPN](https://intranet.tudelft.nl/en/-/openvpn?p_l_back_url=%2Fen%2Fgroup%2Fguest%2Fsearch%3Fq%3Dvpn&p_l_back_url_title=Search)). It can also be accessed through [webdata.tudelft.nl](https://webdata.tudelft.nl/) using a WebDAV protocol, through a client like [WebDrive](https://webdata.tudelft.nl/) on your local machine (click on the link and then the WebDrive heading to download and install this software for your operating system), or mounted to a TU Delft Virtual Private Server following the instructions [here](/docs/infrastructure/VPS_request.md). 
 
 ## Prerequisites
 * TU Delft netID
-* An Excel file with the netIDs of TU Delft collaborators who should have read/write access to the Project Drive storage space you are requesting (optional)
+* (Optional) A list of TU Delft collaborators who should have read/write access to the Project Drive storage space you are requesting 
 
 ## Tools/Software
-* WebDrive (optional GUI to access data on Project Drive)
+* (Optional) [WebDrive](https://webdata.tudelft.nl/)
+* (Optional) [eduVPN](https://intranet.tudelft.nl/en/-/openvpn?p_l_back_url=%2Fen%2Fgroup%2Fguest%2Fsearch%3Fq%3Dvpn&p_l_back_url_title=Search) (link to intranet page, requires netID sign in)
 
 ## Steps
 1. Request Project Drive storage via the TU Delft ICT form on TopDesk
@@ -64,8 +67,7 @@ This documentation will walk through the steps needed to request Project Drive s
 3. Access your data storage on Project Drive
 
 ### Step 1. Request Project Drive storage via the TU Delft ICT form on TopDesk
-You can make a request for data storage via the [TopDesk self service portal](https://tudelft.topdesk.net/tas/public/ssp/content/serviceflow?unid=21b6203ec6d74f00a45c32e6034dfc0c&openedFromService=true). Navigate to this form (requires netID sign in) and see below for guidance on how to fill in each of the sections. 
-
+You can make a request for data storage via a form available on the [TopDesk self service portal](https://tudelft.topdesk.net/) (requires netID sign in). Home  > ICT services > IT for Research  > Data storage for Research: Project data (U:) >  ICT: Request Research Data Storage.
 
 ### Step 2. Fill and send the form according to your data storage preferences and requirements
 The form is divided into three sections: "Caller", "Information about Requester and Data", and "Data for a Research Project".
@@ -90,5 +92,5 @@ ________
 
 In the final section, you need to provide some information about your research project. Depending on your research needs, you should specify how much space you will need on the Project Drive to hold all your data, initially and into the planned future. It is important to know that the Project Drive storage is able to expand as your data grows, but you should make your best guess when requesting the space. 
 
-At the bottom of this section you can attach an Excel file that contains the netIDs of TU Delft affiliated employees that should have read/write access to the storage you are requesting on the Project Drive. If access to the storage is required for TU Delft external researchers, this information can be added as well. Note that it is unusual that non-TU Delft personnel are added to Project Drive storage, and if you would like to do so you should provide a company-affiliated email address for each person you want to add. 
+At the bottom of this section you can attach an Excel file that contains the netIDs of TU Delft affiliated employees that should have read/write access to the storage you are requesting on the Project Drive.  
 
