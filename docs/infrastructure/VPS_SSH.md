@@ -25,12 +25,12 @@ title: Set Up SSH Tunneling for a VPS
 
 # Authors of the document, will not be parsed [manual entry]
 # Uncomment and populate the next lines accordingly
-#author_1: Name Surname
+author_1: Manuel Garcia
 #author_2:
 
 # Maintainers of the document, will not be parsed [manual entry]
 # Uncomment and populate the next lines accordingly
-#maintainer_1: Name Surname
+maintainer_1: Manuel Garcia
 #maintainer_2:
 
 # To whom reach out regarding the document, will not be parsed [manual entry]
@@ -39,9 +39,12 @@ title: Set Up SSH Tunneling for a VPS
 
 # Meaningful keywords, newline separated [manual entry]
 # Uncomment and populate the next line and list accordingly
-#categories: 
-# - 
-# - 
+categories: 
+- ssh tunneling
+- ssh keys
+- bastion host
+- vps 
+- scp
 
 ---
 
