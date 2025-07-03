@@ -48,7 +48,7 @@ categories:
 
 ---
 
-## Overview
+### Overview
 
 The default login procedure to a VPS (a remote *Virtual Private Server*) from TU Delft requires to connect to your VPS via a Bastion Host (an intermediary server that control access). Therefore, it is a **two-step** process: to reach a remote host, a user has to connect first to the **bastion host** and from there to the VPS. However, a user connect to a VPS and other remote hosts in a single step using what it is called *ssh tunneling* and *ssh keys*.
 
@@ -59,10 +59,10 @@ Setting up a connection as decribed below simplifies the process of accessing a 
 Depending on your geogaphic location, access to a VPS via SSH may be blocked by the TU Delft firewall. In such cases, you must use a VPN connection via [eduVPN](https://www.eduvpn.org/). Access if usally blocked if you are connecting from your home network. 
 :::
 
-## What will you accomplish?
+### What will you accomplish?
 This guide explains how to set up a single-step SSH connection to a VPS using SSH Tunneling. As a result, you will be able to connect to your VPS from you local machine without the need to log in to the Bastion Host. This also enables the transfering of files between a local machine and the VPS.
 
-## Prerequisites
+### Prerequisites
 Before starting, you need:
 
 * TU Delft netID
@@ -70,7 +70,7 @@ Before starting, you need:
 * SSH client installed on your local machine. This is usually the case for most Linux and MacOS distributions. For Windows, you can use a third-party SSH client like [PuTTY](https://www.putty.org/).
 * Linux or MacOS terminal
 
-## Steps: Linux and MacOS
+### Steps: Linux and MacOS
 
 :::{.callout-tip appearance="simple" icon="false"}
 ## {{< fa lightbulb >}} Summary of steps
@@ -81,7 +81,7 @@ Before starting, you need:
 :::
 
 
-### Set a  SSH Tunneling for a Host (Linux Terminal)
+#### **Set a  SSH Tunneling for a Host (Linux Terminal)**
 
 1. If you do not have an SSH key-pair, create one on the local machine. Go to the terminal and enter the following command. Replace `<my-keyname>` with a name of your choice for the SSH key, e.g., `id_rsa` or `id_ed25519`.
 
