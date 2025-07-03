@@ -48,19 +48,14 @@ categories:
 
 ---
 
-### Overview
+This guide explains how to set up a secure, single-step SSH connection to a Virtual Private Server (VPS) at TU Delft using SSH tunneling. By default, connecting to a VPS requires first accessing a Bastion Host (an intermediary server controlling access), making it a two-step process. Therefore, it is a **two-step** process: to reach a remote host, a user has to connect first to the **bastion host** and from there to the VPS. However, by using SSH tunneling and SSH keys, you can connect to your VPS and other remote hosts in a single step.
 
-The default login procedure to a VPS (a remote *Virtual Private Server*) from TU Delft requires to connect to your VPS via a Bastion Host (an intermediary server that control access). Therefore, it is a **two-step** process: to reach a remote host, a user has to connect first to the **bastion host** and from there to the VPS. However, a user connect to a VPS and other remote hosts in a single step using what it is called *ssh tunneling* and *ssh keys*.
-
-Setting up a connection as decribed below simplifies the process of accessing a VPS considerably and allows for secured transfer of files to and from a remote server and a local machine. 
+With the method described below, you will be able to connect directly from your local machine to your VPS, bypassing the need to log in to the Bastion Host separately. This setup also simplifies secure file transfers between your local machine and the VPS.
 
 :::{.callout-important appearance="simple" icon="false"}
 ## {{< fa info-circle >}} Accessing a VPS
 Depending on your geogaphic location, access to a VPS via SSH may be blocked by the TU Delft firewall. In such cases, you must use a VPN connection via [eduVPN](https://www.eduvpn.org/). Access if usally blocked if you are connecting from your home network. 
 :::
-
-### What will you accomplish?
-This guide explains how to set up a single-step SSH connection to a VPS using SSH Tunneling. As a result, you will be able to connect to your VPS from you local machine without the need to log in to the Bastion Host. This also enables the transfering of files between a local machine and the VPS.
 
 ### Prerequisites
 Before starting, you need:
