@@ -65,12 +65,12 @@ This guide explains how to set up a single-step SSH connection to a VPS using SS
 ### Prerequisites
 Before starting, you need:
 
-* TU Delft netID
+* TU Delft NetID
 * Access to a VPS provided by TU Delft ICT, including username and password.
-* SSH client installed on your local machine. This is usually the case for most Linux and MacOS distributions. For Windows, you can use a third-party SSH client like [PuTTY](https://www.putty.org/).
-* Linux or MacOS terminal
+* SSH client installed on your local machine. This is usually the case for most Linux and macOS distributions. For Windows, you can use a third-party SSH client like [PuTTY](https://www.putty.org/).
+* Linux or macOS terminal
 
-### Steps: Linux and MacOS
+### Steps for Linux and macOS
 
 :::{.callout-tip appearance="simple" icon="false"}
 ## {{< fa lightbulb >}} Summary of steps
