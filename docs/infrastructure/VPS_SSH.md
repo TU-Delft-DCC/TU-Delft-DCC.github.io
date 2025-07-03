@@ -54,8 +54,8 @@ The default login procedure to a VPS (a remote *Virtual Private Server*) from TU
 
 Setting up a connection as decribed below simplifies the process of accessing a VPS considerably and allows for secured transfer of files to and from a remote server and a local machine. 
 
-:::{.callout-important}
-## Accessing a VPS
+:::{.callout-important appearance="simple" icon="false"}
+## {{< fa info-circle >}} Accessing a VPS
 Depending on your geogaphic location, access to a VPS via SSH may be blocked by the TU Delft firewall. In such cases, you must use a VPN connection via [eduVPN](https://www.eduvpn.org/). Access if usally blocked if you are connecting from your home network. 
 :::
 
@@ -72,8 +72,8 @@ Before starting, you need:
 
 ## Steps: Linux and MacOS
 
-:::{.callout-tip}
-## Steps in a nutshell
+:::{.callout-tip appearance="simple" icon="false"}
+## {{< fa lightbulb >}} Summary of steps
 1. Create SSH keys.
 2. Copy SSH keys to bastion host and remote server.
 3. Create a new host for SSH connection.
@@ -118,8 +118,8 @@ A private and public keys will be added to `~/.ssh`.
 
 The **public key is the file with the `.pub` extension**, e.g., `<my-keyname>.pub`
 
-:::{.callout-tip}
-## Pro Tip
+:::{.callout-tip appearance="simple" icon="false"}
+## {{< fa lightbulb >}} Tip
 Similarly to passwords, it is adviced to rotate your SSH keys regularly, e.g., every 6 months. You can do this by generating a new key pair and replacing the old one on your local machine and VPS.
 :::
 
