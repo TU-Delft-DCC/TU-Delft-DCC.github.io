@@ -104,7 +104,7 @@ website:
               - text: Request a VPS
                 href: docs/infrastructure/VPS_request.md
               - href: docs/infrastructure/VPS_SSH.md
-                text: Setting Up SSH Tunneling
+                text: Setting up SSH tunneling
               - href: docs/infrastructure/moving_data.md
                 text: Moving Data to Remote Servers
               - href: docs/infrastructure/VPS_SSL_Certs.md
