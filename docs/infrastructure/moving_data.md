@@ -62,7 +62,9 @@ Tranfering data to and from a TU Delft Windows server is done via the Citrix pla
 
 It is not possible to directly transfer files to or from the server's C: or D: drive. Instead, you upload or download files to your personal TU Delft drive which is connected to the server. Using the Windows File Explorer and standard copy-paste or drag-and-drop operations you can transfer the data from your personal drive to the server's C: or D: drives.
  
-::: {.callout-warning}
+::: {.callout-warning appearance="simple" icon="false"}
+## {{< fa info-circle >}} Warning
+
 TU Delft Windows servers have a limited amount of disk space in the C: drive. ICT instructs users to install applications and store data in the D: drive of the server to avoid running out of memory. Alternatively, you can use your personal TU Delft drive, which is also connected to the server. More information can be found at the bottom of the [TOPdesk form](https://tudelft.topdesk.net/tas/public/ssp/content/serviceflow?unid=418c986f186d4934848dc2712039ed34&openedFromService=true) to request a new VPS.
 :::
 
@@ -80,7 +82,9 @@ Data transfer is done with the `scp` command:
 scp <options> <data-source> <data-destination>
 ```
 
-::: {.callout-warning}
+::: {.callout-warning appearance="simple" icon="false"}
+## {{< fa info-circle >}} Warning
+
 The bastion is solely intended for connecting to a VPS and storing SSH keys. It is not designed for storing large amounts of data. Therefore, user home directories have limited storage capacity. Don't forget to delete the files you transfer to or from your VPS.
 :::
 
