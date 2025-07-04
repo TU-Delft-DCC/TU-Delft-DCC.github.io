@@ -58,7 +58,7 @@ Storing your data in a secure location is a key element of a successful project 
 These options have been curated from:
 
 - The intranet section on [Data Storage](https://intranet.tudelft.nl/-/data-storage-1)
-- The [topdesk](https://tudelft.topdesk.net/) "Overview of data storage and file sharing" (Home > ICT services > IT for Research > Overview of data storage and file sharing)
+- The [TOPdesk](https://tudelft.topdesk.net/) "Overview of data storage and file sharing" (Home > ICT services > IT for Research > Overview of data storage and file sharing)
 - And the [Storage Finder](https://storagefinder.tudelft.nl/) tool
 - [SURF](https://www.surf.nl/en/)
 
@@ -73,21 +73,27 @@ Please note that the information is subject to change, and you should always ref
 | TU Delft managed desktop            | TU Delft network | Medium   | Internal to TU Delft           | Defined by owner (unless using options listed below) | Check device specifications | All TU Delft managed devices are password protected. Security is therefore slightly higer than private counterparts |
 | TU Delft Personal Data Storage (H:) | TU Delft network | High     | Internal to TU Delft           | Yes                                                  | 8 GB                        | [Storage Finder](https://storagefinder.tudelft.nl/)                                                                 |
 | TU Delft Group Data Storage (M:)    | TU Delft network | High     | Internal to TU Delft           | Yes                                                  | 50 GB                       | [Storage Finder](https://storagefinder.tudelft.nl/)                                                                 |
-| TU Delft Project Data Storage (U:)  | TU Delft network | High     | Internal to TU Delft           | Yes                                                  | > 250 GB                     | [Storage Finder](https://storagefinder.tudelft.nl/)                                                                 |
+| TU Delft Project Data Storage (U:)  | TU Delft network | High     | Internal to TU Delft. External access can be enabled with a TU Delft guest account.           | Yes                                                  | > 250 GB                     | [Storage Finder](https://storagefinder.tudelft.nl/)                                                                 |
 | Microsoft Teams                     | Cloud            | High     | Internal to TU Delft           | Yes                                                  | < 250 GB                     | [Storage Finder](https://storagefinder.tudelft.nl/)                                                                 |
 | Microsoft Sharepoint                | Cloud            | High     | Internal to TU Delft           | Yes                                                  | < 250  GB                     | [Storage Finder](https://storagefinder.tudelft.nl/)                                                                 |
 | Microsoft OneDrive for Business     | Cloud            | High     | External access can be enabled | Yes                                                  | 1 TB                        | [Storage Finder](https://storagefinder.tudelft.nl/)                                                                 |
-| SURF drive                          | Cloud            | High     | External access can be enabled | Yes                                                  | 500 GB                      | [SURF drive documentation](https://www.surf.nl/en/services/storage-data-management/surfdrive)                       |
+| SURFdrive                          | Cloud            | High     | External access can be enabled | Yes                                                  | 500 GB                      | [SURFdrive documentation](https://www.surf.nl/en/services/storage-data-management/surfdrive)                       |
 
-## Project Drive operations
+## *Project Drive* operations
 
-A Project Drive is a TU Delft managed network drive that allows you to store and share data with your project team members. It is a secure and reliable option for storing research data, and it is automatically backed up. Below you can see how to request a Project Drive, and how to mount it on a server (please refer to the section on [Remote Servers](../../infrastructure/intro_servers.md) for more details).
+A *Project Drive* is a TU Delft managed network drive that allows you to store and share data with your project team members. It is a secure and reliable option for storing research data, and it is automatically backed up. 
+
+::: {.callout-tip appearance="simple" icon="false"}
+## {{< fa lightbulb >}} **For most situations, the *Project Data Storage (U:)* drive is the optimal choice for storing research data.**
+:::
+
+Below you can see how to access a *Project Data Storage (U:)* drive, request space for it, and how to mount it on a server (please refer to the section on [Remote Servers](../../infrastructure/intro_servers.md) for more details).
 
 ::: {.content-block}
 ::: {.features}
 
 ::: {.feature}
-### {{< fa hard-drive >}} Request Project Drive space
+### {{< fa hard-drive >}} Access and request space for *Project Data Storage*
 
 ::: {.learn-more}
 [Learn more »](./project_drive_request.md)
@@ -95,7 +101,7 @@ A Project Drive is a TU Delft managed network drive that allows you to store and
 :::
 
 ::: {.feature}
-### {{< fa server >}} Mount Project Drive on server
+### {{< fa server >}} Mount *Project Drive* on server
 
 ::: {.learn-more}
 [Learn more »](./project_drive_mounting.md)
