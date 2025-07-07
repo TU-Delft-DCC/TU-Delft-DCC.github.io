@@ -67,7 +67,7 @@ The URL for your project drive can be obtained from either:
 
 :::{.callout-note appearance="simple" icon="false"}
 ## {{< fa info-circle >}} Note
-https://webdata.tudelft.nl/ can only be accessed in campus or using eduVPN
+https://webdata.tudelft.nl/ can only be accessed on campus or using eduVPN
 :::
 
 ::: {.panel-tabset}
@@ -87,7 +87,7 @@ Content within *webdata* is under password protection. Typing your username and 
 Follow instructions in the TU Delft ICT email from initial server setup or follow our guide to [configure via SSH](../../infrastructure/VPS_SSH.md).
 
 #### **Step 3. Create a new directory as the mounting point**
-The convention is to create mounting points in the folder `/media`. Navigate to the folder and create a new folder with
+The convention is to create mounting points in the folder `/media`. Navigate to the directory and create a new folder with:
 
 ```bash
 cd /media
@@ -175,13 +175,13 @@ As indicated by the nano interface, use `Control`+`O` to write out the file. The
 :::
 
 #### **Step 6. Mount the project drive**
-To mount the project drive execute the command
+To mount the project drive, execute the command:
 
 ```bash
 sudo mount /media/<server_mount_point>
 ```
 
-You can also unmount the drive with
+You can also unmount the drive with:
 ```bash
 fusermount -u /media/<server_mount_point>
 ```
@@ -190,7 +190,7 @@ The project drive will not mount automatically, so you will need to remount it m
 
 :::{.callout-note appearance="simple" icon="false"}
 ## {{< fa info-circle >}} Note
-If the step above does not work, it probably means that the packages for mounting cifs-type filesystems haven't been installed. Depending on your linux flavour you will need to install them using:
+If the step above does not work, it probably means that the packages for mounting cifs-type filesystems haven't been installed. Depending on your Linux flavour you will need to install them using:
 
 ::: {.panel-tabset}
 ### Ubuntu/Debian
