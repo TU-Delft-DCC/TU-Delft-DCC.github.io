@@ -79,11 +79,13 @@ For example, you might see something like this on a download page:
 
 You can use different command-line tools to calculate the checksum of the file you have downloaded, transferred or backed-up.
 
-**Windows PowerShell:**
+::: {.panel-tabset}
+
+### Windows PowerShell
 
 Open PowerShell (press Win + X and select "PowerShell").
 
-Use the Get-FileHash command. By default, it uses SHA-256.
+Use the `Get-FileHash` command. By default, it uses SHA-256.
 
 ```powershell
 Get-FileHash C:\path\to\your\file
@@ -95,37 +97,39 @@ To use a different algorithm like MD5, specify it:
 Get-FileHash C:\path\to\your\file -Algorithm MD5
 ```
 
-**macOS terminal:**
+### macOS terminal
 
-Open Terminal (you can find it in Applications > Utilities).
+Open your terminal (you can find it in Applications > Utilities).
 
-For SHA-256, use the shasum -a 256 command:
+For SHA-256, use the `shasum -a 256` command:
 
 ```Bash
 shasum -a 256 /path/to/your/file
 ```
 
-For MD5, use the md5 command:
+For MD5, use the `md5` command:
 
 ```Bash
 md5 /path/to/your/file
 ```
 
-**Linux terminal:**
+### Linux terminal
 
 Open your terminal.
 
-For SHA-256, use the sha256sum command:
+For SHA-256, use the `sha256sum` command:
 
 ```Bash
 sha256sum /path/to/your/file
 ```
 
-For MD5, use the md5sum command:
+For MD5, use the `md5sum` command:
 
 ```Bash
 md5sum /path/to/your/file
 ```
+
+:::
 
 #### **Step 3: Compare the checksums**
 
