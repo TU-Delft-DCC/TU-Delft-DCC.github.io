@@ -49,7 +49,7 @@ Data security is a critical aspect of research data management, ensuring that se
 
 TU Delft implements robust authentication and authorization mechanisms, such as strong passwords and two-factor authentication, to restrict data access only to approved individuals and systems.   
 
-# Core Principles of Research Data Security
+## Core principles of research data security
 
 Key principles include:
 
@@ -63,7 +63,7 @@ Key principles include:
 **{{< fa lightbulb >}} Tip:** Explore our [*Data backup*](../data_storage/backup.md) guide for more information.
 :::
 
-## Verifying data integrity
+### Verifying data integrity
 
 A **checksum** is a small-sized block of data derived from another block of digital data. By comparing the checksum of a file you have downloaded, backed-up, or transferred with the one provided by the source, you can verify if the file is an exact and untampered copy.
 
@@ -95,7 +95,7 @@ To use a different algorithm like MD5, specify it:
 Get-FileHash C:\path\to\your\file -Algorithm MD5
 ```
 
-**macOS Terminal:**
+**macOS terminal:**
 
 Open Terminal (you can find it in Applications > Utilities).
 
@@ -111,7 +111,7 @@ For MD5, use the md5 command:
 md5 /path/to/your/file
 ```
 
-**Linux Terminal:**
+**Linux terminal:**
 
 Open your terminal.
 
@@ -135,7 +135,7 @@ If they match exactly, your file is a perfect copy.
 
 If they do not match, the file was likely corrupted during download or has been tampered with. You should delete the file and download it again.
 
-## Other Considerations
+### Other considerations
 
 :::{.callout-tip appearance="simple" icon="false"}
 **{{< fa lightbulb >}} Tip:** Explore our [*Data privacy*](../planning/privacy.md) guide for more information on data requiring work with highly sensitive data, such as personal information, health data, or copyrighted material
