@@ -141,9 +141,7 @@ If they do not match, the file was likely corrupted during download or has been 
 
 ### Other considerations
 
-:::{.callout-tip appearance="simple" icon="false"}
-**{{< fa lightbulb >}} Tip:** Explore our [*Data privacy*](../planning/privacy.md) guide for more information on data requiring work with highly sensitive data, such as personal information, health data, or copyrighted material
-:::
+Our [*Data privacy*](../planning/privacy.md) guide has a list of TU Delft privacy related resources that should be helpful if you are working with highly sensitive data, such as personal information, health data, or copyrighted material.
 
 :::{.callout-important appearance="simple" icon="false"}
 ## {{< fa info-circle >}} Important<br>
