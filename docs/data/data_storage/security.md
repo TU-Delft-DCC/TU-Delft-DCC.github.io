@@ -5,8 +5,8 @@
 # Uncomment and populate the next line accordingly
 date: 2025-07-02
 
-# We use this key to indicate the last modified date [automatic entry]
-date-modified: last-modified
+# We use this key to indicate the last modified date [manual entry]
+date-modified: 2025-07-08
 
 # Do not modify
 lang: en
