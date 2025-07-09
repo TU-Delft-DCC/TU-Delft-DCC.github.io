@@ -1040,8 +1040,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#data-backup" id="toc-data-backup" class="nav-link active" data-scroll-target="#data-backup">Data Backup</a></li>
-  <li><a href="#using-rsync-in-the-command-line-for-data-backup" id="toc-using-rsync-in-the-command-line-for-data-backup" class="nav-link" data-scroll-target="#using-rsync-in-the-command-line-for-data-backup">Using <code>rsync</code> in the command line for Data Backup</a></li>
+  <li><a href="#using-rsync-in-the-command-line-for-data-backup" id="toc-using-rsync-in-the-command-line-for-data-backup" class="nav-link active" data-scroll-target="#using-rsync-in-the-command-line-for-data-backup">Using <code>rsync</code> in the command line for Data Backup</a></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/TU-Delft-DCC/TU-Delft-DCC.github.io/issues/new/choose" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div></nav>
     </div>
@@ -1078,8 +1077,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 <script async="" defer="" src="https://scripts.simpleanalyticscdn.com/latest.js"></script>
-<section id="data-backup" class="level1">
-<h1>Data Backup</h1>
 <p>An effective system for backing up research data is crucial to the success and reproducibility of any research project. Backups ensure that irreplaceable files are not lost due to hardware failure, accidental deletion, or other unforeseen events.</p>
 <p>A widely recommended strategy for data backup is the 3-2-1 Rule:</p>
 <ul>
@@ -1088,9 +1085,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li><p><strong>1 Off-site:</strong> At least one copy should be stored off-site or remotely. Cloud services or an external drive stored in a different physical location can fulfill this requirement, providing protection against localized disasters.</p></li>
 </ul>
 <p>When deciding on backup frequency, you should consider how often the data changes, the amount of work that would be lost between backups, the cost (time and money) to replace lost work, and the effort required for the backup process. Automated backup solutions are often more efficient than manual processes. Please refer to the section on <a href="../../../docs/data/data_storage/storage_options.html">Storage options</a> for more information on which options involve automated backup or not.</p>
-</section>
-<section id="using-rsync-in-the-command-line-for-data-backup" class="level1">
-<h1>Using <code>rsync</code> in the command line for Data Backup</h1>
+<section id="using-rsync-in-the-command-line-for-data-backup" class="level2">
+<h2 class="anchored" data-anchor-id="using-rsync-in-the-command-line-for-data-backup">Using <code>rsync</code> in the command line for Data Backup</h2>
 <p>If you are comfortable with the command line, <code>rsync</code> is a powerful and versatile utility available on Linux (including Windows Subsystem for Linux: WSL) and macOS systems that can efficiently synchronize and back up files and directories. It is particularly useful for incremental backups, as it only transfers the differences between the source and destination, saving time and bandwidth.</p>
 <p>Here are simple steps to use <code>rsync</code> for data backup:</p>
 <ol type="1">
