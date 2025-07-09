@@ -151,9 +151,9 @@ website:
                 - text: Storage options
                   href: docs/data/data_storage/storage_options.md
                   contents:
-                    - text: Request Project Drive space
+                    - text: Access and request space for *Project Data Storage*
                       href: docs/data/data_storage/project_drive_request.md
-                    - text: Mount Project Drive on server
+                    - text: Mount *Project Drive* on server
                       href: docs/data/data_storage/project_drive_mounting.md
                 - text: Data security
                   href: docs/data/data_storage/security.md

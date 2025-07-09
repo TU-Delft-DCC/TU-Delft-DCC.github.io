@@ -107,6 +107,7 @@ exclude = [
   '^https?://help\.dreamhost\.com',
   '^https?://(www\.)?data\.4tu\.nl',
   '^https?://webdata\.tudelft\.nl',
+  '^https?://weblogin\.tudelft\.nl',
   '^https?://www\.putty\.org',
   
   # Test/dummy environments
