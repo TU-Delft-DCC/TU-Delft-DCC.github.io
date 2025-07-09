@@ -99,7 +99,7 @@ website:
           - text: Getting started
             href: docs/infrastructure/getting_started.md
           - section: "Remote servers"
-            href: docs/infrastructure/intro_servers.md
+            href: docs/infrastructure/remote_servers.md
             contents:
               - text: Request a VPS
                 href: docs/infrastructure/VPS_request.md
@@ -151,12 +151,10 @@ website:
                 - text: Storage options
                   href: docs/data/data_storage/storage_options.md
                   contents:
-                    - text: Request Project Drive space
+                    - text: Access and request space for *Project Data Storage*
                       href: docs/data/data_storage/project_drive_request.md
-                    - text: Mount Project Drive on server
+                    - text: Mount *Project Drive* on server
                       href: docs/data/data_storage/project_drive_mounting.md
-                    - text: Sync Project Drive and SURFDrive with Unison
-                      href: docs/data/data_storage/sync_unison.md
                 - text: Data security
                   href: docs/data/data_storage/security.md
                 - text: Data sharing
