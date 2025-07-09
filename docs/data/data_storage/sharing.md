@@ -5,8 +5,8 @@
 # Uncomment and populate the next line accordingly
 date: 2025-07-01
 
-# We use this key to indicate the last modified date [automatic entry]
-date-modified: last-modified
+# We use this key to indicate the last modified date [manual entry]
+date-modified: 2025-07-09
 
 # Do not modify
 lang: en
@@ -45,53 +45,55 @@ categories:
 
 ---
 
-You will often have to make research data available to others, typically through data repositories or other platforms, to encourage collaboration, transparency, and reproducibility. This section covers aspects of data sharing, for *ongoing work*, throughout the *active* phase of a research project. The use of data repositories, the importance of data licenses, and the role of metadata in facilitating effective data sharing for *completed work* are covered in the section on [Archiving and publishing data](../data_publishing/archival_publishing_index.md). Both sections are closely related, as data sharing is a key component of the broader data management lifecycle. As such, these sections include shared concepts of [security](../data_storage/security.md) and [privacy](../planning/privacy.md) also covered in sections of their own.
+This section covers aspects of data sharing, for *ongoing work*, throughout the *active* phase of a research project. The use of data repositories, the importance of data licenses, and the significance of metadata in sharing *completed work* are discussed in the section on [Archiving and publishing data](../data_publishing/archival_publishing_index.md).
+
+Both sections are closely related, as data sharing is a key component of the broader data management lifecycle. As such, these sections include shared concepts of [security](../data_storage/security.md) and [privacy](../planning/privacy.md) also covered in sections of their own.
 
 As shown in the [overview of storage options](../data_storage/storage_options.md#overview-of-storage-options) section, TU Delft provides several options for data storage, which can be used to share data with internal and external partners. The choice of storage solution depends on the nature of the data, the level of security required, and the intended audience for the shared data.
 
-# Internal 
+## Internal 
 
-## Networked storage
+### Networked storage
 
-### Personal Data Storage (H:)
+#### **Personal Data Storage (H:)**
 
 This is the default storage location for personal data, such as documents, spreadsheets, and presentations. It is accessible only to the user and is not suitable for sharing with others. However, it enables *you* to share *your* data across TUDelft-managed devices connected to the TU Delft network.
 
-### Group Data Storage (M:)
+#### **Group Data Storage (M:)**
 
 The folder structure on this network drive follows a similar structure to that of the faculties, departments, and research groups at TU Delft. It is typically accessible to members of a research group and can be used to share data with colleagues within the same department and faculty. Access to this storage is managed by your department secretary and/or the Faculty ICT Manager.
 
-### Project Data Storage (U:)
+#### **Project Data Storage (U:)**
 
 Access to this storage is requested by a contact person "caller/owner" which can in turn provide access via a netID. Its data can be accessed through CIFS and NFS (with kerberos authentication), meaning it can be mounted in different systems. Please visit the [project drive request](../data_storage/project_drive_request.md) and [project drive mounting ](../data_storage/project_drive_mounting.md) sections for more information.
 
-## Cloud-based storage
+### Cloud-based storage
 
 Cloud services are not recommended as primary storage locations for research data. A critical drawback is that access to data stored on these platforms can be lost upon the creator's departure from TU Delft, posing a significant risk to data continuity and ownership. Furthermore, they "should not be used for highly confidential data such as state secrets, sensitive personal data or highly sensitive IP material".
 
 TU Delft provides a few collaboration tools through the Microsoft Office 365 platform, including Microsoft Teams, SharePoint and OneDrive. 
 
-### Microsoft Teams
+#### **Microsoft Teams**
 
 This platform is primarily used for communication and collaboration within research groups and projects. It allows for file sharing, real-time collaboration, and integration with other Microsoft 365 applications. However, it is not a dedicated data storage solution and should be used in conjunction with other storage options.
 
 Find more details on [topdesk](https://tudelft.topdesk.net/) Home > ICT services > Collaboration Tools > Microsoft Teams.
 
-### Microsoft SharePoint
+#### **Microsoft SharePoint**
 
 Considerations for this platform are similar to those for Microsoft Teams. It is primarily used for document management and collaboration within research groups and projects. SharePoint allows for file sharing, version control, and integration with other Microsoft 365 applications.
 
 Find more details on [topdesk](https://tudelft.topdesk.net/) Home > ICT services > Collaboration Tools > SharePoint 2016 support
 
-# External
+## External
 
-### Microsoft OneDrive for Business
+#### **Microsoft OneDrive for Business**
 
 OneDrive is installed by default on the laptops and desktops supplied by TU Delft. TU Delft OneDrive is recognisable by the name: "OneDrive - Delft University of Technology". Web based access within and outside TUDelft, sharing and working together is possible with TUDelft colleagues and also external users. OneDrive is suitable for sharing data with external partners, as it allows for controlled access and collaboration. However, it is important to ensure that sensitive data is not shared without proper security measures in place.
 
 Find more details on [topdesk](https://tudelft.topdesk.net/) Home > OneDrive for Business 
 
-### SURFdrive
+#### **SURFdrive**
 
 SURFdrive is a personal cloud storage service for the Dutch education and research community, offering staff, researchers and students an easy way to store, synchronise and share files in the secure and reliable SURF community cloud. SURFdrive offers staff, researchers and students an easy way to share and synchronise files within a secure community cloud with ample storage capacity.
 
