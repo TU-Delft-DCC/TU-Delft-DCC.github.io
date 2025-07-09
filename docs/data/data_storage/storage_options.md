@@ -87,7 +87,7 @@ A *Project Drive* is a TU Delft managed network drive that allows you to store a
 ## {{< fa lightbulb >}} **For most situations, the *Project Data Storage (U:)* drive is the optimal choice for storing research data.**
 :::
 
-Below you can see how to access a *Project Data Storage (U:)* drive, request space for it, and how to mount it on a server (please refer to the section on [Remote Servers](../../infrastructure/intro_servers.md) for more details).
+Below you can see how to access a *Project Data Storage (U:)* drive, request space for it, and how to mount it on a server (please refer to the section on [Remote Servers](../../infrastructure/remote_servers.md) for more details).
 
 ::: {.content-block}
 ::: {.features}
