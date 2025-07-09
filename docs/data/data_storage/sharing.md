@@ -51,7 +51,12 @@ Both sections are closely related, as data sharing is a key component of the bro
 
 As shown in the [overview of storage options](../data_storage/storage_options.md#overview-of-storage-options) section, TU Delft provides several options for data storage, which can be used to share data with internal and external partners. The choice of storage solution depends on the nature of the data, the level of security required, and the intended audience for the shared data.
 
-## Internal 
+:::{.callout-note appearance="simple" icon="false"}
+## {{< fa info-circle >}} Note
+Storing research data only on your personal laptop or desktop is discouraged. Devices can be lost, stolen, or damaged, leading to data loss. Additionally, local storage often lacks sufficient backup, access control, and security measures required for research data.
+:::
+
+## TU Delft internal 
 
 ### Networked storage
 
