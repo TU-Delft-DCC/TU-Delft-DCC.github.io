@@ -6,8 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="dcterms.date" content="2025-02-28">
 
-<title>Moving data to your server</title>
+<title>Transfering data to and from a VPS</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -79,9 +80,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="../../site_libs/quarto-html/quarto-syntax-highlighting-236d90495073fb2ac8939117e3e83141.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-1c476df50887b0a836723c091ff7aeae.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../../site_libs/bootstrap/bootstrap-dark-abb5aa66359975c34294ac47c407373f.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="../../site_libs/bootstrap/bootstrap-1c476df50887b0a836723c091ff7aeae.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-bb1137f27fc16e3580b23be7515eb2b9.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-dark-dccbd2cb0e6a9a2b49cec1d3c60c6b56.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../../site_libs/bootstrap/bootstrap-bb1137f27fc16e3580b23be7515eb2b9.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script src="../../site_libs/quarto-contrib/iconify-2.1.0/iconify-icon.min.js"></script>
 <link href="../../site_libs/quarto-contrib/fontawesome6-1.2.0/all.min.css" rel="stylesheet">
 <link href="../../site_libs/quarto-contrib/fontawesome6-1.2.0/latex-fontsize.css" rel="stylesheet">
@@ -337,7 +338,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../docs/infrastructure/getting_started.html"><img src="../../docs/img/gear.svg" style="filter: invert(0.5) sepia(1) saturate(5) hue-rotate(175deg);height:1em"> <strong>Computing Infrastructure</strong></a></li><li class="breadcrumb-item"><a href="../../docs/infrastructure/intro_servers.html">Remote servers</a></li><li class="breadcrumb-item"><a href="../../docs/infrastructure/moving_data.html">Moving data to your server</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../docs/infrastructure/getting_started.html"><img src="../../docs/img/gear.svg" style="filter: invert(0.5) sepia(1) saturate(5) hue-rotate(175deg);height:1em"> <strong>Computing Infrastructure</strong></a></li><li class="breadcrumb-item"><a href="../../docs/infrastructure/remote_servers.html">Remote servers</a></li><li class="breadcrumb-item"><a href="../../docs/infrastructure/moving_data.html">Moving data to your server</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -384,7 +385,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="../../docs/infrastructure/intro_servers.html" class="sidebar-item-text sidebar-link">
+            <a href="../../docs/infrastructure/remote_servers.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Remote servers</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
@@ -557,19 +558,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../docs/data/data_storage/project_drive_request.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Request Project Drive space</span></a>
+ <span class="menu-text">Access and request space for <em>Project Data Storage</em></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../docs/data/data_storage/project_drive_mounting.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Mount Project Drive on server</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../docs/data/data_storage/sync_unison.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Sync Project Drive and SURFDrive with Unison</span></a>
+ <span class="menu-text">Mount <em>Project Drive</em> on server</span></a>
   </div>
 </li>
       </ul>
@@ -1046,10 +1041,17 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#copy-data-from-client-to-host-using-proxycommand" id="toc-copy-data-from-client-to-host-using-proxycommand" class="nav-link active" data-scroll-target="#copy-data-from-client-to-host-using-proxycommand">Copy Data from Client to Host using ProxyCommand</a></li>
-  <li><a href="#copy-data-from-host-to-client-using-proxycommand" id="toc-copy-data-from-host-to-client-using-proxycommand" class="nav-link" data-scroll-target="#copy-data-from-host-to-client-using-proxycommand">Copy Data from Host to Client using ProxyCommand</a></li>
-  <li><a href="#copy-data-using-ssh-tunneling" id="toc-copy-data-using-ssh-tunneling" class="nav-link" data-scroll-target="#copy-data-using-ssh-tunneling">Copy Data using SSH Tunneling</a></li>
-  <li><a href="#scp-with-sudo-files-from-a-remote-host-to-another-remote-host" id="toc-scp-with-sudo-files-from-a-remote-host-to-another-remote-host" class="nav-link" data-scroll-target="#scp-with-sudo-files-from-a-remote-host-to-another-remote-host">scp with sudo files from a remote host to another remote host</a></li>
+  <li><a href="#windows-servers" id="toc-windows-servers" class="nav-link active" data-scroll-target="#windows-servers">Windows Servers</a>
+  <ul class="collapse">
+  <li><a href="#transfering-files" id="toc-transfering-files" class="nav-link" data-scroll-target="#transfering-files">Transfering files</a></li>
+  <li><a href="#using-the-clipboard" id="toc-using-the-clipboard" class="nav-link" data-scroll-target="#using-the-clipboard">Using the clipboard</a></li>
+  </ul></li>
+  <li><a href="#linux-servers" id="toc-linux-servers" class="nav-link" data-scroll-target="#linux-servers">Linux Servers</a>
+  <ul class="collapse">
+  <li><a href="#transfering-data-to-the-vps" id="toc-transfering-data-to-the-vps" class="nav-link" data-scroll-target="#transfering-data-to-the-vps">Transfering data to the VPS</a></li>
+  <li><a href="#transfering-data-from-the-vps" id="toc-transfering-data-from-the-vps" class="nav-link" data-scroll-target="#transfering-data-from-the-vps">Transfering data from the VPS</a></li>
+  <li><a href="#transfering-data-with-ssh-tunneling" id="toc-transfering-data-with-ssh-tunneling" class="nav-link" data-scroll-target="#transfering-data-with-ssh-tunneling">Transfering data with SSH tunneling</a></li>
+  </ul></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/TU-Delft-DCC/TU-Delft-DCC.github.io/issues/new/choose" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div></nav>
     </div>
@@ -1057,21 +1059,32 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <main class="content" id="quarto-document-content">
 
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../docs/infrastructure/getting_started.html"><img src="../../docs/img/gear.svg" style="filter: invert(0.5) sepia(1) saturate(5) hue-rotate(175deg);height:1em"> <strong>Computing Infrastructure</strong></a></li><li class="breadcrumb-item"><a href="../../docs/infrastructure/intro_servers.html">Remote servers</a></li><li class="breadcrumb-item"><a href="../../docs/infrastructure/moving_data.html">Moving data to your server</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../docs/infrastructure/getting_started.html"><img src="../../docs/img/gear.svg" style="filter: invert(0.5) sepia(1) saturate(5) hue-rotate(175deg);height:1em"> <strong>Computing Infrastructure</strong></a></li><li class="breadcrumb-item"><a href="../../docs/infrastructure/remote_servers.html">Remote servers</a></li><li class="breadcrumb-item"><a href="../../docs/infrastructure/moving_data.html">Moving data to your server</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">Moving data to your server</h1>
-</div>
+<h1 class="title">Transfering data to and from a VPS</h1>
+  <div class="quarto-categories">
+    <div class="quarto-category">servers</div>
+    <div class="quarto-category">data</div>
+    <div class="quarto-category">infrastructure</div>
+  </div>
+  </div>
 
 
 
 <div class="quarto-title-meta">
 
     
+    <div>
+    <div class="quarto-title-meta-heading">Last reviewed</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">February 28, 2025</p>
+    </div>
+  </div>
   
     <div>
     <div class="quarto-title-meta-heading">Last modified</div>
     <div class="quarto-title-meta-contents">
-      <p class="date-modified">June 17, 2025</p>
+      <p class="date-modified">July 9, 2025</p>
     </div>
   </div>
     
@@ -1082,28 +1095,129 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 <script async="" defer="" src="https://scripts.simpleanalyticscdn.com/latest.js"></script>
-<section id="copy-data-from-client-to-host-using-proxycommand" class="level2">
-<h2 class="anchored" data-anchor-id="copy-data-from-client-to-host-using-proxycommand">Copy Data from Client to Host using ProxyCommand</h2>
-<div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> scp <span class="at">-o</span> <span class="st">"ProxyCommand ssh -W %h:%p &lt;bastion-username&gt;@linux-bastion-ex.tudelft.nl"</span> <span class="op">&lt;</span>my-local-file<span class="op">&gt;</span>  <span class="op">&lt;</span>target-username<span class="op">&gt;</span>@<span class="op">&lt;</span>target-host<span class="op">&gt;</span>:/<span class="op">&lt;</span>remote-directory<span class="op">&gt;</span>/</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>This section describes how to transfer data to and from a TU Delft managed server. The procedure is different depending on whether the server runs a Windows or Linux-based operating system. Although there are many ways to transfer data from one machine to another, TU Delft servers only support a few of them.</p>
+<section id="windows-servers" class="level1">
+<h1>Windows Servers</h1>
+<p>Tranfering data to and from a TU Delft Windows server is done via the Citrix platform, using the app’s built-in menu shown in the image below.</p>
+<div class="quarto-figure quarto-figure-left">
+<figure class="figure">
+<p><img src="../img/citrix_menu.png" class="img-fluid figure-img"></p>
+<figcaption>Citrix Menu. Buttons from left to righ: Download, Upload, Multimonitor and Clipboard and Settings.</figcaption>
+</figure>
+</div>
+<section id="transfering-files" class="level3">
+<h3 class="anchored" data-anchor-id="transfering-files">Transfering files</h3>
+<ol type="1">
+<li>Open a web browser and log into your Windows server in the usual way, using the <a href="https://weblogin.tudelft.nl/Citrix/TUDAppsWeb/">Citrix portal</a>.</li>
+<li>Open the Citrix menu located at the center-top of the server window and click on the <em>Upload</em> or <em>Download</em> button as shown in the image above.</li>
+<li>A pop-up window will open on which you can select the files you wish to transfer to the server.</li>
+</ol>
+<p>It is not possible to directly transfer files to or from the server’s C: or D: drive. Instead, you upload or download files to your personal TU Delft drive which is connected to the server. Using the Windows File Explorer and standard copy-paste or drag-and-drop operations you can transfer the data from your personal drive to the server’s C: or D: drives.</p>
+<div class="callout callout-style-simple callout-warning no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<i class="fa-solid fa-info-circle" aria-label="info-circle"></i> Warning
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>TU Delft Windows servers have a limited amount of disk space in the C: drive. ICT instructs users to install applications and store data in the D: drive of the server to avoid running out of memory. Alternatively, you can use your personal TU Delft drive, which is also connected to the server. More information can be found at the bottom of the <a href="https://tudelft.topdesk.net/tas/public/ssp/content/serviceflow?unid=418c986f186d4934848dc2712039ed34&amp;openedFromService=true">TOPdesk form</a> to request a new VPS.</p>
+</div>
+</div>
 </section>
-<section id="copy-data-from-host-to-client-using-proxycommand" class="level2">
-<h2 class="anchored" data-anchor-id="copy-data-from-host-to-client-using-proxycommand">Copy Data from Host to Client using ProxyCommand</h2>
-<div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> scp <span class="at">-o</span> <span class="st">"ProxyCommand ssh -W %h:%p &lt;bastion-username&gt;@linux-bastion-ex.tudelft.nl"</span> <span class="op">&lt;</span>target-username<span class="op">&gt;</span>@<span class="op">&lt;</span>target-host<span class="op">&gt;</span>:/tmp/<span class="op">&lt;</span>my-remote-file<span class="op">&gt;</span> /<span class="op">&lt;</span>my-local-directory<span class="op">&gt;</span>/</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<section id="using-the-clipboard" class="level3">
+<h3 class="anchored" data-anchor-id="using-the-clipboard">Using the clipboard</h3>
+<p>TU Delft Windows servers do not allow to directly copy or paste text from the clipboard. Instead, you must use Citrix’s clipboard functionality. To do so, open the Citrix’s menu located at the center-top of the window and click on the <em>Clipboard</em> button. A pop-up window will open on which you can copy or paste the text you wish to transfer. Note that it is only possible to transfer text via the clipboard; images or files are not supported.</p>
 </section>
-<section id="copy-data-using-ssh-tunneling" class="level2">
-<h2 class="anchored" data-anchor-id="copy-data-using-ssh-tunneling">Copy Data using SSH Tunneling</h2>
-<p>If a default <a href="../../docs/infrastructure/VPS_SSH.html">ssh tunneling</a> was configured correctly. Data can be copied to and from a remote host as follows:</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Copy TO Remote Host</span></span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> scp <span class="op">&lt;</span>my-local-file<span class="op">&gt;</span> <span class="op">&lt;</span>host-nickname<span class="op">&gt;</span>:/<span class="op">&lt;</span>remote-directory<span class="op">&gt;</span>/</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="sourceCode" id="cb4"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Copy FROM Remote Host</span></span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> scp <span class="op">&lt;</span>host-nickname<span class="op">&gt;</span>:/<span class="op">&lt;</span>my-remote-file<span class="op">&gt;</span> /<span class="op">&lt;</span>my-local-directory<span class="op">&gt;</span>/ </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
-<section id="scp-with-sudo-files-from-a-remote-host-to-another-remote-host" class="level2">
-<h2 class="anchored" data-anchor-id="scp-with-sudo-files-from-a-remote-host-to-another-remote-host">scp with sudo files from a remote host to another remote host</h2>
-<p>“-C /tmp/a” can be used when you wanted to “cd /tmp/a”</p>
-<div class="sourceCode" id="cb5"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ssh</span> source.tudelft.nl sudo tar cf <span class="at">-</span> <span class="at">-C</span> /tmp/a . <span class="kw">|</span> <span class="fu">ssh</span> target.tudelft.nl  sudo tar xvf <span class="at">-</span> <span class="at">-C</span> /tmp/b/</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<section id="linux-servers" class="level1">
+<h1>Linux Servers</h1>
+<p>To connect to a Linux VPS, TU Delft uses a proxy server know as bastion. Unless <strong>SSH tunneling</strong> is configured, to transfer data from your local computer to the Linux VPS, you must first transfer the data to bastion, and from there transfer it to your VPS. The same applies when transfering data from the VPS to your local computer.</p>
+<p>Data transfer is done with the <code>scp</code> command:</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">scp</span> <span class="op">&lt;</span>options<span class="op">&gt;</span> <span class="op">&lt;</span>data-source<span class="op">&gt;</span> <span class="op">&lt;</span>data-destination<span class="op">&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="callout callout-style-simple callout-warning no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<i class="fa-solid fa-info-circle" aria-label="info-circle"></i> Warning
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>The bastion is solely intended for connecting to a VPS and storing SSH keys. It is not designed for storing large amounts of data. Therefore, user home directories have limited storage capacity. Don’t forget to delete the files you transfer to or from your VPS.</p>
+</div>
+</div>
+<section id="transfering-data-to-the-vps" class="level2">
+<h2 class="anchored" data-anchor-id="transfering-data-to-the-vps">Transfering data to the VPS</h2>
+<p>To copy a file from your local computer to your Linux VPS:</p>
+<ol type="1">
+<li><p>If your local computer is running on Linux or MacOS, open the terminal. Alternatively, if it runs on Windows, open the Windows PowerShell by seaching for it in the start menu.</p></li>
+<li><p>Copy your local file to the bastion by executing the command:</p></li>
+</ol>
+<div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">scp</span> <span class="op">&lt;</span>path-to-local-file<span class="op">&gt;</span> <span class="op">&lt;</span>netid<span class="op">&gt;</span>@linux-bastion-ex.tudelft.nl:/<span class="op">&lt;</span>bastion-directory<span class="op">&gt;</span>/</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="co"># For example:</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="co"># scp C:/Users/janedoe/Desktop/file.zip janedoe@linux-bastion-ex.tudelft.nl:/home/janedoe/Documents/</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<ol start="3" type="1">
+<li>Login to the bastion (you need to be connected to eduVPN if working off-campus):</li>
+</ol>
+<div class="sourceCode" id="cb3"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ssh</span> <span class="op">&lt;</span>netid<span class="op">&gt;</span>@linux-bastion-ex.tudelft.nl</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<ol start="4" type="1">
+<li>Copy the file from the bastion to your Linux VPS. Note that an SSH key is required to access the VPS.</li>
+</ol>
+<div class="sourceCode" id="cb4"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">scp</span> <span class="at">-i</span> ~/.ssh/<span class="op">&lt;</span>your-ssh-key<span class="op">&gt;</span> <span class="op">&lt;</span>path-to-bastion-file<span class="op">&gt;</span> <span class="op">&lt;</span>username<span class="op">&gt;</span>@<span class="op">&lt;</span>server-name<span class="op">&gt;</span>.tudelft.nl:/<span class="op">&lt;</span>vps-directory<span class="op">&gt;</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="co"># For example:</span></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="co"># scp -i ~/.ssh/id_rsa /home/janedoe/Documents/file.zip janedoevps.ict.tudelft.nl:/home/janedoe/</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<ol start="5" type="1">
+<li>Delete the file on the bastion and logout:</li>
+</ol>
+<div class="sourceCode" id="cb5"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">rm</span> <span class="op">&lt;</span>path-to-bastion-file<span class="op">&gt;</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="bu">logout</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="transfering-data-from-the-vps" class="level2">
+<h2 class="anchored" data-anchor-id="transfering-data-from-the-vps">Transfering data from the VPS</h2>
+<p>To copy a file from your Linux VPS to your local computer:</p>
+<ol type="1">
+<li><p>If your local computer is running on Linux or MacOS, open the terminal. Alternatively, if it runs on Windows, open the PowerShell by seaching for it in the start menu.</p></li>
+<li><p>Login to the bastion (you need to be connected to eduVPN if working off-campus):</p></li>
+</ol>
+<div class="sourceCode" id="cb6"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ssh</span> <span class="op">&lt;</span>netid<span class="op">&gt;</span>@linux-bastion-ex.tudelft.nl</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<ol start="3" type="1">
+<li>Copy the file from your Linux VPS to the bastion. Note that an SSH key is required to access the VPS. Logout of the bastion.</li>
+</ol>
+<div class="sourceCode" id="cb7"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">scp</span> <span class="at">-i</span> ~/.ssh/<span class="op">&lt;</span>your-ssh-key<span class="op">&gt;</span> <span class="op">&lt;</span>username<span class="op">&gt;</span>@<span class="op">&lt;</span>server-name<span class="op">&gt;</span>.tudelft.nl:/<span class="op">&lt;</span>path-to-vps-file<span class="op">&gt;</span> <span class="op">&lt;</span>bastion-directory<span class="op">&gt;</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="bu">logout</span></span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a><span class="co"># For example:</span></span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a><span class="co"># scp -i ~/.ssh/id_rsa janedoe@janedoevps.ict.tudelft.nl:/home/janedoe/Documents/file.zip /home/janedoe/ </span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<ol start="4" type="1">
+<li>Copy the file from the bastion to your local computer:</li>
+</ol>
+<div class="sourceCode" id="cb8"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu">scp</span> <span class="op">&lt;</span>netid<span class="op">&gt;</span>@linux-bastion-ex.tudelft.nl:/<span class="op">&lt;</span>path-to-bastion-file<span class="op">&gt;</span> <span class="op">&lt;</span>local-path<span class="op">&gt;</span></span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a><span class="co"># For example:</span></span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a><span class="co"># scp janedoe@linux-bastion-ex.tudelft.nl:/home/janedoe/file.zip C:/Users/janedoe/Desktop/</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<ol start="5" type="1">
+<li>Login to the bastion, delete the file and logout.</li>
+</ol>
+<div class="sourceCode" id="cb9"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ssh</span> <span class="op">&lt;</span>netid<span class="op">&gt;</span>@linux-bastion-ex.tudelft.nl</span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="fu">rm</span> <span class="op">&lt;</span>path-to-bastion-file<span class="op">&gt;</span></span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a><span class="bu">logout</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="transfering-data-with-ssh-tunneling" class="level2">
+<h2 class="anchored" data-anchor-id="transfering-data-with-ssh-tunneling">Transfering data with SSH tunneling</h2>
+<p>When SSH tunneling is configured, data can be transferred directly between your local computer and the Linux VPS, without needing to temporarily store it on the bastion.</p>
+<div class="sourceCode" id="cb10"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Copy file TO Remote Host</span></span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> scp <span class="op">&lt;</span>path-to-local-file<span class="op">&gt;</span> <span class="op">&lt;</span>host-name<span class="op">&gt;</span>:/<span class="op">&lt;</span>remote-directory<span class="op">&gt;</span>/</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb11"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Copy file FROM Remote Host</span></span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> scp <span class="op">&lt;</span>host-name<span class="op">&gt;</span>:/<span class="op">&lt;</span>path-to-remote-file<span class="op">&gt;</span> /<span class="op">&lt;</span>local-directory<span class="op">&gt;</span>/ </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->

@@ -6,6 +6,7 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="dcterms.date" content="2025-06-23">
 
 <title>Data storage</title>
 <style>
@@ -44,9 +45,9 @@ ul.task-list li input[type="checkbox"] {
 <link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-236d90495073fb2ac8939117e3e83141.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../../site_libs/bootstrap/bootstrap-1c476df50887b0a836723c091ff7aeae.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../../../site_libs/bootstrap/bootstrap-dark-abb5aa66359975c34294ac47c407373f.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="../../../site_libs/bootstrap/bootstrap-1c476df50887b0a836723c091ff7aeae.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="../../../site_libs/bootstrap/bootstrap-bb1137f27fc16e3580b23be7515eb2b9.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../../site_libs/bootstrap/bootstrap-dark-dccbd2cb0e6a9a2b49cec1d3c60c6b56.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../../../site_libs/bootstrap/bootstrap-bb1137f27fc16e3580b23be7515eb2b9.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script src="../../../site_libs/quarto-contrib/iconify-2.1.0/iconify-icon.min.js"></script>
 <link href="../../../site_libs/quarto-contrib/fontawesome6-1.2.0/all.min.css" rel="stylesheet">
 <link href="../../../site_libs/quarto-contrib/fontawesome6-1.2.0/latex-fontsize.css" rel="stylesheet">
@@ -349,7 +350,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="../../../docs/infrastructure/intro_servers.html" class="sidebar-item-text sidebar-link">
+            <a href="../../../docs/infrastructure/remote_servers.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Remote servers</span></a>
           <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
@@ -522,19 +523,13 @@ ul.task-list li input[type="checkbox"] {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../../docs/data/data_storage/project_drive_request.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Request Project Drive space</span></a>
+ <span class="menu-text">Access and request space for <em>Project Data Storage</em></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../../docs/data/data_storage/project_drive_mounting.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Mount Project Drive on server</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../../docs/data/data_storage/sync_unison.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Sync Project Drive and SURFDrive with Unison</span></a>
+ <span class="menu-text">Mount <em>Project Drive</em> on server</span></a>
   </div>
 </li>
       </ul>
@@ -1016,18 +1011,28 @@ ul.task-list li input[type="checkbox"] {
 <header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../../docs/data/getting_started.html"><img src="../../../docs/img/folder-regular.svg" style="filter: invert(0.5) sepia(1) saturate(5) hue-rotate(175deg);height:1em"> <strong>Data Management</strong></a></li><li class="breadcrumb-item"><a href="../../../docs/data/data_storage/storage.html">Storage</a></li></ol></nav>
 <div class="quarto-title">
 <h1 class="title">Data storage</h1>
-</div>
+  <div class="quarto-categories">
+    <div class="quarto-category">data</div>
+    <div class="quarto-category">storage</div>
+  </div>
+  </div>
 
 
 
 <div class="quarto-title-meta">
 
     
+    <div>
+    <div class="quarto-title-meta-heading">Last reviewed</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">June 23, 2025</p>
+    </div>
+  </div>
   
     <div>
     <div class="quarto-title-meta-heading">Last modified</div>
     <div class="quarto-title-meta-contents">
-      <p class="date-modified">June 17, 2025</p>
+      <p class="date-modified">July 9, 2025</p>
     </div>
   </div>
     
@@ -1038,38 +1043,35 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<script async="" defer="" src="https://scripts.simpleanalyticscdn.com/latest.js"></script><p>Under construction! 🏗️</p>
-<!--
-- Introduction
-- TU Delft storage finder
-
--->
+<script async="" defer="" src="https://scripts.simpleanalyticscdn.com/latest.js"></script><p>In the context of research data management, “Data Storage” refers to securely housing research data on various digital media or infrastructure, having it readily accessible for <em>ongoing work</em>, analysis, and collaboration throughout the <em>active</em> phase of a research project. It involves the systems and practices used to maintain the availability, integrity, and accessibility of data while it is actively being used, processed, or shared by the research team. This includes both <em>local</em> and <em>networked</em> solutions, serving as the persistent layer for active research operations involving collaborators <em>internal</em> to TU Delft, or <em>external</em>.</p>
+<p>Data storage, rather than being confined to a single step, functions as a persistent foundation, supporting activities from initial data acquisition through active analysis. As a researcher, you may frequently move between phases, such as returning to data collection after initial analysis reveals gaps, or refining processing methods based on analytical outcomes. This interconnected and iterative nature is crucial for effective research data management, as it means that planning for later stages, like archiving and publishing, must occur early, and ongoing management activities, such as storage and security, are not isolated tasks but integral to every step of active research.</p>
+<p>This section details the recommended storage solutions available to TU Delft researchers, emphasizing institutional and national (Dutch/European) services and providing guidance on their appropriate use. It also highlights the importance of data security, sharing, and backup as essential components of effective data storage practices.</p>
 <div class="content-block">
 <div class="features">
 <section id="storage-options" class="level3 feature">
 <h3 class="anchored" data-anchor-id="storage-options"><i class="fa-solid fa-warehouse" aria-label="warehouse"></i> Storage options</h3>
-<p>Coming soon! ⏳</p>
+<p>Local and networked, institutional and national.</p>
 <div class="learn-more">
 <p><a href="../../../docs/data/data_storage/storage_options.html">Learn more »</a></p>
 </div>
 </section>
 <section id="data-security" class="level3 feature">
 <h3 class="anchored" data-anchor-id="data-security"><i class="fa-solid fa-vault" aria-label="vault"></i> Data security</h3>
-<p>Coming soon! ⏳</p>
+<p>Ensuring confidentiality, integrity, and availability.</p>
 <div class="learn-more">
 <p><a href="../../../docs/data/data_storage/security.html">Learn more »</a></p>
 </div>
 </section>
 <section id="data-sharing" class="level3 feature">
 <h3 class="anchored" data-anchor-id="data-sharing"><i class="fa-solid fa-arrow-up-from-bracket" aria-label="arrow-up-from-bracket"></i> Data sharing</h3>
-<p>Coming soon! ⏳</p>
+<p>Making active data available to internal and/or external collaborators.</p>
 <div class="learn-more">
 <p><a href="../../../docs/data/data_storage/sharing.html">Learn more »</a></p>
 </div>
 </section>
 <section id="data-backup" class="level3 feature">
 <h3 class="anchored" data-anchor-id="data-backup"><i class="fa-solid fa-hard-drive" aria-label="hard-drive"></i> Data backup</h3>
-<p>Coming soon! ⏳</p>
+<p>Strategies to prevent data loss.</p>
 <div class="learn-more">
 <p><a href="../../../docs/data/data_storage/backup.html">Learn more »</a></p>
 </div>

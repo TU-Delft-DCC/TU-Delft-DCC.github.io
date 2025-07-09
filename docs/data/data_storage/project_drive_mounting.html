@@ -6,6 +6,7 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="dcterms.date" content="2025-07-04">
 
 <title>Mount Project Drive on server</title>
 <style>
@@ -65,7 +66,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../../../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../../../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../../../">
-<link href="../../../docs/data/data_storage/sync_unison.html" rel="next">
+<link href="../../../docs/data/data_storage/security.html" rel="next">
 <link href="../../../docs/data/data_storage/project_drive_request.html" rel="prev">
 <link href="../../../docs/img/cone.png" rel="icon" type="image/png">
 <script src="../../../site_libs/quarto-html/quarto.js" type="module"></script>
@@ -79,9 +80,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-236d90495073fb2ac8939117e3e83141.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../../site_libs/bootstrap/bootstrap-1c476df50887b0a836723c091ff7aeae.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../../../site_libs/bootstrap/bootstrap-dark-abb5aa66359975c34294ac47c407373f.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="../../../site_libs/bootstrap/bootstrap-1c476df50887b0a836723c091ff7aeae.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="../../../site_libs/bootstrap/bootstrap-bb1137f27fc16e3580b23be7515eb2b9.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../../site_libs/bootstrap/bootstrap-dark-dccbd2cb0e6a9a2b49cec1d3c60c6b56.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../../../site_libs/bootstrap/bootstrap-bb1137f27fc16e3580b23be7515eb2b9.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script src="../../../site_libs/quarto-contrib/iconify-2.1.0/iconify-icon.min.js"></script>
 <link href="../../../site_libs/quarto-contrib/fontawesome6-1.2.0/all.min.css" rel="stylesheet">
 <link href="../../../site_libs/quarto-contrib/fontawesome6-1.2.0/latex-fontsize.css" rel="stylesheet">
@@ -337,7 +338,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../../docs/data/getting_started.html"><img src="../../../docs/img/folder-regular.svg" style="filter: invert(0.5) sepia(1) saturate(5) hue-rotate(175deg);height:1em"> <strong>Data Management</strong></a></li><li class="breadcrumb-item"><a href="../../../docs/data/data_storage/storage.html">Storage</a></li><li class="breadcrumb-item"><a href="../../../docs/data/data_storage/storage_options.html">Storage options</a></li><li class="breadcrumb-item"><a href="../../../docs/data/data_storage/project_drive_mounting.html">Mount Project Drive on server</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../../docs/data/getting_started.html"><img src="../../../docs/img/folder-regular.svg" style="filter: invert(0.5) sepia(1) saturate(5) hue-rotate(175deg);height:1em"> <strong>Data Management</strong></a></li><li class="breadcrumb-item"><a href="../../../docs/data/data_storage/storage.html">Storage</a></li><li class="breadcrumb-item"><a href="../../../docs/data/data_storage/storage_options.html">Storage options</a></li><li class="breadcrumb-item"><a href="../../../docs/data/data_storage/project_drive_mounting.html">Mount <em>Project Drive</em> on server</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -384,7 +385,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="../../../docs/infrastructure/intro_servers.html" class="sidebar-item-text sidebar-link">
+            <a href="../../../docs/infrastructure/remote_servers.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Remote servers</span></a>
           <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
@@ -557,19 +558,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../../docs/data/data_storage/project_drive_request.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Request Project Drive space</span></a>
+ <span class="menu-text">Access and request space for <em>Project Data Storage</em></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../../docs/data/data_storage/project_drive_mounting.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text">Mount Project Drive on server</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../../docs/data/data_storage/sync_unison.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Sync Project Drive and SURFDrive with Unison</span></a>
+ <span class="menu-text">Mount <em>Project Drive</em> on server</span></a>
   </div>
 </li>
       </ul>
@@ -1046,17 +1041,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#what-this-documentation-will-help-achieve" id="toc-what-this-documentation-will-help-achieve" class="nav-link active" data-scroll-target="#what-this-documentation-will-help-achieve">What this documentation will help achieve</a></li>
-  <li><a href="#prerequisites" id="toc-prerequisites" class="nav-link" data-scroll-target="#prerequisites">Prerequisites</a></li>
-  <li><a href="#steps" id="toc-steps" class="nav-link" data-scroll-target="#steps">Steps</a>
-  <ul class="collapse">
-  <li><a href="#step-1.-locate-the-url-of-your-project-storage" id="toc-step-1.-locate-the-url-of-your-project-storage" class="nav-link" data-scroll-target="#step-1.-locate-the-url-of-your-project-storage">Step 1. Locate the URL of your project storage</a></li>
-  <li><a href="#step-2.-connect-to-your-tu-delft-vps-via-ssh" id="toc-step-2.-connect-to-your-tu-delft-vps-via-ssh" class="nav-link" data-scroll-target="#step-2.-connect-to-your-tu-delft-vps-via-ssh">Step 2. Connect to your TU Delft VPS via SSH</a></li>
-  <li><a href="#step-3.-create-a-new-directory-as-the-mounting-point" id="toc-step-3.-create-a-new-directory-as-the-mounting-point" class="nav-link" data-scroll-target="#step-3.-create-a-new-directory-as-the-mounting-point">Step 3. Create a new directory as the mounting point</a></li>
-  <li><a href="#step-4.-find-and-save-your-user-and-group-details" id="toc-step-4.-find-and-save-your-user-and-group-details" class="nav-link" data-scroll-target="#step-4.-find-and-save-your-user-and-group-details">Step 4. Find and save your user and group details</a></li>
-  <li><a href="#step-5.-edit-the-fstab-file-to-include-project-storage-technical-details" id="toc-step-5.-edit-the-fstab-file-to-include-project-storage-technical-details" class="nav-link" data-scroll-target="#step-5.-edit-the-fstab-file-to-include-project-storage-technical-details">Step 5. Edit the fstab file to include project storage technical details</a></li>
-  <li><a href="#step-6.-mount-the-project-drive" id="toc-step-6.-mount-the-project-drive" class="nav-link" data-scroll-target="#step-6.-mount-the-project-drive">Step 6. Mount the project drive</a></li>
-  </ul></li>
+  <li><a href="#prerequisites" id="toc-prerequisites" class="nav-link active" data-scroll-target="#prerequisites">Prerequisites</a></li>
+  <li><a href="#steps" id="toc-steps" class="nav-link" data-scroll-target="#steps">Steps</a></li>
   <li><a href="#notes-and-next-steps" id="toc-notes-and-next-steps" class="nav-link" data-scroll-target="#notes-and-next-steps">Notes and next steps</a></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/TU-Delft-DCC/TU-Delft-DCC.github.io/issues/new/choose" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div></nav>
@@ -1065,21 +1051,31 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <main class="content" id="quarto-document-content">
 
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../../docs/data/getting_started.html"><img src="../../../docs/img/folder-regular.svg" style="filter: invert(0.5) sepia(1) saturate(5) hue-rotate(175deg);height:1em"> <strong>Data Management</strong></a></li><li class="breadcrumb-item"><a href="../../../docs/data/data_storage/storage.html">Storage</a></li><li class="breadcrumb-item"><a href="../../../docs/data/data_storage/storage_options.html">Storage options</a></li><li class="breadcrumb-item"><a href="../../../docs/data/data_storage/project_drive_mounting.html">Mount Project Drive on server</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../../docs/data/getting_started.html"><img src="../../../docs/img/folder-regular.svg" style="filter: invert(0.5) sepia(1) saturate(5) hue-rotate(175deg);height:1em"> <strong>Data Management</strong></a></li><li class="breadcrumb-item"><a href="../../../docs/data/data_storage/storage.html">Storage</a></li><li class="breadcrumb-item"><a href="../../../docs/data/data_storage/storage_options.html">Storage options</a></li><li class="breadcrumb-item"><a href="../../../docs/data/data_storage/project_drive_mounting.html">Mount <em>Project Drive</em> on server</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">Mount Project Drive on server</h1>
-</div>
+<h1 class="title">Mount <em>Project Drive</em> on server</h1>
+  <div class="quarto-categories">
+    <div class="quarto-category">Project Data Storage</div>
+    <div class="quarto-category">vps</div>
+  </div>
+  </div>
 
 
 
 <div class="quarto-title-meta">
 
     
+    <div>
+    <div class="quarto-title-meta-heading">Last reviewed</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">July 4, 2025</p>
+    </div>
+  </div>
   
     <div>
     <div class="quarto-title-meta-heading">Last modified</div>
     <div class="quarto-title-meta-contents">
-      <p class="date-modified">June 17, 2025</p>
+      <p class="date-modified">July 7, 2025</p>
     </div>
   </div>
     
@@ -1090,53 +1086,54 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 <script async="" defer="" src="https://scripts.simpleanalyticscdn.com/latest.js"></script>
-<section id="what-this-documentation-will-help-achieve" class="level2">
-<h2 class="anchored" data-anchor-id="what-this-documentation-will-help-achieve">What this documentation will help achieve</h2>
-<p>Project drive storage from TU Delft ICT can be mounted and made accessible in your (TU Delft) Virtual Private Server.</p>
-</section>
-<section id="prerequisites" class="level2">
-<h2 class="anchored" data-anchor-id="prerequisites">Prerequisites</h2>
+<p><em>Project drive</em> storage can be mounted and made accessible in your TU Delft Virtual Private Server (VPS).</p>
+<section id="prerequisites" class="level3">
+<h3 class="anchored" data-anchor-id="prerequisites">Prerequisites</h3>
 <ul>
-<li>A (TU Delft) <a href="../../../docs/infrastructure/VPS_request.html">Virtual Private Server</a></li>
-<li>A (TU Delft) <a href="../../../docs/data/data_storage/project_drive_request.html">Project Drive</a></li>
+<li>A TU Delft <a href="../../../docs/infrastructure/VPS_request.html">VPS</a></li>
+<li>A TU Delft <a href="../../../docs/data/data_storage/project_drive_request.html"><em>Project Data Storage</em> drive</a></li>
 </ul>
 </section>
-<section id="steps" class="level2">
-<h2 class="anchored" data-anchor-id="steps">Steps</h2>
+<section id="steps" class="level3">
+<h3 class="anchored" data-anchor-id="steps">Steps</h3>
 <ol type="1">
-<li>Locate the URL of your project storage</li>
-<li>Connect to your TU Delft VPS via SSH</li>
-<li>Create a new directory as a mounting point</li>
-<li>Retrieve your Linux user and group details</li>
-<li>Edit the fstab file to include project storage technical details</li>
-<li>Mount the project drive</li>
+<li>Locate the URL of your project storage.</li>
+<li>Connect to your TU Delft VPS via SSH.</li>
+<li>Create a new directory as a mounting point.</li>
+<li>Retrieve your Linux user and group details.</li>
+<li>Edit the fstab file to include project storage technical details.</li>
+<li>Mount the project drive.</li>
 </ol>
-<section id="step-1.-locate-the-url-of-your-project-storage" class="level3">
-<h3 class="anchored" data-anchor-id="step-1.-locate-the-url-of-your-project-storage">Step 1. Locate the URL of your project storage</h3>
-<p>The URL for your project drive can be obtained from either - the email from TU Delft ICT with the confirmation of your project drive request, or - by using a web browser to navigate into https://webdata.tudelft.nl/</p>
-<div class="callout callout-style-default callout-note callout-titled">
+<section id="step-1.-locate-the-url-of-your-project-storage" class="level4">
+<h4 class="anchored" data-anchor-id="step-1.-locate-the-url-of-your-project-storage"><strong>Step 1. Locate the URL of your project storage</strong></h4>
+<p>The URL for your project drive can be obtained from either:</p>
+<ul>
+<li>the email from TU Delft ICT with the confirmation of your project drive request, or</li>
+<li>by using a web browser to navigate into https://webdata.tudelft.nl/</li>
+</ul>
+<div class="callout callout-style-simple callout-note no-icon callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
-<i class="callout-icon"></i>
+<i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Note
+<i class="fa-solid fa-info-circle" aria-label="info-circle"></i> Note
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>https://webdata.tudelft.nl/ can only be accessed in campus or using eduVPN</p>
+<p>https://webdata.tudelft.nl/ can only be accessed on campus or using eduVPN</p>
 </div>
 </div>
 <div class="tabset-margin-container"></div><div class="panel-tabset">
-<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true">chrome</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false">edge</a></li></ul>
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true">Chrome/Brave/Firefox/Vivaldi/Safari</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false">Edge</a></li></ul>
 <div class="tab-content">
 <div id="tabset-1-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-1-1-tab">
 <ol type="1">
 <li>Navigate into https://webdata.tudelft.nl/staff-umbrella/<br>
 </li>
-<li>A pop-up should appear asking for Username and Password.<br>
+<li>A pop-up should appear asking for your username and password.<br>
 </li>
-<li>Provide your netID in the Username field, provide your password accordingly.<br>
+<li>Provide your NetID in the username field, provide your password accordingly.<br>
 </li>
 <li>You should now see a list of your project drives.<br>
 </li>
@@ -1146,35 +1143,35 @@ Note
 </ol>
 </div>
 <div id="tabset-1-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-2-tab">
-<p>Content within webdata is under password protection. Typing your username and password in only possible with a pop-up message which is disabled in systems managed by TU Delft, please try the instructions provided for chrome</p>
+<p>Content within <em>webdata</em> is under password protection. Typing your username and password is only possible with a pop-up message which is disabled in an Edge browser on systems managed by TU Delft.</p>
 </div>
 </div>
 </div>
 </section>
-<section id="step-2.-connect-to-your-tu-delft-vps-via-ssh" class="level3">
-<h3 class="anchored" data-anchor-id="step-2.-connect-to-your-tu-delft-vps-via-ssh">Step 2. Connect to your TU Delft VPS via SSH</h3>
-<p>Follow instructions in TU Delft ICT email from initial server setup or <a href="../../../docs/infrastructure/VPS_SSH.html">configure a 1-step connection via SSH</a>.</p>
+<section id="step-2.-connect-to-your-tu-delft-vps-via-ssh" class="level4">
+<h4 class="anchored" data-anchor-id="step-2.-connect-to-your-tu-delft-vps-via-ssh"><strong>Step 2. Connect to your TU Delft VPS via SSH</strong></h4>
+<p>Follow instructions in the TU Delft ICT email from initial server setup or follow our guide to <a href="../../../docs/infrastructure/VPS_SSH.html">configure via SSH</a>.</p>
 </section>
-<section id="step-3.-create-a-new-directory-as-the-mounting-point" class="level3">
-<h3 class="anchored" data-anchor-id="step-3.-create-a-new-directory-as-the-mounting-point">Step 3. Create a new directory as the mounting point</h3>
-<p>The convention is to create mounting points in the folder <code>/media</code>. Navigate to the folder and create a new folder with</p>
+<section id="step-3.-create-a-new-directory-as-the-mounting-point" class="level4">
+<h4 class="anchored" data-anchor-id="step-3.-create-a-new-directory-as-the-mounting-point"><strong>Step 3. Create a new directory as the mounting point</strong></h4>
+<p>The convention is to create mounting points in the folder <code>/media</code>. Navigate to the directory and create a new folder with:</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> /media</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">mkdir</span> <span class="op">&lt;</span>server_mount_point<span class="op">&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>Replace <code>&lt;server_mount_point&gt;</code> with the name of your choice. This will be the name of the folder where your project drive will be mounted.</p>
 </section>
-<section id="step-4.-find-and-save-your-user-and-group-details" class="level3">
-<h3 class="anchored" data-anchor-id="step-4.-find-and-save-your-user-and-group-details">Step 4. Find and save your user and group details</h3>
+<section id="step-4.-find-and-save-your-user-and-group-details" class="level4">
+<h4 class="anchored" data-anchor-id="step-4.-find-and-save-your-user-and-group-details"><strong>Step 4. Find and save your user and group details</strong></h4>
 <p>In the terminal, you can retrieve your local user and group details with:</p>
 <div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">id</span> <span class="at">-u</span> <span class="op">&lt;</span>your_netID<span class="op">&gt;</span> <span class="co"># User ID</span></span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="fu">id</span> <span class="at">-g</span> <span class="op">&lt;</span>your_netID<span class="op">&gt;</span> <span class="co"># Group ID</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>You may need the values for <code>uid</code> and <code>gid</code> for step 5.</p>
-<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout callout-style-simple callout-note no-icon callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
-<i class="callout-icon"></i>
+<i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Note
+<i class="fa-solid fa-info-circle" aria-label="info-circle"></i> Note
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -1182,34 +1179,40 @@ Note
 </div>
 </div>
 </section>
-<section id="step-5.-edit-the-fstab-file-to-include-project-storage-technical-details" class="level3">
-<h3 class="anchored" data-anchor-id="step-5.-edit-the-fstab-file-to-include-project-storage-technical-details">Step 5. Edit the fstab file to include project storage technical details</h3>
-<p>The fstab file containes a list of the addresses of external file systems. In this file, the details of your project drive will need to be added in a single line. This line consists of four parts: 1. <em>filesystem</em> - the address of the project drive 2. <em>mount point</em> - the location in the VPS where you want to mount the project drive 3. <em>type</em> - the type of the filesystem 4. <em>options</em> - additional option such as user privileges</p>
-<p>The fstab file must be in the <code>/etc/</code> directory and can be opened with the <code>vi</code> or <code>nano</code> editor:</p>
+<section id="step-5.-edit-the-fstab-file-to-include-project-storage-technical-details" class="level4">
+<h4 class="anchored" data-anchor-id="step-5.-edit-the-fstab-file-to-include-project-storage-technical-details"><strong>Step 5. Edit the <code>fstab</code> file to include project storage technical details</strong></h4>
+<p>The <code>fstab</code> file contains a list of the addresses of external file systems. In this file, the details of your project drive will need to be added in a single line. This line consists of four parts:</p>
+<ol type="1">
+<li><em>filesystem</em> - the address of the project drive</li>
+<li><em>mount point</em> - the location in the VPS where you want to mount the project drive</li>
+<li><em>type</em> - the type of the filesystem</li>
+<li><em>options</em> - additional option such as user privileges</li>
+</ol>
+<p>The <code>fstab</code> file must be in the <code>/etc/</code> directory and can be opened with the <code>vi</code> or <code>nano</code> editor:</p>
 <div class="tabset-margin-container"></div><div class="panel-tabset">
 <ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-2-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-1" role="tab" aria-controls="tabset-2-1" aria-selected="true">vi</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-2-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-2" role="tab" aria-controls="tabset-2-2" aria-selected="false">nano</a></li></ul>
 <div class="tab-content">
 <div id="tabset-2-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-2-1-tab">
-<p>In the terminal, enter the following command to open the fstab file in the vi editor:<br>
-<code>sudo vi /etc/fstab</code><br>
-Then, switch to the insert mode (hit “i” to switch to insert mode and be able to type)</p>
+<p>In the terminal, enter the following command to open the fstab file in the <code>vi</code> editor:</p>
+<p><code>sudo vi /etc/fstab</code></p>
+<p>Then, switch to the insert mode (hit “i” to switch to insert mode and be able to type)</p>
 </div>
 <div id="tabset-2-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-2-2-tab">
-<p>In the terminal, enter the following command to open the fstab file in the nano editor:<br>
-<code>sudo nano /etc/fstab</code></p>
+<p>In the terminal, enter the following command to open the fstab file in the nano editor:</p>
+<p><code>sudo nano /etc/fstab</code></p>
 </div>
 </div>
 </div>
 <p>Add the following line to the file:</p>
 <div class="sourceCode" id="cb3"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="op">&lt;</span>your_netID<span class="op">&gt;</span>@sftp.tudelft.nl:/staff-umbrella/<span class="op">&lt;</span>project_drive_name<span class="op">&gt;</span>  /media/<span class="op">&lt;</span>server_mount_point<span class="op">&gt;</span> fuse.sshfs  <span class="ex">rw,noauto,users,_netdev</span>  0  0</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>replacing the values between <code>&lt;</code> and <code>&gt;</code> with your NetID, the name of your project drive, and the name of the folder you created in step 3.</p>
-<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout callout-style-simple callout-note no-icon callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
-<i class="callout-icon"></i>
+<i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Note
+<i class="fa-solid fa-info-circle" aria-label="info-circle"></i> Note
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -1226,29 +1229,29 @@ Note
 <p>Use <code>Control</code>+<code>C</code> followed by <code>:wq</code> to save the file and close it to get back to your terminal.</p>
 </div>
 <div id="tabset-3-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-3-2-tab">
-<p>As indicated by the nano interface, use <code>Control</code>+<code>O</code> to write the file. Then, confirm your choice of filename by hitting <code>enter</code>. Finally, exit the file with <code>Control</code>+<code>X</code></p>
+<p>As indicated by the nano interface, use <code>Control</code>+<code>O</code> to write out the file. Then, confirm your choice of filename by hitting <code>Enter</code>. Finally, exit the file with <code>Control</code>+<code>X</code></p>
 </div>
 </div>
 </div>
 </section>
-<section id="step-6.-mount-the-project-drive" class="level3">
-<h3 class="anchored" data-anchor-id="step-6.-mount-the-project-drive">Step 6. Mount the project drive</h3>
-<p>To mount the project drive execute the command</p>
+<section id="step-6.-mount-the-project-drive" class="level4">
+<h4 class="anchored" data-anchor-id="step-6.-mount-the-project-drive"><strong>Step 6. Mount the project drive</strong></h4>
+<p>To mount the project drive, execute the command:</p>
 <div class="sourceCode" id="cb5"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> mount /media/<span class="op">&lt;</span>server_mount_point<span class="op">&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>You can also unmount the drive with</p>
+<p>You can also unmount the drive with:</p>
 <div class="sourceCode" id="cb6"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="ex">fusermount</span> <span class="at">-u</span> /media/<span class="op">&lt;</span>server_mount_point<span class="op">&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>The project drive will not mount automatically, so you will need to remount it manually each time you restart the server.</p>
-<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout callout-style-simple callout-note no-icon callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
-<i class="callout-icon"></i>
+<i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Note
+<i class="fa-solid fa-info-circle" aria-label="info-circle"></i> Note
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>If the step above does not work, it probably means that the packages for mounting cifs-type filesystems haven’t been installed. Depending on your linux flavour you will need to install them using:</p>
+<p>If the step above does not work, it probably means that the packages for mounting cifs-type filesystems haven’t been installed. Depending on your Linux flavour you will need to install them using:</p>
 <div class="tabset-margin-container"></div><div class="panel-tabset">
 <ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-4-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-4-1" role="tab" aria-controls="tabset-4-1" aria-selected="true">Ubuntu/Debian</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-4-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-4-2" role="tab" aria-controls="tabset-4-2" aria-selected="false">Redhat/Centos/Fedora</a></li></ul>
 <div class="tab-content">
@@ -1264,9 +1267,9 @@ Note
 </div>
 </section>
 </section>
-<section id="notes-and-next-steps" class="level2">
-<h2 class="anchored" data-anchor-id="notes-and-next-steps">Notes and next steps</h2>
-<p>The steps above can also be used to mount any storage offered by TU Delft with a WebDav link (staff-homes, staff-groups, staff-bulk, student-homes, student-groups and apps). Simply use the latter half of the URL from the WebDav web link of your storage drive, which will change from staff-umbrella (project drive) to something else depending on the storage drive you would like to mount.</p>
+<section id="notes-and-next-steps" class="level3">
+<h3 class="anchored" data-anchor-id="notes-and-next-steps">Notes and next steps</h3>
+<p>The steps above can also be used to mount any storage offered by TU Delft with a WebDav link (staff-homes, staff-groups, staff-bulk, student-homes, student-groups and apps). Simply use the latter half of the URL from the WebDav web link of your storage drive, which will change from staff-umbrella (<em>Project Data Storage</em> drive) to something else, depending on the storage drive you would like to mount.</p>
 
 
 </section>
@@ -1686,13 +1689,13 @@ Note
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../../../docs/data/data_storage/project_drive_request.html" class="pagination-link" aria-label="Request Project Drive space">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Request Project Drive space</span>
+      <a href="../../../docs/data/data_storage/project_drive_request.html" class="pagination-link" aria-label="Access and request space for *Project Data Storage*">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Access and request space for <em>Project Data Storage</em></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../../../docs/data/data_storage/sync_unison.html" class="pagination-link" aria-label="Sync Project Drive and SURFDrive with Unison">
-        <span class="nav-page-text">Sync Project Drive and SURFDrive with Unison</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../../../docs/data/data_storage/security.html" class="pagination-link" aria-label="Data security">
+        <span class="nav-page-text">Data security</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

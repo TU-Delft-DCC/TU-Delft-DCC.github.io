@@ -6,6 +6,8 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="dcterms.date" content="2025-06-25">
+<meta name="description" content="Data storage options at TU Delft">
 
 <title>Storage options</title>
 <style>
@@ -44,9 +46,9 @@ ul.task-list li input[type="checkbox"] {
 <link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-236d90495073fb2ac8939117e3e83141.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../../site_libs/bootstrap/bootstrap-1c476df50887b0a836723c091ff7aeae.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../../../site_libs/bootstrap/bootstrap-dark-abb5aa66359975c34294ac47c407373f.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="../../../site_libs/bootstrap/bootstrap-1c476df50887b0a836723c091ff7aeae.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="../../../site_libs/bootstrap/bootstrap-bb1137f27fc16e3580b23be7515eb2b9.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../../site_libs/bootstrap/bootstrap-dark-dccbd2cb0e6a9a2b49cec1d3c60c6b56.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../../../site_libs/bootstrap/bootstrap-bb1137f27fc16e3580b23be7515eb2b9.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script src="../../../site_libs/quarto-contrib/iconify-2.1.0/iconify-icon.min.js"></script>
 <link href="../../../site_libs/quarto-contrib/fontawesome6-1.2.0/all.min.css" rel="stylesheet">
 <link href="../../../site_libs/quarto-contrib/fontawesome6-1.2.0/latex-fontsize.css" rel="stylesheet">
@@ -349,7 +351,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="../../../docs/infrastructure/intro_servers.html" class="sidebar-item-text sidebar-link">
+            <a href="../../../docs/infrastructure/remote_servers.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Remote servers</span></a>
           <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
@@ -522,19 +524,13 @@ ul.task-list li input[type="checkbox"] {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../../docs/data/data_storage/project_drive_request.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Request Project Drive space</span></a>
+ <span class="menu-text">Access and request space for <em>Project Data Storage</em></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../../docs/data/data_storage/project_drive_mounting.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Mount Project Drive on server</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../../docs/data/data_storage/sync_unison.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Sync Project Drive and SURFDrive with Unison</span></a>
+ <span class="menu-text">Mount <em>Project Drive</em> on server</span></a>
   </div>
 </li>
       </ul>
@@ -1006,8 +1002,15 @@ ul.task-list li input[type="checkbox"] {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#overview-of-storage-options" id="toc-overview-of-storage-options" class="nav-link active" data-scroll-target="#overview-of-storage-options">Overview of storage options</a></li>
+  <li><a href="#project-drive-operations" id="toc-project-drive-operations" class="nav-link" data-scroll-target="#project-drive-operations"><em>Project Drive</em> operations</a></li>
+  </ul>
+<div class="toc-actions"><ul><li><a href="https://github.com/TU-Delft-DCC/TU-Delft-DCC.github.io/issues/new/choose" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -1016,18 +1019,28 @@ ul.task-list li input[type="checkbox"] {
 <header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../../docs/data/getting_started.html"><img src="../../../docs/img/folder-regular.svg" style="filter: invert(0.5) sepia(1) saturate(5) hue-rotate(175deg);height:1em"> <strong>Data Management</strong></a></li><li class="breadcrumb-item"><a href="../../../docs/data/data_storage/storage.html">Storage</a></li><li class="breadcrumb-item"><a href="../../../docs/data/data_storage/storage_options.html">Storage options</a></li></ol></nav>
 <div class="quarto-title">
 <h1 class="title">Storage options</h1>
-</div>
+  <div class="quarto-categories">
+    <div class="quarto-category">data</div>
+    <div class="quarto-category">storage</div>
+  </div>
+  </div>
 
 
 
 <div class="quarto-title-meta">
 
     
+    <div>
+    <div class="quarto-title-meta-heading">Last reviewed</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">June 25, 2025</p>
+    </div>
+  </div>
   
     <div>
     <div class="quarto-title-meta-heading">Last modified</div>
     <div class="quarto-title-meta-contents">
-      <p class="date-modified">June 17, 2025</p>
+      <p class="date-modified">July 9, 2025</p>
     </div>
   </div>
     
@@ -1037,54 +1050,194 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
+<script async="" defer="" src="https://scripts.simpleanalyticscdn.com/latest.js"></script>
+<p>Storing your data in a secure location is a key element of a successful project with a data component. As a TU Delft researcher, you have several options. Below you can find an overview of the available storage options, depending on whether they are local, networked, or cloud-based, how secure they are, whether they can be shared with internal or external partners, and whether they are automatically backed up or not. Please visit the sections on <a href="../../../docs/data/data_storage/security.html">Data Security</a>, <a href="../../../docs/data/data_storage/sharing.html">Data Sharing</a> and <a href="../../../docs/data/data_storage/backup.html">Data Backup</a> for more information on these topics.</p>
+<div class="callout callout-style-simple callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<i class="fa-solid fa-info-circle" aria-label="info-circle"></i> Options listed in this guide refer to research data in its <em>active</em> phase. For long-term preservations, please refer to the <a href="../../../docs/data/data_publishing/archival_publishing_index.html">Archive and Publish</a> section.
+</div>
+</div>
+<div class="callout-body-container callout-body">
 
-<script async="" defer="" src="https://scripts.simpleanalyticscdn.com/latest.js"></script><p>Under construction! 🏗️</p>
-<!--
+</div>
+</div>
+<section id="overview-of-storage-options" class="level2">
+<h2 class="anchored" data-anchor-id="overview-of-storage-options">Overview of storage options</h2>
+<div class="callout callout-style-simple callout-important no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<i class="fa-solid fa-info-circle" aria-label="info-circle"></i> Important
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>These options have been curated from:</p>
+<ul>
+<li>The intranet section on <a href="https://intranet.tudelft.nl/-/data-storage-1">Data Storage</a></li>
+<li>The <a href="https://tudelft.topdesk.net/">TOPdesk</a> “Overview of data storage and file sharing” (Home &gt; ICT services &gt; IT for Research &gt; Overview of data storage and file sharing)</li>
+<li>And the <a href="https://storagefinder.tudelft.nl/">Storage Finder</a> tool</li>
+<li><a href="https://www.surf.nl/en/">SURF</a></li>
+</ul>
+<p>Please note that the information is subject to change, and you should always refer to the official TU Delft documentation for the most up-to-date information.</p>
+</div>
+</div>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th style="text-align: center;">Storage Option</th>
+<th style="text-align: center;">Location</th>
+<th style="text-align: center;">Security</th>
+<th style="text-align: center;">Sharing</th>
+<th style="text-align: center;">Backup</th>
+<th style="text-align: center;">Size</th>
+<th style="text-align: center;">Aditional info</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">Private laptop</td>
+<td style="text-align: center;">Local</td>
+<td style="text-align: center;">Low</td>
+<td style="text-align: center;">Defined by owner</td>
+<td style="text-align: center;">Defined by owner</td>
+<td style="text-align: center;">Check device specifications</td>
+<td style="text-align: center;">Security listed as low as the device is prone to loss and theft, among other incidents</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">Private desktop</td>
+<td style="text-align: center;">Local</td>
+<td style="text-align: center;">Medium</td>
+<td style="text-align: center;">Defined by owner</td>
+<td style="text-align: center;">Defined by owner</td>
+<td style="text-align: center;">Check device specifications</td>
+<td style="text-align: center;">Same as above, perhaps more secure than a laptop as it is not necessarily mobile</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">TU Delft managed laptop</td>
+<td style="text-align: center;">TU Delft network</td>
+<td style="text-align: center;">Medium</td>
+<td style="text-align: center;">Internal to TU Delft</td>
+<td style="text-align: center;">Defined by owner (unless using options listed below)</td>
+<td style="text-align: center;">Check device specifications</td>
+<td style="text-align: center;">All TU Delft managed devices are password protected. Security is therefore slightly higer than private counterparts</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">TU Delft managed desktop</td>
+<td style="text-align: center;">TU Delft network</td>
+<td style="text-align: center;">Medium</td>
+<td style="text-align: center;">Internal to TU Delft</td>
+<td style="text-align: center;">Defined by owner (unless using options listed below)</td>
+<td style="text-align: center;">Check device specifications</td>
+<td style="text-align: center;">All TU Delft managed devices are password protected. Security is therefore slightly higer than private counterparts</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">TU Delft Personal Data Storage (H:)</td>
+<td style="text-align: center;">TU Delft network</td>
+<td style="text-align: center;">High</td>
+<td style="text-align: center;">Internal to TU Delft</td>
+<td style="text-align: center;">Yes</td>
+<td style="text-align: center;">8 GB</td>
+<td style="text-align: center;"><a href="https://storagefinder.tudelft.nl/">Storage Finder</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">TU Delft Group Data Storage (M:)</td>
+<td style="text-align: center;">TU Delft network</td>
+<td style="text-align: center;">High</td>
+<td style="text-align: center;">Internal to TU Delft</td>
+<td style="text-align: center;">Yes</td>
+<td style="text-align: center;">50 GB</td>
+<td style="text-align: center;"><a href="https://storagefinder.tudelft.nl/">Storage Finder</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">TU Delft Project Data Storage (U:)</td>
+<td style="text-align: center;">TU Delft network</td>
+<td style="text-align: center;">High</td>
+<td style="text-align: center;">Internal to TU Delft. External access can be enabled with a TU Delft guest account.</td>
+<td style="text-align: center;">Yes</td>
+<td style="text-align: center;">&gt; 250 GB</td>
+<td style="text-align: center;"><a href="https://storagefinder.tudelft.nl/">Storage Finder</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">Microsoft Teams</td>
+<td style="text-align: center;">Cloud</td>
+<td style="text-align: center;">High</td>
+<td style="text-align: center;">Internal to TU Delft</td>
+<td style="text-align: center;">Yes</td>
+<td style="text-align: center;">&lt; 250 GB</td>
+<td style="text-align: center;"><a href="https://storagefinder.tudelft.nl/">Storage Finder</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">Microsoft Sharepoint</td>
+<td style="text-align: center;">Cloud</td>
+<td style="text-align: center;">High</td>
+<td style="text-align: center;">Internal to TU Delft</td>
+<td style="text-align: center;">Yes</td>
+<td style="text-align: center;">&lt; 250 GB</td>
+<td style="text-align: center;"><a href="https://storagefinder.tudelft.nl/">Storage Finder</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">Microsoft OneDrive for Business</td>
+<td style="text-align: center;">Cloud</td>
+<td style="text-align: center;">High</td>
+<td style="text-align: center;">External access can be enabled</td>
+<td style="text-align: center;">Yes</td>
+<td style="text-align: center;">1 TB</td>
+<td style="text-align: center;"><a href="https://storagefinder.tudelft.nl/">Storage Finder</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">SURFdrive</td>
+<td style="text-align: center;">Cloud</td>
+<td style="text-align: center;">High</td>
+<td style="text-align: center;">External access can be enabled</td>
+<td style="text-align: center;">Yes</td>
+<td style="text-align: center;">500 GB</td>
+<td style="text-align: center;"><a href="https://www.surf.nl/en/services/storage-data-management/surfdrive">SURFdrive documentation</a></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="project-drive-operations" class="level2">
+<h2 class="anchored" data-anchor-id="project-drive-operations"><em>Project Drive</em> operations</h2>
+<p>A <em>Project Drive</em> is a TU Delft managed network drive that allows you to store and share data with your project team members. It is a secure and reliable option for storing research data, and it is automatically backed up.</p>
+<div class="callout callout-style-simple callout-tip no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<i class="fa-solid fa-lightbulb" aria-label="lightbulb"></i> <strong>For most situations, the <em>Project Data Storage (U:)</em> drive is the optimal choice for storing research data.</strong>
+</div>
+</div>
+<div class="callout-body-container callout-body">
 
-Storing your data in a secure location is a key element of a successful project with a data component. TU Delft recommends using a [Project Drive](https://tudelft.topdesk.net/tas/public/ssp/content/detail/service?unid=846ebb16181c43b5836c063a917dd199&from=03aa10b9-c5aa-4e0a-80b1-28ee7ab383df) for storing research data. This solution enables secure data storage with controlled access for collaborators during the project lifecycle, while ensuring continued availability to TU Delft researchers after project completion. 
-
-TU Delft offers various data storage options and solutions with varying access protocols. You can explore available options through the [Service Portal (TU Delft authentication required)](https://tudelft.topdesk.net/tas/public/ssp/content/detail/service?unid=f359caaa60264f99b0084941736786ae&from=feffb489-e1f9-49cd-8223-53ae0b70b609).
-
-## Local
-
-Coming soon!
-
--->
+</div>
+</div>
+<p>Below you can see how to access a <em>Project Data Storage (U:)</em> drive, request space for it, and how to mount it on a server (please refer to the section on <a href="../../../docs/infrastructure/remote_servers.html">Remote Servers</a> for more details).</p>
 <div class="content-block">
 <div class="features">
-<section id="request-project-drive-space" class="level3 feature">
-<h3 class="anchored" data-anchor-id="request-project-drive-space"><i class="fa-solid fa-hard-drive" aria-label="hard-drive"></i> Request Project Drive space</h3>
-<p>Update coming soon! 🛠️</p>
+<section id="access-and-request-space-for-project-data-storage" class="level3 feature">
+<h3 class="anchored" data-anchor-id="access-and-request-space-for-project-data-storage"><i class="fa-solid fa-hard-drive" aria-label="hard-drive"></i> Access and request space for <em>Project Data Storage</em></h3>
 <div class="learn-more">
 <p><a href="../../../docs/data/data_storage/project_drive_request.html">Learn more »</a></p>
 </div>
 </section>
 <section id="mount-project-drive-on-server" class="level3 feature">
-<h3 class="anchored" data-anchor-id="mount-project-drive-on-server"><i class="fa-solid fa-server" aria-label="server"></i> Mount Project Drive on server</h3>
-<p>Update coming soon! 🛠️</p>
+<h3 class="anchored" data-anchor-id="mount-project-drive-on-server"><i class="fa-solid fa-server" aria-label="server"></i> Mount <em>Project Drive</em> on server</h3>
 <div class="learn-more">
 <p><a href="../../../docs/data/data_storage/project_drive_mounting.html">Learn more »</a></p>
 </div>
 </section>
-<section id="sync-project-drive-and-surfdrive-with-unison" class="level3 feature">
-<h3 class="anchored" data-anchor-id="sync-project-drive-and-surfdrive-with-unison"><i class="fa-solid fa-rotate" aria-label="rotate"></i> Sync Project Drive and SURFDrive with Unison</h3>
-<p>Update coming soon! 🛠️</p>
-<div class="learn-more">
-<p><a href="../../../docs/data/data_storage/sync_unison.html">Learn more »</a></p>
 </div>
+</div>
+
+
 </section>
-</div>
-</div>
-<!--
-
-## Cloud
-
-Coming soon!
-
-
--->
-
-
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -1506,8 +1659,8 @@ Coming soon!
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../../../docs/data/data_storage/project_drive_request.html" class="pagination-link" aria-label="Request Project Drive space">
-        <span class="nav-page-text">Request Project Drive space</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../../../docs/data/data_storage/project_drive_request.html" class="pagination-link" aria-label="Access and request space for *Project Data Storage*">
+        <span class="nav-page-text">Access and request space for <em>Project Data Storage</em></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
@@ -1519,7 +1672,7 @@ Coming soon!
 </div>   
     <div class="nav-footer-center">
 <p>© 2025 <a href="https://www.tudelft.nl/digital-competence-centre">TU Delft DCC</a>. Licensed under <a href="https://creativecommons.org/licenses/by/4.0/">CC-BY-4.0</a>.</p>
-<div class="toc-actions"><ul><li><a href="https://github.com/TU-Delft-DCC/TU-Delft-DCC.github.io/issues/new/choose" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div></div>
+<div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/TU-Delft-DCC/TU-Delft-DCC.github.io/issues/new/choose" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div></div>
     <div class="nav-footer-right">
 <p>Found these guides helpful? <a href="https://github.com/TU-Delft-DCC/TU-Delft-DCC.github.io"><i class="fa-regular fa-star" aria-label="star"></i> us on GitHub</a>.</p>
 </div>
