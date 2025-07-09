@@ -57,7 +57,7 @@ As shown in the [overview of storage options](../data_storage/storage_options.md
 
 #### **Personal Data Storage (H:)**
 
-This is the default storage location for personal data, such as documents, spreadsheets, and presentations. It is accessible only to the user and is not suitable for sharing with others. However, it enables *you* to share *your* data across TUDelft-managed devices connected to the TU Delft network.
+This is the default storage location for personal data, such as documents, spreadsheets, and presentations. It is accessible only to the user and is not suitable for sharing with others. However, it enables *you* to share *your* data across TU Delft-managed devices connected to the TU Delft network.
 
 #### **Group Data Storage (M:)**
 
@@ -65,7 +65,7 @@ The folder structure on this network drive follows a similar structure to that o
 
 #### **Project Data Storage (U:)**
 
-Access to this storage is requested by a contact person "caller/owner" which can in turn provide access via a netID. Its data can be accessed through CIFS and NFS (with kerberos authentication), meaning it can be mounted in different systems. Please visit the [project drive request](../data_storage/project_drive_request.md) and [project drive mounting ](../data_storage/project_drive_mounting.md) sections for more information.
+Access to this storage is requested by a contact person "caller/owner" which can in turn provide access via a NetID. Its data can be accessed through CIFS and NFS (with kerberos authentication), meaning it can be mounted in different systems. Please visit the [project drive request](../data_storage/project_drive_request.md) and [project drive mounting ](../data_storage/project_drive_mounting.md) sections for more information.
 
 ### Cloud-based storage
 
@@ -77,21 +77,21 @@ TU Delft provides a few collaboration tools through the Microsoft Office 365 pla
 
 This platform is primarily used for communication and collaboration within research groups and projects. It allows for file sharing, real-time collaboration, and integration with other Microsoft 365 applications. However, it is not a dedicated data storage solution and should be used in conjunction with other storage options.
 
-Find more details on [topdesk](https://tudelft.topdesk.net/) Home > ICT services > Collaboration Tools > Microsoft Teams.
+Find more details on [TopDesk](https://tudelft.topdesk.net/) Home ⇾ ICT services ⇾ Collaboration Tools ⇾ Microsoft Teams.
 
 #### **Microsoft SharePoint**
 
 Considerations for this platform are similar to those for Microsoft Teams. It is primarily used for document management and collaboration within research groups and projects. SharePoint allows for file sharing, version control, and integration with other Microsoft 365 applications.
 
-Find more details on [topdesk](https://tudelft.topdesk.net/) Home > ICT services > Collaboration Tools > SharePoint 2016 support
+Find more details on [TopDesk](https://tudelft.topdesk.net/) Home ⇾ ICT services ⇾ Collaboration Tools ⇾ SharePoint 2016 support
 
 ## External
 
 #### **Microsoft OneDrive for Business**
 
-OneDrive is installed by default on the laptops and desktops supplied by TU Delft. TU Delft OneDrive is recognisable by the name: "OneDrive - Delft University of Technology". Web based access within and outside TUDelft, sharing and working together is possible with TUDelft colleagues and also external users. OneDrive is suitable for sharing data with external partners, as it allows for controlled access and collaboration. However, it is important to ensure that sensitive data is not shared without proper security measures in place.
+OneDrive is installed by default on the laptops and desktops supplied by TU Delft. TU Delft OneDrive is recognisable by the name: "OneDrive - Delft University of Technology". Web based access within and outside TUDelft, sharing and working together is possible with TU Delft colleagues and also external users. OneDrive is suitable for sharing data with external partners, as it allows for controlled access and collaboration. However, it is important to ensure that sensitive data is not shared without proper security measures in place.
 
-Find more details on [topdesk](https://tudelft.topdesk.net/) Home > OneDrive for Business 
+Find more details on [TopDesk](https://tudelft.topdesk.net/) Home ⇾ OneDrive for Business
 
 #### **SURFdrive**
 
