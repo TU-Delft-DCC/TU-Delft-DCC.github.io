@@ -77,13 +77,17 @@ TU Delft provides a few collaboration tools through the Microsoft Office 365 pla
 
 This platform is primarily used for communication and collaboration within research groups and projects. It allows for file sharing, real-time collaboration, and integration with other Microsoft 365 applications. However, it is not a dedicated data storage solution and should be used in conjunction with other storage options.
 
-Find more details on [TopDesk](https://tudelft.topdesk.net/) Home ⇾ ICT services ⇾ Collaboration Tools ⇾ Microsoft Teams.
+:::{.callout-tip appearance="simple" icon="false"}
+## {{< fa lightbulb >}} Find more details on [TopDesk](https://tudelft.topdesk.net/) Home ⇾ ICT services ⇾ Collaboration Tools ⇾ Microsoft Teams.
+:::
 
 #### **Microsoft SharePoint**
 
 Considerations for this platform are similar to those for Microsoft Teams. It is primarily used for document management and collaboration within research groups and projects. SharePoint allows for file sharing, version control, and integration with other Microsoft 365 applications.
 
-Find more details on [TopDesk](https://tudelft.topdesk.net/) Home ⇾ ICT services ⇾ Collaboration Tools ⇾ SharePoint 2016 support
+:::{.callout-tip appearance="simple" icon="false"}
+## {{< fa lightbulb >}} Find more details on [TopDesk](https://tudelft.topdesk.net/) Home ⇾ ICT services ⇾ Collaboration Tools ⇾ SharePoint 2016 support
+:::
 
 ## External
 
@@ -91,10 +95,14 @@ Find more details on [TopDesk](https://tudelft.topdesk.net/) Home ⇾ ICT servic
 
 OneDrive is installed by default on the laptops and desktops supplied by TU Delft. TU Delft OneDrive is recognisable by the name: "OneDrive - Delft University of Technology". Web based access within and outside TUDelft, sharing and working together is possible with TU Delft colleagues and also external users. OneDrive is suitable for sharing data with external partners, as it allows for controlled access and collaboration. However, it is important to ensure that sensitive data is not shared without proper security measures in place.
 
-Find more details on [TopDesk](https://tudelft.topdesk.net/) Home ⇾ OneDrive for Business
+:::{.callout-tip appearance="simple" icon="false"}
+## {{< fa lightbulb >}} Find more details on [TopDesk](https://tudelft.topdesk.net/) Home ⇾ OneDrive for Business
+:::
 
 #### **SURFdrive**
 
 SURFdrive is a personal cloud storage service for the Dutch education and research community, offering staff, researchers and students an easy way to store, synchronise and share files in the secure and reliable SURF community cloud. SURFdrive offers staff, researchers and students an easy way to share and synchronise files within a secure community cloud with ample storage capacity.
 
-Find more details on [SURFdrive](https://www.surf.nl/en/surfdrive).
+:::{.callout-tip appearance="simple" icon="false"}
+## {{< fa lightbulb >}} Find more details on [SURFdrive](https://www.surf.nl/en/surfdrive).
+:::
