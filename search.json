@@ -1156,53 +1156,40 @@
   {
     "objectID": "docs/infrastructure/moving_data.html",
     "href": "docs/infrastructure/moving_data.html",
-    "title": "Transfering data to and from a VPS",
+    "title": "Moving data to remote servers",
     "section": "",
-    "text": "This section describes how to transfer data to and from a TU Delft managed server. The procedure is different depending on whether the server runs a Windows or Linux-based operating system. Although there are many ways to transfer data from one machine to another, TU Delft servers only support a few of them.",
+    "text": "This section describes how to transfer data to and from a TU Delft virtual server. The procedure is different depending on whether the server runs a Windows or Linux-based operating system. Although there are many ways to transfer data from one machine to another, TU Delft servers only support a few of them.",
     "crumbs": [
       "<ins>Guides</ins>",
       "![](/docs/img/gear.svg){height=1em style='filter: invert(0.5) sepia(1) saturate(5) hue-rotate(175deg)'} **Computing Infrastructure**",
       "Remote servers",
-      "Moving data to your server"
+      "Moving data to remote servers"
     ]
   },
   {
-    "objectID": "docs/infrastructure/moving_data.html#transfering-data-to-the-vps",
-    "href": "docs/infrastructure/moving_data.html#transfering-data-to-the-vps",
-    "title": "Transfering data to and from a VPS",
-    "section": "Transfering data to the VPS",
-    "text": "Transfering data to the VPS\nTo copy a file from your local computer to your Linux VPS:\n\nIf your local computer is running on Linux or MacOS, open the terminal. Alternatively, if it runs on Windows, open the Windows PowerShell by seaching for it in the start menu.\nCopy your local file to the bastion by executing the command:\n\nscp &lt;path-to-local-file&gt; &lt;netid&gt;@linux-bastion-ex.tudelft.nl:/&lt;bastion-directory&gt;/\n\n# For example:\n# scp C:/Users/janedoe/Desktop/file.zip janedoe@linux-bastion-ex.tudelft.nl:/home/janedoe/Documents/\n\nLogin to the bastion (you need to be connected to eduVPN if working off-campus):\n\nssh &lt;netid&gt;@linux-bastion-ex.tudelft.nl\n\nCopy the file from the bastion to your Linux VPS. Note that an SSH key is required to access the VPS.\n\nscp -i ~/.ssh/&lt;your-ssh-key&gt; &lt;path-to-bastion-file&gt; &lt;username&gt;@&lt;server-name&gt;.tudelft.nl:/&lt;vps-directory&gt;\n\n# For example:\n# scp -i ~/.ssh/id_rsa /home/janedoe/Documents/file.zip janedoevps.ict.tudelft.nl:/home/janedoe/\n\nDelete the file on the bastion and logout:\n\nrm &lt;path-to-bastion-file&gt;\nlogout",
+    "objectID": "docs/infrastructure/moving_data.html#linux-servers",
+    "href": "docs/infrastructure/moving_data.html#linux-servers",
+    "title": "Moving data to remote servers",
+    "section": "Linux servers",
+    "text": "Linux servers\nThe scp command is a secure file transfer utility that allows you to copy files between Linux-based hosts (this includes macOS) on a network. It uses SSH for data transfer, providing the same authentication and security as SSH. Common scenarios in which you might need to transfer data between hosts include uploading scripts, downloading results, or transferring configuration files.\n\n\n\n\n\n\n Moving large data batches\n\n\n\nIf you need to transfer large files or a multitude of small files, consider using tools like rclone or rsync instead. The instructions below are for transferring small files or a few files at a time.\n\n\n\n\n\n\n\n\n Overwriting files\n\n\n\nNotice that scp will overwrite files in the destination directory without prompting if they already exist. Always double-check the paths and filenames to avoid accidental data loss.\n\n\n\nPrerequisites\nBefore starting, you need:\n\nSCP (Secure Copy Protocol) installed on your local machine. SCP is a command-line utility that allows you to securely transfer files between hosts on a network.\nSSH access to the remote host (e.g., VPS) you want to connect to.\n\n\n\nMoving data via SCP\nTo copy data to and from a remote host using the scp command, you can use the following syntax:\n# Copy TO Remote Host\nscp &lt;path-my-local-file&gt; &lt;target-username&gt;@&lt;remote-host&gt;:&lt;full-path/remote-directory&gt;/\n# Copy FROM Remote Host\nscp &lt;target-username&gt;@&lt;remote-host&gt;:&lt;full-path/my-remote-file&gt; &lt;path-my-local-directory&gt;/\n\n\n\n\n\n\n Moving files to restricted directories\n\n\n\nSome directories on the remote host may require elevated permissions to write files. If you encounter a “Permission denied” error, you may need to use sudo to copy files to those directories. However, using scp with sudo directly is not supported. Instead, you can copy the file to a temporary directory /tmp where you have write access and then move it to the desired location using sudo after connecting to the remote host.\n\n\n\n\nTransferring files using ProxyJump\nIn the case of a VPS hosted by TU Delft, you need to copy data to a remote host via a bastion host (an intermediary server). Therefore, you must use the -o option of scp to specify a ProxyJump that will connect to the bastion host first. Alternatively, you can choose to transfer files using SSH tunneling.\n\nTransfer to remote host\n# If using default SSH key name, for example, id_ed25519 or id_rsa\nscp -o \"ProxyJump &lt;bastion-username&gt;@linux-bastion-ex.tudelft.nl\" &lt;path-my-local-file&gt; \\ \n&lt;target-username&gt;@&lt;remote-host&gt;:&lt;full-path/remote-directory&gt;/\n\n# If using a custom SSH key name, for example, my_custom_key\nscp  -i &lt;path-to-custom-private-ssh-key&gt; -o \"ProxyJump &lt;bastion-username&gt;@linux-bastion-ex.tudelft.nl\" \\ \n&lt;path-my-local-file&gt;  &lt;target-username&gt;@&lt;remote-host&gt;:&lt;full-path-remote-directory&gt;/\n\n\nTransfer from remote host\n# If using default SSH key name, for example, id_ed25519 or id_rsa\nscp -o \"ProxyJump &lt;bastion-username&gt;@linux-bastion-ex.tudelft.nl\" \\ \n&lt;target-username&gt;@&lt;remote-host&gt;:&lt;full-path-remote-file&gt;/ &lt;path-my-local-directory&gt;/\n\n# If using a custom SSH key name, for example, my_custom_key\nscp -i &lt;path-to-custom-private-ssh-key&gt; -o \"ProxyJump &lt;bastion-username&gt;@linux-bastion-ex.tudelft.nl\" \\\n&lt;target-username&gt;@&lt;remote-host&gt;:&lt;full-path-remote-file&gt;/ &lt;path-my-local-directory&gt;/\n\n\n\nTransferring files using SSH tunneling\nIf SSH tunneling has been configured correctly for the remote host, you can copy files to and from a remote host as follows:\n# Copy TO remote host\n$ &lt;path-my-local-file&gt; &lt;host-nickname&gt;:&lt;full-path-remote-directory&gt;/\n# Copy FROM remote host\n$ scp &lt;host-nickname&gt;:&lt;full-path-remote-file&gt;/ &lt;path-my-local-directory&gt;/",
     "crumbs": [
       "<ins>Guides</ins>",
       "![](/docs/img/gear.svg){height=1em style='filter: invert(0.5) sepia(1) saturate(5) hue-rotate(175deg)'} **Computing Infrastructure**",
       "Remote servers",
-      "Moving data to your server"
+      "Moving data to remote servers"
     ]
   },
   {
-    "objectID": "docs/infrastructure/moving_data.html#transfering-data-from-the-vps",
-    "href": "docs/infrastructure/moving_data.html#transfering-data-from-the-vps",
-    "title": "Transfering data to and from a VPS",
-    "section": "Transfering data from the VPS",
-    "text": "Transfering data from the VPS\nTo copy a file from your Linux VPS to your local computer:\n\nIf your local computer is running on Linux or MacOS, open the terminal. Alternatively, if it runs on Windows, open the PowerShell by seaching for it in the start menu.\nLogin to the bastion (you need to be connected to eduVPN if working off-campus):\n\nssh &lt;netid&gt;@linux-bastion-ex.tudelft.nl\n\nCopy the file from your Linux VPS to the bastion. Note that an SSH key is required to access the VPS. Logout of the bastion.\n\nscp -i ~/.ssh/&lt;your-ssh-key&gt; &lt;username&gt;@&lt;server-name&gt;.tudelft.nl:/&lt;path-to-vps-file&gt; &lt;bastion-directory&gt;\nlogout\n\n# For example:\n# scp -i ~/.ssh/id_rsa janedoe@janedoevps.ict.tudelft.nl:/home/janedoe/Documents/file.zip /home/janedoe/ \n\nCopy the file from the bastion to your local computer:\n\nscp &lt;netid&gt;@linux-bastion-ex.tudelft.nl:/&lt;path-to-bastion-file&gt; &lt;local-path&gt;\n\n# For example:\n# scp janedoe@linux-bastion-ex.tudelft.nl:/home/janedoe/file.zip C:/Users/janedoe/Desktop/\n\nLogin to the bastion, delete the file and logout.\n\nssh &lt;netid&gt;@linux-bastion-ex.tudelft.nl\nrm &lt;path-to-bastion-file&gt;\nlogout",
+    "objectID": "docs/infrastructure/moving_data.html#windows-servers",
+    "href": "docs/infrastructure/moving_data.html#windows-servers",
+    "title": "Moving data to remote servers",
+    "section": "Windows servers",
+    "text": "Windows servers\nTransferring data to and from a TU Delft Windows server is done via the Citrix platform, using the app’s built-in menu shown in the image below.\n\n\n\nCitrix Menu. Buttons from left to right: Download, Upload, Multimonitor, Clipboard, and Settings.\n\n\n\nTransferring files\n\nOpen a web browser and log into your Windows server as usual via the Citrix portal.\nOpen the Citrix menu located at the center-top of the server window and click on the Upload or Download button, as shown in the image above.\nA pop-up window will open on where you can select the files you wish to transfer to the server.\n\nIt is not possible to directly transfer files to or from the server’s C: or D: drives. Instead, you upload or download files to your personal TU Delft drive which is connected to the server. Using the Windows File Explorer and standard copy/paste or drag-and-drop operations, you can transfer the data from your personal drive to the server’s C: or D: drives.\n\n\n\n\n\n\n Warning\n\n\n\nTU Delft Windows servers have a limited amount of disk space in the C: drive. ICT instructs users to install applications and store data in the D: drive of the server to avoid running out of memory. Alternatively, you can use your personal TU Delft drive, which is also connected to the server. More information can be found at the bottom of the TOPdesk form to request a new VPS.\n\n\n\n\nUsing the clipboard\nTU Delft Windows servers do not allow to directly copy or paste text from the clipboard. Instead, you must use Citrix’s clipboard functionality. To do so, open the Citrix’s menu located at the center-top of the window and click on the Clipboard button. A pop-up window will open on which you can copy or paste the text you wish to transfer. Note that it is only possible to transfer text via the clipboard; images or files are not supported.",
     "crumbs": [
       "<ins>Guides</ins>",
       "![](/docs/img/gear.svg){height=1em style='filter: invert(0.5) sepia(1) saturate(5) hue-rotate(175deg)'} **Computing Infrastructure**",
       "Remote servers",
-      "Moving data to your server"
-    ]
-  },
-  {
-    "objectID": "docs/infrastructure/moving_data.html#transfering-data-with-ssh-tunneling",
-    "href": "docs/infrastructure/moving_data.html#transfering-data-with-ssh-tunneling",
-    "title": "Transfering data to and from a VPS",
-    "section": "Transfering data with SSH tunneling",
-    "text": "Transfering data with SSH tunneling\nWhen SSH tunneling is configured, data can be transferred directly between your local computer and the Linux VPS, without needing to temporarily store it on the bastion.\n# Copy file TO Remote Host\n$ scp &lt;path-to-local-file&gt; &lt;host-name&gt;:/&lt;remote-directory&gt;/\n# Copy file FROM Remote Host\n$ scp &lt;host-name&gt;:/&lt;path-to-remote-file&gt; /&lt;local-directory&gt;/",
-    "crumbs": [
-      "<ins>Guides</ins>",
-      "![](/docs/img/gear.svg){height=1em style='filter: invert(0.5) sepia(1) saturate(5) hue-rotate(175deg)'} **Computing Infrastructure**",
-      "Remote servers",
-      "Moving data to your server"
+      "Moving data to remote servers"
     ]
   },
   {
@@ -2298,40 +2285,14 @@
   {
     "objectID": "docs/infrastructure/VPS_SSH.html",
     "href": "docs/infrastructure/VPS_SSH.html",
-    "title": "Configure SSH Tunneling",
+    "title": "Set up SSH tunneling for a VPS",
     "section": "",
-    "text": "To connect to a remote host, TU Delft uses a proxy server, know as bastion. To reach a remote host, a user has to connect first to the bastion and from there to the remote host. However, a user can connect directly to the remote host using ssh tunneling.",
+    "text": "This guide explains how to set up a secure, single-step SSH connection to a Virtual Private Server (VPS) at TU Delft using SSH tunneling. By default, connecting to a VPS requires first accessing a Bastion Host (an intermediary server controlling access), making it a two-step process. Therefore, it is a two-step process: to reach a remote host, a user has to connect first to the bastion host and from there to the VPS. However, by using SSH tunneling and SSH keys, you can connect to your VPS and other remote hosts in a single step.\nWith the method described below, you will be able to connect directly from your local machine to your VPS, bypassing the need to log in to the bastion host separately. This setup also simplifies secure file transfers between your local machine and the VPS.\n\n\n\n\n\n\n Accessing a VPS\n\n\n\nDepending on your geogaphic location, access to a VPS via SSH may be blocked by the TU Delft firewall. In such cases, you must use a VPN connection via eduVPN. Access if usally blocked if you are connecting from your home network.\n\n\n\nPrerequisites\nBefore starting, you need:\n\nA TU Delft NetID.\nAccess to a VPS provided by TU Delft ICT, including a username and password.\nAn SSH client installed on your local machine (usually included with most Linux and macOS distributions; for Windows, you can use a third-party SSH client like PuTTY).\nALinux or macOS terminal\n\n\n\nSteps for Linux and macOS\n\n\n\n\n\n\n Summary of steps\n\n\n\n\nCreate SSH keys.\nCopy SSH keys to bastion host and remote server.\nCreate a new host for SSH connection.\nTest connection\n\n\n\n\nSet up SSH tunneling for a host (Linux Terminal)\n\nIf you do not have an SSH key-pair, create one on the local machine. Go to the terminal and enter the following command. Replace &lt;my-keyname&gt; with a name of your choice for the SSH key, e.g., id_rsa or id_ed25519.\n\n$  ssh-keygen -t ed25519 -f ~/.ssh/&lt;my-keyname&gt;\nYou will be promted to crate a passphrase. We recommend you to add one to make the connection more secure. The passphrase will be asked every time you connect to the VPS. To skip the passphrase, press Enter when prompted. You should see something like this:\nGenerating public/private ed25519 key pair.\nEnter passphrase for \"ed25519\" (empty for no passphrase): \nEnter same passphrase again: \nYour identification has been saved in ~/.ssh/&lt;my-keyname&gt;\nYour public key has been saved in ~/.ssh/&lt;my-keyname&gt;.pub\nThe key fingerprint is:\nSHA256:6j06srvun06gJ5UCmD+MVq6RsPuytCO5mF4hTELnWTg root@local-machine\nThe key's randomart image is:\n+--[ED25519 256]--+\n| . ...           |\n|o.oEo            |\n|*. +.            |\n|=*+  .           |\n|o*=o+   S        |\n|..+=.. .         |\n|.+o.. o          |\n|*+oo.o.o.        |\n|B*oo*B*o..       |\n+----[SHA256]-----+\nA private and public key will be added to ~/.ssh.\nThe public key is the file with the .pub extension, e.g., &lt;my-keyname&gt;.pub\n\n\n\n\n\n\n Tip\n\n\n\nSimilar to passwords, it is advised to rotate your SSH keys regularly (e.g., every 6 months). You can do this by generating a new key pair and replacing the old one on your local machine and VPS.\n\n\n\nLog in to your VPS and, copy the content of your public key into the VPS ~/.ssh/authorized_keys file. You can achieve this by copying the content of the public key file to the clipboard and pasting it into the authorized_keys file on the VPS. Be mindful and not remove anything from this file, or other SSH connections might stop working. Finally, save the file.\nCreate a new host for SSH connection. On your local machine, edit the ~/.ssh/config file and add the following configuration. If the file does not exist, create it.\n\nHost &lt;host-nickname&gt;\n    HostName &lt;target-host&gt;\n    User &lt;target-username&gt;\n    ProxyJump &lt;target-username&gt;@linux-bastion-ex.tudelft.nl\n    IdentityFile ~/.ssh/&lt;my-keyname&gt;\nReplace: : a name of your choice for the target host, e.g., my-server : the actual name of the target host (FQDM), e.g, server.tudelft.nl : the username used to log in to the target host, usually your NetID : the username used to log in to the bastion server : the name of the SSH private key you created, e.g., id_rsa. If your private key is stored in a different location, replace the path accordingly.\n\nTest the SSH tunneling connection. Connect to the VPS using SSH tunneling by typing the command below. Use your bastion-password when asked. This is usually the password associated with your NetID.\n\n$ ssh &lt;host-nickname&gt;\nIf you encounter problems with the connection, use the debug mode ssh -vvv &lt;host-nickname&gt; to find out what might have gone wrong. This command will provide detailed information about the connection process and can help you troubleshoot any issues.",
     "crumbs": [
       "<ins>Guides</ins>",
       "![](/docs/img/gear.svg){height=1em style='filter: invert(0.5) sepia(1) saturate(5) hue-rotate(175deg)'} **Computing Infrastructure**",
       "Remote servers",
-      "Configure SSH Tunneling"
-    ]
-  },
-  {
-    "objectID": "docs/infrastructure/VPS_SSH.html#set-a-default-ssh-tunneling-for-a-host-linux-terminal",
-    "href": "docs/infrastructure/VPS_SSH.html#set-a-default-ssh-tunneling-for-a-host-linux-terminal",
-    "title": "Configure SSH Tunneling",
-    "section": "Set a Default SSH Tunneling for a Host (Linux Terminal)",
-    "text": "Set a Default SSH Tunneling for a Host (Linux Terminal)\n\nOn your local machine, edit the ~/.ssh/config file and add the following confuration:\n\nHost &lt;host-nickname&gt;\n    HostName &lt;target-host&gt;\n    User &lt;target-username&gt;\n    ProxyCommand ssh &lt;bastion-username&gt;@linux-bastion-ex.tudelft.nl -W %h:%p \nReplace: : a name for you choice for the targe host, e.g., my-server : the actual name of the target host (FQDM), e.g, server.tudelft.nl : the username used to login to the target host : the username used to login to the bastion server\n\nCreate a key-pair on the local machine.\n\n$ ssh-keygen -f ~/.ssh/&lt;my-keyname&gt; -t rsa -b 4096\nYou will be promted to crate a passphrase, we recommend you to add one to make the connection more secure. The passphrase will be asked every time you connect to the target host.\nA private and public keys will be added to ~/.ssh. The public key is in the &lt;my-keyname&gt;.pub\n\nCopy the content of the public key to the ~/.ssh/authorized_keys file in the target host.\nConnect to the target host using ssh tunneling. Use your bastion-password when asked.\n\n$ ssh &lt;host-nickname&gt;\nIf you encounter problems with the connection. Use the debug mode ssh -vvv &lt;host-nickname&gt; to find out what might have gone wrong.",
-    "crumbs": [
-      "<ins>Guides</ins>",
-      "![](/docs/img/gear.svg){height=1em style='filter: invert(0.5) sepia(1) saturate(5) hue-rotate(175deg)'} **Computing Infrastructure**",
-      "Remote servers",
-      "Configure SSH Tunneling"
-    ]
-  },
-  {
-    "objectID": "docs/infrastructure/VPS_SSH.html#tunneling-with-winscp",
-    "href": "docs/infrastructure/VPS_SSH.html#tunneling-with-winscp",
-    "title": "Configure SSH Tunneling",
-    "section": "Tunneling with WinSCP",
-    "text": "Tunneling with WinSCP\nWinSCP is a GUI that makes it very easy to inspect, edit and transfer files on the webserver. Instructions for setting this up on a hypothetical server from the CiTG faculty are provided below. General documentation on tunneling with WinSCP are here: https://winscp.net/eng/docs/ui_login_tunnel\nThese instructions were tested with an existing id_ed25519 key, assume you already have WinSCP installed and can modify a text file on the server in your user directory using the terminal.\nDo the following:\n\nAs explained above, log in to the server and add your public key to the file /home/&lt;username&gt;/.ssh/authorized_keys (this only needs to be done once).\n\nIt should look like this with your own keys XXXXXXX and NetID filled between the &lt;...&gt; (note the &lt;XXXXXXX&gt; is much longer in reality):\nssh-rsa &lt;XXXXXXX&gt; ICT-SYSTEMS-&lt;NETID&gt;\nssh-rsa &lt;XXXXXXX&gt; ICT-SYSTEMS-&lt;NETID&gt;\nssh-ed25519 &lt;XXXXXXX&gt; &lt;NETID&gt;@tudelft.nl\n\nUsing WinSCP, the following fields should be entered:\n\nOn the main login settings page: - File protocol: SFTP - Host name: &lt;server&gt;.citg.tudelft.nl - User name: your NetID\n\nOpen the “Advanced…” window\nOn the page “Tunnel” (under heading “Connection,” still in the Advanced window):\n\n\nHost name: linux-bastion-ex.tudelft.nl\nUser name: your NetID\n\n\nOn the page “Authentication” (under heading “SSH,” still in the Advanced window):\n\n\nPrivate key file: select your private key file, for example C:..../&lt;username&gt;/.ssh/id_ed25519\nNote that the app may ask you to convert your existing key to a Putty format (for example “Do you want to convert OpenSSH private key to PuTTY format?”). Click “OK” then make sure you select the new PuTTY file (e.g., C:..../&lt;username&gt;/.ssh/id_ed25519.ppk)\n\n\nSave the setting and click “Login”, using your NetID password to authenticate.\n\n\nUsing WinSCP with sudo rights\nIf you have sudo rights on the webserver you can use this via WinSCP as follows:\n\nOnce agin go to the “Advanced…” window to the “SFTP” page under heading “Environment”\nIn field “SFTP server” enter the following: sudo /usr/lib/openssh/sftp-server\nSave the changes\nUse with caution!\n\nNote that the path to sftp-server may be different but can be easily checked and arranged. This will not work if you change the setting and continue to use an open session.",
-    "crumbs": [
-      "<ins>Guides</ins>",
-      "![](/docs/img/gear.svg){height=1em style='filter: invert(0.5) sepia(1) saturate(5) hue-rotate(175deg)'} **Computing Infrastructure**",
-      "Remote servers",
-      "Configure SSH Tunneling"
+      "Setting up SSH tunneling"
     ]
   },
   {

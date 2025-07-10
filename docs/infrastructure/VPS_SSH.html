@@ -6,8 +6,10 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="dcterms.date" content="2025-07-01">
+<meta name="description" content="how to set up a single-step SSH connection to a VPS using SSH tunneling">
 
-<title>Configure SSH Tunneling</title>
+<title>Set up SSH tunneling for a VPS</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -337,7 +339,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../docs/infrastructure/getting_started.html"><img src="../../docs/img/gear.svg" style="filter: invert(0.5) sepia(1) saturate(5) hue-rotate(175deg);height:1em"> <strong>Computing Infrastructure</strong></a></li><li class="breadcrumb-item"><a href="../../docs/infrastructure/remote_servers.html">Remote servers</a></li><li class="breadcrumb-item"><a href="../../docs/infrastructure/VPS_SSH.html">Configure SSH Tunneling</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../docs/infrastructure/getting_started.html"><img src="../../docs/img/gear.svg" style="filter: invert(0.5) sepia(1) saturate(5) hue-rotate(175deg);height:1em"> <strong>Computing Infrastructure</strong></a></li><li class="breadcrumb-item"><a href="../../docs/infrastructure/remote_servers.html">Remote servers</a></li><li class="breadcrumb-item"><a href="../../docs/infrastructure/VPS_SSH.html">Setting up SSH tunneling</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -400,13 +402,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../docs/infrastructure/VPS_SSH.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text">Configure SSH Tunneling</span></a>
+ <span class="menu-text">Setting up SSH tunneling</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../docs/infrastructure/moving_data.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Moving data to your server</span></a>
+ <span class="menu-text">Moving data to remote servers</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -1040,11 +1042,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#set-a-default-ssh-tunneling-for-a-host-linux-terminal" id="toc-set-a-default-ssh-tunneling-for-a-host-linux-terminal" class="nav-link active" data-scroll-target="#set-a-default-ssh-tunneling-for-a-host-linux-terminal">Set a Default SSH Tunneling for a Host (Linux Terminal)</a></li>
-  <li><a href="#tunneling-with-winscp" id="toc-tunneling-with-winscp" class="nav-link" data-scroll-target="#tunneling-with-winscp">Tunneling with WinSCP</a>
-  <ul class="collapse">
-  <li><a href="#using-winscp-with-sudo-rights" id="toc-using-winscp-with-sudo-rights" class="nav-link" data-scroll-target="#using-winscp-with-sudo-rights">Using WinSCP with sudo rights</a></li>
-  </ul></li>
+  <li><a href="#prerequisites" id="toc-prerequisites" class="nav-link active" data-scroll-target="#prerequisites">Prerequisites</a></li>
+  <li><a href="#steps-for-linux-and-macos" id="toc-steps-for-linux-and-macos" class="nav-link" data-scroll-target="#steps-for-linux-and-macos">Steps for Linux and macOS</a></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/TU-Delft-DCC/TU-Delft-DCC.github.io/issues/new/choose" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div></nav>
     </div>
@@ -1052,21 +1051,34 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <main class="content" id="quarto-document-content">
 
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../docs/infrastructure/getting_started.html"><img src="../../docs/img/gear.svg" style="filter: invert(0.5) sepia(1) saturate(5) hue-rotate(175deg);height:1em"> <strong>Computing Infrastructure</strong></a></li><li class="breadcrumb-item"><a href="../../docs/infrastructure/remote_servers.html">Remote servers</a></li><li class="breadcrumb-item"><a href="../../docs/infrastructure/VPS_SSH.html">Configure SSH Tunneling</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../docs/infrastructure/getting_started.html"><img src="../../docs/img/gear.svg" style="filter: invert(0.5) sepia(1) saturate(5) hue-rotate(175deg);height:1em"> <strong>Computing Infrastructure</strong></a></li><li class="breadcrumb-item"><a href="../../docs/infrastructure/remote_servers.html">Remote servers</a></li><li class="breadcrumb-item"><a href="../../docs/infrastructure/VPS_SSH.html">Setting up SSH tunneling</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">Configure SSH Tunneling</h1>
-</div>
+<h1 class="title">Set up SSH tunneling for a VPS</h1>
+  <div class="quarto-categories">
+    <div class="quarto-category">ssh tunneling</div>
+    <div class="quarto-category">ssh keys</div>
+    <div class="quarto-category">bastion host</div>
+    <div class="quarto-category">vps</div>
+    <div class="quarto-category">scp</div>
+  </div>
+  </div>
 
 
 
 <div class="quarto-title-meta">
 
     
+    <div>
+    <div class="quarto-title-meta-heading">Last reviewed</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">July 1, 2025</p>
+    </div>
+  </div>
   
     <div>
     <div class="quarto-title-meta-heading">Last modified</div>
     <div class="quarto-title-meta-contents">
-      <p class="date-modified">July 9, 2025</p>
+      <p class="date-modified">July 3, 2025</p>
     </div>
   </div>
     
@@ -1077,74 +1089,107 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 <script async="" defer="" src="https://scripts.simpleanalyticscdn.com/latest.js"></script>
-<p>To connect to a remote host, TU Delft uses a <em>proxy server</em>, know as <strong>bastion</strong>. To reach a remote host, a user has to connect first to the <strong>bastion</strong> and from there to the remote host. However, a user can connect directly to the remote host using <em>ssh tunneling</em>.</p>
-<section id="set-a-default-ssh-tunneling-for-a-host-linux-terminal" class="level2">
-<h2 class="anchored" data-anchor-id="set-a-default-ssh-tunneling-for-a-host-linux-terminal">Set a Default SSH Tunneling for a Host (Linux Terminal)</h2>
-<ol type="1">
-<li>On your local machine, edit the <code>~/.ssh/config</code> file and add the following confuration:</li>
-</ol>
-<div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">Host</span> <span class="op">&lt;</span>host-nickname<span class="op">&gt;</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>    <span class="ex">HostName</span> <span class="op">&lt;</span>target-host<span class="op">&gt;</span></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>    <span class="ex">User</span> <span class="op">&lt;</span>target-username<span class="op">&gt;</span></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>    <span class="ex">ProxyCommand</span> ssh <span class="op">&lt;</span>bastion-username<span class="op">&gt;</span>@linux-bastion-ex.tudelft.nl <span class="at">-W</span> %h:%p </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>Replace: <strong><host-nickname>:</host-nickname></strong> a name for you choice for the targe host, e.g., <code>my-server</code> <strong><target-host>:</target-host></strong> the actual name of the target host (FQDM), e.g, <code>server.tudelft.nl</code> <strong><target-username>:</target-username></strong> the username used to login to the target host <strong><bastion-username>:</bastion-username></strong> the username used to login to the bastion server</p>
-<ol type="1">
-<li>Create a key-pair on the local machine.</li>
-</ol>
-<div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> ssh-keygen <span class="at">-f</span> ~/.ssh/<span class="op">&lt;</span>my-keyname<span class="op">&gt;</span> -t rsa <span class="at">-b</span> 4096</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>You will be promted to crate a <em>passphrase</em>, we recommend you to add one to make the connection more secure. The passphrase will be asked every time you connect to the target host.</p>
-<p>A private and public keys will be added to <code>~/.ssh</code>. The public key is in the <code>&lt;my-keyname&gt;.pub</code></p>
-<ol start="3" type="1">
-<li><p>Copy the content of the public key to the <code>~/.ssh/authorized_keys</code> file in the target host.</p></li>
-<li><p>Connect to the target host using <em>ssh tunneling</em>. Use your <em>bastion-password</em> when asked.</p></li>
-</ol>
-<div class="sourceCode" id="cb3"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> ssh <span class="op">&lt;</span>host-nickname<span class="op">&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>If you encounter problems with the connection. Use the debug mode <code>ssh -vvv &lt;host-nickname&gt;</code> to find out what might have gone wrong.</p>
+<p>This guide explains how to set up a secure, single-step SSH connection to a Virtual Private Server (VPS) at TU Delft using SSH tunneling. By default, connecting to a VPS requires first accessing a <strong>Bastion Host</strong> (an intermediary server controlling access), making it a two-step process. Therefore, it is a <strong>two-step</strong> process: to reach a remote host, a user has to connect first to the bastion host and from there to the VPS. However, by using SSH tunneling and SSH keys, you can connect to your VPS and other remote hosts in a single step.</p>
+<p>With the method described below, you will be able to connect directly from your local machine to your VPS, bypassing the need to log in to the bastion host separately. This setup also simplifies secure file transfers between your local machine and the VPS.</p>
+<div class="callout callout-style-simple callout-important no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<i class="fa-solid fa-info-circle" aria-label="info-circle"></i> Accessing a VPS
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Depending on your geogaphic location, access to a VPS via SSH may be blocked by the TU Delft firewall. In such cases, you must use a VPN connection via <a href="https://www.eduvpn.org/">eduVPN</a>. Access if usally blocked if you are connecting from your home network.</p>
+</div>
+</div>
+<section id="prerequisites" class="level3">
+<h3 class="anchored" data-anchor-id="prerequisites">Prerequisites</h3>
+<p>Before starting, you need:</p>
+<ul>
+<li>A TU Delft NetID.</li>
+<li>Access to a VPS provided by TU Delft ICT, including a username and password.</li>
+<li>An SSH client installed on your local machine (usually included with most Linux and macOS distributions; for Windows, you can use a third-party SSH client like <a href="https://www.putty.org/">PuTTY</a>).</li>
+<li>ALinux or macOS terminal</li>
+</ul>
 </section>
-<section id="tunneling-with-winscp" class="level2">
-<h2 class="anchored" data-anchor-id="tunneling-with-winscp">Tunneling with WinSCP</h2>
-<p>WinSCP is a GUI that makes it very easy to inspect, edit and transfer files on the webserver. Instructions for setting this up on a hypothetical server from the CiTG faculty are provided below. General documentation on tunneling with WinSCP are here: https://winscp.net/eng/docs/ui_login_tunnel</p>
-<p><em>These instructions were tested with an existing <code>id_ed25519</code> key, assume you already have WinSCP installed and can modify a text file on the server in your user directory using the terminal.</em></p>
-<p>Do the following:</p>
+<section id="steps-for-linux-and-macos" class="level3">
+<h3 class="anchored" data-anchor-id="steps-for-linux-and-macos">Steps for Linux and macOS</h3>
+<div class="callout callout-style-simple callout-tip no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<i class="fa-solid fa-lightbulb" aria-label="lightbulb"></i> Summary of steps
+</div>
+</div>
+<div class="callout-body-container callout-body">
 <ol type="1">
-<li>As explained above, log in to the server and add your public key to the file <code>/home/&lt;username&gt;/.ssh/authorized_keys</code> (this only needs to be done once).</li>
+<li>Create SSH keys.</li>
+<li>Copy SSH keys to bastion host and remote server.</li>
+<li>Create a new host for SSH connection.</li>
+<li>Test connection</li>
 </ol>
-<p>It should look like this with your own keys <code>XXXXXXX</code> and NetID filled between the <code>&lt;...&gt;</code> (note the <code>&lt;XXXXXXX&gt;</code> is much longer in reality):</p>
-<div class="sourceCode" id="cb4"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="ex">ssh-rsa</span> <span class="op">&lt;</span>XXXXXXX<span class="op">&gt;</span> ICT-SYSTEMS-<span class="op">&lt;</span>NETID<span class="op">&gt;</span></span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="ex">ssh-rsa</span> <span class="op">&lt;</span>XXXXXXX<span class="op">&gt;</span> ICT-SYSTEMS-<span class="op">&lt;</span>NETID<span class="op">&gt;</span></span>
-<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="ex">ssh-ed25519</span> <span class="op">&lt;</span>XXXXXXX<span class="op">&gt;</span> <span class="op">&lt;</span>NETID<span class="op">&gt;</span>@tudelft.nl</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+<section id="set-up-ssh-tunneling-for-a-host-linux-terminal" class="level4">
+<h4 class="anchored" data-anchor-id="set-up-ssh-tunneling-for-a-host-linux-terminal"><strong>Set up SSH tunneling for a host (Linux Terminal)</strong></h4>
+<ol type="1">
+<li>If you do not have an SSH key-pair, create one on the local machine. Go to the terminal and enter the following command. Replace <code>&lt;my-keyname&gt;</code> with a name of your choice for the SSH key, e.g., <code>id_rsa</code> or <code>id_ed25519</code>.</li>
+</ol>
+<div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span>  ssh-keygen <span class="at">-t</span> ed25519 <span class="at">-f</span> ~/.ssh/<span class="op">&lt;</span>my-keyname<span class="op">&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>You will be promted to crate a <em>passphrase</em>. We recommend you to add one to make the connection more secure. The passphrase will be asked every time you connect to the VPS. To skip the passphrase, press <code>Enter</code> when prompted. You should see something like this:</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ex">Generating</span> public/private ed25519 key pair.</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="ex">Enter</span> passphrase for <span class="st">"ed25519"</span> <span class="er">(</span><span class="ex">empty</span> for no passphrase<span class="kw">)</span><span class="bu">:</span> </span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="ex">Enter</span> same passphrase again: </span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="ex">Your</span> identification has been saved in ~/.ssh/<span class="op">&lt;</span>my-keyname<span class="op">&gt;</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="ex">Your</span> public key has been saved in ~/.ssh/<span class="op">&lt;</span>my-keyname<span class="op">&gt;</span>.pub</span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a><span class="ex">The</span> key fingerprint is:</span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a><span class="ex">SHA256:6j06srvun06gJ5UCmD+MVq6RsPuytCO5mF4hTELnWTg</span> root@local-machine</span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a><span class="ex">The</span> key<span class="st">'s randomart image is:</span></span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a><span class="st">+--[ED25519 256]--+</span></span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a><span class="st">| . ...           |</span></span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a><span class="st">|o.oEo            |</span></span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a><span class="st">|*. +.            |</span></span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a><span class="st">|=*+  .           |</span></span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a><span class="st">|o*=o+   S        |</span></span>
+<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a><span class="st">|..+=.. .         |</span></span>
+<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a><span class="st">|.+o.. o          |</span></span>
+<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a><span class="st">|*+oo.o.o.        |</span></span>
+<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a><span class="st">|B*oo*B*o..       |</span></span>
+<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a><span class="st">+----[SHA256]-----+</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>A private and public key will be added to <code>~/.ssh</code>.</p>
+<p>The <strong>public key is the file with the <code>.pub</code> extension</strong>, e.g., <code>&lt;my-keyname&gt;.pub</code></p>
+<div class="callout callout-style-simple callout-tip no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<i class="fa-solid fa-lightbulb" aria-label="lightbulb"></i> Tip
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Similar to passwords, it is advised to rotate your SSH keys regularly (e.g., every 6 months). You can do this by generating a new key pair and replacing the old one on your local machine and VPS.</p>
+</div>
+</div>
 <ol start="2" type="1">
-<li>Using WinSCP, the following fields should be entered:</li>
+<li><p>Log in to your VPS and, copy the <strong>content</strong> of your <strong>public key</strong> into the VPS <code>~/.ssh/authorized_keys</code> file. You can achieve this by copying the content of the public key file to the clipboard and pasting it into the <code>authorized_keys</code> file on the VPS. Be mindful and not remove anything from this file, or other SSH connections might stop working. Finally, save the file.</p></li>
+<li><p>Create a new host for SSH connection. On your local machine, edit the <code>~/.ssh/config</code> file and add the following configuration. If the file does not exist, create it.</p></li>
 </ol>
-<p>On the main login settings page: - File protocol: <code>SFTP</code> - Host name: <code>&lt;server&gt;.citg.tudelft.nl</code> - User name: your NetID</p>
-<ol start="3" type="1">
-<li><p>Open the “Advanced…” window</p></li>
-<li><p>On the page “Tunnel” (under heading “Connection,” still in the Advanced window):</p></li>
+<div class="sourceCode" id="cb3"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="ex">Host</span> <span class="op">&lt;</span>host-nickname<span class="op">&gt;</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>    <span class="ex">HostName</span> <span class="op">&lt;</span>target-host<span class="op">&gt;</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>    <span class="ex">User</span> <span class="op">&lt;</span>target-username<span class="op">&gt;</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>    <span class="ex">ProxyJump</span> <span class="op">&lt;</span>target-username<span class="op">&gt;</span>@linux-bastion-ex.tudelft.nl</span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>    <span class="ex">IdentityFile</span> ~/.ssh/<span class="op">&lt;</span>my-keyname<span class="op">&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Replace: <strong><host-nickname>:</host-nickname></strong> a name of your choice for the target host, e.g., <code>my-server</code> <strong><target-host>:</target-host></strong> the actual name of the target host (FQDM), e.g, <code>server.tudelft.nl</code> <strong><target-username>:</target-username></strong> the username used to log in to the target host, usually your NetID <strong><bastion-username>:</bastion-username></strong> the username used to log in to the bastion server <strong><my-keyname>:</my-keyname></strong> the name of the SSH private key you created, e.g., <code>id_rsa</code>. If your private key is stored in a different location, replace the path accordingly.</p>
+<ol start="4" type="1">
+<li>Test the SSH tunneling connection. Connect to the VPS using <em>SSH tunneling</em> by typing the command below. Use your <em>bastion-password</em> when asked. This is usually the password associated with your NetID.</li>
 </ol>
-<ul>
-<li>Host name: <code>linux-bastion-ex.tudelft.nl</code></li>
-<li>User name: your NetID</li>
-</ul>
-<ol start="5" type="1">
-<li>On the page “Authentication” (under heading “SSH,” still in the Advanced window):</li>
-</ol>
-<ul>
-<li>Private key file: select your private key file, for example <code>C:..../&lt;username&gt;/.ssh/id_ed25519</code></li>
-<li>Note that the app may ask you to convert your existing key to a Putty format (for example “Do you want to convert OpenSSH private key to PuTTY format?”). Click “OK” then make sure you select the new PuTTY file (e.g., <code>C:..../&lt;username&gt;/.ssh/id_ed25519.ppk</code>)</li>
-</ul>
-<ol start="6" type="1">
-<li>Save the setting and click “Login”, using your NetID password to authenticate.</li>
-</ol>
-<section id="using-winscp-with-sudo-rights" class="level3">
-<h3 class="anchored" data-anchor-id="using-winscp-with-sudo-rights">Using WinSCP with sudo rights</h3>
-<p>If you have sudo rights on the webserver you can use this via WinSCP as follows:</p>
-<ol type="1">
-<li>Once agin go to the “Advanced…” window to the “SFTP” page under heading “Environment”</li>
-<li>In field “SFTP server” enter the following: <code>sudo /usr/lib/openssh/sftp-server</code></li>
-<li>Save the changes</li>
-<li>Use with caution!</li>
-</ol>
-<p>Note that the path to <code>sftp-server</code> may be different but can be easily checked and arranged. This will not work if you change the setting and continue to use an open session.</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> ssh <span class="op">&lt;</span>host-nickname<span class="op">&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>If you encounter problems with the connection, use the debug mode <code>ssh -vvv &lt;host-nickname&gt;</code> to find out what might have gone wrong. This command will provide detailed information about the connection process and can help you troubleshoot any issues.</p>
 
 
 </section>
@@ -1570,8 +1615,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../../docs/infrastructure/moving_data.html" class="pagination-link" aria-label="Moving data to your server">
-        <span class="nav-page-text">Moving data to your server</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../../docs/infrastructure/moving_data.html" class="pagination-link" aria-label="Moving data to remote servers">
+        <span class="nav-page-text">Moving data to remote servers</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
