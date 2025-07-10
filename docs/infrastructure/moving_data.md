@@ -16,12 +16,12 @@ language:
 
 # Title of the document [manual entry]
 # Uncomment and populate the next line accordingly
-title: Moving Data to Remote Servers
+title: Moving data to remote servers
 
 # Brief overview of the document (will be used in listings) [manual entry]
 # Uncomment and populate the next line and uncomment "hide-description: true".
 description: Securely transfer data to and from TU Delft virtual servers using SCP or Citrix.
-#hide-description: true
+hide-description: true
 
 # Authors of the document, will not be parsed [manual entry]
 # Uncomment and populate the next lines accordingly
@@ -54,17 +54,18 @@ The procedure is different depending on whether the server runs a Windows or Lin
 
 ## Linux Servers
 
-The `scp` command is a secure file transfer utility that allows you to copy files between Linux-based hosts (these includes MacOS) on a network. It uses SSH for data transfer, providing the same authentication and security as SSH.
-Common cases in which you need to transfer data between hosts include: uploading scripts, downloading results, or transferring configuration files. 
+The `scp` command is a secure file transfer utility that allows you to copy files between Linux-based hosts (this includes macOS) on a network. It uses SSH for data transfer, providing the same authentication and security as SSH. Common scenarios in which you might need to transfer data between hosts include uploading scripts, downloading results, or transferring configuration files.
 
-:::{.callout-tip}
-## Moving large data batches
-If you need to transfer large files or a multititude of small files, consider using tools like [rclone](https://rclone.org/) or [rsync](https://rsync.samba.org/) instead. The  instructions below are for transferring small or few files one at the time.  
+:::{.callout-tip appearance="simple" icon="false"}
+## {{< fa lightbulb >}} Moving large data batches
+
+If you need to transfer large files or a multitude of small files, consider using tools like [rclone](https://rclone.org/) or [rsync](https://rsync.samba.org/) instead. The instructions below are for transferring small files or a few files at a time.
 :::
 
-:::{.callout-important}
-## Overwriting files
-Notice that `scp` will overwrite files in the destination directory if they already exist without prompting. Always double-check the paths and filenames to avoid accidental data loss.
+:::{.callout-important appearance="simple" icon="false"}
+## {{< fa info-circle >}} Overwriting files
+
+Notice that `scp` will overwrite files in the destination directory without prompting if they already exist. Always double-check the paths and filenames to avoid accidental data loss.
 :::
 
 ### Prerequisites
