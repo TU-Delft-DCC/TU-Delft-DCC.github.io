@@ -93,14 +93,14 @@ scp <target-username>@<remote-host>:<full-path/my-remote-file> <path-my-local-di
 Some directories on the remote host may require elevated permissions to write files. If you encounter a "Permission denied" error, you may need to use `sudo` to copy files to those directories. However, using `scp` with `sudo` directly is not supported. Instead, you can copy the file to a temporary directory `/tmp` where you have write access and then move it to the desired location using `sudo` after connecting to the remote host.
 :::
 
-### Transfering files using ProxyJump
+### Transferring files using `ProxyJump`
 
-For the case of a VPS hosted by TU Delft, you need to copy data to a remote host via a bastion host (intermediary server). Therefore, you have to use the  `-o` option of `scp` to specify a  `ProxyJump`  that will connect to the bastion host first.  Alternatively, you can chose to transfer files using [SSH tunneling](#transfering-files-using-ssh-tunneling).
+In the case of a VPS hosted by TU Delft, you need to copy data to a remote host via a bastion host (an intermediary server). Therefore, you must use the `-o` option of `scp` to specify a `ProxyJump` that will connect to the bastion host first. Alternatively, you can choose to transfer files using [SSH tunneling](#transferring-files-using-ssh-tunneling).
 
 #### Transfer to remote host
 
 ```bash
-# If using default SSH key name, for example, id_ed25519 or  id_rsa
+# If using default SSH key name, for example, id_ed25519 or id_rsa
 scp -o "ProxyJump <bastion-username>@linux-bastion-ex.tudelft.nl" <path-my-local-file> \ 
 <target-username>@<remote-host>:<full-path/remote-directory>/
 
@@ -113,7 +113,7 @@ scp  -i <path-to-custom-private-ssh-key> -o "ProxyJump <bastion-username>@linux-
 #### Transfer from remote host
 
 ```bash
-# If using default SSH key name, for example, id_ed25519 or  id_rsa
+# If using default SSH key name, for example, id_ed25519 or id_rsa
 scp -o "ProxyJump <bastion-username>@linux-bastion-ex.tudelft.nl" \ 
 <target-username>@<remote-host>:<full-path-remote-file>/ <path-my-local-directory>/
 
@@ -124,15 +124,15 @@ scp -i <path-to-custom-private-ssh-key> -o "ProxyJump <bastion-username>@linux-b
 
 ### Transferring files using SSH tunneling
 
-If [ssh tunneling](VPS_SSH.md) was configured correctly for the remote host, files could be copied to and from a remote host as follows:
+If [SSH tunneling](VPS_SSH.md) has been configured correctly for the remote host, you can copy files to and from a remote host as follows:
 
 ```bash
-# Copy TO Remote Host
+# Copy TO remote host
 $ <path-my-local-file> <host-nickname>:<full-path-remote-directory>/
 ```
 
 ```bash
-# Copy FROM Remote Host
+# Copy FROM remote host
 $ scp <host-nickname>:<full-path-remote-file>/ <path-my-local-directory>/ 
 ```
 
@@ -140,15 +140,15 @@ $ scp <host-nickname>:<full-path-remote-file>/ <path-my-local-directory>/
 
 Transferring data to and from a TU Delft Windows server is done via the Citrix platform, using the app's built-in menu shown in the image below.
 
-![Citrix Menu. Buttons from left to righ: Download, Upload, Multimonitor and Clipboard and Settings.](../img/citrix_menu.png){fig-align="left"}
+![Citrix Menu. Buttons from left to right: *Download*, *Upload*, *Multimonitor*, *Clipboard*, and *Settings*.](../img/citrix_menu.png){fig-align="left"}
 
 ### Transferring files
 
-1. Open a web browser and log into your Windows server in the usual way, using the [Citrix portal](https://weblogin.tudelft.nl/Citrix/TUDAppsWeb/).
-2. Open the Citrix menu located at the center-top of the server window and click on the _Upload_ or _Download_ button as shown in the image above.
-3. A pop-up window will open on which you can select the files you wish to transfer to the server.
+1. Open a web browser and log into your Windows server as usual via the [Citrix portal](https://weblogin.tudelft.nl/Citrix/TUDAppsWeb/).
+2. Open the Citrix menu located at the center-top of the server window and click on the _Upload_ or _Download_ button, as shown in the image above.
+3. A pop-up window will open on where you can select the files you wish to transfer to the server.
 
-It is not possible to directly transfer files to or from the server's C: or D: drive. Instead, you upload or download files to your personal TU Delft drive which is connected to the server. Using the Windows File Explorer and standard copy-paste or drag-and-drop operations you can transfer the data from your personal drive to the server's C: or D: drives.
+It is not possible to directly transfer files to or from the server's C: or D: drives. Instead, you upload or download files to your personal TU Delft drive which is connected to the server. Using the Windows File Explorer and standard copy/paste or drag-and-drop operations, you can transfer the data from your personal drive to the server's C: or D: drives.
  
 ::: {.callout-warning appearance="simple" icon="false"}
 ## {{< fa info-circle >}} Warning
