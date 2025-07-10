@@ -3,10 +3,10 @@
 
 # We use this key to indicate the last reviewed date [manual entry, use YYYY-MM-DD]
 # Uncomment and populate the next line accordingly
-#date: YYYY-MM-DD
+date: 2025-07-01
 
-# We use this key to indicate the last modified date [automatic entry]
-date-modified: last-modified
+# We use this key to indicate the last modified date [manual entry, use YYYY-MM-DD]
+date-modified: 2025-07-03
 
 # Do not modify
 lang: en
@@ -16,21 +16,21 @@ language:
 
 # Title of the document [manual entry]
 # Uncomment and populate the next line accordingly
-title: Configure SSH Tunneling
+title: Set up SSH tunneling for a VPS
 
 # Brief overview of the document (will be used in listings) [manual entry]
 # Uncomment and populate the next line and uncomment "hide-description: true".
-#description: Short description of the document
-#hide-description: true
+description: how to set up a single-step SSH connection to a VPS using SSH tunneling
+hide-description: true
 
 # Authors of the document, will not be parsed [manual entry]
 # Uncomment and populate the next lines accordingly
-#author_1: Name Surname
+author_1: Manuel Garcia
 #author_2:
 
 # Maintainers of the document, will not be parsed [manual entry]
 # Uncomment and populate the next lines accordingly
-#maintainer_1: Name Surname
+maintainer_1: Manuel Garcia
 #maintainer_2:
 
 # To whom reach out regarding the document, will not be parsed [manual entry]
@@ -39,94 +39,112 @@ title: Configure SSH Tunneling
 
 # Meaningful keywords, newline separated [manual entry]
 # Uncomment and populate the next line and list accordingly
-#categories: 
-# - 
-# - 
+categories: 
+- ssh tunneling
+- ssh keys
+- bastion host
+- vps 
+- scp
 
 ---
 
-To connect to a remote host, TU Delft uses a *proxy server*, know as  **bastion**. To reach a remote host, a user has to connect first to the **bastion** and from there to the remote host. However, a user can connect directly to the remote host using *ssh tunneling*.
+This guide explains how to set up a secure, single-step SSH connection to a Virtual Private Server (VPS) at TU Delft using SSH tunneling. By default, connecting to a VPS requires first accessing a **Bastion Host** (an intermediary server controlling access), making it a two-step process. Therefore, it is a **two-step** process: to reach a remote host, a user has to connect first to the bastion host and from there to the VPS. However, by using SSH tunneling and SSH keys, you can connect to your VPS and other remote hosts in a single step.
 
-## Set a Default SSH Tunneling for a Host (Linux Terminal)
+With the method described below, you will be able to connect directly from your local machine to your VPS, bypassing the need to log in to the bastion host separately. This setup also simplifies secure file transfers between your local machine and the VPS.
 
-1. On your local machine, edit the `~/.ssh/config` file and add the following confuration:
+:::{.callout-important appearance="simple" icon="false"}
+## {{< fa info-circle >}} Accessing a VPS
+Depending on your geogaphic location, access to a VPS via SSH may be blocked by the TU Delft firewall. In such cases, you must use a VPN connection via [eduVPN](https://www.eduvpn.org/). Access if usally blocked if you are connecting from your home network. 
+:::
+
+### Prerequisites
+Before starting, you need:
+
+* A TU Delft NetID.
+* Access to a VPS provided by TU Delft ICT, including a username and password.
+* An SSH client installed on your local machine (usually included with most Linux and macOS distributions; for Windows, you can use a third-party SSH client like [PuTTY](https://www.putty.org/)).
+* ALinux or macOS terminal
+
+### Steps for Linux and macOS
+
+:::{.callout-tip appearance="simple" icon="false"}
+## {{< fa lightbulb >}} Summary of steps
+1. Create SSH keys.
+2. Copy SSH keys to bastion host and remote server.
+3. Create a new host for SSH connection.
+4. Test connection
+:::
+
+
+#### **Set up SSH tunneling for a host (Linux Terminal)**
+
+1. If you do not have an SSH key-pair, create one on the local machine. Go to the terminal and enter the following command. Replace `<my-keyname>` with a name of your choice for the SSH key, e.g., `id_rsa` or `id_ed25519`.
+
+```bash
+$  ssh-keygen -t ed25519 -f ~/.ssh/<my-keyname>
+```
+
+
+You will be promted to crate a *passphrase*. We recommend you to add one to make the connection more secure. The passphrase will be asked every time you connect to the VPS. To skip the passphrase, press `Enter` when prompted. You should see something like this:
+
+``` bash
+Generating public/private ed25519 key pair.
+Enter passphrase for "ed25519" (empty for no passphrase): 
+Enter same passphrase again: 
+Your identification has been saved in ~/.ssh/<my-keyname>
+Your public key has been saved in ~/.ssh/<my-keyname>.pub
+The key fingerprint is:
+SHA256:6j06srvun06gJ5UCmD+MVq6RsPuytCO5mF4hTELnWTg root@local-machine
+The key's randomart image is:
++--[ED25519 256]--+
+| . ...           |
+|o.oEo            |
+|*. +.            |
+|=*+  .           |
+|o*=o+   S        |
+|..+=.. .         |
+|.+o.. o          |
+|*+oo.o.o.        |
+|B*oo*B*o..       |
++----[SHA256]-----+
+```
+
+A private and public key will be added to `~/.ssh`. 
+
+The **public key is the file with the `.pub` extension**, e.g., `<my-keyname>.pub`
+
+:::{.callout-tip appearance="simple" icon="false"}
+## {{< fa lightbulb >}} Tip
+Similar to passwords, it is advised to rotate your SSH keys regularly (e.g., every 6 months). You can do this by generating a new key pair and replacing the old one on your local machine and VPS.
+:::
+
+
+2. Log in to your VPS and, copy the **content** of your **public key** into the VPS `~/.ssh/authorized_keys` file. You can achieve this by copying the content of the public key file to the clipboard and pasting it into the `authorized_keys` file on the VPS. Be mindful and not remove anything from this file, or other SSH connections might stop working. Finally, save the file.
+
+
+
+3. Create a new host for SSH connection. On your local machine, edit the `~/.ssh/config` file and add the following configuration. If the file does not exist, create it.
 
 ```bash 
 Host <host-nickname>
     HostName <target-host>
     User <target-username>
-    ProxyCommand ssh <bastion-username>@linux-bastion-ex.tudelft.nl -W %h:%p 
+    ProxyJump <target-username>@linux-bastion-ex.tudelft.nl
+    IdentityFile ~/.ssh/<my-keyname>
 ```
+
 Replace:
-**<host-nickname>:** a name for you choice for the targe host, e.g., `my-server`
+**<host-nickname>:** a name of your choice for the target host, e.g., `my-server`
 **<target-host>:** the actual name of the target host (FQDM), e.g, `server.tudelft.nl`
-**<target-username>:**  the username used to login to the target host
-**<bastion-username>:** the username used to login to the bastion server
+**<target-username>:**  the username used to log in to the target host, usually your NetID
+**<bastion-username>:** the username used to log in to the bastion server
+**<my-keyname>:** the name of the SSH private key you created, e.g., `id_rsa`. If your private key is stored in a different location, replace the path accordingly.
 
-1. Create a key-pair on the local machine.
 
-```bash
-$ ssh-keygen -f ~/.ssh/<my-keyname> -t rsa -b 4096
-```
-You will be promted to crate a *passphrase*, we recommend you to add one to make the connection more secure. The passphrase will be asked every time you connect to the target host.
-
-A private and public keys will be added to `~/.ssh`. The public key is in the `<my-keyname>.pub`
-
-3. Copy the content of the public key to the `~/.ssh/authorized_keys` file in the target host.
-
-4. Connect to the target host using *ssh tunneling*. Use your *bastion-password* when asked.
+4. Test the SSH tunneling connection. Connect to the VPS using *SSH tunneling* by typing the command below. Use your *bastion-password* when asked. This is usually the password associated with your NetID.
 
 ```bash
 $ ssh <host-nickname>
 ```
 
-If you encounter problems with the connection. Use the debug mode `ssh -vvv <host-nickname>` to find out what might have gone wrong.
-
-
-## Tunneling with WinSCP
-
-WinSCP is a GUI that makes it very easy to inspect, edit and transfer files on the webserver. Instructions for setting this up on a hypothetical server from the CiTG faculty are provided below. General documentation on tunneling with WinSCP are here: https://winscp.net/eng/docs/ui_login_tunnel
-
-_These instructions were tested with an existing `id_ed25519` key, assume you already have WinSCP installed and can modify a text file on the server in your user directory using the terminal._
-
-Do the following:
-
-1. As explained above, log in to the server and add your public key to the file `/home/<username>/.ssh/authorized_keys` (this only needs to be done once).
-
-It should look like this with your own keys `XXXXXXX` and NetID filled between the `<...>` (note the `<XXXXXXX>` is much longer in reality):
-
-```bash
-ssh-rsa <XXXXXXX> ICT-SYSTEMS-<NETID>
-ssh-rsa <XXXXXXX> ICT-SYSTEMS-<NETID>
-ssh-ed25519 <XXXXXXX> <NETID>@tudelft.nl
-```
-
-2. Using WinSCP, the following fields should be entered:
-
-On the main login settings page:
-- File protocol: `SFTP`
-- Host name: `<server>.citg.tudelft.nl`
-- User name: your NetID
-
-3. Open the "Advanced..." window
-
-4. On the page "Tunnel" (under heading "Connection," still in the Advanced window):
-- Host name: `linux-bastion-ex.tudelft.nl`
-- User name: your NetID
-
-5. On the page "Authentication" (under heading "SSH," still in the Advanced window):
-- Private key file: select your private key file, for example `C:..../<username>/.ssh/id_ed25519`
-- Note that the app may ask you to convert your existing key to a Putty format (for example "Do you want to convert OpenSSH private key to PuTTY format?"). Click "OK" then make sure you select the new PuTTY file (e.g., `C:..../<username>/.ssh/id_ed25519.ppk`)
-
-6. Save the setting and click "Login", using your NetID password to authenticate.
-
-### Using WinSCP with sudo rights
-
-If you have sudo rights on the webserver you can use this via WinSCP as follows:
-
-1. Once agin go to the "Advanced..." window to the "SFTP" page under heading "Environment"
-2. In field "SFTP server" enter the following: `sudo /usr/lib/openssh/sftp-server`
-3. Save the changes
-4. Use with caution!
-
-Note that the path to `sftp-server` may be different but can be easily checked and arranged. This will not work if you change the setting and continue to use an open session.
+If you encounter problems with the connection, use the debug mode `ssh -vvv <host-nickname>` to find out what might have gone wrong. This command will provide detailed information about the connection process and can help you troubleshoot any issues.
