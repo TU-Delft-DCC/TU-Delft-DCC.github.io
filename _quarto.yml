@@ -106,7 +106,7 @@ website:
               - href: docs/infrastructure/VPS_SSH.md
                 text: Setting up SSH tunneling
               - href: docs/infrastructure/moving_data.md
-                text: Moving Data to Remote Servers
+                text: Moving data to remote servers
               - href: docs/infrastructure/VPS_SSL_Certs.md
                 text: Configure SSL certificates
               - href: docs/infrastructure/apache_webserver.md
