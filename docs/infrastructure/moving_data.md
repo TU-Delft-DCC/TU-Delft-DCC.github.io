@@ -87,8 +87,9 @@ scp <path-my-local-file> <target-username>@<remote-host>:<full-path/remote-direc
 scp <target-username>@<remote-host>:<full-path/my-remote-file> <path-my-local-directory>/
 ```
 
-:::{.callout-tip}
-## Moving files to restricted directories
+:::{.callout-tip appearance="simple" icon="false"}
+## {{< fa lightbulb >}} Moving files to restricted directories
+
 Some directories on the remote host may require elevated permissions to write files. If you encounter a "Permission denied" error, you may need to use `sudo` to copy files to those directories. However, using `scp` with `sudo` directly is not supported. Instead, you can copy the file to a temporary directory `/tmp` where you have write access and then move it to the desired location using `sudo` after connecting to the remote host.
 :::
 
