@@ -52,7 +52,7 @@ This section describes how to transfer data to and from a TU Delft virtual serve
 The procedure is different depending on whether the server runs a Windows or Linux-based operating system. Although there are many ways to transfer data from one machine to another, TU Delft servers only support a few of them.
 
 
-## Linux Servers
+## Linux servers
 
 The `scp` command is a secure file transfer utility that allows you to copy files between Linux-based hosts (this includes macOS) on a network. It uses SSH for data transfer, providing the same authentication and security as SSH. Common scenarios in which you might need to transfer data between hosts include uploading scripts, downloading results, or transferring configuration files.
 
@@ -74,7 +74,7 @@ Before starting, you need:
 * SCP (Secure Copy Protocol) installed on your local machine. SCP is a command-line utility that allows you to securely transfer files between hosts on a network.
 * SSH access to the remote host (e.g., VPS) you want to connect to.
 
-### Moving Data via SCP
+### Moving data via SCP
 To copy data to and from a remote host using the `scp` command, you can use the following syntax:
 
 ```bash
@@ -92,11 +92,11 @@ scp <target-username>@<remote-host>:<full-path/my-remote-file> <path-my-local-di
 Some directories on the remote host may require elevated permissions to write files. If you encounter a "Permission denied" error, you may need to use `sudo` to copy files to those directories. However, using `scp` with `sudo` directly is not supported. Instead, you can copy the file to a temporary directory `/tmp` where you have write access and then move it to the desired location using `sudo` after connecting to the remote host.
 :::
 
-### Transfering Files using ProxyJump
+### Transfering files using ProxyJump
 
 For the case of a VPS hosted by TU Delft, you need to copy data to a remote host via a bastion host (intermediary server). Therefore, you have to use the  `-o` option of `scp` to specify a  `ProxyJump`  that will connect to the bastion host first.  Alternatively, you can chose to transfer files using [SSH tunneling](#transfering-files-using-ssh-tunneling).
 
-#### Transfer to Remote Host
+#### Transfer to remote host
 
 ```bash
 # If using default SSH key name, for example, id_ed25519 or  id_rsa
@@ -109,7 +109,7 @@ scp  -i <path-to-custom-private-ssh-key> -o "ProxyJump <bastion-username>@linux-
 
 ```
 
-#### Transfer from Remote Host
+#### Transfer from remote host
 
 ```bash
 # If using default SSH key name, for example, id_ed25519 or  id_rsa
@@ -121,7 +121,7 @@ scp -i <path-to-custom-private-ssh-key> -o "ProxyJump <bastion-username>@linux-b
 <target-username>@<remote-host>:<full-path-remote-file>/ <path-my-local-directory>/
 ```
 
-### Transfering Files using SSH Tunneling
+### Transferring files using SSH tunneling
 
 If [ssh tunneling](VPS_SSH.md) was configured correctly for the remote host, files could be copied to and from a remote host as follows:
 
@@ -135,13 +135,13 @@ $ <path-my-local-file> <host-nickname>:<full-path-remote-directory>/
 $ scp <host-nickname>:<full-path-remote-file>/ <path-my-local-directory>/ 
 ```
 
-## Windows Servers
+## Windows servers
 
-Tranfering data to and from a TU Delft Windows server is done via the Citrix platform, using the app's built-in menu shown in the image below.
+Transferring data to and from a TU Delft Windows server is done via the Citrix platform, using the app's built-in menu shown in the image below.
 
 ![Citrix Menu. Buttons from left to righ: Download, Upload, Multimonitor and Clipboard and Settings.](../img/citrix_menu.png){fig-align="left"}
 
-### Transfering files
+### Transferring files
 
 1. Open a web browser and log into your Windows server in the usual way, using the [Citrix portal](https://weblogin.tudelft.nl/Citrix/TUDAppsWeb/).
 2. Open the Citrix menu located at the center-top of the server window and click on the _Upload_ or _Download_ button as shown in the image above.
