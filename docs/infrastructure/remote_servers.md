@@ -48,7 +48,8 @@ categories:
 
 TU Delft offers its employees the use of physical or virtual servers. These servers are known as Faculty Managed Servers and can be requested to conduct work related to a specific project within a Faculty. 
 
-:::{.callout-note}
+:::{.callout-note appearance="simple" icon="false"}
+## {{< fa info-circle >}} Note
 It is not possible to use the servers to set up services that are already provided by the ICT department.
 :::
 
@@ -72,8 +73,9 @@ Some considerations:
 * ICT provides daily backups, restoration services, and virus scanning for Windows servers.
 * ICT ensures that the server operating system remains up to date (e.g. security patches), except for Linux systems.
 
-::: {.callout-tip}
-Detailed information on managing the server, including network and firewall settings, is provided at the bottom of the TOPdesk application form.
+:::{.callout-tip appearance="simple" icon="false"}
+## {{< fa lightbulb >}} Tip
+Detailed information on managing the server, inclu§ding network and firewall settings, is provided at the bottom of the TOPdesk application form.
 :::
 
 **Example Use Cases** 
