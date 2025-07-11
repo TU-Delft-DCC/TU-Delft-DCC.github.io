@@ -6,7 +6,7 @@ repo-actions: false
 css: /themes/tiles.css
 ---
 
-These guides provide a starting point for Research Computing, Research Data, and Research Software at TU Delft. This is an initiative from the TU Delft [Digital Competence Centre](/docs/community/dcc.md). 
+These guides provide a starting point for Research Software, Research Data, and Research Computing at TU Delft. This is an initiative from the TU Delft [Digital Competence Centre](/docs/community/dcc.md).
 
 {{< fa check >}} Shared solutions for **research support staff**<br>
 {{< fa check >}} Practical guides for **researchers**<br>
@@ -17,10 +17,10 @@ These guides provide a starting point for Research Computing, Research Data, and
 
 ::: {.tool .g-col-lg-2}
 
-<a href="docs/infrastructure/getting_started.md" role="button" class="btn btn-outline-light">
-  <img src="docs/img/gear.svg" class="img-light" alt="Computing Infrastructure (light)">
-  <img src="docs/img/gear-hex-d3d2c7.svg" class="img-dark" alt="Computing Infrastructure (dark)">
-  <strong>Computing Infrastructure</strong>
+<a href="docs/software/getting_started.md" role="button" class="btn btn-outline-light">
+  <img src="docs/img/laptop-code-solid.svg" class="img-light" alt="Research Software (light)">
+  <img src="docs/img/laptop-code-solid-rgb-200200189.svg" class="img-dark" alt="Research Software (dark)">
+  <strong>Research Software</strong>
 </a>
 
 <a href="docs/data/getting_started.md" role="button" class="btn btn-outline-light">
@@ -29,10 +29,10 @@ These guides provide a starting point for Research Computing, Research Data, and
   <strong>Data Management</strong>
 </a>
 
-<a href="docs/software/getting_started.md" role="button" class="btn btn-outline-light">
-  <img src="docs/img/laptop-code-solid.svg" class="img-light" alt="Research Software (light)">
-  <img src="docs/img/laptop-code-solid-rgb-200200189.svg" class="img-dark" alt="Research Software (dark)">
-  <strong>Research Software</strong>
+<a href="docs/infrastructure/getting_started.md" role="button" class="btn btn-outline-light">
+  <img src="docs/img/gear.svg" class="img-light" alt="Computing Infrastructure (light)">
+  <img src="docs/img/gear-hex-d3d2c7.svg" class="img-dark" alt="Computing Infrastructure (dark)">
+  <strong>Computing Infrastructure</strong>
 </a>
 
 <a href="docs/resources/courses.md" role="button" class="btn btn-outline-light">
