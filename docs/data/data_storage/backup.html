@@ -6,6 +6,7 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="dcterms.date" content="2025-06-26">
 
 <title>Data backup</title>
 <style>
@@ -1040,7 +1041,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#using-rsync-in-the-command-line-for-data-backup" id="toc-using-rsync-in-the-command-line-for-data-backup" class="nav-link active" data-scroll-target="#using-rsync-in-the-command-line-for-data-backup">Using <code>rsync</code> in the command line for Data Backup</a></li>
+  <li><a href="#using-rsync-in-the-command-line-for-data-backup" id="toc-using-rsync-in-the-command-line-for-data-backup" class="nav-link active" data-scroll-target="#using-rsync-in-the-command-line-for-data-backup">Using <code>rsync</code> in the command line for data backup</a></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/TU-Delft-DCC/TU-Delft-DCC.github.io/issues/new/choose" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div></nav>
     </div>
@@ -1062,11 +1063,17 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="quarto-title-meta">
 
     
+    <div>
+    <div class="quarto-title-meta-heading">Last reviewed</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">June 26, 2025</p>
+    </div>
+  </div>
   
     <div>
     <div class="quarto-title-meta-heading">Last modified</div>
     <div class="quarto-title-meta-contents">
-      <p class="date-modified">July 10, 2025</p>
+      <p class="date-modified">July 11, 2025</p>
     </div>
   </div>
     
@@ -1086,7 +1093,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </ul>
 <p>When deciding on backup frequency, you should consider how often the data changes, the amount of work that would be lost between backups, the cost (time and money) to replace lost work, and the effort required for the backup process. Automated backup solutions are often more efficient than manual processes. Please refer to the section on <a href="../../../docs/data/data_storage/storage_options.html">Storage options</a> for more information on which options involve automated backup or not.</p>
 <section id="using-rsync-in-the-command-line-for-data-backup" class="level2">
-<h2 class="anchored" data-anchor-id="using-rsync-in-the-command-line-for-data-backup">Using <code>rsync</code> in the command line for Data Backup</h2>
+<h2 class="anchored" data-anchor-id="using-rsync-in-the-command-line-for-data-backup">Using <code>rsync</code> in the command line for data backup</h2>
 <p>If you are comfortable with the command line, <code>rsync</code> is a powerful and versatile utility available on Linux (including Windows Subsystem for Linux: WSL) and macOS systems that can efficiently synchronize and back up files and directories. It is particularly useful for incremental backups, as it only transfers the differences between the source and destination, saving time and bandwidth.</p>
 <p>Here are simple steps to use <code>rsync</code> for data backup:</p>
 <ol type="1">

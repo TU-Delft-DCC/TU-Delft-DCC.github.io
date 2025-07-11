@@ -1587,351 +1587,242 @@
     ]
   },
   {
-    "objectID": "docs/data/data_storage/sync_unison.html",
-    "href": "docs/data/data_storage/sync_unison.html",
-    "title": "Sync Project Drive and SURFDrive with Unison",
+    "objectID": "docs/data/data_storage/storage_options.html",
+    "href": "docs/data/data_storage/storage_options.html",
+    "title": "Storage options",
     "section": "",
-    "text": "From Unison website: “Unison is a file-synchronization tool for OSX, Unix, and Windows. It allows two replicas of a collection of files and directories to be stored on different hosts (or different disks on the same host), modified separately, and then brought up to date by propagating the changes in each replica to the other.”"
-  },
-  {
-    "objectID": "docs/data/data_storage/sync_unison.html#background",
-    "href": "docs/data/data_storage/sync_unison.html#background",
-    "title": "Sync Project Drive and SURFDrive with Unison",
-    "section": "",
-    "text": "From Unison website: “Unison is a file-synchronization tool for OSX, Unix, and Windows. It allows two replicas of a collection of files and directories to be stored on different hosts (or different disks on the same host), modified separately, and then brought up to date by propagating the changes in each replica to the other.”"
-  },
-  {
-    "objectID": "docs/data/data_storage/sync_unison.html#what-this-documentation-will-help-achieve",
-    "href": "docs/data/data_storage/sync_unison.html#what-this-documentation-will-help-achieve",
-    "title": "Sync Project Drive and SURFDrive with Unison",
-    "section": "What this documentation will help achieve",
-    "text": "What this documentation will help achieve\nThis documentation will help you create bi-directional backups between your local machine and a server (such as TU Delft project drive). Sync profiles can be customized so that, for example, shared folders on SurfDrive can be automatically synced with directories in the WebDAV links for TU Delft Staff and Students."
-  },
-  {
-    "objectID": "docs/data/data_storage/sync_unison.html#prerequisites",
-    "href": "docs/data/data_storage/sync_unison.html#prerequisites",
-    "title": "Sync Project Drive and SURFDrive with Unison",
-    "section": "Prerequisites",
-    "text": "Prerequisites"
-  },
-  {
-    "objectID": "docs/data/data_storage/sync_unison.html#toolssoftware",
-    "href": "docs/data/data_storage/sync_unison.html#toolssoftware",
-    "title": "Sync Project Drive and SURFDrive with Unison",
-    "section": "Tools/Software",
-    "text": "Tools/Software\n\nUnison\nGTK+ for Windows\nDesktop client for SURFDrive"
-  },
-  {
-    "objectID": "docs/data/data_storage/sync_unison.html#steps-for-windows",
-    "href": "docs/data/data_storage/sync_unison.html#steps-for-windows",
-    "title": "Sync Project Drive and SURFDrive with Unison",
-    "section": "Steps for Windows",
-    "text": "Steps for Windows\n\nUnison requires .dll’s from GTK+ for Windows Runtime Environment. Download it and install it (to C:Files (x86)-Runtime).\nInstall Unison and extract it in a folder.\nDownload desktop client for SurfDrive\nIf not already there, mount H: Drive or Project Drive folder in your local machine from WebDAV link https://webdata.tudelft.nl/\nNavigate to Unison folder via command prompt and then enter “unison 2.48.4 GTK.exe” to run the Unison GUI.\nThe GUI starts & asks you to set a Profile for your file syncing. The Profile Creation Wizard guides you through this. For the Synchronization kind choose Local. Set the First directory to your local SurfDrive and Second directory, to WebDAV folder.\nBy pressing the Go button on the top menu, Unison start synchronizing both specified directories."
-  },
-  {
-    "objectID": "docs/data/data_storage/sync_unison.html#steps-for-mac-beta",
-    "href": "docs/data/data_storage/sync_unison.html#steps-for-mac-beta",
-    "title": "Sync Project Drive and SURFDrive with Unison",
-    "section": "Steps for Mac (beta)",
-    "text": "Steps for Mac (beta)\nThese steps should theoretically be feasible, but there is an issue with the configuration of mounted TU Delft drives and them disconnecting which interrupts automated backup and read/write access. We are working on this with TU Delft ICT.\n\nInstall Unison\nDownload desktop client for SurfDrive\nMount H: drive or Project Drive folder in your local machine using these directions\nChoose folders for sync from local machine or Surfdrive to WebDAV folder"
-  },
-  {
-    "objectID": "docs/data/data_storage/storage.html",
-    "href": "docs/data/data_storage/storage.html",
-    "title": "Data storage",
-    "section": "",
-    "text": "In the context of research data management, “Data Storage” refers to securely housing research data on various digital media or infrastructure, having it readily accessible for ongoing work, analysis, and collaboration throughout the active phase of a research project. It involves the systems and practices used to maintain the availability, integrity, and accessibility of data while it is actively being used, processed, or shared by the research team. This includes both local and networked solutions, serving as the persistent layer for active research operations involving collaborators internal to TU Delft, or external.\nData storage, rather than being confined to a single step, functions as a persistent foundation, supporting activities from initial data acquisition through active analysis. As a researcher, you may frequently move between phases, such as returning to data collection after initial analysis reveals gaps, or refining processing methods based on analytical outcomes. This interconnected and iterative nature is crucial for effective research data management, as it means that planning for later stages, like archiving and publishing, must occur early, and ongoing management activities, such as storage and security, are not isolated tasks but integral to every step of active research.\nThis section details the recommended storage solutions available to TU Delft researchers, emphasizing institutional and national (Dutch/European) services and providing guidance on their appropriate use. It also highlights the importance of data security, sharing, and backup as essential components of effective data storage practices.\n\n\n\n Storage options\nLocal and networked, institutional and national.\n\nLearn more »\n\n\n\n Data security\nEnsuring confidentiality, integrity, and availability.\n\nLearn more »\n\n\n\n Data sharing\nMaking active data available to internal and/or external collaborators.\n\nLearn more »\n\n\n\n Data backup\nStrategies to prevent data loss.\n\nLearn more »",
-    "crumbs": [
-      "<ins>Guides</ins>",
-      "![](/docs/img/folder-regular.svg){height=1em style='filter: invert(0.5) sepia(1) saturate(5) hue-rotate(175deg)'} **Data Management**",
-      "Storage"
-    ]
-  },
-  {
-    "objectID": "docs/data/data_storage/security.html",
-    "href": "docs/data/data_storage/security.html",
-    "title": "Data security",
-    "section": "",
-    "text": "Data security is a critical aspect of research data management, ensuring that sensitive information is protected from unauthorized access, loss, or corruption. It involves implementing measures to safeguard data throughout its lifecycle, from collection and storage to sharing and archiving.\nTU Delft implements robust authentication and authorization mechanisms, such as strong passwords and two-factor authentication, to restrict data access only to approved individuals and systems.",
+    "text": "Storing your data in a secure location is a key element of a successful project with a data component. As a TU Delft researcher, you have several options. Below you can find an overview of the available storage options, depending on whether they are local, networked, or cloud-based, how secure they are, whether they can be shared with internal or external partners, and whether they are automatically backed up or not. Please visit the sections on Data Security, Data Sharing and Data Backup for more information on these topics.",
     "crumbs": [
       "<ins>Guides</ins>",
       "![](/docs/img/folder-regular.svg){height=1em style='filter: invert(0.5) sepia(1) saturate(5) hue-rotate(175deg)'} **Data Management**",
       "Storage",
-      "Data security"
+      "Storage options"
     ]
   },
   {
-    "objectID": "docs/data/data_storage/security.html#core-principles-of-research-data-security",
-    "href": "docs/data/data_storage/security.html#core-principles-of-research-data-security",
-    "title": "Data security",
-    "section": "Core principles of research data security",
-    "text": "Core principles of research data security\nKey principles include:\n\nAvailability: Ensuring that authorized users can access the data and associated systems when needed for their research activities.\nConfidentiality: Ensuring that data is accessible only to individuals who are explicitly authorized to view or use it.  \nIntegrity: Maintaining the accuracy, completeness, and consistency of data throughout its entire lifecycle, preventing unauthorized modification. Regularly backing up data to prevent loss due to accidental deletion, hardware failure, or cyberattacks, and having a recovery plan in place to restore data in case of incidents.\n\n\n\n\n\n\n\n Tip: Explore our Data backup guide for more information.\n\n\n\n\nVerifying data integrity\nA checksum is a small-sized block of data derived from another block of digital data. By comparing the checksum of a file you have downloaded, backed-up, or transferred with the one provided by the source, you can verify if the file is an exact and untampered copy.\n\nStep 1: Obtain an original checksum\nBefore you can verify a file, you need an original checksum value. This is typically provided by a website or source from where you downloaded the file. It could also have been generated by yourself from Step 2. It usually is a long string of alphanumeric characters and is often labeled as MD5, SHA-1, or SHA-256.\nFor example, you might see something like this on a download page:\nSHA-256: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855\n\n\nStep 2: Generate a checksum for your file\nYou can use different command-line tools to calculate the checksum of the file you have downloaded, transferred or backed-up.\n\nWindows PowerShellmacOS terminalLinux terminal\n\n\nOpen PowerShell (press Win + X and select “PowerShell”).\nUse the Get-FileHash command. By default, it uses SHA-256.\nGet-FileHash C:\\path\\to\\your\\file\nTo use a different algorithm like MD5, specify it:\nGet-FileHash C:\\path\\to\\your\\file -Algorithm MD5\n\n\nOpen your terminal (you can find it in Applications &gt; Utilities).\nFor SHA-256, use the shasum -a 256 command:\nshasum -a 256 /path/to/your/file\nFor MD5, use the md5 command:\nmd5 /path/to/your/file\n\n\nOpen your terminal.\nFor SHA-256, use the sha256sum command:\nsha256sum /path/to/your/file\nFor MD5, use the md5sum command:\nmd5sum /path/to/your/file\n\n\n\n\n\nStep 3: Compare the checksums\nFinally, compare the checksum you generated in Step 2 with the original checksum from Step 1. There might be cases where you need to do Step 2 in two different systems, such as a local machine and a remote server.\nIf they match exactly, your file is a perfect copy.\nIf they do not match, the file was likely corrupted during download or has been tampered with. You should delete the file and download it again.\n\n\n\nOther considerations\nOur Data privacy guide has a list of TU Delft privacy related resources that should be helpful if you are working with highly sensitive data, such as personal information, health data, or copyrighted material.\n\n\n\n\n\n\n Important\n\n\n\n\nReach out to your faculty data steward for more information.\nExplore TU Delft security and privacy related resources:\n\nTU Delft Security and Privacy SharePoint site",
+    "objectID": "docs/data/data_storage/storage_options.html#overview-of-storage-options",
+    "href": "docs/data/data_storage/storage_options.html#overview-of-storage-options",
+    "title": "Storage options",
+    "section": "Overview of storage options",
+    "text": "Overview of storage options\n\n\n\n\n\n\n Important\n\n\n\nThese options have been curated from:\n\nThe intranet section on Data Storage\nThe TOPdesk “Overview of data storage and file sharing” (Home &gt; ICT services &gt; IT for Research &gt; Overview of data storage and file sharing)\nAnd the Storage Finder tool\nSURF\n\nPlease note that the information is subject to change, and you should always refer to the official TU Delft documentation for the most up-to-date information.\n\n\n\n\n\nStorage Option\nLocation\nSecurity\nSharing\nBackup\nSize\nAditional info\n\n\n\n\nPrivate laptop\nLocal\nLow\nDefined by owner\nDefined by owner\nCheck device specifications\nSecurity listed as low as the device is prone to loss and theft, among other incidents\n\n\nPrivate desktop\nLocal\nMedium\nDefined by owner\nDefined by owner\nCheck device specifications\nSame as above, perhaps more secure than a laptop as it is not necessarily mobile\n\n\nTU Delft managed laptop\nTU Delft network\nMedium\nInternal to TU Delft\nDefined by owner (unless using options listed below)\nCheck device specifications\nAll TU Delft managed devices are password protected. Security is therefore slightly higer than private counterparts\n\n\nTU Delft managed desktop\nTU Delft network\nMedium\nInternal to TU Delft\nDefined by owner (unless using options listed below)\nCheck device specifications\nAll TU Delft managed devices are password protected. Security is therefore slightly higer than private counterparts\n\n\nTU Delft Personal Data Storage (H:)\nTU Delft network\nHigh\nInternal to TU Delft\nYes\n8 GB\nStorage Finder\n\n\nTU Delft Group Data Storage (M:)\nTU Delft network\nHigh\nInternal to TU Delft\nYes\n50 GB\nStorage Finder\n\n\nTU Delft Project Data Storage (U:)\nTU Delft network\nHigh\nInternal to TU Delft. External access can be enabled with a TU Delft guest account.\nYes\n&gt; 250 GB\nStorage Finder\n\n\nMicrosoft Teams\nCloud\nHigh\nInternal to TU Delft\nYes\n&lt; 250 GB\nStorage Finder\n\n\nMicrosoft Sharepoint\nCloud\nHigh\nInternal to TU Delft\nYes\n&lt; 250 GB\nStorage Finder\n\n\nMicrosoft OneDrive for Business\nCloud\nHigh\nExternal access can be enabled\nYes\n1 TB\nStorage Finder\n\n\nSURFdrive\nCloud\nHigh\nExternal access can be enabled\nYes\n500 GB\nSURFdrive documentation",
     "crumbs": [
       "<ins>Guides</ins>",
       "![](/docs/img/folder-regular.svg){height=1em style='filter: invert(0.5) sepia(1) saturate(5) hue-rotate(175deg)'} **Data Management**",
       "Storage",
-      "Data security"
+      "Storage options"
     ]
   },
   {
-    "objectID": "docs/data/data_storage/project_drive_mounting.html",
-    "href": "docs/data/data_storage/project_drive_mounting.html",
-    "title": "Mount Project Drive on server",
+    "objectID": "docs/data/data_storage/storage_options.html#project-drive-operations",
+    "href": "docs/data/data_storage/storage_options.html#project-drive-operations",
+    "title": "Storage options",
+    "section": "Project Drive operations",
+    "text": "Project Drive operations\nA Project Drive is a TU Delft managed network drive that allows you to store and share data with your project team members. It is a secure and reliable option for storing research data, and it is automatically backed up.\n\n\n\n\n\n\n For most situations, the Project Data Storage (U:) drive is the optimal choice for storing research data.\n\n\n\n\n\n\nBelow you can see how to access a Project Data Storage (U:) drive, request space for it, and how to mount it on a server (please refer to the section on Remote Servers for more details).\n\n\n\n Access and request space for Project Data Storage\n\nLearn more »\n\n\n\n Mount Project Drive on server\n\nLearn more »",
+    "crumbs": [
+      "<ins>Guides</ins>",
+      "![](/docs/img/folder-regular.svg){height=1em style='filter: invert(0.5) sepia(1) saturate(5) hue-rotate(175deg)'} **Data Management**",
+      "Storage",
+      "Storage options"
+    ]
+  },
+  {
+    "objectID": "docs/data/data_storage/sharing.html",
+    "href": "docs/data/data_storage/sharing.html",
+    "title": "Data sharing",
     "section": "",
-    "text": "Project drive storage can be mounted and made accessible in your TU Delft Virtual Private Server (VPS).\n\nPrerequisites\n\nA TU Delft VPS\nA TU Delft Project Data Storage drive\n\n\n\nSteps\n\nLocate the URL of your project storage.\nConnect to your TU Delft VPS via SSH.\nCreate a new directory as a mounting point.\nRetrieve your Linux user and group details.\nEdit the fstab file to include project storage technical details.\nMount the project drive.\n\n\nStep 1. Locate the URL of your project storage\nThe URL for your project drive can be obtained from either:\n\nthe email from TU Delft ICT with the confirmation of your project drive request, or\nby using a web browser to navigate into https://webdata.tudelft.nl/\n\n\n\n\n\n\n\n Note\n\n\n\nhttps://webdata.tudelft.nl/ can only be accessed on campus or using eduVPN\n\n\n\nChrome/Brave/Firefox/Vivaldi/SafariEdge\n\n\n\nNavigate into https://webdata.tudelft.nl/staff-umbrella/\n\nA pop-up should appear asking for your username and password.\n\nProvide your NetID in the username field, provide your password accordingly.\n\nYou should now see a list of your project drives.\n\nClick on the project drive of your choice.\n\nCopy everything after “https://webdata.tudelft.nl/”\n\n\n\nContent within webdata is under password protection. Typing your username and password is only possible with a pop-up message which is disabled in an Edge browser on systems managed by TU Delft.\n\n\n\n\n\nStep 2. Connect to your TU Delft VPS via SSH\nFollow instructions in the TU Delft ICT email from initial server setup or follow our guide to configure via SSH.\n\n\nStep 3. Create a new directory as the mounting point\nThe convention is to create mounting points in the folder /media. Navigate to the directory and create a new folder with:\ncd /media\nmkdir &lt;server_mount_point&gt;\nReplace &lt;server_mount_point&gt; with the name of your choice. This will be the name of the folder where your project drive will be mounted.\n\n\nStep 4. Find and save your user and group details\nIn the terminal, you can retrieve your local user and group details with:\nid -u &lt;your_netID&gt; # User ID\nid -g &lt;your_netID&gt; # Group ID\nYou may need the values for uid and gid for step 5.\n\n\n\n\n\n\n Note\n\n\n\nThese commands are server-specific, so make sure to execute them on the server where the project drives will be mounted.\n\n\n\n\nStep 5. Edit the fstab file to include project storage technical details\nThe fstab file contains a list of the addresses of external file systems. In this file, the details of your project drive will need to be added in a single line. This line consists of four parts:\n\nfilesystem - the address of the project drive\nmount point - the location in the VPS where you want to mount the project drive\ntype - the type of the filesystem\noptions - additional option such as user privileges\n\nThe fstab file must be in the /etc/ directory and can be opened with the vi or nano editor:\n\nvinano\n\n\nIn the terminal, enter the following command to open the fstab file in the vi editor:\nsudo vi /etc/fstab\nThen, switch to the insert mode (hit “i” to switch to insert mode and be able to type)\n\n\nIn the terminal, enter the following command to open the fstab file in the nano editor:\nsudo nano /etc/fstab\n\n\n\nAdd the following line to the file:\n&lt;your_netID&gt;@sftp.tudelft.nl:/staff-umbrella/&lt;project_drive_name&gt;  /media/&lt;server_mount_point&gt; fuse.sshfs  rw,noauto,users,_netdev  0  0\nreplacing the values between &lt; and &gt; with your NetID, the name of your project drive, and the name of the folder you created in step 3.\n\n\n\n\n\n\n Note\n\n\n\nIf this configuration throws a permission error during mounting, try:\n//tudelft.net/staff-umbrella/&lt;project_drive_name&gt;/ /media/&lt;server_mount_point&gt; cifs username=&lt;your_netID&gt;,noauto,uid=&lt;your_uid&gt;,gid=&lt;your_gid&gt;,forcegid,rw,_netdev\nUse the values for uid and gid from step 4.\n\n\nClose the file editor and save the changes:\n\nvinano\n\n\nUse Control+C followed by :wq to save the file and close it to get back to your terminal.\n\n\nAs indicated by the nano interface, use Control+O to write out the file. Then, confirm your choice of filename by hitting Enter. Finally, exit the file with Control+X\n\n\n\n\n\nStep 6. Mount the project drive\nTo mount the project drive, execute the command:\nsudo mount /media/&lt;server_mount_point&gt;\nYou can also unmount the drive with:\nfusermount -u /media/&lt;server_mount_point&gt;\nThe project drive will not mount automatically, so you will need to remount it manually each time you restart the server.\n\n\n\n\n\n\n Note\n\n\n\nIf the step above does not work, it probably means that the packages for mounting cifs-type filesystems haven’t been installed. Depending on your Linux flavour you will need to install them using:\n\nUbuntu/DebianRedhat/Centos/Fedora\n\n\nsudo apt install cifs-utils\n\n\nsudo yum install cifs-utils\n\n\n\n\n\n\n\n\nNotes and next steps\nThe steps above can also be used to mount any storage offered by TU Delft with a WebDav link (staff-homes, staff-groups, staff-bulk, student-homes, student-groups and apps). Simply use the latter half of the URL from the WebDav web link of your storage drive, which will change from staff-umbrella (Project Data Storage drive) to something else, depending on the storage drive you would like to mount.",
+    "text": "This section covers aspects of data sharing, for ongoing work, throughout the active phase of a research project. The use of data repositories, the importance of data licenses, and the significance of metadata in sharing completed work are discussed in the section on Archiving and publishing data.\nBoth sections are closely related, as data sharing is a key component of the broader data management lifecycle. As such, these sections include shared concepts of security and privacy also covered in sections of their own.\nAs shown in the overview of storage options section, TU Delft provides several options for data storage, which can be used to share data with internal and external partners. The choice of storage solution depends on the nature of the data, the level of security required, and the intended audience for the shared data.",
+    "crumbs": [
+      "<ins>Guides</ins>",
+      "![](/docs/img/folder-regular.svg){height=1em style='filter: invert(0.5) sepia(1) saturate(5) hue-rotate(175deg)'} **Data Management**",
+      "Storage",
+      "Data sharing"
+    ]
+  },
+  {
+    "objectID": "docs/data/data_storage/sharing.html#tu-delft-internal",
+    "href": "docs/data/data_storage/sharing.html#tu-delft-internal",
+    "title": "Data sharing",
+    "section": "TU Delft internal",
+    "text": "TU Delft internal\n\nNetworked storage\n\nPersonal Data Storage (H:)\nThis is the default storage location for personal data, such as documents, spreadsheets, and presentations. It is accessible only to the user and is not suitable for sharing with others. However, it enables you to share your data across TU Delft-managed devices connected to the TU Delft network.\n\n\nGroup Data Storage (M:)\nThe folder structure on this network drive follows a similar structure to that of the faculties, departments, and research groups at TU Delft. It is typically accessible to members of a research group and can be used to share data with colleagues within the same department and faculty. Access to this storage is managed by your department secretary and/or the Faculty ICT Manager.\n\n\nProject Data Storage (U:)\nAccess to this storage is requested by a contact person “caller/owner” which can in turn provide access via a NetID. Its data can be accessed through CIFS and NFS (with kerberos authentication), meaning it can be mounted in different systems. Please visit the project drive request and project drive mounting sections for more information.\n\n\n\nCloud-based storage\nCloud services are not recommended as primary storage locations for research data. A critical drawback is that access to data stored on these platforms can be lost upon the creator’s departure from TU Delft, posing a significant risk to data continuity and ownership. Furthermore, they “should not be used for highly confidential data such as state secrets, sensitive personal data or highly sensitive IP material”.\nTU Delft provides a few collaboration tools through the Microsoft Office 365 platform, including Microsoft Teams, SharePoint and OneDrive.\n\nMicrosoft Teams\nThis platform is primarily used for communication and collaboration within research groups and projects. It allows for file sharing, real-time collaboration, and integration with other Microsoft 365 applications. However, it is not a dedicated data storage solution and should be used in conjunction with other storage options.\n\n\n\n\n\n\n Find more details on TopDesk Home ⇾ ICT services ⇾ Collaboration Tools ⇾ Microsoft Teams.\n\n\n\n\n\n\n\n\nMicrosoft SharePoint\nConsiderations for this platform are similar to those for Microsoft Teams. It is primarily used for document management and collaboration within research groups and projects. SharePoint allows for file sharing, version control, and integration with other Microsoft 365 applications.\n\n\n\n\n\n\n Find more details on TopDesk Home ⇾ ICT services ⇾ Collaboration Tools ⇾ SharePoint 2016 support",
+    "crumbs": [
+      "<ins>Guides</ins>",
+      "![](/docs/img/folder-regular.svg){height=1em style='filter: invert(0.5) sepia(1) saturate(5) hue-rotate(175deg)'} **Data Management**",
+      "Storage",
+      "Data sharing"
+    ]
+  },
+  {
+    "objectID": "docs/data/data_storage/sharing.html#external",
+    "href": "docs/data/data_storage/sharing.html#external",
+    "title": "Data sharing",
+    "section": "External",
+    "text": "External\n\nMicrosoft OneDrive for Business\nOneDrive is installed by default on the laptops and desktops supplied by TU Delft. TU Delft OneDrive is recognisable by the name: “OneDrive - Delft University of Technology”. Web based access within and outside TUDelft, sharing and working together is possible with TU Delft colleagues and also external users. OneDrive is suitable for sharing data with external partners, as it allows for controlled access and collaboration. However, it is important to ensure that sensitive data is not shared without proper security measures in place.\n\n\n\n\n\n\n Find more details on TopDesk Home ⇾ OneDrive for Business\n\n\n\n\n\n\n\n\nSURFdrive\nSURFdrive is a personal cloud storage service for the Dutch education and research community, offering staff, researchers and students an easy way to store, synchronise and share files in the secure and reliable SURF community cloud. SURFdrive offers staff, researchers and students an easy way to share and synchronise files within a secure community cloud with ample storage capacity.\n\n\n\n\n\n\n Find more details on SURFdrive.",
+    "crumbs": [
+      "<ins>Guides</ins>",
+      "![](/docs/img/folder-regular.svg){height=1em style='filter: invert(0.5) sepia(1) saturate(5) hue-rotate(175deg)'} **Data Management**",
+      "Storage",
+      "Data sharing"
+    ]
+  },
+  {
+    "objectID": "docs/data/data_storage/project_drive_request.html",
+    "href": "docs/data/data_storage/project_drive_request.html",
+    "title": "Accessing and requesting Project Data Storage space",
+    "section": "",
+    "text": "TU Delft network drives are automatically mounted on TU Delft-managed computers (running Windows) when connected to the TU Delft network (dastud, eduVPN).\nOn macOS and Linux, there are a few additional steps needed to access Project Drives. The instructions can be found here. (Last updated: August 2024)\nIt can also be accessed through webdata.tudelft.nl using a WebDAV web link staff-umbrella. Some systems also support the client WebDrive. To mount on a TU Delft Virtual Private Server, first follow the instructions here, and then the instructions in the next guide Mount Project Drive on server.\n\n\n\n\n\n\n Reminder\n\n\n\nIf you are accessing the Project Data Storage (U:) drive from outside the TU Delft network (e.g., from home), you need to connect to eduVPN beforehand.",
     "crumbs": [
       "<ins>Guides</ins>",
       "![](/docs/img/folder-regular.svg){height=1em style='filter: invert(0.5) sepia(1) saturate(5) hue-rotate(175deg)'} **Data Management**",
       "Storage",
       "Storage options",
-      "Mount *Project Drive* on server"
+      "Access and request space for *Project Data Storage*"
     ]
   },
   {
-    "objectID": "docs/data/data_publishing/publishing.html",
-    "href": "docs/data/data_publishing/publishing.html",
-    "title": "Publishing data",
+    "objectID": "docs/data/data_storage/project_drive_request.html#accessing-the-project-data-storage-u-drive",
+    "href": "docs/data/data_storage/project_drive_request.html#accessing-the-project-data-storage-u-drive",
+    "title": "Accessing and requesting Project Data Storage space",
     "section": "",
-    "text": "Data repositories are online locations for storing research data long term. When data is published in a repository, it is (often) assigned a persistent digital object identifier (DOI), which ensures that the data is discoverable and accessible over time. When published, the data should be accompanied by an appropriate license and metadata describing your data.",
+    "text": "TU Delft network drives are automatically mounted on TU Delft-managed computers (running Windows) when connected to the TU Delft network (dastud, eduVPN).\nOn macOS and Linux, there are a few additional steps needed to access Project Drives. The instructions can be found here. (Last updated: August 2024)\nIt can also be accessed through webdata.tudelft.nl using a WebDAV web link staff-umbrella. Some systems also support the client WebDrive. To mount on a TU Delft Virtual Private Server, first follow the instructions here, and then the instructions in the next guide Mount Project Drive on server.\n\n\n\n\n\n\n Reminder\n\n\n\nIf you are accessing the Project Data Storage (U:) drive from outside the TU Delft network (e.g., from home), you need to connect to eduVPN beforehand.",
     "crumbs": [
       "<ins>Guides</ins>",
       "![](/docs/img/folder-regular.svg){height=1em style='filter: invert(0.5) sepia(1) saturate(5) hue-rotate(175deg)'} **Data Management**",
-      "Archive and publish",
-      "Publishing data"
+      "Storage",
+      "Storage options",
+      "Access and request space for *Project Data Storage*"
     ]
   },
   {
-    "objectID": "docs/data/data_publishing/publishing.html#tu.researchdata",
-    "href": "docs/data/data_publishing/publishing.html#tu.researchdata",
-    "title": "Publishing data",
-    "section": "4TU.ResearchData",
-    "text": "4TU.ResearchData\nChoosing a repository for publishing your data depends on factors such as storage costs, funding or publication requirements, and security needs. TU Delft provides an in-house data repository, 4TU.ResearchData, supporting versioning and a GitHub remote as part of their services. Additionally, when publishing your data, your submission is reviewed to ensure that repository requirements are met. You will receive a DOI for your dataset, which can be used to cite your data in publications. All data is stored in the Netherlands, with two locations in Delft and a backup in Leiden.\n\n\n\n\n\n\n Learn more\n\n\n\nGetting started with 4TU.ResearchData",
+    "objectID": "docs/data/data_storage/project_drive_request.html#requesting-project-data-storage-u-space",
+    "href": "docs/data/data_storage/project_drive_request.html#requesting-project-data-storage-u-space",
+    "title": "Accessing and requesting Project Data Storage space",
+    "section": "Requesting Project Data Storage (U:) space",
+    "text": "Requesting Project Data Storage (U:) space\n\nPrerequisites\n\nTU Delft NetID\n(Optional) A list of TU Delft collaborators who should have read/write access to it\n\n\n\nSteps\n\nRequest the storage via the TU Delft ICT form on TopDesk.\nFill out and send the form according to your data storage preferences and requirements.\nAccess your data storage.\n\n\nStep 1. Request storage via the TU Delft ICT form on TopDesk\nYou can make a request for data storage via a form available on the TopDesk self-service portal (requires NetID sign-in); navigate to:\nHome ⇾ ICT services ⇾ IT for Research ⇾ Data storage for Research: Project data (U:) ⇾ ICT: Request Research Data Storage.\n\n\nStep 2. Fill out and send the form according to your data storage preferences and requirements\nThe form is divided into three sections: “Caller”, “Information about requester and data”, and “Data for a research project”.\nThe Caller section should contain the contact information of the main administrator of this server. If you select your name, the fields below should be auto-populated with your building, phone number, email, department/program, organizational unit, and (sometimes) room.\n\nIn the next part, Information about requester and data, you choose your preferences about data preservation. The first question asks whether you are setting up new storage or want to change existing storage (or end it). The next questions are about the availability, classification and retention. There are information bubbles next to the choices and clarifications at the beginning of the form.\nLastly, in the section Data for a research project you need to provide information about your project. You will need to provide a description of the project, the name of the project, initial and future storage needs, and a corresponding person for handover if you leave TU Delft. Additionally, you have the option to choose whether you want to be able to share the data with external users.\n\n\n\nStep 3. Access your data storage\nAfter submitting the request, you will receive a response from ICT. Once approval is granted, you can access your Project Data Storage as described above.",
     "crumbs": [
       "<ins>Guides</ins>",
       "![](/docs/img/folder-regular.svg){height=1em style='filter: invert(0.5) sepia(1) saturate(5) hue-rotate(175deg)'} **Data Management**",
-      "Archive and publish",
-      "Publishing data"
+      "Storage",
+      "Storage options",
+      "Access and request space for *Project Data Storage*"
     ]
   },
   {
-    "objectID": "docs/data/data_publishing/publishing.html#zenodo",
-    "href": "docs/data/data_publishing/publishing.html#zenodo",
-    "title": "Publishing data",
-    "section": "Zenodo",
-    "text": "Zenodo\nDeveloped by CERN, Zenodo is an open repository that allows researchers to upload and share their research outputs, including datasets, publications, and software. Similarly to 4TU.ResearchData you will receive a DOI for your dataset. Zenodo supports versioning and has GitHub integration.\n\n\n\nSelecting a data repository. The Turing Way Community. This illustration is created by Scriberia with The Turing Way community, used under a CC-BY 4.0 licence. DOI: 10.5281/zenodo.3332807\n\n\nRegardless of the repository you choose, it is important to ensure that your data is properly documented. This includes describing the content, structure, and context of your data, as well as any relevant documentation that is needed to understand and use the data.\n\n\n\n\n\n\n Learn more\n\n\n\nFor a more comprehensive list of repositories and how to select one, you can check the Turing Way book or the TU Delft Library Guidelines",
-    "crumbs": [
-      "<ins>Guides</ins>",
-      "![](/docs/img/folder-regular.svg){height=1em style='filter: invert(0.5) sepia(1) saturate(5) hue-rotate(175deg)'} **Data Management**",
-      "Archive and publish",
-      "Publishing data"
-    ]
-  },
-  {
-    "objectID": "docs/data/data_publishing/licensing_data.html",
-    "href": "docs/data/data_publishing/licensing_data.html",
-    "title": "Data licensing",
+    "objectID": "docs/data/data_storage/backup.html",
+    "href": "docs/data/data_storage/backup.html",
+    "title": "Data backup",
     "section": "",
-    "text": "When depositing data, selecting an appropriate license cannot be overlooked, as it defines the permissions and restrictions for others using your data. Clear labelling of licensing terms ensures that data can be shared and reused legally and ethically.\nSimilarly to software licenses, data licenses can be divided depending on their restrictiveness. The most common licenses are Creative Commons (CC) licenses, which are widely used for data and other creative works. These licenses can be categorized into permissive and restrictive types.",
+    "text": "An effective system for backing up research data is crucial to the success and reproducibility of any research project. Backups ensure that irreplaceable files are not lost due to hardware failure, accidental deletion, or other unforeseen events.\nA widely recommended strategy for data backup is the 3-2-1 Rule:\nWhen deciding on backup frequency, you should consider how often the data changes, the amount of work that would be lost between backups, the cost (time and money) to replace lost work, and the effort required for the backup process. Automated backup solutions are often more efficient than manual processes. Please refer to the section on Storage options for more information on which options involve automated backup or not.",
     "crumbs": [
       "<ins>Guides</ins>",
       "![](/docs/img/folder-regular.svg){height=1em style='filter: invert(0.5) sepia(1) saturate(5) hue-rotate(175deg)'} **Data Management**",
-      "Archive and publish",
-      "Licensing"
+      "Storage",
+      "Data backup"
     ]
   },
   {
-    "objectID": "docs/data/data_publishing/licensing_data.html#cc-licenses",
-    "href": "docs/data/data_publishing/licensing_data.html#cc-licenses",
-    "title": "Data licensing",
-    "section": "CC licenses",
-    "text": "CC licenses\nPermissive licenses allow for broad reuse with minimal restrictions, while restrictive licenses impose limitations on how the data can be used. CC licenses are further divided into the following categories:\n\nPublic Domain (CC0): No restrictions, data can be used for any purpose.\nAttribution (CC-BY): Requires attribution to the original creator, allows for sharing and adaptation with appropriate citations.\nAttribution-ShareAlike (CC-BY-SA): Requires attribution and allows for derivatives under the same license.\nNon-Commercial (CC-BY-NC): Allows use for non-commercial purposes only.\nNo Derivatives (CC-BY-ND): No derivatives allowed.\n\n\n\n\n\n\n\n Learn more\n\n\n\n\nCreative Commons Licenses",
+    "objectID": "docs/data/data_storage/backup.html#using-rsync-in-the-command-line-for-data-backup",
+    "href": "docs/data/data_storage/backup.html#using-rsync-in-the-command-line-for-data-backup",
+    "title": "Data backup",
+    "section": "Using rsync in the command line for data backup",
+    "text": "Using rsync in the command line for data backup\nIf you are comfortable with the command line, rsync is a powerful and versatile utility available on Linux (including Windows Subsystem for Linux: WSL) and macOS systems that can efficiently synchronize and back up files and directories. It is particularly useful for incremental backups, as it only transfers the differences between the source and destination, saving time and bandwidth.\nHere are simple steps to use rsync for data backup:\n\nBasic Local Backup: To copy files from a source directory to a destination directory on the same machine (e.g., to an external hard drive), use the following command:\n\n   rsync -av /path/to/your/source_data/ /path/to/your/backup_destination/\n\n-a (archive mode): This is a composite flag that preserves permissions, timestamps, symbolic links, and recursively copies directories, making it ideal for backups.\n-v (verbose): This flag provides detailed output, showing which files are being copied or skipped.\n\n\nIncremental Backups: To ensure that only new or changed files are copied, and to remove files from the backup destination if they’ve been deleted from the source, add the --delete flag:\n\n   rsync -av --delete /path/to/your/source_data/ /path/to/your/backup_destination/\nThis makes the backup an exact mirror of the source, reflecting deletions as well as additions and modifications.\n\nRemote Backups via SSH: For secure backups to a remote server (e.g., a research server or another machine), rsync can use SSH. Ensure the remote machine has an SSH server running and you have SSH access.\n\n   rsync -avz /path/to/your/source_data/ username@remote_host:/path/to/remote/backup_destination/\n\n-z (compress): This flag compresses file data during transfer, which can speed up transfers over a network connection.\n\n\nExcluding Specific Files or Directories: If you need to exclude certain files or folders from your backup (e.g., temporary files or large datasets that are not critical to back up frequently), use the --exclude option:\n\n   rsync -av --exclude 'temp_files/' --exclude 'logs/*.log' /path/to/your/source_data/ /path/to/your/backup_destination/\nYou can specify multiple --exclude options for different patterns or paths.\n\n\n\n\n\n\n Important\n\n\n\nrsync is a robust tool for maintaining up-to-date copies of your research data, supporting both local and remote backup strategies as part of a comprehensive data management plan. For more advanced usage, refer to the rsync manual by running man rsync in your terminal or consult the rsync documentation.\n\n\n\n\n\n\n\n\n Important\n\n\n\nThese steps are similar to those recommended in Moving data to your server and in the Transfer Data section of the DelftBlue documentation.",
     "crumbs": [
       "<ins>Guides</ins>",
       "![](/docs/img/folder-regular.svg){height=1em style='filter: invert(0.5) sepia(1) saturate(5) hue-rotate(175deg)'} **Data Management**",
-      "Archive and publish",
-      "Licensing"
+      "Storage",
+      "Data backup"
     ]
   },
   {
-    "objectID": "docs/data/data_publishing/licensing_data.html#other-data-licenses",
-    "href": "docs/data/data_publishing/licensing_data.html#other-data-licenses",
-    "title": "Data licensing",
-    "section": "Other data licenses",
-    "text": "Other data licenses\nIn addition to CC licenses, Open Data Commons provides a set of licenses that are specifically designed for data. These licenses are similar to CC licenses but are tailored for data and databases.\n\nPublic Domain Dedication and License (PDDL): Similar to CC0, it allows for unrestricted use of the data.\nOpen Data Commons Attribution License (ODC-BY): Requires attribution to the original creator, allows for sharing and adaptation with appropriate citations.\nOpen Data Commons Open Database License (ODbL): Allows for sharing, modification, and use of the database, but requires attribution and share-alike for derivatives. Similar to CC-BY-SA, but specifically designed for databases.\nRestrictive Licenses: Limits usage, often prohibiting commercial use or modifications.\n\nWhile Creative Commons and Open Data Commons license might seem similar, the difference between them is that CC licenses are more general and can be applied to any type of work, while Open Data Commons licenses are specifically designed for data and databases and therefore cover different rights.\n\n\n\n\n\n\n Learn more\n\n\n\n\nTuring Way - Data Licenses",
-    "crumbs": [
-      "<ins>Guides</ins>",
-      "![](/docs/img/folder-regular.svg){height=1em style='filter: invert(0.5) sepia(1) saturate(5) hue-rotate(175deg)'} **Data Management**",
-      "Archive and publish",
-      "Licensing"
-    ]
-  },
-  {
-    "objectID": "docs/data/data_processing.html",
-    "href": "docs/data/data_processing.html",
-    "title": "Data processing",
+    "objectID": "docs/data/data_publishing/offboarding.html",
+    "href": "docs/data/data_publishing/offboarding.html",
+    "title": "Offboarding and ownership",
     "section": "",
-    "text": "Data processing is a broad term and is often conflated with related terms. It typically includes steps like data cleaning and data transformation. Some workflows may extend this to preliminary analysis, though visualizations are generally considered a separate stage. The term data wrangling is frequently used interchangeably with early processing stages. The specific steps involved can vary depending on the type of data and the goals of the analysis.",
+    "text": "Offboarding procedures are necessary for ensuring the continuity and integrity of research data when team members leave or transition roles. Establishing clear ownership protocols and conducting thorough offboarding processes help maintain data accessibility, prevent loss, and ensure compliance with institutional policies. To achieve effective offboarding, document data responsibilities, transfer access rights, and conduct exit interviews to capture essential knowledge and insights.\nThis guide serves primarily as a reminder that there should be a plan in place for offboarding. Different research groups will have different practices, and there is no single definitive checklist or procedure. However, we would like to refer you to the Data Management Offboarding by Harvard RDM site for ideas on how to approach offboarding and preserve knowledge when colleagues leave.",
     "crumbs": [
       "<ins>Guides</ins>",
       "![](/docs/img/folder-regular.svg){height=1em style='filter: invert(0.5) sepia(1) saturate(5) hue-rotate(175deg)'} **Data Management**",
-      "Data processing"
+      "Archive and publish",
+      "Offboarding and ownership"
     ]
   },
   {
-    "objectID": "docs/data/data_processing.html#data-versioning",
-    "href": "docs/data/data_processing.html#data-versioning",
-    "title": "Data processing",
-    "section": "Data versioning",
-    "text": "Data versioning\nData versioning is the process of assigning unique version numbers to different iterations of a dataset. This practice is important when working with machine learning models, as it allows to track changes made to the data over time and ensure that the correct version of the data is used for training and testing. Data versioning can also help with reproducibility, because it allows to recreate previous versions of the data and compare results across different iterations.\nThere are a couple of techniques and tools for data versioning. For example, Git is typically used to track source code and software versions, but is not well-suited for large datasets. However, Git LFS (Large File Storage) can be used to manage large files in a Git repository. Other tools like DVC (Data Version Control) are specifically designed for data versioning and can be used to track changes to datasets and models over time. DVC integrates with Git and allows to version control data files, models, and experiments in a way that is similar to how Git works for source code.\n\nDVC\nDVC has very comprehensive documentation, tutorials and videos available, most of the resources are available on their homepage. It covers how to get started with data versioning, how to integrate it with Git, and how to use DVC with different cloud storage providers (e.g. AWS S3).",
-    "crumbs": [
-      "<ins>Guides</ins>",
-      "![](/docs/img/folder-regular.svg){height=1em style='filter: invert(0.5) sepia(1) saturate(5) hue-rotate(175deg)'} **Data Management**",
-      "Data processing"
-    ]
-  },
-  {
-    "objectID": "docs/data/data_collection/data_conventions.html",
-    "href": "docs/data/data_collection/data_conventions.html",
-    "title": "Data conventions",
+    "objectID": "docs/data/data_publishing/archival_publishing_index.html",
+    "href": "docs/data/data_publishing/archival_publishing_index.html",
+    "title": "Archiving and publishing data",
     "section": "",
-    "text": "By adhering to domain-aligned data conventions, you can enhance the quality and reproducibility of your work, promote collaboration, data sharing and reuse. While flexibility exists to accommodate the specific needs of your research project, it is important to establish a consistent framework for data collection and management. This section outlines some key considerations for data conventions, including naming conventions, folder structure, and file standards.",
+    "text": "Towards the end of the research cycle, data archiving (and publishing, when possible) is an essential step for the longevity and accessibility of your research. Archiving data means that it is preserved and remains accessible for future use. This process not only helps with the visibility of your work but also contributes to the advancement of knowledge in your field. Other researchers have the data available and can build upon your work. Learning how to effectively preserve and share your research isn’t just good scientific practice - it’s how your work makes a lasting impact.\n\n\n\n Licensing\nChoose a license for your data.\n\nLearn more »\n\n\n\n Publishing data\nBroaden the reach of your research.\n\nLearn more »\n\n\n\n Offboarding and ownership\nEnsures accountability and longevity.\n\nLearn more »",
+    "crumbs": [
+      "<ins>Guides</ins>",
+      "![](/docs/img/folder-regular.svg){height=1em style='filter: invert(0.5) sepia(1) saturate(5) hue-rotate(175deg)'} **Data Management**",
+      "Archive and publish"
+    ]
+  },
+  {
+    "objectID": "docs/data/data_collection/elab_rspace.html",
+    "href": "docs/data/data_collection/elab_rspace.html",
+    "title": "eLabJournal and RSpace",
+    "section": "",
+    "text": "Jones recounts her frustration with relying on paper notebooks to record experiments. “It becomes problematic when you need to replicate experiments or continue a research project conducted by a researcher who has since left your institution without documenting their work properly.” Jones identifies some difficulties of understanding handwritten information (including her own!) “Locating and interpreting data from past experiments can be challenging using paper notebooks”, she admits. “Finally, after rifling through pages of scribbled diagrams, photocopies and post-it notes you find the experiment you’ve been searching for and it can be impossible to decipher the handwriting and bridge the gaps of missing information”. These problems sound all too familiar to most lab-based scientists and have increased the demand for digital solutions, such as ELNs, that can improve the rigour, robustness and reproducibility of scientific research.\nDr. Siân Jones, quote taken from Keep calm and go paperless: Electronic lab notebooks can improve your research. CC-BY-4.0\n\nAn electronic laboratory notebook (ELN), also called a digital lab notebook, offers a text editor for writing notes similar to a paper notebook, along with spreadsheet tools for calculations and formatting tables and graphs. They include protocol templates to record standard procedures and laboratory inventories to keep track of samples, reagents, and equipment. Additionally, ELNs provide collaboration tools to share experimental information with others, making them a straightforward solution to research documentation.\nTU Delft has a subscription to eLABJournal and RSpace ELNs, and both offer similar functionalities.\n\n\n\n\n\n\n\n Learn more\n\n\n\nFor instructions on getting started with RSpace and eLabJournal, along with other essential information about ELNs, visit the TU Delft Library website’s Electronic Lab Notebook page.",
     "crumbs": [
       "<ins>Guides</ins>",
       "![](/docs/img/folder-regular.svg){height=1em style='filter: invert(0.5) sepia(1) saturate(5) hue-rotate(175deg)'} **Data Management**",
       "Collection",
-      "Data conventions"
+      "eLabJournal and RSpace"
     ]
   },
   {
-    "objectID": "docs/data/data_collection/data_conventions.html#data-conventions",
-    "href": "docs/data/data_collection/data_conventions.html#data-conventions",
-    "title": "Data conventions",
-    "section": "Data conventions",
-    "text": "Data conventions\nEstablishing consistent naming conventions and metadata practices for your data files is essential for long-term project maintainability. Similarly, as mentioned in the Project structure guide in the Research Software section, some essential principles apply, like:\n\nuse descriptive, concise and consistent names\navoid special characters and spaces (instead use underscores _ or hyphens -)\nfollow ISO 8601 date formatting (YYYY-MM-DD)\nthe order matters - order elements in the name from least to most specific\ninclude versioning in the name (where applicable)\n\nHowever, the specific conventions you choose should align with the needs of your research project, collaborators, and established practices within your field.",
+    "objectID": "docs/data/data_collection/collection.html",
+    "href": "docs/data/data_collection/collection.html",
+    "title": "Data collection",
+    "section": "",
+    "text": "Data collection is one of the first steps in the data lifecycle. It involves gathering and recording data from various sources, which can include (but are not limited to) experiments, observations, simulations or existing datasets. These can come from various sources being both public and private. The data collected can be quantitative or qualitative, and it can be structured or unstructured. The choice of data collection methods and tools depends on the research objectives, the type of data needed, and the resources available.\nProper data collection practices are essential for ensuring the integrity and reliability of the data, as well as for its use later analysis and interpretation. This section provides an overview of important aspects of data collection, including data conventions, data access and reuse, and the use of eLabJournal and RSpace. These elements are essential for maintaining the quality and usability of research data, and they play a significant role in the overall research process.\n\n\n\n\n\n\n Learn more\n\n\n\n\nWe would like to refer you to the Discover & Reuse and Gather/Create & Analyse and sections of the TU Delft Navigating Research Data and Software: A Practical Guide for PhD Supervisors guide for more information.\nAdditionally, we would like to refer you to the RDM 101 book for more information on this topic.\n\n\n\n\n\n\n Data conventions\nData standards and types.\n\nLearn more »\n\n\n\n Data access and reuse\nMaking your data accessible and reusable.\n\nLearn more »\n\n\n\n eLabJournal and RSpace\nTools made available by TU Delft to document the research process.\n\nLearn more »",
     "crumbs": [
       "<ins>Guides</ins>",
       "![](/docs/img/folder-regular.svg){height=1em style='filter: invert(0.5) sepia(1) saturate(5) hue-rotate(175deg)'} **Data Management**",
-      "Collection",
-      "Data conventions"
+      "Collection"
     ]
   },
   {
-    "objectID": "docs/data/data_collection/data_conventions.html#folder-structure",
-    "href": "docs/data/data_collection/data_conventions.html#folder-structure",
-    "title": "Data conventions",
-    "section": "Folder structure",
-    "text": "Folder structure\nMaintaining a consistent folder structure across your research group and project phases prevents confusion, reduces errors in data analysis, and significantly improves research reproducibility. Remember that folder structure should complement your file naming (data) conventions to create a cohesive data organization system. Some practices to consider include:\n\nUse a consistent and descriptive naming convention for folders, similar to file naming conventions\nAvoid using spaces or special characters in folder names\nCreate a hierarchical structure that moves from general to specific, making navigation intuitive\nEstablish consistent naming patterns across all levels of your folder hierarchy\nSeparate raw and processed data into distinct folders to preserve original data integrity\nLimit folder nesting to 3-5 levels to prevent excessive complexity\nGroup related files into logical categories rather than creating folders for individual files\nDocument your folder structure in your data management plan for reference\nFor time-series or versioned data, consider incorporating date-based folder organization\nConsider adding a README file in your data/ folder to provide an overview of the folder structure and its contents",
-    "crumbs": [
-      "<ins>Guides</ins>",
-      "![](/docs/img/folder-regular.svg){height=1em style='filter: invert(0.5) sepia(1) saturate(5) hue-rotate(175deg)'} **Data Management**",
-      "Collection",
-      "Data conventions"
-    ]
-  },
-  {
-    "objectID": "docs/data/data_collection/data_conventions.html#file-standards",
-    "href": "docs/data/data_collection/data_conventions.html#file-standards",
-    "title": "Data conventions",
-    "section": "File standards",
-    "text": "File standards\nFiles commonly use standardised formats depending on their knowledge domain, and/or the platfrom through which they are made available. For example, FASTA format files are widely used in bioinformatics workflows for sequence alignment, database searches, genome assembly and more. Several major biological databases and tooling use and support the FASTA format, like NCBI, EMBL-EBI, and UniProt.\nIn the field of geosciences, the NetCDF format is widely used for array-oriented scientific data. It is particularly useful for storing multidimensional data such as temperature, pressure, and humidity in a single file. NetCDF files are self-describing and can be compressed to save space, making them ideal for large datasets.\nIn the field of engineering, data is often stored in formats such as HDF5. It is widely used for storing large amounts of numerical data and are supported by many programming languages and software tools.\nIn addition, 4TU.ResearchData has a list of preferred file formats, and they have a data collection policy that outlines the preferred file formats for data submission.\n\n\n\n\n\n\n Further reading\n\n\n\n\nThe FAIR Guiding Principles for scientific data management and stewardship",
-    "crumbs": [
-      "<ins>Guides</ins>",
-      "![](/docs/img/folder-regular.svg){height=1em style='filter: invert(0.5) sepia(1) saturate(5) hue-rotate(175deg)'} **Data Management**",
-      "Collection",
-      "Data conventions"
-    ]
-  },
-  {
-    "objectID": "docs/data/data_collection/access_reuse.html",
-    "href": "docs/data/data_collection/access_reuse.html",
-    "title": "Access and reuse",
+    "objectID": "docs/community/maintainers.html",
+    "href": "docs/community/maintainers.html",
+    "title": "Guide maintainers",
     "section": "",
-    "text": "Access and reuse depends on a variety of factors, including the format in which your data is stored, the tools used to create and manage it, and the policies governing its use. The key consideration is planning who, and under what conditions, can access your data.\n\n\n\n\n\n\n Learn more\n\n\n\nAgain, we would like to refer you to modules from the RDM 101 course and links from the PhD Supervisors guide for more information on this topic:\n\nRDM 101 - Module 3 - Access to Data\nRDM 101 - Module 4 - Data access and Data publication\nPhD Supervisors guide - Discover & Reuse\n\n\n\nTo ensure that your data can be accessed and reused in the future, consider the following practices:\n\nChoose the right format: Opting for widely accepted, non-proprietary, and open formats ensures that your data remains accessible and usable over time, even as technology evolves. Formats such as CSV for tabular data, TXT or Markdown for text, and PNG for images are examples of formats that are more likely to be supported in the long term. This increases the likelihood that your data will be accessible in the future, regardless of changes in technology or software.\nDocument your data: Documenting the context and structure of your data to enhance its reusability. Providing metadata, clear file naming conventions, and a README file explaining the dataset can significantly improve the chances of your data being understood and reused by others, including your future self.\nFollow data management best practices: Implement data management best practices, such as version control, regular backups, and secure storage. This will help ensure that your data remains accessible and usable over time.\nConsider data sharing policies: Be aware of any data sharing policies or regulations that may apply to your data. This includes understanding the rights and permissions associated with your data, as well as any restrictions on its use or distribution.\n\n\n\n\n\n\n\n Tip: Explore our Data sharing guide for more information.\n\n\n\n\nPlan for long-term storage: Consider how your data will be stored and accessed in the long term. This may involve using cloud storage solutions, institutional repositories, or other platforms that provide reliable access to your data over time.\n\n\n\n\n\n\n\n Tip: Explore our section Data storage for more information on data storage options.\n\n\n\n\nArchive in a trusted repository: Deposit your data in a trusted data repository. Repositories like 4TU.ResearchData provide long-term storage, preservation, and access services, making it easier for others to find and reuse your data.\n\n\n\n\n\n\n\n Tip: Explore our section Archive and publish for information on archiving your research data.",
-    "crumbs": [
-      "<ins>Guides</ins>",
-      "![](/docs/img/folder-regular.svg){height=1em style='filter: invert(0.5) sepia(1) saturate(5) hue-rotate(175deg)'} **Data Management**",
-      "Collection",
-      "Access and reuse"
-    ]
+    "text": "Guide maintainers\nThis content is automatically generated, all changes made will be lost.\n\n\n\n\n\n\n\n\n\nSection\nTitle\nLead maintainer\nBackup maintainer\n\n\n\n\ncontainers\nDocker users\nMaurits Kok\n\n\n\ndata\nRequestProject Drive\nAshley Cryan\n\n\n\ndata\nSync with Unison\nAshley Cryan\n\n\n\ndata\nMount Project Drive\nRaúl Ortiz Merino\nMaurits Kok\n\n\ndata\nData publishing\nAleksandra Wilczynska\n\n\n\ngitlab\nTransfer ownership of a GitLab repository\nLora Armstrong\nMaurits Kok\n\n\ngitlab\nCI with Gitlab\nAshley Cryan\nMaurits Kok\n\n\ngitlab\nGitLab runner for MATLAB\nMaurits Kok\n\n\n\ninfrastructure\nOverview\nMaurits Kok\nJose Urra\n\n\ninfrastructure\nRequest SSL Certificate\nAshley Cryan\n\n\n\ninfrastructure\nRequest VPS\nAshley Cryan\n\n\n\ninfrastructure\nSet up an Apache web server\nAshley Cryan\n\n\n\nresources\nCurriculum\nAshley Cryan\nMaurits Kok\n\n\nsoftware\nFAIR4RS checklist\nMaurits Kok\nElviss Dvinskis\n\n\nsoftware\nSoftware Management Plan\nMaurits Kok\n\n\n\nsoftware\nBranch management\nMaurits Kok\n\n\n\ntesting\nTesting with MATLAB\nMaurits Kok"
   },
   {
-    "objectID": "docs/community/dcc.html",
-    "href": "docs/community/dcc.html",
-    "title": "About the DCC",
+    "objectID": "docs/community/community.html",
+    "href": "docs/community/community.html",
+    "title": "Community",
     "section": "",
-    "text": "About the DCC\nThe TU Delft Digital Competence Centre (DCC) is an on-campus initiative to help researchers make research data FAIR, improve research software, and apply computing practices to increase the efficiency of the research process. The DCC is an initiative of the Open Science Programme at TU Delft designed to benefit researchers at all levels.\nFor more information, please visit our website at dcc.tudelft.nl or email us at dcc@tudelft.nl."
+    "text": "Teams channel - DCC Community\nData Stewards\nOpen Science Program\nOpen Science Community\nDelft HPC\nData Champions\nICT Innovation\nStatistical Helpdesk\n\n\n\n\n4TU.ResearchData is an international data repository for science, engineering and design. Its services include curation, sharing, long-term access and preservation of research datasets. These services are available to anyone around the world. In addition, 4TU.ResearchData also offers training and resources to researchers to support them in making research data findable, accessible, interoperable and reproducible (FAIR).\n\n\n\nFounded in 2012 as an independent foundation by NWO and SURF, the Netherlands eScience Center is the national centre with the digital skills to create innovative software solutions in academic research. They award research projects based on calls for proposals, and train researchers in the use of research software. They offer our expertise in the form of research software engineers (RSEs), the technology specialists with expert digital skills who work with us at the Center.\n\n\n\nNL-RSE brings together the community of people writing and contributing to research software from Dutch universities, knowledge institutes, companies and other organizations to share knowledge, to organize meetings, and raise awareness for the scientific recognition of research software."
   },
   {
-    "objectID": "docs/about.html",
-    "href": "docs/about.html",
-    "title": "About these guides",
+    "objectID": "docs/community/community.html#partners-within-the-tu-delft",
+    "href": "docs/community/community.html#partners-within-the-tu-delft",
+    "title": "Community",
     "section": "",
-    "text": "The DCC Guides are a curated, well-maintained online resource tailored for research support staff and researchers at TU Delft. They provide guidance on data management, research software development, and computing practices. By incorporating best practices from both internal and external sources, the guides will offer a centralized, comprehensive collection of solutions and resources specific to the TU Delft research environment.\nThe DCC Guides support research support staff by:\n\nEnabling the collection, curation, and sharing of developed solutions and relevant resources.\nPromoting a consistent, unified approach to delivering research support.\n\nThe DCC Guides support researchers by:\n\nHelping them understand the key challenges and requirements of digital research.\nGuiding researchers towards compliance with TU Delft policies on data management and research software.\nProviding standalone documentation for resolving digital research challenges independently.",
-    "crumbs": [
-      "<ins>Guides</ins>",
-      "About the guides"
-    ]
+    "text": "Teams channel - DCC Community\nData Stewards\nOpen Science Program\nOpen Science Community\nDelft HPC\nData Champions\nICT Innovation\nStatistical Helpdesk"
   },
   {
-    "objectID": "docs/about.html#purpose-and-benefits",
-    "href": "docs/about.html#purpose-and-benefits",
-    "title": "About these guides",
+    "objectID": "docs/community/community.html#tu.researchdata",
+    "href": "docs/community/community.html#tu.researchdata",
+    "title": "Community",
     "section": "",
-    "text": "The DCC Guides are a curated, well-maintained online resource tailored for research support staff and researchers at TU Delft. They provide guidance on data management, research software development, and computing practices. By incorporating best practices from both internal and external sources, the guides will offer a centralized, comprehensive collection of solutions and resources specific to the TU Delft research environment.\nThe DCC Guides support research support staff by:\n\nEnabling the collection, curation, and sharing of developed solutions and relevant resources.\nPromoting a consistent, unified approach to delivering research support.\n\nThe DCC Guides support researchers by:\n\nHelping them understand the key challenges and requirements of digital research.\nGuiding researchers towards compliance with TU Delft policies on data management and research software.\nProviding standalone documentation for resolving digital research challenges independently.",
-    "crumbs": [
-      "<ins>Guides</ins>",
-      "About the guides"
-    ]
+    "text": "4TU.ResearchData is an international data repository for science, engineering and design. Its services include curation, sharing, long-term access and preservation of research datasets. These services are available to anyone around the world. In addition, 4TU.ResearchData also offers training and resources to researchers to support them in making research data findable, accessible, interoperable and reproducible (FAIR)."
   },
   {
-    "objectID": "docs/about.html#audience",
-    "href": "docs/about.html#audience",
-    "title": "About these guides",
-    "section": "Audience",
-    "text": "Audience\nThe DCC Guides are primarily designed for the DCC and TU Delft research support staff, with researchers as a secondary audience. Usability for support processes is a core focus. Success is assessed through increased user engagement (measured by feedback and site analytics) and improved support outcomes (evaluated internally).\n\n1. DCC team members\nAs the main contributors and maintainers, the DCC team is the primary audience. A key goal is to document and preserve developed solutions for reuse, avoiding redundant effort. The team is responsible for regularly updating the guides, integrating user feedback, and ensuring content quality.\n\n\n2. TU Delft research support staff\nThis group includes Faculty Data Stewards, ICT Innovation, and the Library’s Research and Data Services team. These staff members can use the guides as a trusted resource to support researchers more effectively and stay up to date with best practices.\n\n\n3. TU Delft researchers\nResearchers can benefit from easy access to current, reliable information to support their research workflows. The guides are not intended as a complete training pathway and will link to trustworthy external resources where appropriate.",
-    "crumbs": [
-      "<ins>Guides</ins>",
-      "About the guides"
-    ]
-  },
-  {
-    "objectID": "CONTRIBUTING.html",
-    "href": "CONTRIBUTING.html",
-    "title": "Contributing guidelines",
+    "objectID": "docs/community/community.html#escience-center",
+    "href": "docs/community/community.html#escience-center",
+    "title": "Community",
     "section": "",
-    "text": "Do you have issues, tips, ideas, events, or questions related to Research Computing, Research Data, and Research Software at TU Delft?\nAre you a researcher interested in these topics?\nDo you work and collaborate with researchers on these topics?\n\nWe’re using GitHub Discussions as a place to connect with other members of our community. We hope that you:\n\nAsk questions about challenges you encounter\nShare ideas and solutions\nEngage with other community members\nBe welcoming and open-minded. Remember that this is a community we build together. See our Code of Conduct for more information.\n\n\n\n\nDo you have questions, ideas or ongoing developments on FAIR related aspects, Open Science, training, etc? Would you like to point to specific resources and potential solutions or ideas?\n\nUse the Q&A to ask a question on a specific topic, such as\n\nHow do I generate a reproducible software development environment?\nWhere can I find information on creating a Python package?\nHow should I archive my software?\nHow do I get started with git?\n\nUse Ideas to make proposals, for instance\n\nUsing jupyter hub for a workshop\nUsing jupyter books to create educational resources\nRunning monthly webinars for the community to transfer FAIR practices\n\nUse Solutions to point people to existing solutions or share your own. These solutions might end up on our Guides website to share with our community.\nShow and tell things you have done that you are proud of and like other to be aware of.\n\n\n\n\n\n\n\nFork the repository to your own GitHub profile.\nClone the repository.\nNavigate to the root of this repository in your terminal.\nInstall Quarto if you don’t already have it installed on your machine. You can find the installation instructions here.\n\nAlternative: Install Quarto within a virtual environment using the environment.yml file by following the below steps:\n\nRun conda env create -f environment.yml in the terminal to create a conda environment with Quarto pre-installed.\nActivate the environment by running conda activate dcc_guides.\n\n\n\nRun quarto preview.\nYou will see the rendered version in a browser window.\n\n\n\n\n\nFork the repository to your own GitHub profile.\nEither commit a new change to the repository to trigger the build action or manually trigger the action. To manually trigger the action, go to Actions -&gt; Quarto Publish Guides and press Run workflow and Run workflow.\nIn your forked repository, under Settings -&gt; Pages set Source to gh-pages and /(root) and press Save.\n\n\n\n\n\n(important) announce your plan to the rest of the community before you start working. This announcement should be in the form of a (new) issue;\n(important) wait until some kind of consensus is reached about your idea being a good idea;\nif needed, fork the repository to your own GitHub profile and create your own feature branch off of the latest main commit. While working on your feature branch, make sure to stay up to date with the main branch by pulling in changes, possibly from the ‘upstream’ repository (follow the instructions here and here);\npush your feature branch to (your fork of) the DCC guides repository on GitHub;\ncreate the pull request, e.g. following the instructions here. If needed, provide a link to the gh-pages in your forked repository: https://&lt;your-username&gt;.github.io/TU-Delft-DCC.github.io/."
+    "text": "Founded in 2012 as an independent foundation by NWO and SURF, the Netherlands eScience Center is the national centre with the digital skills to create innovative software solutions in academic research. They award research projects based on calls for proposals, and train researchers in the use of research software. They offer our expertise in the form of research software engineers (RSEs), the technology specialists with expert digital skills who work with us at the Center."
   },
   {
-    "objectID": "CONTRIBUTING.html#welcome",
-    "href": "CONTRIBUTING.html#welcome",
-    "title": "Contributing guidelines",
+    "objectID": "docs/community/community.html#nl-rse",
+    "href": "docs/community/community.html#nl-rse",
+    "title": "Community",
     "section": "",
-    "text": "Do you have issues, tips, ideas, events, or questions related to Research Computing, Research Data, and Research Software at TU Delft?\nAre you a researcher interested in these topics?\nDo you work and collaborate with researchers on these topics?\n\nWe’re using GitHub Discussions as a place to connect with other members of our community. We hope that you:\n\nAsk questions about challenges you encounter\nShare ideas and solutions\nEngage with other community members\nBe welcoming and open-minded. Remember that this is a community we build together. See our Code of Conduct for more information."
-  },
-  {
-    "objectID": "CONTRIBUTING.html#how-to-participate",
-    "href": "CONTRIBUTING.html#how-to-participate",
-    "title": "Contributing guidelines",
-    "section": "",
-    "text": "Do you have questions, ideas or ongoing developments on FAIR related aspects, Open Science, training, etc? Would you like to point to specific resources and potential solutions or ideas?\n\nUse the Q&A to ask a question on a specific topic, such as\n\nHow do I generate a reproducible software development environment?\nWhere can I find information on creating a Python package?\nHow should I archive my software?\nHow do I get started with git?\n\nUse Ideas to make proposals, for instance\n\nUsing jupyter hub for a workshop\nUsing jupyter books to create educational resources\nRunning monthly webinars for the community to transfer FAIR practices\n\nUse Solutions to point people to existing solutions or share your own. These solutions might end up on our Guides website to share with our community.\nShow and tell things you have done that you are proud of and like other to be aware of."
-  },
-  {
-    "objectID": "CONTRIBUTING.html#for-developers",
-    "href": "CONTRIBUTING.html#for-developers",
-    "title": "Contributing guidelines",
-    "section": "",
-    "text": "Fork the repository to your own GitHub profile.\nClone the repository.\nNavigate to the root of this repository in your terminal.\nInstall Quarto if you don’t already have it installed on your machine. You can find the installation instructions here.\n\nAlternative: Install Quarto within a virtual environment using the environment.yml file by following the below steps:\n\nRun conda env create -f environment.yml in the terminal to create a conda environment with Quarto pre-installed.\nActivate the environment by running conda activate dcc_guides.\n\n\n\nRun quarto preview.\nYou will see the rendered version in a browser window.\n\n\n\n\n\nFork the repository to your own GitHub profile.\nEither commit a new change to the repository to trigger the build action or manually trigger the action. To manually trigger the action, go to Actions -&gt; Quarto Publish Guides and press Run workflow and Run workflow.\nIn your forked repository, under Settings -&gt; Pages set Source to gh-pages and /(root) and press Save.\n\n\n\n\n\n(important) announce your plan to the rest of the community before you start working. This announcement should be in the form of a (new) issue;\n(important) wait until some kind of consensus is reached about your idea being a good idea;\nif needed, fork the repository to your own GitHub profile and create your own feature branch off of the latest main commit. While working on your feature branch, make sure to stay up to date with the main branch by pulling in changes, possibly from the ‘upstream’ repository (follow the instructions here and here);\npush your feature branch to (your fork of) the DCC guides repository on GitHub;\ncreate the pull request, e.g. following the instructions here. If needed, provide a link to the gh-pages in your forked repository: https://&lt;your-username&gt;.github.io/TU-Delft-DCC.github.io/."
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Welcome to the DCC Guides!",
-    "section": "",
-    "text": "These guides provide a starting point for Research Computing, Research Data, and Research Software at TU Delft. This is an initiative from the TU Delft Digital Competence Centre.\n Shared solutions for research support staff  Practical guides for researchers\n\n\n   Computing Infrastructure \n   Data Management \n   Research Software \n   Courses and Workshops \n\n\n\n\n\n\n\n\n Want to get involved? \n Join the community We welcome anyone to join us in improving our guides! Find out how in our contributing guide.\n Join the discussion We welcome community discussions, ideas, and general questions to develop solutions and receive feedback in our community forum.\n Open an issue We track topic requests and bug-reports via GitHub issues.",
-    "crumbs": [
-      "<ins>Guides</ins>",
-      "<span style=\"filter:grayscale(100%);\">⌂</span> **Home**"
-    ]
+    "text": "NL-RSE brings together the community of people writing and contributing to research software from Dutch universities, knowledge institutes, companies and other organizations to share knowledge, to organize meetings, and raise awareness for the scientific recognition of research software."
   },
   {
     "objectID": "CODE_OF_CONDUCT.html",
@@ -1990,241 +1881,301 @@
     "text": "This Code of Conduct is adapted from the Contributor Covenant, version 2.1, available at https://www.contributor-covenant.org/version/2/1/code_of_conduct.html.\nCommunity Impact Guidelines were inspired by Mozilla’s code of conduct enforcement ladder.\nFor answers to common questions about this code of conduct, see the FAQ at https://www.contributor-covenant.org/faq. Translations are available at https://www.contributor-covenant.org/translations."
   },
   {
-    "objectID": "docs/community/community.html",
-    "href": "docs/community/community.html",
-    "title": "Community",
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Welcome to the DCC Guides!",
     "section": "",
-    "text": "Teams channel - DCC Community\nData Stewards\nOpen Science Program\nOpen Science Community\nDelft HPC\nData Champions\nICT Innovation\nStatistical Helpdesk\n\n\n\n\n4TU.ResearchData is an international data repository for science, engineering and design. Its services include curation, sharing, long-term access and preservation of research datasets. These services are available to anyone around the world. In addition, 4TU.ResearchData also offers training and resources to researchers to support them in making research data findable, accessible, interoperable and reproducible (FAIR).\n\n\n\nFounded in 2012 as an independent foundation by NWO and SURF, the Netherlands eScience Center is the national centre with the digital skills to create innovative software solutions in academic research. They award research projects based on calls for proposals, and train researchers in the use of research software. They offer our expertise in the form of research software engineers (RSEs), the technology specialists with expert digital skills who work with us at the Center.\n\n\n\nNL-RSE brings together the community of people writing and contributing to research software from Dutch universities, knowledge institutes, companies and other organizations to share knowledge, to organize meetings, and raise awareness for the scientific recognition of research software."
-  },
-  {
-    "objectID": "docs/community/community.html#partners-within-the-tu-delft",
-    "href": "docs/community/community.html#partners-within-the-tu-delft",
-    "title": "Community",
-    "section": "",
-    "text": "Teams channel - DCC Community\nData Stewards\nOpen Science Program\nOpen Science Community\nDelft HPC\nData Champions\nICT Innovation\nStatistical Helpdesk"
-  },
-  {
-    "objectID": "docs/community/community.html#tu.researchdata",
-    "href": "docs/community/community.html#tu.researchdata",
-    "title": "Community",
-    "section": "",
-    "text": "4TU.ResearchData is an international data repository for science, engineering and design. Its services include curation, sharing, long-term access and preservation of research datasets. These services are available to anyone around the world. In addition, 4TU.ResearchData also offers training and resources to researchers to support them in making research data findable, accessible, interoperable and reproducible (FAIR)."
-  },
-  {
-    "objectID": "docs/community/community.html#escience-center",
-    "href": "docs/community/community.html#escience-center",
-    "title": "Community",
-    "section": "",
-    "text": "Founded in 2012 as an independent foundation by NWO and SURF, the Netherlands eScience Center is the national centre with the digital skills to create innovative software solutions in academic research. They award research projects based on calls for proposals, and train researchers in the use of research software. They offer our expertise in the form of research software engineers (RSEs), the technology specialists with expert digital skills who work with us at the Center."
-  },
-  {
-    "objectID": "docs/community/community.html#nl-rse",
-    "href": "docs/community/community.html#nl-rse",
-    "title": "Community",
-    "section": "",
-    "text": "NL-RSE brings together the community of people writing and contributing to research software from Dutch universities, knowledge institutes, companies and other organizations to share knowledge, to organize meetings, and raise awareness for the scientific recognition of research software."
-  },
-  {
-    "objectID": "docs/community/maintainers.html",
-    "href": "docs/community/maintainers.html",
-    "title": "Guide maintainers",
-    "section": "",
-    "text": "Guide maintainers\nThis content is automatically generated, all changes made will be lost.\n\n\n\n\n\n\n\n\n\nSection\nTitle\nLead maintainer\nBackup maintainer\n\n\n\n\ncontainers\nDocker users\nMaurits Kok\n\n\n\ndata\nRequestProject Drive\nAshley Cryan\n\n\n\ndata\nSync with Unison\nAshley Cryan\n\n\n\ndata\nMount Project Drive\nRaúl Ortiz Merino\nMaurits Kok\n\n\ndata\nData publishing\nAleksandra Wilczynska\n\n\n\ngitlab\nTransfer ownership of a GitLab repository\nLora Armstrong\nMaurits Kok\n\n\ngitlab\nCI with Gitlab\nAshley Cryan\nMaurits Kok\n\n\ngitlab\nGitLab runner for MATLAB\nMaurits Kok\n\n\n\ninfrastructure\nOverview\nMaurits Kok\nJose Urra\n\n\ninfrastructure\nRequest SSL Certificate\nAshley Cryan\n\n\n\ninfrastructure\nRequest VPS\nAshley Cryan\n\n\n\ninfrastructure\nSet up an Apache web server\nAshley Cryan\n\n\n\nresources\nCurriculum\nAshley Cryan\nMaurits Kok\n\n\nsoftware\nFAIR4RS checklist\nMaurits Kok\nElviss Dvinskis\n\n\nsoftware\nSoftware Management Plan\nMaurits Kok\n\n\n\nsoftware\nBranch management\nMaurits Kok\n\n\n\ntesting\nTesting with MATLAB\nMaurits Kok"
-  },
-  {
-    "objectID": "docs/data/data_collection/collection.html",
-    "href": "docs/data/data_collection/collection.html",
-    "title": "Data collection",
-    "section": "",
-    "text": "Data collection is one of the first steps in the data lifecycle. It involves gathering and recording data from various sources, which can include (but are not limited to) experiments, observations, simulations or existing datasets. These can come from various sources being both public and private. The data collected can be quantitative or qualitative, and it can be structured or unstructured. The choice of data collection methods and tools depends on the research objectives, the type of data needed, and the resources available.\nProper data collection practices are essential for ensuring the integrity and reliability of the data, as well as for its use later analysis and interpretation. This section provides an overview of important aspects of data collection, including data conventions, data access and reuse, and the use of eLabJournal and RSpace. These elements are essential for maintaining the quality and usability of research data, and they play a significant role in the overall research process.\n\n\n\n\n\n\n Learn more\n\n\n\n\nWe would like to refer you to the Discover & Reuse and Gather/Create & Analyse and sections of the TU Delft Navigating Research Data and Software: A Practical Guide for PhD Supervisors guide for more information.\nAdditionally, we would like to refer you to the RDM 101 book for more information on this topic.\n\n\n\n\n\n\n Data conventions\nData standards and types.\n\nLearn more »\n\n\n\n Data access and reuse\nMaking your data accessible and reusable.\n\nLearn more »\n\n\n\n eLabJournal and RSpace\nTools made available by TU Delft to document the research process.\n\nLearn more »",
+    "text": "These guides provide a starting point for Research Computing, Research Data, and Research Software at TU Delft. This is an initiative from the TU Delft Digital Competence Centre.\n Shared solutions for research support staff  Practical guides for researchers\n\n\n   Computing Infrastructure \n   Data Management \n   Research Software \n   Courses and Workshops \n\n\n\n\n\n\n\n\n Want to get involved? \n Join the community We welcome anyone to join us in improving our guides! Find out how in our contributing guide.\n Join the discussion We welcome community discussions, ideas, and general questions to develop solutions and receive feedback in our community forum.\n Open an issue We track topic requests and bug-reports via GitHub issues.",
     "crumbs": [
       "<ins>Guides</ins>",
-      "![](/docs/img/folder-regular.svg){height=1em style='filter: invert(0.5) sepia(1) saturate(5) hue-rotate(175deg)'} **Data Management**",
-      "Collection"
+      "<span style=\"filter:grayscale(100%);\">⌂</span> **Home**"
     ]
   },
   {
-    "objectID": "docs/data/data_collection/elab_rspace.html",
-    "href": "docs/data/data_collection/elab_rspace.html",
-    "title": "eLabJournal and RSpace",
+    "objectID": "CONTRIBUTING.html",
+    "href": "CONTRIBUTING.html",
+    "title": "Contributing guidelines",
     "section": "",
-    "text": "Jones recounts her frustration with relying on paper notebooks to record experiments. “It becomes problematic when you need to replicate experiments or continue a research project conducted by a researcher who has since left your institution without documenting their work properly.” Jones identifies some difficulties of understanding handwritten information (including her own!) “Locating and interpreting data from past experiments can be challenging using paper notebooks”, she admits. “Finally, after rifling through pages of scribbled diagrams, photocopies and post-it notes you find the experiment you’ve been searching for and it can be impossible to decipher the handwriting and bridge the gaps of missing information”. These problems sound all too familiar to most lab-based scientists and have increased the demand for digital solutions, such as ELNs, that can improve the rigour, robustness and reproducibility of scientific research.\nDr. Siân Jones, quote taken from Keep calm and go paperless: Electronic lab notebooks can improve your research. CC-BY-4.0\n\nAn electronic laboratory notebook (ELN), also called a digital lab notebook, offers a text editor for writing notes similar to a paper notebook, along with spreadsheet tools for calculations and formatting tables and graphs. They include protocol templates to record standard procedures and laboratory inventories to keep track of samples, reagents, and equipment. Additionally, ELNs provide collaboration tools to share experimental information with others, making them a straightforward solution to research documentation.\nTU Delft has a subscription to eLABJournal and RSpace ELNs, and both offer similar functionalities.\n\n\n\n\n\n\n\n Learn more\n\n\n\nFor instructions on getting started with RSpace and eLabJournal, along with other essential information about ELNs, visit the TU Delft Library website’s Electronic Lab Notebook page.",
+    "text": "Do you have issues, tips, ideas, events, or questions related to Research Computing, Research Data, and Research Software at TU Delft?\nAre you a researcher interested in these topics?\nDo you work and collaborate with researchers on these topics?\n\nWe’re using GitHub Discussions as a place to connect with other members of our community. We hope that you:\n\nAsk questions about challenges you encounter\nShare ideas and solutions\nEngage with other community members\nBe welcoming and open-minded. Remember that this is a community we build together. See our Code of Conduct for more information.\n\n\n\n\nDo you have questions, ideas or ongoing developments on FAIR related aspects, Open Science, training, etc? Would you like to point to specific resources and potential solutions or ideas?\n\nUse the Q&A to ask a question on a specific topic, such as\n\nHow do I generate a reproducible software development environment?\nWhere can I find information on creating a Python package?\nHow should I archive my software?\nHow do I get started with git?\n\nUse Ideas to make proposals, for instance\n\nUsing jupyter hub for a workshop\nUsing jupyter books to create educational resources\nRunning monthly webinars for the community to transfer FAIR practices\n\nUse Solutions to point people to existing solutions or share your own. These solutions might end up on our Guides website to share with our community.\nShow and tell things you have done that you are proud of and like other to be aware of.\n\n\n\n\n\n\n\nFork the repository to your own GitHub profile.\nClone the repository.\nNavigate to the root of this repository in your terminal.\nInstall Quarto if you don’t already have it installed on your machine. You can find the installation instructions here.\n\nAlternative: Install Quarto within a virtual environment using the environment.yml file by following the below steps:\n\nRun conda env create -f environment.yml in the terminal to create a conda environment with Quarto pre-installed.\nActivate the environment by running conda activate dcc_guides.\n\n\n\nRun quarto preview.\nYou will see the rendered version in a browser window.\n\n\n\n\n\nFork the repository to your own GitHub profile.\nEither commit a new change to the repository to trigger the build action or manually trigger the action. To manually trigger the action, go to Actions -&gt; Quarto Publish Guides and press Run workflow and Run workflow.\nIn your forked repository, under Settings -&gt; Pages set Source to gh-pages and /(root) and press Save.\n\n\n\n\n\n(important) announce your plan to the rest of the community before you start working. This announcement should be in the form of a (new) issue;\n(important) wait until some kind of consensus is reached about your idea being a good idea;\nif needed, fork the repository to your own GitHub profile and create your own feature branch off of the latest main commit. While working on your feature branch, make sure to stay up to date with the main branch by pulling in changes, possibly from the ‘upstream’ repository (follow the instructions here and here);\npush your feature branch to (your fork of) the DCC guides repository on GitHub;\ncreate the pull request, e.g. following the instructions here. If needed, provide a link to the gh-pages in your forked repository: https://&lt;your-username&gt;.github.io/TU-Delft-DCC.github.io/."
+  },
+  {
+    "objectID": "CONTRIBUTING.html#welcome",
+    "href": "CONTRIBUTING.html#welcome",
+    "title": "Contributing guidelines",
+    "section": "",
+    "text": "Do you have issues, tips, ideas, events, or questions related to Research Computing, Research Data, and Research Software at TU Delft?\nAre you a researcher interested in these topics?\nDo you work and collaborate with researchers on these topics?\n\nWe’re using GitHub Discussions as a place to connect with other members of our community. We hope that you:\n\nAsk questions about challenges you encounter\nShare ideas and solutions\nEngage with other community members\nBe welcoming and open-minded. Remember that this is a community we build together. See our Code of Conduct for more information."
+  },
+  {
+    "objectID": "CONTRIBUTING.html#how-to-participate",
+    "href": "CONTRIBUTING.html#how-to-participate",
+    "title": "Contributing guidelines",
+    "section": "",
+    "text": "Do you have questions, ideas or ongoing developments on FAIR related aspects, Open Science, training, etc? Would you like to point to specific resources and potential solutions or ideas?\n\nUse the Q&A to ask a question on a specific topic, such as\n\nHow do I generate a reproducible software development environment?\nWhere can I find information on creating a Python package?\nHow should I archive my software?\nHow do I get started with git?\n\nUse Ideas to make proposals, for instance\n\nUsing jupyter hub for a workshop\nUsing jupyter books to create educational resources\nRunning monthly webinars for the community to transfer FAIR practices\n\nUse Solutions to point people to existing solutions or share your own. These solutions might end up on our Guides website to share with our community.\nShow and tell things you have done that you are proud of and like other to be aware of."
+  },
+  {
+    "objectID": "CONTRIBUTING.html#for-developers",
+    "href": "CONTRIBUTING.html#for-developers",
+    "title": "Contributing guidelines",
+    "section": "",
+    "text": "Fork the repository to your own GitHub profile.\nClone the repository.\nNavigate to the root of this repository in your terminal.\nInstall Quarto if you don’t already have it installed on your machine. You can find the installation instructions here.\n\nAlternative: Install Quarto within a virtual environment using the environment.yml file by following the below steps:\n\nRun conda env create -f environment.yml in the terminal to create a conda environment with Quarto pre-installed.\nActivate the environment by running conda activate dcc_guides.\n\n\n\nRun quarto preview.\nYou will see the rendered version in a browser window.\n\n\n\n\n\nFork the repository to your own GitHub profile.\nEither commit a new change to the repository to trigger the build action or manually trigger the action. To manually trigger the action, go to Actions -&gt; Quarto Publish Guides and press Run workflow and Run workflow.\nIn your forked repository, under Settings -&gt; Pages set Source to gh-pages and /(root) and press Save.\n\n\n\n\n\n(important) announce your plan to the rest of the community before you start working. This announcement should be in the form of a (new) issue;\n(important) wait until some kind of consensus is reached about your idea being a good idea;\nif needed, fork the repository to your own GitHub profile and create your own feature branch off of the latest main commit. While working on your feature branch, make sure to stay up to date with the main branch by pulling in changes, possibly from the ‘upstream’ repository (follow the instructions here and here);\npush your feature branch to (your fork of) the DCC guides repository on GitHub;\ncreate the pull request, e.g. following the instructions here. If needed, provide a link to the gh-pages in your forked repository: https://&lt;your-username&gt;.github.io/TU-Delft-DCC.github.io/."
+  },
+  {
+    "objectID": "docs/about.html",
+    "href": "docs/about.html",
+    "title": "About these guides",
+    "section": "",
+    "text": "The DCC Guides are a curated, well-maintained online resource tailored for research support staff and researchers at TU Delft. They provide guidance on data management, research software development, and computing practices. By incorporating best practices from both internal and external sources, the guides will offer a centralized, comprehensive collection of solutions and resources specific to the TU Delft research environment.\nThe DCC Guides support research support staff by:\n\nEnabling the collection, curation, and sharing of developed solutions and relevant resources.\nPromoting a consistent, unified approach to delivering research support.\n\nThe DCC Guides support researchers by:\n\nHelping them understand the key challenges and requirements of digital research.\nGuiding researchers towards compliance with TU Delft policies on data management and research software.\nProviding standalone documentation for resolving digital research challenges independently.",
+    "crumbs": [
+      "<ins>Guides</ins>",
+      "About the guides"
+    ]
+  },
+  {
+    "objectID": "docs/about.html#purpose-and-benefits",
+    "href": "docs/about.html#purpose-and-benefits",
+    "title": "About these guides",
+    "section": "",
+    "text": "The DCC Guides are a curated, well-maintained online resource tailored for research support staff and researchers at TU Delft. They provide guidance on data management, research software development, and computing practices. By incorporating best practices from both internal and external sources, the guides will offer a centralized, comprehensive collection of solutions and resources specific to the TU Delft research environment.\nThe DCC Guides support research support staff by:\n\nEnabling the collection, curation, and sharing of developed solutions and relevant resources.\nPromoting a consistent, unified approach to delivering research support.\n\nThe DCC Guides support researchers by:\n\nHelping them understand the key challenges and requirements of digital research.\nGuiding researchers towards compliance with TU Delft policies on data management and research software.\nProviding standalone documentation for resolving digital research challenges independently.",
+    "crumbs": [
+      "<ins>Guides</ins>",
+      "About the guides"
+    ]
+  },
+  {
+    "objectID": "docs/about.html#audience",
+    "href": "docs/about.html#audience",
+    "title": "About these guides",
+    "section": "Audience",
+    "text": "Audience\nThe DCC Guides are primarily designed for the DCC and TU Delft research support staff, with researchers as a secondary audience. Usability for support processes is a core focus. Success is assessed through increased user engagement (measured by feedback and site analytics) and improved support outcomes (evaluated internally).\n\n1. DCC team members\nAs the main contributors and maintainers, the DCC team is the primary audience. A key goal is to document and preserve developed solutions for reuse, avoiding redundant effort. The team is responsible for regularly updating the guides, integrating user feedback, and ensuring content quality.\n\n\n2. TU Delft research support staff\nThis group includes Faculty Data Stewards, ICT Innovation, and the Library’s Research and Data Services team. These staff members can use the guides as a trusted resource to support researchers more effectively and stay up to date with best practices.\n\n\n3. TU Delft researchers\nResearchers can benefit from easy access to current, reliable information to support their research workflows. The guides are not intended as a complete training pathway and will link to trustworthy external resources where appropriate.",
+    "crumbs": [
+      "<ins>Guides</ins>",
+      "About the guides"
+    ]
+  },
+  {
+    "objectID": "docs/community/dcc.html",
+    "href": "docs/community/dcc.html",
+    "title": "About the DCC",
+    "section": "",
+    "text": "About the DCC\nThe TU Delft Digital Competence Centre (DCC) is an on-campus initiative to help researchers make research data FAIR, improve research software, and apply computing practices to increase the efficiency of the research process. The DCC is an initiative of the Open Science Programme at TU Delft designed to benefit researchers at all levels.\nFor more information, please visit our website at dcc.tudelft.nl or email us at dcc@tudelft.nl."
+  },
+  {
+    "objectID": "docs/data/data_collection/access_reuse.html",
+    "href": "docs/data/data_collection/access_reuse.html",
+    "title": "Access and reuse",
+    "section": "",
+    "text": "Access and reuse depends on a variety of factors, including the format in which your data is stored, the tools used to create and manage it, and the policies governing its use. The key consideration is planning who, and under what conditions, can access your data.\n\n\n\n\n\n\n Learn more\n\n\n\nAgain, we would like to refer you to modules from the RDM 101 course and links from the PhD Supervisors guide for more information on this topic:\n\nRDM 101 - Module 3 - Access to Data\nRDM 101 - Module 4 - Data access and Data publication\nPhD Supervisors guide - Discover & Reuse\n\n\n\nTo ensure that your data can be accessed and reused in the future, consider the following practices:\n\nChoose the right format: Opting for widely accepted, non-proprietary, and open formats ensures that your data remains accessible and usable over time, even as technology evolves. Formats such as CSV for tabular data, TXT or Markdown for text, and PNG for images are examples of formats that are more likely to be supported in the long term. This increases the likelihood that your data will be accessible in the future, regardless of changes in technology or software.\nDocument your data: Documenting the context and structure of your data to enhance its reusability. Providing metadata, clear file naming conventions, and a README file explaining the dataset can significantly improve the chances of your data being understood and reused by others, including your future self.\nFollow data management best practices: Implement data management best practices, such as version control, regular backups, and secure storage. This will help ensure that your data remains accessible and usable over time.\nConsider data sharing policies: Be aware of any data sharing policies or regulations that may apply to your data. This includes understanding the rights and permissions associated with your data, as well as any restrictions on its use or distribution.\n\n\n\n\n\n\n\n Tip: Explore our Data sharing guide for more information.\n\n\n\n\nPlan for long-term storage: Consider how your data will be stored and accessed in the long term. This may involve using cloud storage solutions, institutional repositories, or other platforms that provide reliable access to your data over time.\n\n\n\n\n\n\n\n Tip: Explore our section Data storage for more information on data storage options.\n\n\n\n\nArchive in a trusted repository: Deposit your data in a trusted data repository. Repositories like 4TU.ResearchData provide long-term storage, preservation, and access services, making it easier for others to find and reuse your data.\n\n\n\n\n\n\n\n Tip: Explore our section Archive and publish for information on archiving your research data.",
     "crumbs": [
       "<ins>Guides</ins>",
       "![](/docs/img/folder-regular.svg){height=1em style='filter: invert(0.5) sepia(1) saturate(5) hue-rotate(175deg)'} **Data Management**",
       "Collection",
-      "eLabJournal and RSpace"
+      "Access and reuse"
     ]
   },
   {
-    "objectID": "docs/data/data_publishing/archival_publishing_index.html",
-    "href": "docs/data/data_publishing/archival_publishing_index.html",
-    "title": "Archiving and publishing data",
+    "objectID": "docs/data/data_collection/data_conventions.html",
+    "href": "docs/data/data_collection/data_conventions.html",
+    "title": "Data conventions",
     "section": "",
-    "text": "Towards the end of the research cycle, data archiving (and publishing, when possible) is an essential step for the longevity and accessibility of your research. Archiving data means that it is preserved and remains accessible for future use. This process not only helps with the visibility of your work but also contributes to the advancement of knowledge in your field. Other researchers have the data available and can build upon your work. Learning how to effectively preserve and share your research isn’t just good scientific practice - it’s how your work makes a lasting impact.\n\n\n\n Licensing\nChoose a license for your data.\n\nLearn more »\n\n\n\n Publishing data\nBroaden the reach of your research.\n\nLearn more »\n\n\n\n Offboarding and ownership\nEnsures accountability and longevity.\n\nLearn more »",
+    "text": "By adhering to domain-aligned data conventions, you can enhance the quality and reproducibility of your work, promote collaboration, data sharing and reuse. While flexibility exists to accommodate the specific needs of your research project, it is important to establish a consistent framework for data collection and management. This section outlines some key considerations for data conventions, including naming conventions, folder structure, and file standards.",
     "crumbs": [
       "<ins>Guides</ins>",
       "![](/docs/img/folder-regular.svg){height=1em style='filter: invert(0.5) sepia(1) saturate(5) hue-rotate(175deg)'} **Data Management**",
-      "Archive and publish"
+      "Collection",
+      "Data conventions"
     ]
   },
   {
-    "objectID": "docs/data/data_publishing/offboarding.html",
-    "href": "docs/data/data_publishing/offboarding.html",
-    "title": "Offboarding and ownership",
+    "objectID": "docs/data/data_collection/data_conventions.html#data-conventions",
+    "href": "docs/data/data_collection/data_conventions.html#data-conventions",
+    "title": "Data conventions",
+    "section": "Data conventions",
+    "text": "Data conventions\nEstablishing consistent naming conventions and metadata practices for your data files is essential for long-term project maintainability. Similarly, as mentioned in the Project structure guide in the Research Software section, some essential principles apply, like:\n\nuse descriptive, concise and consistent names\navoid special characters and spaces (instead use underscores _ or hyphens -)\nfollow ISO 8601 date formatting (YYYY-MM-DD)\nthe order matters - order elements in the name from least to most specific\ninclude versioning in the name (where applicable)\n\nHowever, the specific conventions you choose should align with the needs of your research project, collaborators, and established practices within your field.",
+    "crumbs": [
+      "<ins>Guides</ins>",
+      "![](/docs/img/folder-regular.svg){height=1em style='filter: invert(0.5) sepia(1) saturate(5) hue-rotate(175deg)'} **Data Management**",
+      "Collection",
+      "Data conventions"
+    ]
+  },
+  {
+    "objectID": "docs/data/data_collection/data_conventions.html#folder-structure",
+    "href": "docs/data/data_collection/data_conventions.html#folder-structure",
+    "title": "Data conventions",
+    "section": "Folder structure",
+    "text": "Folder structure\nMaintaining a consistent folder structure across your research group and project phases prevents confusion, reduces errors in data analysis, and significantly improves research reproducibility. Remember that folder structure should complement your file naming (data) conventions to create a cohesive data organization system. Some practices to consider include:\n\nUse a consistent and descriptive naming convention for folders, similar to file naming conventions\nAvoid using spaces or special characters in folder names\nCreate a hierarchical structure that moves from general to specific, making navigation intuitive\nEstablish consistent naming patterns across all levels of your folder hierarchy\nSeparate raw and processed data into distinct folders to preserve original data integrity\nLimit folder nesting to 3-5 levels to prevent excessive complexity\nGroup related files into logical categories rather than creating folders for individual files\nDocument your folder structure in your data management plan for reference\nFor time-series or versioned data, consider incorporating date-based folder organization\nConsider adding a README file in your data/ folder to provide an overview of the folder structure and its contents",
+    "crumbs": [
+      "<ins>Guides</ins>",
+      "![](/docs/img/folder-regular.svg){height=1em style='filter: invert(0.5) sepia(1) saturate(5) hue-rotate(175deg)'} **Data Management**",
+      "Collection",
+      "Data conventions"
+    ]
+  },
+  {
+    "objectID": "docs/data/data_collection/data_conventions.html#file-standards",
+    "href": "docs/data/data_collection/data_conventions.html#file-standards",
+    "title": "Data conventions",
+    "section": "File standards",
+    "text": "File standards\nFiles commonly use standardised formats depending on their knowledge domain, and/or the platfrom through which they are made available. For example, FASTA format files are widely used in bioinformatics workflows for sequence alignment, database searches, genome assembly and more. Several major biological databases and tooling use and support the FASTA format, like NCBI, EMBL-EBI, and UniProt.\nIn the field of geosciences, the NetCDF format is widely used for array-oriented scientific data. It is particularly useful for storing multidimensional data such as temperature, pressure, and humidity in a single file. NetCDF files are self-describing and can be compressed to save space, making them ideal for large datasets.\nIn the field of engineering, data is often stored in formats such as HDF5. It is widely used for storing large amounts of numerical data and are supported by many programming languages and software tools.\nIn addition, 4TU.ResearchData has a list of preferred file formats, and they have a data collection policy that outlines the preferred file formats for data submission.\n\n\n\n\n\n\n Further reading\n\n\n\n\nThe FAIR Guiding Principles for scientific data management and stewardship",
+    "crumbs": [
+      "<ins>Guides</ins>",
+      "![](/docs/img/folder-regular.svg){height=1em style='filter: invert(0.5) sepia(1) saturate(5) hue-rotate(175deg)'} **Data Management**",
+      "Collection",
+      "Data conventions"
+    ]
+  },
+  {
+    "objectID": "docs/data/data_processing.html",
+    "href": "docs/data/data_processing.html",
+    "title": "Data processing",
     "section": "",
-    "text": "Offboarding procedures are necessary for ensuring the continuity and integrity of research data when team members leave or transition roles. Establishing clear ownership protocols and conducting thorough offboarding processes help maintain data accessibility, prevent loss, and ensure compliance with institutional policies. To achieve effective offboarding, document data responsibilities, transfer access rights, and conduct exit interviews to capture essential knowledge and insights.\nThis guide serves primarily as a reminder that there should be a plan in place for offboarding. Different research groups will have different practices, and there is no single definitive checklist or procedure. However, we would like to refer you to the Data Management Offboarding by Harvard RDM site for ideas on how to approach offboarding and preserve knowledge when colleagues leave.",
+    "text": "Data processing is a broad term and is often conflated with related terms. It typically includes steps like data cleaning and data transformation. Some workflows may extend this to preliminary analysis, though visualizations are generally considered a separate stage. The term data wrangling is frequently used interchangeably with early processing stages. The specific steps involved can vary depending on the type of data and the goals of the analysis.",
+    "crumbs": [
+      "<ins>Guides</ins>",
+      "![](/docs/img/folder-regular.svg){height=1em style='filter: invert(0.5) sepia(1) saturate(5) hue-rotate(175deg)'} **Data Management**",
+      "Data processing"
+    ]
+  },
+  {
+    "objectID": "docs/data/data_processing.html#data-versioning",
+    "href": "docs/data/data_processing.html#data-versioning",
+    "title": "Data processing",
+    "section": "Data versioning",
+    "text": "Data versioning\nData versioning is the process of assigning unique version numbers to different iterations of a dataset. This practice is important when working with machine learning models, as it allows to track changes made to the data over time and ensure that the correct version of the data is used for training and testing. Data versioning can also help with reproducibility, because it allows to recreate previous versions of the data and compare results across different iterations.\nThere are a couple of techniques and tools for data versioning. For example, Git is typically used to track source code and software versions, but is not well-suited for large datasets. However, Git LFS (Large File Storage) can be used to manage large files in a Git repository. Other tools like DVC (Data Version Control) are specifically designed for data versioning and can be used to track changes to datasets and models over time. DVC integrates with Git and allows to version control data files, models, and experiments in a way that is similar to how Git works for source code.\n\nDVC\nDVC has very comprehensive documentation, tutorials and videos available, most of the resources are available on their homepage. It covers how to get started with data versioning, how to integrate it with Git, and how to use DVC with different cloud storage providers (e.g. AWS S3).",
+    "crumbs": [
+      "<ins>Guides</ins>",
+      "![](/docs/img/folder-regular.svg){height=1em style='filter: invert(0.5) sepia(1) saturate(5) hue-rotate(175deg)'} **Data Management**",
+      "Data processing"
+    ]
+  },
+  {
+    "objectID": "docs/data/data_publishing/licensing_data.html",
+    "href": "docs/data/data_publishing/licensing_data.html",
+    "title": "Data licensing",
+    "section": "",
+    "text": "When depositing data, selecting an appropriate license cannot be overlooked, as it defines the permissions and restrictions for others using your data. Clear labelling of licensing terms ensures that data can be shared and reused legally and ethically.\nSimilarly to software licenses, data licenses can be divided depending on their restrictiveness. The most common licenses are Creative Commons (CC) licenses, which are widely used for data and other creative works. These licenses can be categorized into permissive and restrictive types.",
     "crumbs": [
       "<ins>Guides</ins>",
       "![](/docs/img/folder-regular.svg){height=1em style='filter: invert(0.5) sepia(1) saturate(5) hue-rotate(175deg)'} **Data Management**",
       "Archive and publish",
-      "Offboarding and ownership"
+      "Licensing"
     ]
   },
   {
-    "objectID": "docs/data/data_storage/backup.html",
-    "href": "docs/data/data_storage/backup.html",
-    "title": "Data backup",
-    "section": "",
-    "text": "An effective system for backing up research data is crucial to the success and reproducibility of any research project. Backups ensure that irreplaceable files are not lost due to hardware failure, accidental deletion, or other unforeseen events.\nA widely recommended strategy for data backup is the 3-2-1 Rule:\nWhen deciding on backup frequency, you should consider how often the data changes, the amount of work that would be lost between backups, the cost (time and money) to replace lost work, and the effort required for the backup process. Automated backup solutions are often more efficient than manual processes. Please refer to the section on Storage options for more information on which options involve automated backup or not.",
+    "objectID": "docs/data/data_publishing/licensing_data.html#cc-licenses",
+    "href": "docs/data/data_publishing/licensing_data.html#cc-licenses",
+    "title": "Data licensing",
+    "section": "CC licenses",
+    "text": "CC licenses\nPermissive licenses allow for broad reuse with minimal restrictions, while restrictive licenses impose limitations on how the data can be used. CC licenses are further divided into the following categories:\n\nPublic Domain (CC0): No restrictions, data can be used for any purpose.\nAttribution (CC-BY): Requires attribution to the original creator, allows for sharing and adaptation with appropriate citations.\nAttribution-ShareAlike (CC-BY-SA): Requires attribution and allows for derivatives under the same license.\nNon-Commercial (CC-BY-NC): Allows use for non-commercial purposes only.\nNo Derivatives (CC-BY-ND): No derivatives allowed.\n\n\n\n\n\n\n\n Learn more\n\n\n\n\nCreative Commons Licenses",
     "crumbs": [
       "<ins>Guides</ins>",
       "![](/docs/img/folder-regular.svg){height=1em style='filter: invert(0.5) sepia(1) saturate(5) hue-rotate(175deg)'} **Data Management**",
-      "Storage",
-      "Data backup"
+      "Archive and publish",
+      "Licensing"
     ]
   },
   {
-    "objectID": "docs/data/data_storage/backup.html#using-rsync-in-the-command-line-for-data-backup",
-    "href": "docs/data/data_storage/backup.html#using-rsync-in-the-command-line-for-data-backup",
-    "title": "Data backup",
-    "section": "Using rsync in the command line for Data Backup",
-    "text": "Using rsync in the command line for Data Backup\nIf you are comfortable with the command line, rsync is a powerful and versatile utility available on Linux (including Windows Subsystem for Linux: WSL) and macOS systems that can efficiently synchronize and back up files and directories. It is particularly useful for incremental backups, as it only transfers the differences between the source and destination, saving time and bandwidth.\nHere are simple steps to use rsync for data backup:\n\nBasic Local Backup: To copy files from a source directory to a destination directory on the same machine (e.g., to an external hard drive), use the following command:\n\n   rsync -av /path/to/your/source_data/ /path/to/your/backup_destination/\n\n-a (archive mode): This is a composite flag that preserves permissions, timestamps, symbolic links, and recursively copies directories, making it ideal for backups.\n-v (verbose): This flag provides detailed output, showing which files are being copied or skipped.\n\n\nIncremental Backups: To ensure that only new or changed files are copied, and to remove files from the backup destination if they’ve been deleted from the source, add the --delete flag:\n\n   rsync -av --delete /path/to/your/source_data/ /path/to/your/backup_destination/\nThis makes the backup an exact mirror of the source, reflecting deletions as well as additions and modifications.\n\nRemote Backups via SSH: For secure backups to a remote server (e.g., a research server or another machine), rsync can use SSH. Ensure the remote machine has an SSH server running and you have SSH access.\n\n   rsync -avz /path/to/your/source_data/ username@remote_host:/path/to/remote/backup_destination/\n\n-z (compress): This flag compresses file data during transfer, which can speed up transfers over a network connection.\n\n\nExcluding Specific Files or Directories: If you need to exclude certain files or folders from your backup (e.g., temporary files or large datasets that are not critical to back up frequently), use the --exclude option:\n\n   rsync -av --exclude 'temp_files/' --exclude 'logs/*.log' /path/to/your/source_data/ /path/to/your/backup_destination/\nYou can specify multiple --exclude options for different patterns or paths.\n\n\n\n\n\n\n Important\n\n\n\nrsync is a robust tool for maintaining up-to-date copies of your research data, supporting both local and remote backup strategies as part of a comprehensive data management plan. For more advanced usage, refer to the rsync manual by running man rsync in your terminal or consult the rsync documentation.\n\n\n\n\n\n\n\n\n Important\n\n\n\nThese steps are similar to those recommended in Moving data to your server and in the Transfer Data section of the DelftBlue documentation.",
+    "objectID": "docs/data/data_publishing/licensing_data.html#other-data-licenses",
+    "href": "docs/data/data_publishing/licensing_data.html#other-data-licenses",
+    "title": "Data licensing",
+    "section": "Other data licenses",
+    "text": "Other data licenses\nIn addition to CC licenses, Open Data Commons provides a set of licenses that are specifically designed for data. These licenses are similar to CC licenses but are tailored for data and databases.\n\nPublic Domain Dedication and License (PDDL): Similar to CC0, it allows for unrestricted use of the data.\nOpen Data Commons Attribution License (ODC-BY): Requires attribution to the original creator, allows for sharing and adaptation with appropriate citations.\nOpen Data Commons Open Database License (ODbL): Allows for sharing, modification, and use of the database, but requires attribution and share-alike for derivatives. Similar to CC-BY-SA, but specifically designed for databases.\nRestrictive Licenses: Limits usage, often prohibiting commercial use or modifications.\n\nWhile Creative Commons and Open Data Commons license might seem similar, the difference between them is that CC licenses are more general and can be applied to any type of work, while Open Data Commons licenses are specifically designed for data and databases and therefore cover different rights.\n\n\n\n\n\n\n Learn more\n\n\n\n\nTuring Way - Data Licenses",
     "crumbs": [
       "<ins>Guides</ins>",
       "![](/docs/img/folder-regular.svg){height=1em style='filter: invert(0.5) sepia(1) saturate(5) hue-rotate(175deg)'} **Data Management**",
-      "Storage",
-      "Data backup"
+      "Archive and publish",
+      "Licensing"
     ]
   },
   {
-    "objectID": "docs/data/data_storage/project_drive_request.html",
-    "href": "docs/data/data_storage/project_drive_request.html",
-    "title": "Accessing and requesting Project Data Storage space",
+    "objectID": "docs/data/data_publishing/publishing.html",
+    "href": "docs/data/data_publishing/publishing.html",
+    "title": "Publishing data",
     "section": "",
-    "text": "TU Delft network drives are automatically mounted on TU Delft-managed computers (running Windows) when connected to the TU Delft network (dastud, eduVPN).\nOn macOS and Linux, there are a few additional steps needed to access Project Drives. The instructions can be found here. (Last updated: August 2024)\nIt can also be accessed through webdata.tudelft.nl using a WebDAV web link staff-umbrella. Some systems also support the client WebDrive. To mount on a TU Delft Virtual Private Server, first follow the instructions here, and then the instructions in the next guide Mount Project Drive on server.\n\n\n\n\n\n\n Reminder\n\n\n\nIf you are accessing the Project Data Storage (U:) drive from outside the TU Delft network (e.g., from home), you need to connect to eduVPN beforehand.",
+    "text": "Data repositories are online locations for storing research data long term. When data is published in a repository, it is (often) assigned a persistent digital object identifier (DOI), which ensures that the data is discoverable and accessible over time. When published, the data should be accompanied by an appropriate license and metadata describing your data.",
+    "crumbs": [
+      "<ins>Guides</ins>",
+      "![](/docs/img/folder-regular.svg){height=1em style='filter: invert(0.5) sepia(1) saturate(5) hue-rotate(175deg)'} **Data Management**",
+      "Archive and publish",
+      "Publishing data"
+    ]
+  },
+  {
+    "objectID": "docs/data/data_publishing/publishing.html#tu.researchdata",
+    "href": "docs/data/data_publishing/publishing.html#tu.researchdata",
+    "title": "Publishing data",
+    "section": "4TU.ResearchData",
+    "text": "4TU.ResearchData\nChoosing a repository for publishing your data depends on factors such as storage costs, funding or publication requirements, and security needs. TU Delft provides an in-house data repository, 4TU.ResearchData, supporting versioning and a GitHub remote as part of their services. Additionally, when publishing your data, your submission is reviewed to ensure that repository requirements are met. You will receive a DOI for your dataset, which can be used to cite your data in publications. All data is stored in the Netherlands, with two locations in Delft and a backup in Leiden.\n\n\n\n\n\n\n Learn more\n\n\n\nGetting started with 4TU.ResearchData",
+    "crumbs": [
+      "<ins>Guides</ins>",
+      "![](/docs/img/folder-regular.svg){height=1em style='filter: invert(0.5) sepia(1) saturate(5) hue-rotate(175deg)'} **Data Management**",
+      "Archive and publish",
+      "Publishing data"
+    ]
+  },
+  {
+    "objectID": "docs/data/data_publishing/publishing.html#zenodo",
+    "href": "docs/data/data_publishing/publishing.html#zenodo",
+    "title": "Publishing data",
+    "section": "Zenodo",
+    "text": "Zenodo\nDeveloped by CERN, Zenodo is an open repository that allows researchers to upload and share their research outputs, including datasets, publications, and software. Similarly to 4TU.ResearchData you will receive a DOI for your dataset. Zenodo supports versioning and has GitHub integration.\n\n\n\nSelecting a data repository. The Turing Way Community. This illustration is created by Scriberia with The Turing Way community, used under a CC-BY 4.0 licence. DOI: 10.5281/zenodo.3332807\n\n\nRegardless of the repository you choose, it is important to ensure that your data is properly documented. This includes describing the content, structure, and context of your data, as well as any relevant documentation that is needed to understand and use the data.\n\n\n\n\n\n\n Learn more\n\n\n\nFor a more comprehensive list of repositories and how to select one, you can check the Turing Way book or the TU Delft Library Guidelines",
+    "crumbs": [
+      "<ins>Guides</ins>",
+      "![](/docs/img/folder-regular.svg){height=1em style='filter: invert(0.5) sepia(1) saturate(5) hue-rotate(175deg)'} **Data Management**",
+      "Archive and publish",
+      "Publishing data"
+    ]
+  },
+  {
+    "objectID": "docs/data/data_storage/project_drive_mounting.html",
+    "href": "docs/data/data_storage/project_drive_mounting.html",
+    "title": "Mount Project Drive on server",
+    "section": "",
+    "text": "Project drive storage can be mounted and made accessible in your TU Delft Virtual Private Server (VPS).\n\nPrerequisites\n\nA TU Delft VPS\nA TU Delft Project Data Storage drive\n\n\n\nSteps\n\nLocate the URL of your project storage.\nConnect to your TU Delft VPS via SSH.\nCreate a new directory as a mounting point.\nRetrieve your Linux user and group details.\nEdit the fstab file to include project storage technical details.\nMount the project drive.\n\n\nStep 1. Locate the URL of your project storage\nThe URL for your project drive can be obtained from either:\n\nthe email from TU Delft ICT with the confirmation of your project drive request, or\nby using a web browser to navigate into https://webdata.tudelft.nl/\n\n\n\n\n\n\n\n Note\n\n\n\nhttps://webdata.tudelft.nl/ can only be accessed on campus or using eduVPN\n\n\n\nChrome/Brave/Firefox/Vivaldi/SafariEdge\n\n\n\nNavigate into https://webdata.tudelft.nl/staff-umbrella/\n\nA pop-up should appear asking for your username and password.\n\nProvide your NetID in the username field, provide your password accordingly.\n\nYou should now see a list of your project drives.\n\nClick on the project drive of your choice.\n\nCopy everything after “https://webdata.tudelft.nl/”\n\n\n\nContent within webdata is under password protection. Typing your username and password is only possible with a pop-up message which is disabled in an Edge browser on systems managed by TU Delft.\n\n\n\n\n\nStep 2. Connect to your TU Delft VPS via SSH\nFollow instructions in the TU Delft ICT email from initial server setup or follow our guide to configure via SSH.\n\n\nStep 3. Create a new directory as the mounting point\nThe convention is to create mounting points in the folder /media. Navigate to the directory and create a new folder with:\ncd /media\nmkdir &lt;server_mount_point&gt;\nReplace &lt;server_mount_point&gt; with the name of your choice. This will be the name of the folder where your project drive will be mounted.\n\n\nStep 4. Find and save your user and group details\nIn the terminal, you can retrieve your local user and group details with:\nid -u &lt;your_netID&gt; # User ID\nid -g &lt;your_netID&gt; # Group ID\nYou may need the values for uid and gid for step 5.\n\n\n\n\n\n\n Note\n\n\n\nThese commands are server-specific, so make sure to execute them on the server where the project drives will be mounted.\n\n\n\n\nStep 5. Edit the fstab file to include project storage technical details\nThe fstab file contains a list of the addresses of external file systems. In this file, the details of your project drive will need to be added in a single line. This line consists of four parts:\n\nfilesystem - the address of the project drive\nmount point - the location in the VPS where you want to mount the project drive\ntype - the type of the filesystem\noptions - additional option such as user privileges\n\nThe fstab file must be in the /etc/ directory and can be opened with the vi or nano editor:\n\nvinano\n\n\nIn the terminal, enter the following command to open the fstab file in the vi editor:\nsudo vi /etc/fstab\nThen, switch to the insert mode (hit “i” to switch to insert mode and be able to type)\n\n\nIn the terminal, enter the following command to open the fstab file in the nano editor:\nsudo nano /etc/fstab\n\n\n\nAdd the following line to the file:\n&lt;your_netID&gt;@sftp.tudelft.nl:/staff-umbrella/&lt;project_drive_name&gt;  /media/&lt;server_mount_point&gt; fuse.sshfs  rw,noauto,users,_netdev  0  0\nreplacing the values between &lt; and &gt; with your NetID, the name of your project drive, and the name of the folder you created in step 3.\n\n\n\n\n\n\n Note\n\n\n\nIf this configuration throws a permission error during mounting, try:\n//tudelft.net/staff-umbrella/&lt;project_drive_name&gt;/ /media/&lt;server_mount_point&gt; cifs username=&lt;your_netID&gt;,noauto,uid=&lt;your_uid&gt;,gid=&lt;your_gid&gt;,forcegid,rw,_netdev\nUse the values for uid and gid from step 4.\n\n\nClose the file editor and save the changes:\n\nvinano\n\n\nUse Control+C followed by :wq to save the file and close it to get back to your terminal.\n\n\nAs indicated by the nano interface, use Control+O to write out the file. Then, confirm your choice of filename by hitting Enter. Finally, exit the file with Control+X\n\n\n\n\n\nStep 6. Mount the project drive\nTo mount the project drive, execute the command:\nsudo mount /media/&lt;server_mount_point&gt;\nYou can also unmount the drive with:\nfusermount -u /media/&lt;server_mount_point&gt;\nThe project drive will not mount automatically, so you will need to remount it manually each time you restart the server.\n\n\n\n\n\n\n Note\n\n\n\nIf the step above does not work, it probably means that the packages for mounting cifs-type filesystems haven’t been installed. Depending on your Linux flavour you will need to install them using:\n\nUbuntu/DebianRedhat/Centos/Fedora\n\n\nsudo apt install cifs-utils\n\n\nsudo yum install cifs-utils\n\n\n\n\n\n\n\n\nNotes and next steps\nThe steps above can also be used to mount any storage offered by TU Delft with a WebDav link (staff-homes, staff-groups, staff-bulk, student-homes, student-groups and apps). Simply use the latter half of the URL from the WebDav web link of your storage drive, which will change from staff-umbrella (Project Data Storage drive) to something else, depending on the storage drive you would like to mount.",
     "crumbs": [
       "<ins>Guides</ins>",
       "![](/docs/img/folder-regular.svg){height=1em style='filter: invert(0.5) sepia(1) saturate(5) hue-rotate(175deg)'} **Data Management**",
       "Storage",
       "Storage options",
-      "Access and request space for *Project Data Storage*"
+      "Mount *Project Drive* on server"
     ]
   },
   {
-    "objectID": "docs/data/data_storage/project_drive_request.html#accessing-the-project-data-storage-u-drive",
-    "href": "docs/data/data_storage/project_drive_request.html#accessing-the-project-data-storage-u-drive",
-    "title": "Accessing and requesting Project Data Storage space",
+    "objectID": "docs/data/data_storage/security.html",
+    "href": "docs/data/data_storage/security.html",
+    "title": "Data security",
     "section": "",
-    "text": "TU Delft network drives are automatically mounted on TU Delft-managed computers (running Windows) when connected to the TU Delft network (dastud, eduVPN).\nOn macOS and Linux, there are a few additional steps needed to access Project Drives. The instructions can be found here. (Last updated: August 2024)\nIt can also be accessed through webdata.tudelft.nl using a WebDAV web link staff-umbrella. Some systems also support the client WebDrive. To mount on a TU Delft Virtual Private Server, first follow the instructions here, and then the instructions in the next guide Mount Project Drive on server.\n\n\n\n\n\n\n Reminder\n\n\n\nIf you are accessing the Project Data Storage (U:) drive from outside the TU Delft network (e.g., from home), you need to connect to eduVPN beforehand.",
+    "text": "Data security is a critical aspect of research data management, ensuring that sensitive information is protected from unauthorized access, loss, or corruption. It involves implementing measures to safeguard data throughout its lifecycle, from collection and storage to sharing and archiving.\nTU Delft implements robust authentication and authorization mechanisms, such as strong passwords and two-factor authentication, to restrict data access only to approved individuals and systems.",
     "crumbs": [
       "<ins>Guides</ins>",
       "![](/docs/img/folder-regular.svg){height=1em style='filter: invert(0.5) sepia(1) saturate(5) hue-rotate(175deg)'} **Data Management**",
       "Storage",
-      "Storage options",
-      "Access and request space for *Project Data Storage*"
+      "Data security"
     ]
   },
   {
-    "objectID": "docs/data/data_storage/project_drive_request.html#requesting-project-data-storage-u-space",
-    "href": "docs/data/data_storage/project_drive_request.html#requesting-project-data-storage-u-space",
-    "title": "Accessing and requesting Project Data Storage space",
-    "section": "Requesting Project Data Storage (U:) space",
-    "text": "Requesting Project Data Storage (U:) space\n\nPrerequisites\n\nTU Delft NetID\n(Optional) A list of TU Delft collaborators who should have read/write access to it\n\n\n\nSteps\n\nRequest the storage via the TU Delft ICT form on TopDesk.\nFill out and send the form according to your data storage preferences and requirements.\nAccess your data storage.\n\n\nStep 1. Request storage via the TU Delft ICT form on TopDesk\nYou can make a request for data storage via a form available on the TopDesk self-service portal (requires NetID sign-in); navigate to:\nHome ⇾ ICT services ⇾ IT for Research ⇾ Data storage for Research: Project data (U:) ⇾ ICT: Request Research Data Storage.\n\n\nStep 2. Fill out and send the form according to your data storage preferences and requirements\nThe form is divided into three sections: “Caller”, “Information about requester and data”, and “Data for a research project”.\nThe Caller section should contain the contact information of the main administrator of this server. If you select your name, the fields below should be auto-populated with your building, phone number, email, department/program, organizational unit, and (sometimes) room.\n\nIn the next part, Information about requester and data, you choose your preferences about data preservation. The first question asks whether you are setting up new storage or want to change existing storage (or end it). The next questions are about the availability, classification and retention. There are information bubbles next to the choices and clarifications at the beginning of the form.\nLastly, in the section Data for a research project you need to provide information about your project. You will need to provide a description of the project, the name of the project, initial and future storage needs, and a corresponding person for handover if you leave TU Delft. Additionally, you have the option to choose whether you want to be able to share the data with external users.\n\n\n\nStep 3. Access your data storage\nAfter submitting the request, you will receive a response from ICT. Once approval is granted, you can access your Project Data Storage as described above.",
+    "objectID": "docs/data/data_storage/security.html#core-principles-of-research-data-security",
+    "href": "docs/data/data_storage/security.html#core-principles-of-research-data-security",
+    "title": "Data security",
+    "section": "Core principles of research data security",
+    "text": "Core principles of research data security\nKey principles include:\n\nAvailability: Ensuring that authorized users can access the data and associated systems when needed for their research activities.\nConfidentiality: Ensuring that data is accessible only to individuals who are explicitly authorized to view or use it.  \nIntegrity: Maintaining the accuracy, completeness, and consistency of data throughout its entire lifecycle, preventing unauthorized modification. Regularly backing up data to prevent loss due to accidental deletion, hardware failure, or cyberattacks, and having a recovery plan in place to restore data in case of incidents.\n\n\n\n\n\n\n\n Tip: Explore our Data backup guide for more information.\n\n\n\n\nVerifying data integrity\nA checksum is a small-sized block of data derived from another block of digital data. By comparing the checksum of a file you have downloaded, backed-up, or transferred with the one provided by the source, you can verify if the file is an exact and untampered copy.\n\nStep 1: Obtain an original checksum\nBefore you can verify a file, you need an original checksum value. This is typically provided by a website or source from where you downloaded the file. It could also have been generated by yourself from Step 2. It usually is a long string of alphanumeric characters and is often labeled as MD5, SHA-1, or SHA-256.\nFor example, you might see something like this on a download page:\nSHA-256: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855\n\n\nStep 2: Generate a checksum for your file\nYou can use different command-line tools to calculate the checksum of the file you have downloaded, transferred or backed-up.\n\nWindows PowerShellmacOS terminalLinux terminal\n\n\nOpen PowerShell (press Win + X and select “PowerShell”).\nUse the Get-FileHash command. By default, it uses SHA-256.\nGet-FileHash C:\\path\\to\\your\\file\nTo use a different algorithm like MD5, specify it:\nGet-FileHash C:\\path\\to\\your\\file -Algorithm MD5\n\n\nOpen your terminal (you can find it in Applications &gt; Utilities).\nFor SHA-256, use the shasum -a 256 command:\nshasum -a 256 /path/to/your/file\nFor MD5, use the md5 command:\nmd5 /path/to/your/file\n\n\nOpen your terminal.\nFor SHA-256, use the sha256sum command:\nsha256sum /path/to/your/file\nFor MD5, use the md5sum command:\nmd5sum /path/to/your/file\n\n\n\n\n\nStep 3: Compare the checksums\nFinally, compare the checksum you generated in Step 2 with the original checksum from Step 1. There might be cases where you need to do Step 2 in two different systems, such as a local machine and a remote server.\nIf they match exactly, your file is a perfect copy.\nIf they do not match, the file was likely corrupted during download or has been tampered with. You should delete the file and download it again.\n\n\n\nOther considerations\nOur Data privacy guide has a list of TU Delft privacy related resources that should be helpful if you are working with highly sensitive data, such as personal information, health data, or copyrighted material.\n\n\n\n\n\n\n Important\n\n\n\n\nReach out to your faculty data steward for more information.\nExplore TU Delft security and privacy related resources:\n\nTU Delft Security and Privacy SharePoint site",
     "crumbs": [
       "<ins>Guides</ins>",
       "![](/docs/img/folder-regular.svg){height=1em style='filter: invert(0.5) sepia(1) saturate(5) hue-rotate(175deg)'} **Data Management**",
       "Storage",
-      "Storage options",
-      "Access and request space for *Project Data Storage*"
+      "Data security"
     ]
   },
   {
-    "objectID": "docs/data/data_storage/sharing.html",
-    "href": "docs/data/data_storage/sharing.html",
-    "title": "Data sharing",
+    "objectID": "docs/data/data_storage/storage.html",
+    "href": "docs/data/data_storage/storage.html",
+    "title": "Data storage",
     "section": "",
-    "text": "This section covers aspects of data sharing, for ongoing work, throughout the active phase of a research project. The use of data repositories, the importance of data licenses, and the significance of metadata in sharing completed work are discussed in the section on Archiving and publishing data.\nBoth sections are closely related, as data sharing is a key component of the broader data management lifecycle. As such, these sections include shared concepts of security and privacy also covered in sections of their own.\nAs shown in the overview of storage options section, TU Delft provides several options for data storage, which can be used to share data with internal and external partners. The choice of storage solution depends on the nature of the data, the level of security required, and the intended audience for the shared data.",
+    "text": "In the context of research data management, “Data Storage” refers to securely housing research data on various digital media or infrastructure, having it readily accessible for ongoing work, analysis, and collaboration throughout the active phase of a research project. It involves the systems and practices used to maintain the availability, integrity, and accessibility of data while it is actively being used, processed, or shared by the research team. This includes both local and networked solutions, serving as the persistent layer for active research operations involving collaborators internal to TU Delft, or external.\nData storage, rather than being confined to a single step, functions as a persistent foundation, supporting activities from initial data acquisition through active analysis. As a researcher, you may frequently move between phases, such as returning to data collection after initial analysis reveals gaps, or refining processing methods based on analytical outcomes. This interconnected and iterative nature is crucial for effective research data management, as it means that planning for later stages, like archiving and publishing, must occur early, and ongoing management activities, such as storage and security, are not isolated tasks but integral to every step of active research.\nThis section details the recommended storage solutions available to TU Delft researchers, emphasizing institutional and national (Dutch/European) services and providing guidance on their appropriate use. It also highlights the importance of data security, sharing, and backup as essential components of effective data storage practices.\n\n\n\n Storage options\nLocal and networked, institutional and national.\n\nLearn more »\n\n\n\n Data security\nEnsuring confidentiality, integrity, and availability.\n\nLearn more »\n\n\n\n Data sharing\nMaking active data available to internal and/or external collaborators.\n\nLearn more »\n\n\n\n Data backup\nStrategies to prevent data loss.\n\nLearn more »",
     "crumbs": [
       "<ins>Guides</ins>",
       "![](/docs/img/folder-regular.svg){height=1em style='filter: invert(0.5) sepia(1) saturate(5) hue-rotate(175deg)'} **Data Management**",
-      "Storage",
-      "Data sharing"
-    ]
-  },
-  {
-    "objectID": "docs/data/data_storage/sharing.html#tu-delft-internal",
-    "href": "docs/data/data_storage/sharing.html#tu-delft-internal",
-    "title": "Data sharing",
-    "section": "TU Delft internal",
-    "text": "TU Delft internal\n\nNetworked storage\n\nPersonal Data Storage (H:)\nThis is the default storage location for personal data, such as documents, spreadsheets, and presentations. It is accessible only to the user and is not suitable for sharing with others. However, it enables you to share your data across TU Delft-managed devices connected to the TU Delft network.\n\n\nGroup Data Storage (M:)\nThe folder structure on this network drive follows a similar structure to that of the faculties, departments, and research groups at TU Delft. It is typically accessible to members of a research group and can be used to share data with colleagues within the same department and faculty. Access to this storage is managed by your department secretary and/or the Faculty ICT Manager.\n\n\nProject Data Storage (U:)\nAccess to this storage is requested by a contact person “caller/owner” which can in turn provide access via a NetID. Its data can be accessed through CIFS and NFS (with kerberos authentication), meaning it can be mounted in different systems. Please visit the project drive request and project drive mounting sections for more information.\n\n\n\nCloud-based storage\nCloud services are not recommended as primary storage locations for research data. A critical drawback is that access to data stored on these platforms can be lost upon the creator’s departure from TU Delft, posing a significant risk to data continuity and ownership. Furthermore, they “should not be used for highly confidential data such as state secrets, sensitive personal data or highly sensitive IP material”.\nTU Delft provides a few collaboration tools through the Microsoft Office 365 platform, including Microsoft Teams, SharePoint and OneDrive.\n\nMicrosoft Teams\nThis platform is primarily used for communication and collaboration within research groups and projects. It allows for file sharing, real-time collaboration, and integration with other Microsoft 365 applications. However, it is not a dedicated data storage solution and should be used in conjunction with other storage options.\n\n\n\n\n\n\n Find more details on TopDesk Home ⇾ ICT services ⇾ Collaboration Tools ⇾ Microsoft Teams.\n\n\n\n\n\n\n\n\nMicrosoft SharePoint\nConsiderations for this platform are similar to those for Microsoft Teams. It is primarily used for document management and collaboration within research groups and projects. SharePoint allows for file sharing, version control, and integration with other Microsoft 365 applications.\n\n\n\n\n\n\n Find more details on TopDesk Home ⇾ ICT services ⇾ Collaboration Tools ⇾ SharePoint 2016 support",
-    "crumbs": [
-      "<ins>Guides</ins>",
-      "![](/docs/img/folder-regular.svg){height=1em style='filter: invert(0.5) sepia(1) saturate(5) hue-rotate(175deg)'} **Data Management**",
-      "Storage",
-      "Data sharing"
-    ]
-  },
-  {
-    "objectID": "docs/data/data_storage/sharing.html#external",
-    "href": "docs/data/data_storage/sharing.html#external",
-    "title": "Data sharing",
-    "section": "External",
-    "text": "External\n\nMicrosoft OneDrive for Business\nOneDrive is installed by default on the laptops and desktops supplied by TU Delft. TU Delft OneDrive is recognisable by the name: “OneDrive - Delft University of Technology”. Web based access within and outside TUDelft, sharing and working together is possible with TU Delft colleagues and also external users. OneDrive is suitable for sharing data with external partners, as it allows for controlled access and collaboration. However, it is important to ensure that sensitive data is not shared without proper security measures in place.\n\n\n\n\n\n\n Find more details on TopDesk Home ⇾ OneDrive for Business\n\n\n\n\n\n\n\n\nSURFdrive\nSURFdrive is a personal cloud storage service for the Dutch education and research community, offering staff, researchers and students an easy way to store, synchronise and share files in the secure and reliable SURF community cloud. SURFdrive offers staff, researchers and students an easy way to share and synchronise files within a secure community cloud with ample storage capacity.\n\n\n\n\n\n\n Find more details on SURFdrive.",
-    "crumbs": [
-      "<ins>Guides</ins>",
-      "![](/docs/img/folder-regular.svg){height=1em style='filter: invert(0.5) sepia(1) saturate(5) hue-rotate(175deg)'} **Data Management**",
-      "Storage",
-      "Data sharing"
-    ]
-  },
-  {
-    "objectID": "docs/data/data_storage/storage_options.html",
-    "href": "docs/data/data_storage/storage_options.html",
-    "title": "Storage options",
-    "section": "",
-    "text": "Storing your data in a secure location is a key element of a successful project with a data component. As a TU Delft researcher, you have several options. Below you can find an overview of the available storage options, depending on whether they are local, networked, or cloud-based, how secure they are, whether they can be shared with internal or external partners, and whether they are automatically backed up or not. Please visit the sections on Data Security, Data Sharing and Data Backup for more information on these topics.",
-    "crumbs": [
-      "<ins>Guides</ins>",
-      "![](/docs/img/folder-regular.svg){height=1em style='filter: invert(0.5) sepia(1) saturate(5) hue-rotate(175deg)'} **Data Management**",
-      "Storage",
-      "Storage options"
-    ]
-  },
-  {
-    "objectID": "docs/data/data_storage/storage_options.html#overview-of-storage-options",
-    "href": "docs/data/data_storage/storage_options.html#overview-of-storage-options",
-    "title": "Storage options",
-    "section": "Overview of storage options",
-    "text": "Overview of storage options\n\n\n\n\n\n\n Important\n\n\n\nThese options have been curated from:\n\nThe intranet section on Data Storage\nThe TOPdesk “Overview of data storage and file sharing” (Home &gt; ICT services &gt; IT for Research &gt; Overview of data storage and file sharing)\nAnd the Storage Finder tool\nSURF\n\nPlease note that the information is subject to change, and you should always refer to the official TU Delft documentation for the most up-to-date information.\n\n\n\n\n\nStorage Option\nLocation\nSecurity\nSharing\nBackup\nSize\nAditional info\n\n\n\n\nPrivate laptop\nLocal\nLow\nDefined by owner\nDefined by owner\nCheck device specifications\nSecurity listed as low as the device is prone to loss and theft, among other incidents\n\n\nPrivate desktop\nLocal\nMedium\nDefined by owner\nDefined by owner\nCheck device specifications\nSame as above, perhaps more secure than a laptop as it is not necessarily mobile\n\n\nTU Delft managed laptop\nTU Delft network\nMedium\nInternal to TU Delft\nDefined by owner (unless using options listed below)\nCheck device specifications\nAll TU Delft managed devices are password protected. Security is therefore slightly higer than private counterparts\n\n\nTU Delft managed desktop\nTU Delft network\nMedium\nInternal to TU Delft\nDefined by owner (unless using options listed below)\nCheck device specifications\nAll TU Delft managed devices are password protected. Security is therefore slightly higer than private counterparts\n\n\nTU Delft Personal Data Storage (H:)\nTU Delft network\nHigh\nInternal to TU Delft\nYes\n8 GB\nStorage Finder\n\n\nTU Delft Group Data Storage (M:)\nTU Delft network\nHigh\nInternal to TU Delft\nYes\n50 GB\nStorage Finder\n\n\nTU Delft Project Data Storage (U:)\nTU Delft network\nHigh\nInternal to TU Delft. External access can be enabled with a TU Delft guest account.\nYes\n&gt; 250 GB\nStorage Finder\n\n\nMicrosoft Teams\nCloud\nHigh\nInternal to TU Delft\nYes\n&lt; 250 GB\nStorage Finder\n\n\nMicrosoft Sharepoint\nCloud\nHigh\nInternal to TU Delft\nYes\n&lt; 250 GB\nStorage Finder\n\n\nMicrosoft OneDrive for Business\nCloud\nHigh\nExternal access can be enabled\nYes\n1 TB\nStorage Finder\n\n\nSURFdrive\nCloud\nHigh\nExternal access can be enabled\nYes\n500 GB\nSURFdrive documentation",
-    "crumbs": [
-      "<ins>Guides</ins>",
-      "![](/docs/img/folder-regular.svg){height=1em style='filter: invert(0.5) sepia(1) saturate(5) hue-rotate(175deg)'} **Data Management**",
-      "Storage",
-      "Storage options"
-    ]
-  },
-  {
-    "objectID": "docs/data/data_storage/storage_options.html#project-drive-operations",
-    "href": "docs/data/data_storage/storage_options.html#project-drive-operations",
-    "title": "Storage options",
-    "section": "Project Drive operations",
-    "text": "Project Drive operations\nA Project Drive is a TU Delft managed network drive that allows you to store and share data with your project team members. It is a secure and reliable option for storing research data, and it is automatically backed up.\n\n\n\n\n\n\n For most situations, the Project Data Storage (U:) drive is the optimal choice for storing research data.\n\n\n\n\n\n\nBelow you can see how to access a Project Data Storage (U:) drive, request space for it, and how to mount it on a server (please refer to the section on Remote Servers for more details).\n\n\n\n Access and request space for Project Data Storage\n\nLearn more »\n\n\n\n Mount Project Drive on server\n\nLearn more »",
-    "crumbs": [
-      "<ins>Guides</ins>",
-      "![](/docs/img/folder-regular.svg){height=1em style='filter: invert(0.5) sepia(1) saturate(5) hue-rotate(175deg)'} **Data Management**",
-      "Storage",
-      "Storage options"
+      "Storage"
     ]
   },
   {
@@ -2481,7 +2432,7 @@
     "href": "docs/infrastructure/gitlab/gitlab_transfer_ownership.html",
     "title": "Transfer ownership of a GitLab repository",
     "section": "",
-    "text": "GitLab repositories belonging to employees leaving the TU Delft might be deleted in future.\nFrom the TU Delft GitLab help documentation, we read the following:\nCurrent situation\nFirst, if you use Git on your computer, you will have the entire history also locally on your machine. Without a valid TU Delft account, your GitLab access will become inactive. There are currently no plans to delete any content when an account becomes inactive.\nFuture situation\nAt some point in the future, repositories of former TU Delft employees may be deleted. To avoid losing information, it is recommended to transfer ownership of your repositories to a current TU Delft employee when you leave.\n\n\n\nThis guide provides the steps required to secure access to repositories of employees who will leave the TU Delft.\nIf they have access to your projects, they will still have access after you leave, as long as the projects still exist. You can control who has access to your projects by going to Project Information &gt; Members in the sidebar of your repository. To be safe, transfer the ownership of the projects to a current TU Delft employee when you leave.\nYou can transfer a project to another user’s GitLab namespace. Read what a namespace is here.\n\n\n\n\n\n\nNote\n\n\n\nProviding a more straightforward way to transfer ownership in GitLab was raised as an issue in 2016 but the issue is still open; you can follow the progress here if interested.\n\n\n\n\n\nThe steps will guide you through transferring repository ownership between TU Delft employees through an intermediary GitLab group:\n\n\n\n\n\n\n\nNote\n\n\n\nSummary (based on this Stack Overflow post): ​​Move your project from your namespace to a group where both you and the other user are owners, then the other user can transfer it to their own namespace\n\n\n\n\nCreate a new group if you don’t have one that you want to use (Menu &gt; Groups &gt; Create group)\n\n\n\nMake sure that both the maintainer of the project repository, and the person who it will be transferred to, are members of the group and have the Owner role (to add a new owner: go to the group namespace, then from the sidebar choose Group information &gt; Members &gt; Invite members.\n\n\nEnter the username or email of the person you want to invite and change the role to ‘Owner’. Click ‘Invite’.)\n\n\n\n\nHave a maintainer of the project repository transfer it to the group namespace (go to the project namespace, then from the sidebar go to Settings &gt; General &gt; Advanced &gt; Transfer Project)\n\n\n\n\nAfter doing this, the maintainer(s) of the project will get an email:\n\n\n\n\nNow the person who the project is being transferred to can move it to their own namespace (go to the project namespace, then from the sidebar, go to Settings &gt; General &gt; Advanced &gt; Transfer Project like before).\n\n\n\nIf desired, the group can be deleted after the transfer is complete (go to the group namespace, then from the sidebar go to Settings &gt; General &gt; Advanced &gt; Remove Group)",
+    "text": "GitLab repositories belonging to employees leaving the TU Delft might be deleted in future.\nFrom the TU Delft GitLab help documentation, we read the following:\nCurrent situation\nFirst, if you use Git on your computer, you will have the entire history also locally on your machine. Without a valid TU Delft account, your GitLab access will become inactive. There are currently no plans to delete any content when an account becomes inactive.\nFuture situation\nAt some point in the future, repositories of former TU Delft employees may be deleted. To avoid losing information, it is recommended to transfer ownership of your repositories to a current TU Delft employee when you leave.",
     "crumbs": [
       "<ins>Guides</ins>",
       "![](/docs/img/gear.svg){height=1em style='filter: invert(0.5) sepia(1) saturate(5) hue-rotate(175deg)'} **Computing Infrastructure**",
@@ -2506,8 +2457,8 @@
     "objectID": "docs/infrastructure/gitlab/gitlab_transfer_ownership.html#purpose-of-this-guide",
     "href": "docs/infrastructure/gitlab/gitlab_transfer_ownership.html#purpose-of-this-guide",
     "title": "Transfer ownership of a GitLab repository",
-    "section": "",
-    "text": "This guide provides the steps required to secure access to repositories of employees who will leave the TU Delft.\nIf they have access to your projects, they will still have access after you leave, as long as the projects still exist. You can control who has access to your projects by going to Project Information &gt; Members in the sidebar of your repository. To be safe, transfer the ownership of the projects to a current TU Delft employee when you leave.\nYou can transfer a project to another user’s GitLab namespace. Read what a namespace is here.\n\n\n\n\n\n\nNote\n\n\n\nProviding a more straightforward way to transfer ownership in GitLab was raised as an issue in 2016 but the issue is still open; you can follow the progress here if interested.",
+    "section": "Purpose of this guide",
+    "text": "Purpose of this guide\nThis guide provides the steps required to secure access to repositories of employees who will leave the TU Delft.\nIf they have access to your projects, they will still have access after you leave, as long as the projects still exist. You can control who has access to your projects by going to Project Information &gt; Members in the sidebar of your repository. To be safe, transfer the ownership of the projects to a current TU Delft employee when you leave.\nYou can transfer a project to another user’s GitLab namespace. Read what a namespace is here.\n\n\n\n\n\n\nNote\n\n\n\nProviding a more straightforward way to transfer ownership in GitLab was raised as an issue in 2016 but the issue is still open; you can follow the progress here if interested.",
     "crumbs": [
       "<ins>Guides</ins>",
       "![](/docs/img/gear.svg){height=1em style='filter: invert(0.5) sepia(1) saturate(5) hue-rotate(175deg)'} **Computing Infrastructure**",
@@ -2519,8 +2470,8 @@
     "objectID": "docs/infrastructure/gitlab/gitlab_transfer_ownership.html#steps",
     "href": "docs/infrastructure/gitlab/gitlab_transfer_ownership.html#steps",
     "title": "Transfer ownership of a GitLab repository",
-    "section": "",
-    "text": "The steps will guide you through transferring repository ownership between TU Delft employees through an intermediary GitLab group:\n\n\n\n\n\n\n\nNote\n\n\n\nSummary (based on this Stack Overflow post): ​​Move your project from your namespace to a group where both you and the other user are owners, then the other user can transfer it to their own namespace\n\n\n\n\nCreate a new group if you don’t have one that you want to use (Menu &gt; Groups &gt; Create group)\n\n\n\nMake sure that both the maintainer of the project repository, and the person who it will be transferred to, are members of the group and have the Owner role (to add a new owner: go to the group namespace, then from the sidebar choose Group information &gt; Members &gt; Invite members.\n\n\nEnter the username or email of the person you want to invite and change the role to ‘Owner’. Click ‘Invite’.)\n\n\n\n\nHave a maintainer of the project repository transfer it to the group namespace (go to the project namespace, then from the sidebar go to Settings &gt; General &gt; Advanced &gt; Transfer Project)\n\n\n\n\nAfter doing this, the maintainer(s) of the project will get an email:\n\n\n\n\nNow the person who the project is being transferred to can move it to their own namespace (go to the project namespace, then from the sidebar, go to Settings &gt; General &gt; Advanced &gt; Transfer Project like before).\n\n\n\nIf desired, the group can be deleted after the transfer is complete (go to the group namespace, then from the sidebar go to Settings &gt; General &gt; Advanced &gt; Remove Group)",
+    "section": "Steps",
+    "text": "Steps\nThe steps will guide you through transferring repository ownership between TU Delft employees through an intermediary GitLab group:\n\n\n\n\n\n\n\nNote\n\n\n\nSummary (based on this Stack Overflow post): ​​Move your project from your namespace to a group where both you and the other user are owners, then the other user can transfer it to their own namespace\n\n\n\nStep 1. Create a new group\nCreate a new group if you don’t have one that you want to use (Menu &gt; Groups &gt; Create group)\n\n\nStep 2. Invite members\nMake sure that both the maintainer of the project repository, and the person who it will be transferred to, are members of the group and have the Owner role (to add a new owner: go to the group namespace, then from the sidebar choose Group information &gt; Members &gt; Invite members.\n\n\nEnter the username or email of the person you want to invite and change the role to ‘Owner’. Click ‘Invite’.)\n\n\n\nStep 3. Transfer project to group\nHave a maintainer of the project repository transfer it to the group namespace (go to the project namespace, then from the sidebar go to Settings &gt; General &gt; Advanced &gt; Transfer Project)\n\n\n\nStep 4. Check email\nAfter doing this, the maintainer(s) of the project will get an email:\n\n\n\nStep 5. Transfer project to user\nNow the person who the project is being transferred to can move it to their own namespace (go to the project namespace, then from the sidebar, go to Settings &gt; General &gt; Advanced &gt; Transfer Project like before).\n\n\nStep 6. Optional: remove group\nIf desired, the group can be deleted after the transfer is complete (go to the group namespace, then from the sidebar go to Settings &gt; General &gt; Advanced &gt; Remove Group)",
     "crumbs": [
       "<ins>Guides</ins>",
       "![](/docs/img/gear.svg){height=1em style='filter: invert(0.5) sepia(1) saturate(5) hue-rotate(175deg)'} **Computing Infrastructure**",
@@ -2575,7 +2526,7 @@
     "href": "docs/infrastructure/remote_servers.html",
     "title": "Servers",
     "section": "",
-    "text": "TU Delft offers its employees the use of physical or virtual servers. These servers are known as Faculty Managed Servers and can be requested to conduct work related to a specific project within a Faculty.\n\n\n\n\n\n\nNote\n\n\n\nIt is not possible to use the servers to set up services that are already provided by the ICT department.\n\n\nVirtual vs Physical Servers\nThere is a choice between virtual and physical servers. Virtual servers are provided free of charge and can be requested via TOPdesk. Physical servers can be requested by contacting the Faculty’s IT Manager and any associated costs are paid by the purchasing department.\nIn most cases, a virtual server is the most suitable option. However, a physical server may be necessary when it is intended for use as a GPU or computing cluster.\nServer Configuration\nWhen requesting a virtual server, users can choose from a range of predefined hardware and operating system configurations. The following operating systems are available: Windows Server 2019, Windows Server 2022, Red Hat Enterprise Linux (latest supported version), and Ubuntu (latest LTS version).\nIf additional capacity is needed, it can be requested via the ‘ICT malfunction’ or ‘request ICT service’ forms in TOPdesk. This includes options such as increasing the number of processors, cores per processor, RAM, or disk storage.\nSome considerations:\n\nICT provides the server, operating system, and network access.\nUsers are granted administrator privileges, allowing them to install any required software, provided it complies with the conditions specified in the request form.\nAccess can be granted to both TU Delft members and external users.\nICT provides daily backups, restoration services, and virus scanning for Windows servers.\nICT ensures that the server operating system remains up to date (e.g. security patches), except for Linux systems.\n\n\n\n\n\n\n\nTip\n\n\n\nDetailed information on managing the server, including network and firewall settings, is provided at the bottom of the TOPdesk application form.\n\n\nExample Use Cases\n\nPerforming computational or data processing tasks that require a dedicated server environment.\nRunning an instance of a service or application, such as ABAQUS, COMSOL or other specialized tools for a lab or research group.\nHosting a static website, a web application, or an API for a project.\nHosting databases, such as MySQL, PostgreSQL, MongoDB or other database management systems.\nDeploying and managing TU Delft GitLab runners for CI/CD pipelines.\n\nRelevant links\n\nIntranet page for faculty managed servers\nTOPdesk form to request a new virtual server\nIntranet page for Faculty IT Managers.",
+    "text": "TU Delft offers its employees the use of physical or virtual servers. These servers are known as faculty managed servers and can be requested to conduct work related to a specific project within a faculty.\n\n\n\n\n\n\n Note\n\n\n\nIt is not possible to use the servers to set up services that are already provided by the ICT department.\n\n\n\nVirtual vs physical servers\nThere is a choice between virtual and physical servers. Virtual servers are provided free of charge and can be requested via TOPdesk. Physical servers can be requested by contacting the faculty’s IT manager, and any associated costs are paid by the purchasing department.\nIn most cases, a virtual server is the most suitable option. However, a physical server may be necessary when it is intended for use as a GPU or computing cluster.\n\n\nServer configuration\nWhen requesting a virtual server, users can choose from a range of predefined hardware and operating system configurations. The following operating systems are available: Windows Server 2019, Windows Server 2022, Red Hat Enterprise Linux (latest supported version), and Ubuntu (latest LTS version).\nIf additional capacity is needed, it can be requested via the ‘ICT malfunction’ or ‘Request ICT service’ forms in TOPdesk. This includes options such as increasing the number of processors, cores per processor, RAM, or disk storage.\nSome considerations:\n\nICT provides the server, operating system, and network access.\nUsers are granted administrator privileges, allowing them to install any required software, provided it complies with the conditions specified in the request form.\nAccess can be granted to both TU Delft members and external users.\nICT provides daily backups, restoration services, and virus scanning for Windows servers.\nICT ensures that the server operating system remains up to date (e.g., security patches), except for Linux systems.\n\n\n\n\n\n\n\n Tip\n\n\n\nDetailed information on managing the server, including network and firewall settings, is provided in the TOPdesk application form.\n\n\n\n\nExample use cases\n\nPerforming computational or data processing tasks that require a dedicated server environment.\nRunning an instance of a service or application, such as ABAQUS, COMSOL, or other specialized tools for a lab or research group.\nHosting a static website, a web application, or an API for a project.\nHosting databases, such as MySQL, PostgreSQL, MongoDB, or other database management systems.\nDeploying and managing TU Delft GitLab runners for CI/CD pipelines.\n\n\n\nRelevant links\n\nIntranet page for faculty managed servers\nTOPdesk form to request a new virtual server\nIntranet page for faculty IT managers",
     "crumbs": [
       "<ins>Guides</ins>",
       "![](/docs/img/gear.svg){height=1em style='filter: invert(0.5) sepia(1) saturate(5) hue-rotate(175deg)'} **Computing Infrastructure**",
