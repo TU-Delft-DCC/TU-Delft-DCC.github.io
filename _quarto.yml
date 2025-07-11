@@ -94,83 +94,6 @@ website:
         - text: "About the guides"
           href: docs/about.md
         - text: <br>
-        - section: "![](/docs/img/gear.svg){height=1em style='filter: invert(0.5) sepia(1) saturate(5) hue-rotate(175deg)'} **Computing Infrastructure**"
-          contents:
-          - text: Getting started
-            href: docs/infrastructure/getting_started.md
-          - section: "Remote servers"
-            href: docs/infrastructure/remote_servers.md
-            contents:
-              - text: Request a VPS
-                href: docs/infrastructure/VPS_request.md
-              - href: docs/infrastructure/VPS_SSH.md
-                text: Setting up SSH tunneling
-              - href: docs/infrastructure/moving_data.md
-                text: Moving data to remote servers
-              - href: docs/infrastructure/VPS_SSL_Certs.md
-                text: Configure SSL certificates
-              - href: docs/infrastructure/apache_webserver.md
-                text: Setting up an Apache web server
-          - section: "TU Delft GitLab" 
-            href: docs/infrastructure/gitlab/gitlab_intro.md
-            contents:
-              - text: Creating GitLab groups
-                href: docs/infrastructure/gitlab/gitlab_groups.md
-              - text: Transfer ownership of a GitLab repository
-                href: docs/infrastructure/gitlab/gitlab_transfer_ownership.md
-              - text: Continuous Integration with GitLab
-                href: docs/infrastructure/gitlab/gitlab_docker.md
-              - text: Setting up a Gitlab runner for MATLAB
-                href: docs/infrastructure/gitlab/runner_matlab.md
-        - text: <br>
-        - section: "![](/docs/img/folder-regular.svg){height=1em style='filter: invert(0.5) sepia(1) saturate(5) hue-rotate(175deg)'} **Data Management**"
-          contents:
-            - text: Getting started
-              href: docs/data/getting_started.md
-            - text: FAIR Data
-              href: docs/data/fair_data/fair.md
-            - section: Planning
-              href: docs/data/planning/planning.md
-              contents:
-                - text: Privacy
-                  href: docs/data/planning/privacy.md
-            - section: Collection
-              href: docs/data/data_collection/collection.md
-              contents:
-                - text: Data conventions
-                  href: docs/data/data_collection/data_conventions.md
-                - text: Access and reuse
-                  href: docs/data/data_collection/access_reuse.md
-                - text: eLabJournal and RSpace
-                  href: docs/data/data_collection/elab_rspace.md
-            - text: Data processing
-              href: docs/data/data_processing.md
-            - section: Storage
-              href: docs/data/data_storage/storage.md
-              contents:
-                - text: Storage options
-                  href: docs/data/data_storage/storage_options.md
-                  contents:
-                    - text: Access and request space for *Project Data Storage*
-                      href: docs/data/data_storage/project_drive_request.md
-                    - text: Mount *Project Drive* on server
-                      href: docs/data/data_storage/project_drive_mounting.md
-                - text: Data security
-                  href: docs/data/data_storage/security.md
-                - text: Data sharing
-                  href: docs/data/data_storage/sharing.md
-                - text: Data backup
-                  href: docs/data/data_storage/backup.md
-            - section: Archive and publish
-              href: docs/data/data_publishing/archival_publishing_index.md
-              contents:
-                - text: Licensing
-                  href: docs/data/data_publishing/licensing_data.md
-                - text: Publishing data
-                  href: docs/data/data_publishing/publishing.md
-                - text: Offboarding and ownership
-                  href: docs/data/data_publishing/offboarding.md
-        - text: <br>
         - section: "![](/docs/img/laptop-code-solid.svg){height=1em style='filter: invert(0.5) sepia(1) saturate(5) hue-rotate(175deg)'} **Research Software**"
           contents:
             - text: Getting started
@@ -314,7 +237,83 @@ website:
 #              href: docs/resources/curriculum.md
 #            - text: AI tooling
 #              href: docs/resources/tools.md
-
+        - text: <br>
+        - section: "![](/docs/img/folder-regular.svg){height=1em style='filter: invert(0.5) sepia(1) saturate(5) hue-rotate(175deg)'} **Data Management**"
+          contents:
+            - text: Getting started
+              href: docs/data/getting_started.md
+            - text: FAIR Data
+              href: docs/data/fair_data/fair.md
+            - section: Planning
+              href: docs/data/planning/planning.md
+              contents:
+                - text: Privacy
+                  href: docs/data/planning/privacy.md
+            - section: Collection
+              href: docs/data/data_collection/collection.md
+              contents:
+                - text: Data conventions
+                  href: docs/data/data_collection/data_conventions.md
+                - text: Access and reuse
+                  href: docs/data/data_collection/access_reuse.md
+                - text: eLabJournal and RSpace
+                  href: docs/data/data_collection/elab_rspace.md
+            - text: Data processing
+              href: docs/data/data_processing.md
+            - section: Storage
+              href: docs/data/data_storage/storage.md
+              contents:
+                - text: Storage options
+                  href: docs/data/data_storage/storage_options.md
+                  contents:
+                    - text: Access and request space for *Project Data Storage*
+                      href: docs/data/data_storage/project_drive_request.md
+                    - text: Mount *Project Drive* on server
+                      href: docs/data/data_storage/project_drive_mounting.md
+                - text: Data security
+                  href: docs/data/data_storage/security.md
+                - text: Data sharing
+                  href: docs/data/data_storage/sharing.md
+                - text: Data backup
+                  href: docs/data/data_storage/backup.md
+            - section: Archive and publish
+              href: docs/data/data_publishing/archival_publishing_index.md
+              contents:
+                - text: Licensing
+                  href: docs/data/data_publishing/licensing_data.md
+                - text: Publishing data
+                  href: docs/data/data_publishing/publishing.md
+                - text: Offboarding and ownership
+                  href: docs/data/data_publishing/offboarding.md
+        - text: <br>
+        - section: "![](/docs/img/gear.svg){height=1em style='filter: invert(0.5) sepia(1) saturate(5) hue-rotate(175deg)'} **Computing Infrastructure**"
+          contents:
+          - text: Getting started
+            href: docs/infrastructure/getting_started.md
+          - section: "Remote servers"
+            href: docs/infrastructure/remote_servers.md
+            contents:
+              - text: Request a VPS
+                href: docs/infrastructure/VPS_request.md
+              - href: docs/infrastructure/VPS_SSH.md
+                text: Setting up SSH tunneling
+              - href: docs/infrastructure/moving_data.md
+                text: Moving data to remote servers
+              - href: docs/infrastructure/VPS_SSL_Certs.md
+                text: Configure SSL certificates
+              - href: docs/infrastructure/apache_webserver.md
+                text: Setting up an Apache web server
+          - section: "TU Delft GitLab" 
+            href: docs/infrastructure/gitlab/gitlab_intro.md
+            contents:
+              - text: Creating GitLab groups
+                href: docs/infrastructure/gitlab/gitlab_groups.md
+              - text: Transfer ownership of a GitLab repository
+                href: docs/infrastructure/gitlab/gitlab_transfer_ownership.md
+              - text: Continuous Integration with GitLab
+                href: docs/infrastructure/gitlab/gitlab_docker.md
+              - text: Setting up a Gitlab runner for MATLAB
+                href: docs/infrastructure/gitlab/runner_matlab.md
     # - title: "TU Delft Support"
     #   contents: 
     #   - href: docs/tud-support/index.md
