@@ -2,10 +2,11 @@
 # Insert this YAML header (including the opening and closing ---) at the beginning of the document and fill it out accordingly
 
 # We use this key to indicate the last reviewed date [manual entry, use YYYY-MM-dd]
-#date: 2025-02-19
+#date: YYYY-MM-DD
 
-# We use this key to indicate the last modified date [automatic entry]
-date-modified: last-modified
+# We use this key to indicate the last modified date [manual entry, use YYYY-MM-DD]
+# Uncomment and populate the next line accordingly
+#date-modified: YYYY-MM-DD
 
 # Do not modify
 lang: en
