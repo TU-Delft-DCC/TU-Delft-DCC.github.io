@@ -109,6 +109,7 @@ exclude = [
   '^https?://webdata\.tudelft\.nl',
   '^https?://weblogin\.tudelft\.nl',
   '^https?://www\.putty\.org',
+  '^https?://(www\.)?quarto\.org',
   
   # Test/dummy environments
   '^https?://github\.com/your_repo',
