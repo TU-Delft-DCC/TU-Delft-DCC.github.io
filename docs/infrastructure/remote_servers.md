@@ -5,8 +5,9 @@
 # Uncomment and populate the next line accordingly
 date: 2024-12-07
 
-# We use this key to indicate the last modified date [automatic entry]
-date-modified: last-modified
+# We use this key to indicate the last modified date [manual entry, use YYYY-MM-DD]
+# Uncomment and populate the next line accordingly
+date-modified: 2025-07-11
 
 # Do not modify
 lang: en
@@ -45,23 +46,24 @@ categories:
 
 ---
 
-TU Delft offers its employees the use of physical or virtual servers. These servers are known as Faculty Managed Servers and can be requested to conduct work related to a specific project within a Faculty. 
+TU Delft offers its employees the use of physical or virtual servers. These servers are known as faculty managed servers and can be requested to conduct work related to a specific project within a faculty.
 
-:::{.callout-note}
+:::{.callout-note appearance="simple" icon="false"}
+## {{< fa info-circle >}} Note
 It is not possible to use the servers to set up services that are already provided by the ICT department.
 :::
 
-**Virtual vs Physical Servers**
+#### **Virtual vs physical servers**
 
-There is a choice between virtual and physical servers. Virtual servers are provided free of charge and can be requested via TOPdesk. Physical servers can be requested by contacting the Faculty's IT Manager and any associated costs are paid by the purchasing department.
+There is a choice between virtual and physical servers. Virtual servers are provided free of charge and can be requested via TOPdesk. Physical servers can be requested by contacting the faculty's IT manager, and any associated costs are paid by the purchasing department.
 
 In most cases, a virtual server is the most suitable option. However, a physical server may be necessary when it is intended for use as a GPU or computing cluster.
 
-**Server Configuration**
+#### **Server configuration**
 
 When requesting a virtual server, users can choose from a range of predefined hardware and operating system configurations. The following operating systems are available: Windows Server 2019, Windows Server 2022, Red Hat Enterprise Linux (latest supported version), and Ubuntu (latest LTS version).
 
-If additional capacity is needed, it can be requested via the 'ICT malfunction' or 'request ICT service' forms in TOPdesk. This includes options such as increasing the number of processors, cores per processor, RAM, or disk storage.
+If additional capacity is needed, it can be requested via the 'ICT malfunction' or 'Request ICT service' forms in TOPdesk. This includes options such as increasing the number of processors, cores per processor, RAM, or disk storage.
 
 Some considerations:
 
@@ -69,22 +71,23 @@ Some considerations:
 * Users are granted administrator privileges, allowing them to install any required software, provided it complies with the conditions specified in the request form.
 * Access can be granted to both TU Delft members and external users.
 * ICT provides daily backups, restoration services, and virus scanning for Windows servers.
-* ICT ensures that the server operating system remains up to date (e.g. security patches), except for Linux systems.
+* ICT ensures that the server operating system remains up to date (e.g., security patches), except for Linux systems.
 
-::: {.callout-tip}
-Detailed information on managing the server, including network and firewall settings, is provided at the bottom of the TOPdesk application form.
+:::{.callout-tip appearance="simple" icon="false"}
+## {{< fa lightbulb >}} Tip
+Detailed information on managing the server, including network and firewall settings, is provided in the TOPdesk application form.
 :::
 
-**Example Use Cases** 
+#### **Example use cases** 
 
 - Performing computational or data processing tasks that require a dedicated server environment.
-- Running an instance of a service or application, such as ABAQUS, COMSOL or other specialized tools for a lab or research group.
+- Running an instance of a service or application, such as ABAQUS, COMSOL, or other specialized tools for a lab or research group.
 - Hosting a static website, a web application, or an API for a project.
-- Hosting databases, such as MySQL, PostgreSQL, MongoDB or other database management systems.
+- Hosting databases, such as MySQL, PostgreSQL, MongoDB, or other database management systems.
 - Deploying and managing TU Delft GitLab runners for CI/CD pipelines.
 
-**Relevant links**  
+#### **Relevant links**  
 
 - [Intranet page](https://intranet.tudelft.nl/en/-/hosting-servers?p_l_back_url=%2Fen%2Fgroup%2Fguest%2Fsearch%3Fq%3Dvirtual%2Bprivate%2Bserver) for faculty managed servers
 - [TOPdesk form](https://tudelft.topdesk.net/tas/public/ssp/content/serviceflow?unid=418c986f186d4934848dc2712039ed34&openedFromService=true) to request a new virtual server
-- [Intranet page](https://intranet.tudelft.nl/-/faculty-it-manager) for Faculty IT Managers.
+- [Intranet page](https://intranet.tudelft.nl/-/faculty-it-manager) for faculty IT managers

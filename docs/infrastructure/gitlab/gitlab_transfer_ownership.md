@@ -5,8 +5,9 @@
 # Uncomment and populate the next line accordingly
 #date: YYYY-MM-DD
 
-# We use this key to indicate the last modified date [automatic entry]
-date-modified: last-modified
+# We use this key to indicate the last modified date [manual entry, use YYYY-MM-DD]
+# Uncomment and populate the next line accordingly
+#date-modified: YYYY-MM-DD
 
 # Do not modify
 lang: en
@@ -44,8 +45,6 @@ author_2: Maurits Kok
 # - 
 
 ---
-
-# Transfer ownership of a GitLab repository
 
 ## Background
 
