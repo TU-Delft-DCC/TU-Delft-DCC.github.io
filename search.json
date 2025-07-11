@@ -1885,7 +1885,7 @@
     "href": "index.html",
     "title": "Welcome to the DCC Guides!",
     "section": "",
-    "text": "These guides provide a starting point for Research Computing, Research Data, and Research Software at TU Delft. This is an initiative from the TU Delft Digital Competence Centre.\n Shared solutions for research support staff  Practical guides for researchers\n\n\n   Computing Infrastructure \n   Data Management \n   Research Software \n   Courses and Workshops \n\n\n\n\n\n\n\n\n Want to get involved? \n Join the community We welcome anyone to join us in improving our guides! Find out how in our contributing guide.\n Join the discussion We welcome community discussions, ideas, and general questions to develop solutions and receive feedback in our community forum.\n Open an issue We track topic requests and bug-reports via GitHub issues.",
+    "text": "These guides provide a starting point for Research Software, Research Data, and Research Computing at TU Delft. This is an initiative from the TU Delft Digital Competence Centre.\n Shared solutions for research support staff  Practical guides for researchers\n\n\n   Research Software \n   Data Management \n   Computing Infrastructure \n   Courses and Workshops \n\n\n\n\n\n\n\n\n Want to get involved? \n Join the community We welcome anyone to join us in improving our guides! Find out how in our contributing guide.\n Join the discussion We welcome community discussions, ideas, and general questions to develop solutions and receive feedback in our community forum.\n Open an issue We track topic requests and bug-reports via GitHub issues.",
     "crumbs": [
       "<ins>Guides</ins>",
       "<span style=\"filter:grayscale(100%);\">⌂</span> **Home**"
