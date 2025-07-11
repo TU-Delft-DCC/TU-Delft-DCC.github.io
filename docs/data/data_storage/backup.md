@@ -58,7 +58,7 @@ A widely recommended strategy for data backup is the 3-2-1 Rule:
 
 When deciding on backup frequency, you should consider how often the data changes, the amount of work that would be lost between backups, the cost (time and money) to replace lost work, and the effort required for the backup process. Automated backup solutions are often more efficient than manual processes. Please refer to the section on [Storage options](./storage_options.md) for more information on which options involve automated backup or not.
 
-## Using `rsync` in the command line for Data Backup
+## Using `rsync` in the command line for data backup
 
 If you are comfortable with the command line, `rsync` is a powerful and versatile utility available on Linux (including Windows Subsystem for Linux: WSL) and macOS systems that can efficiently synchronize and back up files and directories. It is particularly useful for incremental backups, as it only transfers the differences between the source and destination, saving time and bandwidth.
 
