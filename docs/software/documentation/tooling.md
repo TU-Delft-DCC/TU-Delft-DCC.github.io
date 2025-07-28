@@ -6,7 +6,7 @@ date: 2025-02-23
 
 # We use this key to indicate the last modified date [manual entry, use YYYY-MM-DD]
 # Uncomment and populate the next line accordingly
-date-modified: 2025-07-11
+date-modified: 2025-07-28
 
 # Do not modify
 lang: en
@@ -35,10 +35,10 @@ corresponding: Elviss Dvinskis
 
 # Meaningful keywords, newline separated [manual entry]
 # Uncomment and populate the next line and list accordingly
-#categories: 
-# - sphinx
-# - quarto
-# - jupyterbook
+categories: 
+ - sphinx
+ - quarto
+ - jupyterbook
 
 ---
 
@@ -321,7 +321,7 @@ In order to create PDFs you will need to install a LaTeX engine if you do not ha
 ## {{< fa signs-post >}} Learn more
 - [Getting started with Quarto](https://quarto.org/docs/get-started/)
 - [Comprehensive guide to using Quarto](https://quarto.org/docs/guide/)
-- [Carpentries Incubator - Introduction to Working with Quarto documents](https://carpentries-incubator.github.io/reproducible-publications-quarto/02-quarto/03-quarto-documents/index.html)
+- [Carpentries Incubator - Introduction to Working with Quarto documents](https://carpentries-incubator.github.io/reproducible-publications-quarto/05-quarto-documents.html)
 
 :::
 
