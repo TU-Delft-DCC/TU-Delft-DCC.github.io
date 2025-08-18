@@ -334,3 +334,15 @@ pip install -e .
 ## Next steps
 
 Once you have your package ready, you can publish it. Visit our [*Release your Python package*](../releases/releases_pypi.md) guide for information on how to publish your package to PyPI.
+
+### Using `uv` for building and releasing Python packages
+
+If you're looking to streamline your Python packaging workflow even further, consider using `uv`. Alongside traditional tooling, `uv` offers a fast, unified workflow for packaging. It reads project metadata from `pyproject.toml`, builds source and wheel distributions, and can publish directly to package indexes (e.g., PyPI). This consolidates steps that typically require separate tools (e.g., `build` and `twine`) and helps keep release processes consistent across local development and continuous integration.
+
+In practice, `uv build` produces artifacts under `dist/` using the configured build backend, and `uv publish` can upload those artifacts using PyPI API tokens or interactive credentials. Because `uv` also manages environments and Python runtimes, the same tool can be used to create an isolated build environment, lock dependencies for reproducibility, and run test commands before releasing.
+
+:::{.callout-note appearance="simple" icon="false"}
+## {{< fa signs-post >}} Learn more
+
+- [`uv` documentation](https://docs.astral.sh/uv/)
+:::
