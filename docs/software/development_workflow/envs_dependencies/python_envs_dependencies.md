@@ -175,3 +175,13 @@ Consider using tools that offer more sophisticated dependency management by inte
 - [virtualenv documentation](https://virtualenv.pypa.io/en/latest/)
 - [virtualenvwrapper extension](https://virtualenvwrapper.readthedocs.io/en/latest/)
 :::
+
+#### **Using `uv` for environments and dependencies**
+
+Besides the aforementioned tools, `uv` is becoming increasingly adopted because it manages project dependencies and environments (much like Poetry), provides Python version management, and lockfiles in **one tool**, and is considerably faster. It can fully replace `pip`, `virtualenv`, `pyenv`, and `pip‑tools`, and others in day‑to‑day workflows.
+
+:::{.callout-note appearance="simple" icon="false"}
+## {{< fa signs-post >}} Learn more
+
+- [`uv` documentation](https://docs.astral.sh/uv/)
+:::
