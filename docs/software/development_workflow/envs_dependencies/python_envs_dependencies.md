@@ -180,6 +180,53 @@ Consider using tools that offer more sophisticated dependency management by inte
 
 Besides the aforementioned tools, `uv` is becoming increasingly adopted because it manages project dependencies and environments (much like Poetry), provides Python version management, and lockfiles in **one tool**, and is considerably faster. It can fully replace `pip`, `virtualenv`, `pyenv`, and `pip‑tools`, and others in day‑to‑day workflows.
 
+Similar to the `requirements.txt` file when using `pip`, `uv` works with a *lock file* which records the exact dependency graph.
+
+```bash
+# Create/refresh uv.lock
+uv lock                   
+# Install only what is in the lock
+uv sync --locked
+```
+
+You can also use existing `requirements.txt` file with `uv`. Or export the dependecies to a `requirements.txt` file.
+
+```bash
+# Does not remvove extra packages already in the env
+uv pip install -r requirements.txt
+
+# Prunes extra packages in your env to match the file exactly
+uv pip sync requirements.txt
+
+# Export the dependencies
+uv export --format requirements-txt -o requirements.txt
+```
+
+You can migrate a project to `pyproject.toml` (import from requirements).
+
+```bash
+uv add -r requirements.txt
+uv add --dev -r requirements-dev.txt
+```
+
+A typical workflow to set up an environment to run Jupyter nootebooks
+```
+# Scaffold a new project, create pyproject.toml
+uv init
+
+# Pin your python version                            
+uv python pin 3.12
+
+# Add notebook dependencies to the project
+uv add --dev ipykernel jupyterlab
+
+# Resolve dependencies and install them exactly
+uv lock && uv sync --locked
+
+# Launch a Jupyter notebook from the project env
+uv run --with jupyter jupyter lab
+```
+
 :::{.callout-note appearance="simple" icon="false"}
 ## {{< fa signs-post >}} Learn more
 
