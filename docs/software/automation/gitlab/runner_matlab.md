@@ -96,7 +96,7 @@ The TU Delft offers Virtual Private Servers (VPS) for researchers through the [T
 - 50Gb disk space (the Matlab installation in this guide requires ~10 Gb, but this depends on the size of the installed addons)
 
 ### Step 2. Setting up Gitlab runners
-To set up a gitlab runner on the VPS, please follow this [guide for setting up GitLab runners](/docs/infrastructure/gitlab/gitlab_docker.md).
+To set up a gitlab runner on the VPS, please follow this [guide for setting up GitLab runners](./gitlab_docker.md).
 
 **TLDR**
 
