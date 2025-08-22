@@ -310,17 +310,6 @@ website:
                 text: Configure SSL certificates
               - href: docs/infrastructure/apache_webserver.md
                 text: Setting up an Apache web server
-          - section: "TU Delft GitLab" 
-            href: docs/infrastructure/gitlab/gitlab_intro.md
-            contents:
-              - text: Creating GitLab groups
-                href: docs/infrastructure/gitlab/gitlab_groups.md
-              - text: Transfer ownership of a GitLab repository
-                href: docs/infrastructure/gitlab/gitlab_transfer_ownership.md
-              - text: Continuous Integration with GitLab
-                href: docs/infrastructure/gitlab/gitlab_docker.md
-              - text: Setting up a Gitlab runner for MATLAB
-                href: docs/infrastructure/gitlab/runner_matlab.md
     # - title: "TU Delft Support"
     #   contents: 
     #   - href: docs/tud-support/index.md
