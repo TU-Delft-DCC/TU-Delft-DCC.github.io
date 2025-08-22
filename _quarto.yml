@@ -24,6 +24,7 @@ project:
     - "!docs/software/documentation.md"
     - "!docs/software/containers/podman.md"
     - "!docs/data/to_be_deleted_publishing.md"
+    - "!docs/_archived/**"
 execute: 
   freeze: true # When freeze: true is set, it tells Quarto to "freeze" the execution of code chunks.
 
