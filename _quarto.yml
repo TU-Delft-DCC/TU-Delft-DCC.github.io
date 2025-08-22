@@ -226,6 +226,13 @@ website:
                       href: docs/software/releases_archiving/releases/releases_cran.md
                 - text: Archiving
                   href: docs/software/releases_archiving/archiving.md
+            - section: "Automation"
+              href: docs/software/automation/ci_cd.md
+              contents:
+                - text: Continuous Integration with GitLab
+                  href: docs/infrastructure/gitlab/gitlab_docker.md
+                - text: Setting up a GitLab runner for MATLAB
+                  href: docs/infrastructure/gitlab/runner_matlab.md  
             - text: Tooling
               href: docs/software/tools/tools.md
 #        - text: <br>
