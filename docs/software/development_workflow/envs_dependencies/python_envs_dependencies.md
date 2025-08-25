@@ -112,7 +112,7 @@ conda env update -f environment.yml
 ```
 
 ### Virtual Environments (`venv`/`virtualenv`)
-Python provides `venv` as a buil-in tool for creating virtual environments. `virtualenv` is a third-party tool that provides similar functionality.
+Python provides `venv` as a built-in tool for creating virtual environments. `virtualenv` is a third-party tool that provides similar functionality.
 
 #### **Basic commands**
 
@@ -163,7 +163,7 @@ Use [`pip-chill`](https://pypi.org/project/pip-chill/) or [`pipreqs`](https://py
 
 ### Dependency Management Tools
 
-Consider using tools that offer more sophisticated dependency management by integrating virtual environment creation and dependency resolution. They maintain a project manifest (e.g., `pyproject.toml` for Poetry) that specifies primary dependencies and generate lock files to pin exact versions for reproducibility.
+Consider using tools that offer more sophisticated dependency management by integrating virtual environment creation and dependency resolution. They maintain a project manifest (e.g., `pyproject.toml` for Poetry) that specifies primary dependencies and generate lockfiles to pin exact versions for reproducibility.
 
 - [Pipenv](https://pipenv.pypa.io/en/latest/): Combines `pip` and `virtualenv` into a single tool, with a focus on simplicity and ease of use.
 - [Poetry](https://python-poetry.org/docs/): Manages dependencies, environments, and package building in a streamlined way.
@@ -181,9 +181,9 @@ Consider using tools that offer more sophisticated dependency management by inte
 
 #### **Using `uv` for environments and dependencies**
 
-Besides the aforementioned tools, `uv` is becoming increasingly adopted because it manages project dependencies and environments (much like Poetry), provides Python version management, and lockfiles in **one tool**, and is considerably faster. It can fully replace `pip`, `virtualenv`, `pyenv`, and `pip‑tools`, and others in day‑to‑day workflows.
+Besides the aforementioned tools, `uv` is becoming increasingly adopted because it manages project dependencies and environments (much like Poetry), provides Python version management, and a lockfile in **one tool**, and is considerably faster. It can replace `pip`, `virtualenv`, `pyenv`, and `pip‑tools`, and others in day‑to‑day workflows.
 
-Similar to the `requirements.txt` file when using `pip`, `uv` works with a *lock file* which records the exact dependency graph.
+Instead of relying on a `requirements.txt` file (as with `pip`), `uv` maintains a `uv.lock` lockfile that records the fully resolved dependency graph.
 
 ```bash
 # Create/refresh uv.lock
@@ -192,7 +192,7 @@ uv lock
 uv sync --locked
 ```
 
-You can also use existing `requirements.txt` file with `uv`. Or export the dependencies to a `requirements.txt` file.
+You can also work with an existing `requirements.txt` file with `uv`. Or export the dependencies to a `requirements.txt` file.
 
 ```bash
 # Does not remove extra packages already in the env
