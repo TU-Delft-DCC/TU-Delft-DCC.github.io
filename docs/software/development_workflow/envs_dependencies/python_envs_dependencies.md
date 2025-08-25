@@ -7,7 +7,7 @@ date: 2025-02-14
 
 # We use this key to indicate the last modified date [manual entry, use YYYY-MM-DD]
 # Uncomment and populate the next line accordingly
-date-modified: 2025-07-11
+date-modified: 2025-08-25
 
 # Do not modify
 lang: en
@@ -28,6 +28,7 @@ title: Environment and dependency management in Python
 # Uncomment and populate the next lines accordingly
 author_1: Elviss Dvinskis
 author_2: Maurits Kok
+author_3: Aysun Urhan
 
 # Maintainers of the document, will not be parsed [manual entry]
 # Uncomment and populate the next lines accordingly
@@ -40,13 +41,15 @@ corresponding: Elviss Dvinskis
 
 # Meaningful keywords, newline separated [manual entry]
 # Uncomment and populate the next line and list accordingly
-#categories: 
-# - python
-# - environments
-# - dependencies
-# - conda
-# - venv
-# - virtualenv
+categories: 
+ - python
+ - environments
+ - dependencies
+ - conda
+ - venv
+ - virtualenv
+ - pyproject.toml
+ - uv
 
 ---
 When working with Python, managing dependencies and environments is important to ensure your project can be reproduced and shared. 
@@ -209,8 +212,8 @@ uv add -r requirements.txt
 uv add --dev -r requirements-dev.txt
 ```
 
-A typical workflow to set up an environment to run Jupyter nootebooks
-```
+A typical workflow to set up an environment to run Jupyter notebooks
+```bash
 # Scaffold a new project, create pyproject.toml
 uv init
 
