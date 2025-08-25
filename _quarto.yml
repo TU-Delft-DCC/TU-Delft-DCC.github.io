@@ -24,6 +24,7 @@ project:
     - "!docs/software/documentation.md"
     - "!docs/software/containers/podman.md"
     - "!docs/data/to_be_deleted_publishing.md"
+    - "!docs/_archived/**"
 execute: 
   freeze: true # When freeze: true is set, it tells Quarto to "freeze" the execution of code chunks.
 
@@ -226,6 +227,13 @@ website:
                       href: docs/software/releases_archiving/releases/releases_cran.md
                 - text: Archiving
                   href: docs/software/releases_archiving/archiving.md
+            - section: "Automation"
+              href: docs/software/automation/ci_cd.md
+              contents:
+                - text: Continuous Integration with GitLab
+                  href: docs/software/automation/gitlab/gitlab_docker.md
+                - text: Setting up a GitLab runner for MATLAB
+                  href: docs/software/automation/gitlab/runner_matlab.md
             - text: Tooling
               href: docs/software/tools/tools.md
 #        - text: <br>
@@ -303,17 +311,6 @@ website:
                 text: Configure SSL certificates
               - href: docs/infrastructure/apache_webserver.md
                 text: Setting up an Apache web server
-          - section: "TU Delft GitLab" 
-            href: docs/infrastructure/gitlab/gitlab_intro.md
-            contents:
-              - text: Creating GitLab groups
-                href: docs/infrastructure/gitlab/gitlab_groups.md
-              - text: Transfer ownership of a GitLab repository
-                href: docs/infrastructure/gitlab/gitlab_transfer_ownership.md
-              - text: Continuous Integration with GitLab
-                href: docs/infrastructure/gitlab/gitlab_docker.md
-              - text: Setting up a Gitlab runner for MATLAB
-                href: docs/infrastructure/gitlab/runner_matlab.md
     # - title: "TU Delft Support"
     #   contents: 
     #   - href: docs/tud-support/index.md
