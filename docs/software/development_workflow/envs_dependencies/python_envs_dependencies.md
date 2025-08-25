@@ -192,10 +192,10 @@ uv lock
 uv sync --locked
 ```
 
-You can also use existing `requirements.txt` file with `uv`. Or export the dependecies to a `requirements.txt` file.
+You can also use existing `requirements.txt` file with `uv`. Or export the dependencies to a `requirements.txt` file.
 
 ```bash
-# Does not remvove extra packages already in the env
+# Does not remove extra packages already in the env
 uv pip install -r requirements.txt
 
 # Prunes extra packages in your env to match the file exactly
