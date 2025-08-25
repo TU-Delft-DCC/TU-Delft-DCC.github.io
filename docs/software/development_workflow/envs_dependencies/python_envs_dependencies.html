@@ -1042,7 +1042,17 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../../../docs/software/getting_started.html"><img src="../../../../docs/img/laptop-code-solid.svg" style="filter: invert(0.5) sepia(1) saturate(5) hue-rotate(175deg);height:1em"> <strong>Research Software</strong></a></li><li class="breadcrumb-item"><a href="../../../../docs/software/development_workflow/index.html">Development workflow</a></li><li class="breadcrumb-item"><a href="../../../../docs/software/development_workflow/envs_dependencies.html">Environments and dependencies</a></li><li class="breadcrumb-item"><a href="../../../../docs/software/development_workflow/envs_dependencies/python_envs_dependencies.html">Python</a></li></ol></nav>
 <div class="quarto-title">
 <h1 class="title">Environment and dependency management in Python</h1>
-</div>
+  <div class="quarto-categories">
+    <div class="quarto-category">python</div>
+    <div class="quarto-category">environments</div>
+    <div class="quarto-category">dependencies</div>
+    <div class="quarto-category">conda</div>
+    <div class="quarto-category">venv</div>
+    <div class="quarto-category">virtualenv</div>
+    <div class="quarto-category">pyproject.toml</div>
+    <div class="quarto-category">uv</div>
+  </div>
+  </div>
 
 
 
@@ -1059,7 +1069,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <div>
     <div class="quarto-title-meta-heading">Last modified</div>
     <div class="quarto-title-meta-contents">
-      <p class="date-modified">July 11, 2025</p>
+      <p class="date-modified">August 25, 2025</p>
     </div>
   </div>
     
@@ -1134,7 +1144,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="virtual-environments-venvvirtualenv" class="level3">
 <h3 class="anchored" data-anchor-id="virtual-environments-venvvirtualenv">Virtual Environments (<code>venv</code>/<code>virtualenv</code>)</h3>
-<p>Python provides <code>venv</code> as a buil-in tool for creating virtual environments. <code>virtualenv</code> is a third-party tool that provides similar functionality.</p>
+<p>Python provides <code>venv</code> as a built-in tool for creating virtual environments. <code>virtualenv</code> is a third-party tool that provides similar functionality.</p>
 <section id="basic-commands-1" class="level4">
 <h4 class="anchored" data-anchor-id="basic-commands-1"><strong>Basic commands</strong></h4>
 <div class="sourceCode" id="cb3"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Creating a virtual environment</span></span>
@@ -1185,7 +1195,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="dependency-management-tools" class="level3">
 <h3 class="anchored" data-anchor-id="dependency-management-tools">Dependency Management Tools</h3>
-<p>Consider using tools that offer more sophisticated dependency management by integrating virtual environment creation and dependency resolution. They maintain a project manifest (e.g., <code>pyproject.toml</code> for Poetry) that specifies primary dependencies and generate lock files to pin exact versions for reproducibility.</p>
+<p>Consider using tools that offer more sophisticated dependency management by integrating virtual environment creation and dependency resolution. They maintain a project manifest (e.g., <code>pyproject.toml</code> for Poetry) that specifies primary dependencies and generate lockfiles to pin exact versions for reproducibility.</p>
 <ul>
 <li><a href="https://pipenv.pypa.io/en/latest/">Pipenv</a>: Combines <code>pip</code> and <code>virtualenv</code> into a single tool, with a focus on simplicity and ease of use.</li>
 <li><a href="https://python-poetry.org/docs/">Poetry</a>: Manages dependencies, environments, and package building in a streamlined way.</li>
@@ -1210,8 +1220,59 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </ul>
 </div>
 </div>
+<section id="using-uv-for-environments-and-dependencies" class="level4">
+<h4 class="anchored" data-anchor-id="using-uv-for-environments-and-dependencies"><strong>Using <code>uv</code> for environments and dependencies</strong></h4>
+<p>Besides the aforementioned tools, <code>uv</code> is becoming increasingly adopted because it manages project dependencies and environments (much like Poetry), provides Python version management, and a lockfile in <strong>one tool</strong>, and is considerably faster. It can replace <code>pip</code>, <code>virtualenv</code>, <code>pyenv</code>, and <code>pip‑tools</code>, and others in day‑to‑day workflows.</p>
+<p>Instead of relying on a <code>requirements.txt</code> file (as with <code>pip</code>), <code>uv</code> maintains a <code>uv.lock</code> lockfile that records the fully resolved dependency graph.</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Create/refresh uv.lock</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="ex">uv</span> lock                   </span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Install only what is in the lock</span></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a><span class="ex">uv</span> sync <span class="at">--locked</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>You can also work with an existing <code>requirements.txt</code> file with <code>uv</code>. Or export the dependencies to a <code>requirements.txt</code> file.</p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Does not remove extra packages already in the env</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="ex">uv</span> pip install <span class="at">-r</span> requirements.txt</span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Prunes extra packages in your env to match the file exactly</span></span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a><span class="ex">uv</span> pip sync requirements.txt</span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Export the dependencies</span></span>
+<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a><span class="ex">uv</span> export <span class="at">--format</span> requirements-txt <span class="at">-o</span> requirements.txt</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>You can migrate a project to <code>pyproject.toml</code> (import from requirements).</p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="ex">uv</span> add <span class="at">-r</span> requirements.txt</span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="ex">uv</span> add <span class="at">--dev</span> <span class="at">-r</span> requirements-dev.txt</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>A typical workflow to set up an environment to run Jupyter notebooks.</p>
+<div class="sourceCode" id="cb8"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Scaffold a new project, create pyproject.toml</span></span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="ex">uv</span> init</span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Pin your python version                            </span></span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a><span class="ex">uv</span> python pin 3.12</span>
+<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Add notebook dependencies to the project</span></span>
+<span id="cb8-8"><a href="#cb8-8" aria-hidden="true" tabindex="-1"></a><span class="ex">uv</span> add <span class="at">--dev</span> ipykernel jupyterlab</span>
+<span id="cb8-9"><a href="#cb8-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-10"><a href="#cb8-10" aria-hidden="true" tabindex="-1"></a><span class="co"># Resolve dependencies and install them exactly</span></span>
+<span id="cb8-11"><a href="#cb8-11" aria-hidden="true" tabindex="-1"></a><span class="ex">uv</span> lock <span class="kw">&amp;&amp;</span> <span class="ex">uv</span> sync <span class="at">--locked</span></span>
+<span id="cb8-12"><a href="#cb8-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-13"><a href="#cb8-13" aria-hidden="true" tabindex="-1"></a><span class="co"># Launch a Jupyter notebook from the project env</span></span>
+<span id="cb8-14"><a href="#cb8-14" aria-hidden="true" tabindex="-1"></a><span class="ex">uv</span> run <span class="at">--with</span> jupyter jupyter lab</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="callout callout-style-simple callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<i class="fa-solid fa-signs-post" aria-label="signs-post"></i> Learn more
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul>
+<li><a href="https://docs.astral.sh/uv/"><code>uv</code> documentation</a></li>
+</ul>
+</div>
+</div>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->

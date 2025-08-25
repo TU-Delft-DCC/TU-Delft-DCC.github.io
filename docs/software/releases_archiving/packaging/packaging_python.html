@@ -1040,7 +1040,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#lib-and-build-directories" id="toc-lib-and-build-directories" class="nav-link" data-scroll-target="#lib-and-build-directories"><code>lib/</code> and <code>build/</code> directories</a></li>
   </ul></li>
   <li><a href="#local-package-installation" id="toc-local-package-installation" class="nav-link" data-scroll-target="#local-package-installation">Local package installation</a></li>
-  <li><a href="#next-steps" id="toc-next-steps" class="nav-link" data-scroll-target="#next-steps">Next steps</a></li>
+  <li><a href="#next-steps" id="toc-next-steps" class="nav-link" data-scroll-target="#next-steps">Next steps</a>
+  <ul class="collapse">
+  <li><a href="#using-uv-for-building-and-releasing-python-packages" id="toc-using-uv-for-building-and-releasing-python-packages" class="nav-link" data-scroll-target="#using-uv-for-building-and-releasing-python-packages">Using <code>uv</code> for building and releasing Python packages</a></li>
+  </ul></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/TU-Delft-DCC/TU-Delft-DCC.github.io/issues/new/choose" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div></nav>
     </div>
@@ -1055,6 +1058,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <div class="quarto-category">package</div>
     <div class="quarto-category">Python</div>
     <div class="quarto-category">pyproject.toml</div>
+    <div class="quarto-category">uv</div>
   </div>
   </div>
 
@@ -1073,7 +1077,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <div>
     <div class="quarto-title-meta-heading">Last modified</div>
     <div class="quarto-title-meta-contents">
-      <p class="date-modified">July 11, 2025</p>
+      <p class="date-modified">August 25, 2025</p>
     </div>
   </div>
     
@@ -1427,8 +1431,28 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="next-steps" class="level2">
 <h2 class="anchored" data-anchor-id="next-steps">Next steps</h2>
 <p>Once you have your package ready, you can publish it. Visit our <a href="../../../../docs/software/releases_archiving/releases/releases_pypi.html"><em>Release your Python package</em></a> guide for information on how to publish your package to PyPI.</p>
+<section id="using-uv-for-building-and-releasing-python-packages" class="level3">
+<h3 class="anchored" data-anchor-id="using-uv-for-building-and-releasing-python-packages">Using <code>uv</code> for building and releasing Python packages</h3>
+<p>If you’re looking to streamline your Python packaging workflow even further, consider using <code>uv</code>. Alongside traditional tooling, <code>uv</code> offers a fast, unified workflow for packaging. It reads project metadata from <code>pyproject.toml</code>, builds source and wheel distributions, and can publish directly to package indexes (e.g., PyPI). This consolidates steps that typically require separate tools (e.g., <code>build</code> and <code>twine</code>) and helps keep release processes consistent across local development and continuous integration.</p>
+<p>In practice, <code>uv build</code> produces artifacts under <code>dist/</code> using the configured build backend, and <code>uv publish</code> can upload those artifacts using PyPI API tokens or interactive credentials. Because <code>uv</code> also manages environments and Python runtimes, the same tool can be used to create an isolated build environment, lock dependencies for reproducibility, and run test commands before releasing.</p>
+<div class="callout callout-style-simple callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<i class="fa-solid fa-signs-post" aria-label="signs-post"></i> Learn more
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul>
+<li><a href="https://docs.astral.sh/uv/"><code>uv</code> documentation</a></li>
+</ul>
+</div>
+</div>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->

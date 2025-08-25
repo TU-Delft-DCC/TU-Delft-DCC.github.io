@@ -7,7 +7,7 @@ date: 2025-02-14
 
 # We use this key to indicate the last modified date [manual entry, use YYYY-MM-DD]
 # Uncomment and populate the next line accordingly
-date-modified: 2025-07-11
+date-modified: 2025-08-25
 
 # Do not modify
 lang: en
@@ -28,6 +28,7 @@ title: Environment and dependency management in Python
 # Uncomment and populate the next lines accordingly
 author_1: Elviss Dvinskis
 author_2: Maurits Kok
+author_3: Aysun Urhan
 
 # Maintainers of the document, will not be parsed [manual entry]
 # Uncomment and populate the next lines accordingly
@@ -40,13 +41,15 @@ corresponding: Elviss Dvinskis
 
 # Meaningful keywords, newline separated [manual entry]
 # Uncomment and populate the next line and list accordingly
-#categories: 
-# - python
-# - environments
-# - dependencies
-# - conda
-# - venv
-# - virtualenv
+categories: 
+ - python
+ - environments
+ - dependencies
+ - conda
+ - venv
+ - virtualenv
+ - pyproject.toml
+ - uv
 
 ---
 When working with Python, managing dependencies and environments is important to ensure your project can be reproduced and shared. 
@@ -109,7 +112,7 @@ conda env update -f environment.yml
 ```
 
 ### Virtual Environments (`venv`/`virtualenv`)
-Python provides `venv` as a buil-in tool for creating virtual environments. `virtualenv` is a third-party tool that provides similar functionality.
+Python provides `venv` as a built-in tool for creating virtual environments. `virtualenv` is a third-party tool that provides similar functionality.
 
 #### **Basic commands**
 
@@ -160,7 +163,7 @@ Use [`pip-chill`](https://pypi.org/project/pip-chill/) or [`pipreqs`](https://py
 
 ### Dependency Management Tools
 
-Consider using tools that offer more sophisticated dependency management by integrating virtual environment creation and dependency resolution. They maintain a project manifest (e.g., `pyproject.toml` for Poetry) that specifies primary dependencies and generate lock files to pin exact versions for reproducibility.
+Consider using tools that offer more sophisticated dependency management by integrating virtual environment creation and dependency resolution. They maintain a project manifest (e.g., `pyproject.toml` for Poetry) that specifies primary dependencies and generate lockfiles to pin exact versions for reproducibility.
 
 - [Pipenv](https://pipenv.pypa.io/en/latest/): Combines `pip` and `virtualenv` into a single tool, with a focus on simplicity and ease of use.
 - [Poetry](https://python-poetry.org/docs/): Manages dependencies, environments, and package building in a streamlined way.
@@ -174,4 +177,61 @@ Consider using tools that offer more sophisticated dependency management by inte
 - [Conda documentation](https://docs.conda.io/projects/conda/en/stable/user-guide/getting-started.html)
 - [virtualenv documentation](https://virtualenv.pypa.io/en/latest/)
 - [virtualenvwrapper extension](https://virtualenvwrapper.readthedocs.io/en/latest/)
+:::
+
+#### **Using `uv` for environments and dependencies**
+
+Besides the aforementioned tools, `uv` is becoming increasingly adopted because it manages project dependencies and environments (much like Poetry), provides Python version management, and a lockfile in **one tool**, and is considerably faster. It can replace `pip`, `virtualenv`, `pyenv`, and `pip‑tools`, and others in day‑to‑day workflows.
+
+Instead of relying on a `requirements.txt` file (as with `pip`), `uv` maintains a `uv.lock` lockfile that records the fully resolved dependency graph.
+
+```bash
+# Create/refresh uv.lock
+uv lock                   
+# Install only what is in the lock
+uv sync --locked
+```
+
+You can also work with an existing `requirements.txt` file with `uv`. Or export the dependencies to a `requirements.txt` file.
+
+```bash
+# Does not remove extra packages already in the env
+uv pip install -r requirements.txt
+
+# Prunes extra packages in your env to match the file exactly
+uv pip sync requirements.txt
+
+# Export the dependencies
+uv export --format requirements-txt -o requirements.txt
+```
+
+You can migrate a project to `pyproject.toml` (import from requirements).
+
+```bash
+uv add -r requirements.txt
+uv add --dev -r requirements-dev.txt
+```
+
+A typical workflow to set up an environment to run Jupyter notebooks.
+```bash
+# Scaffold a new project, create pyproject.toml
+uv init
+
+# Pin your python version                            
+uv python pin 3.12
+
+# Add notebook dependencies to the project
+uv add --dev ipykernel jupyterlab
+
+# Resolve dependencies and install them exactly
+uv lock && uv sync --locked
+
+# Launch a Jupyter notebook from the project env
+uv run --with jupyter jupyter lab
+```
+
+:::{.callout-note appearance="simple" icon="false"}
+## {{< fa signs-post >}} Learn more
+
+- [`uv` documentation](https://docs.astral.sh/uv/)
 :::
