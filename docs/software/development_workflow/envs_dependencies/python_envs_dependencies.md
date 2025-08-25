@@ -212,7 +212,7 @@ uv add -r requirements.txt
 uv add --dev -r requirements-dev.txt
 ```
 
-A typical workflow to set up an environment to run Jupyter notebooks
+A typical workflow to set up an environment to run Jupyter notebooks.
 ```bash
 # Scaffold a new project, create pyproject.toml
 uv init
