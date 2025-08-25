@@ -620,7 +620,7 @@
     "href": "docs/software/development_workflow/project_management.html#version-control-platforms",
     "title": "Project management",
     "section": "Version control platforms",
-    "text": "Version control platforms\nThe choice between GitHub, GitLab and Bitbucket depends on your required features, privacy and other preferences, but all are Git-based platforms for version control. While numerous detailed comparisons exist online, here we will focus on GitHub.\n\n\n\n\n\n\nTU Delft GitLab\n\n\n\nTU Delft has its own GitLab instance hosted on campus. For more information, please visit the documentation and our TU Delft GitLab guides in the Computing Infrastracture section.\n Choosing a Repository Manager - for TU Delft Researchers\n\n\nSimilarly, whether you are using a version control system through your terminal or Integrated Development Environment (IDE), or using a GUI like GitHub Desktop, the core functionality remains the same.\n\n\n\n\n\n\n Learn more about GitHub Desktop\n\n\n\n\n\nGitHub Desktop is a great choice if you are just starting out with version control, providing a user-friendly graphical interface that simplifies Git operations. It makes it easy to visualize changes, create branches, and manage pull requests without needing to use command-line Git commands.\n Getting started with GitHub Desktop",
+    "text": "Version control platforms\nThe choice between GitHub, GitLab and Bitbucket depends on your required features, privacy and other preferences, but all are Git-based platforms for version control. While numerous detailed comparisons exist online, here we will focus on GitHub.\n\n\n\n\n\n\n TU Delft GitLab\n\n\n\nTU Delft has its own GitLab instance hosted on campus. For more information, please visit the help page documentation.\n Choosing a Repository Manager - for TU Delft Researchers\n\n\nSimilarly, whether you are using a version control system through your terminal or Integrated Development Environment (IDE), or using a GUI like GitHub Desktop, the core functionality remains the same.\n\n\n\n\n\n\n Learn more about GitHub Desktop\n\n\n\n\n\nGitHub Desktop is a great choice if you are just starting out with version control, providing a user-friendly graphical interface that simplifies Git operations. It makes it easy to visualize changes, create branches, and manage pull requests without needing to use command-line Git commands.\n Getting started with GitHub Desktop",
     "crumbs": [
       "<ins>Guides</ins>",
       "![](/docs/img/laptop-code-solid.svg){height=1em style='filter: invert(0.5) sepia(1) saturate(5) hue-rotate(175deg)'} **Research Software**",
@@ -1028,349 +1028,163 @@
     ]
   },
   {
-    "objectID": "docs/resources/curriculum.html",
-    "href": "docs/resources/curriculum.html",
-    "title": "Research Software Curriculum",
-    "section": "",
-    "text": "These materials represent a curated curriculum designed to help you develop and maintain your repository and code base. All of the resources listed below are free to access and use, and supplementary material like video lessons has been added where possible and relevant.\n\n\n\nWhat is Bash? - of all the shells available, Bash is one of the most popular, the most powerful, and the most friendly\nBash Essentials – Bash commands commonly used to navigate file directories in your Terminal/GitBash\nThe Unix Shell lesson from Software Carpentries - use of the shell is fundamental to using a wide range of other powerful tools and computing resources. These lessons will start you on a path towards using these resources effectively\nInstallation Instructions - particularly important for Windows users, as Bash comes pre-installed on Mac. Windows users will need to install GitBash following the instructions at this link\nUsing the Terminal in Mac - The Terminal app allows you to control your Mac using a command prompt\n\n\n\n\n\nWhat is Git?- 2-minute video overview of the technology and how it works\nInstall Git from GitHub Guides - Check if Git is already installed on your machine; if not, follow these instructions to get started. Notes: If you’ve already installed GitBash on Windows OS, you will have Git already. Installing GitHub Desktop will also install the latest version of Git if you don’t already have it.\nInstalling Git from Software Carpentries - Alternative installation instructions from Software Carpentries, including videos and details per OS.\nIntro to version control with Git from Code Refinery – self-paced introductory lesson to version control using Git\nGit Intro video lesson from Code Refinery - Day 1 - Recorded lesson from a May 2021 Code Refinery workshop on material in Intro to version control with Git, part 1/2\nGit Intro video lesson from Code Refinery - Day 2 - Recorded lesson from a May 2021 Code Refinery workshop on material in Intro to version control with Git, part 2/2\nBranching and merging – lesson from Code Refinery on concept of branching in Git (featuring octopus diagram)\nWhat is .gitignore? – introduction to how and why to use the .gitignore file to not track some files in a project folder (e.g., because of their size or sensitivity)\nGit command cheat sheet – commonly used Git commands in one page that can also be downloaded\n\n\n\n\n\nUnderstanding the GitHub flow – guide from GitHub on how and why to work with branches\nCollaborative distributed version control - We have learned how to make a git repository for a single person. What about sharing?\nSSH connection to GitHub – instructions to set up SSH connection to GitHub so that you do not need to input your login credentials with every push/pull\nGitlab and SSH keys - instructions to add an SSH key to your (TU Delft) GitLab account for the same reason as above\nGitHub without the Command Line from Code Refinery - practice collaborating and sharing using either the GitHub website or GitHub desktop application\nGitHub Guides: Mastering Markdown - Markdown is a lightweight and easy-to-use syntax for styling all forms of writing on the GitHub platform.\n\n\n\n\n\nIntroduction to Jupyter and JupyterLab - lesson material on the user interface of JupyterLab, how Jupyter notebooks work, and what some common and powerful usecases are\n\n\n\n\n\nAnaconda Installation Guide from Software Carpentries - Although one can install a plain-vanilla Python and all required libraries by hand, we recommend installing Anaconda, a Python distribution that comes with the latest version of Python and Jupyter Notebooks by default\nIntro to Anaconda Navigator - Anaconda Navigator is a graphical user interface to the conda package and environment manager. This 10-minute guide to Navigator will have you navigating the powerful conda program in a web-like interface without having to learn command line commands\nIntroduction to Conda for (Data) Scientists - Conda is an open source package and environment management system that easily creates, saves, loads, and switches between environments on your local computer\nManaging Conda environments - documentation on performing a range of common tasks with Conda using the command line\n\n\n\n\n\nScientific Computing with Python - a free video course series that teaches the basics of using Python 3\nApplied Data Science with Python Specialization - Coursera course in which you can enroll for free\nLearnPython.org - Whether you are an experienced programmer or not, this website is intended for everyone who wishes to learn the Python programming language\nProgramming with Python from Software Carpentries - this introduction to Python is built around a common scientific task: data analysis\nPlotting and Programming with Python from Software Carpentries - an introduction to programming in Python for people with little or no previous programming experience using plotting as its motivating example\nData Analysis and Visualization with Python for Social Scientists - basic information about Python syntax, the Jupyter notebook interface, how to import CSV files, using the pandas package to work with data frames, how to calculate summary information from a data frame, and a brief introduction to plotting. The last lesson demonstrates how to work with databases directly from Python\nCan You Speak Python? - test your knowledge of some important features of the Python programming language and the NumPy and Pandas libraries\n\n\n\n\n\nGetting started with Pandas - documentation and quick start guide for Pandas, an essential Python library used for working with data sets. It has functions for analyzing, cleaning, exploring, and manipulating data\nPandas Tutorial - 14-part tutorial series featuring live code examples and tests of your knowledge\nPandas Data Wrangling Cheat Sheet - a cheat sheet of some of the most used syntax that you probably don’t want to miss\nPandas Cheat Sheet - Visual - visual, printable 2-page reference guide on commonly performed operations using Pandas\nUltimate Pandas Guide — Inspecting Data Like a Pro - Whether you’re working on a simple analysis or a complex machine learning model, there’s a lot of value in being able to answer quick, exploratory questions about the nature of your data. This is a walk through of several DataFrame attributes and methods that make data inspection painless and productive\n10 Efficient Ways for Inspecting a Pandas DataFrame Object - A guide to using pandas effectively and efficiently\n\n\n\n\n\nGetting Started with Plotly - The plotly Python library is an interactive, open-source plotting library that supports over 40 unique chart types covering a wide range of statistical, financial, geographic, scientific, and 3-dimensional use-cases\nPlotly Python Open Source Graphing Library - Examples of how to make line plots, scatter plots, area charts, bar charts, error bars, box plots, histograms, heatmaps, subplots, multiple-axes, polar charts, and bubble charts\nHeatmaps with Plotly - How to make Heatmaps in Python with Plotly\n\n\n\n\n\nIpywidgets documentation - ipywidgets, also known as jupyter-widgets or simply widgets, are interactive HTML widgets for Jupyter notebooks and the IPython kernel.\nIntroduction to ipywidgets - in this tutorial video, learn about ipywidgets, a Python library for building interactive HTML widgets for your Jupyter browser.\nIpywidgets Interact Function | ipywidgets Examples of Slider, Dropdown, Checkbox, Text Box - Video demo on how to make an ipywidgets slider, ipywidgets dropdown, ipywidgets checkbox, or an ipywidgets text box using Python code.\n\n\n\n\n\nInstall R guide from Software Carpentries - R is a programming language that is especially powerful for data exploration, visualization, and statistical analysis. To interact with R, we use RStudio, which must also be installed separately from here\nProgramming with R from Software Carpentries - this introduction to R is built around a common scientific task: data analysis\nR for Reproducible Data Analysis from Software Carpentries - write modular code and best practices for using R for data analysis\nR for Social Scientists - basic information about R syntax, the RStudio interface, how to import CSV files, the structure of data frames, how to deal with factors, how to add/remove rows and columns, how to calculate summary statistics from a data frame, and a brief introduction to plotting\n\n\n\n\n\nUsing git with MATLAB - Introduction into using MATLAB and version control with git\nProgramming with MATLAB - Lesson from the Software Carpentries on the basics of programming with MATLAB\n\n\n\n\n\nWriting tests - lesson from CodeRefinery on automated testing\nVideo testing lesson - recording from software testing workshop by Code Refinery\nModular coding - modular code development from Code Refinery\n\n\n\n\n\nInstalling Docker - installation instructions for Windows, macOS, and Linux\nInstall WSL2 update - manual WSL2 update for Windows\nDockerfile reference - information on how to write a Dockerfile\n\n\n\n\n\nSetting up VSCode for Linux - guide to getting started using VSCode with Windows Subsystem for Linux\n\n\n\n\n\nGitHub Actions introduction course - an introductory course from GitHub on how to use GitHub Actions\n\n\n\n\n\nReproducible Research material from Code Refinery - demonstrates how version control, workflows, containers, and package managers can be used to record reproducible environments and computational steps\nReproducible Research video lesson from Code Refinery - Recorded video lesson from Code Refinery workshop in May 2021 on Reproducible Research material\nData + Code + Software = PDF - Slides to an overview on how to integrate data and software into a PDF."
-  },
-  {
-    "objectID": "docs/resources/curriculum.html#bash",
-    "href": "docs/resources/curriculum.html#bash",
-    "title": "Research Software Curriculum",
-    "section": "",
-    "text": "What is Bash? - of all the shells available, Bash is one of the most popular, the most powerful, and the most friendly\nBash Essentials – Bash commands commonly used to navigate file directories in your Terminal/GitBash\nThe Unix Shell lesson from Software Carpentries - use of the shell is fundamental to using a wide range of other powerful tools and computing resources. These lessons will start you on a path towards using these resources effectively\nInstallation Instructions - particularly important for Windows users, as Bash comes pre-installed on Mac. Windows users will need to install GitBash following the instructions at this link\nUsing the Terminal in Mac - The Terminal app allows you to control your Mac using a command prompt"
-  },
-  {
-    "objectID": "docs/resources/curriculum.html#git",
-    "href": "docs/resources/curriculum.html#git",
-    "title": "Research Software Curriculum",
-    "section": "",
-    "text": "What is Git?- 2-minute video overview of the technology and how it works\nInstall Git from GitHub Guides - Check if Git is already installed on your machine; if not, follow these instructions to get started. Notes: If you’ve already installed GitBash on Windows OS, you will have Git already. Installing GitHub Desktop will also install the latest version of Git if you don’t already have it.\nInstalling Git from Software Carpentries - Alternative installation instructions from Software Carpentries, including videos and details per OS.\nIntro to version control with Git from Code Refinery – self-paced introductory lesson to version control using Git\nGit Intro video lesson from Code Refinery - Day 1 - Recorded lesson from a May 2021 Code Refinery workshop on material in Intro to version control with Git, part 1/2\nGit Intro video lesson from Code Refinery - Day 2 - Recorded lesson from a May 2021 Code Refinery workshop on material in Intro to version control with Git, part 2/2\nBranching and merging – lesson from Code Refinery on concept of branching in Git (featuring octopus diagram)\nWhat is .gitignore? – introduction to how and why to use the .gitignore file to not track some files in a project folder (e.g., because of their size or sensitivity)\nGit command cheat sheet – commonly used Git commands in one page that can also be downloaded"
-  },
-  {
-    "objectID": "docs/resources/curriculum.html#githubgitlab-remote-repositories",
-    "href": "docs/resources/curriculum.html#githubgitlab-remote-repositories",
-    "title": "Research Software Curriculum",
-    "section": "",
-    "text": "Understanding the GitHub flow – guide from GitHub on how and why to work with branches\nCollaborative distributed version control - We have learned how to make a git repository for a single person. What about sharing?\nSSH connection to GitHub – instructions to set up SSH connection to GitHub so that you do not need to input your login credentials with every push/pull\nGitlab and SSH keys - instructions to add an SSH key to your (TU Delft) GitLab account for the same reason as above\nGitHub without the Command Line from Code Refinery - practice collaborating and sharing using either the GitHub website or GitHub desktop application\nGitHub Guides: Mastering Markdown - Markdown is a lightweight and easy-to-use syntax for styling all forms of writing on the GitHub platform."
-  },
-  {
-    "objectID": "docs/resources/curriculum.html#jupyter-notebooks-and-jupyterlab",
-    "href": "docs/resources/curriculum.html#jupyter-notebooks-and-jupyterlab",
-    "title": "Research Software Curriculum",
-    "section": "",
-    "text": "Introduction to Jupyter and JupyterLab - lesson material on the user interface of JupyterLab, how Jupyter notebooks work, and what some common and powerful usecases are"
-  },
-  {
-    "objectID": "docs/resources/curriculum.html#anaconda-navigator-and-managing-conda-environments",
-    "href": "docs/resources/curriculum.html#anaconda-navigator-and-managing-conda-environments",
-    "title": "Research Software Curriculum",
-    "section": "",
-    "text": "Anaconda Installation Guide from Software Carpentries - Although one can install a plain-vanilla Python and all required libraries by hand, we recommend installing Anaconda, a Python distribution that comes with the latest version of Python and Jupyter Notebooks by default\nIntro to Anaconda Navigator - Anaconda Navigator is a graphical user interface to the conda package and environment manager. This 10-minute guide to Navigator will have you navigating the powerful conda program in a web-like interface without having to learn command line commands\nIntroduction to Conda for (Data) Scientists - Conda is an open source package and environment management system that easily creates, saves, loads, and switches between environments on your local computer\nManaging Conda environments - documentation on performing a range of common tasks with Conda using the command line"
-  },
-  {
-    "objectID": "docs/resources/curriculum.html#python",
-    "href": "docs/resources/curriculum.html#python",
-    "title": "Research Software Curriculum",
-    "section": "",
-    "text": "Scientific Computing with Python - a free video course series that teaches the basics of using Python 3\nApplied Data Science with Python Specialization - Coursera course in which you can enroll for free\nLearnPython.org - Whether you are an experienced programmer or not, this website is intended for everyone who wishes to learn the Python programming language\nProgramming with Python from Software Carpentries - this introduction to Python is built around a common scientific task: data analysis\nPlotting and Programming with Python from Software Carpentries - an introduction to programming in Python for people with little or no previous programming experience using plotting as its motivating example\nData Analysis and Visualization with Python for Social Scientists - basic information about Python syntax, the Jupyter notebook interface, how to import CSV files, using the pandas package to work with data frames, how to calculate summary information from a data frame, and a brief introduction to plotting. The last lesson demonstrates how to work with databases directly from Python\nCan You Speak Python? - test your knowledge of some important features of the Python programming language and the NumPy and Pandas libraries"
-  },
-  {
-    "objectID": "docs/resources/curriculum.html#pandas",
-    "href": "docs/resources/curriculum.html#pandas",
-    "title": "Research Software Curriculum",
-    "section": "",
-    "text": "Getting started with Pandas - documentation and quick start guide for Pandas, an essential Python library used for working with data sets. It has functions for analyzing, cleaning, exploring, and manipulating data\nPandas Tutorial - 14-part tutorial series featuring live code examples and tests of your knowledge\nPandas Data Wrangling Cheat Sheet - a cheat sheet of some of the most used syntax that you probably don’t want to miss\nPandas Cheat Sheet - Visual - visual, printable 2-page reference guide on commonly performed operations using Pandas\nUltimate Pandas Guide — Inspecting Data Like a Pro - Whether you’re working on a simple analysis or a complex machine learning model, there’s a lot of value in being able to answer quick, exploratory questions about the nature of your data. This is a walk through of several DataFrame attributes and methods that make data inspection painless and productive\n10 Efficient Ways for Inspecting a Pandas DataFrame Object - A guide to using pandas effectively and efficiently"
-  },
-  {
-    "objectID": "docs/resources/curriculum.html#plotly",
-    "href": "docs/resources/curriculum.html#plotly",
-    "title": "Research Software Curriculum",
-    "section": "",
-    "text": "Getting Started with Plotly - The plotly Python library is an interactive, open-source plotting library that supports over 40 unique chart types covering a wide range of statistical, financial, geographic, scientific, and 3-dimensional use-cases\nPlotly Python Open Source Graphing Library - Examples of how to make line plots, scatter plots, area charts, bar charts, error bars, box plots, histograms, heatmaps, subplots, multiple-axes, polar charts, and bubble charts\nHeatmaps with Plotly - How to make Heatmaps in Python with Plotly"
-  },
-  {
-    "objectID": "docs/resources/curriculum.html#ipywidgets",
-    "href": "docs/resources/curriculum.html#ipywidgets",
-    "title": "Research Software Curriculum",
-    "section": "",
-    "text": "Ipywidgets documentation - ipywidgets, also known as jupyter-widgets or simply widgets, are interactive HTML widgets for Jupyter notebooks and the IPython kernel.\nIntroduction to ipywidgets - in this tutorial video, learn about ipywidgets, a Python library for building interactive HTML widgets for your Jupyter browser.\nIpywidgets Interact Function | ipywidgets Examples of Slider, Dropdown, Checkbox, Text Box - Video demo on how to make an ipywidgets slider, ipywidgets dropdown, ipywidgets checkbox, or an ipywidgets text box using Python code."
-  },
-  {
-    "objectID": "docs/resources/curriculum.html#r",
-    "href": "docs/resources/curriculum.html#r",
-    "title": "Research Software Curriculum",
-    "section": "",
-    "text": "Install R guide from Software Carpentries - R is a programming language that is especially powerful for data exploration, visualization, and statistical analysis. To interact with R, we use RStudio, which must also be installed separately from here\nProgramming with R from Software Carpentries - this introduction to R is built around a common scientific task: data analysis\nR for Reproducible Data Analysis from Software Carpentries - write modular code and best practices for using R for data analysis\nR for Social Scientists - basic information about R syntax, the RStudio interface, how to import CSV files, the structure of data frames, how to deal with factors, how to add/remove rows and columns, how to calculate summary statistics from a data frame, and a brief introduction to plotting"
-  },
-  {
-    "objectID": "docs/resources/curriculum.html#matlab",
-    "href": "docs/resources/curriculum.html#matlab",
-    "title": "Research Software Curriculum",
-    "section": "",
-    "text": "Using git with MATLAB - Introduction into using MATLAB and version control with git\nProgramming with MATLAB - Lesson from the Software Carpentries on the basics of programming with MATLAB"
-  },
-  {
-    "objectID": "docs/resources/curriculum.html#modular-code-and-testing",
-    "href": "docs/resources/curriculum.html#modular-code-and-testing",
-    "title": "Research Software Curriculum",
-    "section": "",
-    "text": "Writing tests - lesson from CodeRefinery on automated testing\nVideo testing lesson - recording from software testing workshop by Code Refinery\nModular coding - modular code development from Code Refinery"
-  },
-  {
-    "objectID": "docs/resources/curriculum.html#docker",
-    "href": "docs/resources/curriculum.html#docker",
-    "title": "Research Software Curriculum",
-    "section": "",
-    "text": "Installing Docker - installation instructions for Windows, macOS, and Linux\nInstall WSL2 update - manual WSL2 update for Windows\nDockerfile reference - information on how to write a Dockerfile"
-  },
-  {
-    "objectID": "docs/resources/curriculum.html#vscode",
-    "href": "docs/resources/curriculum.html#vscode",
-    "title": "Research Software Curriculum",
-    "section": "",
-    "text": "Setting up VSCode for Linux - guide to getting started using VSCode with Windows Subsystem for Linux"
-  },
-  {
-    "objectID": "docs/resources/curriculum.html#continuous-integration",
-    "href": "docs/resources/curriculum.html#continuous-integration",
-    "title": "Research Software Curriculum",
-    "section": "",
-    "text": "GitHub Actions introduction course - an introductory course from GitHub on how to use GitHub Actions"
-  },
-  {
-    "objectID": "docs/resources/curriculum.html#reproducible-research",
-    "href": "docs/resources/curriculum.html#reproducible-research",
-    "title": "Research Software Curriculum",
-    "section": "",
-    "text": "Reproducible Research material from Code Refinery - demonstrates how version control, workflows, containers, and package managers can be used to record reproducible environments and computational steps\nReproducible Research video lesson from Code Refinery - Recorded video lesson from Code Refinery workshop in May 2021 on Reproducible Research material\nData + Code + Software = PDF - Slides to an overview on how to integrate data and software into a PDF."
-  },
-  {
-    "objectID": "docs/listing.html",
-    "href": "docs/listing.html",
-    "title": "References",
-    "section": "",
-    "text": "🚧 Under construction! 🏗️"
-  },
-  {
-    "objectID": "docs/infrastructure/moving_data.html",
-    "href": "docs/infrastructure/moving_data.html",
-    "title": "Moving data to remote servers",
-    "section": "",
-    "text": "This section describes how to transfer data to and from a TU Delft virtual server. The procedure is different depending on whether the server runs a Windows or Linux-based operating system. Although there are many ways to transfer data from one machine to another, TU Delft servers only support a few of them.",
-    "crumbs": [
-      "<ins>Guides</ins>",
-      "![](/docs/img/gear.svg){height=1em style='filter: invert(0.5) sepia(1) saturate(5) hue-rotate(175deg)'} **Computing Infrastructure**",
-      "Remote servers",
-      "Moving data to remote servers"
-    ]
-  },
-  {
-    "objectID": "docs/infrastructure/moving_data.html#linux-servers",
-    "href": "docs/infrastructure/moving_data.html#linux-servers",
-    "title": "Moving data to remote servers",
-    "section": "Linux servers",
-    "text": "Linux servers\nThe scp command is a secure file transfer utility that allows you to copy files between Linux-based hosts (this includes macOS) on a network. It uses SSH for data transfer, providing the same authentication and security as SSH. Common scenarios in which you might need to transfer data between hosts include uploading scripts, downloading results, or transferring configuration files.\n\n\n\n\n\n\n Moving large data batches\n\n\n\nIf you need to transfer large files or a multitude of small files, consider using tools like rclone or rsync instead. The instructions below are for transferring small files or a few files at a time.\n\n\n\n\n\n\n\n\n Overwriting files\n\n\n\nNotice that scp will overwrite files in the destination directory without prompting if they already exist. Always double-check the paths and filenames to avoid accidental data loss.\n\n\n\nPrerequisites\nBefore starting, you need:\n\nSCP (Secure Copy Protocol) installed on your local machine. SCP is a command-line utility that allows you to securely transfer files between hosts on a network.\nSSH access to the remote host (e.g., VPS) you want to connect to.\n\n\n\nMoving data via SCP\nTo copy data to and from a remote host using the scp command, you can use the following syntax:\n# Copy TO Remote Host\nscp &lt;path-my-local-file&gt; &lt;target-username&gt;@&lt;remote-host&gt;:&lt;full-path/remote-directory&gt;/\n# Copy FROM Remote Host\nscp &lt;target-username&gt;@&lt;remote-host&gt;:&lt;full-path/my-remote-file&gt; &lt;path-my-local-directory&gt;/\n\n\n\n\n\n\n Moving files to restricted directories\n\n\n\nSome directories on the remote host may require elevated permissions to write files. If you encounter a “Permission denied” error, you may need to use sudo to copy files to those directories. However, using scp with sudo directly is not supported. Instead, you can copy the file to a temporary directory /tmp where you have write access and then move it to the desired location using sudo after connecting to the remote host.\n\n\n\n\nTransferring files using ProxyJump\nIn the case of a VPS hosted by TU Delft, you need to copy data to a remote host via a bastion host (an intermediary server). Therefore, you must use the -o option of scp to specify a ProxyJump that will connect to the bastion host first. Alternatively, you can choose to transfer files using SSH tunneling.\n\nTransfer to remote host\n# If using default SSH key name, for example, id_ed25519 or id_rsa\nscp -o \"ProxyJump &lt;bastion-username&gt;@linux-bastion-ex.tudelft.nl\" &lt;path-my-local-file&gt; \\ \n&lt;target-username&gt;@&lt;remote-host&gt;:&lt;full-path/remote-directory&gt;/\n\n# If using a custom SSH key name, for example, my_custom_key\nscp  -i &lt;path-to-custom-private-ssh-key&gt; -o \"ProxyJump &lt;bastion-username&gt;@linux-bastion-ex.tudelft.nl\" \\ \n&lt;path-my-local-file&gt;  &lt;target-username&gt;@&lt;remote-host&gt;:&lt;full-path-remote-directory&gt;/\n\n\nTransfer from remote host\n# If using default SSH key name, for example, id_ed25519 or id_rsa\nscp -o \"ProxyJump &lt;bastion-username&gt;@linux-bastion-ex.tudelft.nl\" \\ \n&lt;target-username&gt;@&lt;remote-host&gt;:&lt;full-path-remote-file&gt;/ &lt;path-my-local-directory&gt;/\n\n# If using a custom SSH key name, for example, my_custom_key\nscp -i &lt;path-to-custom-private-ssh-key&gt; -o \"ProxyJump &lt;bastion-username&gt;@linux-bastion-ex.tudelft.nl\" \\\n&lt;target-username&gt;@&lt;remote-host&gt;:&lt;full-path-remote-file&gt;/ &lt;path-my-local-directory&gt;/\n\n\n\nTransferring files using SSH tunneling\nIf SSH tunneling has been configured correctly for the remote host, you can copy files to and from a remote host as follows:\n# Copy TO remote host\n$ &lt;path-my-local-file&gt; &lt;host-nickname&gt;:&lt;full-path-remote-directory&gt;/\n# Copy FROM remote host\n$ scp &lt;host-nickname&gt;:&lt;full-path-remote-file&gt;/ &lt;path-my-local-directory&gt;/",
-    "crumbs": [
-      "<ins>Guides</ins>",
-      "![](/docs/img/gear.svg){height=1em style='filter: invert(0.5) sepia(1) saturate(5) hue-rotate(175deg)'} **Computing Infrastructure**",
-      "Remote servers",
-      "Moving data to remote servers"
-    ]
-  },
-  {
-    "objectID": "docs/infrastructure/moving_data.html#windows-servers",
-    "href": "docs/infrastructure/moving_data.html#windows-servers",
-    "title": "Moving data to remote servers",
-    "section": "Windows servers",
-    "text": "Windows servers\nTransferring data to and from a TU Delft Windows server is done via the Citrix platform, using the app’s built-in menu shown in the image below.\n\n\n\nCitrix Menu. Buttons from left to right: Download, Upload, Multimonitor, Clipboard, and Settings.\n\n\n\nTransferring files\n\nOpen a web browser and log into your Windows server as usual via the Citrix portal.\nOpen the Citrix menu located at the center-top of the server window and click on the Upload or Download button, as shown in the image above.\nA pop-up window will open on where you can select the files you wish to transfer to the server.\n\nIt is not possible to directly transfer files to or from the server’s C: or D: drives. Instead, you upload or download files to your personal TU Delft drive which is connected to the server. Using the Windows File Explorer and standard copy/paste or drag-and-drop operations, you can transfer the data from your personal drive to the server’s C: or D: drives.\n\n\n\n\n\n\n Warning\n\n\n\nTU Delft Windows servers have a limited amount of disk space in the C: drive. ICT instructs users to install applications and store data in the D: drive of the server to avoid running out of memory. Alternatively, you can use your personal TU Delft drive, which is also connected to the server. More information can be found at the bottom of the TOPdesk form to request a new VPS.\n\n\n\n\nUsing the clipboard\nTU Delft Windows servers do not allow to directly copy or paste text from the clipboard. Instead, you must use Citrix’s clipboard functionality. To do so, open the Citrix’s menu located at the center-top of the window and click on the Clipboard button. A pop-up window will open on which you can copy or paste the text you wish to transfer. Note that it is only possible to transfer text via the clipboard; images or files are not supported.",
-    "crumbs": [
-      "<ins>Guides</ins>",
-      "![](/docs/img/gear.svg){height=1em style='filter: invert(0.5) sepia(1) saturate(5) hue-rotate(175deg)'} **Computing Infrastructure**",
-      "Remote servers",
-      "Moving data to remote servers"
-    ]
-  },
-  {
-    "objectID": "docs/infrastructure/gitlab/runner_matlab.html",
-    "href": "docs/infrastructure/gitlab/runner_matlab.html",
+    "objectID": "docs/software/automation/gitlab/runner_matlab.html",
+    "href": "docs/software/automation/gitlab/runner_matlab.html",
     "title": "Setting up a GitLab runner for MATLAB",
     "section": "",
     "text": "With the continuous method of software development, you continuously build, test, and deploy iterative code changes. This iterative process helps reduce the chance that you develop new code based on buggy or failed previous versions. With this method, you strive to have less human intervention or even no intervention at all, from the development of new code until its deployment.\n\n\nWith this guide, you will create a Continuous Integration Pipeline on a repository within the TU Delft Gitlab to use a Matlab environment.",
     "crumbs": [
       "<ins>Guides</ins>",
-      "![](/docs/img/gear.svg){height=1em style='filter: invert(0.5) sepia(1) saturate(5) hue-rotate(175deg)'} **Computing Infrastructure**",
-      "TU Delft GitLab",
-      "Setting up a Gitlab runner for MATLAB"
+      "![](/docs/img/laptop-code-solid.svg){height=1em style='filter: invert(0.5) sepia(1) saturate(5) hue-rotate(175deg)'} **Research Software**",
+      "Automation",
+      "Setting up a GitLab runner for MATLAB"
     ]
   },
   {
-    "objectID": "docs/infrastructure/gitlab/runner_matlab.html#background",
-    "href": "docs/infrastructure/gitlab/runner_matlab.html#background",
+    "objectID": "docs/software/automation/gitlab/runner_matlab.html#background",
+    "href": "docs/software/automation/gitlab/runner_matlab.html#background",
     "title": "Setting up a GitLab runner for MATLAB",
     "section": "",
     "text": "With the continuous method of software development, you continuously build, test, and deploy iterative code changes. This iterative process helps reduce the chance that you develop new code based on buggy or failed previous versions. With this method, you strive to have less human intervention or even no intervention at all, from the development of new code until its deployment.\n\n\nWith this guide, you will create a Continuous Integration Pipeline on a repository within the TU Delft Gitlab to use a Matlab environment.",
     "crumbs": [
       "<ins>Guides</ins>",
-      "![](/docs/img/gear.svg){height=1em style='filter: invert(0.5) sepia(1) saturate(5) hue-rotate(175deg)'} **Computing Infrastructure**",
-      "TU Delft GitLab",
-      "Setting up a Gitlab runner for MATLAB"
+      "![](/docs/img/laptop-code-solid.svg){height=1em style='filter: invert(0.5) sepia(1) saturate(5) hue-rotate(175deg)'} **Research Software**",
+      "Automation",
+      "Setting up a GitLab runner for MATLAB"
     ]
   },
   {
-    "objectID": "docs/infrastructure/gitlab/runner_matlab.html#prerequisites",
-    "href": "docs/infrastructure/gitlab/runner_matlab.html#prerequisites",
+    "objectID": "docs/software/automation/gitlab/runner_matlab.html#prerequisites",
+    "href": "docs/software/automation/gitlab/runner_matlab.html#prerequisites",
     "title": "Setting up a GitLab runner for MATLAB",
     "section": "Prerequisites",
     "text": "Prerequisites\n\nTU Delft netID\nMATLAB account\nBasic knowledge of Linux (for setting up a server)\nBasic knowledge of Docker (for creating a custom MATLAB image)\n\n\n\n\n\n\n\nTip\n\n\n\nTo learn more about Docker containers, please look at the Reproducible Computational Environments Using Docker lesson from the Software Carpentries.",
     "crumbs": [
       "<ins>Guides</ins>",
-      "![](/docs/img/gear.svg){height=1em style='filter: invert(0.5) sepia(1) saturate(5) hue-rotate(175deg)'} **Computing Infrastructure**",
-      "TU Delft GitLab",
-      "Setting up a Gitlab runner for MATLAB"
+      "![](/docs/img/laptop-code-solid.svg){height=1em style='filter: invert(0.5) sepia(1) saturate(5) hue-rotate(175deg)'} **Research Software**",
+      "Automation",
+      "Setting up a GitLab runner for MATLAB"
     ]
   },
   {
-    "objectID": "docs/infrastructure/gitlab/runner_matlab.html#glossary-of-terms",
-    "href": "docs/infrastructure/gitlab/runner_matlab.html#glossary-of-terms",
+    "objectID": "docs/software/automation/gitlab/runner_matlab.html#glossary-of-terms",
+    "href": "docs/software/automation/gitlab/runner_matlab.html#glossary-of-terms",
     "title": "Setting up a GitLab runner for MATLAB",
     "section": "Glossary of terms",
     "text": "Glossary of terms\nCI/CD pipeline\nA CI/CD pipeline automates your software delivery process. The pipeline builds code, runs tests (Continuous Intergation), and safely deploys a new version of the application (Continuous Delivery).\nDocker\nWe use a Docker container to run the Gitlab runner and initialise the CI/CD pipeline.\nGitlab runner (from GitLab documentation)\nRunners are the agents that run the CI/CD jobs that come from GitLab. When you register a runner, you are setting up communication between your GitLab instance and the machine where GitLab Runner is installed. Runners usually process jobs on the same machine where you installed GitLab Runner.\nGitlab jobs\nPipeline configuration begins with jobs. Jobs are the most fundamental element of a .gitlab-ci.yml file. Each job is executed by a Gitlab runner. See Gitlab documentation for more info.",
     "crumbs": [
       "<ins>Guides</ins>",
-      "![](/docs/img/gear.svg){height=1em style='filter: invert(0.5) sepia(1) saturate(5) hue-rotate(175deg)'} **Computing Infrastructure**",
-      "TU Delft GitLab",
-      "Setting up a Gitlab runner for MATLAB"
+      "![](/docs/img/laptop-code-solid.svg){height=1em style='filter: invert(0.5) sepia(1) saturate(5) hue-rotate(175deg)'} **Research Software**",
+      "Automation",
+      "Setting up a GitLab runner for MATLAB"
     ]
   },
   {
-    "objectID": "docs/infrastructure/gitlab/runner_matlab.html#steps",
-    "href": "docs/infrastructure/gitlab/runner_matlab.html#steps",
+    "objectID": "docs/software/automation/gitlab/runner_matlab.html#steps",
+    "href": "docs/software/automation/gitlab/runner_matlab.html#steps",
     "title": "Setting up a GitLab runner for MATLAB",
     "section": "Steps",
     "text": "Steps\n\nRequest a TU Delft Virtual Private Server\nSet up a Gitlab runner\nCreate a Docker image with a custom Matlab installation\nRegister a gitlab runner for the Matlab container\nObtain a Matlab license file\nConfigure the CI/CD pipeline\nAdd a job to test the pipeline\nOptional: Updating the Matlab version\n\n\nStep 1. Request a TU Delft VPS\nIf you want to work with the TU Delft Gitlab instance and you want to implement CI/CD pipelines, then you need to install a Gitlab runner on your own. Runners are the agents that run the CI/CD jobs that come from GitLab. Currently, the TU Delft instance does not provide this feature out-of-the-box. Therefore, we need a separate (virtual) server to run the Gitlab runners and execute the jobs in the CI/CD pipeline.\nThe TU Delft offers Virtual Private Servers (VPS) for researchers through the TopDesk selfservice portal. If you don’t have a VPS already, please follow this guide to request a Virtual Private Server)\nVPS requirements\n\n50Gb disk space (the Matlab installation in this guide requires ~10 Gb, but this depends on the size of the installed addons)\n\n\n\nStep 2. Setting up Gitlab runners\nTo set up a gitlab runner on the VPS, please follow this guide for setting up GitLab runners.\nTLDR\n\nInstall docker with\nsudo apt install docker.io\nVerify installation with\nsudo docker --version\nOptional: Move default storage location to larger drive\nIf the file space in the Docker Root directory is not adequate, we must relocate the Docker Root. Please consult this guide for instructions.\nDeploy the gitlab-runner with\ndocker run -d --name gitlab-runner --restart always \\\n-v /srv/gitlab-runner/config:/etc/gitlab-runner \\\n-v /var/run/docker.sock:/var/run/docker.sock \\\ngitlab/gitlab-runner:latest\nVerify deployment with\nsudo docker ps -a\n\n\n\nStep 3. Create a Docker image containing a custom Matlab installation\nIn order for a Gitlab runner to execute MATLAB code, it needs to be able to access a container with MATLAB installed. The aim of this step is to create a Docker image with MATLAB installation that can be used by a Gitlab runner. By building our own Docker image, we can specify the MATLAB version and customize the installed toolboxes.\n\n\n\n\n\n\nNote\n\n\n\nWe have looked into using the Docker images developed by Mathworks. When running these images, you are prompted to supply your MATLAB’s account username and password to activate the instance. Although it is possible to create a new image from such an activated container and use it on the VPS, we have so far not been able to get this solution working with Gitlab runners. We thus rely on downloading a license file (step 6) and storing it as a Variable on Gitlab (step 7).\n\n\nThis Dockerfile is based on MATLAB’s Dockerfile template. We will make the following modifications to this template:\n\nset bash as the default run command (Gitlab runners need to access a shell)\nadd additional MATLAB products with the flag --products. In this example, we have added the Parallel Computing Toolbox and the Mapping Toolbox.\n\nIn your user folder on the VPS (/home/username), create a file called Dockerfile\nsudo nano Dockerfile\nand copy the content below in the Dockerfile. Make sure to update the MATLAB release and installed addons to your requirements (see in bold).\n\n\n\n\n\n\n# Copyright 2019 - 2021 The MathWorks, Inc.\n\n# To specify which MATLAB release to install in the container, edit the value of the MATLAB_RELEASE argument.\n# Use lower case to specify the release, for example: ARG MATLAB_RELEASE=r2020a\nARG MATLAB_RELEASE=r2021b\n\n# When you start the build stage, this Dockerfile by default uses the Ubuntu-based matlab-deps image.\n# To check the available matlab-deps images, see: https://hub.docker.com/r/mathworks/matlab-deps\nFROM mathworks/matlab-deps:${MATLAB_RELEASE}\n\n# Declare the global argument to use at the current build stage\nARG MATLAB_RELEASE\n\n# Install mpm dependencies\nRUN export DEBIAN_FRONTEND=noninteractive && apt-get update && \\\n    apt-get install --no-install-recommends --yes \\\n    wget \\\n    unzip \\\n    ca-certificates && \\\n    apt-get clean && apt-get autoremove\n\n# Run mpm to install MATLAB in the target location and delete the mpm installation afterwards\nRUN wget -q https://www.mathworks.com/mpm/glnxa64/mpm && \\ \n    chmod +x mpm && \\\n    ./mpm install \\\n    --release=${MATLAB_RELEASE} \\\n    --destination=/opt/matlab \\\n    --products MATLAB Parallel_Computing_Toolbox Mapping_Toolbox && \\\n    rm -f mpm /tmp/mathworks_root.log && \\\n    ln -s /opt/matlab/bin/matlab /usr/local/bin/matlab\n\n# Add \"matlab\" user and grant sudo permission.\nRUN adduser --shell /bin/bash --disabled-password --gecos \"\" matlab && \\\n    echo \"matlab ALL=(ALL) NOPASSWD: ALL\" &gt; /etc/sudoers.d/matlab && \\\n    chmod 0440 /etc/sudoers.d/matlab\n\n# Set user and work directory\nUSER matlab\nWORKDIR /home/matlab\nCMD [\"bash\"]\n\n\n\n\nTo build a Docker image with the name matlab-gitlab and the version reference r2021b, run the following command in the folder containing the Dockerfile:\nsudo docker build . -t matlab-gitlab:r2021b\nYou can verify the presence of the image with\nsudo docker images\nThis image is now available locally on the VPS.\n\n\n\n\n\n\nTip\n\n\n\nYou can also upload your Docker image to Dockerhub and have it available from there. This removes the need to build the image on the VPS as it can be pulled directly from DockerHub.\n\n\n\n\nStep 4. Register the MATLAB runner\nAfter deploying the gitlab-runner in step 2, we need to register a new runner for our matlab-gitlab image. Run the following command to register your runner and configure it to deploy in a Docker container on your server.\ndocker run --rm -it -v /srv/gitlab-runner/config:/etc/gitlab-runner gitlab/gitlab-runner register\nIn response to this command you will be prompted to answer a series of questions. You can find the required gitlab-ci token in your Gitlab repository under Settings -&gt; CI/CD -&gt; Runners:\nsudo docker run --rm -it -v /srv/gitlab-runner/config:/etc/gitlab-runner gitlab/gitlab-runner register \\\n  --non-interactive \\\n  --url \"https://gitlab.tudelft.nl/\" \\\n  --registration-token \"REPOSITORY_TOKEN\" \\\n  --executor \"docker\" \\\n  --docker-image matlab-gitlab:r2021b \\\n  --description \"matlab-runner\" \\\n  --tag-list \"matlab\" \\\n  --docker-privileged=true \\\n  --docker-cap-add \"NET_ADMIN\" \\\n  --docker-pull-policy \"if-not-present\" \\\nFor the changes to take effect, restart the gitlab-runner with\nsudo docker restart gitlab-runner\nThe runner configurations are stored in /srv/gitlab-runner/config/config.toml. If you would like to view or or modify the MATLAB runner, run\nsudo nano /srv/gitlab-runner/config/config.toml\nAfter registering the runner, the configuration file should contain:\n\n\n\n\n\n\nNote\n\n\n\n\n\nconcurrent = 4\ncheck_interval = 0\n\n[session_server]\n  session_timeout = 1800\n\n[[runners]]\n  name = \"matlab-gitlab\"\n  url = \"https://gitlab.tudelft.nl\"\n  token = \"&lt;token&gt;\"\n  executor = \"docker\"\n  [runners.custom_build_dir]\n  [runners.cache]\n    [runners.cache.s3]\n    [runners.cache.gcs]\n    [runners.cache.azure]\n  [runners.docker]\n    tls_verify = false\n    image = \"matlab-gitlab:r2021b\"\n    privileged = true\n    disable_entrypoint_overwrite = false\n    cap_add = [\"NET_ADMIN\"]\n    oom_kill_disable = false\n    disable_cache = false\n    volumes = [\"/cache\"]\n    pull_policy = \"if-not-present\"\n    shm_size = 0\n\n\n\n\n\nStep 5. Obtain a MATLAB license file\nEvery TU Delft employee has access to an Individual MATLAB license. Normally, you would activate MATLAB only once after installation through an online activation step. However, this does not work for a Docker container as it is relaunched for each CI trigger.\nThe following steps for activating MATLAB on an offline machine are adapted from the MATLAB Forum:\n\nObtain your Host ID\nObtain your computer login name or username\nActivate the license through the License Center to obtain license file\n\n1. Obtain your Host ID\nThe MATLAB license can only be activated for a specifc computer. In the Docker container, we will set the hostID of the container to 0242ac11ffff.\n\n\n\n\n\n\nNote\n\n\n\nDocker automatically assigns an IP address to each running container, starting from 172.17.0.2 until 172.17.0.255. These IP addresses determine the container’s MAC address (see here for more details), which in turn needs to match with our license. To prevent the MAC address of the MATLAB container from switching and thereby invalidating the license, we will set it to 02:42:ac:11:ff:ff in the .gitlab-ci.yml file.\n\n\n2. Obtain your computer login name or username\nThe MATLAB license is created for a specific user. In the Docker container, we will set the username to matlab.\n3. Activate the license through the License Center to obtain license file\n\nGo to the License Center: https://www.mathworks.com/mwaccount\nUnder My Software, click the license number you want to activate. If you do not see your license number, in the bottom right hand corner, click View Additional Licenses or Trials.\nClick the Install and Activate tab\nClick Activate to Retrieve License File and/or Activate a Computer\nEnter the following information:\n\nthe release you are activating = r2021b (same version as in the Dockerfile)\nthe operating system = Linux\nthe host ID = 0242ac11ffff\nyour user or login name = matlab\nthe Activation Label = matlab-gitlab\n\n\nDownload the license.lic file\n\n\n\nStep 6. Configure the CI/CD pipeline on Gitlab\nBefore we can run a CI job, we need to configure a few settings in our Gitlab repository\n1. Add tag to MATLAB runner\nUnder Settings -&gt; CI/CD -&gt; Runners we can find the available specific runners. Press the edit button on the matlab-gitlab runner and add the tag matlab-gitlab. With this, we can call more easily call this specific runner within our CI pipeline.\n2. Add license as Variable\nUnder Settings -&gt; CI/CD -&gt; Variables add a new variable called MATLAB_LICENSE, past the content of the downloaded license.lic file and set type to file. Having the license available as a Gitlab variable allows us to update it without having to change the MATLAB image.\n\n\n\n\n\n\nNote\n\n\n\nAlternatively, we could have added the license file directly to the Docker image. With the license file in the same folder as the Dockerfile and adding the following command to the Dockerfile, we can build a Docker image with an activated MATLAB:\nCOPY license.lic /opt/matlab/licenses/\nHere, we opted to have it accessible through the Gitlab settings together with the accompanying hostid.\n\n\n\n\n\n\nWarning\n\n\n\nNever share any Docker images that contain license files or other confidential information.\n\n\n\n\n\n\nStep 7. Add a job to test the pipeline\nTo test the pipeline, add the following content to .gitlab-ci.yml via CI/CD -&gt; Editor in your repository.\nvariables:\n  MAC_ADDRESS: 02:42:ac:11:ff:ff\n\ncheck_matlab:\n  tags: \n    - matlab-gitlab\n  before_script:\n    # Change the mac-address to match the MATLAB license\n    - sudo ifconfig eth0 hw ether \"$MAC_ADDRESS\"\n\n    # Add the Matlab license to the Matlab installation in the container\n    - sudo mkdir /opt/matlab/licenses\n    - sudo mv ${MATLAB_LICENSE} /opt/matlab/licenses/license.lic   \n  script:    \n    # Run a MATLAB function/script through the -batch argument\n    - matlab -batch \"disp('hello world!')\"\nAfter commiting, the pipeline should run and execute the job check_matlab. You can check the status of the pipeline via CI/CD -&gt; Pipelines.\nIf all went well, you have successfully setup a Gitlab runner to run MATLAB code. Congrats!\n\n\nStep 8. Optional: Updating the MATLAB version\nIf you need to update the MATLAB version of the Docker container, you will need to go throught the following steps:\n\nUpdate the MATLAB version in the Dockerfile\nBuild the docker image with sudo docker build . -t matlab-gitlab:&lt;version&gt;\nDownload a new license.lic file (see step 5 of this guide)\nUpdate the CI Variable MATLAB_LICENSE with the new license content\nUpdate the image names (not the tags) in .gitlab-ci.yml to use the new image.\n\n\n\n\n\n\n\nNote\n\n\n\nIf you want to test your code with multiple MATLAB versions to ensure backward compatibility, please look at this example to use multiple docker images.",
     "crumbs": [
       "<ins>Guides</ins>",
-      "![](/docs/img/gear.svg){height=1em style='filter: invert(0.5) sepia(1) saturate(5) hue-rotate(175deg)'} **Computing Infrastructure**",
-      "TU Delft GitLab",
-      "Setting up a Gitlab runner for MATLAB"
+      "![](/docs/img/laptop-code-solid.svg){height=1em style='filter: invert(0.5) sepia(1) saturate(5) hue-rotate(175deg)'} **Research Software**",
+      "Automation",
+      "Setting up a GitLab runner for MATLAB"
     ]
   },
   {
-    "objectID": "docs/infrastructure/gitlab/gitlab_intro.html",
-    "href": "docs/infrastructure/gitlab/gitlab_intro.html",
-    "title": "TU Delft GitLab",
+    "objectID": "docs/software/automation/ci_cd.html",
+    "href": "docs/software/automation/ci_cd.html",
+    "title": "Automation for software development",
     "section": "",
-    "text": "Imagine the following: you are working with a group on a research software code base. At this point your codebase might be quite large, dozens of scripts, and it has a good amount of dependencies. Furthermore, other researchers depend on your code to work properly for their own research. When your code becomes more relevant to yourself and your community, you will feel the urge to have more control on the quality of contributions. You would like to be able to easily upgrade and maintain the code, but also automate the process of packaging and publishing your code, instead of doing it manually everytime.\nThe TU Delft offers a local instance of GitLab at gitlab.tudelft.nl. GitLab is an online Git repository management tool with a wiki, issue tracker, Continuous Integration and Continuous Deployment built-in. The service is intended for researchers. Similar services are, for example, GitHub.com or GitLab.com. In contrast to these services, GitLab TU Delft is hosted by the TU Delft itself, on campus. For more information, please consult the documentation.",
+    "text": "Continuous Integration (CI) refers to the build and unit testing stages of the software release process. Every committed revision can trigger an automated build and test. With Continuous Delivery (CD), code changes are automatically built, tested, and prepared for a release to production.\n\n\n\nSource: Solidstudio (solidstudio.io). Asset path.\n\n\n\nGitHub Actions\nGitHub Actions is a Continuous Integration and Continuous Delivery (CI/CD) platform that automates building, testing, and deploying code. You can set up workflows that build and test every pull request in your repository, and optionally deploy changes after those pull requests are merged, triggered automatically based on your chosen rules.\n\n\n\n\n\n\n Exploring GitHub Actions\n\n\n\nSetting up a demo workflow in GitHub Actions.\n\n\n\n\n\n\n\n\n Tips\n\n\n\n\nGitHub has templates available. Go to the Actions tab in your repository and select new workflow for an overview.\nYou can find workflow examples shared in the community.\nAdd workflow_dispatch as a trigger for your GitHub Actions workflow. With this trigger, you can manually run an action, instead of having to rely on external triggers. This is quite useful when testing your workflow.\nTest your workflow in a separate branch to avoid committing many small changes during debugging of the workflow.\n\n\n\n\nAutomating testing\nA common usecase of automation is to trigger automatic testing when pushing changes and creating pull requests.\n\nPythonMATLAB\n\n\nThe example below is taken from the CodeRefinery lesson on Continuous Integration.\n\n\n\n\n\n\n Python testing\n\n\n\n\n\nname: Python package testing\n\non:\n  push:\n    branches: [ \"main\", \"develop\" ]\n  pull_request:\n    branches: [ \"main\", \"develop\" ]\n  workflow_dispatch:\n  \njobs:\n  test:\n    permissions:\n      contents: read\n      pull-requests: write\n\n    runs-on: ubuntu-latest\n\n    steps:\n    - uses: actions/checkout@v4\n    - name: Set up Python 3.10\n      uses: actions/setup-python@v5\n      with:\n        python-version: \"3.10\"\n    - name: Install dependencies\n      run: |\n        python -m pip install --upgrade pip\n        python -m pip install flake8 pytest pytest-cov\n        if [ -f requirements.txt ]; then pip install -r requirements.txt; fi\n    - name: Lint with flake8\n      run: |\n        # stop the job if there are Python syntax errors or undefined names\n        flake8 . --count --select=E9,F63,F7,F82 --show-source --statistics\n        # exit-zero treats all errors as warnings. The GitHub editor is 127 chars wide\n        flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics\n    - name: Test with pytest and calculate coverage\n      run: |\n        pytest --cov-report \"xml:coverage.xml\"  --cov=.\n    - name: Create Coverage \n      if: ${{ github.event_name == 'pull_request' }}\n      uses: orgoro/coverage@v3.1\n      with:\n          coverageFile: coverage.xml\n          token: ${{ secrets.GITHUB_TOKEN }}\n\n\n\n\n\nMATLAB has multiple pre-defined GitHub Actions available to use in your workflows.\n\n\n\n\n\n\n MATLAB testing\n\n\n\n\n\nname: Generate Test and Coverage Artifacts\non:\n  push:\n    branches: [ \"main\", \"develop\" ]\n  pull_request:\n    branches: [ \"main\", \"develop\" ]\n  workflow_dispatch:\n \njobs:\n  test:\n    name: Run MATLAB Tests\n    runs-on: ubuntu-latest\n    steps:\n      - name: Check out repository\n        uses: actions/checkout@v4\n      - name: Set up MATLAB\n        uses: matlab-actions/setup-matlab@v2\n        with:\n          release: R2024a\n      - name: Run tests\n        uses: matlab-actions/run-tests@v2\n        with:\n          source-folder: src\n          test-results-junit: test-results/results.xml\n          code-coverage-cobertura: code-coverage/coverage.xml\n      - name: Upload coverage reports to Codecov\n        uses: codecov/codecov-action@v4\n        with:\n          file: code-coverage/coverage.xml\n          token: ${{ secrets.CODECOV_TOKEN }}\n\n\n\nThis workflow uses Codecov to analyse the coverage report (free service for public repositories).\n⮕ Learn more about Codecov\n\n\n\n\n\nAutomating documentation generation\nGitHub Pages is a static site hosting service that takes HTML, CSS, and JavaScript files straight from a repository on GitHub, optionally runs the files through a build process, and publishes a website.\nIn order to deploy the documentation generated by the workflow below, you need to navigate to Settings -&gt; Pages in your repository and set:\n\nSource: “Deploy from a branch”\nBranch: gh-pages from root\n\nIt is a best practice to only deploy new documentation to the gh-pages branch upon a Pull Request to the main branch. This avoids mismatches between the available source code and the documentation.\n\n\n\n\n\n\n Sphinx building with gh-pages from branch\n\n\n\n\n\nname: Sphinx documentation\n\non: [push, pull_request, workflow_dispatch]\n\npermissions:\n  contents: write\n\njobs:\n  docs:\n    runs-on: ubuntu-latest\n    steps:\n      - uses: actions/checkout@v4\n      - uses: actions/setup-python@v5\n        with:\n          python-version: '3.12'\n      - name: Install dependencies\n        run: |\n          pip install -r docs/requirements.txt\n      - name: Sphinx build\n        run: |\n          sphinx-build docs/ docs/_build/\n      - name: Deploy to GitHub Pages\n        uses: peaceiris/actions-gh-pages@v4\n        if: ${{ github.event_name == 'push' && github.ref == 'refs/heads/main' }}\n        with:\n          publish_branch: gh-pages\n          github_token: ${{ secrets.GITHUB_TOKEN }}\n          publish_dir: docs/_build/\n          force_orphan: true\n\n\n\n\n\n\n\n\n\n Customizing the workflow\n\n\n\nThis example assumes you have a separate requirements.txt in the /docs folder. Update the location of the requirements.txt if you store the Sphinx dependencies in the root.\n\n\n\n\n\n\n\n\n Warning\n\n\n\n\nWith the GitHub Free plan, Pages cannot be deployed from a private repository.\nGitHub Pages sites are publicly available on the internet, even if the repository for the site is private.\n\n\n\n\n\nWorkflows for building Python packages\nYou can automate publishing a new version of your Python package with a GitHub Action. Notice that in the workflow below, the trigger is the creation of a new release on GitHub.\n\n\n\n\n\n\n Building a Python package\n\n\n\n\n\nname: Upload Python Package\n\non:\n  release:\n    types: [published]\n\njobs:\n  deploy:\n    runs-on: ubuntu-latest\n    steps:\n      - uses: actions/checkout@v4\n      - name: Set up Python\n        uses: actions/setup-python@v5\n        with:\n          python-version: '3.12'\n      - name: Install dependencies\n        run: |\n          python -m pip install --upgrade pip\n          pip install build\n      - name: Build package\n        run: python -m build\n      - name: Publish package\n        uses: pypa/gh-action-pypi-publish@release/v1\n        with:\n          password: ${{ secrets.PYPI_API_TOKEN }}\n\n\n\nThis action should only run after all other workflows (such as testing and building) have passed.\n\n\nAdditional concepts\n\n\nVariables and secrets\nSecrets are variables that you create in an organization, repository, or repository environment. The secrets that you create are available to use in GitHub Actions workflows. GitHub Actions can only read a secret if you explicitly include the secret in a workflow.\n⮕ More information on using secrets in GitHub Actions.\n\n\nMatrix strategy\nA matrix strategy lets you use variables in a single job definition to automatically create multiple job runs that are based on the combinations of the variables. For example, you can use a matrix strategy to test your code in multiple versions of a language or on multiple operating systems.\nA job will run for each possible combination of the variables. In the example below, the workflow will run 12 jobs, one for each combination of the os and python-version variables.\njobs:\n  example_matrix:\n    strategy:\n      matrix:\n        os: [ubuntu-latest, windows-latest, macos-latest]\n        python-version: ['3.10', '3.11', '3.12', '3.13']       \n    runs-on: ${{ matrix.os }}\n    steps:\n      - uses: actions/checkout@v4\n      - uses: actions/setup-python@v5\n        with:\n          python-version: ${{ matrix.python-version }}\n⮕ More information on using a matrix for your jobs.\n\n\n\n\n\n\n Note\n\n\n\nIf you want deterministic runner environments, specify exact versions (e.g., macos-15) instead of latest, since the latest aliases will migrate over time.\n\n\n\n\nArtifacts\nArtifacts are files or sets of files that are produced during the execution of a workflow and need to be stored or shared between jobs in a workflow.\nTo upload an artifact, you typically add a step in your workflow:\nsteps:\n  - name: Upload build output\n    uses: actions/upload-artifact@v4\n    with:\n      name: build-output\n      path: &lt;path/to/build/output&gt;\nArtifacts can be downloaded in subsequent jobs of the same workflow run using the actions/download-artifact action. This is done with a step like:\nsteps:\n  - name: Download build output\n    uses: actions/download-artifact@v4\n    with:\n      name: build-output\n      path: &lt;path/to/download&gt;\nBy default, artifacts are retained for 90 days, but this can be configured per workflow or at the repository/organization level.\n\n\n\nGitLab pipelines\nAs previously mentioned in the Project management section, TU Delft has its own GitLab instance. However, it does not (yet) have preconfigured servers available to run GitLab pipelines, the equivalent of GitHub Actions.\nIn order to set up a pipeline, you will need to request a TU Delft Virtual Private Server and configure a GitLab runner there. The DCC has developed a step-by-step guide (see below), along with guidance on setting up a CI pipeline for a MATLAB environment.\n\n\n\n\n Continuous Integration with GitLab\nSet up CI/CD for your project in TU Delft GitLab.\n\nLearn more »\n\n\n\n Setting up a GitLab runner for MATLAB\nCreate a CI pipeline for a MATLAB environment in TU Delft GitLab.\n\nLearn more »\n\n\n\n\n\nSonar\nTo automate checking your code quality, you can also make use of a third-party service. SonarQube Cloud (previously known as SonarCloud) is a cloud-based code analysis service designed to detect coding issues in many different programming languages. The free plan allows you to analyze an unlimited number of public repositories. Private projects will not be importable on this plan.\n\nMake your repository public.\nLink your GitHub repository via their login page.\nFollow the instructions to set up the code analysis.\n\nYou can also integrate SonarQube Cloud code analysis in GitHub Actions. Typically, you would create a new workflow file, for example .github/workflows/sonar.yml, and configure triggers to your needs. You will need to set up a token in GitHub Secrets and configure what needs to be analyzed in sonar-project.properties.\n\n\n\n\n\n\n Example of SonarQube Cloud GitHub Action\n\n\n\n\n\nname: SonarQube Cloud Workflow\non:\n  push:\n    branches:\n      - main\n  pull_request:\n      types: [opened, synchronize, reopened]\n\njobs:\n  sonarqube:\n    name: SonarQube\n    runs-on: ubuntu-latest\n    steps:\n      - uses: actions/checkout@v3\n        with:\n          fetch-depth: 0  \n      - name: SonarQubeScan\n        uses: SonarSource/sonarqube-scan-action@v4\n        env: \n          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}\n\n\n\nThe basic usage step-by-step is described in their GitHub repository.\n\n\n\n\n\n\n Learn more\n\n\n\n\nPossible analysis parameters",
     "crumbs": [
       "<ins>Guides</ins>",
-      "![](/docs/img/gear.svg){height=1em style='filter: invert(0.5) sepia(1) saturate(5) hue-rotate(175deg)'} **Computing Infrastructure**",
-      "TU Delft GitLab"
+      "![](/docs/img/laptop-code-solid.svg){height=1em style='filter: invert(0.5) sepia(1) saturate(5) hue-rotate(175deg)'} **Research Software**",
+      "Automation"
     ]
   },
   {
-    "objectID": "docs/infrastructure/gitlab/gitlab_intro.html#github-or-tu-delft-gitlab",
-    "href": "docs/infrastructure/gitlab/gitlab_intro.html#github-or-tu-delft-gitlab",
-    "title": "TU Delft GitLab",
-    "section": "GitHub or TU Delft GitLab?",
-    "text": "GitHub or TU Delft GitLab?\nThe current instance of the TU Delft GitLab has a few limitations:\n\nHosting a website through pages is currently deactivated\nContinuous integration is not available by default. See our guide on setting this up.\nContainer registry has been disabled\n…\n\nThe free edition of GitLab has the following limitations:\n\nWiki is not available in a private repository\n…",
-    "crumbs": [
-      "<ins>Guides</ins>",
-      "![](/docs/img/gear.svg){height=1em style='filter: invert(0.5) sepia(1) saturate(5) hue-rotate(175deg)'} **Computing Infrastructure**",
-      "TU Delft GitLab"
-    ]
-  },
-  {
-    "objectID": "docs/infrastructure/gitlab/gitlab_docker.html",
-    "href": "docs/infrastructure/gitlab/gitlab_docker.html",
-    "title": "CI with Gitlab",
+    "objectID": "docs/resources/courses.html",
+    "href": "docs/resources/courses.html",
+    "title": "Courses and workshops",
     "section": "",
-    "text": "If you happen to be working with TU Delft GitLab instance and you want to implement DevOps or CI/CD pipelines, then you need to install a GitLab runner on your own. This should runner should be in a server, responding to changes such as commits or pull requests in your GitLab repository.",
-    "crumbs": [
-      "<ins>Guides</ins>",
-      "![](/docs/img/gear.svg){height=1em style='filter: invert(0.5) sepia(1) saturate(5) hue-rotate(175deg)'} **Computing Infrastructure**",
-      "TU Delft GitLab",
-      "Continuous Integration with GitLab"
-    ]
+    "text": "The TU Delft organises training for researchers on data management, research software development, and open science. For an overview of available courses, please visit the TU Delft Library website.\n\n\n\nThe Carpentries teaches foundational coding and data science skills to researchers worldwide.\n Software Carpentry Lesson  Data Carpentry Lesson\n\nCourses overview\n\n\n\n\nThe Delft Institute for Computational Science and Engineering offers courses on supercomputing through the Delft High Performance Computing Center.\n\nCourses overview\n\n\n\n\nCodeRefinery teaches good practices for writing and maintaining research software, focussed on open source software. Their lessons cover version control, testing, continuous integration, documentation, and more.\n\nUpcoming workshops\n\n\n\n\nThe Research Engineering and Infrastructure Team offers support on software engineering, data science, and high-performance computing. They offer courses on Rust for Research, Python best practices, and Working with a cluster.\n\nCourses overview\n\n\n\n\nThe TU Delft offers a variety of Massive Open Online Courses.\n Open Science  Automated Software Testing  AI, Data & Digitalization  Unix Tools\n\nMOOC overview"
   },
   {
-    "objectID": "docs/infrastructure/gitlab/gitlab_docker.html#background",
-    "href": "docs/infrastructure/gitlab/gitlab_docker.html#background",
-    "title": "CI with Gitlab",
+    "objectID": "docs/resources/courses.html#training-for-researchers-at-the-tu-delft",
+    "href": "docs/resources/courses.html#training-for-researchers-at-the-tu-delft",
+    "title": "Courses and workshops",
     "section": "",
-    "text": "If you happen to be working with TU Delft GitLab instance and you want to implement DevOps or CI/CD pipelines, then you need to install a GitLab runner on your own. This should runner should be in a server, responding to changes such as commits or pull requests in your GitLab repository.",
+    "text": "The TU Delft organises training for researchers on data management, research software development, and open science. For an overview of available courses, please visit the TU Delft Library website.\n\n\n\nThe Carpentries teaches foundational coding and data science skills to researchers worldwide.\n Software Carpentry Lesson  Data Carpentry Lesson\n\nCourses overview\n\n\n\n\nThe Delft Institute for Computational Science and Engineering offers courses on supercomputing through the Delft High Performance Computing Center.\n\nCourses overview\n\n\n\n\nCodeRefinery teaches good practices for writing and maintaining research software, focussed on open source software. Their lessons cover version control, testing, continuous integration, documentation, and more.\n\nUpcoming workshops\n\n\n\n\nThe Research Engineering and Infrastructure Team offers support on software engineering, data science, and high-performance computing. They offer courses on Rust for Research, Python best practices, and Working with a cluster.\n\nCourses overview\n\n\n\n\nThe TU Delft offers a variety of Massive Open Online Courses.\n Open Science  Automated Software Testing  AI, Data & Digitalization  Unix Tools\n\nMOOC overview"
+  },
+  {
+    "objectID": "docs/resources/courses.html#external-training-opportunities",
+    "href": "docs/resources/courses.html#external-training-opportunities",
+    "title": "Courses and workshops",
+    "section": "External training opportunities",
+    "text": "External training opportunities\n\n\n\nThe eScience Center offers regular workshops on good practices for research software development and on intermediate-level topics such as GPU programming, Deep Learning, and Image Processing. Check out the overview of the training materials.\n\nUpcoming workshops\n\n\n\n\nSURF is the IT cooperative of Dutch education and research institutions and offers various workshops on using the supercomputers and storage solutions.\n\nUpcoming events\n\n\n\n\nThe Software Sustainability Institute in the UK provides training and resources to improve the quality of research software.\n\nTraining Hub\n\n\n\n\nTaxila provides an overview of training, learning, and teaching materials for trainers and trainees in the Netherlands.\n\nUpcoming workshops"
+  },
+  {
+    "objectID": "docs/resources/courses.html#community-training-opportunities",
+    "href": "docs/resources/courses.html#community-training-opportunities",
+    "title": "Courses and workshops",
+    "section": "Community training opportunities",
+    "text": "Community training opportunities\n\n\n\nAre you learning R or looking for a friendly community to practice with? The R Café is a welcoming space for R users of all levels - from absolute beginners to experienced programmers.\n\nUpcoming events\n\n\n\n\n4TU.ResearchData offers training resources and community engagement to research and research-support professionals working to make their research data FAIR.\n\nUpcoming events"
+  },
+  {
+    "objectID": "docs/infrastructure/remote_servers.html",
+    "href": "docs/infrastructure/remote_servers.html",
+    "title": "Servers",
+    "section": "",
+    "text": "TU Delft offers its employees the use of physical or virtual servers. These servers are known as faculty managed servers and can be requested to conduct work related to a specific project within a faculty.\n\n\n\n\n\n\n Note\n\n\n\nIt is not possible to use the servers to set up services that are already provided by the ICT department.\n\n\n\nVirtual vs physical servers\nThere is a choice between virtual and physical servers. Virtual servers are provided free of charge and can be requested via TOPdesk. Physical servers can be requested by contacting the faculty’s IT manager, and any associated costs are paid by the purchasing department.\nIn most cases, a virtual server is the most suitable option. However, a physical server may be necessary when it is intended for use as a GPU or computing cluster.\n\n\nServer configuration\nWhen requesting a virtual server, users can choose from a range of predefined hardware and operating system configurations. The following operating systems are available: Windows Server 2019, Windows Server 2022, Red Hat Enterprise Linux (latest supported version), and Ubuntu (latest LTS version).\nIf additional capacity is needed, it can be requested via the ‘ICT malfunction’ or ‘Request ICT service’ forms in TOPdesk. This includes options such as increasing the number of processors, cores per processor, RAM, or disk storage.\nSome considerations:\n\nICT provides the server, operating system, and network access.\nUsers are granted administrator privileges, allowing them to install any required software, provided it complies with the conditions specified in the request form.\nAccess can be granted to both TU Delft members and external users.\nICT provides daily backups, restoration services, and virus scanning for Windows servers.\nICT ensures that the server operating system remains up to date (e.g., security patches), except for Linux systems.\n\n\n\n\n\n\n\n Tip\n\n\n\nDetailed information on managing the server, including network and firewall settings, is provided in the TOPdesk application form.\n\n\n\n\nExample use cases\n\nPerforming computational or data processing tasks that require a dedicated server environment.\nRunning an instance of a service or application, such as ABAQUS, COMSOL, or other specialized tools for a lab or research group.\nHosting a static website, a web application, or an API for a project.\nHosting databases, such as MySQL, PostgreSQL, MongoDB, or other database management systems.\nDeploying and managing TU Delft GitLab runners for CI/CD pipelines.\n\n\n\nRelevant links\n\nIntranet page for faculty managed servers\nTOPdesk form to request a new virtual server\nIntranet page for faculty IT managers",
     "crumbs": [
       "<ins>Guides</ins>",
       "![](/docs/img/gear.svg){height=1em style='filter: invert(0.5) sepia(1) saturate(5) hue-rotate(175deg)'} **Computing Infrastructure**",
-      "TU Delft GitLab",
-      "Continuous Integration with GitLab"
+      "Remote servers"
     ]
   },
   {
-    "objectID": "docs/infrastructure/gitlab/gitlab_docker.html#quick-overview-of-how-it-works",
-    "href": "docs/infrastructure/gitlab/gitlab_docker.html#quick-overview-of-how-it-works",
-    "title": "CI with Gitlab",
-    "section": "Quick overview of how it works",
-    "text": "Quick overview of how it works\nIn order to be ready to run CI/CD pipeline, a gitlab-runner Docker container is running on the server all the time. When a new commit is made in the GitLab repository, this triggers the CI/CD process to run a job (e.g., unit test) based on the pipeline defined in the .gitlab-ci.yml file in the repository. The container used to carry out the CI/CD tests is defined in the .gitlab-ci.yml file in the first line, and spawned from within the continuously running gitlab-runner container. In our example, we define image:python:3.12.3 so every time a commit is made in the repository, a new container based on the python:3.12.3 Docker image is started and used to run tests on the python scripts and generate artifacts as defined in the .gitlab-ci.yml file.",
-    "crumbs": [
-      "<ins>Guides</ins>",
-      "![](/docs/img/gear.svg){height=1em style='filter: invert(0.5) sepia(1) saturate(5) hue-rotate(175deg)'} **Computing Infrastructure**",
-      "TU Delft GitLab",
-      "Continuous Integration with GitLab"
-    ]
+    "objectID": "docs/infrastructure/giving_sudo_privilege.html",
+    "href": "docs/infrastructure/giving_sudo_privilege.html",
+    "title": "Giving sudo privilege to a user",
+    "section": "",
+    "text": "There are some tasks in Linux that requires superuser (sudo) permission. For instance editing the /etc/fstab file, rebooting the system, mounting a drive, viewing /etc/passwd file and many other tasks cannot be done without sudo privilege."
   },
   {
-    "objectID": "docs/infrastructure/gitlab/gitlab_docker.html#what-this-documentation-will-help-achieve",
-    "href": "docs/infrastructure/gitlab/gitlab_docker.html#what-this-documentation-will-help-achieve",
-    "title": "CI with Gitlab",
+    "objectID": "docs/infrastructure/giving_sudo_privilege.html#background",
+    "href": "docs/infrastructure/giving_sudo_privilege.html#background",
+    "title": "Giving sudo privilege to a user",
+    "section": "",
+    "text": "There are some tasks in Linux that requires superuser (sudo) permission. For instance editing the /etc/fstab file, rebooting the system, mounting a drive, viewing /etc/passwd file and many other tasks cannot be done without sudo privilege."
+  },
+  {
+    "objectID": "docs/infrastructure/giving_sudo_privilege.html#what-this-documentation-will-help-achieve",
+    "href": "docs/infrastructure/giving_sudo_privilege.html#what-this-documentation-will-help-achieve",
+    "title": "Giving sudo privilege to a user",
     "section": "What this documentation will help achieve",
-    "text": "What this documentation will help achieve\nThe documentation below will help you deploy GitLab runner in a Docker container on a server to automatically run CI/CD tests and store artifacts every time there is a new commit to a GitLab repository.",
-    "crumbs": [
-      "<ins>Guides</ins>",
-      "![](/docs/img/gear.svg){height=1em style='filter: invert(0.5) sepia(1) saturate(5) hue-rotate(175deg)'} **Computing Infrastructure**",
-      "TU Delft GitLab",
-      "Continuous Integration with GitLab"
-    ]
+    "text": "What this documentation will help achieve\nThis documentation helps you to give sudo privilege to a user."
   },
   {
-    "objectID": "docs/infrastructure/gitlab/gitlab_docker.html#prerequisites",
-    "href": "docs/infrastructure/gitlab/gitlab_docker.html#prerequisites",
-    "title": "CI with Gitlab",
+    "objectID": "docs/infrastructure/giving_sudo_privilege.html#prerequisites",
+    "href": "docs/infrastructure/giving_sudo_privilege.html#prerequisites",
+    "title": "Giving sudo privilege to a user",
     "section": "Prerequisites",
-    "text": "Prerequisites\nServer: This example uses a server to run the whole process. You can request a server from TU Delft ICT service following these directions here. It is useful to set this up on a server so that Docker can be running continuously, and be ready to run CI/CD tests whenever a new commit occurs in the repository.\nDocker: We use a Docker container to run the GitLab runner and initialise the CI/CD pipeline.\nGitlab runner: (from GitLab documentation) “Runners are the agents that run the CI/CD jobs that come from GitLab. When you register a runner, you are setting up communication between your GitLab instance and the machine where GitLab Runner is installed. Runners usually process jobs on the same machine where you installed GitLab Runner.” Link\nGitLab repository: A remote repository that can store your code and keeps track of your project development. You’re on one right now! :) If you haven’t already, you use your netID and password to login to TU Delft’s GitLab instance at gitlab.tudelft.nl and create a repository containing your project code.\nCI/CD pipeline: “A CI/CD pipeline automates your software delivery process. The pipeline builds code, runs tests (CI), and safely deploys a new version of the application (CD)”.",
-    "crumbs": [
-      "<ins>Guides</ins>",
-      "![](/docs/img/gear.svg){height=1em style='filter: invert(0.5) sepia(1) saturate(5) hue-rotate(175deg)'} **Computing Infrastructure**",
-      "TU Delft GitLab",
-      "Continuous Integration with GitLab"
-    ]
+    "text": "Prerequisites\n\nTU Delft netID\nBasic knowledge of Linux\nThose who grant sudo permission need to have sudo permission themselves."
   },
   {
-    "objectID": "docs/infrastructure/gitlab/gitlab_docker.html#toolssoftware",
-    "href": "docs/infrastructure/gitlab/gitlab_docker.html#toolssoftware",
-    "title": "CI with Gitlab",
+    "objectID": "docs/infrastructure/giving_sudo_privilege.html#toolssoftware",
+    "href": "docs/infrastructure/giving_sudo_privilege.html#toolssoftware",
+    "title": "Giving sudo privilege to a user",
     "section": "Tools/Software",
-    "text": "Tools/Software\n\nGitLab (TU Delft instance)\nDocker\ngitlab-runner Docker image",
-    "crumbs": [
-      "<ins>Guides</ins>",
-      "![](/docs/img/gear.svg){height=1em style='filter: invert(0.5) sepia(1) saturate(5) hue-rotate(175deg)'} **Computing Infrastructure**",
-      "TU Delft GitLab",
-      "Continuous Integration with GitLab"
-    ]
+    "text": "Tools/Software\n\nFor Windows users, you will need a programming and runtime environment like Cygwin or SSH client like PuTTY in order to access the VPS running Linux."
   },
   {
-    "objectID": "docs/infrastructure/gitlab/gitlab_docker.html#steps",
-    "href": "docs/infrastructure/gitlab/gitlab_docker.html#steps",
-    "title": "CI with Gitlab",
+    "objectID": "docs/infrastructure/giving_sudo_privilege.html#steps",
+    "href": "docs/infrastructure/giving_sudo_privilege.html#steps",
+    "title": "Giving sudo privilege to a user",
     "section": "Steps",
-    "text": "Steps\n\nRequest the server\nConnect to the server via ssh\nInstall Docker on the server\nPull in the gitlab-runner image\nCreate a unit test function stored as a file in the repository\nMake the .gitlab-ci.yml file\nSet up the GitLab runner\nDeploy the GitLab runner in a Docker container\nRegister the runner\nTest the CI/CD pipeline\n\n\nStep 1. Request server running Ubuntu\nIf you don’t have a VPS already, you can request one from TU Delft ICT. Instructions for requesting a server and storage from ICT can be found under Remote servers/Request a Virtual Private Server.\nWe recommend the following configuration for configuring a GitLab runner:\n\nBasic Configuration 4 (Ubuntu)\nNo additional ports need to be configured for deploying a GitLab runner with Docker.\nAdditional space if your Docker images are larger than ~10Gb.\n\n\n\nStep 2. Connect to the server via ssh\nThe email response from Sysadmin@TUDelft.nl confirming the successful deployment of your server should contain instructions to connect via ssh.\nThe default login procedure is to connect to the Bastion host (an intermediary server) and then to your server, so it is a two-step process. Please check your email for Steps A and B as described by ICT admin.\nYou can also connect to your server using Putty (Windows) or, on Mac/Linux, configure one-step access by storing ssh keys between your local machine and your server and designating an alias.\nWhen you are successfully connected, you should see in your terminal/command prompt something like this:\n\n\n\nStep 3. Install Docker on the server\nServers often do not come with Docker installed, so you may need to do it by yourself. To check whether Docker is installed, run docker --version. If you get an error message, you can install it using the following commands:\nsudo su (this will give you the root access) apt install docker.io\nNow, Docker is installed. You can check if it is installed successfully by again typing docker --version in the terminal. The result should show the version of Docker you just installed.\n\n\nStep 4. Pull the gitlab-runner Docker image\nIn order to run CI/CD jobs for your repository, you need to install GitLab Runner. GitLab Runner is an application that works with GitLab CI/CD to run jobs in a pipeline. Rather than install GitLab Runner directly on the server, we will run a lightweight version of it as a Docker container. To do so, we first need to pull the gitlab-runner Docker image by running:\ndocker pull gitlab/gitlab-runner\nYou can check whether it was successful by running docker images - you should see the gitlab/gitlab-runner image listed in the output.\n\n\nStep 5. Create a unit test function stored as a file in the repository\n\n\nStep 6. Set up the CI by configuration of the .gitlab-ci.yml file\nThis file in the root of your repository defines what CI/CD tests to run upon each new commit. It does this by prescribing what container to run, what scripts to run inside the container, and what things to store as artefacts.\nIn the first line of the file, you can write image: &lt;image_name&gt;:&lt;tag&gt; to indicate you want to run the runner in a Docker container container. &lt;image_name&gt; should be replaced by the name of the image you want to use to start a container and &lt;tag&gt; should be replaced by the tag of the image you want to use(image names can be found on DockerHub). Tag will be set to latest by default.\nImportant: The file must be named exactly .gitlab-ci.yml so it will be recognizable by GitLab runner. Below is an example .gitlab-ci.yml file.\n# This is a sample build configuration for Python.\n# Check our guides at https://confluence.atlassian.com/x/x4UWN for more examples.\n# Only use spaces to indent your .yml configuration.\n# -----\ntest:\n  # You can specify a custom docker image from Docker Hub as your build environment.\n  image: python:3.12.3\n  cache:\n    paths:\n      - .cache/pip\n      - venv/\n  script: # Modify the commands below to build your repository.\n    - pip install -r requirements.txt\n    - nosetests --with-coverage  --cover-html\n  artifacts:\n    paths:\n      - cover/\nTags can be added as a final section in your .gitlab-ci.yml file (they are optional, we didn’t enter any in this example). You then need to enter these tags exactly when registering the runner.\n\n\nStep 7. Setup the GitLab runner\n\nFollow the instructions here till step 7 to create a GitLab runner for your repository\nChoose ‘Linux’ under operating systems\nCopy the authentication token generated and keep it handy. It will be required in Step 9.\n\n\n\nStep 8. Deploy GitLab runner in a Docker container\ndocker run -d --name gitlab-runner --restart always \\\n-v /srv/gitlab-runner/config:/etc/gitlab-runner \\\n-v /var/run/docker.sock:/var/run/docker.sock \\\ngitlab/gitlab-runner:latest\non Mac OS, use /Users/Shared/ instead of /srv/\nCheck that gitlab-runner container is running using docker ps -a\n\n\nStep 9. Register the runner using authentication token\nRun the following command to register your runner and configure it to deploy in a Docker container on your server.\ndocker run --rm -it -v /srv/gitlab-runner/config:/etc/gitlab-runner gitlab/gitlab-runner register\non Mac OS, use /Users/Shared/ instead of /srv/\nIn response to this command you will be prompted to answer the following questions\n- GitLab URL: https://gitlab.tudelft.nl\n- gitlab-ci token: Paste the authentication token generated in Step 7.\n- Enter name of the runner: example-runner\n- Type of executor: docker\n- Default Docker image: Specify the same image as the one specified in the 'image' field of the .gitlab-ci.yml file.\nSee an example below.\ndocker run --rm -it -v /srv/gitlab-runner/config:/etc/gitlab-runner gitlab/gitlab-runner register\nEnter the GitLab instance URL (for example, https://gitlab.com/):\nhttps://gitlab.tudelft.nl\nEnter the registration token:\nxxxxxxxxxxxxxxx\nVerifying runner... is valid                        runner=xxxxxxx\nEnter a name for the runner. This is stored only in the local config.toml file:\n[xxxxxxx]: example-runner\nEnter an executor: instance, kubernetes, docker-windows, docker-autoscaler, parallels, shell, ssh, virtualbox, docker+machine, custom, docker:\ndocker\nEnter the default Docker image (for example, ruby:2.7):\njulia:1.6\nRunner registered successfully. Feel free to start it, but if it's running already the config should be automatically reloaded!\n\nConfiguration (with the authentication token) was saved in \"/etc/gitlab-runner/config.toml\"\n\n\nStep 10. Check that the CI/CD process is activated and your pipeline runs successfully\n\nIn your repository, navigate to Settings &gt; CI/CD &gt; Click on Expand under Runners: You should see that the runner is active as indicated by a green dot. This means that the CI pipeline is ready to run, but it needs to be triggered.\nIn order to trigger the CI pipeline, you should make a new commit to the GitLab repository.\nAfter you have made a new commit to the repository, navigate to Your Project -&gt; Build -&gt; Pipelines to check the status of CI/CD pipelines connected to your repository. If you find a green message that says “passed” with a check mark then congratulations, your pipeline works! If you see a red message that says “failed”, check to see the error message associated with it - sometimes you need to reconfigure your .gitlab-ci.yml file to make sure it uses the correct formatting and defines the tests appropriately.",
-    "crumbs": [
-      "<ins>Guides</ins>",
-      "![](/docs/img/gear.svg){height=1em style='filter: invert(0.5) sepia(1) saturate(5) hue-rotate(175deg)'} **Computing Infrastructure**",
-      "TU Delft GitLab",
-      "Continuous Integration with GitLab"
-    ]
+    "text": "Steps\n\nGetting the username(s) of sudo access candidates\nNavigating to the sudoers directory\nCreate an access file for each of the candidates\nEditing the access files\n\n\nStep 1. Getting the username(s) of sudo access candidates\nYou can get the usernames by checking the /etc/passwd file. This file contains all the usernames and their login information.\n\n\nStep 2. Navigating to the sudoers directory\nThe list of users who posses the sudo permission is in the /etc/sudoers.d/ folder, so navigate to that folder.\n\n\nStep 3. Create an access file for each of the candidates\nIf you use ls command to check the available files in this folder, you can see there are some files that their name start with a number and then a dash and then a user name (&lt;number&gt;-&lt;username&gt;). In Linux for every user with a sudo permission, there is a file like that, so we duplicate one of the existing files and rename them for each of the sudo candidates (in fact, name of those file doesn’t matter; however, it helps us to understand which users have sudo privilege without opening them).\n\n\nStep 4. Editing the access files\nIn this step you need to open each of the newly duplicated files and replace the old username in the second line with the sudo candidate username. After the edit, you just save the changes and exit the file."
   },
   {
     "objectID": "docs/infrastructure/apache_webserver.html",
@@ -2363,203 +2177,260 @@
     ]
   },
   {
-    "objectID": "docs/infrastructure/gitlab/gitlab_groups.html",
-    "href": "docs/infrastructure/gitlab/gitlab_groups.html",
-    "title": "Creating GitLab groups",
+    "objectID": "docs/infrastructure/moving_data.html",
+    "href": "docs/infrastructure/moving_data.html",
+    "title": "Moving data to remote servers",
     "section": "",
-    "text": "Groups and subgroups are similar to directories in the operating systems. In windows or Mac, we create directories to organise files or other directories. For example, imagine a scenario where you want to keep your photos in an organised manner. To this end, you may organise your photos on multiple levels. In the first level, perhaps you broadly classify them and then in the next levels you narrow it down to more specific subjects. Similarly, in the GitLab, a group is used as a binder to put together projects or even other groups. For example, if three themes are researched in a lab, each of those themes could be a group, and all the research in a certain theme fall into its corresponding group. Sometimes there are also sub-themes. For every sub-theme you can create a subgroup (within the group corresponding to the broader theme) and assign the research close to the sub-theme there.",
+    "text": "This section describes how to transfer data to and from a TU Delft virtual server. The procedure is different depending on whether the server runs a Windows or Linux-based operating system. Although there are many ways to transfer data from one machine to another, TU Delft servers only support a few of them.",
     "crumbs": [
       "<ins>Guides</ins>",
       "![](/docs/img/gear.svg){height=1em style='filter: invert(0.5) sepia(1) saturate(5) hue-rotate(175deg)'} **Computing Infrastructure**",
-      "TU Delft GitLab",
-      "Creating GitLab groups"
+      "Remote servers",
+      "Moving data to remote servers"
     ]
   },
   {
-    "objectID": "docs/infrastructure/gitlab/gitlab_groups.html#background",
-    "href": "docs/infrastructure/gitlab/gitlab_groups.html#background",
-    "title": "Creating GitLab groups",
-    "section": "",
-    "text": "Groups and subgroups are similar to directories in the operating systems. In windows or Mac, we create directories to organise files or other directories. For example, imagine a scenario where you want to keep your photos in an organised manner. To this end, you may organise your photos on multiple levels. In the first level, perhaps you broadly classify them and then in the next levels you narrow it down to more specific subjects. Similarly, in the GitLab, a group is used as a binder to put together projects or even other groups. For example, if three themes are researched in a lab, each of those themes could be a group, and all the research in a certain theme fall into its corresponding group. Sometimes there are also sub-themes. For every sub-theme you can create a subgroup (within the group corresponding to the broader theme) and assign the research close to the sub-theme there.",
+    "objectID": "docs/infrastructure/moving_data.html#linux-servers",
+    "href": "docs/infrastructure/moving_data.html#linux-servers",
+    "title": "Moving data to remote servers",
+    "section": "Linux servers",
+    "text": "Linux servers\nThe scp command is a secure file transfer utility that allows you to copy files between Linux-based hosts (this includes macOS) on a network. It uses SSH for data transfer, providing the same authentication and security as SSH. Common scenarios in which you might need to transfer data between hosts include uploading scripts, downloading results, or transferring configuration files.\n\n\n\n\n\n\n Moving large data batches\n\n\n\nIf you need to transfer large files or a multitude of small files, consider using tools like rclone or rsync instead. The instructions below are for transferring small files or a few files at a time.\n\n\n\n\n\n\n\n\n Overwriting files\n\n\n\nNotice that scp will overwrite files in the destination directory without prompting if they already exist. Always double-check the paths and filenames to avoid accidental data loss.\n\n\n\nPrerequisites\nBefore starting, you need:\n\nSCP (Secure Copy Protocol) installed on your local machine. SCP is a command-line utility that allows you to securely transfer files between hosts on a network.\nSSH access to the remote host (e.g., VPS) you want to connect to.\n\n\n\nMoving data via SCP\nTo copy data to and from a remote host using the scp command, you can use the following syntax:\n# Copy TO Remote Host\nscp &lt;path-my-local-file&gt; &lt;target-username&gt;@&lt;remote-host&gt;:&lt;full-path/remote-directory&gt;/\n# Copy FROM Remote Host\nscp &lt;target-username&gt;@&lt;remote-host&gt;:&lt;full-path/my-remote-file&gt; &lt;path-my-local-directory&gt;/\n\n\n\n\n\n\n Moving files to restricted directories\n\n\n\nSome directories on the remote host may require elevated permissions to write files. If you encounter a “Permission denied” error, you may need to use sudo to copy files to those directories. However, using scp with sudo directly is not supported. Instead, you can copy the file to a temporary directory /tmp where you have write access and then move it to the desired location using sudo after connecting to the remote host.\n\n\n\n\nTransferring files using ProxyJump\nIn the case of a VPS hosted by TU Delft, you need to copy data to a remote host via a bastion host (an intermediary server). Therefore, you must use the -o option of scp to specify a ProxyJump that will connect to the bastion host first. Alternatively, you can choose to transfer files using SSH tunneling.\n\nTransfer to remote host\n# If using default SSH key name, for example, id_ed25519 or id_rsa\nscp -o \"ProxyJump &lt;bastion-username&gt;@linux-bastion-ex.tudelft.nl\" &lt;path-my-local-file&gt; \\ \n&lt;target-username&gt;@&lt;remote-host&gt;:&lt;full-path/remote-directory&gt;/\n\n# If using a custom SSH key name, for example, my_custom_key\nscp  -i &lt;path-to-custom-private-ssh-key&gt; -o \"ProxyJump &lt;bastion-username&gt;@linux-bastion-ex.tudelft.nl\" \\ \n&lt;path-my-local-file&gt;  &lt;target-username&gt;@&lt;remote-host&gt;:&lt;full-path-remote-directory&gt;/\n\n\nTransfer from remote host\n# If using default SSH key name, for example, id_ed25519 or id_rsa\nscp -o \"ProxyJump &lt;bastion-username&gt;@linux-bastion-ex.tudelft.nl\" \\ \n&lt;target-username&gt;@&lt;remote-host&gt;:&lt;full-path-remote-file&gt;/ &lt;path-my-local-directory&gt;/\n\n# If using a custom SSH key name, for example, my_custom_key\nscp -i &lt;path-to-custom-private-ssh-key&gt; -o \"ProxyJump &lt;bastion-username&gt;@linux-bastion-ex.tudelft.nl\" \\\n&lt;target-username&gt;@&lt;remote-host&gt;:&lt;full-path-remote-file&gt;/ &lt;path-my-local-directory&gt;/\n\n\n\nTransferring files using SSH tunneling\nIf SSH tunneling has been configured correctly for the remote host, you can copy files to and from a remote host as follows:\n# Copy TO remote host\n$ &lt;path-my-local-file&gt; &lt;host-nickname&gt;:&lt;full-path-remote-directory&gt;/\n# Copy FROM remote host\n$ scp &lt;host-nickname&gt;:&lt;full-path-remote-file&gt;/ &lt;path-my-local-directory&gt;/",
     "crumbs": [
       "<ins>Guides</ins>",
       "![](/docs/img/gear.svg){height=1em style='filter: invert(0.5) sepia(1) saturate(5) hue-rotate(175deg)'} **Computing Infrastructure**",
-      "TU Delft GitLab",
-      "Creating GitLab groups"
+      "Remote servers",
+      "Moving data to remote servers"
     ]
   },
   {
-    "objectID": "docs/infrastructure/gitlab/gitlab_groups.html#what-this-documentation-will-help-achieve",
-    "href": "docs/infrastructure/gitlab/gitlab_groups.html#what-this-documentation-will-help-achieve",
-    "title": "Creating GitLab groups",
+    "objectID": "docs/infrastructure/moving_data.html#windows-servers",
+    "href": "docs/infrastructure/moving_data.html#windows-servers",
+    "title": "Moving data to remote servers",
+    "section": "Windows servers",
+    "text": "Windows servers\nTransferring data to and from a TU Delft Windows server is done via the Citrix platform, using the app’s built-in menu shown in the image below.\n\n\n\nCitrix Menu. Buttons from left to right: Download, Upload, Multimonitor, Clipboard, and Settings.\n\n\n\nTransferring files\n\nOpen a web browser and log into your Windows server as usual via the Citrix portal.\nOpen the Citrix menu located at the center-top of the server window and click on the Upload or Download button, as shown in the image above.\nA pop-up window will open on where you can select the files you wish to transfer to the server.\n\nIt is not possible to directly transfer files to or from the server’s C: or D: drives. Instead, you upload or download files to your personal TU Delft drive which is connected to the server. Using the Windows File Explorer and standard copy/paste or drag-and-drop operations, you can transfer the data from your personal drive to the server’s C: or D: drives.\n\n\n\n\n\n\n Warning\n\n\n\nTU Delft Windows servers have a limited amount of disk space in the C: drive. ICT instructs users to install applications and store data in the D: drive of the server to avoid running out of memory. Alternatively, you can use your personal TU Delft drive, which is also connected to the server. More information can be found at the bottom of the TOPdesk form to request a new VPS.\n\n\n\n\nUsing the clipboard\nTU Delft Windows servers do not allow to directly copy or paste text from the clipboard. Instead, you must use Citrix’s clipboard functionality. To do so, open the Citrix’s menu located at the center-top of the window and click on the Clipboard button. A pop-up window will open on which you can copy or paste the text you wish to transfer. Note that it is only possible to transfer text via the clipboard; images or files are not supported.",
+    "crumbs": [
+      "<ins>Guides</ins>",
+      "![](/docs/img/gear.svg){height=1em style='filter: invert(0.5) sepia(1) saturate(5) hue-rotate(175deg)'} **Computing Infrastructure**",
+      "Remote servers",
+      "Moving data to remote servers"
+    ]
+  },
+  {
+    "objectID": "docs/listing.html",
+    "href": "docs/listing.html",
+    "title": "References",
+    "section": "",
+    "text": "🚧 Under construction! 🏗️"
+  },
+  {
+    "objectID": "docs/resources/curriculum.html",
+    "href": "docs/resources/curriculum.html",
+    "title": "Research Software Curriculum",
+    "section": "",
+    "text": "These materials represent a curated curriculum designed to help you develop and maintain your repository and code base. All of the resources listed below are free to access and use, and supplementary material like video lessons has been added where possible and relevant.\n\n\n\nWhat is Bash? - of all the shells available, Bash is one of the most popular, the most powerful, and the most friendly\nBash Essentials – Bash commands commonly used to navigate file directories in your Terminal/GitBash\nThe Unix Shell lesson from Software Carpentries - use of the shell is fundamental to using a wide range of other powerful tools and computing resources. These lessons will start you on a path towards using these resources effectively\nInstallation Instructions - particularly important for Windows users, as Bash comes pre-installed on Mac. Windows users will need to install GitBash following the instructions at this link\nUsing the Terminal in Mac - The Terminal app allows you to control your Mac using a command prompt\n\n\n\n\n\nWhat is Git?- 2-minute video overview of the technology and how it works\nInstall Git from GitHub Guides - Check if Git is already installed on your machine; if not, follow these instructions to get started. Notes: If you’ve already installed GitBash on Windows OS, you will have Git already. Installing GitHub Desktop will also install the latest version of Git if you don’t already have it.\nInstalling Git from Software Carpentries - Alternative installation instructions from Software Carpentries, including videos and details per OS.\nIntro to version control with Git from Code Refinery – self-paced introductory lesson to version control using Git\nGit Intro video lesson from Code Refinery - Day 1 - Recorded lesson from a May 2021 Code Refinery workshop on material in Intro to version control with Git, part 1/2\nGit Intro video lesson from Code Refinery - Day 2 - Recorded lesson from a May 2021 Code Refinery workshop on material in Intro to version control with Git, part 2/2\nBranching and merging – lesson from Code Refinery on concept of branching in Git (featuring octopus diagram)\nWhat is .gitignore? – introduction to how and why to use the .gitignore file to not track some files in a project folder (e.g., because of their size or sensitivity)\nGit command cheat sheet – commonly used Git commands in one page that can also be downloaded\n\n\n\n\n\nUnderstanding the GitHub flow – guide from GitHub on how and why to work with branches\nCollaborative distributed version control - We have learned how to make a git repository for a single person. What about sharing?\nSSH connection to GitHub – instructions to set up SSH connection to GitHub so that you do not need to input your login credentials with every push/pull\nGitlab and SSH keys - instructions to add an SSH key to your (TU Delft) GitLab account for the same reason as above\nGitHub without the Command Line from Code Refinery - practice collaborating and sharing using either the GitHub website or GitHub desktop application\nGitHub Guides: Mastering Markdown - Markdown is a lightweight and easy-to-use syntax for styling all forms of writing on the GitHub platform.\n\n\n\n\n\nIntroduction to Jupyter and JupyterLab - lesson material on the user interface of JupyterLab, how Jupyter notebooks work, and what some common and powerful usecases are\n\n\n\n\n\nAnaconda Installation Guide from Software Carpentries - Although one can install a plain-vanilla Python and all required libraries by hand, we recommend installing Anaconda, a Python distribution that comes with the latest version of Python and Jupyter Notebooks by default\nIntro to Anaconda Navigator - Anaconda Navigator is a graphical user interface to the conda package and environment manager. This 10-minute guide to Navigator will have you navigating the powerful conda program in a web-like interface without having to learn command line commands\nIntroduction to Conda for (Data) Scientists - Conda is an open source package and environment management system that easily creates, saves, loads, and switches between environments on your local computer\nManaging Conda environments - documentation on performing a range of common tasks with Conda using the command line\n\n\n\n\n\nScientific Computing with Python - a free video course series that teaches the basics of using Python 3\nApplied Data Science with Python Specialization - Coursera course in which you can enroll for free\nLearnPython.org - Whether you are an experienced programmer or not, this website is intended for everyone who wishes to learn the Python programming language\nProgramming with Python from Software Carpentries - this introduction to Python is built around a common scientific task: data analysis\nPlotting and Programming with Python from Software Carpentries - an introduction to programming in Python for people with little or no previous programming experience using plotting as its motivating example\nData Analysis and Visualization with Python for Social Scientists - basic information about Python syntax, the Jupyter notebook interface, how to import CSV files, using the pandas package to work with data frames, how to calculate summary information from a data frame, and a brief introduction to plotting. The last lesson demonstrates how to work with databases directly from Python\nCan You Speak Python? - test your knowledge of some important features of the Python programming language and the NumPy and Pandas libraries\n\n\n\n\n\nGetting started with Pandas - documentation and quick start guide for Pandas, an essential Python library used for working with data sets. It has functions for analyzing, cleaning, exploring, and manipulating data\nPandas Tutorial - 14-part tutorial series featuring live code examples and tests of your knowledge\nPandas Data Wrangling Cheat Sheet - a cheat sheet of some of the most used syntax that you probably don’t want to miss\nPandas Cheat Sheet - Visual - visual, printable 2-page reference guide on commonly performed operations using Pandas\nUltimate Pandas Guide — Inspecting Data Like a Pro - Whether you’re working on a simple analysis or a complex machine learning model, there’s a lot of value in being able to answer quick, exploratory questions about the nature of your data. This is a walk through of several DataFrame attributes and methods that make data inspection painless and productive\n10 Efficient Ways for Inspecting a Pandas DataFrame Object - A guide to using pandas effectively and efficiently\n\n\n\n\n\nGetting Started with Plotly - The plotly Python library is an interactive, open-source plotting library that supports over 40 unique chart types covering a wide range of statistical, financial, geographic, scientific, and 3-dimensional use-cases\nPlotly Python Open Source Graphing Library - Examples of how to make line plots, scatter plots, area charts, bar charts, error bars, box plots, histograms, heatmaps, subplots, multiple-axes, polar charts, and bubble charts\nHeatmaps with Plotly - How to make Heatmaps in Python with Plotly\n\n\n\n\n\nIpywidgets documentation - ipywidgets, also known as jupyter-widgets or simply widgets, are interactive HTML widgets for Jupyter notebooks and the IPython kernel.\nIntroduction to ipywidgets - in this tutorial video, learn about ipywidgets, a Python library for building interactive HTML widgets for your Jupyter browser.\nIpywidgets Interact Function | ipywidgets Examples of Slider, Dropdown, Checkbox, Text Box - Video demo on how to make an ipywidgets slider, ipywidgets dropdown, ipywidgets checkbox, or an ipywidgets text box using Python code.\n\n\n\n\n\nInstall R guide from Software Carpentries - R is a programming language that is especially powerful for data exploration, visualization, and statistical analysis. To interact with R, we use RStudio, which must also be installed separately from here\nProgramming with R from Software Carpentries - this introduction to R is built around a common scientific task: data analysis\nR for Reproducible Data Analysis from Software Carpentries - write modular code and best practices for using R for data analysis\nR for Social Scientists - basic information about R syntax, the RStudio interface, how to import CSV files, the structure of data frames, how to deal with factors, how to add/remove rows and columns, how to calculate summary statistics from a data frame, and a brief introduction to plotting\n\n\n\n\n\nUsing git with MATLAB - Introduction into using MATLAB and version control with git\nProgramming with MATLAB - Lesson from the Software Carpentries on the basics of programming with MATLAB\n\n\n\n\n\nWriting tests - lesson from CodeRefinery on automated testing\nVideo testing lesson - recording from software testing workshop by Code Refinery\nModular coding - modular code development from Code Refinery\n\n\n\n\n\nInstalling Docker - installation instructions for Windows, macOS, and Linux\nInstall WSL2 update - manual WSL2 update for Windows\nDockerfile reference - information on how to write a Dockerfile\n\n\n\n\n\nSetting up VSCode for Linux - guide to getting started using VSCode with Windows Subsystem for Linux\n\n\n\n\n\nGitHub Actions introduction course - an introductory course from GitHub on how to use GitHub Actions\n\n\n\n\n\nReproducible Research material from Code Refinery - demonstrates how version control, workflows, containers, and package managers can be used to record reproducible environments and computational steps\nReproducible Research video lesson from Code Refinery - Recorded video lesson from Code Refinery workshop in May 2021 on Reproducible Research material\nData + Code + Software = PDF - Slides to an overview on how to integrate data and software into a PDF."
+  },
+  {
+    "objectID": "docs/resources/curriculum.html#bash",
+    "href": "docs/resources/curriculum.html#bash",
+    "title": "Research Software Curriculum",
+    "section": "",
+    "text": "What is Bash? - of all the shells available, Bash is one of the most popular, the most powerful, and the most friendly\nBash Essentials – Bash commands commonly used to navigate file directories in your Terminal/GitBash\nThe Unix Shell lesson from Software Carpentries - use of the shell is fundamental to using a wide range of other powerful tools and computing resources. These lessons will start you on a path towards using these resources effectively\nInstallation Instructions - particularly important for Windows users, as Bash comes pre-installed on Mac. Windows users will need to install GitBash following the instructions at this link\nUsing the Terminal in Mac - The Terminal app allows you to control your Mac using a command prompt"
+  },
+  {
+    "objectID": "docs/resources/curriculum.html#git",
+    "href": "docs/resources/curriculum.html#git",
+    "title": "Research Software Curriculum",
+    "section": "",
+    "text": "What is Git?- 2-minute video overview of the technology and how it works\nInstall Git from GitHub Guides - Check if Git is already installed on your machine; if not, follow these instructions to get started. Notes: If you’ve already installed GitBash on Windows OS, you will have Git already. Installing GitHub Desktop will also install the latest version of Git if you don’t already have it.\nInstalling Git from Software Carpentries - Alternative installation instructions from Software Carpentries, including videos and details per OS.\nIntro to version control with Git from Code Refinery – self-paced introductory lesson to version control using Git\nGit Intro video lesson from Code Refinery - Day 1 - Recorded lesson from a May 2021 Code Refinery workshop on material in Intro to version control with Git, part 1/2\nGit Intro video lesson from Code Refinery - Day 2 - Recorded lesson from a May 2021 Code Refinery workshop on material in Intro to version control with Git, part 2/2\nBranching and merging – lesson from Code Refinery on concept of branching in Git (featuring octopus diagram)\nWhat is .gitignore? – introduction to how and why to use the .gitignore file to not track some files in a project folder (e.g., because of their size or sensitivity)\nGit command cheat sheet – commonly used Git commands in one page that can also be downloaded"
+  },
+  {
+    "objectID": "docs/resources/curriculum.html#githubgitlab-remote-repositories",
+    "href": "docs/resources/curriculum.html#githubgitlab-remote-repositories",
+    "title": "Research Software Curriculum",
+    "section": "",
+    "text": "Understanding the GitHub flow – guide from GitHub on how and why to work with branches\nCollaborative distributed version control - We have learned how to make a git repository for a single person. What about sharing?\nSSH connection to GitHub – instructions to set up SSH connection to GitHub so that you do not need to input your login credentials with every push/pull\nGitlab and SSH keys - instructions to add an SSH key to your (TU Delft) GitLab account for the same reason as above\nGitHub without the Command Line from Code Refinery - practice collaborating and sharing using either the GitHub website or GitHub desktop application\nGitHub Guides: Mastering Markdown - Markdown is a lightweight and easy-to-use syntax for styling all forms of writing on the GitHub platform."
+  },
+  {
+    "objectID": "docs/resources/curriculum.html#jupyter-notebooks-and-jupyterlab",
+    "href": "docs/resources/curriculum.html#jupyter-notebooks-and-jupyterlab",
+    "title": "Research Software Curriculum",
+    "section": "",
+    "text": "Introduction to Jupyter and JupyterLab - lesson material on the user interface of JupyterLab, how Jupyter notebooks work, and what some common and powerful usecases are"
+  },
+  {
+    "objectID": "docs/resources/curriculum.html#anaconda-navigator-and-managing-conda-environments",
+    "href": "docs/resources/curriculum.html#anaconda-navigator-and-managing-conda-environments",
+    "title": "Research Software Curriculum",
+    "section": "",
+    "text": "Anaconda Installation Guide from Software Carpentries - Although one can install a plain-vanilla Python and all required libraries by hand, we recommend installing Anaconda, a Python distribution that comes with the latest version of Python and Jupyter Notebooks by default\nIntro to Anaconda Navigator - Anaconda Navigator is a graphical user interface to the conda package and environment manager. This 10-minute guide to Navigator will have you navigating the powerful conda program in a web-like interface without having to learn command line commands\nIntroduction to Conda for (Data) Scientists - Conda is an open source package and environment management system that easily creates, saves, loads, and switches between environments on your local computer\nManaging Conda environments - documentation on performing a range of common tasks with Conda using the command line"
+  },
+  {
+    "objectID": "docs/resources/curriculum.html#python",
+    "href": "docs/resources/curriculum.html#python",
+    "title": "Research Software Curriculum",
+    "section": "",
+    "text": "Scientific Computing with Python - a free video course series that teaches the basics of using Python 3\nApplied Data Science with Python Specialization - Coursera course in which you can enroll for free\nLearnPython.org - Whether you are an experienced programmer or not, this website is intended for everyone who wishes to learn the Python programming language\nProgramming with Python from Software Carpentries - this introduction to Python is built around a common scientific task: data analysis\nPlotting and Programming with Python from Software Carpentries - an introduction to programming in Python for people with little or no previous programming experience using plotting as its motivating example\nData Analysis and Visualization with Python for Social Scientists - basic information about Python syntax, the Jupyter notebook interface, how to import CSV files, using the pandas package to work with data frames, how to calculate summary information from a data frame, and a brief introduction to plotting. The last lesson demonstrates how to work with databases directly from Python\nCan You Speak Python? - test your knowledge of some important features of the Python programming language and the NumPy and Pandas libraries"
+  },
+  {
+    "objectID": "docs/resources/curriculum.html#pandas",
+    "href": "docs/resources/curriculum.html#pandas",
+    "title": "Research Software Curriculum",
+    "section": "",
+    "text": "Getting started with Pandas - documentation and quick start guide for Pandas, an essential Python library used for working with data sets. It has functions for analyzing, cleaning, exploring, and manipulating data\nPandas Tutorial - 14-part tutorial series featuring live code examples and tests of your knowledge\nPandas Data Wrangling Cheat Sheet - a cheat sheet of some of the most used syntax that you probably don’t want to miss\nPandas Cheat Sheet - Visual - visual, printable 2-page reference guide on commonly performed operations using Pandas\nUltimate Pandas Guide — Inspecting Data Like a Pro - Whether you’re working on a simple analysis or a complex machine learning model, there’s a lot of value in being able to answer quick, exploratory questions about the nature of your data. This is a walk through of several DataFrame attributes and methods that make data inspection painless and productive\n10 Efficient Ways for Inspecting a Pandas DataFrame Object - A guide to using pandas effectively and efficiently"
+  },
+  {
+    "objectID": "docs/resources/curriculum.html#plotly",
+    "href": "docs/resources/curriculum.html#plotly",
+    "title": "Research Software Curriculum",
+    "section": "",
+    "text": "Getting Started with Plotly - The plotly Python library is an interactive, open-source plotting library that supports over 40 unique chart types covering a wide range of statistical, financial, geographic, scientific, and 3-dimensional use-cases\nPlotly Python Open Source Graphing Library - Examples of how to make line plots, scatter plots, area charts, bar charts, error bars, box plots, histograms, heatmaps, subplots, multiple-axes, polar charts, and bubble charts\nHeatmaps with Plotly - How to make Heatmaps in Python with Plotly"
+  },
+  {
+    "objectID": "docs/resources/curriculum.html#ipywidgets",
+    "href": "docs/resources/curriculum.html#ipywidgets",
+    "title": "Research Software Curriculum",
+    "section": "",
+    "text": "Ipywidgets documentation - ipywidgets, also known as jupyter-widgets or simply widgets, are interactive HTML widgets for Jupyter notebooks and the IPython kernel.\nIntroduction to ipywidgets - in this tutorial video, learn about ipywidgets, a Python library for building interactive HTML widgets for your Jupyter browser.\nIpywidgets Interact Function | ipywidgets Examples of Slider, Dropdown, Checkbox, Text Box - Video demo on how to make an ipywidgets slider, ipywidgets dropdown, ipywidgets checkbox, or an ipywidgets text box using Python code."
+  },
+  {
+    "objectID": "docs/resources/curriculum.html#r",
+    "href": "docs/resources/curriculum.html#r",
+    "title": "Research Software Curriculum",
+    "section": "",
+    "text": "Install R guide from Software Carpentries - R is a programming language that is especially powerful for data exploration, visualization, and statistical analysis. To interact with R, we use RStudio, which must also be installed separately from here\nProgramming with R from Software Carpentries - this introduction to R is built around a common scientific task: data analysis\nR for Reproducible Data Analysis from Software Carpentries - write modular code and best practices for using R for data analysis\nR for Social Scientists - basic information about R syntax, the RStudio interface, how to import CSV files, the structure of data frames, how to deal with factors, how to add/remove rows and columns, how to calculate summary statistics from a data frame, and a brief introduction to plotting"
+  },
+  {
+    "objectID": "docs/resources/curriculum.html#matlab",
+    "href": "docs/resources/curriculum.html#matlab",
+    "title": "Research Software Curriculum",
+    "section": "",
+    "text": "Using git with MATLAB - Introduction into using MATLAB and version control with git\nProgramming with MATLAB - Lesson from the Software Carpentries on the basics of programming with MATLAB"
+  },
+  {
+    "objectID": "docs/resources/curriculum.html#modular-code-and-testing",
+    "href": "docs/resources/curriculum.html#modular-code-and-testing",
+    "title": "Research Software Curriculum",
+    "section": "",
+    "text": "Writing tests - lesson from CodeRefinery on automated testing\nVideo testing lesson - recording from software testing workshop by Code Refinery\nModular coding - modular code development from Code Refinery"
+  },
+  {
+    "objectID": "docs/resources/curriculum.html#docker",
+    "href": "docs/resources/curriculum.html#docker",
+    "title": "Research Software Curriculum",
+    "section": "",
+    "text": "Installing Docker - installation instructions for Windows, macOS, and Linux\nInstall WSL2 update - manual WSL2 update for Windows\nDockerfile reference - information on how to write a Dockerfile"
+  },
+  {
+    "objectID": "docs/resources/curriculum.html#vscode",
+    "href": "docs/resources/curriculum.html#vscode",
+    "title": "Research Software Curriculum",
+    "section": "",
+    "text": "Setting up VSCode for Linux - guide to getting started using VSCode with Windows Subsystem for Linux"
+  },
+  {
+    "objectID": "docs/resources/curriculum.html#continuous-integration",
+    "href": "docs/resources/curriculum.html#continuous-integration",
+    "title": "Research Software Curriculum",
+    "section": "",
+    "text": "GitHub Actions introduction course - an introductory course from GitHub on how to use GitHub Actions"
+  },
+  {
+    "objectID": "docs/resources/curriculum.html#reproducible-research",
+    "href": "docs/resources/curriculum.html#reproducible-research",
+    "title": "Research Software Curriculum",
+    "section": "",
+    "text": "Reproducible Research material from Code Refinery - demonstrates how version control, workflows, containers, and package managers can be used to record reproducible environments and computational steps\nReproducible Research video lesson from Code Refinery - Recorded video lesson from Code Refinery workshop in May 2021 on Reproducible Research material\nData + Code + Software = PDF - Slides to an overview on how to integrate data and software into a PDF."
+  },
+  {
+    "objectID": "docs/software/automation/gitlab/gitlab_docker.html",
+    "href": "docs/software/automation/gitlab/gitlab_docker.html",
+    "title": "CI with Gitlab",
+    "section": "",
+    "text": "If you happen to be working with TU Delft GitLab instance and you want to implement DevOps or CI/CD pipelines, then you need to install a GitLab runner on your own. This should runner should be in a server, responding to changes such as commits or pull requests in your GitLab repository.",
+    "crumbs": [
+      "<ins>Guides</ins>",
+      "![](/docs/img/laptop-code-solid.svg){height=1em style='filter: invert(0.5) sepia(1) saturate(5) hue-rotate(175deg)'} **Research Software**",
+      "Automation",
+      "Continuous Integration with GitLab"
+    ]
+  },
+  {
+    "objectID": "docs/software/automation/gitlab/gitlab_docker.html#background",
+    "href": "docs/software/automation/gitlab/gitlab_docker.html#background",
+    "title": "CI with Gitlab",
+    "section": "",
+    "text": "If you happen to be working with TU Delft GitLab instance and you want to implement DevOps or CI/CD pipelines, then you need to install a GitLab runner on your own. This should runner should be in a server, responding to changes such as commits or pull requests in your GitLab repository.",
+    "crumbs": [
+      "<ins>Guides</ins>",
+      "![](/docs/img/laptop-code-solid.svg){height=1em style='filter: invert(0.5) sepia(1) saturate(5) hue-rotate(175deg)'} **Research Software**",
+      "Automation",
+      "Continuous Integration with GitLab"
+    ]
+  },
+  {
+    "objectID": "docs/software/automation/gitlab/gitlab_docker.html#quick-overview-of-how-it-works",
+    "href": "docs/software/automation/gitlab/gitlab_docker.html#quick-overview-of-how-it-works",
+    "title": "CI with Gitlab",
+    "section": "Quick overview of how it works",
+    "text": "Quick overview of how it works\nIn order to be ready to run CI/CD pipeline, a gitlab-runner Docker container is running on the server all the time. When a new commit is made in the GitLab repository, this triggers the CI/CD process to run a job (e.g., unit test) based on the pipeline defined in the .gitlab-ci.yml file in the repository. The container used to carry out the CI/CD tests is defined in the .gitlab-ci.yml file in the first line, and spawned from within the continuously running gitlab-runner container. In our example, we define image:python:3.12.3 so every time a commit is made in the repository, a new container based on the python:3.12.3 Docker image is started and used to run tests on the python scripts and generate artifacts as defined in the .gitlab-ci.yml file.",
+    "crumbs": [
+      "<ins>Guides</ins>",
+      "![](/docs/img/laptop-code-solid.svg){height=1em style='filter: invert(0.5) sepia(1) saturate(5) hue-rotate(175deg)'} **Research Software**",
+      "Automation",
+      "Continuous Integration with GitLab"
+    ]
+  },
+  {
+    "objectID": "docs/software/automation/gitlab/gitlab_docker.html#what-this-documentation-will-help-achieve",
+    "href": "docs/software/automation/gitlab/gitlab_docker.html#what-this-documentation-will-help-achieve",
+    "title": "CI with Gitlab",
     "section": "What this documentation will help achieve",
-    "text": "What this documentation will help achieve\nThis documentation helps researchers to set up a group and assign contributors to the projects within the GitLab.",
+    "text": "What this documentation will help achieve\nThe documentation below will help you deploy GitLab runner in a Docker container on a server to automatically run CI/CD tests and store artifacts every time there is a new commit to a GitLab repository.",
     "crumbs": [
       "<ins>Guides</ins>",
-      "![](/docs/img/gear.svg){height=1em style='filter: invert(0.5) sepia(1) saturate(5) hue-rotate(175deg)'} **Computing Infrastructure**",
-      "TU Delft GitLab",
-      "Creating GitLab groups"
+      "![](/docs/img/laptop-code-solid.svg){height=1em style='filter: invert(0.5) sepia(1) saturate(5) hue-rotate(175deg)'} **Research Software**",
+      "Automation",
+      "Continuous Integration with GitLab"
     ]
   },
   {
-    "objectID": "docs/infrastructure/gitlab/gitlab_groups.html#prerequisites",
-    "href": "docs/infrastructure/gitlab/gitlab_groups.html#prerequisites",
-    "title": "Creating GitLab groups",
+    "objectID": "docs/software/automation/gitlab/gitlab_docker.html#prerequisites",
+    "href": "docs/software/automation/gitlab/gitlab_docker.html#prerequisites",
+    "title": "CI with Gitlab",
     "section": "Prerequisites",
-    "text": "Prerequisites\n\nTU Delft netID",
+    "text": "Prerequisites\nServer: This example uses a server to run the whole process. You can request a server from TU Delft ICT service following these directions here. It is useful to set this up on a server so that Docker can be running continuously, and be ready to run CI/CD tests whenever a new commit occurs in the repository.\nDocker: We use a Docker container to run the GitLab runner and initialise the CI/CD pipeline.\nGitlab runner: (from GitLab documentation) “Runners are the agents that run the CI/CD jobs that come from GitLab. When you register a runner, you are setting up communication between your GitLab instance and the machine where GitLab Runner is installed. Runners usually process jobs on the same machine where you installed GitLab Runner.” Link\nGitLab repository: A remote repository that can store your code and keeps track of your project development. You’re on one right now! :) If you haven’t already, you use your netID and password to login to TU Delft’s GitLab instance at gitlab.tudelft.nl and create a repository containing your project code.\nCI/CD pipeline: “A CI/CD pipeline automates your software delivery process. The pipeline builds code, runs tests (CI), and safely deploys a new version of the application (CD)”.",
     "crumbs": [
       "<ins>Guides</ins>",
-      "![](/docs/img/gear.svg){height=1em style='filter: invert(0.5) sepia(1) saturate(5) hue-rotate(175deg)'} **Computing Infrastructure**",
-      "TU Delft GitLab",
-      "Creating GitLab groups"
+      "![](/docs/img/laptop-code-solid.svg){height=1em style='filter: invert(0.5) sepia(1) saturate(5) hue-rotate(175deg)'} **Research Software**",
+      "Automation",
+      "Continuous Integration with GitLab"
     ]
   },
   {
-    "objectID": "docs/infrastructure/gitlab/gitlab_groups.html#steps",
-    "href": "docs/infrastructure/gitlab/gitlab_groups.html#steps",
-    "title": "Creating GitLab groups",
-    "section": "Steps",
-    "text": "Steps\n\nLog-in to the GitLab with your netid and password.\nEnter to the Groups section.\nCreate a group.\nAssign contributors to the group.\n\n\nStep 1. Log-in to the GitLab with your netid and password\nTo create a group in GitLab, first you need to log in to the TU Delft’s instance of GitLab.\n Figure 1: The login page of TU Delft’s GitLab.\n\n\nStep 2. Enter to the Groups section\nAfter the log-in, from the top bar click on groups and then Your groups. I\n Figure 2: The Group section of the GitLab.\n\n\nStep 3. Create a group\nIn the new web page, click on the New group and then fill in the form by choosing a suitable group name and then selecting the visibility level. You can later on change both group name and visibility level.\n Figure 3: Creation of a new Group in the GitLab.\n\n\nStep 4. Assign contributors to the group.\nAfter creating a group, it appears in the Groups tab. The group owner can add different people to the projects. This can be done by entering a project and then clicking on the Members on the left panel and filling in the form (Figure 4). A very important part of this form is permissions which are explained here in detail.\n Figure 4: Assigning members to a project.\nYou can also create subgroups within a group. To create a subgroup, you need to enter an existing group and press the New subgroup button. Then, similar to creating a group, you fill in the subgroup name and select the degree of visibility for the subgroup. The subgroup visibility level is always a subset of its (parent) group visibility, hence if the parent visibility is private, there is no choice except private for the subgroup visibility but if the parent visibility is public, subgroup visibility could be either public, internal, or private. The same logic applies when you create a subgroup within another subgroup.\n Figure 5: Creating a subgroup.\nAfter setting up the group, (sub groups,) projects, and assigning the collaborators to the projects, they can start working with the remote repository and transfer their scripts there.",
-    "crumbs": [
-      "<ins>Guides</ins>",
-      "![](/docs/img/gear.svg){height=1em style='filter: invert(0.5) sepia(1) saturate(5) hue-rotate(175deg)'} **Computing Infrastructure**",
-      "TU Delft GitLab",
-      "Creating GitLab groups"
-    ]
-  },
-  {
-    "objectID": "docs/infrastructure/gitlab/gitlab_transfer_ownership.html",
-    "href": "docs/infrastructure/gitlab/gitlab_transfer_ownership.html",
-    "title": "Transfer ownership of a GitLab repository",
-    "section": "",
-    "text": "GitLab repositories belonging to employees leaving the TU Delft might be deleted in future.\nFrom the TU Delft GitLab help documentation, we read the following:\nCurrent situation\nFirst, if you use Git on your computer, you will have the entire history also locally on your machine. Without a valid TU Delft account, your GitLab access will become inactive. There are currently no plans to delete any content when an account becomes inactive.\nFuture situation\nAt some point in the future, repositories of former TU Delft employees may be deleted. To avoid losing information, it is recommended to transfer ownership of your repositories to a current TU Delft employee when you leave.",
-    "crumbs": [
-      "<ins>Guides</ins>",
-      "![](/docs/img/gear.svg){height=1em style='filter: invert(0.5) sepia(1) saturate(5) hue-rotate(175deg)'} **Computing Infrastructure**",
-      "TU Delft GitLab",
-      "Transfer ownership of a GitLab repository"
-    ]
-  },
-  {
-    "objectID": "docs/infrastructure/gitlab/gitlab_transfer_ownership.html#background",
-    "href": "docs/infrastructure/gitlab/gitlab_transfer_ownership.html#background",
-    "title": "Transfer ownership of a GitLab repository",
-    "section": "",
-    "text": "GitLab repositories belonging to employees leaving the TU Delft might be deleted in future.\nFrom the TU Delft GitLab help documentation, we read the following:\nCurrent situation\nFirst, if you use Git on your computer, you will have the entire history also locally on your machine. Without a valid TU Delft account, your GitLab access will become inactive. There are currently no plans to delete any content when an account becomes inactive.\nFuture situation\nAt some point in the future, repositories of former TU Delft employees may be deleted. To avoid losing information, it is recommended to transfer ownership of your repositories to a current TU Delft employee when you leave.",
-    "crumbs": [
-      "<ins>Guides</ins>",
-      "![](/docs/img/gear.svg){height=1em style='filter: invert(0.5) sepia(1) saturate(5) hue-rotate(175deg)'} **Computing Infrastructure**",
-      "TU Delft GitLab",
-      "Transfer ownership of a GitLab repository"
-    ]
-  },
-  {
-    "objectID": "docs/infrastructure/gitlab/gitlab_transfer_ownership.html#purpose-of-this-guide",
-    "href": "docs/infrastructure/gitlab/gitlab_transfer_ownership.html#purpose-of-this-guide",
-    "title": "Transfer ownership of a GitLab repository",
-    "section": "Purpose of this guide",
-    "text": "Purpose of this guide\nThis guide provides the steps required to secure access to repositories of employees who will leave the TU Delft.\nIf they have access to your projects, they will still have access after you leave, as long as the projects still exist. You can control who has access to your projects by going to Project Information &gt; Members in the sidebar of your repository. To be safe, transfer the ownership of the projects to a current TU Delft employee when you leave.\nYou can transfer a project to another user’s GitLab namespace. Read what a namespace is here.\n\n\n\n\n\n\nNote\n\n\n\nProviding a more straightforward way to transfer ownership in GitLab was raised as an issue in 2016 but the issue is still open; you can follow the progress here if interested.",
-    "crumbs": [
-      "<ins>Guides</ins>",
-      "![](/docs/img/gear.svg){height=1em style='filter: invert(0.5) sepia(1) saturate(5) hue-rotate(175deg)'} **Computing Infrastructure**",
-      "TU Delft GitLab",
-      "Transfer ownership of a GitLab repository"
-    ]
-  },
-  {
-    "objectID": "docs/infrastructure/gitlab/gitlab_transfer_ownership.html#steps",
-    "href": "docs/infrastructure/gitlab/gitlab_transfer_ownership.html#steps",
-    "title": "Transfer ownership of a GitLab repository",
-    "section": "Steps",
-    "text": "Steps\nThe steps will guide you through transferring repository ownership between TU Delft employees through an intermediary GitLab group:\n\n\n\n\n\n\n\nNote\n\n\n\nSummary (based on this Stack Overflow post): ​​Move your project from your namespace to a group where both you and the other user are owners, then the other user can transfer it to their own namespace\n\n\n\nStep 1. Create a new group\nCreate a new group if you don’t have one that you want to use (Menu &gt; Groups &gt; Create group)\n\n\nStep 2. Invite members\nMake sure that both the maintainer of the project repository, and the person who it will be transferred to, are members of the group and have the Owner role (to add a new owner: go to the group namespace, then from the sidebar choose Group information &gt; Members &gt; Invite members.\n\n\nEnter the username or email of the person you want to invite and change the role to ‘Owner’. Click ‘Invite’.)\n\n\n\nStep 3. Transfer project to group\nHave a maintainer of the project repository transfer it to the group namespace (go to the project namespace, then from the sidebar go to Settings &gt; General &gt; Advanced &gt; Transfer Project)\n\n\n\nStep 4. Check email\nAfter doing this, the maintainer(s) of the project will get an email:\n\n\n\nStep 5. Transfer project to user\nNow the person who the project is being transferred to can move it to their own namespace (go to the project namespace, then from the sidebar, go to Settings &gt; General &gt; Advanced &gt; Transfer Project like before).\n\n\nStep 6. Optional: remove group\nIf desired, the group can be deleted after the transfer is complete (go to the group namespace, then from the sidebar go to Settings &gt; General &gt; Advanced &gt; Remove Group)",
-    "crumbs": [
-      "<ins>Guides</ins>",
-      "![](/docs/img/gear.svg){height=1em style='filter: invert(0.5) sepia(1) saturate(5) hue-rotate(175deg)'} **Computing Infrastructure**",
-      "TU Delft GitLab",
-      "Transfer ownership of a GitLab repository"
-    ]
-  },
-  {
-    "objectID": "docs/infrastructure/giving_sudo_privilege.html",
-    "href": "docs/infrastructure/giving_sudo_privilege.html",
-    "title": "Giving sudo privilege to a user",
-    "section": "",
-    "text": "There are some tasks in Linux that requires superuser (sudo) permission. For instance editing the /etc/fstab file, rebooting the system, mounting a drive, viewing /etc/passwd file and many other tasks cannot be done without sudo privilege."
-  },
-  {
-    "objectID": "docs/infrastructure/giving_sudo_privilege.html#background",
-    "href": "docs/infrastructure/giving_sudo_privilege.html#background",
-    "title": "Giving sudo privilege to a user",
-    "section": "",
-    "text": "There are some tasks in Linux that requires superuser (sudo) permission. For instance editing the /etc/fstab file, rebooting the system, mounting a drive, viewing /etc/passwd file and many other tasks cannot be done without sudo privilege."
-  },
-  {
-    "objectID": "docs/infrastructure/giving_sudo_privilege.html#what-this-documentation-will-help-achieve",
-    "href": "docs/infrastructure/giving_sudo_privilege.html#what-this-documentation-will-help-achieve",
-    "title": "Giving sudo privilege to a user",
-    "section": "What this documentation will help achieve",
-    "text": "What this documentation will help achieve\nThis documentation helps you to give sudo privilege to a user."
-  },
-  {
-    "objectID": "docs/infrastructure/giving_sudo_privilege.html#prerequisites",
-    "href": "docs/infrastructure/giving_sudo_privilege.html#prerequisites",
-    "title": "Giving sudo privilege to a user",
-    "section": "Prerequisites",
-    "text": "Prerequisites\n\nTU Delft netID\nBasic knowledge of Linux\nThose who grant sudo permission need to have sudo permission themselves."
-  },
-  {
-    "objectID": "docs/infrastructure/giving_sudo_privilege.html#toolssoftware",
-    "href": "docs/infrastructure/giving_sudo_privilege.html#toolssoftware",
-    "title": "Giving sudo privilege to a user",
+    "objectID": "docs/software/automation/gitlab/gitlab_docker.html#toolssoftware",
+    "href": "docs/software/automation/gitlab/gitlab_docker.html#toolssoftware",
+    "title": "CI with Gitlab",
     "section": "Tools/Software",
-    "text": "Tools/Software\n\nFor Windows users, you will need a programming and runtime environment like Cygwin or SSH client like PuTTY in order to access the VPS running Linux."
-  },
-  {
-    "objectID": "docs/infrastructure/giving_sudo_privilege.html#steps",
-    "href": "docs/infrastructure/giving_sudo_privilege.html#steps",
-    "title": "Giving sudo privilege to a user",
-    "section": "Steps",
-    "text": "Steps\n\nGetting the username(s) of sudo access candidates\nNavigating to the sudoers directory\nCreate an access file for each of the candidates\nEditing the access files\n\n\nStep 1. Getting the username(s) of sudo access candidates\nYou can get the usernames by checking the /etc/passwd file. This file contains all the usernames and their login information.\n\n\nStep 2. Navigating to the sudoers directory\nThe list of users who posses the sudo permission is in the /etc/sudoers.d/ folder, so navigate to that folder.\n\n\nStep 3. Create an access file for each of the candidates\nIf you use ls command to check the available files in this folder, you can see there are some files that their name start with a number and then a dash and then a user name (&lt;number&gt;-&lt;username&gt;). In Linux for every user with a sudo permission, there is a file like that, so we duplicate one of the existing files and rename them for each of the sudo candidates (in fact, name of those file doesn’t matter; however, it helps us to understand which users have sudo privilege without opening them).\n\n\nStep 4. Editing the access files\nIn this step you need to open each of the newly duplicated files and replace the old username in the second line with the sudo candidate username. After the edit, you just save the changes and exit the file."
-  },
-  {
-    "objectID": "docs/infrastructure/remote_servers.html",
-    "href": "docs/infrastructure/remote_servers.html",
-    "title": "Servers",
-    "section": "",
-    "text": "TU Delft offers its employees the use of physical or virtual servers. These servers are known as faculty managed servers and can be requested to conduct work related to a specific project within a faculty.\n\n\n\n\n\n\n Note\n\n\n\nIt is not possible to use the servers to set up services that are already provided by the ICT department.\n\n\n\nVirtual vs physical servers\nThere is a choice between virtual and physical servers. Virtual servers are provided free of charge and can be requested via TOPdesk. Physical servers can be requested by contacting the faculty’s IT manager, and any associated costs are paid by the purchasing department.\nIn most cases, a virtual server is the most suitable option. However, a physical server may be necessary when it is intended for use as a GPU or computing cluster.\n\n\nServer configuration\nWhen requesting a virtual server, users can choose from a range of predefined hardware and operating system configurations. The following operating systems are available: Windows Server 2019, Windows Server 2022, Red Hat Enterprise Linux (latest supported version), and Ubuntu (latest LTS version).\nIf additional capacity is needed, it can be requested via the ‘ICT malfunction’ or ‘Request ICT service’ forms in TOPdesk. This includes options such as increasing the number of processors, cores per processor, RAM, or disk storage.\nSome considerations:\n\nICT provides the server, operating system, and network access.\nUsers are granted administrator privileges, allowing them to install any required software, provided it complies with the conditions specified in the request form.\nAccess can be granted to both TU Delft members and external users.\nICT provides daily backups, restoration services, and virus scanning for Windows servers.\nICT ensures that the server operating system remains up to date (e.g., security patches), except for Linux systems.\n\n\n\n\n\n\n\n Tip\n\n\n\nDetailed information on managing the server, including network and firewall settings, is provided in the TOPdesk application form.\n\n\n\n\nExample use cases\n\nPerforming computational or data processing tasks that require a dedicated server environment.\nRunning an instance of a service or application, such as ABAQUS, COMSOL, or other specialized tools for a lab or research group.\nHosting a static website, a web application, or an API for a project.\nHosting databases, such as MySQL, PostgreSQL, MongoDB, or other database management systems.\nDeploying and managing TU Delft GitLab runners for CI/CD pipelines.\n\n\n\nRelevant links\n\nIntranet page for faculty managed servers\nTOPdesk form to request a new virtual server\nIntranet page for faculty IT managers",
+    "text": "Tools/Software\n\nGitLab (TU Delft instance)\nDocker\ngitlab-runner Docker image",
     "crumbs": [
       "<ins>Guides</ins>",
-      "![](/docs/img/gear.svg){height=1em style='filter: invert(0.5) sepia(1) saturate(5) hue-rotate(175deg)'} **Computing Infrastructure**",
-      "Remote servers"
+      "![](/docs/img/laptop-code-solid.svg){height=1em style='filter: invert(0.5) sepia(1) saturate(5) hue-rotate(175deg)'} **Research Software**",
+      "Automation",
+      "Continuous Integration with GitLab"
     ]
   },
   {
-    "objectID": "docs/resources/courses.html",
-    "href": "docs/resources/courses.html",
-    "title": "Courses and workshops",
-    "section": "",
-    "text": "The TU Delft organises training for researchers on data management, research software development, and open science. For an overview of available courses, please visit the TU Delft Library website.\n\n\n\nThe Carpentries teaches foundational coding and data science skills to researchers worldwide.\n Software Carpentry Lesson  Data Carpentry Lesson\n\nCourses overview\n\n\n\n\nThe Delft Institute for Computational Science and Engineering offers courses on supercomputing through the Delft High Performance Computing Center.\n\nCourses overview\n\n\n\n\nCodeRefinery teaches good practices for writing and maintaining research software, focussed on open source software. Their lessons cover version control, testing, continuous integration, documentation, and more.\n\nUpcoming workshops\n\n\n\n\nThe Research Engineering and Infrastructure Team offers support on software engineering, data science, and high-performance computing. They offer courses on Rust for Research, Python best practices, and Working with a cluster.\n\nCourses overview\n\n\n\n\nThe TU Delft offers a variety of Massive Open Online Courses.\n Open Science  Automated Software Testing  AI, Data & Digitalization  Unix Tools\n\nMOOC overview"
-  },
-  {
-    "objectID": "docs/resources/courses.html#training-for-researchers-at-the-tu-delft",
-    "href": "docs/resources/courses.html#training-for-researchers-at-the-tu-delft",
-    "title": "Courses and workshops",
-    "section": "",
-    "text": "The TU Delft organises training for researchers on data management, research software development, and open science. For an overview of available courses, please visit the TU Delft Library website.\n\n\n\nThe Carpentries teaches foundational coding and data science skills to researchers worldwide.\n Software Carpentry Lesson  Data Carpentry Lesson\n\nCourses overview\n\n\n\n\nThe Delft Institute for Computational Science and Engineering offers courses on supercomputing through the Delft High Performance Computing Center.\n\nCourses overview\n\n\n\n\nCodeRefinery teaches good practices for writing and maintaining research software, focussed on open source software. Their lessons cover version control, testing, continuous integration, documentation, and more.\n\nUpcoming workshops\n\n\n\n\nThe Research Engineering and Infrastructure Team offers support on software engineering, data science, and high-performance computing. They offer courses on Rust for Research, Python best practices, and Working with a cluster.\n\nCourses overview\n\n\n\n\nThe TU Delft offers a variety of Massive Open Online Courses.\n Open Science  Automated Software Testing  AI, Data & Digitalization  Unix Tools\n\nMOOC overview"
-  },
-  {
-    "objectID": "docs/resources/courses.html#external-training-opportunities",
-    "href": "docs/resources/courses.html#external-training-opportunities",
-    "title": "Courses and workshops",
-    "section": "External training opportunities",
-    "text": "External training opportunities\n\n\n\nThe eScience Center offers regular workshops on good practices for research software development and on intermediate-level topics such as GPU programming, Deep Learning, and Image Processing. Check out the overview of the training materials.\n\nUpcoming workshops\n\n\n\n\nSURF is the IT cooperative of Dutch education and research institutions and offers various workshops on using the supercomputers and storage solutions.\n\nUpcoming events\n\n\n\n\nThe Software Sustainability Institute in the UK provides training and resources to improve the quality of research software.\n\nTraining Hub\n\n\n\n\nTaxila provides an overview of training, learning, and teaching materials for trainers and trainees in the Netherlands.\n\nUpcoming workshops"
-  },
-  {
-    "objectID": "docs/resources/courses.html#community-training-opportunities",
-    "href": "docs/resources/courses.html#community-training-opportunities",
-    "title": "Courses and workshops",
-    "section": "Community training opportunities",
-    "text": "Community training opportunities\n\n\n\nAre you learning R or looking for a friendly community to practice with? The R Café is a welcoming space for R users of all levels - from absolute beginners to experienced programmers.\n\nUpcoming events\n\n\n\n\n4TU.ResearchData offers training resources and community engagement to research and research-support professionals working to make their research data FAIR.\n\nUpcoming events"
+    "objectID": "docs/software/automation/gitlab/gitlab_docker.html#steps",
+    "href": "docs/software/automation/gitlab/gitlab_docker.html#steps",
+    "title": "CI with Gitlab",
+    "section": "Steps",
+    "text": "Steps\n\nRequest the server\nConnect to the server via ssh\nInstall Docker on the server\nPull in the gitlab-runner image\nCreate a unit test function stored as a file in the repository\nMake the .gitlab-ci.yml file\nSet up the GitLab runner\nDeploy the GitLab runner in a Docker container\nRegister the runner\nTest the CI/CD pipeline\n\n\nStep 1. Request server running Ubuntu\nIf you don’t have a VPS already, you can request one from TU Delft ICT. Instructions for requesting a server and storage from ICT can be found under Remote servers/Request a Virtual Private Server.\nWe recommend the following configuration for configuring a GitLab runner:\n\nBasic Configuration 4 (Ubuntu)\nNo additional ports need to be configured for deploying a GitLab runner with Docker.\nAdditional space if your Docker images are larger than ~10Gb.\n\n\n\nStep 2. Connect to the server via ssh\nThe email response from Sysadmin@TUDelft.nl confirming the successful deployment of your server should contain instructions to connect via ssh.\nThe default login procedure is to connect to the Bastion host (an intermediary server) and then to your server, so it is a two-step process. Please check your email for Steps A and B as described by ICT admin.\nYou can also connect to your server using Putty (Windows) or, on Mac/Linux, configure one-step access by storing ssh keys between your local machine and your server and designating an alias.\nWhen you are successfully connected, you should see in your terminal/command prompt something like this:\n\n\n\nStep 3. Install Docker on the server\nServers often do not come with Docker installed, so you may need to do it by yourself. To check whether Docker is installed, run docker --version. If you get an error message, you can install it using the following commands:\nsudo su (this will give you the root access) apt install docker.io\nNow, Docker is installed. You can check if it is installed successfully by again typing docker --version in the terminal. The result should show the version of Docker you just installed.\n\n\nStep 4. Pull the gitlab-runner Docker image\nIn order to run CI/CD jobs for your repository, you need to install GitLab Runner. GitLab Runner is an application that works with GitLab CI/CD to run jobs in a pipeline. Rather than install GitLab Runner directly on the server, we will run a lightweight version of it as a Docker container. To do so, we first need to pull the gitlab-runner Docker image by running:\ndocker pull gitlab/gitlab-runner\nYou can check whether it was successful by running docker images - you should see the gitlab/gitlab-runner image listed in the output.\n\n\nStep 5. Create a unit test function stored as a file in the repository\n\n\nStep 6. Set up the CI by configuration of the .gitlab-ci.yml file\nThis file in the root of your repository defines what CI/CD tests to run upon each new commit. It does this by prescribing what container to run, what scripts to run inside the container, and what things to store as artefacts.\nIn the first line of the file, you can write image: &lt;image_name&gt;:&lt;tag&gt; to indicate you want to run the runner in a Docker container container. &lt;image_name&gt; should be replaced by the name of the image you want to use to start a container and &lt;tag&gt; should be replaced by the tag of the image you want to use(image names can be found on DockerHub). Tag will be set to latest by default.\nImportant: The file must be named exactly .gitlab-ci.yml so it will be recognizable by GitLab runner. Below is an example .gitlab-ci.yml file.\n# This is a sample build configuration for Python.\n# Check our guides at https://confluence.atlassian.com/x/x4UWN for more examples.\n# Only use spaces to indent your .yml configuration.\n# -----\ntest:\n  # You can specify a custom docker image from Docker Hub as your build environment.\n  image: python:3.12.3\n  cache:\n    paths:\n      - .cache/pip\n      - venv/\n  script: # Modify the commands below to build your repository.\n    - pip install -r requirements.txt\n    - nosetests --with-coverage  --cover-html\n  artifacts:\n    paths:\n      - cover/\nTags can be added as a final section in your .gitlab-ci.yml file (they are optional, we didn’t enter any in this example). You then need to enter these tags exactly when registering the runner.\n\n\nStep 7. Setup the GitLab runner\n\nFollow the instructions here till step 7 to create a GitLab runner for your repository\nChoose ‘Linux’ under operating systems\nCopy the authentication token generated and keep it handy. It will be required in Step 9.\n\n\n\nStep 8. Deploy GitLab runner in a Docker container\ndocker run -d --name gitlab-runner --restart always \\\n-v /srv/gitlab-runner/config:/etc/gitlab-runner \\\n-v /var/run/docker.sock:/var/run/docker.sock \\\ngitlab/gitlab-runner:latest\non Mac OS, use /Users/Shared/ instead of /srv/\nCheck that gitlab-runner container is running using docker ps -a\n\n\nStep 9. Register the runner using authentication token\nRun the following command to register your runner and configure it to deploy in a Docker container on your server.\ndocker run --rm -it -v /srv/gitlab-runner/config:/etc/gitlab-runner gitlab/gitlab-runner register\non Mac OS, use /Users/Shared/ instead of /srv/\nIn response to this command you will be prompted to answer the following questions\n- GitLab URL: https://gitlab.tudelft.nl\n- gitlab-ci token: Paste the authentication token generated in Step 7.\n- Enter name of the runner: example-runner\n- Type of executor: docker\n- Default Docker image: Specify the same image as the one specified in the 'image' field of the .gitlab-ci.yml file.\nSee an example below.\ndocker run --rm -it -v /srv/gitlab-runner/config:/etc/gitlab-runner gitlab/gitlab-runner register\nEnter the GitLab instance URL (for example, https://gitlab.com/):\nhttps://gitlab.tudelft.nl\nEnter the registration token:\nxxxxxxxxxxxxxxx\nVerifying runner... is valid                        runner=xxxxxxx\nEnter a name for the runner. This is stored only in the local config.toml file:\n[xxxxxxx]: example-runner\nEnter an executor: instance, kubernetes, docker-windows, docker-autoscaler, parallels, shell, ssh, virtualbox, docker+machine, custom, docker:\ndocker\nEnter the default Docker image (for example, ruby:2.7):\njulia:1.6\nRunner registered successfully. Feel free to start it, but if it's running already the config should be automatically reloaded!\n\nConfiguration (with the authentication token) was saved in \"/etc/gitlab-runner/config.toml\"\n\n\nStep 10. Check that the CI/CD process is activated and your pipeline runs successfully\n\nIn your repository, navigate to Settings &gt; CI/CD &gt; Click on Expand under Runners: You should see that the runner is active as indicated by a green dot. This means that the CI pipeline is ready to run, but it needs to be triggered.\nIn order to trigger the CI pipeline, you should make a new commit to the GitLab repository.\nAfter you have made a new commit to the repository, navigate to Your Project -&gt; Build -&gt; Pipelines to check the status of CI/CD pipelines connected to your repository. If you find a green message that says “passed” with a check mark then congratulations, your pipeline works! If you see a red message that says “failed”, check to see the error message associated with it - sometimes you need to reconfigure your .gitlab-ci.yml file to make sure it uses the correct formatting and defines the tests appropriately.",
+    "crumbs": [
+      "<ins>Guides</ins>",
+      "![](/docs/img/laptop-code-solid.svg){height=1em style='filter: invert(0.5) sepia(1) saturate(5) hue-rotate(175deg)'} **Research Software**",
+      "Automation",
+      "Continuous Integration with GitLab"
+    ]
   },
   {
     "objectID": "docs/software/code_quality/code_smells.html",

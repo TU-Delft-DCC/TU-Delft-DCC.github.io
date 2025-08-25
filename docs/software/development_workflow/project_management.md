@@ -7,7 +7,7 @@ date: 2025-02-24
 
 # We use this key to indicate the last modified date [manual entry, use YYYY-MM-DD]
 # Uncomment and populate the next line accordingly
-date-modified: 2025-07-11
+date-modified: 2025-08-22
 
 # Do not modify
 lang: en
@@ -51,7 +51,7 @@ corresponding: Elviss Dvinskis
 [Git](https://git-scm.com/) is a distributed version control system that enables you to track changes in your code over time. Platforms like GitHub, GitLab and Bitbucket extend the features of git by providing a centralized location for storing repositories, collaborating, and providing powerful tools to plan, organize, and track your work efficiently.
 
 ::: {.callout-tip appearance="simple" icon="false"}
-## New to git?
+## {{< fa brands square-git >}} New to git?
 If you are new to Git, we recommend starting with the [Software Carpentry lesson on version control with Git](https://swcarpentry.github.io/git-novice/).
 :::
 
@@ -59,10 +59,10 @@ If you are new to Git, we recommend starting with the [Software Carpentry lesson
 
 The choice between GitHub, GitLab and Bitbucket depends on your required features, privacy and other preferences, but all are Git-based platforms for version control. While numerous detailed comparisons exist online, here we will focus on GitHub.
 
-::: {.callout-note appearance="simple" icon="false"}
-## TU Delft GitLab
+::: {.callout-warning appearance="simple" icon="false"}
+## {{< fa brands gitlab >}} TU Delft GitLab
 
-TU Delft has its own [GitLab instance](https://gitlab.tudelft.nl/) hosted on campus. For more information, please visit the [documentation](https://gitlab.tudelft.nl/help) and our TU Delft GitLab guides in the [Computing Infrastracture](../../infrastructure/getting_started.md) section.
+TU Delft has its own [GitLab instance](https://gitlab.tudelft.nl/) hosted on campus. For more information, please visit the [help page](https://gitlab.tudelft.nl/help) documentation.
 
 {{< fa share-from-square >}} [Choosing a Repository Manager - for TU Delft Researchers](https://zenodo.org/records/4725444)
 :::
