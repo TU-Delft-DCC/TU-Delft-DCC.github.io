@@ -3,11 +3,11 @@
 
 # We use this key to indicate the last reviewed date [manual entry, use YYYY-MM-DD]
 # Uncomment and populate the next line accordingly
-date: 2025-06-25
+date: 2025-08-26
 
 # We use this key to indicate the last modified date [manual entry, use YYYY-MM-DD]
 # Uncomment and populate the next line accordingly
-date-modified: 2025-07-11
+date-modified: 2025-08-26
 
 # Do not modify
 lang: en
@@ -76,9 +76,9 @@ Please note that the information is subject to change, and you should always ref
 | TU Delft Group Data Storage (M:)    | TU Delft network | High     | Internal to TU Delft           | Yes                                                  | 50 GB                       | [Storage Finder](https://storagefinder.tudelft.nl/)                                                                 |
 | TU Delft Project Data Storage (U:)  | TU Delft network | High     | Internal to TU Delft. External access can be enabled with a TU Delft guest account.           | Yes                                                  | > 250 GB                     | [Storage Finder](https://storagefinder.tudelft.nl/)                                                                 |
 | Microsoft Teams                     | Cloud            | High     | Internal to TU Delft           | Yes                                                  | < 250 GB                     | [Storage Finder](https://storagefinder.tudelft.nl/)                                                                 |
-| Microsoft Sharepoint                | Cloud            | High     | Internal to TU Delft           | Yes                                                  | < 250  GB                     | [Storage Finder](https://storagefinder.tudelft.nl/)                                                                 |
-| Microsoft OneDrive for Business     | Cloud            | High     | External access can be enabled | Yes                                                  | 1 TB                        | [Storage Finder](https://storagefinder.tudelft.nl/)                                                                 |
-| SURFdrive                          | Cloud            | High     | External access can be enabled | Yes                                                  | 500 GB                      | [SURFdrive documentation](https://www.surf.nl/en/services/storage-data-management/surfdrive)                       |
+| Microsoft Sharepoint                | Cloud            | High     | Internal to TU Delft           | Yes                                                  | < 250  GB                    | [Storage Finder](https://storagefinder.tudelft.nl/)                                                                 |
+| Microsoft OneDrive for Business     | Cloud            | High     | External access can be enabled | Yes                                                  | 300 GB                       | [Storage Finder](https://storagefinder.tudelft.nl/)                                                                 |
+| SURFdrive                           | Cloud            | High     | External access can be enabled | Yes                                                  | 1 TB                         | [SURFdrive documentation](https://www.surf.nl/en/services/storage-data-management/surfdrive)                       |
 
 ## *Project Drive* operations
 
