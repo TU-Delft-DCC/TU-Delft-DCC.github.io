@@ -3,11 +3,11 @@
 
 # We use this key to indicate the last reviewed date [manual entry, use YYYY-MM-DD]
 # Uncomment and populate the next line accordingly
-date: 2025-07-02
+date: 2025-08-26
 
 # We use this key to indicate the last modified date [manual entry, use YYYY-MM-DD]
 # Uncomment and populate the next line accordingly
-date-modified: 2025-07-11
+date-modified: 2025-08-26
 
 # Do not modify
 lang: en
@@ -75,21 +75,25 @@ If you are accessing the *Project Data Storage (U:)* drive from outside the TU D
 #### **Step 1. Request storage via the TU Delft ICT form on TopDesk**
 You can make a request for data storage via a form available on the [TopDesk self-service portal](https://tudelft.topdesk.net/) (requires NetID sign-in); navigate to:
 
-Home ⇾ ICT services ⇾ IT for Research ⇾ Data storage for Research: Project data (U:) ⇾ ICT: Request Research Data Storage.
+HOME ⇾ ICT SERVICES ⇾ IT WORKSPACE ⇾ DATA STORAGE ⇾ DATA STORAGE FOR RESEARCH: PROJECT DATA (U:) ⇾ APPLICATION FORM FOR DATA STORAGE
 
 #### **Step 2. Fill out and send the form according to your data storage preferences and requirements**
-The form is divided into three sections: "Caller", "Information about requester and data", and "Data for a research project".
+The form has six main sections: "Caller", "Application", "Access for third parties", "Storage type", "Storage Requirements", and "Backup Retention".
 
-The *Caller* section should contain the contact information of the main administrator of this server. If you select your name, the fields below should be auto-populated with your building, phone number, email, department/program, organizational unit, and (sometimes) room.
+The *Caller* section should be auto-populated with your NAME, building, phone number (if you have a work phone number), email, department/program, organizational unit, and (sometimes) room. You will then be considered as main administrator of this server.  
 
-<img width="547" alt="blurred3" src="https://user-images.githubusercontent.com/70349945/124717195-2e53b380-df05-11eb-914f-0f451a427e73.png">
+In the next part, *Application*, you can input:
+1. (Short) *Description of the research project* for which you are requesting the storage. This will help ICT to understand your needs and provide you with the best possible service.
+2. A *proposed name for the Project Data Storage*. This name will be used as the folder name for your storage (e.g., U:\your_project_name). Even if not required, we strongly advise to keep it as short as possible, yet descriptive, and without spaces or special characters. For example, use underscores (_) or hyphens (-) to separate words, or use CamelCase (dividing words using capital letters).
+3. *Who should have access*. Here you can add the full name, netID, and email address of your collaborators and which type of access they should have (read or write). You can always add or remove users later by contacting the ICT Servicedesk. You can also choose to have no other users with access apart from yourself. If you have a few collaborators, you can also add their details using an attachment file using the box below.
 
-In the next part, *Information about requester and data*, you choose your preferences about data preservation. The first question asks whether you are setting up new storage or want to change existing storage (or end it). The next questions are about the availability, classification and retention. There are information bubbles next to the choices and clarifications at the beginning of the form.
+In *Access for third parties*, you can indicate if you want to allow external users (i.e., non-TU Delft users) to access the data. If you choose "Yes", you will need to provide the names and email addresses of the external users in the text box below (referred in step 3 above, only difference is the lack of netID for external users).
 
-Lastly, in the section *Data for a research project* you need to provide information about your project. You will need to provide a description of the project, the name of the project, initial and future storage needs, and a corresponding person for handover if you leave TU Delft. Additionally, you have the option to choose whether you want to be able to share the data with external users.
+*Storage type* allows you to ask for high availability. This choice depends on your I/O (Input/Output) operations. For example, large/long simulations, and real time data processing may require high availability, especially if you mount it to a server as described in the section [Mount *Project Drive* on server](../data_storage/project_drive_mounting.md). If you are unsure about the availability needed, contact your faculty Data Steward for advice before submitting you application. 
 
-![](../../img/form_u.png){width=547}
+*Storage Requirements* allows you to specify the amount of storage you need. The minimum (upper limit) is 250 GB, and the maximum is 5 TB. If you need 5 TB or more, your request will be forwarded to the Faculty IT Manager (FIM) for further review.
 
+Finally, in *Backup Retention*, you can choose how long you want your data to be backed up. For the default option, a backup is made on a daily basis and is stored for two weeks. This means a data loss of a maximum of one day can occur. After two weeks, a back-up is made every week and saved for a year. This means a data loss of maximum one day can occur. An extended option is also available to keep data stored from 53 weeks.
 
 #### **Step 3. Access your data storage**
 
