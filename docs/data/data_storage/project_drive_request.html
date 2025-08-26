@@ -6,7 +6,7 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="dcterms.date" content="2025-07-02">
+<meta name="dcterms.date" content="2025-08-26">
 
 <title>Accessing and requesting Project Data Storage space</title>
 <style>
@@ -1024,14 +1024,14 @@ ul.task-list li input[type="checkbox"] {
     <div>
     <div class="quarto-title-meta-heading">Last reviewed</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">July 2, 2025</p>
+      <p class="date">August 26, 2025</p>
     </div>
   </div>
   
     <div>
     <div class="quarto-title-meta-heading">Last modified</div>
     <div class="quarto-title-meta-contents">
-      <p class="date-modified">July 11, 2025</p>
+      <p class="date-modified">August 26, 2025</p>
     </div>
   </div>
     
@@ -1046,7 +1046,7 @@ ul.task-list li input[type="checkbox"] {
 <h2 class="anchored" data-anchor-id="accessing-the-project-data-storage-u-drive">Accessing the <em>Project Data Storage (U:)</em> drive</h2>
 <p>TU Delft network drives are automatically mounted on TU Delft-managed computers (running Windows) when connected to the TU Delft network (dastud, <a href="https://intranet.tudelft.nl/en/-/openvpn?p_l_back_url=%2Fen%2Fgroup%2Fguest%2Fsearch%3Fq%3Dvpn&amp;p_l_back_url_title=Search">eduVPN</a>).</p>
 <p>On macOS and Linux, there are a few additional steps needed to access <em>Project Drives</em>. The instructions can be found <a href="https://filelist.tudelft.nl/Calendar/2024/08%20August/Project%20storage%20instructions.pdf">here</a>. <em>(Last updated: August 2024)</em></p>
-<p>It can also be accessed through <a href="https://webdata.tudelft.nl/">webdata.tudelft.nl</a> using a WebDAV web link <a href="https://webdata.tudelft.nl/staff-umbrella">staff-umbrella</a>. Some systems also support the client <a href="https://webdata.tudelft.nl/">WebDrive</a>. To mount on a TU Delft Virtual Private Server, first follow the instructions <a href="../../../docs/infrastructure/VPS_request.html">here</a>, and then the instructions in the next guide <a href="../../../docs/data/data_storage/project_drive_mounting.html">Mount <em>Project Drive</em> on server</a>.</p>
+<p>It can also be accessed through <a href="https://webdata.tudelft.nl/">webdata.tudelft.nl</a> using a WebDAV web link <a href="https://webdata.tudelft.nl/staff-umbrella">staff-umbrella</a>. To mount on a TU Delft Virtual Private Server, first follow the instructions <a href="../../../docs/infrastructure/VPS_request.html">here</a>, and then the instructions in the next guide <a href="../../../docs/data/data_storage/project_drive_mounting.html">Mount <em>Project Drive</em> on server</a>.</p>
 <div class="callout callout-style-simple callout-note no-icon callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -1080,16 +1080,24 @@ ul.task-list li input[type="checkbox"] {
 <section id="step-1.-request-storage-via-the-tu-delft-ict-form-on-topdesk" class="level4">
 <h4 class="anchored" data-anchor-id="step-1.-request-storage-via-the-tu-delft-ict-form-on-topdesk"><strong>Step 1. Request storage via the TU Delft ICT form on TopDesk</strong></h4>
 <p>You can make a request for data storage via a form available on the <a href="https://tudelft.topdesk.net/">TopDesk self-service portal</a> (requires NetID sign-in); navigate to:</p>
-<p>Home ⇾ ICT services ⇾ IT for Research ⇾ Data storage for Research: Project data (U:) ⇾ ICT: Request Research Data Storage.</p>
+<blockquote class="blockquote">
+<p>HOME ⇾ ICT SERVICES ⇾ IT WORKSPACE ⇾ DATA STORAGE ⇾ DATA STORAGE FOR RESEARCH: PROJECT DATA (U:) ⇾ APPLICATION FORM FOR DATA STORAGE</p>
+</blockquote>
 </section>
 <section id="step-2.-fill-out-and-send-the-form-according-to-your-data-storage-preferences-and-requirements" class="level4">
 <h4 class="anchored" data-anchor-id="step-2.-fill-out-and-send-the-form-according-to-your-data-storage-preferences-and-requirements"><strong>Step 2. Fill out and send the form according to your data storage preferences and requirements</strong></h4>
-<p>The form is divided into three sections: “Caller”, “Information about requester and data”, and “Data for a research project”.</p>
-<p>The <em>Caller</em> section should contain the contact information of the main administrator of this server. If you select your name, the fields below should be auto-populated with your building, phone number, email, department/program, organizational unit, and (sometimes) room.</p>
-<p><img width="547" alt="blurred3" src="https://user-images.githubusercontent.com/70349945/124717195-2e53b380-df05-11eb-914f-0f451a427e73.png"></p>
-<p>In the next part, <em>Information about requester and data</em>, you choose your preferences about data preservation. The first question asks whether you are setting up new storage or want to change existing storage (or end it). The next questions are about the availability, classification and retention. There are information bubbles next to the choices and clarifications at the beginning of the form.</p>
-<p>Lastly, in the section <em>Data for a research project</em> you need to provide information about your project. You will need to provide a description of the project, the name of the project, initial and future storage needs, and a corresponding person for handover if you leave TU Delft. Additionally, you have the option to choose whether you want to be able to share the data with external users.</p>
-<p><img src="../../img/form_u.png" class="img-fluid" width="547"></p>
+<p>The form has six main sections: “<em><strong>Caller</strong></em>”, “<em><strong>Application</strong></em>”, “<em><strong>Access for third parties</strong></em>”, “<em><strong>Storage type</strong></em>”, “<em><strong>Storage Requirements</strong></em>”, and “<em><strong>Backup Retention</strong></em>”.</p>
+<p>The <em><strong>Caller</strong></em> section should be auto-populated with your name, building, phone number (if you have a work phone number), email, department/program, organizational unit, and (sometimes) room. You will then be considered as main administrator of this server.</p>
+<p>In the next part, <em><strong>Application</strong></em>, you can input:</p>
+<ol type="1">
+<li>(Short) <strong>Description of the research project</strong> for which you are requesting the storage. This will help ICT to understand your needs and provide you with the best possible service.</li>
+<li>A <strong>proposed name for the Project Data Storage</strong>. This name will be used as the folder name for your storage (e.g., U:/your_project_name). Even if not required, we strongly advise to keep it as short as possible, yet descriptive, and without spaces or special characters. For example, use underscores ( _ ) or hyphens ( - ) to separate words, or use CamelCase (dividing words using capital letters).</li>
+<li><strong>Who should have access</strong>. Here you can add the full name, NetID, and email address of your collaborators and which type of access they should have (read or write). You can always add or remove users later by contacting the ICT Servicedesk. You can also choose to have no other users with access apart from yourself. If you have a few collaborators, you can also add their details using an attachment file using the box below.</li>
+</ol>
+<p>In <em><strong>Access for third parties</strong></em>, you can indicate if you want to allow external users (i.e., non-TU Delft users) to access the data. If you choose “Yes”, you will need to provide the names and email addresses of the external users in the text box below (referred in step 3 above, only difference is the lack of NetID for external users).</p>
+<p><em><strong>Storage type</strong></em> allows you to ask for high availability. This choice depends on your I/O (Input/Output) operations. For example, large/long simulations, and real time data processing may require high availability, especially if you mount it to a server as described in the section <a href="../../../docs/data/data_storage/project_drive_mounting.html">Mount <em>Project Drive</em> on server</a>. If you are unsure about the availability needed, contact your faculty Data Steward for advice before submitting you application.</p>
+<p><em><strong>Storage Requirements</strong></em> allows you to specify the amount of storage you need. The minimum (upper limit) is 250 GB, and the maximum is 5 TB. If you need 5 TB or more, your request will be forwarded to the Faculty IT Manager (FIM) for further review.</p>
+<p>Finally, in <em><strong>Backup Retention</strong></em>, you can choose how long you want your data to be backed up. For the default option, a backup is made on a daily basis and is stored for two weeks. This means a data loss of a maximum of one day can occur. After two weeks, a back-up is made every week and saved for a year. This means a data loss of maximum one day can occur. An extended option is also available to keep data stored from 53 weeks.</p>
 </section>
 <section id="step-3.-access-your-data-storage" class="level4">
 <h4 class="anchored" data-anchor-id="step-3.-access-your-data-storage"><strong>Step 3. Access your data storage</strong></h4>
