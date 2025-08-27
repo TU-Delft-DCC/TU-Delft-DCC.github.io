@@ -1133,148 +1133,80 @@
     "text": "Community training opportunities\n\n\n\nAre you learning R or looking for a friendly community to practice with? The R Café is a welcoming space for R users of all levels - from absolute beginners to experienced programmers.\n\nUpcoming events\n\n\n\n\n4TU.ResearchData offers training resources and community engagement to research and research-support professionals working to make their research data FAIR.\n\nUpcoming events"
   },
   {
-    "objectID": "docs/infrastructure/remote_servers.html",
-    "href": "docs/infrastructure/remote_servers.html",
-    "title": "Servers",
+    "objectID": "docs/infrastructure/web_servers.html",
+    "href": "docs/infrastructure/web_servers.html",
+    "title": "Web Servers",
     "section": "",
-    "text": "TU Delft offers its employees the use of physical or virtual servers. These servers are known as faculty managed servers and can be requested to conduct work related to a specific project within a faculty.\n\n\n\n\n\n\n Note\n\n\n\nIt is not possible to use the servers to set up services that are already provided by the ICT department.\n\n\n\nVirtual vs physical servers\nThere is a choice between virtual and physical servers. Virtual servers are provided free of charge and can be requested via TOPdesk. Physical servers can be requested by contacting the faculty’s IT manager, and any associated costs are paid by the purchasing department.\nIn most cases, a virtual server is the most suitable option. However, a physical server may be necessary when it is intended for use as a GPU or computing cluster.\n\n\nServer configuration\nWhen requesting a virtual server, users can choose from a range of predefined hardware and operating system configurations. The following operating systems are available: Windows Server 2019, Windows Server 2022, Red Hat Enterprise Linux (latest supported version), and Ubuntu (latest LTS version).\nIf additional capacity is needed, it can be requested via the ‘ICT malfunction’ or ‘Request ICT service’ forms in TOPdesk. This includes options such as increasing the number of processors, cores per processor, RAM, or disk storage.\nSome considerations:\n\nICT provides the server, operating system, and network access.\nUsers are granted administrator privileges, allowing them to install any required software, provided it complies with the conditions specified in the request form.\nAccess can be granted to both TU Delft members and external users.\nICT provides daily backups, restoration services, and virus scanning for Windows servers.\nICT ensures that the server operating system remains up to date (e.g., security patches), except for Linux systems.\n\n\n\n\n\n\n\n Tip\n\n\n\nDetailed information on managing the server, including network and firewall settings, is provided in the TOPdesk application form.\n\n\n\n\nExample use cases\n\nPerforming computational or data processing tasks that require a dedicated server environment.\nRunning an instance of a service or application, such as ABAQUS, COMSOL, or other specialized tools for a lab or research group.\nHosting a static website, a web application, or an API for a project.\nHosting databases, such as MySQL, PostgreSQL, MongoDB, or other database management systems.\nDeploying and managing TU Delft GitLab runners for CI/CD pipelines.\n\n\n\nRelevant links\n\nIntranet page for faculty managed servers\nTOPdesk form to request a new virtual server\nIntranet page for faculty IT managers",
+    "text": "If you want to host a website or a web application, you will need to work with a web server. The job of a web server is to serve content on the internet by acting as a middleman between client machines and server machines. When a client requests content, the web server processes that request and delivers the appropriate response. Popular web server software includes Apache and Nginx.\nThis guide provides general considerations to take into account when setting up a web server, along with links to resources for the most commonly used web server platforms. For specific implementation guidance, consult the official documentation for your chosen web server software and operating system.",
     "crumbs": [
       "<ins>Guides</ins>",
       "![](/docs/img/gear.svg){height=1em style='filter: invert(0.5) sepia(1) saturate(5) hue-rotate(175deg)'} **Computing Infrastructure**",
-      "Remote servers"
+      "Remote servers",
+      "Web servers"
     ]
   },
   {
-    "objectID": "docs/infrastructure/giving_sudo_privilege.html",
-    "href": "docs/infrastructure/giving_sudo_privilege.html",
-    "title": "Giving sudo privilege to a user",
+    "objectID": "docs/infrastructure/web_servers.html#considerations-when-setting-up-a-web-server",
+    "href": "docs/infrastructure/web_servers.html#considerations-when-setting-up-a-web-server",
+    "title": "Web Servers",
+    "section": "Considerations when setting up a web server",
+    "text": "Considerations when setting up a web server\n\nOperating system: Choose an operating system that provides appropriate performance, security, and compatibility for your needs.\nHardware requirements: Ensure that the server hardware meets the requirements for your web application and expected traffic levels.\nWeb server software: Select web server software that aligns with your application requirements (e.g. Apache or Nginx).\nSecurity: Implement security measures to protect your server from vulnerabilities.\nMaintenance: Regularly update your web server software and operating system to ensure security and performance. Monitor server logs for any unusual activity.\n\n\nOperating system\nThe choice of operating system significantly impacts your web server’s performance, security, and maintenance requirements. Server-grade operating systems are designed for continuous operation and provide robust performance features needed for web hosting environments.\nLinux-based systems are widely used for web servers due to their stability, security features, and cost-effectiveness. Popular distributions include:\n\nUbuntu Server: Offers long-term support (LTS) versions with regular security updates and extensive community resources\nDebian: Known for stability and security\nEnterprise Linux distributions: Include commercially supported options like Red Hat Enterprise Linux (as well as community-driven alternatives)\n\nWindows Server provides an alternative for environments requiring Windows-specific technologies or where teams have existing Windows expertise. Commercial licensing is required for Windows Server installations.\nAt TU Delft, you can request a VPS preinstalled with Ubuntu Server or Windows Server. Which one you choose depends on your familiarity with the operating system and the specific requirements of your web application. However, Linux-based servers are generally preferred for web hosting due to their lower resource requirements, free licensing, and strong community support.\n\n\nHardware requirements\nHardware requirements depend on multiple factors including expected traffic volume, application complexity, data processing needs, and performance requirements. Without performance testing specific to your application, exact requirements can be difficult to determine.\nGeneral guidelines for basic web server hardware:\n\nCPU: Multi-core processors handle concurrent requests more effectively. Current-generation processors with adequate cores are recommended for most applications.\nRAM: Memory requirements vary significantly based on type and expected load. Start with sufficient RAM for your base operating system and application stack, then monitor and adjust based on actual usage patterns.\nStorage: SSDs provide better performance than traditional hard drives. Storage capacity should account for your application files, data, logs, and future requirements.\n\n\n\nWeb server software\nDifferent web servers excel in different scenarios. The two most popular web servers are Apache and Nginx. Sometimes, the choice of a web server software is determined by your web application. For example, PHP applications can be served by either Apache (using mod_php) or Nginx (using PHP-FPM), while Node.js applications are commonly served by Nginx as a reverse proxy\nThe following table provides a general comparison of key characteristics:\n\n\n\n\n\n\n\n\nCharacteristic\nApache\nNginx\n\n\n\n\nArchitecture\nProcess/thread-based\nEvent-driven, asynchronous\n\n\nConfiguration\nExtensive options, flexible\nSimpler syntax, centralized\n\n\nStatic Content\nGood performance\nExcellent (very fast & lightweight)\n\n\nDynamic Content\nBuilt-in module support\nTypically uses external processors\n\n\nResource Usage\nHigher memory per connection\nLightweight, better under heavy load\n\n\nLearning Curve\nModerate\nVaries by use case\n\n\nPlatform\nCross-platform\nMostly Linux/Unix (Windows support exists)\n\n\n\nModern web applications often use application servers or runtime environments (such as PHP-FPM, Node.js, or Python WSGI servers) in conjunction with web servers to handle dynamic content generation.\n\n\n\n\n\n\n Static vs Dynamic Applications\n\n\n\nStatic web applications serve the same content (HTML, CSS, JavaScript, images) to all users. Dynamic web applications generate content based on user input, database queries, or other variables, requiring server-side processing.\n\n\n\n\nSecurity\nSecurity is a critical aspect of web server management. You should keep in mind that a web server is typically open to anyone on the internet, and therefore, exposed to many cyber attacks. Here are some key security measures to consider:\n\nFirewall: Configure a firewall to restrict access to the web server. Only allow necessary ports (e.g., 80 for HTTP, 443 for HTTPS).\nSSL/TLS: Use SSL/TLS certificates to encrypt data in transit. This ensures that data exchanged between the client and server is secure.\nRegular Updates: Keep the web server software and operating system up to date with the latest security patches.\nAccess Control: Implement strict access controls to limit who can access the server and its resources. Use SSH keys for secure remote access instead of passwords.\nHardening: Follow best practices for hardening your web server, such as disabling unnecessary modules, using secure configurations, and limiting user permissions, such as SSL configurations recommended by the Mozilla organisation\nMonitoring: Set up logging and monitoring to detect unusual activity or potential security issues.\nBackup: Regularly back up your web server data and configurations to recover from potential data loss or security incidents.\n\n\n\nMaintenance\nTo ensure optimal performance and security of a web server, you need to perform regular maintenance tasks. Plan for regular maintenance activities:\n\nMonitoring: Regularly check server logs for errors or unusual activity.\nUpdates and patches: Establish procedures for applying security updates and software patches in a timely manner.\nBackups: Regularly back up server configurations and data to prevent loss.\nRenewal of SSL Certificates: Ensure that SSL/TLS certificates are renewed before they expire to maintain secure connections.\n\n\n\n\n\n\n\n Do not overlook maintenance\n\n\n\nThe time, cost and effort of maintaining a web server is often overlooked. While initial setup may be straightforward, maintaining security, availability, and performance requires continuous attention and resources. Unmaintained web servers are vulnerable to security and privacy threats.",
+    "crumbs": [
+      "<ins>Guides</ins>",
+      "![](/docs/img/gear.svg){height=1em style='filter: invert(0.5) sepia(1) saturate(5) hue-rotate(175deg)'} **Computing Infrastructure**",
+      "Remote servers",
+      "Web servers"
+    ]
+  },
+  {
+    "objectID": "docs/infrastructure/moving_data.html",
+    "href": "docs/infrastructure/moving_data.html",
+    "title": "Moving data to remote servers",
     "section": "",
-    "text": "There are some tasks in Linux that requires superuser (sudo) permission. For instance editing the /etc/fstab file, rebooting the system, mounting a drive, viewing /etc/passwd file and many other tasks cannot be done without sudo privilege."
+    "text": "This section describes how to transfer data to and from a TU Delft virtual server. The procedure is different depending on whether the server runs a Windows or Linux-based operating system. Although there are many ways to transfer data from one machine to another, TU Delft servers only support a few of them.",
+    "crumbs": [
+      "<ins>Guides</ins>",
+      "![](/docs/img/gear.svg){height=1em style='filter: invert(0.5) sepia(1) saturate(5) hue-rotate(175deg)'} **Computing Infrastructure**",
+      "Remote servers",
+      "Moving data to remote servers"
+    ]
   },
   {
-    "objectID": "docs/infrastructure/giving_sudo_privilege.html#background",
-    "href": "docs/infrastructure/giving_sudo_privilege.html#background",
-    "title": "Giving sudo privilege to a user",
+    "objectID": "docs/infrastructure/moving_data.html#linux-servers",
+    "href": "docs/infrastructure/moving_data.html#linux-servers",
+    "title": "Moving data to remote servers",
+    "section": "Linux servers",
+    "text": "Linux servers\nThe scp command is a secure file transfer utility that allows you to copy files between Linux-based hosts (this includes macOS) on a network. It uses SSH for data transfer, providing the same authentication and security as SSH. Common scenarios in which you might need to transfer data between hosts include uploading scripts, downloading results, or transferring configuration files.\n\n\n\n\n\n\n Moving large data batches\n\n\n\nIf you need to transfer large files or a multitude of small files, consider using tools like rclone or rsync instead. The instructions below are for transferring small files or a few files at a time.\n\n\n\n\n\n\n\n\n Overwriting files\n\n\n\nNotice that scp will overwrite files in the destination directory without prompting if they already exist. Always double-check the paths and filenames to avoid accidental data loss.\n\n\n\nPrerequisites\nBefore starting, you need:\n\nSCP (Secure Copy Protocol) installed on your local machine. SCP is a command-line utility that allows you to securely transfer files between hosts on a network.\nSSH access to the remote host (e.g., VPS) you want to connect to.\n\n\n\nMoving data via SCP\nTo copy data to and from a remote host using the scp command, you can use the following syntax:\n# Copy TO Remote Host\nscp &lt;path-my-local-file&gt; &lt;target-username&gt;@&lt;remote-host&gt;:&lt;full-path/remote-directory&gt;/\n# Copy FROM Remote Host\nscp &lt;target-username&gt;@&lt;remote-host&gt;:&lt;full-path/my-remote-file&gt; &lt;path-my-local-directory&gt;/\n\n\n\n\n\n\n Moving files to restricted directories\n\n\n\nSome directories on the remote host may require elevated permissions to write files. If you encounter a “Permission denied” error, you may need to use sudo to copy files to those directories. However, using scp with sudo directly is not supported. Instead, you can copy the file to a temporary directory /tmp where you have write access and then move it to the desired location using sudo after connecting to the remote host.\n\n\n\n\nTransferring files using ProxyJump\nIn the case of a VPS hosted by TU Delft, you need to copy data to a remote host via a bastion host (an intermediary server). Therefore, you must use the -o option of scp to specify a ProxyJump that will connect to the bastion host first. Alternatively, you can choose to transfer files using SSH tunneling.\n\nTransfer to remote host\n# If using default SSH key name, for example, id_ed25519 or id_rsa\nscp -o \"ProxyJump &lt;bastion-username&gt;@linux-bastion-ex.tudelft.nl\" &lt;path-my-local-file&gt; \\ \n&lt;target-username&gt;@&lt;remote-host&gt;:&lt;full-path/remote-directory&gt;/\n\n# If using a custom SSH key name, for example, my_custom_key\nscp  -i &lt;path-to-custom-private-ssh-key&gt; -o \"ProxyJump &lt;bastion-username&gt;@linux-bastion-ex.tudelft.nl\" \\ \n&lt;path-my-local-file&gt;  &lt;target-username&gt;@&lt;remote-host&gt;:&lt;full-path-remote-directory&gt;/\n\n\nTransfer from remote host\n# If using default SSH key name, for example, id_ed25519 or id_rsa\nscp -o \"ProxyJump &lt;bastion-username&gt;@linux-bastion-ex.tudelft.nl\" \\ \n&lt;target-username&gt;@&lt;remote-host&gt;:&lt;full-path-remote-file&gt;/ &lt;path-my-local-directory&gt;/\n\n# If using a custom SSH key name, for example, my_custom_key\nscp -i &lt;path-to-custom-private-ssh-key&gt; -o \"ProxyJump &lt;bastion-username&gt;@linux-bastion-ex.tudelft.nl\" \\\n&lt;target-username&gt;@&lt;remote-host&gt;:&lt;full-path-remote-file&gt;/ &lt;path-my-local-directory&gt;/\n\n\n\nTransferring files using SSH tunneling\nIf SSH tunneling has been configured correctly for the remote host, you can copy files to and from a remote host as follows:\n# Copy TO remote host\n$ &lt;path-my-local-file&gt; &lt;host-nickname&gt;:&lt;full-path-remote-directory&gt;/\n# Copy FROM remote host\n$ scp &lt;host-nickname&gt;:&lt;full-path-remote-file&gt;/ &lt;path-my-local-directory&gt;/",
+    "crumbs": [
+      "<ins>Guides</ins>",
+      "![](/docs/img/gear.svg){height=1em style='filter: invert(0.5) sepia(1) saturate(5) hue-rotate(175deg)'} **Computing Infrastructure**",
+      "Remote servers",
+      "Moving data to remote servers"
+    ]
+  },
+  {
+    "objectID": "docs/infrastructure/moving_data.html#windows-servers",
+    "href": "docs/infrastructure/moving_data.html#windows-servers",
+    "title": "Moving data to remote servers",
+    "section": "Windows servers",
+    "text": "Windows servers\nTransferring data to and from a TU Delft Windows server is done via the Citrix platform, using the app’s built-in menu shown in the image below.\n\n\n\nCitrix Menu. Buttons from left to right: Download, Upload, Multimonitor, Clipboard, and Settings.\n\n\n\nTransferring files\n\nOpen a web browser and log into your Windows server as usual via the Citrix portal.\nOpen the Citrix menu located at the center-top of the server window and click on the Upload or Download button, as shown in the image above.\nA pop-up window will open on where you can select the files you wish to transfer to the server.\n\nIt is not possible to directly transfer files to or from the server’s C: or D: drives. Instead, you upload or download files to your personal TU Delft drive which is connected to the server. Using the Windows File Explorer and standard copy/paste or drag-and-drop operations, you can transfer the data from your personal drive to the server’s C: or D: drives.\n\n\n\n\n\n\n Warning\n\n\n\nTU Delft Windows servers have a limited amount of disk space in the C: drive. ICT instructs users to install applications and store data in the D: drive of the server to avoid running out of memory. Alternatively, you can use your personal TU Delft drive, which is also connected to the server. More information can be found at the bottom of the TOPdesk form to request a new VPS.\n\n\n\n\nUsing the clipboard\nTU Delft Windows servers do not allow to directly copy or paste text from the clipboard. Instead, you must use Citrix’s clipboard functionality. To do so, open the Citrix’s menu located at the center-top of the window and click on the Clipboard button. A pop-up window will open on which you can copy or paste the text you wish to transfer. Note that it is only possible to transfer text via the clipboard; images or files are not supported.",
+    "crumbs": [
+      "<ins>Guides</ins>",
+      "![](/docs/img/gear.svg){height=1em style='filter: invert(0.5) sepia(1) saturate(5) hue-rotate(175deg)'} **Computing Infrastructure**",
+      "Remote servers",
+      "Moving data to remote servers"
+    ]
+  },
+  {
+    "objectID": "docs/infrastructure/getting_started.html",
+    "href": "docs/infrastructure/getting_started.html",
+    "title": "Overview",
     "section": "",
-    "text": "There are some tasks in Linux that requires superuser (sudo) permission. For instance editing the /etc/fstab file, rebooting the system, mounting a drive, viewing /etc/passwd file and many other tasks cannot be done without sudo privilege."
-  },
-  {
-    "objectID": "docs/infrastructure/giving_sudo_privilege.html#what-this-documentation-will-help-achieve",
-    "href": "docs/infrastructure/giving_sudo_privilege.html#what-this-documentation-will-help-achieve",
-    "title": "Giving sudo privilege to a user",
-    "section": "What this documentation will help achieve",
-    "text": "What this documentation will help achieve\nThis documentation helps you to give sudo privilege to a user."
-  },
-  {
-    "objectID": "docs/infrastructure/giving_sudo_privilege.html#prerequisites",
-    "href": "docs/infrastructure/giving_sudo_privilege.html#prerequisites",
-    "title": "Giving sudo privilege to a user",
-    "section": "Prerequisites",
-    "text": "Prerequisites\n\nTU Delft netID\nBasic knowledge of Linux\nThose who grant sudo permission need to have sudo permission themselves."
-  },
-  {
-    "objectID": "docs/infrastructure/giving_sudo_privilege.html#toolssoftware",
-    "href": "docs/infrastructure/giving_sudo_privilege.html#toolssoftware",
-    "title": "Giving sudo privilege to a user",
-    "section": "Tools/Software",
-    "text": "Tools/Software\n\nFor Windows users, you will need a programming and runtime environment like Cygwin or SSH client like PuTTY in order to access the VPS running Linux."
-  },
-  {
-    "objectID": "docs/infrastructure/giving_sudo_privilege.html#steps",
-    "href": "docs/infrastructure/giving_sudo_privilege.html#steps",
-    "title": "Giving sudo privilege to a user",
-    "section": "Steps",
-    "text": "Steps\n\nGetting the username(s) of sudo access candidates\nNavigating to the sudoers directory\nCreate an access file for each of the candidates\nEditing the access files\n\n\nStep 1. Getting the username(s) of sudo access candidates\nYou can get the usernames by checking the /etc/passwd file. This file contains all the usernames and their login information.\n\n\nStep 2. Navigating to the sudoers directory\nThe list of users who posses the sudo permission is in the /etc/sudoers.d/ folder, so navigate to that folder.\n\n\nStep 3. Create an access file for each of the candidates\nIf you use ls command to check the available files in this folder, you can see there are some files that their name start with a number and then a dash and then a user name (&lt;number&gt;-&lt;username&gt;). In Linux for every user with a sudo permission, there is a file like that, so we duplicate one of the existing files and rename them for each of the sudo candidates (in fact, name of those file doesn’t matter; however, it helps us to understand which users have sudo privilege without opening them).\n\n\nStep 4. Editing the access files\nIn this step you need to open each of the newly duplicated files and replace the old username in the second line with the sudo candidate username. After the edit, you just save the changes and exit the file."
-  },
-  {
-    "objectID": "docs/infrastructure/apache_webserver.html",
-    "href": "docs/infrastructure/apache_webserver.html",
-    "title": "Set up an Apache web server",
-    "section": "",
-    "text": "If you want to host a website for your lab, or a web application of some sort, you are going to need to work with a webserver. Apache Web Server is a software package that turns a computer into an HTTP server. That is, it sends web pages – stored as HTML files – to people on the internet who request them. It is open-source software, which means it can be used and modified freely.\n\nThe job of a web server is to serve websites on the internet. To achieve that goal, it acts as a middleman between the server and client machines. It pulls content from the server on each user request and delivers it to the web…..One of the most popular web servers, Apache allows you to run a secure website without too much of a headache. It is free and open-source, making it a frequent choice of solopreneurs and small businesses who want a presence on the web…..The way Apache HTTP server works is that it will accept requests from the web browser, such as Google Chrome and Microsoft Edge, and turn programming scripts into web pages which contents are visible by the visitors.",
+    "text": "Under construction! 🏗️",
     "crumbs": [
       "<ins>Guides</ins>",
       "![](/docs/img/gear.svg){height=1em style='filter: invert(0.5) sepia(1) saturate(5) hue-rotate(175deg)'} **Computing Infrastructure**",
-      "Remote servers",
-      "Setting up an Apache web server"
-    ]
-  },
-  {
-    "objectID": "docs/infrastructure/apache_webserver.html#background",
-    "href": "docs/infrastructure/apache_webserver.html#background",
-    "title": "Set up an Apache web server",
-    "section": "",
-    "text": "If you want to host a website for your lab, or a web application of some sort, you are going to need to work with a webserver. Apache Web Server is a software package that turns a computer into an HTTP server. That is, it sends web pages – stored as HTML files – to people on the internet who request them. It is open-source software, which means it can be used and modified freely.\n\nThe job of a web server is to serve websites on the internet. To achieve that goal, it acts as a middleman between the server and client machines. It pulls content from the server on each user request and delivers it to the web…..One of the most popular web servers, Apache allows you to run a secure website without too much of a headache. It is free and open-source, making it a frequent choice of solopreneurs and small businesses who want a presence on the web…..The way Apache HTTP server works is that it will accept requests from the web browser, such as Google Chrome and Microsoft Edge, and turn programming scripts into web pages which contents are visible by the visitors.",
-    "crumbs": [
-      "<ins>Guides</ins>",
-      "![](/docs/img/gear.svg){height=1em style='filter: invert(0.5) sepia(1) saturate(5) hue-rotate(175deg)'} **Computing Infrastructure**",
-      "Remote servers",
-      "Setting up an Apache web server"
-    ]
-  },
-  {
-    "objectID": "docs/infrastructure/apache_webserver.html#what-this-documentation-will-help-achieve",
-    "href": "docs/infrastructure/apache_webserver.html#what-this-documentation-will-help-achieve",
-    "title": "Set up an Apache web server",
-    "section": "What this documentation will help achieve",
-    "text": "What this documentation will help achieve\nThis guide will help you install the Apache web server on Ubuntu Linux and configure a HTTPS secure connection for all incoming web traffic.\nThe steps outlined below will ensure that all incoming web traffic to your server from port 80 (HTTP) will be redirected to port 443 (HTTPS). Port 80 is still accessible but redirects automatically. Redirection is configured after the SSL certificate is in place.",
-    "crumbs": [
-      "<ins>Guides</ins>",
-      "![](/docs/img/gear.svg){height=1em style='filter: invert(0.5) sepia(1) saturate(5) hue-rotate(175deg)'} **Computing Infrastructure**",
-      "Remote servers",
-      "Setting up an Apache web server"
-    ]
-  },
-  {
-    "objectID": "docs/infrastructure/apache_webserver.html#prerequisites",
-    "href": "docs/infrastructure/apache_webserver.html#prerequisites",
-    "title": "Set up an Apache web server",
-    "section": "Prerequisites",
-    "text": "Prerequisites\n\nA system running Ubuntu Server\nAn internet connection\nAccess to a user account with sudo privileges",
-    "crumbs": [
-      "<ins>Guides</ins>",
-      "![](/docs/img/gear.svg){height=1em style='filter: invert(0.5) sepia(1) saturate(5) hue-rotate(175deg)'} **Computing Infrastructure**",
-      "Remote servers",
-      "Setting up an Apache web server"
-    ]
-  },
-  {
-    "objectID": "docs/infrastructure/apache_webserver.html#tools-software",
-    "href": "docs/infrastructure/apache_webserver.html#tools-software",
-    "title": "Set up an Apache web server",
-    "section": "Tools / Software",
-    "text": "Tools / Software\n\nA command-line utility (Use keyboard shortcut CTRL-ALT-T, or right-click the desktop and left-click Open Terminal)\nA firewall – the default UFW (Uncomplicated Firewall) in Ubuntu is fine\nThe APT package manager, installed by default on Ubuntu",
-    "crumbs": [
-      "<ins>Guides</ins>",
-      "![](/docs/img/gear.svg){height=1em style='filter: invert(0.5) sepia(1) saturate(5) hue-rotate(175deg)'} **Computing Infrastructure**",
-      "Remote servers",
-      "Setting up an Apache web server"
-    ]
-  },
-  {
-    "objectID": "docs/infrastructure/apache_webserver.html#steps",
-    "href": "docs/infrastructure/apache_webserver.html#steps",
-    "title": "Set up an Apache web server",
-    "section": "Steps",
-    "text": "Steps\n\nRequest a Virtual Private Server (VPS) from TU Delft ICT\nInstall Apache web server on the VPS\nRequest an SSL certificate from TU Delft ICT\nConfigure the SSL certificate file on your VPS\nRedirect all incoming web traffic to HTTPS\n\n\nStep 1. Request a Virtual Private Server from TU Delft ICT\nYou can make a request for a server via the TopDesk self service portal. If you would like more information, documentation can be found here ___\nNote: to run a web server, ports 80 (HTTP) and 443 (HTTPS) must be opened.\n\n\nStep 2. Install Apache web server on the VPS\nApache is an open source web server that’s available for Linux servers. It is one of the most commonly used softwares for creating a web server. And, it’s free!\nInstalling Apache can be done using commands in the terminal. These instructions are documented with further information at the link in the beginning of this paragraph. First, make sure your local software packages are up to date by running:\nsudo apt-get update\nWhen that has finished, install the Apache package using:\nsudo apt-get install apache2\nThe system prompts for confirmation – do so, and allow the system to complete the installation.\nFind the IP address of your VPS by running:\nhostname -I | awk '{print $1}'\nUse this IP address to enter the following command in your terminal, replacing local.server.ip with the actual IP address of your server:\nhttp://local.server.ip\nIf the installation was completed successfully, you should see the Apache2 Ubuntu Default page in your web browser.\nAlthough the Apache installation process is complete, there is one more additional step. Configure the default UFW firewall to allow traffic on port 80.\nStart by displaying available app profiles on UFW:\nsudo ufw show app list\nUse the following command to allow normal web traffic on port 80:\nsudo ufw allow 'Apache Full'\nVerify the changes by checking UFW status:\nsudo ufw status\nAt this point, your Apache web server is serving over HTTP, which is a good first step! But remember, we need to secure the connection over HTTPS. So, we still have a few more steps.\n\n\nStep 3. Request an SSL certificate from TU Delft ICT\nDetailed directions on how to do this can be found here ___\nYou can create the .csr file directly on the VPS by first create a directory on /etc/apache2 called ssl:\nmkdir /etc/apache2/ssl\nThen, generate a CSR and private key using:\nopenssl req -x509 -newkey rsa:4096 -keyout &lt;server_domain&gt;.key -out &lt;server_domain&gt;.csr -nodes\nAfter successfully running the command it will ask for the information of certificate request. Complete it using the appropriate information and then .key and .csr files will be generated.\nThe .csr file must be sent to TU Delft ICT using this TopDesk form: TOPdesk SSL certificate server request.\n\n\nStep 4. Configure the SSL certificate on your VPS\nWhen you receive SSL certificate files from the signing authority via TU Delft ICT, you need to put the information from this certificate in a specific place on your VPS in order to securely expose the web server. These instructions come from here: - Configure ssl for https\nNavigate to the default Apache site config directory using the following command:\nsudo nano /etc/apache2/sites-available/default-ssl.conf\nThis config file tells the server where to find SSL certificate. It should look like this:\n                &lt;IfModule mod_ssl.c&gt;\n                &lt;VirtualHost _default_:443&gt;\n                ServerAdmin webmaster@localhost\n\n                DocumentRoot /var/www/html\n\n                ErrorLog ${APACHE_LOG_DIR}/error.log\n                CustomLog ${APACHE_LOG_DIR}/access.log combined\n\n                SSLEngine on\n\n                SSLCertificateFile    /etc/ssl/certs/ssl-cert-snakeoil.pem\n                SSLCertificateKeyFile /etc/ssl/private/ssl-cert-snakeoil.key\n\n                &lt;FilesMatch \".(cgi|shtml|phtml|php)$\"&gt;\n                SSLOptions +StdEnvVars\n                &lt;/FilesMatch&gt;\n                &lt;Directory /usr/lib/cgi-bin&gt;\n                SSLOptions +StdEnvVars\n                &lt;/Directory&gt;\n\n                &lt;/VirtualHost&gt;\n                &lt;/IfModule&gt;\nEdit this: ServerAdmin webmaster@localhost to this: ServerAdmin email@example.net\nAdd this right below the ServerAdmin line:\n                ServerName ADD_YOUR_IP_OR_DOMAIN_NAME_HERE\nNow, edit these lines with our certificate location:\n                SSLCertificateFile    /etc/apache2/ssl/apache.crt\n                SSLCertificateKeyFile /etc/apache2/ssl/apache.key\nOur file should look like this:\n                &lt;IfModule mod_ssl.c&gt;\n                &lt;VirtualHost _default_:443&gt;\n                ServerAdmin email@example.net\n                ServerName 203.0.113.122\n\n                DocumentRoot /var/www/html\n\n                ErrorLog ${APACHE_LOG_DIR}/error.log\n                CustomLog ${APACHE_LOG_DIR}/access.log combined\n\n                SSLEngine on\n\n                SSLCertificateFile    /etc/apache2/ssl/apache.crt\n                SSLCertificateKeyFile /etc/apache2/ssl/apache.key\n\n                &lt;FilesMatch \".(cgi|shtml|phtml|php)$\"&gt;\n                SSLOptions +StdEnvVars\n                &lt;/FilesMatch&gt;\n                &lt;Directory /usr/lib/cgi-bin&gt;\n                SSLOptions +StdEnvVars\n                &lt;/Directory&gt;\n\n                &lt;/VirtualHost&gt;\n                &lt;/IfModule&gt;\nSave the file, and close it.\nNote: If you are using something other than Apache Web Server (like, nginx for example) you can also create the SSL config file from scratch. Each application will have different syntax that should be used in this file. You can see how the syntax is set up by using this tool\nEnable the SSL module using following command:\nsudo a2enmod ssl\nNow enable the site we have just edited:\nsudo a2ensite default-ssl.conf\nRestart Apache:\nsudo service apache2 restart\nThe website is now secure, access it using following address in the browser\nhttps://YOUR_SERVER_IP\n\n\nStep 5. Redirect all incoming web traffic to HTTPS\nsudo a2enmod proxy\nsudo a2enmod proxy_http\nsudo a2enmod rewrite\nAdd in apache conf:\n                ProxyPass /thredds http://localhost:8080/thredds\n                ProxyPassReverse /thredds http://localhost:8080/thredds\n                RedirectMatch ^/$ /thredds/",
-    "crumbs": [
-      "<ins>Guides</ins>",
-      "![](/docs/img/gear.svg){height=1em style='filter: invert(0.5) sepia(1) saturate(5) hue-rotate(175deg)'} **Computing Infrastructure**",
-      "Remote servers",
-      "Setting up an Apache web server"
-    ]
-  },
-  {
-    "objectID": "docs/infrastructure/apache_webserver.html#notes-and-next-steps",
-    "href": "docs/infrastructure/apache_webserver.html#notes-and-next-steps",
-    "title": "Set up an Apache web server",
-    "section": "Notes and Next Steps",
-    "text": "Notes and Next Steps\nTest that your web server is secured by HTTPS by typing the Fully Qualified Domain Name (FQDN) of your server in a web browser. If HTTPS is enabled, the URL should begin with it - if it still says HTTP, something will need to be reconfigured.",
-    "crumbs": [
-      "<ins>Guides</ins>",
-      "![](/docs/img/gear.svg){height=1em style='filter: invert(0.5) sepia(1) saturate(5) hue-rotate(175deg)'} **Computing Infrastructure**",
-      "Remote servers",
-      "Setting up an Apache web server"
+      "Getting started"
     ]
   },
   {
@@ -2156,7 +2088,7 @@
     "href": "docs/infrastructure/VPS_request.html#next-steps",
     "title": "Request a VPS",
     "section": "Next Steps",
-    "text": "Next Steps\nCommon next steps after obtaining a VPS and storage include initial configuration steps such as establishing a connection via SSH and mounting Project Drive storage; and also software installation steps for tools like Docker, and setting up Apache Web Server. We will add more documentation when common installations come to our attention, so please reach out to us with your questions or suggestions.\n\nInstall Docker\nConfigure Docker for use as non-root\nConfigure a runner for the TU Delft Gitlab\nApache Web Server",
+    "text": "Next Steps\nCommon next steps after obtaining a VPS and storage include initial configuration steps such as establishing a connection via SSH and mounting Project Drive storage; and also software installation steps for tools like Docker, and setting up Apache Web Server. We will add more documentation when common installations come to our attention, so please reach out to us with your questions or suggestions.\n\nInstall Docker\nConfigure Docker for use as non-root\nConfigure a runner for the TU Delft Gitlab",
     "crumbs": [
       "<ins>Guides</ins>",
       "![](/docs/img/gear.svg){height=1em style='filter: invert(0.5) sepia(1) saturate(5) hue-rotate(175deg)'} **Computing Infrastructure**",
@@ -2165,54 +2097,57 @@
     ]
   },
   {
-    "objectID": "docs/infrastructure/getting_started.html",
-    "href": "docs/infrastructure/getting_started.html",
-    "title": "Overview",
+    "objectID": "docs/infrastructure/giving_sudo_privilege.html",
+    "href": "docs/infrastructure/giving_sudo_privilege.html",
+    "title": "Giving sudo privilege to a user",
     "section": "",
-    "text": "Under construction! 🏗️",
-    "crumbs": [
-      "<ins>Guides</ins>",
-      "![](/docs/img/gear.svg){height=1em style='filter: invert(0.5) sepia(1) saturate(5) hue-rotate(175deg)'} **Computing Infrastructure**",
-      "Getting started"
-    ]
+    "text": "There are some tasks in Linux that requires superuser (sudo) permission. For instance editing the /etc/fstab file, rebooting the system, mounting a drive, viewing /etc/passwd file and many other tasks cannot be done without sudo privilege."
   },
   {
-    "objectID": "docs/infrastructure/moving_data.html",
-    "href": "docs/infrastructure/moving_data.html",
-    "title": "Moving data to remote servers",
+    "objectID": "docs/infrastructure/giving_sudo_privilege.html#background",
+    "href": "docs/infrastructure/giving_sudo_privilege.html#background",
+    "title": "Giving sudo privilege to a user",
     "section": "",
-    "text": "This section describes how to transfer data to and from a TU Delft virtual server. The procedure is different depending on whether the server runs a Windows or Linux-based operating system. Although there are many ways to transfer data from one machine to another, TU Delft servers only support a few of them.",
-    "crumbs": [
-      "<ins>Guides</ins>",
-      "![](/docs/img/gear.svg){height=1em style='filter: invert(0.5) sepia(1) saturate(5) hue-rotate(175deg)'} **Computing Infrastructure**",
-      "Remote servers",
-      "Moving data to remote servers"
-    ]
+    "text": "There are some tasks in Linux that requires superuser (sudo) permission. For instance editing the /etc/fstab file, rebooting the system, mounting a drive, viewing /etc/passwd file and many other tasks cannot be done without sudo privilege."
   },
   {
-    "objectID": "docs/infrastructure/moving_data.html#linux-servers",
-    "href": "docs/infrastructure/moving_data.html#linux-servers",
-    "title": "Moving data to remote servers",
-    "section": "Linux servers",
-    "text": "Linux servers\nThe scp command is a secure file transfer utility that allows you to copy files between Linux-based hosts (this includes macOS) on a network. It uses SSH for data transfer, providing the same authentication and security as SSH. Common scenarios in which you might need to transfer data between hosts include uploading scripts, downloading results, or transferring configuration files.\n\n\n\n\n\n\n Moving large data batches\n\n\n\nIf you need to transfer large files or a multitude of small files, consider using tools like rclone or rsync instead. The instructions below are for transferring small files or a few files at a time.\n\n\n\n\n\n\n\n\n Overwriting files\n\n\n\nNotice that scp will overwrite files in the destination directory without prompting if they already exist. Always double-check the paths and filenames to avoid accidental data loss.\n\n\n\nPrerequisites\nBefore starting, you need:\n\nSCP (Secure Copy Protocol) installed on your local machine. SCP is a command-line utility that allows you to securely transfer files between hosts on a network.\nSSH access to the remote host (e.g., VPS) you want to connect to.\n\n\n\nMoving data via SCP\nTo copy data to and from a remote host using the scp command, you can use the following syntax:\n# Copy TO Remote Host\nscp &lt;path-my-local-file&gt; &lt;target-username&gt;@&lt;remote-host&gt;:&lt;full-path/remote-directory&gt;/\n# Copy FROM Remote Host\nscp &lt;target-username&gt;@&lt;remote-host&gt;:&lt;full-path/my-remote-file&gt; &lt;path-my-local-directory&gt;/\n\n\n\n\n\n\n Moving files to restricted directories\n\n\n\nSome directories on the remote host may require elevated permissions to write files. If you encounter a “Permission denied” error, you may need to use sudo to copy files to those directories. However, using scp with sudo directly is not supported. Instead, you can copy the file to a temporary directory /tmp where you have write access and then move it to the desired location using sudo after connecting to the remote host.\n\n\n\n\nTransferring files using ProxyJump\nIn the case of a VPS hosted by TU Delft, you need to copy data to a remote host via a bastion host (an intermediary server). Therefore, you must use the -o option of scp to specify a ProxyJump that will connect to the bastion host first. Alternatively, you can choose to transfer files using SSH tunneling.\n\nTransfer to remote host\n# If using default SSH key name, for example, id_ed25519 or id_rsa\nscp -o \"ProxyJump &lt;bastion-username&gt;@linux-bastion-ex.tudelft.nl\" &lt;path-my-local-file&gt; \\ \n&lt;target-username&gt;@&lt;remote-host&gt;:&lt;full-path/remote-directory&gt;/\n\n# If using a custom SSH key name, for example, my_custom_key\nscp  -i &lt;path-to-custom-private-ssh-key&gt; -o \"ProxyJump &lt;bastion-username&gt;@linux-bastion-ex.tudelft.nl\" \\ \n&lt;path-my-local-file&gt;  &lt;target-username&gt;@&lt;remote-host&gt;:&lt;full-path-remote-directory&gt;/\n\n\nTransfer from remote host\n# If using default SSH key name, for example, id_ed25519 or id_rsa\nscp -o \"ProxyJump &lt;bastion-username&gt;@linux-bastion-ex.tudelft.nl\" \\ \n&lt;target-username&gt;@&lt;remote-host&gt;:&lt;full-path-remote-file&gt;/ &lt;path-my-local-directory&gt;/\n\n# If using a custom SSH key name, for example, my_custom_key\nscp -i &lt;path-to-custom-private-ssh-key&gt; -o \"ProxyJump &lt;bastion-username&gt;@linux-bastion-ex.tudelft.nl\" \\\n&lt;target-username&gt;@&lt;remote-host&gt;:&lt;full-path-remote-file&gt;/ &lt;path-my-local-directory&gt;/\n\n\n\nTransferring files using SSH tunneling\nIf SSH tunneling has been configured correctly for the remote host, you can copy files to and from a remote host as follows:\n# Copy TO remote host\n$ &lt;path-my-local-file&gt; &lt;host-nickname&gt;:&lt;full-path-remote-directory&gt;/\n# Copy FROM remote host\n$ scp &lt;host-nickname&gt;:&lt;full-path-remote-file&gt;/ &lt;path-my-local-directory&gt;/",
-    "crumbs": [
-      "<ins>Guides</ins>",
-      "![](/docs/img/gear.svg){height=1em style='filter: invert(0.5) sepia(1) saturate(5) hue-rotate(175deg)'} **Computing Infrastructure**",
-      "Remote servers",
-      "Moving data to remote servers"
-    ]
+    "objectID": "docs/infrastructure/giving_sudo_privilege.html#what-this-documentation-will-help-achieve",
+    "href": "docs/infrastructure/giving_sudo_privilege.html#what-this-documentation-will-help-achieve",
+    "title": "Giving sudo privilege to a user",
+    "section": "What this documentation will help achieve",
+    "text": "What this documentation will help achieve\nThis documentation helps you to give sudo privilege to a user."
   },
   {
-    "objectID": "docs/infrastructure/moving_data.html#windows-servers",
-    "href": "docs/infrastructure/moving_data.html#windows-servers",
-    "title": "Moving data to remote servers",
-    "section": "Windows servers",
-    "text": "Windows servers\nTransferring data to and from a TU Delft Windows server is done via the Citrix platform, using the app’s built-in menu shown in the image below.\n\n\n\nCitrix Menu. Buttons from left to right: Download, Upload, Multimonitor, Clipboard, and Settings.\n\n\n\nTransferring files\n\nOpen a web browser and log into your Windows server as usual via the Citrix portal.\nOpen the Citrix menu located at the center-top of the server window and click on the Upload or Download button, as shown in the image above.\nA pop-up window will open on where you can select the files you wish to transfer to the server.\n\nIt is not possible to directly transfer files to or from the server’s C: or D: drives. Instead, you upload or download files to your personal TU Delft drive which is connected to the server. Using the Windows File Explorer and standard copy/paste or drag-and-drop operations, you can transfer the data from your personal drive to the server’s C: or D: drives.\n\n\n\n\n\n\n Warning\n\n\n\nTU Delft Windows servers have a limited amount of disk space in the C: drive. ICT instructs users to install applications and store data in the D: drive of the server to avoid running out of memory. Alternatively, you can use your personal TU Delft drive, which is also connected to the server. More information can be found at the bottom of the TOPdesk form to request a new VPS.\n\n\n\n\nUsing the clipboard\nTU Delft Windows servers do not allow to directly copy or paste text from the clipboard. Instead, you must use Citrix’s clipboard functionality. To do so, open the Citrix’s menu located at the center-top of the window and click on the Clipboard button. A pop-up window will open on which you can copy or paste the text you wish to transfer. Note that it is only possible to transfer text via the clipboard; images or files are not supported.",
+    "objectID": "docs/infrastructure/giving_sudo_privilege.html#prerequisites",
+    "href": "docs/infrastructure/giving_sudo_privilege.html#prerequisites",
+    "title": "Giving sudo privilege to a user",
+    "section": "Prerequisites",
+    "text": "Prerequisites\n\nTU Delft netID\nBasic knowledge of Linux\nThose who grant sudo permission need to have sudo permission themselves."
+  },
+  {
+    "objectID": "docs/infrastructure/giving_sudo_privilege.html#toolssoftware",
+    "href": "docs/infrastructure/giving_sudo_privilege.html#toolssoftware",
+    "title": "Giving sudo privilege to a user",
+    "section": "Tools/Software",
+    "text": "Tools/Software\n\nFor Windows users, you will need a programming and runtime environment like Cygwin or SSH client like PuTTY in order to access the VPS running Linux."
+  },
+  {
+    "objectID": "docs/infrastructure/giving_sudo_privilege.html#steps",
+    "href": "docs/infrastructure/giving_sudo_privilege.html#steps",
+    "title": "Giving sudo privilege to a user",
+    "section": "Steps",
+    "text": "Steps\n\nGetting the username(s) of sudo access candidates\nNavigating to the sudoers directory\nCreate an access file for each of the candidates\nEditing the access files\n\n\nStep 1. Getting the username(s) of sudo access candidates\nYou can get the usernames by checking the /etc/passwd file. This file contains all the usernames and their login information.\n\n\nStep 2. Navigating to the sudoers directory\nThe list of users who posses the sudo permission is in the /etc/sudoers.d/ folder, so navigate to that folder.\n\n\nStep 3. Create an access file for each of the candidates\nIf you use ls command to check the available files in this folder, you can see there are some files that their name start with a number and then a dash and then a user name (&lt;number&gt;-&lt;username&gt;). In Linux for every user with a sudo permission, there is a file like that, so we duplicate one of the existing files and rename them for each of the sudo candidates (in fact, name of those file doesn’t matter; however, it helps us to understand which users have sudo privilege without opening them).\n\n\nStep 4. Editing the access files\nIn this step you need to open each of the newly duplicated files and replace the old username in the second line with the sudo candidate username. After the edit, you just save the changes and exit the file."
+  },
+  {
+    "objectID": "docs/infrastructure/remote_servers.html",
+    "href": "docs/infrastructure/remote_servers.html",
+    "title": "Servers",
+    "section": "",
+    "text": "TU Delft offers its employees the use of physical or virtual servers. These servers are known as faculty managed servers and can be requested to conduct work related to a specific project within a faculty.\n\n\n\n\n\n\n Note\n\n\n\nIt is not possible to use the servers to set up services that are already provided by the ICT department.\n\n\n\nVirtual vs physical servers\nThere is a choice between virtual and physical servers. Virtual servers are provided free of charge and can be requested via TOPdesk. Physical servers can be requested by contacting the faculty’s IT manager, and any associated costs are paid by the purchasing department.\nIn most cases, a virtual server is the most suitable option. However, a physical server may be necessary when it is intended for use as a GPU or computing cluster.\n\n\nServer configuration\nWhen requesting a virtual server, users can choose from a range of predefined hardware and operating system configurations. The following operating systems are available: Windows Server 2019, Windows Server 2022, Red Hat Enterprise Linux (latest supported version), and Ubuntu (latest LTS version).\nIf additional capacity is needed, it can be requested via the ‘ICT malfunction’ or ‘Request ICT service’ forms in TOPdesk. This includes options such as increasing the number of processors, cores per processor, RAM, or disk storage.\nSome considerations:\n\nICT provides the server, operating system, and network access.\nUsers are granted administrator privileges, allowing them to install any required software, provided it complies with the conditions specified in the request form.\nAccess can be granted to both TU Delft members and external users.\nICT provides daily backups, restoration services, and virus scanning for Windows servers.\nICT ensures that the server operating system remains up to date (e.g., security patches), except for Linux systems.\n\n\n\n\n\n\n\n Tip\n\n\n\nDetailed information on managing the server, including network and firewall settings, is provided in the TOPdesk application form.\n\n\n\n\nExample use cases\n\nPerforming computational or data processing tasks that require a dedicated server environment.\nRunning an instance of a service or application, such as ABAQUS, COMSOL, or other specialized tools for a lab or research group.\nHosting a static website, a web application, or an API for a project.\nHosting databases, such as MySQL, PostgreSQL, MongoDB, or other database management systems.\nDeploying and managing TU Delft GitLab runners for CI/CD pipelines.\n\n\n\nRelevant links\n\nIntranet page for faculty managed servers\nTOPdesk form to request a new virtual server\nIntranet page for faculty IT managers",
     "crumbs": [
       "<ins>Guides</ins>",
       "![](/docs/img/gear.svg){height=1em style='filter: invert(0.5) sepia(1) saturate(5) hue-rotate(175deg)'} **Computing Infrastructure**",
-      "Remote servers",
-      "Moving data to remote servers"
+      "Remote servers"
     ]
   },
   {

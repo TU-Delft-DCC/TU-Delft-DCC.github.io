@@ -6,8 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="dcterms.date" content="2025-08-27">
 
-<title>Set up an Apache web server</title>
+<title>Web Servers</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -19,41 +20,6 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
-}
-/* CSS for syntax highlighting */
-html { -webkit-text-size-adjust: 100%; }
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-  }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -336,7 +302,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../docs/infrastructure/getting_started.html"><img src="../../docs/img/gear.svg" style="filter: invert(0.5) sepia(1) saturate(5) hue-rotate(175deg);height:1em"> <strong>Computing Infrastructure</strong></a></li><li class="breadcrumb-item"><a href="../../docs/infrastructure/remote_servers.html">Remote servers</a></li><li class="breadcrumb-item"><a href="../../docs/infrastructure/apache_webserver.html">Setting up an Apache web server</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../docs/infrastructure/getting_started.html"><img src="../../docs/img/gear.svg" style="filter: invert(0.5) sepia(1) saturate(5) hue-rotate(175deg);height:1em"> <strong>Computing Infrastructure</strong></a></li><li class="breadcrumb-item"><a href="../../docs/infrastructure/remote_servers.html">Remote servers</a></li><li class="breadcrumb-item"><a href="../../docs/infrastructure/web_servers.html">Web servers</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -1009,8 +975,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../docs/infrastructure/apache_webserver.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text">Setting up an Apache web server</span></a>
+  <a href="../../docs/infrastructure/web_servers.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">Web servers</span></a>
   </div>
 </li>
       </ul>
@@ -1027,19 +993,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#background" id="toc-background" class="nav-link active" data-scroll-target="#background">Background</a></li>
-  <li><a href="#what-this-documentation-will-help-achieve" id="toc-what-this-documentation-will-help-achieve" class="nav-link" data-scroll-target="#what-this-documentation-will-help-achieve">What this documentation will help achieve</a></li>
-  <li><a href="#prerequisites" id="toc-prerequisites" class="nav-link" data-scroll-target="#prerequisites">Prerequisites</a></li>
-  <li><a href="#tools-software" id="toc-tools-software" class="nav-link" data-scroll-target="#tools-software">Tools / Software</a></li>
-  <li><a href="#steps" id="toc-steps" class="nav-link" data-scroll-target="#steps">Steps</a>
+  <li><a href="#considerations-when-setting-up-a-web-server" id="toc-considerations-when-setting-up-a-web-server" class="nav-link active" data-scroll-target="#considerations-when-setting-up-a-web-server">Considerations when setting up a web server</a>
   <ul class="collapse">
-  <li><a href="#step-1.-request-a-virtual-private-server-from-tu-delft-ict" id="toc-step-1.-request-a-virtual-private-server-from-tu-delft-ict" class="nav-link" data-scroll-target="#step-1.-request-a-virtual-private-server-from-tu-delft-ict">Step 1. Request a Virtual Private Server from TU Delft ICT</a></li>
-  <li><a href="#step-2.-install-apache-web-server-on-the-vps" id="toc-step-2.-install-apache-web-server-on-the-vps" class="nav-link" data-scroll-target="#step-2.-install-apache-web-server-on-the-vps">Step 2. Install Apache web server on the VPS</a></li>
-  <li><a href="#step-3.-request-an-ssl-certificate-from-tu-delft-ict" id="toc-step-3.-request-an-ssl-certificate-from-tu-delft-ict" class="nav-link" data-scroll-target="#step-3.-request-an-ssl-certificate-from-tu-delft-ict">Step 3. Request an SSL certificate from TU Delft ICT</a></li>
-  <li><a href="#step-4.-configure-the-ssl-certificate-on-your-vps" id="toc-step-4.-configure-the-ssl-certificate-on-your-vps" class="nav-link" data-scroll-target="#step-4.-configure-the-ssl-certificate-on-your-vps">Step 4. Configure the SSL certificate on your VPS</a></li>
-  <li><a href="#step-5.-redirect-all-incoming-web-traffic-to-https" id="toc-step-5.-redirect-all-incoming-web-traffic-to-https" class="nav-link" data-scroll-target="#step-5.-redirect-all-incoming-web-traffic-to-https">Step 5. Redirect all incoming web traffic to HTTPS</a></li>
+  <li><a href="#operating-system" id="toc-operating-system" class="nav-link" data-scroll-target="#operating-system">Operating system</a></li>
+  <li><a href="#hardware-requirements" id="toc-hardware-requirements" class="nav-link" data-scroll-target="#hardware-requirements">Hardware requirements</a></li>
+  <li><a href="#web-server-software" id="toc-web-server-software" class="nav-link" data-scroll-target="#web-server-software">Web server software</a></li>
+  <li><a href="#security" id="toc-security" class="nav-link" data-scroll-target="#security">Security</a></li>
+  <li><a href="#maintenance" id="toc-maintenance" class="nav-link" data-scroll-target="#maintenance">Maintenance</a></li>
   </ul></li>
-  <li><a href="#notes-and-next-steps" id="toc-notes-and-next-steps" class="nav-link" data-scroll-target="#notes-and-next-steps">Notes and Next Steps</a></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/TU-Delft-DCC/TU-Delft-DCC.github.io/issues/new/choose" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div></nav>
     </div>
@@ -1047,17 +1008,35 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <main class="content" id="quarto-document-content">
 
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../docs/infrastructure/getting_started.html"><img src="../../docs/img/gear.svg" style="filter: invert(0.5) sepia(1) saturate(5) hue-rotate(175deg);height:1em"> <strong>Computing Infrastructure</strong></a></li><li class="breadcrumb-item"><a href="../../docs/infrastructure/remote_servers.html">Remote servers</a></li><li class="breadcrumb-item"><a href="../../docs/infrastructure/apache_webserver.html">Setting up an Apache web server</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../docs/infrastructure/getting_started.html"><img src="../../docs/img/gear.svg" style="filter: invert(0.5) sepia(1) saturate(5) hue-rotate(175deg);height:1em"> <strong>Computing Infrastructure</strong></a></li><li class="breadcrumb-item"><a href="../../docs/infrastructure/remote_servers.html">Remote servers</a></li><li class="breadcrumb-item"><a href="../../docs/infrastructure/web_servers.html">Web servers</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">Set up an Apache web server</h1>
-</div>
+<h1 class="title">Web Servers</h1>
+  <div class="quarto-categories">
+    <div class="quarto-category">infrastructure</div>
+    <div class="quarto-category">web server</div>
+    <div class="quarto-category">Apache</div>
+    <div class="quarto-category">Nginx</div>
+  </div>
+  </div>
 
 
 
 <div class="quarto-title-meta">
 
     
+    <div>
+    <div class="quarto-title-meta-heading">Last reviewed</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">August 27, 2025</p>
+    </div>
+  </div>
   
+    <div>
+    <div class="quarto-title-meta-heading">Last modified</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date-modified">August 27, 2025</p>
+    </div>
+  </div>
     
   </div>
   
@@ -1066,167 +1045,147 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 <script async="" defer="" src="https://scripts.simpleanalyticscdn.com/latest.js"></script>
-<section id="background" class="level2">
-<h2 class="anchored" data-anchor-id="background">Background</h2>
-<p>If you want to host a website for your lab, or a web application of some sort, you are going to need to work with a webserver. Apache Web Server is a software package that turns a computer into an HTTP server. That is, it sends web pages – stored as HTML files – to people on the internet who request them. It is open-source software, which means it can be used and modified freely.</p>
-<blockquote class="blockquote">
-<p>The job of a web server is to serve websites on the internet. To achieve that goal, it acts as a middleman between the server and client machines. It pulls content from the server on each user request and delivers it to the web…..One of the most popular web servers, Apache allows you to run a secure website without too much of a headache. It is free and open-source, making it a frequent choice of solopreneurs and small businesses who want a presence on the web…..The way Apache HTTP server works is that it will accept requests from the web browser, such as Google Chrome and Microsoft Edge, and turn programming scripts into web pages which contents are visible by the visitors.</p>
-</blockquote>
-</section>
-<section id="what-this-documentation-will-help-achieve" class="level2">
-<h2 class="anchored" data-anchor-id="what-this-documentation-will-help-achieve">What this documentation will help achieve</h2>
-<p>This guide will help you install the Apache web server on Ubuntu Linux and configure a HTTPS secure connection for all incoming web traffic.</p>
-<p>The steps outlined below will ensure that all incoming web traffic to your server from port 80 (HTTP) will be redirected to port 443 (HTTPS). Port 80 is still accessible but redirects automatically. Redirection is configured after the SSL certificate is in place.</p>
-</section>
-<section id="prerequisites" class="level2">
-<h2 class="anchored" data-anchor-id="prerequisites">Prerequisites</h2>
+<p>If you want to host a website or a web application, you will need to work with a web server. The job of a web server is to serve content on the internet by acting as a middleman between client machines and server machines. When a client requests content, the web server processes that request and delivers the appropriate response. Popular web server software includes <strong>Apache</strong> and <strong>Nginx</strong>.</p>
+<p>This guide provides general considerations to take into account when setting up a web server, along with links to resources for the most commonly used web server platforms. For specific implementation guidance, consult the official documentation for your chosen web server software and operating system.</p>
+<section id="considerations-when-setting-up-a-web-server" class="level2">
+<h2 class="anchored" data-anchor-id="considerations-when-setting-up-a-web-server">Considerations when setting up a web server</h2>
 <ul>
-<li>A system running Ubuntu Server</li>
-<li>An internet connection</li>
-<li>Access to a user account with sudo privileges</li>
+<li><strong>Operating system</strong>: Choose an operating system that provides appropriate performance, security, and compatibility for your needs.</li>
+<li><strong>Hardware requirements</strong>: Ensure that the server hardware meets the requirements for your web application and expected traffic levels.</li>
+<li><strong>Web server software</strong>: Select web server software that aligns with your application requirements (e.g.&nbsp;Apache or Nginx).</li>
+<li><strong>Security</strong>: Implement security measures to protect your server from vulnerabilities.</li>
+<li><strong>Maintenance</strong>: Regularly update your web server software and operating system to ensure security and performance. Monitor server logs for any unusual activity.</li>
+</ul>
+<section id="operating-system" class="level3">
+<h3 class="anchored" data-anchor-id="operating-system">Operating system</h3>
+<p>The choice of operating system significantly impacts your web server’s performance, security, and maintenance requirements. Server-grade operating systems are designed for continuous operation and provide robust performance features needed for web hosting environments.</p>
+<p><strong>Linux-based systems</strong> are widely used for web servers due to their stability, security features, and cost-effectiveness. Popular distributions include:</p>
+<ul>
+<li><strong>Ubuntu Server</strong>: Offers long-term support (LTS) versions with regular security updates and extensive community resources</li>
+<li><strong>Debian</strong>: Known for stability and security</li>
+<li><strong>Enterprise Linux distributions</strong>: Include commercially supported options like Red Hat Enterprise Linux (as well as community-driven alternatives)</li>
+</ul>
+<p><strong>Windows Server</strong> provides an alternative for environments requiring Windows-specific technologies or where teams have existing Windows expertise. Commercial licensing is required for Windows Server installations.</p>
+<p>At TU Delft, you can request a VPS preinstalled with Ubuntu Server or Windows Server. Which one you choose depends on your familiarity with the operating system and the specific requirements of your web application. However, Linux-based servers are generally preferred for web hosting due to their lower resource requirements, free licensing, and strong community support.</p>
+</section>
+<section id="hardware-requirements" class="level3">
+<h3 class="anchored" data-anchor-id="hardware-requirements">Hardware requirements</h3>
+<p>Hardware requirements depend on multiple factors including expected traffic volume, application complexity, data processing needs, and performance requirements. Without performance testing specific to your application, exact requirements can be difficult to determine.</p>
+<p><strong>General guidelines</strong> for basic web server hardware:</p>
+<ul>
+<li><strong>CPU</strong>: Multi-core processors handle concurrent requests more effectively. Current-generation processors with adequate cores are recommended for most applications.</li>
+<li><strong>RAM</strong>: Memory requirements vary significantly based on type and expected load. Start with sufficient RAM for your base operating system and application stack, then monitor and adjust based on actual usage patterns.</li>
+<li><strong>Storage</strong>: SSDs provide better performance than traditional hard drives. Storage capacity should account for your application files, data, logs, and future requirements.</li>
 </ul>
 </section>
-<section id="tools-software" class="level2">
-<h2 class="anchored" data-anchor-id="tools-software">Tools / Software</h2>
+<section id="web-server-software" class="level3">
+<h3 class="anchored" data-anchor-id="web-server-software">Web server software</h3>
+<p>Different web servers excel in different scenarios. The two most popular web servers are <strong>Apache</strong> and <strong>Nginx</strong>. Sometimes, the choice of a web server software is determined by your web application. For example, PHP applications can be served by either Apache (using mod_php) or Nginx (using PHP-FPM), while Node.js applications are commonly served by Nginx as a reverse proxy</p>
+<p>The following table provides a general comparison of key characteristics:</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 51%">
+<col style="width: 25%">
+<col style="width: 22%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Characteristic</th>
+<th>Apache</th>
+<th>Nginx</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Architecture</strong></td>
+<td>Process/thread-based</td>
+<td>Event-driven, asynchronous</td>
+</tr>
+<tr class="even">
+<td><strong>Configuration</strong></td>
+<td>Extensive options, flexible</td>
+<td>Simpler syntax, centralized</td>
+</tr>
+<tr class="odd">
+<td><strong>Static Content</strong></td>
+<td>Good performance</td>
+<td>Excellent (very fast &amp; lightweight)</td>
+</tr>
+<tr class="even">
+<td><strong>Dynamic Content</strong></td>
+<td>Built-in module support</td>
+<td>Typically uses external processors</td>
+</tr>
+<tr class="odd">
+<td><strong>Resource Usage</strong></td>
+<td>Higher memory per connection</td>
+<td>Lightweight, better under heavy load</td>
+</tr>
+<tr class="even">
+<td><strong>Learning Curve</strong></td>
+<td>Moderate</td>
+<td>Varies by use case</td>
+</tr>
+<tr class="odd">
+<td><strong>Platform</strong></td>
+<td>Cross-platform</td>
+<td>Mostly Linux/Unix (Windows support exists)</td>
+</tr>
+</tbody>
+</table>
+<p>Modern web applications often use <strong>application servers</strong> or <strong>runtime environments</strong> (such as PHP-FPM, Node.js, or Python WSGI servers) in conjunction with web servers to handle dynamic content generation.</p>
+<div class="callout callout-style-simple callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<i class="fa-solid fa-info-circle" aria-label="info-circle"></i> Static vs Dynamic Applications
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><em>Static web applications</em> serve the same content (HTML, CSS, JavaScript, images) to all users. <em>Dynamic web applications</em> generate content based on user input, database queries, or other variables, requiring server-side processing.</p>
+</div>
+</div>
+</section>
+<section id="security" class="level3">
+<h3 class="anchored" data-anchor-id="security">Security</h3>
+<p>Security is a critical aspect of web server management. You should keep in mind that a web server is typically open to anyone on the internet, and therefore, exposed to many cyber attacks. Here are some key security measures to consider:</p>
 <ul>
-<li>A command-line utility (Use keyboard shortcut CTRL-ALT-T, or right-click the desktop and left-click Open Terminal)</li>
-<li>A firewall – the default UFW (Uncomplicated Firewall) in Ubuntu is fine</li>
-<li>The APT package manager, installed by default on Ubuntu</li>
+<li><strong>Firewall</strong>: Configure a firewall to restrict access to the web server. Only allow necessary ports (e.g., 80 for HTTP, 443 for HTTPS).</li>
+<li><strong>SSL/TLS</strong>: Use SSL/TLS certificates to encrypt data in transit. This ensures that data exchanged between the client and server is secure.</li>
+<li><strong>Regular Updates</strong>: Keep the web server software and operating system up to date with the latest security patches.</li>
+<li><strong>Access Control</strong>: Implement strict access controls to limit who can access the server and its resources. Use SSH keys for secure remote access instead of passwords.</li>
+<li><strong>Hardening</strong>: Follow best practices for hardening your web server, such as disabling unnecessary modules, using secure configurations, and limiting user permissions, such as <a href="https://ssl-config.mozilla.org/">SSL configurations recommended by the Mozilla organisation</a></li>
+<li><strong>Monitoring</strong>: Set up logging and monitoring to detect unusual activity or potential security issues.</li>
+<li><strong>Backup</strong>: Regularly back up your web server data and configurations to recover from potential data loss or security incidents.</li>
 </ul>
 </section>
-<section id="steps" class="level2">
-<h2 class="anchored" data-anchor-id="steps">Steps</h2>
-<ol type="1">
-<li>Request a Virtual Private Server (VPS) from TU Delft ICT</li>
-<li>Install Apache web server on the VPS</li>
-<li>Request an SSL certificate from TU Delft ICT</li>
-<li>Configure the SSL certificate file on your VPS</li>
-<li>Redirect all incoming web traffic to HTTPS</li>
-</ol>
-<section id="step-1.-request-a-virtual-private-server-from-tu-delft-ict" class="level3">
-<h3 class="anchored" data-anchor-id="step-1.-request-a-virtual-private-server-from-tu-delft-ict">Step 1. Request a Virtual Private Server from TU Delft ICT</h3>
-<p>You can make a request for a server via the <a href="https://tudelft.topdesk.net/tas/public/ssp/content/serviceflow?unid=418c986f186d4934848dc2712039ed34">TopDesk self service portal</a>. If you would like more information, documentation can be found here ___</p>
-<p><em>Note:</em> to run a web server, ports 80 (HTTP) and 443 (HTTPS) must be opened.</p>
-</section>
-<section id="step-2.-install-apache-web-server-on-the-vps" class="level3">
-<h3 class="anchored" data-anchor-id="step-2.-install-apache-web-server-on-the-vps">Step 2. Install Apache web server on the VPS</h3>
-<p><a href="https://ubuntu.com/tutorials/install-and-configure-apache#1-overview">Apache</a> is an open source web server that’s available for Linux servers. It is one of the most commonly used softwares for creating a web server. And, it’s free!</p>
-<p><a href="https://phoenixnap.com/kb/install-apache-ubuntu">Installing Apache</a> can be done using commands in the terminal. These instructions are documented with further information at the link in the beginning of this paragraph. First, make sure your local software packages are up to date by running:</p>
-<p><code>sudo apt-get update</code></p>
-<p>When that has finished, install the Apache package using:</p>
-<p><code>sudo apt-get install apache2</code></p>
-<p>The system prompts for confirmation – do so, and allow the system to complete the installation.</p>
-<p>Find the IP address of your VPS by running:</p>
-<p><code>hostname -I | awk '{print $1}'</code></p>
-<p>Use this IP address to enter the following command in your terminal, replacing local.server.ip with the actual IP address of your server:</p>
-<p><code>http://local.server.ip</code></p>
-<p>If the installation was completed successfully, you should see the Apache2 Ubuntu Default page in your web browser.</p>
-<p>Although the Apache installation process is complete, there is one more additional step. Configure the default UFW firewall to allow traffic on port 80.</p>
-<p>Start by displaying available app profiles on UFW:</p>
-<p><code>sudo ufw show app list</code></p>
-<p>Use the following command to allow normal web traffic on port 80:</p>
-<p><code>sudo ufw allow 'Apache Full'</code></p>
-<p>Verify the changes by checking UFW status:</p>
-<p><code>sudo ufw status</code></p>
-<p>At this point, your Apache web server is serving over HTTP, which is a good first step! But remember, we need to secure the connection over HTTPS. So, we still have a few more steps.</p>
-</section>
-<section id="step-3.-request-an-ssl-certificate-from-tu-delft-ict" class="level3">
-<h3 class="anchored" data-anchor-id="step-3.-request-an-ssl-certificate-from-tu-delft-ict">Step 3. Request an SSL certificate from TU Delft ICT</h3>
-<p>Detailed directions on how to do this can be found here ___</p>
-<p>You can create the .csr file directly on the VPS by first create a directory on /etc/apache2 called ssl:</p>
-<p><code>mkdir /etc/apache2/ssl</code></p>
-<p>Then, generate a CSR and private key using:</p>
-<p><code>openssl req -x509 -newkey rsa:4096 -keyout &lt;server_domain&gt;.key -out &lt;server_domain&gt;.csr -nodes</code></p>
-<p>After successfully running the command it will ask for the information of certificate request. Complete it using the appropriate information and then <server_domain>.key and <server_domain>.csr files will be generated.</server_domain></server_domain></p>
-<p>The .csr file must be sent to TU Delft ICT using this TopDesk form: <a href="https://tudelft.topdesk.net/tas/public/ssp/content/serviceflow?unid=62aeef08314247f3aba7ff2297d011da">TOPdesk SSL certificate server request</a>.</p>
-</section>
-<section id="step-4.-configure-the-ssl-certificate-on-your-vps" class="level3">
-<h3 class="anchored" data-anchor-id="step-4.-configure-the-ssl-certificate-on-your-vps">Step 4. Configure the SSL certificate on your VPS</h3>
-<p>When you receive SSL certificate files from the signing authority via TU Delft ICT, you need to put the information from this certificate in a specific place on your VPS in order to securely expose the web server. These instructions come from here: - <a href="https://hostadvice.com/how-to/configure-apache-with-tls-ssl-certificate-on-ubuntu-18/">Configure ssl for https</a></p>
-<p>Navigate to the default Apache site config directory using the following command:</p>
-<p><code>sudo nano /etc/apache2/sites-available/default-ssl.conf</code></p>
-<p>This config file tells the server where to find SSL certificate. It should look like this:</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>                <span class="op">&lt;</span>IfModule <span class="ex">mod_ssl.c</span><span class="op">&gt;</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>                <span class="op">&lt;</span>VirtualHost <span class="ex">_default_:443</span><span class="op">&gt;</span></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>                <span class="ex">ServerAdmin</span> webmaster@localhost</span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>                <span class="ex">DocumentRoot</span> /var/www/html</span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>                <span class="ex">ErrorLog</span> <span class="va">${APACHE_LOG_DIR}</span>/error.log</span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>                <span class="ex">CustomLog</span> <span class="va">${APACHE_LOG_DIR}</span>/access.log combined</span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>                <span class="ex">SSLEngine</span> on</span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>                <span class="ex">SSLCertificateFile</span>    /etc/ssl/certs/ssl-cert-snakeoil.pem</span>
-<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>                <span class="ex">SSLCertificateKeyFile</span> /etc/ssl/private/ssl-cert-snakeoil.key</span>
-<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>                <span class="op">&lt;</span>FilesMatch <span class="st">".(cgi|shtml|phtml|php)$"</span><span class="op">&gt;</span></span>
-<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>                <span class="ex">SSLOptions</span> +StdEnvVars</span>
-<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>                <span class="op">&lt;</span>/FilesMatch<span class="op">&gt;</span></span>
-<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>                <span class="op">&lt;</span>Directory <span class="ex">/usr/lib/cgi-bin</span><span class="op">&gt;</span></span>
-<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>                <span class="ex">SSLOptions</span> +StdEnvVars</span>
-<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>                <span class="op">&lt;</span>/Directory<span class="op">&gt;</span></span>
-<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a>                <span class="op">&lt;</span>/VirtualHost<span class="op">&gt;</span></span>
-<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a>                <span class="op">&lt;</span>/IfModule<span class="op">&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>Edit this: <code>ServerAdmin webmaster@localhost</code> to this: <code>ServerAdmin email@example.net</code></p>
-<p>Add this right below the ServerAdmin line:</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>                <span class="ex">ServerName</span> ADD_YOUR_IP_OR_DOMAIN_NAME_HERE</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>Now, edit these lines with our certificate location:</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>                <span class="ex">SSLCertificateFile</span>    /etc/apache2/ssl/apache.crt</span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>                <span class="ex">SSLCertificateKeyFile</span> /etc/apache2/ssl/apache.key</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>Our file should look like this:</p>
-<div class="sourceCode" id="cb4"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>                <span class="op">&lt;</span>IfModule <span class="ex">mod_ssl.c</span><span class="op">&gt;</span></span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>                <span class="op">&lt;</span>VirtualHost <span class="ex">_default_:443</span><span class="op">&gt;</span></span>
-<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>                <span class="ex">ServerAdmin</span> email@example.net</span>
-<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>                <span class="ex">ServerName</span> 203.0.113.122</span>
-<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>                <span class="ex">DocumentRoot</span> /var/www/html</span>
-<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>                <span class="ex">ErrorLog</span> <span class="va">${APACHE_LOG_DIR}</span>/error.log</span>
-<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a>                <span class="ex">CustomLog</span> <span class="va">${APACHE_LOG_DIR}</span>/access.log combined</span>
-<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a>                <span class="ex">SSLEngine</span> on</span>
-<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a>                <span class="ex">SSLCertificateFile</span>    /etc/apache2/ssl/apache.crt</span>
-<span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a>                <span class="ex">SSLCertificateKeyFile</span> /etc/apache2/ssl/apache.key</span>
-<span id="cb4-15"><a href="#cb4-15" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-16"><a href="#cb4-16" aria-hidden="true" tabindex="-1"></a>                <span class="op">&lt;</span>FilesMatch <span class="st">".(cgi|shtml|phtml|php)$"</span><span class="op">&gt;</span></span>
-<span id="cb4-17"><a href="#cb4-17" aria-hidden="true" tabindex="-1"></a>                <span class="ex">SSLOptions</span> +StdEnvVars</span>
-<span id="cb4-18"><a href="#cb4-18" aria-hidden="true" tabindex="-1"></a>                <span class="op">&lt;</span>/FilesMatch<span class="op">&gt;</span></span>
-<span id="cb4-19"><a href="#cb4-19" aria-hidden="true" tabindex="-1"></a>                <span class="op">&lt;</span>Directory <span class="ex">/usr/lib/cgi-bin</span><span class="op">&gt;</span></span>
-<span id="cb4-20"><a href="#cb4-20" aria-hidden="true" tabindex="-1"></a>                <span class="ex">SSLOptions</span> +StdEnvVars</span>
-<span id="cb4-21"><a href="#cb4-21" aria-hidden="true" tabindex="-1"></a>                <span class="op">&lt;</span>/Directory<span class="op">&gt;</span></span>
-<span id="cb4-22"><a href="#cb4-22" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-23"><a href="#cb4-23" aria-hidden="true" tabindex="-1"></a>                <span class="op">&lt;</span>/VirtualHost<span class="op">&gt;</span></span>
-<span id="cb4-24"><a href="#cb4-24" aria-hidden="true" tabindex="-1"></a>                <span class="op">&lt;</span>/IfModule<span class="op">&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p><strong>Save the file</strong>, and close it.</p>
-<p><em>Note: If you are using something other than Apache Web Server (like, nginx for example) you can also create the SSL config file from scratch. Each application will have different syntax that should be used in this file. You can see how the syntax is set up by using <a href="https://ssl-config.mozilla.org/#server=apache&amp;version=2.4.41&amp;config=intermediate&amp;openssl=1.1.1d&amp;guideline=5.6">this tool</a></em></p>
-<p>Enable the SSL module using following command:</p>
-<p><code>sudo a2enmod ssl</code></p>
-<p>Now enable the site we have just edited:</p>
-<p><code>sudo a2ensite default-ssl.conf</code></p>
-<p>Restart Apache:</p>
-<p><code>sudo service apache2 restart</code></p>
-<p>The website is now secure, access it using following address in the browser</p>
-<p><code>https://YOUR_SERVER_IP</code></p>
-</section>
-<section id="step-5.-redirect-all-incoming-web-traffic-to-https" class="level3">
-<h3 class="anchored" data-anchor-id="step-5.-redirect-all-incoming-web-traffic-to-https">Step 5. Redirect all incoming web traffic to HTTPS</h3>
-<p><code>sudo a2enmod proxy</code></p>
-<p><code>sudo a2enmod proxy_http</code></p>
-<p><code>sudo a2enmod rewrite</code></p>
-<p>Add in apache conf:</p>
-<div class="sourceCode" id="cb5"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>                <span class="ex">ProxyPass</span> /thredds http://localhost:8080/thredds</span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>                <span class="ex">ProxyPassReverse</span> /thredds http://localhost:8080/thredds</span>
-<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>                <span class="ex">RedirectMatch</span> ^/$ /thredds/</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</section>
-</section>
-<section id="notes-and-next-steps" class="level2">
-<h2 class="anchored" data-anchor-id="notes-and-next-steps">Notes and Next Steps</h2>
-<p>Test that your web server is secured by HTTPS by typing the Fully Qualified Domain Name (FQDN) of your server in a web browser. If HTTPS is enabled, the URL should begin with it - if it still says HTTP, something will need to be reconfigured.</p>
+<section id="maintenance" class="level3">
+<h3 class="anchored" data-anchor-id="maintenance">Maintenance</h3>
+<p>To ensure optimal performance and security of a web server, you need to perform regular maintenance tasks. Plan for regular maintenance activities:</p>
+<ul>
+<li><strong>Monitoring</strong>: Regularly check server logs for errors or unusual activity.</li>
+<li><strong>Updates and patches</strong>: Establish procedures for applying security updates and software patches in a timely manner.</li>
+<li><strong>Backups</strong>: Regularly back up server configurations and data to prevent loss.</li>
+<li><strong>Renewal of SSL Certificates</strong>: Ensure that SSL/TLS certificates are renewed before they expire to maintain secure connections.</li>
+</ul>
+<div class="callout callout-style-simple callout-tip no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<i class="fa-solid fa-lightbulb" aria-label="lightbulb"></i> Do not overlook maintenance
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>The time, cost and effort of maintaining a web server is often overlooked. While initial setup may be straightforward, maintaining security, availability, and performance requires continuous attention and resources. Unmaintained web servers are vulnerable to security and privacy threats.</p>
+</div>
+</div>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->
