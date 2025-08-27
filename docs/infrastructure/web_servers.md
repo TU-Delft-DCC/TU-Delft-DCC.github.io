@@ -108,14 +108,14 @@ Modern web applications often use **application servers** or **runtime environme
 
 ### Security
 
-Security is a critical aspect of web server management. You should keep in mind that a web server is typically open to anyone on the Internet, and therefore, expose to many cyber attacks. Here are some key security measures to consider:
+Security is a critical aspect of web server management. You should keep in mind that a web server is typically open to anyone on the internet, and therefore, exposed to many cyber attacks. Here are some key security measures to consider:
 
 * **Firewall**: Configure a firewall to restrict access to the web server. Only allow necessary ports (e.g., 80 for HTTP, 443 for HTTPS).
 * **SSL/TLS**: Use SSL/TLS certificates to encrypt data in transit. This ensures that data exchanged between the client and server is secure.
 * **Regular Updates**: Keep the web server software and operating system up to date with the latest security patches.
 * **Access Control**: Implement strict access controls to limit who can access the server and its resources. Use SSH keys for secure remote access instead of passwords.
 * **Hardening**: Follow best practices for hardening your web server, such as disabling unnecessary modules, using secure configurations, and limiting user permissions, such as [SSL configurations recomended by the Mozilla organisation](https://ssl-config.mozilla.org/)
-* * **Monitoring**: Regularly monitor server logs for suspicious activity and set up alerts for potential security breaches.
+* **Monitoring**: Set up logging and monitoring to detect unusual activity or potential security issues.
 * **Backup**: Regularly back up your web server data and configurations to recover from potential data loss or security incidents.
 
 ### Maintainance
