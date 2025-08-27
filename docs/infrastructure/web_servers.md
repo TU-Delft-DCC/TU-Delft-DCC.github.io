@@ -49,15 +49,15 @@ categories:
 
 If you want to host a website or a web application, you will need to work with a web server. The job of a web server is to serve content on the internet by acting as a middleman between client machines and server machines. When a client requests content, the web server processes that request and delivers the appropriate response. Popular web server software includes **Apache** and **Nginx**.
 
-This guide provides you with a list of general considerations to take into account when setting up a web server. Links to step-by-step guides are provided for the most popular web servers, Apache and Nginx.
+This guide provides general considerations to take into account when setting up a web server, along with links to resources for the most commonly used web server platforms. For specific implementation guidance, consult the official documentation for your chosen web server software and operating system.
 
 ## Considerations when setting up a web server
 
-* **Operating System**: The choice of operating system can affect the performance and security of your web server. 
-* **Hardware Requirements**: Ensure that the s1erver hardware meets the requirements for your web application. 
-* **Web Server Software**: Choose between popular web server software like Apache, Nginx.
-* **Security**: Implement security measures  to protect your server from vulnerabilities.
-* **Maintainance**: Regularly update your web server software and operating system to ensure security and performance. Monitor server logs for any unusual activity.
+* **Operating system**: Choose an operating system that provides appropriate performance, security, and compatibility for your needs.
+* **Hardware requirements**: Ensure that the server hardware meets the requirements for your web application and expected traffic levels.
+* **Web server software**: Select web server software that aligns with your application requirements (e.g. Apache or Nginx).
+* **Security**: Implement security measures to protect your server from vulnerabilities.
+* **Maintenance**: Regularly update your web server software and operating system to ensure security and performance. Monitor server logs for any unusual activity.
 
 ### Operating System
      
