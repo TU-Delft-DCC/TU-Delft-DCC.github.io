@@ -47,9 +47,7 @@ categories:
 
 ---
 
-If you want to host a website or a web application of some sort, you are going to need to work with a webserver. 
-The job of a web server is to serve content on the internet. To achieve that goal, it acts as a middleman between two machines.
-The *client machine*  requests content or tasks to the   *server machine*.  A web server typically sits on the *server manchine*, although not necessarly,  and manage requests from multiple clients.   Two of the most popular web servers are **Apache** and **Nginx** (pronounced "Engine-X").
+If you want to host a website or a web application, you will need to work with a web server. The job of a web server is to serve content on the internet by acting as a middleman between client machines and server machines. When a client requests content, the web server processes that request and delivers the appropriate response. Popular web server software includes **Apache** and **Nginx**.
 
 This guide provides you with a list of general considerations to take into account when setting up a web server. Links to step-by-step guides are provided for the most popular web servers, Apache and Nginx.
 
