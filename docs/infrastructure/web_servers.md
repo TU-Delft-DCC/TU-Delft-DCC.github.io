@@ -114,7 +114,7 @@ Security is a critical aspect of web server management. You should keep in mind 
 * **SSL/TLS**: Use SSL/TLS certificates to encrypt data in transit. This ensures that data exchanged between the client and server is secure.
 * **Regular Updates**: Keep the web server software and operating system up to date with the latest security patches.
 * **Access Control**: Implement strict access controls to limit who can access the server and its resources. Use SSH keys for secure remote access instead of passwords.
-* **Hardening**: Follow best practices for hardening your web server, such as disabling unnecessary modules, using secure configurations, and limiting user permissions, such as [SSL configurations recomended by the Mozilla organisation](https://ssl-config.mozilla.org/)
+* **Hardening**: Follow best practices for hardening your web server, such as disabling unnecessary modules, using secure configurations, and limiting user permissions, such as [SSL configurations recommended by the Mozilla organisation](https://ssl-config.mozilla.org/)
 * **Monitoring**: Set up logging and monitoring to detect unusual activity or potential security issues.
 * **Backup**: Regularly back up your web server data and configurations to recover from potential data loss or security incidents.
 
