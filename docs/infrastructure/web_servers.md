@@ -5,8 +5,8 @@
 # Uncomment and populate the next line accordingly
 date: 2025-08-01
 
-# We use this key to indicate the last modified date [automatic entry]
-date-modified: last-modified
+# We use this key to indicate the last modified date [manual entry, use YYYY-MM-DD]
+date-modified: 2025-08-27
 
 # Do not modify
 lang: en
@@ -40,10 +40,9 @@ corresponding: Manuel G. Garcia
 # Meaningful keywords, newline separated [manual entry]
 # Uncomment and populate the next line and list accordingly
 categories: 
-- web server 
 - infrastructure
+- web server 
 - Apache
-- Ubuntu
 - Nginx
 
 ---
