@@ -85,7 +85,7 @@ Hardware requirements depend on multiple factors including expected traffic volu
 
 ### Web server software
 
-Different web servers excel in different scenarios. The two most popular web servers are **Apache** and **Nginx**. Sometimes, the choice of a web server software is determined by your web application. For example, a web application built with PHP is typically served by Apache, while a web application built with Node.js is typically served by Nginx.
+Different web servers excel in different scenarios. The two most popular web servers are **Apache** and **Nginx**. Sometimes, the choice of a web server software is determined by your web application. For example, PHP applications can be served by either Apache (using mod_php) or Nginx (using PHP-FPM), while Node.js applications are commonly served by Nginx as a reverse proxy
 
 The following table provides a general comparison of key characteristics:
 
