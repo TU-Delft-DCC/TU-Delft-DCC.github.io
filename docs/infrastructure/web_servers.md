@@ -118,16 +118,16 @@ Security is a critical aspect of web server management. You should keep in mind 
 * **Monitoring**: Set up logging and monitoring to detect unusual activity or potential security issues.
 * **Backup**: Regularly back up your web server data and configurations to recover from potential data loss or security incidents.
 
-### Maintainance
+### Maintenance
 
-To ensure optimal performance and security of a web server, you need to perform regular maintenance tasks. This includes:
+To ensure optimal performance and security of a web server, you need to perform regular maintenance tasks. Plan for regular maintenance activities:
 
 * **Monitoring**: Regularly check server logs for errors or unusual activity. 
-* **Updates**: Apply security patches and updates to the web server software and operating system.
-* **Backups**: Regularly back up server configurations and data to prevent data loss.
+* **Updates and patches**: Establish procedures for applying security updates and software patches in a timely manner.
+* **Backups**: Regularly back up server configurations and data to prevent loss.
 * **Renewal of SSL Certificates**: Ensure that SSL/TLS certificates are renewed before they expire to maintain secure connections.
 
 :::{.callout-tip appearance="simple" icon="false"}
 ## {{< fa lightbulb >}} Do not overlook maintenance
-The time, cost and effort of maintaining a web server is often overlooked. Setting up a web server is relatively straightforward, but maintaining it requires ongoing effort and vigilance because you want you web application to be available and secure at all times. Unmaintained web servers are vulnerable to security and data privacy threats.  
+The time, cost and effort of maintaining a web server is often overlooked. While initial setup may be straightforward, maintaining security, availability, and performance requires continuous attention and resources. Unmaintained web servers are vulnerable to security and privacy threats.  
 :::
