@@ -73,17 +73,15 @@ The choice of operating system significantly impacts your web server's performan
 
 At TU Delft, you can request a VPS preinstalled with Ubuntu Server or Windows Server. Which one you choose depends on your familiarity with the operating system and the specific requirements of your web application. However, Linux-based servers are generally preferred for web hosting due to their lower resource requirements, free licensing, and strong community support.
 
-### Hardware Requirments
+### Hardware requirements
 
-Consider what type of hardware you need for your web server. This includes the CPU, RAM, and storage capacity. 
-The hardware requirements depend a mix of factors, including the expected traffic (number of user per day, number of request per user), the complexity of the web application, and the type of content being served.
+Hardware requirements depend on multiple factors including expected traffic volume, application complexity, data processing needs, and performance requirements. Without performance testing specific to your application, exact requirements can be difficult to determine.
 
-It is difficult to exactly estimate the hardware requirements for a web server without knowing the details of a web application and performing perfomance tests, but here are some general guidelines:
+**General guidelines** for basic web server hardware:
 
-- **CPU**: A multi-core processor is recommended for handling multiple requests simultaneously. For small to medium-sized applications, a quad-core CPU should suffice.
-- **RAM**: At least 2 GB of RAM is recommended for small applications (e.g., website with a few web pages). For larger applications (e.g., dashboards, data processing platforms, geoportals) or those with high traffic (e.g., 100's of users per day), consider 4 GB or more.
-- **Storage**:
-  SSDs are preferred for faster data access. The storage capacity depends on the size of your web application and the amount of data you expect to store. A minimum of 20 GB is recommended for small applications, while larger applications may require 100 GB or more.
+- **CPU**: Multi-core processors handle concurrent requests more effectively. Current-generation processors with adequate cores are recommended for most applications.
+- **RAM**: Memory requirements vary significantly based on type and expected load. Start with sufficient RAM for your base operating system and application stack, then monitor and adjust based on actual usage patterns.
+- **Storage**: SSDs provide better performance than traditional hard drives. Storage capacity should account for your application files, data, logs, and future requirements.
 
 ### Web Server Software
 
