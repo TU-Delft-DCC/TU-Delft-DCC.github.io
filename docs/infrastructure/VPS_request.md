@@ -132,4 +132,3 @@ Common next steps after obtaining a VPS and storage include initial configuratio
 - [Install Docker](https://phoenixnap.com/kb/how-to-install-docker-on-ubuntu-18-04)
 - [Configure Docker for use as non-root](https://docs.docker.com/engine/install/linux-postinstall/)
 - [Configure a runner for the TU Delft Gitlab](../software/automation/gitlab/gitlab_docker.md)
-- [Apache Web Server](./apache_webserver.md)
