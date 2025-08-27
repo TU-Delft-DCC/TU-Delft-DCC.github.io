@@ -59,17 +59,19 @@ This guide provides general considerations to take into account when setting up 
 * **Security**: Implement security measures to protect your server from vulnerabilities.
 * **Maintenance**: Regularly update your web server software and operating system to ensure security and performance. Monitor server logs for any unusual activity.
 
-### Operating System
-     
-The operating system you choose for your web server can significantly impact its performance, security, and compatibility with various software. You need a server-grade operating system because web servers often run on enterprise-grade hardware and require robust performance and security features.
-Linux-based systems are commonly used for web servers due to their stability and security features. Some of the most popular distributions include:
+### Operating system
 
-* [Ubuntu Server](https://ubuntu.com/download/server), 
-* [CentOS](https://www.centos.org/download/), and 
-* [Debian](https://www.debian.org/).
+The choice of operating system significantly impacts your web server's performance, security, and maintenance requirements. Server-grade operating systems are designed for continuous operation and provide robust performance features needed for web hosting environments.
 
-For Windows-based servers, you can use [Windows Server](https://www.microsoft.com/en-us/windows-server). A license is required for Windows Server, while Linux distributions are typically free to use. 
-At TU Delft, you can request a Personal Virtual Server (VPS) preinstalled with Ubuntu Server or Windows Server. Which one you choose depends on your familiarity with the operating system and the specific requirements of your web application. However, Linux-based servers are generally preferred for web hosting due to their lower resource requirements, free licensing, and strong community support.
+**Linux-based systems** are widely used for web servers due to their stability, security features, and cost-effectiveness. Popular distributions include:
+
+* **Ubuntu Server**: Offers long-term support (LTS) versions with regular security updates and extensive community resources
+* **Debian**: Known for stability and security
+* **Enterprise Linux distributions**: Include commercially supported options like Red Hat Enterprise Linux (as well as community-driven alternatives)
+
+**Windows Server** provides an alternative for environments requiring Windows-specific technologies or where teams have existing Windows expertise. Commercial licensing is required for Windows Server installations.
+
+At TU Delft, you can request a VPS preinstalled with Ubuntu Server or Windows Server. Which one you choose depends on your familiarity with the operating system and the specific requirements of your web application. However, Linux-based servers are generally preferred for web hosting due to their lower resource requirements, free licensing, and strong community support.
 
 ### Hardware Requirments
 
