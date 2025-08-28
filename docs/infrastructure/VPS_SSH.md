@@ -48,7 +48,7 @@ categories:
 
 ---
 
-This guide explains how to set up a secure, single-step SSH connection to a Virtual Private Server (VPS) at TU Delft using SSH tunneling. By default, connecting to a VPS requires first accessing a **Bastion Host** (an intermediary server controlling access), making it a two-step process. Therefore, it is a **two-step** process: to reach a remote host, a user has to connect first to the bastion host and from there to the VPS. However, by using SSH tunneling and SSH keys, you can connect to your VPS and other remote hosts in a single step.
+This guide explains how to set up a secure, single-step SSH connection to a Virtual Private Server (VPS) at TU Delft using SSH tunneling. By default, connecting to a VPS requires first accessing a **Bastion Host** (an intermediary server controlling access), making it a two-step process. However, by using SSH tunneling and SSH keys, you can connect to your VPS and other remote hosts in a single step.
 
 With the method described below, you will be able to connect directly from your local machine to your VPS, bypassing the need to log in to the bastion host separately. This setup also simplifies secure file transfers between your local machine and the VPS.
 
@@ -63,7 +63,7 @@ Before starting, you need:
 * A TU Delft NetID.
 * Access to a VPS provided by TU Delft ICT, including a username and password.
 * An SSH client installed on your local machine (usually included with most Linux and macOS distributions; for Windows, you can use a third-party SSH client like [PuTTY](https://www.putty.org/)).
-* ALinux or macOS terminal
+* A Linux or macOS terminal
 
 ### Steps for Linux and macOS
 
@@ -72,7 +72,7 @@ Before starting, you need:
 1. Create SSH keys.
 2. Copy SSH keys to bastion host and remote server.
 3. Create a new host for SSH connection.
-4. Test connection
+4. Test connection.
 :::
 
 
@@ -129,16 +129,17 @@ Similar to passwords, it is advised to rotate your SSH keys regularly (e.g., eve
 Host <host-nickname>
     HostName <target-host>
     User <target-username>
-    ProxyJump <target-username>@linux-bastion-ex.tudelft.nl
+    ProxyJump <bastion-username>@linux-bastion-ex.tudelft.nl
     IdentityFile ~/.ssh/<my-keyname>
 ```
 
 Replace:
-**<host-nickname>:** a name of your choice for the target host, e.g., `my-server`
-**<target-host>:** the actual name of the target host (FQDM), e.g, `server.tudelft.nl`
-**<target-username>:**  the username used to log in to the target host, usually your NetID
-**<bastion-username>:** the username used to log in to the bastion server
-**<my-keyname>:** the name of the SSH private key you created, e.g., `id_rsa`. If your private key is stored in a different location, replace the path accordingly.
+
+- `<host-nickname>`: a name of your choice for the target host, e.g., `my-server`.
+- `<target-host>`: the actual name of the target host (FQDM), e.g, `server.tudelft.nl`.
+- `<target-username>`:  the username used to log in to the target host, usually your NetID.
+- `<bastion-username>`: the username used to log in to the bastion server (often same as NetID, but keep separate in case it differs).
+- `<my-keyname>`: the name of the SSH private key you created, e.g., `id_rsa`. If your private key is stored in a different location, replace the path accordingly.
 
 
 4. Test the SSH tunneling connection. Connect to the VPS using *SSH tunneling* by typing the command below. Use your *bastion-password* when asked. This is usually the password associated with your NetID.
