@@ -1198,114 +1198,121 @@
     ]
   },
   {
-    "objectID": "docs/infrastructure/getting_started.html",
-    "href": "docs/infrastructure/getting_started.html",
-    "title": "Overview",
+    "objectID": "docs/infrastructure/VPS_request.html",
+    "href": "docs/infrastructure/VPS_request.html",
+    "title": "Request a VPS",
     "section": "",
-    "text": "Under construction! 🏗️",
-    "crumbs": [
-      "<ins>Guides</ins>",
-      "![](/docs/img/gear.svg){height=1em style='filter: invert(0.5) sepia(1) saturate(5) hue-rotate(175deg)'} **Computing Infrastructure**",
-      "Getting started"
-    ]
-  },
-  {
-    "objectID": "docs/infrastructure/VPS_SSL_Certs.html",
-    "href": "docs/infrastructure/VPS_SSL_Certs.html",
-    "title": "Configure SSL certificates",
-    "section": "",
-    "text": "It is common practice to have web servers serving content over HTTPS, which is the secure version of HTTP. In order to do this and make the connection secure, you need an SSL certificate from a certificate signing authority.\nThe role of the SSL certificate is to indicate the encryption of user data from a server exposed on the web. SSL is a key for encrypting information. When a website’s certificate is expired or invalid, or if it using a self-signed (unofficial) certificate, as a user you either get a warning saying, “go back to safety,” or can’t access the website over https - instead you see a message that says “Not Secure” in your web browser. This means that the certificate is not signed by an authority, so it’s not trusted.\nIn theory, if your web server is universally accessible and doesn’t contain forms for users with personal or confidential information, there is no strict need for HTTPS connection. But, HTTPS is the modern standard and without it, visitors will have impression that the website is not safe. Therefore it is good practice to always have HTTPS on your web server.",
+    "text": "This guide describes the essentials for requesting and setting up a TU Delft managed server. A server is a computer that can handle requests. Servers are often a critical component of architectural solutions for data management. There are many reasons why you as a researcher may need to request a server, for example:\n\nAutomation of a process in your data collection\nSet up runners for the TU Delft Gitlab\nA part of your analysis should be running continuously, and you cannot do it with your own machine\nSpecific functionality (web server)\nYou need a machine to handle large amounts of requests\nYou want to outsource the maintenance of a server to TU Delft ICT\nRely on safety and security administrated by the University, including backups\nSecuring/controlling access\nMounting storage drive",
     "crumbs": [
       "<ins>Guides</ins>",
       "![](/docs/img/gear.svg){height=1em style='filter: invert(0.5) sepia(1) saturate(5) hue-rotate(175deg)'} **Computing Infrastructure**",
       "Remote servers",
-      "Configure SSL certificates"
+      "Request a VPS"
     ]
   },
   {
-    "objectID": "docs/infrastructure/VPS_SSL_Certs.html#background",
-    "href": "docs/infrastructure/VPS_SSL_Certs.html#background",
-    "title": "Configure SSL certificates",
+    "objectID": "docs/infrastructure/VPS_request.html#background",
+    "href": "docs/infrastructure/VPS_request.html#background",
+    "title": "Request a VPS",
     "section": "",
-    "text": "It is common practice to have web servers serving content over HTTPS, which is the secure version of HTTP. In order to do this and make the connection secure, you need an SSL certificate from a certificate signing authority.\nThe role of the SSL certificate is to indicate the encryption of user data from a server exposed on the web. SSL is a key for encrypting information. When a website’s certificate is expired or invalid, or if it using a self-signed (unofficial) certificate, as a user you either get a warning saying, “go back to safety,” or can’t access the website over https - instead you see a message that says “Not Secure” in your web browser. This means that the certificate is not signed by an authority, so it’s not trusted.\nIn theory, if your web server is universally accessible and doesn’t contain forms for users with personal or confidential information, there is no strict need for HTTPS connection. But, HTTPS is the modern standard and without it, visitors will have impression that the website is not safe. Therefore it is good practice to always have HTTPS on your web server.",
+    "text": "This guide describes the essentials for requesting and setting up a TU Delft managed server. A server is a computer that can handle requests. Servers are often a critical component of architectural solutions for data management. There are many reasons why you as a researcher may need to request a server, for example:\n\nAutomation of a process in your data collection\nSet up runners for the TU Delft Gitlab\nA part of your analysis should be running continuously, and you cannot do it with your own machine\nSpecific functionality (web server)\nYou need a machine to handle large amounts of requests\nYou want to outsource the maintenance of a server to TU Delft ICT\nRely on safety and security administrated by the University, including backups\nSecuring/controlling access\nMounting storage drive",
     "crumbs": [
       "<ins>Guides</ins>",
       "![](/docs/img/gear.svg){height=1em style='filter: invert(0.5) sepia(1) saturate(5) hue-rotate(175deg)'} **Computing Infrastructure**",
       "Remote servers",
-      "Configure SSL certificates"
+      "Request a VPS"
     ]
   },
   {
-    "objectID": "docs/infrastructure/VPS_SSL_Certs.html#what-this-documentation-will-help-achieve",
-    "href": "docs/infrastructure/VPS_SSL_Certs.html#what-this-documentation-will-help-achieve",
-    "title": "Configure SSL certificates",
-    "section": "What this documentation will help achieve",
-    "text": "What this documentation will help achieve\nSSL certificates for TU Delft researchers and staff may be requested by contacting the ICT service desk. TU Delft ICT will order SSL certificates on your behalf from a trusted certificate signing authority.",
+    "objectID": "docs/infrastructure/VPS_request.html#what-this-documentation-will-help-you-achieve",
+    "href": "docs/infrastructure/VPS_request.html#what-this-documentation-will-help-you-achieve",
+    "title": "Request a VPS",
+    "section": "What this documentation will help you achieve",
+    "text": "What this documentation will help you achieve\nThis documentation helps researchers to request a VPS and data storage on the Project Drive. There are other forms of storage available, but Project Drive storage is often recommended for expandable and secure data preservation.",
     "crumbs": [
       "<ins>Guides</ins>",
       "![](/docs/img/gear.svg){height=1em style='filter: invert(0.5) sepia(1) saturate(5) hue-rotate(175deg)'} **Computing Infrastructure**",
       "Remote servers",
-      "Configure SSL certificates"
+      "Request a VPS"
     ]
   },
   {
-    "objectID": "docs/infrastructure/VPS_SSL_Certs.html#prerequisites",
-    "href": "docs/infrastructure/VPS_SSL_Certs.html#prerequisites",
-    "title": "Configure SSL certificates",
+    "objectID": "docs/infrastructure/VPS_request.html#prerequisites",
+    "href": "docs/infrastructure/VPS_request.html#prerequisites",
+    "title": "Request a VPS",
     "section": "Prerequisites",
-    "text": "Prerequisites\n\nTU Delft netID\nLinux-based VPS provided by TU Delft ICT\n(optional) 1-step SSH connection established (see instructions ___)",
+    "text": "Prerequisites\n\nTU Delft netID\nBasic knowledge of Linux (if requesting Linux server, recommended)",
     "crumbs": [
       "<ins>Guides</ins>",
       "![](/docs/img/gear.svg){height=1em style='filter: invert(0.5) sepia(1) saturate(5) hue-rotate(175deg)'} **Computing Infrastructure**",
       "Remote servers",
-      "Configure SSL certificates"
+      "Request a VPS"
     ]
   },
   {
-    "objectID": "docs/infrastructure/VPS_SSL_Certs.html#toolssoftware",
-    "href": "docs/infrastructure/VPS_SSL_Certs.html#toolssoftware",
-    "title": "Configure SSL certificates",
+    "objectID": "docs/infrastructure/VPS_request.html#toolssoftware",
+    "href": "docs/infrastructure/VPS_request.html#toolssoftware",
+    "title": "Request a VPS",
     "section": "Tools/Software",
-    "text": "Tools/Software\n\nNone",
+    "text": "Tools/Software\n\nFor Windows users, you will need a programming and runtime environment like Cygwin or SSH client like PuTTY in order to access the VPS running Linux",
     "crumbs": [
       "<ins>Guides</ins>",
       "![](/docs/img/gear.svg){height=1em style='filter: invert(0.5) sepia(1) saturate(5) hue-rotate(175deg)'} **Computing Infrastructure**",
       "Remote servers",
-      "Configure SSL certificates"
+      "Request a VPS"
     ]
   },
   {
-    "objectID": "docs/infrastructure/VPS_SSL_Certs.html#steps",
-    "href": "docs/infrastructure/VPS_SSL_Certs.html#steps",
-    "title": "Configure SSL certificates",
+    "objectID": "docs/infrastructure/VPS_request.html#steps",
+    "href": "docs/infrastructure/VPS_request.html#steps",
+    "title": "Request a VPS",
     "section": "Steps",
-    "text": "Steps\n\nGenerate .csr file\nSecure-copy .csr file from server to local machine\nSubmit Certificate Server Request to TU Delft ICT via TopDesk form\n\n\nStep 1. Generate .csr file\nThe Certificate Signing Request (.csr) file is a file generated by you in a standard format that contains all the information the signing authority needs to create a signed certificate. You will need to include this .csr file in submitting your SSL certificate request form to TU Delft ICT, and you should generate it on your VPS directly. The instructions for generating a .csr file come from here.\nSSH to your VPS (____ link if you have followed the process to connect directly, you can use: username@localmachine ~ % ssh externalserveralias)\nEnter following command in the terminal: Note: replace mydomain with your actual domain name:\nusername@externalserver ~ % openssl req -new -newkey rsa:2048 -nodes -keyout mydomain.key -out mydomain.csr\nYou will be prompted to answer a series of questions:\n\nCountry name: 2 letter abbreviation for your country. Netherlands is NL.\nState or Province Name: this is where your org operates from. Zuid-Holland.\nLocality Name - name of the city your org operates from. Don’t use abbreviations in this field.\nOrganisation Name - use your (organisation’s) full name.\nOrganisational Unit Name - Use a department name ex. “IT Department” or “Library”\nCommon Name - the FQDN that you are requesting an SSL certificate for.\nEmail address\nOptional password (can skip step)\nOptional company name\n\nYour CSR file has now been generated. To find your CSR, take a look at the contents of your current working directory with the ls command. You should notice two new files ending with “.key” and “.csr” respectively. For example:\nusername@externalserver ~ % ls\n-rw-r--r--. 1 root root 1082 Jan 31 12:10 mydomain.csr\n-rw-------. 1 root root 1704 Jan 31 12:10 mydomain.key\nThe .key file should be kept private on your server. The .csr file is your certificate signing request, and can be sent to a Certificate Authority.\n\n\nStep 2. Secure-copy .csr file from server to local machine\nIn this step we use Secure Copy protocol (SCP) which is a means of securely transferring files between hosts on a network. This example will save the file in the Home directory, but you can also save it into any other project folder on your machine.\nNavigate to directory of choice. In this case, we’ll use home.\nusername@localmachine .ssh % cd ~\nUse scp to secure copy .csr file from your external server. If you have followed ___these steps to enable 1-step SSH access to your VPS, you can do this using the alias you set, and the .csr file name which should be your external server FQDN.csr. Don’t forget to add the . at the end of the command.\nusername@localmachine ~ % scp externalserveralias:~/external-server-FQDN.nl.csr .\nCheck to see that it saved on your local machine using ls:\nusername@localmachine ~ % ls\nApplications        Movies\nDesktop             Music\nDocuments           Pictures\nDownloads           Public\nDropbox             external-server-FQDN.nl.csr\nLibrary             surfdrive\nIf you have not set up 1-step SSH connection to your VPS, the file transfer procedure from the VPS to your local computer is composed of two steps:\n\nFrom the VPS to the intermediary server, and\nFrom the intermediary server to the local computer.\n\nFor the first step use:\nscp &lt;path to the csr file&gt; &lt;netid&gt;@&lt;intermediary_server_address&gt;:&lt;a path in the intermediary_server&gt; (e.g., scp thredds.tudelft.nl.csr mynetid@linux-bastion-ex.tudelft.nl:~).\nIn the second step, you need to copy the file from the intermediary server to the local computer using the same command but with a different source and destination:\nscp &lt;netid&gt;@&lt;intermediary_server_address&gt;:&lt;the path in the intermediary_server to the selected file&gt; &lt;a path in the local computer&gt; (e.g., scp mynetid@linux-bastion-ex.tudelft.nl:~/thredds.tudelft.nl.csr .)\nPlease note, if you are a Windows user, for the second step you need to install cygwin and ssh to the intermediary server using:\nssh &lt;netid&gt;@&lt;intermediary_server_address&gt; (e.g., ssh mynetid@linux-bastion-ex.tudelft.nl).\n\n\nStep 3. Submit Certificate Server Request to TU Delft ICT via TopDesk form\nTU Delft ICT will use the information stored in your .csr file to get the SSL certificate from the signing authority and send the SSL certificate to you. In order to make this request, you must attach your .csr file from the previous step.\nNavigate to TopDesk form for TU Delft. TOPdesk SSL certificate server request.\nChoose “Attach file” and navigate to directory where .csr file is stored** (in this example, it is in “Home”). Select “external-server-FQDN.nl.csr”.\nSubmit request. You can delete this file from your home directory after you submit the form.\nICT will respond with a SSL certificate (with the extension .crt, .cer, and/or .pem) that comes from the signing authority. When you have this, you can configure the SSL certificate to work with the web server on your VPS.",
+    "text": "Steps\n\nNavigate to the TU Delft server request form\nFill and send the form according to your preferences and needs\nReceive confirmation of server deployment from TU Delft ICT\nLogin to your server for the first time\n\n\nStep 1: Navigate to the TU Delft server request form\nYou can make a request for a server via the TopDesk self service portal.\n\n\nStep 2: Fill and send the form according to your preferences and needs\nThe form is divided into three sections: Caller Details, General Questions, and Technical Questions.\nCaller Details should contain the contact information of the main administrator of this server. If you select your name, the fields below should be auto-populated with your building, phone number, email, department/program, organizational unit, and (sometimes) room.\n\nThe last question in the Caller Details section access to the server by external users. Generally speaking, granting access to TU Delft-managed servers is not recommended, but if it is necessary you can add the contact details of the external party and the reason(s) for which they should have access. You will need to provide a company-affiliated email address for the external user, and the request may or may not be granted by ICT.\n\n\n\n\n\n\nNote\n\n\n\nKeep in mind that a server provides access to the backend of your application. If for example you want to deploy a web server to share your data widely, users do not need direct access to the server in order to access the data itself.\n\n\nThe next section contains General Questions about the name and purpose of your server. If you plan to use this server ongoing into the future, you can either leave the field “Expiration Date” blank or add a date in 10+ years. TU Delft ICT will alert you when the expiration date you select is nearing.\n\n\n\n436ab820-8194-4212-8622-93758ba56f56\n\n\nYou can add the netIDs of your collaborators who should have read/write access to the server, and optionally the netID of your faculty Data Steward or of a DCC Team member if you would like their help. You can find your faculty Data Steward contact information here.\nThe Technical Questions section asks you to specify an operating system and some other technical details about your server configuration. You can choose between four basic configuration options - you can of course consider which one best fits your needs. If you are new to working with servers, generally the best choice is Basic configuration 4.\nThe next question deals with opening ports to the server through the TU Delft firewall. Ports are essentially gateways to the server that are specific to different purposes. For example, port 80 is opened to handle HTTP requests, port 20 is opened to handle SSH requests, port 3306 is opened to allow access to a MySQL database, and port 443 is opened to handle HTTPS requests. If you are planning to use your VPS as a webserver, ports 80 and 443 should be open. You can use this space to ask ICT to do so.\nThe next section, FQDN, is the way you can refer to your server on the internet. The recommendation is a format like &lt;servername&gt;.&lt;facultyabbreviation&gt;.tudelt.nl. In general, it’s best to keep names relatively short and informative to make it easy to reference and remember.\nYou should also be sure to check the instructions in the form and contact your faculty Data Steward or Faculty IT Manager if you need further explanation.",
     "crumbs": [
       "<ins>Guides</ins>",
       "![](/docs/img/gear.svg){height=1em style='filter: invert(0.5) sepia(1) saturate(5) hue-rotate(175deg)'} **Computing Infrastructure**",
       "Remote servers",
-      "Configure SSL certificates"
+      "Request a VPS"
     ]
   },
   {
-    "objectID": "docs/infrastructure/VPS_SSL_Certs.html#notes-and-next-steps",
-    "href": "docs/infrastructure/VPS_SSL_Certs.html#notes-and-next-steps",
-    "title": "Configure SSL certificates",
-    "section": "Notes and Next Steps",
-    "text": "Notes and Next Steps\nSSL certificates can expire - TU Delft ICT will let you know when this is about to happen. To renew, you will need a new .csr file. You can send this to TU Delft ICT via the original TopDesk form and they will forward to the signing authority.\nTo use your SSL certificate with your web server, you need to change some configuration settings based on the web server you are using (e.g., Apache, nginx). See ___Set up an Apache web server for more information.",
+    "objectID": "docs/infrastructure/VPS_request.html#initial-configuration-of-your-vps",
+    "href": "docs/infrastructure/VPS_request.html#initial-configuration-of-your-vps",
+    "title": "Request a VPS",
+    "section": "Initial Configuration of your VPS",
+    "text": "Initial Configuration of your VPS\nA few days after submitting the request, you will receive an email from ICT with login details. You can connect to your VPS via ssh. If you are in the windows environment, it is recommended to install Cygwin and its packages to be able to use the ssh command in a non-unix environment. The unix based systems (e.g., mac) contain ssh by default. In order to login to your VPS, you need to first ssh to the bastion server with ssh &lt;username&gt;@linux-bastion-ex.tudelft.nl and then from there login to your server ssh &lt;servername&gt;. The first thing we recommend to do after logging into the server is to update the pre-installed packages:\n\nDebian (Ubuntu)RedHat\n\n\nsudo apt-get update && sudo apt-get upgrade\n\n\nsudo yum update\n\n\n\nIt would be also useful to set a password for the VPS when you log in. You can do that by passwd command.",
     "crumbs": [
       "<ins>Guides</ins>",
       "![](/docs/img/gear.svg){height=1em style='filter: invert(0.5) sepia(1) saturate(5) hue-rotate(175deg)'} **Computing Infrastructure**",
       "Remote servers",
-      "Configure SSL certificates"
+      "Request a VPS"
     ]
   },
   {
-    "objectID": "docs/img/licences.html",
-    "href": "docs/img/licences.html",
-    "title": "",
+    "objectID": "docs/infrastructure/VPS_request.html#next-steps",
+    "href": "docs/infrastructure/VPS_request.html#next-steps",
+    "title": "Request a VPS",
+    "section": "Next Steps",
+    "text": "Next Steps\nCommon next steps after obtaining a VPS and storage include initial configuration steps such as establishing a connection via SSH and mounting Project Drive storage; and also software installation steps for tools like Docker, and setting up Apache Web Server. We will add more documentation when common installations come to our attention, so please reach out to us with your questions or suggestions.\n\nInstall Docker\nConfigure Docker for use as non-root\nConfigure a runner for the TU Delft Gitlab",
+    "crumbs": [
+      "<ins>Guides</ins>",
+      "![](/docs/img/gear.svg){height=1em style='filter: invert(0.5) sepia(1) saturate(5) hue-rotate(175deg)'} **Computing Infrastructure**",
+      "Remote servers",
+      "Request a VPS"
+    ]
+  },
+  {
+    "objectID": "docs/infrastructure/VPS_SSH.html",
+    "href": "docs/infrastructure/VPS_SSH.html",
+    "title": "Set up SSH tunneling for a VPS",
     "section": "",
-    "text": "testing-pyramid.jpg\n\n\n\n\ntesting-pyramid.jpg\n\n\nPermission: “All I ask is that you provide attribution to me (e.g., credit @SketchingDev and link back to the original source).” See https://github.com/SketchingDev/sketchingdev.github.io/issues/20#issuecomment-2690689502"
+    "text": "This guide explains how to set up a secure, single-step SSH connection to a Virtual Private Server (VPS) at TU Delft using SSH tunneling. By default, connecting to a VPS requires first accessing a Bastion Host (an intermediary server controlling access), making it a two-step process. Therefore, it is a two-step process: to reach a remote host, a user has to connect first to the bastion host and from there to the VPS. However, by using SSH tunneling and SSH keys, you can connect to your VPS and other remote hosts in a single step.\nWith the method described below, you will be able to connect directly from your local machine to your VPS, bypassing the need to log in to the bastion host separately. This setup also simplifies secure file transfers between your local machine and the VPS.\n\n\n\n\n\n\n Accessing a VPS\n\n\n\nDepending on your geogaphic location, access to a VPS via SSH may be blocked by the TU Delft firewall. In such cases, you must use a VPN connection via eduVPN. Access if usally blocked if you are connecting from your home network.\n\n\n\nPrerequisites\nBefore starting, you need:\n\nA TU Delft NetID.\nAccess to a VPS provided by TU Delft ICT, including a username and password.\nAn SSH client installed on your local machine (usually included with most Linux and macOS distributions; for Windows, you can use a third-party SSH client like PuTTY).\nALinux or macOS terminal\n\n\n\nSteps for Linux and macOS\n\n\n\n\n\n\n Summary of steps\n\n\n\n\nCreate SSH keys.\nCopy SSH keys to bastion host and remote server.\nCreate a new host for SSH connection.\nTest connection\n\n\n\n\nSet up SSH tunneling for a host (Linux Terminal)\n\nIf you do not have an SSH key-pair, create one on the local machine. Go to the terminal and enter the following command. Replace &lt;my-keyname&gt; with a name of your choice for the SSH key, e.g., id_rsa or id_ed25519.\n\n$  ssh-keygen -t ed25519 -f ~/.ssh/&lt;my-keyname&gt;\nYou will be promted to crate a passphrase. We recommend you to add one to make the connection more secure. The passphrase will be asked every time you connect to the VPS. To skip the passphrase, press Enter when prompted. You should see something like this:\nGenerating public/private ed25519 key pair.\nEnter passphrase for \"ed25519\" (empty for no passphrase): \nEnter same passphrase again: \nYour identification has been saved in ~/.ssh/&lt;my-keyname&gt;\nYour public key has been saved in ~/.ssh/&lt;my-keyname&gt;.pub\nThe key fingerprint is:\nSHA256:6j06srvun06gJ5UCmD+MVq6RsPuytCO5mF4hTELnWTg root@local-machine\nThe key's randomart image is:\n+--[ED25519 256]--+\n| . ...           |\n|o.oEo            |\n|*. +.            |\n|=*+  .           |\n|o*=o+   S        |\n|..+=.. .         |\n|.+o.. o          |\n|*+oo.o.o.        |\n|B*oo*B*o..       |\n+----[SHA256]-----+\nA private and public key will be added to ~/.ssh.\nThe public key is the file with the .pub extension, e.g., &lt;my-keyname&gt;.pub\n\n\n\n\n\n\n Tip\n\n\n\nSimilar to passwords, it is advised to rotate your SSH keys regularly (e.g., every 6 months). You can do this by generating a new key pair and replacing the old one on your local machine and VPS.\n\n\n\nLog in to your VPS and, copy the content of your public key into the VPS ~/.ssh/authorized_keys file. You can achieve this by copying the content of the public key file to the clipboard and pasting it into the authorized_keys file on the VPS. Be mindful and not remove anything from this file, or other SSH connections might stop working. Finally, save the file.\nCreate a new host for SSH connection. On your local machine, edit the ~/.ssh/config file and add the following configuration. If the file does not exist, create it.\n\nHost &lt;host-nickname&gt;\n    HostName &lt;target-host&gt;\n    User &lt;target-username&gt;\n    ProxyJump &lt;target-username&gt;@linux-bastion-ex.tudelft.nl\n    IdentityFile ~/.ssh/&lt;my-keyname&gt;\nReplace: : a name of your choice for the target host, e.g., my-server : the actual name of the target host (FQDM), e.g, server.tudelft.nl : the username used to log in to the target host, usually your NetID : the username used to log in to the bastion server : the name of the SSH private key you created, e.g., id_rsa. If your private key is stored in a different location, replace the path accordingly.\n\nTest the SSH tunneling connection. Connect to the VPS using SSH tunneling by typing the command below. Use your bastion-password when asked. This is usually the password associated with your NetID.\n\n$ ssh &lt;host-nickname&gt;\nIf you encounter problems with the connection, use the debug mode ssh -vvv &lt;host-nickname&gt; to find out what might have gone wrong. This command will provide detailed information about the connection process and can help you troubleshoot any issues.",
+    "crumbs": [
+      "<ins>Guides</ins>",
+      "![](/docs/img/gear.svg){height=1em style='filter: invert(0.5) sepia(1) saturate(5) hue-rotate(175deg)'} **Computing Infrastructure**",
+      "Remote servers",
+      "Setting up SSH tunneling"
+    ]
   },
   {
     "objectID": "docs/data/planning/privacy.html",
@@ -1529,43 +1536,36 @@
     ]
   },
   {
-    "objectID": "docs/community/maintainers.html",
-    "href": "docs/community/maintainers.html",
-    "title": "Guide maintainers",
-    "section": "",
-    "text": "Guide maintainers\nThis content is automatically generated, all changes made will be lost.\n\n\n\n\n\n\n\n\n\nSection\nTitle\nLead maintainer\nBackup maintainer\n\n\n\n\ncontainers\nDocker users\nMaurits Kok\n\n\n\ndata\nRequestProject Drive\nAshley Cryan\n\n\n\ndata\nSync with Unison\nAshley Cryan\n\n\n\ndata\nMount Project Drive\nRaúl Ortiz Merino\nMaurits Kok\n\n\ndata\nData publishing\nAleksandra Wilczynska\n\n\n\ngitlab\nTransfer ownership of a GitLab repository\nLora Armstrong\nMaurits Kok\n\n\ngitlab\nCI with Gitlab\nAshley Cryan\nMaurits Kok\n\n\ngitlab\nGitLab runner for MATLAB\nMaurits Kok\n\n\n\ninfrastructure\nOverview\nMaurits Kok\nJose Urra\n\n\ninfrastructure\nRequest SSL Certificate\nAshley Cryan\n\n\n\ninfrastructure\nRequest VPS\nAshley Cryan\n\n\n\ninfrastructure\nSet up an Apache web server\nAshley Cryan\n\n\n\nresources\nCurriculum\nAshley Cryan\nMaurits Kok\n\n\nsoftware\nFAIR4RS checklist\nMaurits Kok\nElviss Dvinskis\n\n\nsoftware\nSoftware Management Plan\nMaurits Kok\n\n\n\nsoftware\nBranch management\nMaurits Kok\n\n\n\ntesting\nTesting with MATLAB\nMaurits Kok"
-  },
-  {
-    "objectID": "docs/community/community.html",
-    "href": "docs/community/community.html",
+    "objectID": "docs/community.html",
+    "href": "docs/community.html",
     "title": "Community",
     "section": "",
     "text": "Teams channel - DCC Community\nData Stewards\nOpen Science Program\nOpen Science Community\nDelft HPC\nData Champions\nICT Innovation\nStatistical Helpdesk\n\n\n\n\n4TU.ResearchData is an international data repository for science, engineering and design. Its services include curation, sharing, long-term access and preservation of research datasets. These services are available to anyone around the world. In addition, 4TU.ResearchData also offers training and resources to researchers to support them in making research data findable, accessible, interoperable and reproducible (FAIR).\n\n\n\nFounded in 2012 as an independent foundation by NWO and SURF, the Netherlands eScience Center is the national centre with the digital skills to create innovative software solutions in academic research. They award research projects based on calls for proposals, and train researchers in the use of research software. They offer our expertise in the form of research software engineers (RSEs), the technology specialists with expert digital skills who work with us at the Center.\n\n\n\nNL-RSE brings together the community of people writing and contributing to research software from Dutch universities, knowledge institutes, companies and other organizations to share knowledge, to organize meetings, and raise awareness for the scientific recognition of research software."
   },
   {
-    "objectID": "docs/community/community.html#partners-within-the-tu-delft",
-    "href": "docs/community/community.html#partners-within-the-tu-delft",
+    "objectID": "docs/community.html#partners-within-the-tu-delft",
+    "href": "docs/community.html#partners-within-the-tu-delft",
     "title": "Community",
     "section": "",
     "text": "Teams channel - DCC Community\nData Stewards\nOpen Science Program\nOpen Science Community\nDelft HPC\nData Champions\nICT Innovation\nStatistical Helpdesk"
   },
   {
-    "objectID": "docs/community/community.html#tu.researchdata",
-    "href": "docs/community/community.html#tu.researchdata",
+    "objectID": "docs/community.html#tu.researchdata",
+    "href": "docs/community.html#tu.researchdata",
     "title": "Community",
     "section": "",
     "text": "4TU.ResearchData is an international data repository for science, engineering and design. Its services include curation, sharing, long-term access and preservation of research datasets. These services are available to anyone around the world. In addition, 4TU.ResearchData also offers training and resources to researchers to support them in making research data findable, accessible, interoperable and reproducible (FAIR)."
   },
   {
-    "objectID": "docs/community/community.html#escience-center",
-    "href": "docs/community/community.html#escience-center",
+    "objectID": "docs/community.html#escience-center",
+    "href": "docs/community.html#escience-center",
     "title": "Community",
     "section": "",
     "text": "Founded in 2012 as an independent foundation by NWO and SURF, the Netherlands eScience Center is the national centre with the digital skills to create innovative software solutions in academic research. They award research projects based on calls for proposals, and train researchers in the use of research software. They offer our expertise in the form of research software engineers (RSEs), the technology specialists with expert digital skills who work with us at the Center."
   },
   {
-    "objectID": "docs/community/community.html#nl-rse",
-    "href": "docs/community/community.html#nl-rse",
+    "objectID": "docs/community.html#nl-rse",
+    "href": "docs/community.html#nl-rse",
     "title": "Community",
     "section": "",
     "text": "NL-RSE brings together the community of people writing and contributing to research software from Dutch universities, knowledge institutes, companies and other organizations to share knowledge, to organize meetings, and raise awareness for the scientific recognition of research software."
@@ -1697,13 +1697,6 @@
       "<ins>Guides</ins>",
       "About the guides"
     ]
-  },
-  {
-    "objectID": "docs/community/dcc.html",
-    "href": "docs/community/dcc.html",
-    "title": "About the DCC",
-    "section": "",
-    "text": "About the DCC\nThe TU Delft Digital Competence Centre (DCC) is an on-campus initiative to help researchers make research data FAIR, improve research software, and apply computing practices to increase the efficiency of the research process. The DCC is an initiative of the Open Science Programme at TU Delft designed to benefit researchers at all levels.\nFor more information, please visit our website at dcc.tudelft.nl or email us at dcc@tudelft.nl."
   },
   {
     "objectID": "docs/data/data_collection/access_reuse.html",
@@ -1973,170 +1966,114 @@
     ]
   },
   {
-    "objectID": "docs/guides.html",
-    "href": "docs/guides.html",
-    "title": "How-to Guides",
+    "objectID": "docs/img/licences.html",
+    "href": "docs/img/licences.html",
+    "title": "",
     "section": "",
-    "text": "The guides are split into a few major sections:\n\nComputing Infrastructure contains information and guides on TU Delft ICT infrastructure.\nData Management contains information and guides on using TU Delft data storage options and best-practices for FAIR data.\nResearch Software contains information for creating FAIR research software.\nResources contains a collection of courses, workshops, and references."
+    "text": "testing-pyramid.jpg\n\n\n\n\ntesting-pyramid.jpg\n\n\nPermission: “All I ask is that you provide attribution to me (e.g., credit @SketchingDev and link back to the original source).” See https://github.com/SketchingDev/sketchingdev.github.io/issues/20#issuecomment-2690689502"
   },
   {
-    "objectID": "docs/infrastructure/VPS_SSH.html",
-    "href": "docs/infrastructure/VPS_SSH.html",
-    "title": "Set up SSH tunneling for a VPS",
+    "objectID": "docs/infrastructure/VPS_SSL_Certs.html",
+    "href": "docs/infrastructure/VPS_SSL_Certs.html",
+    "title": "Configure SSL certificates",
     "section": "",
-    "text": "This guide explains how to set up a secure, single-step SSH connection to a Virtual Private Server (VPS) at TU Delft using SSH tunneling. By default, connecting to a VPS requires first accessing a Bastion Host (an intermediary server controlling access), making it a two-step process. Therefore, it is a two-step process: to reach a remote host, a user has to connect first to the bastion host and from there to the VPS. However, by using SSH tunneling and SSH keys, you can connect to your VPS and other remote hosts in a single step.\nWith the method described below, you will be able to connect directly from your local machine to your VPS, bypassing the need to log in to the bastion host separately. This setup also simplifies secure file transfers between your local machine and the VPS.\n\n\n\n\n\n\n Accessing a VPS\n\n\n\nDepending on your geogaphic location, access to a VPS via SSH may be blocked by the TU Delft firewall. In such cases, you must use a VPN connection via eduVPN. Access if usally blocked if you are connecting from your home network.\n\n\n\nPrerequisites\nBefore starting, you need:\n\nA TU Delft NetID.\nAccess to a VPS provided by TU Delft ICT, including a username and password.\nAn SSH client installed on your local machine (usually included with most Linux and macOS distributions; for Windows, you can use a third-party SSH client like PuTTY).\nALinux or macOS terminal\n\n\n\nSteps for Linux and macOS\n\n\n\n\n\n\n Summary of steps\n\n\n\n\nCreate SSH keys.\nCopy SSH keys to bastion host and remote server.\nCreate a new host for SSH connection.\nTest connection\n\n\n\n\nSet up SSH tunneling for a host (Linux Terminal)\n\nIf you do not have an SSH key-pair, create one on the local machine. Go to the terminal and enter the following command. Replace &lt;my-keyname&gt; with a name of your choice for the SSH key, e.g., id_rsa or id_ed25519.\n\n$  ssh-keygen -t ed25519 -f ~/.ssh/&lt;my-keyname&gt;\nYou will be promted to crate a passphrase. We recommend you to add one to make the connection more secure. The passphrase will be asked every time you connect to the VPS. To skip the passphrase, press Enter when prompted. You should see something like this:\nGenerating public/private ed25519 key pair.\nEnter passphrase for \"ed25519\" (empty for no passphrase): \nEnter same passphrase again: \nYour identification has been saved in ~/.ssh/&lt;my-keyname&gt;\nYour public key has been saved in ~/.ssh/&lt;my-keyname&gt;.pub\nThe key fingerprint is:\nSHA256:6j06srvun06gJ5UCmD+MVq6RsPuytCO5mF4hTELnWTg root@local-machine\nThe key's randomart image is:\n+--[ED25519 256]--+\n| . ...           |\n|o.oEo            |\n|*. +.            |\n|=*+  .           |\n|o*=o+   S        |\n|..+=.. .         |\n|.+o.. o          |\n|*+oo.o.o.        |\n|B*oo*B*o..       |\n+----[SHA256]-----+\nA private and public key will be added to ~/.ssh.\nThe public key is the file with the .pub extension, e.g., &lt;my-keyname&gt;.pub\n\n\n\n\n\n\n Tip\n\n\n\nSimilar to passwords, it is advised to rotate your SSH keys regularly (e.g., every 6 months). You can do this by generating a new key pair and replacing the old one on your local machine and VPS.\n\n\n\nLog in to your VPS and, copy the content of your public key into the VPS ~/.ssh/authorized_keys file. You can achieve this by copying the content of the public key file to the clipboard and pasting it into the authorized_keys file on the VPS. Be mindful and not remove anything from this file, or other SSH connections might stop working. Finally, save the file.\nCreate a new host for SSH connection. On your local machine, edit the ~/.ssh/config file and add the following configuration. If the file does not exist, create it.\n\nHost &lt;host-nickname&gt;\n    HostName &lt;target-host&gt;\n    User &lt;target-username&gt;\n    ProxyJump &lt;target-username&gt;@linux-bastion-ex.tudelft.nl\n    IdentityFile ~/.ssh/&lt;my-keyname&gt;\nReplace: : a name of your choice for the target host, e.g., my-server : the actual name of the target host (FQDM), e.g, server.tudelft.nl : the username used to log in to the target host, usually your NetID : the username used to log in to the bastion server : the name of the SSH private key you created, e.g., id_rsa. If your private key is stored in a different location, replace the path accordingly.\n\nTest the SSH tunneling connection. Connect to the VPS using SSH tunneling by typing the command below. Use your bastion-password when asked. This is usually the password associated with your NetID.\n\n$ ssh &lt;host-nickname&gt;\nIf you encounter problems with the connection, use the debug mode ssh -vvv &lt;host-nickname&gt; to find out what might have gone wrong. This command will provide detailed information about the connection process and can help you troubleshoot any issues.",
+    "text": "It is common practice to have web servers serving content over HTTPS, which is the secure version of HTTP. In order to do this and make the connection secure, you need an SSL certificate from a certificate signing authority.\nThe role of the SSL certificate is to indicate the encryption of user data from a server exposed on the web. SSL is a key for encrypting information. When a website’s certificate is expired or invalid, or if it using a self-signed (unofficial) certificate, as a user you either get a warning saying, “go back to safety,” or can’t access the website over https - instead you see a message that says “Not Secure” in your web browser. This means that the certificate is not signed by an authority, so it’s not trusted.\nIn theory, if your web server is universally accessible and doesn’t contain forms for users with personal or confidential information, there is no strict need for HTTPS connection. But, HTTPS is the modern standard and without it, visitors will have impression that the website is not safe. Therefore it is good practice to always have HTTPS on your web server.",
     "crumbs": [
       "<ins>Guides</ins>",
       "![](/docs/img/gear.svg){height=1em style='filter: invert(0.5) sepia(1) saturate(5) hue-rotate(175deg)'} **Computing Infrastructure**",
       "Remote servers",
-      "Setting up SSH tunneling"
+      "Configure SSL certificates"
     ]
   },
   {
-    "objectID": "docs/infrastructure/VPS_request.html",
-    "href": "docs/infrastructure/VPS_request.html",
-    "title": "Request a VPS",
+    "objectID": "docs/infrastructure/VPS_SSL_Certs.html#background",
+    "href": "docs/infrastructure/VPS_SSL_Certs.html#background",
+    "title": "Configure SSL certificates",
     "section": "",
-    "text": "This guide describes the essentials for requesting and setting up a TU Delft managed server. A server is a computer that can handle requests. Servers are often a critical component of architectural solutions for data management. There are many reasons why you as a researcher may need to request a server, for example:\n\nAutomation of a process in your data collection\nSet up runners for the TU Delft Gitlab\nA part of your analysis should be running continuously, and you cannot do it with your own machine\nSpecific functionality (web server)\nYou need a machine to handle large amounts of requests\nYou want to outsource the maintenance of a server to TU Delft ICT\nRely on safety and security administrated by the University, including backups\nSecuring/controlling access\nMounting storage drive",
+    "text": "It is common practice to have web servers serving content over HTTPS, which is the secure version of HTTP. In order to do this and make the connection secure, you need an SSL certificate from a certificate signing authority.\nThe role of the SSL certificate is to indicate the encryption of user data from a server exposed on the web. SSL is a key for encrypting information. When a website’s certificate is expired or invalid, or if it using a self-signed (unofficial) certificate, as a user you either get a warning saying, “go back to safety,” or can’t access the website over https - instead you see a message that says “Not Secure” in your web browser. This means that the certificate is not signed by an authority, so it’s not trusted.\nIn theory, if your web server is universally accessible and doesn’t contain forms for users with personal or confidential information, there is no strict need for HTTPS connection. But, HTTPS is the modern standard and without it, visitors will have impression that the website is not safe. Therefore it is good practice to always have HTTPS on your web server.",
     "crumbs": [
       "<ins>Guides</ins>",
       "![](/docs/img/gear.svg){height=1em style='filter: invert(0.5) sepia(1) saturate(5) hue-rotate(175deg)'} **Computing Infrastructure**",
       "Remote servers",
-      "Request a VPS"
+      "Configure SSL certificates"
     ]
   },
   {
-    "objectID": "docs/infrastructure/VPS_request.html#background",
-    "href": "docs/infrastructure/VPS_request.html#background",
-    "title": "Request a VPS",
-    "section": "",
-    "text": "This guide describes the essentials for requesting and setting up a TU Delft managed server. A server is a computer that can handle requests. Servers are often a critical component of architectural solutions for data management. There are many reasons why you as a researcher may need to request a server, for example:\n\nAutomation of a process in your data collection\nSet up runners for the TU Delft Gitlab\nA part of your analysis should be running continuously, and you cannot do it with your own machine\nSpecific functionality (web server)\nYou need a machine to handle large amounts of requests\nYou want to outsource the maintenance of a server to TU Delft ICT\nRely on safety and security administrated by the University, including backups\nSecuring/controlling access\nMounting storage drive",
-    "crumbs": [
-      "<ins>Guides</ins>",
-      "![](/docs/img/gear.svg){height=1em style='filter: invert(0.5) sepia(1) saturate(5) hue-rotate(175deg)'} **Computing Infrastructure**",
-      "Remote servers",
-      "Request a VPS"
-    ]
-  },
-  {
-    "objectID": "docs/infrastructure/VPS_request.html#what-this-documentation-will-help-you-achieve",
-    "href": "docs/infrastructure/VPS_request.html#what-this-documentation-will-help-you-achieve",
-    "title": "Request a VPS",
-    "section": "What this documentation will help you achieve",
-    "text": "What this documentation will help you achieve\nThis documentation helps researchers to request a VPS and data storage on the Project Drive. There are other forms of storage available, but Project Drive storage is often recommended for expandable and secure data preservation.",
-    "crumbs": [
-      "<ins>Guides</ins>",
-      "![](/docs/img/gear.svg){height=1em style='filter: invert(0.5) sepia(1) saturate(5) hue-rotate(175deg)'} **Computing Infrastructure**",
-      "Remote servers",
-      "Request a VPS"
-    ]
-  },
-  {
-    "objectID": "docs/infrastructure/VPS_request.html#prerequisites",
-    "href": "docs/infrastructure/VPS_request.html#prerequisites",
-    "title": "Request a VPS",
-    "section": "Prerequisites",
-    "text": "Prerequisites\n\nTU Delft netID\nBasic knowledge of Linux (if requesting Linux server, recommended)",
-    "crumbs": [
-      "<ins>Guides</ins>",
-      "![](/docs/img/gear.svg){height=1em style='filter: invert(0.5) sepia(1) saturate(5) hue-rotate(175deg)'} **Computing Infrastructure**",
-      "Remote servers",
-      "Request a VPS"
-    ]
-  },
-  {
-    "objectID": "docs/infrastructure/VPS_request.html#toolssoftware",
-    "href": "docs/infrastructure/VPS_request.html#toolssoftware",
-    "title": "Request a VPS",
-    "section": "Tools/Software",
-    "text": "Tools/Software\n\nFor Windows users, you will need a programming and runtime environment like Cygwin or SSH client like PuTTY in order to access the VPS running Linux",
-    "crumbs": [
-      "<ins>Guides</ins>",
-      "![](/docs/img/gear.svg){height=1em style='filter: invert(0.5) sepia(1) saturate(5) hue-rotate(175deg)'} **Computing Infrastructure**",
-      "Remote servers",
-      "Request a VPS"
-    ]
-  },
-  {
-    "objectID": "docs/infrastructure/VPS_request.html#steps",
-    "href": "docs/infrastructure/VPS_request.html#steps",
-    "title": "Request a VPS",
-    "section": "Steps",
-    "text": "Steps\n\nNavigate to the TU Delft server request form\nFill and send the form according to your preferences and needs\nReceive confirmation of server deployment from TU Delft ICT\nLogin to your server for the first time\n\n\nStep 1: Navigate to the TU Delft server request form\nYou can make a request for a server via the TopDesk self service portal.\n\n\nStep 2: Fill and send the form according to your preferences and needs\nThe form is divided into three sections: Caller Details, General Questions, and Technical Questions.\nCaller Details should contain the contact information of the main administrator of this server. If you select your name, the fields below should be auto-populated with your building, phone number, email, department/program, organizational unit, and (sometimes) room.\n\nThe last question in the Caller Details section access to the server by external users. Generally speaking, granting access to TU Delft-managed servers is not recommended, but if it is necessary you can add the contact details of the external party and the reason(s) for which they should have access. You will need to provide a company-affiliated email address for the external user, and the request may or may not be granted by ICT.\n\n\n\n\n\n\nNote\n\n\n\nKeep in mind that a server provides access to the backend of your application. If for example you want to deploy a web server to share your data widely, users do not need direct access to the server in order to access the data itself.\n\n\nThe next section contains General Questions about the name and purpose of your server. If you plan to use this server ongoing into the future, you can either leave the field “Expiration Date” blank or add a date in 10+ years. TU Delft ICT will alert you when the expiration date you select is nearing.\n\n\n\n436ab820-8194-4212-8622-93758ba56f56\n\n\nYou can add the netIDs of your collaborators who should have read/write access to the server, and optionally the netID of your faculty Data Steward or of a DCC Team member if you would like their help. You can find your faculty Data Steward contact information here.\nThe Technical Questions section asks you to specify an operating system and some other technical details about your server configuration. You can choose between four basic configuration options - you can of course consider which one best fits your needs. If you are new to working with servers, generally the best choice is Basic configuration 4.\nThe next question deals with opening ports to the server through the TU Delft firewall. Ports are essentially gateways to the server that are specific to different purposes. For example, port 80 is opened to handle HTTP requests, port 20 is opened to handle SSH requests, port 3306 is opened to allow access to a MySQL database, and port 443 is opened to handle HTTPS requests. If you are planning to use your VPS as a webserver, ports 80 and 443 should be open. You can use this space to ask ICT to do so.\nThe next section, FQDN, is the way you can refer to your server on the internet. The recommendation is a format like &lt;servername&gt;.&lt;facultyabbreviation&gt;.tudelt.nl. In general, it’s best to keep names relatively short and informative to make it easy to reference and remember.\nYou should also be sure to check the instructions in the form and contact your faculty Data Steward or Faculty IT Manager if you need further explanation.",
-    "crumbs": [
-      "<ins>Guides</ins>",
-      "![](/docs/img/gear.svg){height=1em style='filter: invert(0.5) sepia(1) saturate(5) hue-rotate(175deg)'} **Computing Infrastructure**",
-      "Remote servers",
-      "Request a VPS"
-    ]
-  },
-  {
-    "objectID": "docs/infrastructure/VPS_request.html#initial-configuration-of-your-vps",
-    "href": "docs/infrastructure/VPS_request.html#initial-configuration-of-your-vps",
-    "title": "Request a VPS",
-    "section": "Initial Configuration of your VPS",
-    "text": "Initial Configuration of your VPS\nA few days after submitting the request, you will receive an email from ICT with login details. You can connect to your VPS via ssh. If you are in the windows environment, it is recommended to install Cygwin and its packages to be able to use the ssh command in a non-unix environment. The unix based systems (e.g., mac) contain ssh by default. In order to login to your VPS, you need to first ssh to the bastion server with ssh &lt;username&gt;@linux-bastion-ex.tudelft.nl and then from there login to your server ssh &lt;servername&gt;. The first thing we recommend to do after logging into the server is to update the pre-installed packages:\n\nDebian (Ubuntu)RedHat\n\n\nsudo apt-get update && sudo apt-get upgrade\n\n\nsudo yum update\n\n\n\nIt would be also useful to set a password for the VPS when you log in. You can do that by passwd command.",
-    "crumbs": [
-      "<ins>Guides</ins>",
-      "![](/docs/img/gear.svg){height=1em style='filter: invert(0.5) sepia(1) saturate(5) hue-rotate(175deg)'} **Computing Infrastructure**",
-      "Remote servers",
-      "Request a VPS"
-    ]
-  },
-  {
-    "objectID": "docs/infrastructure/VPS_request.html#next-steps",
-    "href": "docs/infrastructure/VPS_request.html#next-steps",
-    "title": "Request a VPS",
-    "section": "Next Steps",
-    "text": "Next Steps\nCommon next steps after obtaining a VPS and storage include initial configuration steps such as establishing a connection via SSH and mounting Project Drive storage; and also software installation steps for tools like Docker, and setting up Apache Web Server. We will add more documentation when common installations come to our attention, so please reach out to us with your questions or suggestions.\n\nInstall Docker\nConfigure Docker for use as non-root\nConfigure a runner for the TU Delft Gitlab",
-    "crumbs": [
-      "<ins>Guides</ins>",
-      "![](/docs/img/gear.svg){height=1em style='filter: invert(0.5) sepia(1) saturate(5) hue-rotate(175deg)'} **Computing Infrastructure**",
-      "Remote servers",
-      "Request a VPS"
-    ]
-  },
-  {
-    "objectID": "docs/infrastructure/giving_sudo_privilege.html",
-    "href": "docs/infrastructure/giving_sudo_privilege.html",
-    "title": "Giving sudo privilege to a user",
-    "section": "",
-    "text": "There are some tasks in Linux that requires superuser (sudo) permission. For instance editing the /etc/fstab file, rebooting the system, mounting a drive, viewing /etc/passwd file and many other tasks cannot be done without sudo privilege."
-  },
-  {
-    "objectID": "docs/infrastructure/giving_sudo_privilege.html#background",
-    "href": "docs/infrastructure/giving_sudo_privilege.html#background",
-    "title": "Giving sudo privilege to a user",
-    "section": "",
-    "text": "There are some tasks in Linux that requires superuser (sudo) permission. For instance editing the /etc/fstab file, rebooting the system, mounting a drive, viewing /etc/passwd file and many other tasks cannot be done without sudo privilege."
-  },
-  {
-    "objectID": "docs/infrastructure/giving_sudo_privilege.html#what-this-documentation-will-help-achieve",
-    "href": "docs/infrastructure/giving_sudo_privilege.html#what-this-documentation-will-help-achieve",
-    "title": "Giving sudo privilege to a user",
+    "objectID": "docs/infrastructure/VPS_SSL_Certs.html#what-this-documentation-will-help-achieve",
+    "href": "docs/infrastructure/VPS_SSL_Certs.html#what-this-documentation-will-help-achieve",
+    "title": "Configure SSL certificates",
     "section": "What this documentation will help achieve",
-    "text": "What this documentation will help achieve\nThis documentation helps you to give sudo privilege to a user."
+    "text": "What this documentation will help achieve\nSSL certificates for TU Delft researchers and staff may be requested by contacting the ICT service desk. TU Delft ICT will order SSL certificates on your behalf from a trusted certificate signing authority.",
+    "crumbs": [
+      "<ins>Guides</ins>",
+      "![](/docs/img/gear.svg){height=1em style='filter: invert(0.5) sepia(1) saturate(5) hue-rotate(175deg)'} **Computing Infrastructure**",
+      "Remote servers",
+      "Configure SSL certificates"
+    ]
   },
   {
-    "objectID": "docs/infrastructure/giving_sudo_privilege.html#prerequisites",
-    "href": "docs/infrastructure/giving_sudo_privilege.html#prerequisites",
-    "title": "Giving sudo privilege to a user",
+    "objectID": "docs/infrastructure/VPS_SSL_Certs.html#prerequisites",
+    "href": "docs/infrastructure/VPS_SSL_Certs.html#prerequisites",
+    "title": "Configure SSL certificates",
     "section": "Prerequisites",
-    "text": "Prerequisites\n\nTU Delft netID\nBasic knowledge of Linux\nThose who grant sudo permission need to have sudo permission themselves."
+    "text": "Prerequisites\n\nTU Delft netID\nLinux-based VPS provided by TU Delft ICT\n(optional) 1-step SSH connection established (see instructions ___)",
+    "crumbs": [
+      "<ins>Guides</ins>",
+      "![](/docs/img/gear.svg){height=1em style='filter: invert(0.5) sepia(1) saturate(5) hue-rotate(175deg)'} **Computing Infrastructure**",
+      "Remote servers",
+      "Configure SSL certificates"
+    ]
   },
   {
-    "objectID": "docs/infrastructure/giving_sudo_privilege.html#toolssoftware",
-    "href": "docs/infrastructure/giving_sudo_privilege.html#toolssoftware",
-    "title": "Giving sudo privilege to a user",
+    "objectID": "docs/infrastructure/VPS_SSL_Certs.html#toolssoftware",
+    "href": "docs/infrastructure/VPS_SSL_Certs.html#toolssoftware",
+    "title": "Configure SSL certificates",
     "section": "Tools/Software",
-    "text": "Tools/Software\n\nFor Windows users, you will need a programming and runtime environment like Cygwin or SSH client like PuTTY in order to access the VPS running Linux."
+    "text": "Tools/Software\n\nNone",
+    "crumbs": [
+      "<ins>Guides</ins>",
+      "![](/docs/img/gear.svg){height=1em style='filter: invert(0.5) sepia(1) saturate(5) hue-rotate(175deg)'} **Computing Infrastructure**",
+      "Remote servers",
+      "Configure SSL certificates"
+    ]
   },
   {
-    "objectID": "docs/infrastructure/giving_sudo_privilege.html#steps",
-    "href": "docs/infrastructure/giving_sudo_privilege.html#steps",
-    "title": "Giving sudo privilege to a user",
+    "objectID": "docs/infrastructure/VPS_SSL_Certs.html#steps",
+    "href": "docs/infrastructure/VPS_SSL_Certs.html#steps",
+    "title": "Configure SSL certificates",
     "section": "Steps",
-    "text": "Steps\n\nGetting the username(s) of sudo access candidates\nNavigating to the sudoers directory\nCreate an access file for each of the candidates\nEditing the access files\n\n\nStep 1. Getting the username(s) of sudo access candidates\nYou can get the usernames by checking the /etc/passwd file. This file contains all the usernames and their login information.\n\n\nStep 2. Navigating to the sudoers directory\nThe list of users who posses the sudo permission is in the /etc/sudoers.d/ folder, so navigate to that folder.\n\n\nStep 3. Create an access file for each of the candidates\nIf you use ls command to check the available files in this folder, you can see there are some files that their name start with a number and then a dash and then a user name (&lt;number&gt;-&lt;username&gt;). In Linux for every user with a sudo permission, there is a file like that, so we duplicate one of the existing files and rename them for each of the sudo candidates (in fact, name of those file doesn’t matter; however, it helps us to understand which users have sudo privilege without opening them).\n\n\nStep 4. Editing the access files\nIn this step you need to open each of the newly duplicated files and replace the old username in the second line with the sudo candidate username. After the edit, you just save the changes and exit the file."
+    "text": "Steps\n\nGenerate .csr file\nSecure-copy .csr file from server to local machine\nSubmit Certificate Server Request to TU Delft ICT via TopDesk form\n\n\nStep 1. Generate .csr file\nThe Certificate Signing Request (.csr) file is a file generated by you in a standard format that contains all the information the signing authority needs to create a signed certificate. You will need to include this .csr file in submitting your SSL certificate request form to TU Delft ICT, and you should generate it on your VPS directly. The instructions for generating a .csr file come from here.\nSSH to your VPS (____ link if you have followed the process to connect directly, you can use: username@localmachine ~ % ssh externalserveralias)\nEnter following command in the terminal: Note: replace mydomain with your actual domain name:\nusername@externalserver ~ % openssl req -new -newkey rsa:2048 -nodes -keyout mydomain.key -out mydomain.csr\nYou will be prompted to answer a series of questions:\n\nCountry name: 2 letter abbreviation for your country. Netherlands is NL.\nState or Province Name: this is where your org operates from. Zuid-Holland.\nLocality Name - name of the city your org operates from. Don’t use abbreviations in this field.\nOrganisation Name - use your (organisation’s) full name.\nOrganisational Unit Name - Use a department name ex. “IT Department” or “Library”\nCommon Name - the FQDN that you are requesting an SSL certificate for.\nEmail address\nOptional password (can skip step)\nOptional company name\n\nYour CSR file has now been generated. To find your CSR, take a look at the contents of your current working directory with the ls command. You should notice two new files ending with “.key” and “.csr” respectively. For example:\nusername@externalserver ~ % ls\n-rw-r--r--. 1 root root 1082 Jan 31 12:10 mydomain.csr\n-rw-------. 1 root root 1704 Jan 31 12:10 mydomain.key\nThe .key file should be kept private on your server. The .csr file is your certificate signing request, and can be sent to a Certificate Authority.\n\n\nStep 2. Secure-copy .csr file from server to local machine\nIn this step we use Secure Copy protocol (SCP) which is a means of securely transferring files between hosts on a network. This example will save the file in the Home directory, but you can also save it into any other project folder on your machine.\nNavigate to directory of choice. In this case, we’ll use home.\nusername@localmachine .ssh % cd ~\nUse scp to secure copy .csr file from your external server. If you have followed ___these steps to enable 1-step SSH access to your VPS, you can do this using the alias you set, and the .csr file name which should be your external server FQDN.csr. Don’t forget to add the . at the end of the command.\nusername@localmachine ~ % scp externalserveralias:~/external-server-FQDN.nl.csr .\nCheck to see that it saved on your local machine using ls:\nusername@localmachine ~ % ls\nApplications        Movies\nDesktop             Music\nDocuments           Pictures\nDownloads           Public\nDropbox             external-server-FQDN.nl.csr\nLibrary             surfdrive\nIf you have not set up 1-step SSH connection to your VPS, the file transfer procedure from the VPS to your local computer is composed of two steps:\n\nFrom the VPS to the intermediary server, and\nFrom the intermediary server to the local computer.\n\nFor the first step use:\nscp &lt;path to the csr file&gt; &lt;netid&gt;@&lt;intermediary_server_address&gt;:&lt;a path in the intermediary_server&gt; (e.g., scp thredds.tudelft.nl.csr mynetid@linux-bastion-ex.tudelft.nl:~).\nIn the second step, you need to copy the file from the intermediary server to the local computer using the same command but with a different source and destination:\nscp &lt;netid&gt;@&lt;intermediary_server_address&gt;:&lt;the path in the intermediary_server to the selected file&gt; &lt;a path in the local computer&gt; (e.g., scp mynetid@linux-bastion-ex.tudelft.nl:~/thredds.tudelft.nl.csr .)\nPlease note, if you are a Windows user, for the second step you need to install cygwin and ssh to the intermediary server using:\nssh &lt;netid&gt;@&lt;intermediary_server_address&gt; (e.g., ssh mynetid@linux-bastion-ex.tudelft.nl).\n\n\nStep 3. Submit Certificate Server Request to TU Delft ICT via TopDesk form\nTU Delft ICT will use the information stored in your .csr file to get the SSL certificate from the signing authority and send the SSL certificate to you. In order to make this request, you must attach your .csr file from the previous step.\nNavigate to TopDesk form for TU Delft. TOPdesk SSL certificate server request.\nChoose “Attach file” and navigate to directory where .csr file is stored** (in this example, it is in “Home”). Select “external-server-FQDN.nl.csr”.\nSubmit request. You can delete this file from your home directory after you submit the form.\nICT will respond with a SSL certificate (with the extension .crt, .cer, and/or .pem) that comes from the signing authority. When you have this, you can configure the SSL certificate to work with the web server on your VPS.",
+    "crumbs": [
+      "<ins>Guides</ins>",
+      "![](/docs/img/gear.svg){height=1em style='filter: invert(0.5) sepia(1) saturate(5) hue-rotate(175deg)'} **Computing Infrastructure**",
+      "Remote servers",
+      "Configure SSL certificates"
+    ]
+  },
+  {
+    "objectID": "docs/infrastructure/VPS_SSL_Certs.html#notes-and-next-steps",
+    "href": "docs/infrastructure/VPS_SSL_Certs.html#notes-and-next-steps",
+    "title": "Configure SSL certificates",
+    "section": "Notes and Next Steps",
+    "text": "Notes and Next Steps\nSSL certificates can expire - TU Delft ICT will let you know when this is about to happen. To renew, you will need a new .csr file. You can send this to TU Delft ICT via the original TopDesk form and they will forward to the signing authority.\nTo use your SSL certificate with your web server, you need to change some configuration settings based on the web server you are using (e.g., Apache, nginx). See ___Set up an Apache web server for more information.",
+    "crumbs": [
+      "<ins>Guides</ins>",
+      "![](/docs/img/gear.svg){height=1em style='filter: invert(0.5) sepia(1) saturate(5) hue-rotate(175deg)'} **Computing Infrastructure**",
+      "Remote servers",
+      "Configure SSL certificates"
+    ]
+  },
+  {
+    "objectID": "docs/infrastructure/getting_started.html",
+    "href": "docs/infrastructure/getting_started.html",
+    "title": "Overview",
+    "section": "",
+    "text": "Under construction! 🏗️",
+    "crumbs": [
+      "<ins>Guides</ins>",
+      "![](/docs/img/gear.svg){height=1em style='filter: invert(0.5) sepia(1) saturate(5) hue-rotate(175deg)'} **Computing Infrastructure**",
+      "Getting started"
+    ]
   },
   {
     "objectID": "docs/infrastructure/remote_servers.html",
