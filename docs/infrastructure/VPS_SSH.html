@@ -1077,7 +1077,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 <script async="" defer="" src="https://scripts.simpleanalyticscdn.com/latest.js"></script>
-<p>This guide explains how to set up a secure, single-step SSH connection to a Virtual Private Server (VPS) at TU Delft using SSH tunneling. By default, connecting to a VPS requires first accessing a <strong>Bastion Host</strong> (an intermediary server controlling access), making it a two-step process. Therefore, it is a <strong>two-step</strong> process: to reach a remote host, a user has to connect first to the bastion host and from there to the VPS. However, by using SSH tunneling and SSH keys, you can connect to your VPS and other remote hosts in a single step.</p>
+<p>This guide explains how to set up a secure, single-step SSH connection to a Virtual Private Server (VPS) at TU Delft using SSH tunneling. By default, connecting to a VPS requires first accessing a <strong>Bastion Host</strong> (an intermediary server controlling access), making it a two-step process. However, by using SSH tunneling and SSH keys, you can connect to your VPS and other remote hosts in a single step.</p>
 <p>With the method described below, you will be able to connect directly from your local machine to your VPS, bypassing the need to log in to the bastion host separately. This setup also simplifies secure file transfers between your local machine and the VPS.</p>
 <div class="callout callout-style-simple callout-important no-icon callout-titled">
 <div class="callout-header d-flex align-content-center">
@@ -1099,7 +1099,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li>A TU Delft NetID.</li>
 <li>Access to a VPS provided by TU Delft ICT, including a username and password.</li>
 <li>An SSH client installed on your local machine (usually included with most Linux and macOS distributions; for Windows, you can use a third-party SSH client like <a href="https://www.putty.org/">PuTTY</a>).</li>
-<li>ALinux or macOS terminal</li>
+<li>A Linux or macOS terminal</li>
 </ul>
 </section>
 <section id="steps-for-linux-and-macos" class="level3">
@@ -1118,7 +1118,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li>Create SSH keys.</li>
 <li>Copy SSH keys to bastion host and remote server.</li>
 <li>Create a new host for SSH connection.</li>
-<li>Test connection</li>
+<li>Test connection.</li>
 </ol>
 </div>
 </div>
@@ -1170,9 +1170,16 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="sourceCode" id="cb3"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="ex">Host</span> <span class="op">&lt;</span>host-nickname<span class="op">&gt;</span></span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>    <span class="ex">HostName</span> <span class="op">&lt;</span>target-host<span class="op">&gt;</span></span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>    <span class="ex">User</span> <span class="op">&lt;</span>target-username<span class="op">&gt;</span></span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>    <span class="ex">ProxyJump</span> <span class="op">&lt;</span>target-username<span class="op">&gt;</span>@linux-bastion-ex.tudelft.nl</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>    <span class="ex">ProxyJump</span> <span class="op">&lt;</span>bastion-username<span class="op">&gt;</span>@linux-bastion-ex.tudelft.nl</span>
 <span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>    <span class="ex">IdentityFile</span> ~/.ssh/<span class="op">&lt;</span>my-keyname<span class="op">&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>Replace: <strong><host-nickname>:</host-nickname></strong> a name of your choice for the target host, e.g., <code>my-server</code> <strong><target-host>:</target-host></strong> the actual name of the target host (FQDM), e.g, <code>server.tudelft.nl</code> <strong><target-username>:</target-username></strong> the username used to log in to the target host, usually your NetID <strong><bastion-username>:</bastion-username></strong> the username used to log in to the bastion server <strong><my-keyname>:</my-keyname></strong> the name of the SSH private key you created, e.g., <code>id_rsa</code>. If your private key is stored in a different location, replace the path accordingly.</p>
+<p>Replace:</p>
+<ul>
+<li><code>&lt;host-nickname&gt;</code>: a name of your choice for the target host, e.g., <code>my-server</code>.</li>
+<li><code>&lt;target-host&gt;</code>: the actual name of the target host (FQDM), e.g, <code>server.tudelft.nl</code>.</li>
+<li><code>&lt;target-username&gt;</code>: the username used to log in to the target host, usually your NetID.</li>
+<li><code>&lt;bastion-username&gt;</code>: the username used to log in to the bastion server (often same as NetID, but keep separate in case it differs).</li>
+<li><code>&lt;my-keyname&gt;</code>: the name of the SSH private key you created, e.g., <code>id_rsa</code>. If your private key is stored in a different location, replace the path accordingly.</li>
+</ul>
 <ol start="4" type="1">
 <li>Test the SSH tunneling connection. Connect to the VPS using <em>SSH tunneling</em> by typing the command below. Use your <em>bastion-password</em> when asked. This is usually the password associated with your NetID.</li>
 </ol>
