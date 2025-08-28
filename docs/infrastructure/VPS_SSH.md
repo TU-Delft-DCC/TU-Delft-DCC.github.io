@@ -48,7 +48,7 @@ categories:
 
 ---
 
-This guide explains how to set up a secure, single-step SSH connection to a Virtual Private Server (VPS) at TU Delft using SSH tunneling. By default, connecting to a VPS requires first accessing a **Bastion Host** (an intermediary server controlling access), making it a two-step process. Therefore, it is a **two-step** process: to reach a remote host, a user has to connect first to the bastion host and from there to the VPS. However, by using SSH tunneling and SSH keys, you can connect to your VPS and other remote hosts in a single step.
+This guide explains how to set up a secure, single-step SSH connection to a Virtual Private Server (VPS) at TU Delft using SSH tunneling. By default, connecting to a VPS requires first accessing a **Bastion Host** (an intermediary server controlling access), making it a two-step process. However, by using SSH tunneling and SSH keys, you can connect to your VPS and other remote hosts in a single step.
 
 With the method described below, you will be able to connect directly from your local machine to your VPS, bypassing the need to log in to the bastion host separately. This setup also simplifies secure file transfers between your local machine and the VPS.
 
