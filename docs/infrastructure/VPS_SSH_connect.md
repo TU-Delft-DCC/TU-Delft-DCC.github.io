@@ -45,7 +45,7 @@ title: Set Up Single-step SSH Connection
 
 ---
 
-<!-- ## Overview
+## Overview
 The default login procedure to a VPS (*Virtual Private Server*) from TU Delft requires to connect to your VPS via a Bastion Host (an intermediary server that control access). Therefore, it is a **two-step** process, first you connect to the Bastion Host and from there to your VPS.  The proceedure is described by an ICT admininistrator in the email sent to you when confirming the deployment of your server.
 
 However, you can set up a **single-step** SSH connection to a VPS (Virtual Private Server) from your local machine simplifies the process of accessing the VPS considerably and allows for secure transfer of files to and from the virtual and local environments. 
@@ -230,7 +230,7 @@ and then the Bastion host
 
 ### Step 10. SSH into your VPS directly from your local machine using its alias
 
-`username@localmachine .ssh % ssh <serveralias>` -->
+`username@localmachine .ssh % ssh <serveralias>` 
 
 ## Windows using PuTTY {#sec-putty}
 
