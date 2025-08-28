@@ -63,7 +63,7 @@ Before starting, you need:
 * A TU Delft NetID.
 * Access to a VPS provided by TU Delft ICT, including a username and password.
 * An SSH client installed on your local machine (usually included with most Linux and macOS distributions; for Windows, you can use a third-party SSH client like [PuTTY](https://www.putty.org/)).
-* ALinux or macOS terminal
+* A Linux or macOS terminal
 
 ### Steps for Linux and macOS
 
@@ -72,7 +72,7 @@ Before starting, you need:
 1. Create SSH keys.
 2. Copy SSH keys to bastion host and remote server.
 3. Create a new host for SSH connection.
-4. Test connection
+4. Test connection.
 :::
 
 
