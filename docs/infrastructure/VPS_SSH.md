@@ -129,16 +129,17 @@ Similar to passwords, it is advised to rotate your SSH keys regularly (e.g., eve
 Host <host-nickname>
     HostName <target-host>
     User <target-username>
-    ProxyJump <target-username>@linux-bastion-ex.tudelft.nl
+    ProxyJump <bastion-username>@linux-bastion-ex.tudelft.nl
     IdentityFile ~/.ssh/<my-keyname>
 ```
 
 Replace:
-**<host-nickname>:** a name of your choice for the target host, e.g., `my-server`
-**<target-host>:** the actual name of the target host (FQDM), e.g, `server.tudelft.nl`
-**<target-username>:**  the username used to log in to the target host, usually your NetID
-**<bastion-username>:** the username used to log in to the bastion server
-**<my-keyname>:** the name of the SSH private key you created, e.g., `id_rsa`. If your private key is stored in a different location, replace the path accordingly.
+
+- `<host-nickname>`: a name of your choice for the target host, e.g., `my-server`.
+- `<target-host>`: the actual name of the target host (FQDM), e.g, `server.tudelft.nl`.
+- `<target-username>`:  the username used to log in to the target host, usually your NetID.
+- `<bastion-username>`: the username used to log in to the bastion server (often same as NetID, but keep separate in case it differs).
+- `<my-keyname>`: the name of the SSH private key you created, e.g., `id_rsa`. If your private key is stored in a different location, replace the path accordingly.
 
 
 4. Test the SSH tunneling connection. Connect to the VPS using *SSH tunneling* by typing the command below. Use your *bastion-password* when asked. This is usually the password associated with your NetID.
