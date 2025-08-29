@@ -61,7 +61,7 @@ Managing your projects through version control platforms.
 :::
 
 ::: {.feature}
-### {{< fa folder-tree >}} Project Structue
+### {{< fa folder-tree >}} Project Structure
 Structuring your project.
 
 ::: {.learn-more}
@@ -111,6 +111,15 @@ Collaborative workflow.
 
 ::: {.learn-more}
 [Learn more »](./collaboration.qmd)
+:::
+:::
+
+::: {.feature}
+### {{< fa palette >}} Software Design
+Principles for designing your software.
+
+::: {.learn-more}
+[Learn more »](./software_design.qmd)
 :::
 :::
 
