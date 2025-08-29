@@ -47,13 +47,13 @@ author_1: Maurits Kok
 ---
 
 ## What is research software?
-Research software can be thought of as existing on a spectrum, reflecting how code evolves alongside the research process:
+Research software can be thought of as evolving through stages, reflecting how code evolves alongside the research process:
 
 - **Exploratory stage:** Code is written to test ideas, prototype methods, or quickly generate results. The focus is flexibility and speed rather than maintainability.
 - **Sharable stage:** When research outputs need to be communicated, validated, or reproduced, the software must reach a “good enough” state. It should be documented, versioned, and structured so that others can rerun or inspect the work.
 - **Sustainable stage:** Some research software grows beyond its original project to become a (critical) dependency for others. At this point, higher standards are needed, approaching the quality expectations of production software.
 
-Alongside this spectrum, researchers also rely on software in research (e.g., operating systems, libraries, dependencies) that may not have been created with research in mind but are essential for computation. For reproducibility, all of these components (exploratory scripts, research software, external dependencies, and documentation) must be identified, described, and made accessible following the [FAIR principles for research software](./fair_software/fair.md).
+Alongside these levels of maturity, researchers also rely on "software in research" (e.g., operating systems, libraries, dependencies) that may not have been created with research in mind but are essential for computation. For reproducibility, all of these components (exploratory scripts, research software, external dependencies, and documentation) must be identified, described, and made accessible following the [FAIR principles for research software](./fair_software/fair.md).
 
 ## Why does research software matter?
 Code is now as central to research as data or publications. Sharing and reusing it ensures that scientific work doesn’t stop at a single experiment but can be built upon, adapted, and tested by others. Even quick, exploratory scripts have value when preserved and explained. And when research software matures into tools used across a field, the benefits multiply by providing a foundation for whole communities. 
