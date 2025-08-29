@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.7.33">
+<meta name="generator" content="quarto-1.7.34">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -40,9 +40,9 @@ ul.task-list li input[type="checkbox"] {
 <script src="../../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-dcd723bd3e2d8e65306aa707aebc1039.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-dark-dcd723bd3e2d8e65306aa707aebc1039.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-dcd723bd3e2d8e65306aa707aebc1039.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-a45597b65f5f3795ae8b140358e6d8e8.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-dark-a45597b65f5f3795ae8b140358e6d8e8.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-a45597b65f5f3795ae8b140358e6d8e8.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="../../../site_libs/bootstrap/bootstrap-d5f9be97d58292b63c6500f7d2b0531a.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
@@ -989,8 +989,15 @@ ul.task-list li input[type="checkbox"] {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#version-control-and-collaboration" id="toc-version-control-and-collaboration" class="nav-link active" data-scroll-target="#version-control-and-collaboration">Version control and collaboration</a></li>
+  <li><a href="#project-organization" id="toc-project-organization" class="nav-link" data-scroll-target="#project-organization">Project organization</a></li>
+  </ul>
+<div class="toc-actions"><ul><li><a href="https://github.com/TU-Delft-DCC/TU-Delft-DCC.github.io/issues/new/choose" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -999,7 +1006,12 @@ ul.task-list li input[type="checkbox"] {
 <header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../../docs/software/getting_started.html"><img src="../../../docs/img/laptop-code-solid.svg" style="filter: invert(0.5) sepia(1) saturate(5) hue-rotate(175deg);height:1em"> <strong>Research Software</strong></a></li><li class="breadcrumb-item"><a href="../../../docs/software/development_workflow/index.html">Development workflow</a></li></ol></nav>
 <div class="quarto-title">
 <h1 class="title">Development workflow</h1>
-</div>
+  <div class="quarto-categories">
+    <div class="quarto-category">version control</div>
+    <div class="quarto-category">project organization</div>
+    <div class="quarto-category">collaboration</div>
+  </div>
+  </div>
 
 
 
@@ -1026,8 +1038,11 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-
-<script async="" defer="" src="https://scripts.simpleanalyticscdn.com/latest.js"></script><p>A well-organized workspace and clear software development process make research easier and more effective. Organizing your project repository clearly and following steps for working alone or with others can help improve your research and make it easier to expand. This section provides guidance on how to manage your project, structure your project, reuse projects, manage environments and dependencies, choose a branching strategy, and collaborate with others.</p>
+<script async="" defer="" src="https://scripts.simpleanalyticscdn.com/latest.js"></script>
+<section id="version-control-and-collaboration" class="level3">
+<h3 class="anchored" data-anchor-id="version-control-and-collaboration">Version control and collaboration</h3>
+<p>Version control ensures transparency, reproducibility, and smooth teamwork. Clear branching strategies and consistent workflows make it easier to track changes, review code, and integrate contributions.</p>
+</section>
 <div class="content-block">
 <div class="features">
 <section id="project-management" class="level3 feature">
@@ -1037,8 +1052,30 @@ ul.task-list li input[type="checkbox"] {
 <p><a href="../../../docs/software/development_workflow/project_management.html">Learn more »</a></p>
 </div>
 </section>
-<section id="project-structue" class="level3 feature">
-<h3 class="anchored" data-anchor-id="project-structue"><i class="fa-solid fa-folder-tree" aria-label="folder-tree"></i> Project Structue</h3>
+<section id="branch-management" class="level3 feature">
+<h3 class="anchored" data-anchor-id="branch-management"><i class="fa-solid fa-code-branch" aria-label="code-branch"></i> Branch Management</h3>
+<p>Choosing a branching strategy.</p>
+<div class="learn-more">
+<p><a href="../../../docs/software/development_workflow/branch_management.html">Learn more »</a></p>
+</div>
+</section>
+<section id="collaboration" class="level3 feature">
+<h3 class="anchored" data-anchor-id="collaboration"><i class="fa-solid fa-code-fork" aria-label="code-fork"></i> Collaboration</h3>
+<p>Collaborative workflow.</p>
+<div class="learn-more">
+<p><a href="../../../docs/software/development_workflow/collaboration.html">Learn more »</a></p>
+</div>
+</section>
+</div>
+</div>
+<section id="project-organization" class="level3">
+<h3 class="anchored" data-anchor-id="project-organization">Project organization</h3>
+<p>A structured repository with defined folders, managed dependencies, and reusable components keeps you rproject consistent, scalable, and easier for others to understand and extend.</p>
+</section>
+<div class="content-block">
+<div class="features">
+<section id="project-structure" class="level3 feature">
+<h3 class="anchored" data-anchor-id="project-structure"><i class="fa-solid fa-folder-tree" aria-label="folder-tree"></i> Project Structure</h3>
 <p>Structuring your project.</p>
 <div class="learn-more">
 <p><a href="../../../docs/software/development_workflow/project_structure.html">Learn more »</a></p>
@@ -1063,20 +1100,6 @@ ul.task-list li input[type="checkbox"] {
 <p>Tools for writing and managing workflows.</p>
 <div class="learn-more">
 <p><a href="../../../docs/software/development_workflow/workflow_management.html">Learn more »</a></p>
-</div>
-</section>
-<section id="branch-management" class="level3 feature">
-<h3 class="anchored" data-anchor-id="branch-management"><i class="fa-solid fa-code-branch" aria-label="code-branch"></i> Branch Management</h3>
-<p>Choosing a branching strategy.</p>
-<div class="learn-more">
-<p><a href="../../../docs/software/development_workflow/branch_management.html">Learn more »</a></p>
-</div>
-</section>
-<section id="collaboration" class="level3 feature">
-<h3 class="anchored" data-anchor-id="collaboration"><i class="fa-solid fa-code-fork" aria-label="code-fork"></i> Collaboration</h3>
-<p>Collaborative workflow.</p>
-<div class="learn-more">
-<p><a href="../../../docs/software/development_workflow/collaboration.html">Learn more »</a></p>
 </div>
 </section>
 </div>
@@ -1517,7 +1540,7 @@ ul.task-list li input[type="checkbox"] {
 </div>   
     <div class="nav-footer-center">
 <p>© 2025 <a href="https://www.tudelft.nl/digital-competence-centre">TU Delft DCC</a>. Licensed under <a href="https://creativecommons.org/licenses/by/4.0/">CC-BY-4.0</a>.</p>
-<div class="toc-actions"><ul><li><a href="https://github.com/TU-Delft-DCC/TU-Delft-DCC.github.io/issues/new/choose" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div></div>
+<div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/TU-Delft-DCC/TU-Delft-DCC.github.io/issues/new/choose" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div></div>
     <div class="nav-footer-right">
 <p>Found these guides helpful? <a href="https://github.com/TU-Delft-DCC/TU-Delft-DCC.github.io"><i class="fa-regular fa-star" aria-label="star"></i> us on GitHub</a>.</p>
 </div>

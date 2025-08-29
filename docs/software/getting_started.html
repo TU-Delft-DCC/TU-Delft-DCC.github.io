@@ -2,10 +2,11 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.7.33">
+<meta name="generator" content="quarto-1.7.34">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="dcterms.date" content="2025-08-29">
 
 <title>Getting started</title>
 <style>
@@ -39,9 +40,9 @@ ul.task-list li input[type="checkbox"] {
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dcd723bd3e2d8e65306aa707aebc1039.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark-dcd723bd3e2d8e65306aa707aebc1039.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dcd723bd3e2d8e65306aa707aebc1039.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-a45597b65f5f3795ae8b140358e6d8e8.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark-a45597b65f5f3795ae8b140358e6d8e8.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-a45597b65f5f3795ae8b140358e6d8e8.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="../../site_libs/bootstrap/bootstrap-d5f9be97d58292b63c6500f7d2b0531a.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
@@ -988,8 +989,16 @@ ul.task-list li input[type="checkbox"] {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#what-is-research-software" id="toc-what-is-research-software" class="nav-link active" data-scroll-target="#what-is-research-software">What is research software?</a></li>
+  <li><a href="#why-does-research-software-matter" id="toc-why-does-research-software-matter" class="nav-link" data-scroll-target="#why-does-research-software-matter">Why does research software matter?</a></li>
+  <li><a href="#what-can-you-find" id="toc-what-can-you-find" class="nav-link" data-scroll-target="#what-can-you-find">What can you find?</a></li>
+  </ul>
+<div class="toc-actions"><ul><li><a href="https://github.com/TU-Delft-DCC/TU-Delft-DCC.github.io/issues/new/choose" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -1005,7 +1014,19 @@ ul.task-list li input[type="checkbox"] {
 <div class="quarto-title-meta">
 
     
+    <div>
+    <div class="quarto-title-meta-heading">Last reviewed</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">August 29, 2025</p>
+    </div>
+  </div>
   
+    <div>
+    <div class="quarto-title-meta-heading">Last modified</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date-modified">August 29, 2025</p>
+    </div>
+  </div>
     
   </div>
   
@@ -1013,10 +1034,57 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
+<script async="" defer="" src="https://scripts.simpleanalyticscdn.com/latest.js"></script>
+<section id="what-is-research-software" class="level2">
+<h2 class="anchored" data-anchor-id="what-is-research-software">What is research software?</h2>
+<p>Research software can be thought of as evolving through stages, reflecting how code evolves alongside the research process:</p>
+<ul>
+<li><strong>Exploratory stage:</strong> Code is written to test ideas, prototype methods, or quickly generate results. The focus is flexibility and speed rather than maintainability.</li>
+<li><strong>Sharable stage:</strong> When research outputs need to be communicated, validated, or reproduced, the software must reach a “good enough” state. It should be documented, versioned, and structured so that others can rerun or inspect the work.</li>
+<li><strong>Sustainable stage:</strong> Some research software grows beyond its original project to become a (critical) dependency for others. At this point, higher standards are needed, approaching the quality expectations of production software.</li>
+</ul>
+<p>Alongside these levels of maturity, researchers also rely on “software in research” (e.g., operating systems, libraries, dependencies) that may not have been created with research in mind but are essential for computation. For reproducibility, all of these components (exploratory scripts, research software, external dependencies, and documentation) must be identified, described, and made accessible following the <a href="../../docs/software/fair_software/fair.html">FAIR principles for research software</a>.</p>
+</section>
+<section id="why-does-research-software-matter" class="level2">
+<h2 class="anchored" data-anchor-id="why-does-research-software-matter">Why does research software matter?</h2>
+<p>Code is now as central to research as data or publications. Sharing and reusing it ensures that scientific work doesn’t stop at a single experiment but can be built upon, adapted, and tested by others. Even quick, exploratory scripts have value when preserved and explained. And when research software matures into tools used across a field, the benefits multiply by providing a foundation for whole communities.</p>
+<p>Journals and funders are also raising expectations. They increasingly expect code to be documented, reproducible, and accessible, both to validate findings and to support new discoveries. By treating research software as something that can grow from rough sketches into sustainable tools, researchers can improve the reliability of their own work while contributing lasting resources for others.</p>
+</section>
+<section id="what-can-you-find" class="level2">
+<h2 class="anchored" data-anchor-id="what-can-you-find">What can you find?</h2>
+<p>This series of guides looks at research software through that lens of growth and maturity. You’ll find:</p>
+<ul>
+<li>Practical advice on version control, environment management, and modular design.</li>
+<li>Common pitfalls, including missing documentation, tricky dependencies, and reproducibility issues.</li>
+<li>Guidance on what “good enough” looks like at different stages, and how to raise the quality of your code when it becomes important to do so.</li>
+</ul>
+<div class="callout callout-style-simple callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<i class="fa-solid fa-signs-post" aria-label="signs-post"></i> Learn more
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>The DCC guides don’t provide a full learning path (see <a href="../../docs/about.html">About the guides</a>), but the following resources can help you get started with research software development:</p>
+<ul>
+<li><a href="https://book.the-turing-way.org/">The Turing Way</a> - A handbook to reproducible, ethical and collaborative data science.</li>
+<li><a href="https://everse.software/RSQKit/">Research Software Quality Toolkit for Sciences (RSQKit)</a> - Best practices, tools, and resources for improving research software quality.</li>
+</ul>
+<p>For hands-on training in essential skills:</p>
+<ul>
+<li><a href="https://software-carpentry.org/">Software Carpentry</a> - Entry-level workshops on Python, version control, and the UNIX shell.</li>
+<li><a href="https://carpentries-incubator.github.io/better-research-software/">Building Better Research Software</a> - Follow-up to Software Carpentry, focusing on research software best practices.</li>
+<li><a href="https://carpentries-incubator.github.io/python-intermediate-development/">Intermediate Research Software Development with Python</a> - Covers more advanced Python topics for research software.</li>
+</ul>
+<p>For additional workshops, see <a href="../../docs/resources/courses.html">Courses &amp; Workshops</a>.</p>
+</div>
+</div>
 
-<script async="" defer="" src="https://scripts.simpleanalyticscdn.com/latest.js"></script><p>🏗️ Under construction</p>
 
-
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -1451,7 +1519,7 @@ ul.task-list li input[type="checkbox"] {
 </div>   
     <div class="nav-footer-center">
 <p>© 2025 <a href="https://www.tudelft.nl/digital-competence-centre">TU Delft DCC</a>. Licensed under <a href="https://creativecommons.org/licenses/by/4.0/">CC-BY-4.0</a>.</p>
-<div class="toc-actions"><ul><li><a href="https://github.com/TU-Delft-DCC/TU-Delft-DCC.github.io/issues/new/choose" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div></div>
+<div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/TU-Delft-DCC/TU-Delft-DCC.github.io/issues/new/choose" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div></div>
     <div class="nav-footer-right">
 <p>Found these guides helpful? <a href="https://github.com/TU-Delft-DCC/TU-Delft-DCC.github.io"><i class="fa-regular fa-star" aria-label="star"></i> us on GitHub</a>.</p>
 </div>
