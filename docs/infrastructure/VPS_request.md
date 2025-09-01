@@ -103,7 +103,7 @@ You should also be sure to check the instructions in the form and contact your f
 :::
 
 ## Initial Configuration of your VPS
-A few days after submitting the request, you will receive an email from ICT with login details. You can connect to your VPS via ssh (secure shell) using a command line interface (CLI). If you are in a windows environment, it is recommended to install WSL or [PuTTY](https://www.putty.org/) to be able to use the ssh command in a CLI. The unix based systems (e.g., mac, ubunt) contain ssh by default in their "Terminal" application. In order to login to your VPS, you need to first ssh to the bastion server with `ssh <username>@linux-bastion-ex.tudelft.nl` and then from there login to your server `ssh <servername>`. The first thing we recommend to do after logging into the server is to update the pre-installed packages:
+A few days after submitting the request, you will receive an email from ICT with login details. You can connect to your VPS via SSH (secure shell) using a command line interface (CLI). If you are in a Windows environment, it is recommended to install WSL or [PuTTY](https://www.putty.org/) to be able to use the ssh command in a CLI. The Unix based systems (e.g., Mac, Ubuntu) contain SSH by default in their "Terminal" application. In order to login to your VPS, you need to first SSH to the bastion server with `ssh <username>@linux-bastion-ex.tudelft.nl` and then from there login to your server `ssh <servername>`. The first thing we recommend to do after logging into the server is to update the pre-installed packages:
 
 ::: {.panel-tabset}
 
@@ -126,7 +126,7 @@ It would be also useful to set a password for the VPS when you log in. You can d
 ## Next Steps
 
 * [Set up a web server](../infrastructure/web_servers.md)
-* [Set up runners for the TU Delft Gitlab](../software/automation/gitlab/gitlab_docker.md)
-* [Mounting and handling storage drives such as a Project Drive](../data/data_storage/project_drive_mounting.md)
+* [Set up runners for TU Delft GitLab](../software/automation/gitlab/gitlab_docker.md)
+* [Mounting and handling storage drives such as a *Project Drive*](../data/data_storage/project_drive_mounting.md)
 
 We will add more documentation when other common cases come to our attention, so please [reach out to us](../../CONTRIBUTING.md) with your questions or suggestions.
