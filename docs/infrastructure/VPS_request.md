@@ -97,7 +97,10 @@ The next question deals with opening ports to the server through the TU Delft fi
 
 The next section, FQDN, is the way you can refer to your server on the internet. The recommendation is a format like `<servername>.<facultyabbreviation>.tudelt.nl`. In general, it's best to keep names relatively short and informative to make it easy to reference and remember.
 
+:::{.callout-tip appearance="simple" icon="false"}
+## {{< fa lightbulb >}} Tip
 You should also be sure to check the instructions in the form and contact your faculty [Data Steward](https://www.tudelft.nl/en/library/current-topics/research-data-management/r/support/data-stewardship/contact/) or [Faculty IT Manager](https://intranet.tudelft.nl/en/-/faculty-it-manager) if you need further explanation.
+:::
 
 ## Initial Configuration of your VPS
 A few days after submitting the request, you will receive an email from ICT with login details. You can connect to your VPS via ssh (secure shell) using a command line interface (CLI). If you are in a windows environment, it is recommended to install WSL or [PuTTY](https://www.putty.org/) to be able to use the ssh command in a CLI. The unix based systems (e.g., mac, ubunt) contain ssh by default in their "Terminal" application. In order to login to your VPS, you need to first ssh to the bastion server with `ssh <username>@linux-bastion-ex.tudelft.nl` and then from there login to your server `ssh <servername>`. The first thing we recommend to do after logging into the server is to update the pre-installed packages:
