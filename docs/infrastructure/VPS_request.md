@@ -56,8 +56,8 @@ Common use cases for VPSs covered in these guides include:
 * [Mounting and handling storage drives such as a *Project Drive*](../data/data_storage/project_drive_mounting.md)
 
 ## Prerequisites
-* TU Delft netID
-* Basic knowledge of Linux (if requesting Linux server)
+* TU Delft NetID
+* Basic knowledge of Linux (if requesting a Linux server)
 
 ## Tools/Software
 * For Windows users, you will need a programming and runtime environment like Windows Subsystem for Linux (WSL) or an SSH client like [PuTTY](https://www.putty.org/).
@@ -69,7 +69,9 @@ Common use cases for VPSs covered in these guides include:
 4. Login to your server for the first time
 
 ### Step 1: Navigate to the TU Delft server request form
-You can make a request for a server via the [TopDesk self service portal](https://tudelft.topdesk.net/tas/public/ssp/content/detail/service?unid=71ba4c9678e041fd99dad8e7e11dd0e2). If the link does not work, you can also navigate to the TopDesk portal homepage and type "Faculty managed Servers" in the search box. Alternatively, you can navigate to the form via ICT SERVICES -> IT FOR RESEARCH -> FACULTY MANAGED SERVERS.
+You can make a request for a server via the [TopDesk self service portal](https://tudelft.topdesk.net/tas/public/ssp/content/detail/service?unid=71ba4c9678e041fd99dad8e7e11dd0e2). If the link does not work, you can also navigate to the TopDesk portal homepage and type "Faculty managed Servers" in the search box. Alternatively, you can navigate to the form via:
+
+> ICT SERVICES -> IT FOR RESEARCH -> FACULTY MANAGED SERVERS.
 
 ### Step 2: Fill and send the form according to your preferences and needs
 The form is divided into three sections: **Caller**, **General Questions**, and **Technical Questions**.
