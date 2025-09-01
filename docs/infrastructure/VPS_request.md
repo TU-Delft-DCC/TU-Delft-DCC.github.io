@@ -47,7 +47,7 @@ categories:
 ---
 
 ## Background
-This guide describes the essentials for requesting and setting up a TU Delft managed Virtual Private Server(VPS). 
+This guide describes the essentials for requesting and setting up a TU Delft managed Virtual Private Server (VPS). 
 
 Common use cases for VPSs covered in these guides include:
 
