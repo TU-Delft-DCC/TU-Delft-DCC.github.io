@@ -55,9 +55,6 @@ Common use cases for VPSs covered in these guides include:
 * [Set up runners for TU Delft GitLab](../software/automation/gitlab/gitlab_docker.md)
 * [Mounting and handling storage drives such as a *Project Drive*](../data/data_storage/project_drive_mounting.md)
 
-## What this documentation will help you achieve
-This documentation aims to guide researchers requesting a VPS. 
-
 ## Prerequisites
 * TU Delft netID
 * Basic knowledge of Linux (if requesting Linux server)
