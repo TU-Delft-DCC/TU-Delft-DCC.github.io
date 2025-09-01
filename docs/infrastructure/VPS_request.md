@@ -74,9 +74,9 @@ You can make a request for a server via the [TopDesk self service portal](https:
 > ICT SERVICES ⇾ IT FOR RESEARCH ⇾ FACULTY MANAGED SERVERS.
 
 ### Step 2: Fill and send the form according to your preferences and needs
-The form is divided into three sections: **Caller**, **General Questions**, and **Technical Questions**.
+The form is divided into three sections: "_**Caller**_", "_**General Questions**_", and "_**Technical Questions**_".
 
-**Caller** should contain the contact information of the main administrator of this server. If you select your name, the fields below should be auto-populated with your building, phone number, email, department/program, organizational unit, and (sometimes) room. If you are requesting the server on behalf of someone else, you can fill in their details instead.
+_**Caller**_ should contain the contact information of the main administrator of this server. If you select your name, the fields below should be auto-populated with your building, phone number, email, department/program, organizational unit, and (sometimes) room. If you are requesting the server on behalf of someone else, you can fill in their details instead.
 
 The last question in the **Caller Details** section access to the server by external users. Generally speaking, granting access to TU Delft-managed servers is not recommended, but if it is necessary you can add the contact details of the external party and the reason(s) for which they should have access. You will need to provide a company-affiliated email address for the external user, and the request may or may not be granted by ICT. 
 
@@ -84,9 +84,9 @@ The last question in the **Caller Details** section access to the server by exte
 Keep in mind that a server provides access to the backend of your application. If for example you want to deploy a web server to share your data widely, users **do not** need direct access to the server in order to access the data itself. 
 :::
 
-The next section contains **General Questions** about the name and purpose of your server. If you plan to use this server ongoing into the future, you can either leave the field "Expiration Date" blank or add a date in 10+ years. TU Delft ICT will alert you when the expiration date you select is nearing. There you can also add the netIDs of your collaborators who should have access to the server
+The next section contains _**General Questions**_ about the name and purpose of your server. If you plan to use this server ongoing into the future, you can either leave the field "Expiration Date" blank or add a date in 10+ years. TU Delft ICT will alert you when the expiration date you select is nearing. There you can also add the netIDs of your collaborators who should have access to the server
 
-The **Technical Questions** section asks you to specify an operating system and some other technical details about your server configuration. 
+The _**Technical Questions**_ section asks you to specify an operating system and some other technical details about your server configuration.
 
 When requesting a VPS, users can choose from a range of predefined hardware and operating system configurations. The following operating systems are available: Windows Server 2019, Windows Server 2022, Red Hat Enterprise Linux (latest supported version), and Ubuntu (latest LTS version). If you are new to working with servers, generally the best choice may be "Basic configuration 4" (Ubuntu). 
 
