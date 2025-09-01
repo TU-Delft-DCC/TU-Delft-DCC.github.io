@@ -50,21 +50,21 @@ A *server* is a computer that handles *requests* (data, services, or programs) f
 
 * You need a machine to handle large amounts of requests 
 * You want to outsource the maintenance of a server to TU Delft ICT
-* You would like to rely on safety and security administrated by the University, including backups
+* You would like to rely on safety and security administrated by the university, including backups
 * A part of your analysis should be running continuously, and cannot do it with your own machine 
 
 :::{.callout-note appearance="simple" icon="false"}
 ## {{< fa info-circle >}} Note
-It is not recommended to use servers to set up services that are already provided by the ICT department. When in doubt, you can always contact your FIM and/or Faculty Data Steward.
+It is not recommended to use servers to set up services that are already provided by the ICT department. When in doubt, you can always contact your Faculty ICT Manager (FIM) and/or Faculty Data Steward.
 :::
 
 #### **Virtual vs physical servers**
 
 All servers are a physical computer sitting somewhere. However, there is a common distiction between virtual and physical servers, where a virtual server is an independent instance provided by a larger physical server. Virtual servers are provided free of charge and can be requested via TOPdesk. Physical server placement can be requested by contacting the faculty's IT manager, and any associated costs are paid by the purchasing researcher and/or department.
 
-In most cases, a virtual server is the most suitable option. However, a physical server may be necessary when it is intended for specific use cases (laboratory equipment, sensor data aqcuisition, image processing, ...).
+In most cases, a virtual server is the most suitable option. However, a physical server may be necessary when it is intended for specific use cases (e.g., laboratory equipment, sensor data acquisition, image processing).
 
-TU Delft offers its employees the use of physical or virtual servers, these servers are referred as faculty managed servers which are therefore *private* to the university network by default. *Virtual Private Servers* (VPS) can be requested as described in the next guide [Request a VPS](VPS_request.md), whereas physical server placement follow a different procedure for which we strongly encourage you to consult your Faculty ICT Manager (FIM).
+TU Delft offers its employees the use of physical or virtual servers, these servers are referred as faculty managed servers which are therefore *private* to the university network by default. *Virtual Private Servers* (VPS) can be requested as described in the next guide [*Request a VPS*](VPS_request.md), whereas physical server placement follow a different procedure for which we strongly encourage you to consult your FIM.
 
 #### **Relevant considerations**
 
