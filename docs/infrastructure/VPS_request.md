@@ -80,7 +80,8 @@ _**Caller**_ should contain the contact information of the main administrator of
 
 The last question in the **Caller Details** section access to the server by external users. Generally speaking, granting access to TU Delft-managed servers is not recommended, but if it is necessary you can add the contact details of the external party and the reason(s) for which they should have access. You will need to provide a company-affiliated email address for the external user, and the request may or may not be granted by ICT. 
 
-:::{.callout-note}
+:::{.callout-note appearance="simple" icon="false"}
+## {{< fa info-circle >}} Note
 Keep in mind that a server provides access to the backend of your application. If for example you want to deploy a web server to share your data widely, users **do not** need direct access to the server in order to access the data itself. 
 :::
 
