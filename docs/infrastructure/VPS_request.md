@@ -52,8 +52,8 @@ This guide describes the essentials for requesting and setting up a TU Delft man
 Common use cases for VPSs covered in these guides include:
 
 * [Set up a web server](../infrastructure/web_servers.md)
-* [Set up runners for the TU Delft Gitlab](../software/automation/gitlab/gitlab_docker.md)
-* [Mounting and handling storage drives such as a Project Drive](../data/data_storage/project_drive_mounting.md)
+* [Set up runners for TU Delft GitLab](../software/automation/gitlab/gitlab_docker.md)
+* [Mounting and handling storage drives such as a *Project Drive*](../data/data_storage/project_drive_mounting.md)
 
 ## What this documentation will help you achieve
 This documentation aims to guide researchers requesting a VPS. 
