@@ -48,7 +48,7 @@ categories:
 
 ---
 
-This guide explains how to set up a secure, single-step Secure SHell (SSH) connection to a Virtual Private Server (VPS) at TU Delft. SSH is a protocol that allows secure remote access to servers over an unsecured network. 
+This guide explains how to set up a secure, single-step Secure Shell (SSH) connection to a Virtual Private Server (VPS) at TU Delft. SSH is a protocol that allows secure remote access to servers over an unsecured network. 
 
 Commonly, connecting to a VPS requires first accessing a **Bastion Host** (an intermediary server controlling access). Faculty managed setup as VPSs at TU Delft can be accessed by two types of bastion hosts: `linux-bastion-ex.tudelft.nl` having a local /home directory, and `linux-bastion.tudelft.nl` having access to your own central /home directory. In this sense, `linux-bastion-ex.tudelft.nl` is a more secure option recommended for the steps below. 
 
@@ -56,7 +56,7 @@ Connecting to a VPS via a bastion host, is a two-step process. However, by using
 
 :::{.callout-important appearance="simple" icon="false"}
 ## {{< fa info-circle >}} Accessing a VPS
-Depending on your geogaphic location, access to a VPS via SSH may be blocked by the TU Delft firewall. For example, access is usally blocked if you are connecting from your home network. Therefore, before going through the following steps, please check the [TU Delft manuals for working remotely](https://www.tudelft.nl/en/it-manuals/working-remotely) for [eduVPN](https://www.tudelft.nl/en/it-manuals/applications/vpn) and [bastion host](https://www.tudelft.nl/ict-handleidingen/linux-bastion-host).
+Depending on your geographic location, access to a VPS via SSH may be blocked by the TU Delft firewall. For example, access is usually blocked if you are connecting from your home network. Therefore, before going through the following steps, please check the [TU Delft manuals for working remotely](https://www.tudelft.nl/en/it-manuals/working-remotely) for [eduVPN](https://www.tudelft.nl/en/it-manuals/applications/vpn) and [bastion host](https://www.tudelft.nl/ict-handleidingen/linux-bastion-host).
 :::
 
 ### Prerequisites
@@ -85,7 +85,7 @@ Before starting, you need:
 $  ssh-keygen -t ed25519 -f ~/.ssh/<my-keyname>
 ```
 
-You will be promted to crate a *passphrase*. We recommend you to add one to make the connection more secure. The passphrase will be asked every time you connect to the VPS. To skip the passphrase, press `Enter` when prompted. You should see something like this:
+You will be prompted to create a *passphrase*. We recommend you to add one to make the connection more secure. The passphrase will be asked every time you connect to the VPS. To skip the passphrase, press `Enter` when prompted. You should see something like this:
 
 ``` bash
 Generating public/private ed25519 key pair.
