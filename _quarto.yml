@@ -123,6 +123,8 @@ website:
                   href: docs/software/development_workflow/branch_management.qmd
                 - text: Collaboration
                   href: docs/software/development_workflow/collaboration.qmd
+                - text: Software design
+                  href: docs/software/development_workflow/software_design.qmd                  
             - section: "Documentation"
               href: docs/software/documentation/index.md
               contents:
@@ -292,16 +294,17 @@ website:
           - section: "Remote servers"
             href: docs/infrastructure/remote_servers.md
             contents:
-              - text: Request a VPS
+              - text: Server request form
                 href: docs/infrastructure/VPS_request.md
-              - href: docs/infrastructure/VPS_SSH.md
-                text: Setting up SSH tunneling
-              - href: docs/infrastructure/moving_data.md
-                text: Moving data to remote servers
-              - href: docs/infrastructure/VPS_SSL_Certs.md
-                text: Configure SSL certificates
-              - href: docs/infrastructure/web_servers.md
-                text: Web servers
+              - text: Server connection
+                href: docs/infrastructure/VPS_SSH.md
+              - text: Data transfer
+                href: docs/infrastructure/moving_data.md
+              - text: Web servers
+                href: docs/infrastructure/web_servers.md
+                contents:
+                  - text: SSL certificates
+                    href: docs/infrastructure/VPS_SSL_Certs.md
 
     # - title: "TU Delft Support"
     #   contents: 

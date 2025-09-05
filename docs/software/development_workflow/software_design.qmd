@@ -1,0 +1,225 @@
+---
+# Insert this YAML header (including the opening and closing ---) at the beginning of the document and fill it out accordingly
+
+# We use this key to indicate the last reviewed date [manual entry, use YYYY-MM-DD]
+# Uncomment and populate the next line accordingly
+date: 2025-08-29
+
+# We use this key to indicate the last modified date [manual entry, use YYYY-MM-DD]
+# Uncomment and populate the next line accordingly
+date-modified: 2025-08-29
+
+# Do not modify
+lang: en
+language: 
+  title-block-published: "Last reviewed"
+  title-block-modified: "Last modified"
+
+# Title of the document [manual entry]
+# Uncomment and populate the next line accordingly
+title: Software design principles
+
+# Brief overview of the document (will be used in listings) [manual entry]
+# Uncomment and populate the next line and uncomment "hide-description: true".
+#description: Short description of the document
+#hide-description: true
+
+# Authors of the document, will not be parsed [manual entry]
+# Uncomment and populate the next lines accordingly
+author_1: Aysun Urhan
+
+# Maintainers of the document, will not be parsed [manual entry]
+# Uncomment and populate the next lines accordingly
+maintainer_1: Elviss Dvinskis
+#maintainer_2:
+
+# To whom reach out regarding the document, will not be parsed [manual entry]
+# Uncomment and populate the next line accordingly
+corresponding: Elviss Dvinskis
+
+# Meaningful keywords, newline separated [manual entry]
+# Uncomment and populate the next line and list accordingly
+categories: 
+ - software
+ - design
+ - architecture
+ - c4
+
+---
+
+Writing code represents only one aspect of software design. The real challenge lies in creating systems that **stand the test of time**. Good software design creates systems that enable reproducible science, collaboration, and remain usable and trustworthy for the long term. It provides a shared structure that allows researchers to build on each other's work rather than starting from scratch.
+
+:::{.callout-tip appearance="simple" icon="false"}
+## {{< fa lightbulb >}} Guiding principles
+
+- **Simplicity over complexity**: simple designs are easier to review, reproduce, and maintain.  
+- **Design for change**: research evolves, so software must adapt to new methods and data.  
+- **Transparency is design**: architecture must be clear so results can be trusted and reviewed.  
+- **Iteration over perfection**: science is exploratory; architecture should evolve as insights emerge.  
+- **Balance trade-offs**: choices (performance vs. clarity, flexibility vs. precision) should be explicit and aligned with research goals.  
+- **Empowering researchers**: design should reduce barriers for scientists using, extending, or validating the software.
+- **FAIR by design**: architecture choices should support the FAIR principles, making software and its outputs Findable, Accessible, Interoperable, and Reusable.  
+:::
+
+## Why software architecture matters in research
+Scientific research thrives on reproducibility and transparency. Software that is poorly structured or insufficiently documented risks becoming a “black box,” where results cannot be trusted or reused. A well-defined architecture helps to:
+
+- **Ensure reproducibility**  
+  By separating data handling, computation, and analysis, workflows can be rerun and verified.  
+- **Enable collaboration**  
+  Clear modular design lowers the entry barrier for new contributors (students, collaborators, or other labs).  
+- **Support extensibility**  
+  Research questions evolve; a good design makes it easier to test new hypotheses, add new algorithms, or integrate new data sources.  
+- **Enhance sustainability**  
+  Many scientific codes outlive the projects they were written for. Sustainable architecture ensures they can be maintained and reused beyond the initial scope.  
+- **Bridge disciplines**  
+  In multidisciplinary research, software is often used by scientists who are not software engineers. Transparent architecture helps communicate design decisions to a wide audience.  
+
+
+::: {.callout-important appearance="simple" icon="false"}
+Good architecture in research software prioritizes flexibility over scale. The code should expand possibilities for scientific insight rather than restrict them.
+:::
+
+## Step by step guide to designing research software
+
+Designing architecture sounds abstract, but it can be done in simple steps. Think of it as planning your research workflow, but for code.
+
+
+#### Step 1: Define your goals
+
+- Focus on 3–5 goals (also called *quality attributes*), such as:
+    - Be **reproducible** (others can run it and get the same results)  
+    - Be **flexible** (easy to test new ideas)  
+    - Be **efficient** (runs in reasonable time on available computers)  
+    - Be **portable** (runs on my laptop, a cluster, or the cloud)  
+- Write these goals down in plain language. They will guide your choices.  
+
+#### Step 2: Capture scope and constraints
+
+- Research questions and hypotheses  
+- Data types, sizes, and growth expectations  
+- Compute targets (laptops, HPC, cloud)  
+- Licensing, ethics, and data sensitivity (e.g., GDPR)  
+
+#### Step 3: Draft a minimal architecture
+
+- Sketch the big steps of your research pipeline, identify modules, and define how data flows between them. For example:
+  - Data collection
+  - Cleaning and preprocessing
+  - Analysis or modeling
+  - Producing results
+  - Visualization and reporting
+- Once you have these steps, make the design more concrete:
+  - **Identify modules**: break the workflow into parts such as *ingestion → preprocess → model → analyze → visualize*.  
+  - **Define data flow**: show how inputs and outputs move between steps (what comes in, what goes out).
+  - **Describe interfaces**: note what format or structure each step expects (e.g., “CSV file”, “JSON config”, “NetCDF dataset”).  
+  - **Draw a simple diagram**: use a quick sketch, or a tool like Mermaid, PlantUML, or a C4 diagram (described below in more detail).
+
+```{mermaid}
+%%| fig-cap: "Example minimal research pipeline architecture"
+flowchart LR
+  A[Data Collection] --> B[Cleaning / Preprocess]
+  B --> C[Analysis / Model]
+  C --> D[Results]
+  D --> E[Visualization / Reports]
+```
+
+#### Step 4: Build a small working version
+- Instead of trying to design everything at once, create a very simple version of your software that runs from start to finish.  
+- Use a small dataset and pass it through all the steps (data → preprocess → analysis → results).  
+- This “end-to-end slice” shows that your design works in practice and helps uncover problems early.  
+- It also gives collaborators something concrete they can run, test, and discuss.
+
+#### Step 5: Automate and record what happens
+- Once the small version works, make it easy to repeat and share:  
+  - Put your notes and diagrams in the same repository as the code.  
+  - Add a short test dataset that can be processed quickly (so others can check their setup).  
+  - Automate simple checks (e.g., run the pipeline on the test data after each change).  
+  - Record important details automatically, such as:  
+    - the software version  
+    - the parameters used  
+    - the input data files  
+- These details make it possible for you and others to **reproduce results** later, which is central to good science.
+
+## The C4 Model for research software design
+
+When explaining software to collaborators, it is easy to get lost in too much detail or not enough detail. The **C4 model** provides a structured way to show software architecture at different levels, from the big picture down to the finer details. It is widely used in both industry and academia because it adapts well to different audiences: principal investigators, collaborators, new students, and developers.
+
+The “C4” stands for **Context, Containers, Components, and Code**. 
+Think of it as zooming in on your software with a microscope, each step shows more detail.
+
+
+#### Level 1: System context
+
+This is the **big picture**.  
+It shows how your research software fits into the overall scientific workflow:
+
+- Who uses it (e.g., researchers, students, automated pipelines)  
+- What external systems or tools it connects to (e.g., databases, HPC cluster, external datasets)  
+- What the software produces (e.g., processed datasets, figures, reports)  
+
+This view is useful for project proposals, publications, and discussions with collaborators who don’t need technical details.
+
+Here is how a simple research workflow could be shown at Level 1 (System Context):
+
+```{mermaid}
+%%| fig-cap: "System context for a research pipeline"
+flowchart TB
+  Researcher -->|provides data + config| Software[Research Software System]
+  Software -->|results, figures, reports| Researcher
+  Software -->|stores results| Repository[(Data/Results Repository)]
+  ExternalDB[(External Database)] -->|datasets| Software
+```
+
+#### Level 2: Containers
+
+This level zooms in to show the **main building blocks** inside your system.  
+A “container” here does **not** mean Docker (though it could), it just means a large part of your software that can run on its own. Examples: 
+
+- A command-line tool  
+- A database or data store  
+- A web interface or API  
+- A workflow engine (e.g., Snakemake, Nextflow)  
+
+This view shows how these pieces talk to each other and what responsibilities each one has.
+
+#### Level 3: Components
+
+Each container can be broken down into **smaller parts** called components.  
+For example, inside an “analysis” container, you might have:  
+
+- A data loader  
+- A statistical model  
+- A visualization module  
+
+This view is useful for developers and contributors who need to understand how a part of the system works internally.
+
+#### Level 4: Code (optional)
+
+At the deepest level, you can describe the **code structure** itself (e.g., class diagrams, functions, or modules).  
+This level is not always needed, but for critical parts of the software, it can help with onboarding new developers or ensuring correctness.
+
+{{< video https://www.youtube.com/watch?v=x2-rSnhpw0g >}}
+
+:::{.callout-tip appearance="simple" icon="false"}
+## {{< fa lightbulb >}} Why use C4 for research software?
+
+- **Clarity for different audiences**: from PIs to PhD students to RSEs, each level provides the right amount of detail.  
+- **Shared understanding**: reduces confusion when multiple people (from different fields) work on the same project.  
+- **Transparency and reproducibility**: makes it easier for others to understand how results are produced.  
+- **Sustainability**: helps future researchers maintain or extend the software long after the original team moves on.  
+:::
+
+:::{.callout-note appearance="simple" icon="false"}
+## {{< fa signs-post >}} Further reading
+- [C4 Model](https://c4model.com/): official site with examples and explanations.
+- [Simon Brown’s book "Software Architecture for Developers"](https://static.codingthearchitecture.com/sddconf2014-software-architecture-for-developers-extract.pdf): practical introduction to C4.
+- [Martin Fowler - "Essays on Software Architecture"](https://martinfowler.com/architecture/)  
+- Practical tools
+  - [Awesome Research Software Engineering](https://github.com/hifis-net/awesome-rse): curated resources and tools.  
+  - [PlantUML](https://plantuml.com/): diagramming tool often used in research docs.  
+  - [Mermaid Live Editor](https://mermaid-js.github.io/mermaid-live-editor/): another useful to create and preview diagrams for documentation.
+- Talks and videos
+  - [Research Software Hour](https://www.youtube.com/playlist?list=PLpLblYHCzJAB6blBBa0O2BEYadVZV3JYf): YouTube playlist with practical software design tips  
+  - [Software Sustainability Institute YouTube](https://www.youtube.com/user/softwaresaved): talks and tutorials  
+:::
