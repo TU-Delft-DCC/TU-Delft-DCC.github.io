@@ -125,6 +125,15 @@ Tools for writing and managing workflows.
 :::
 :::
 
+::: {.feature}
+### {{< fa palette >}} Software Design
+Principles for designing your software.
+
+::: {.learn-more}
+[Learn more »](./software_design.qmd)
+:::
+:::
+
 
 :::
 :::

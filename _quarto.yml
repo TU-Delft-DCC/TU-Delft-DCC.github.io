@@ -123,6 +123,8 @@ website:
                   href: docs/software/development_workflow/branch_management.qmd
                 - text: Collaboration
                   href: docs/software/development_workflow/collaboration.qmd
+                - text: Software design
+                  href: docs/software/development_workflow/software_design.qmd                  
             - section: "Documentation"
               href: docs/software/documentation/index.md
               contents:
