@@ -39,26 +39,26 @@ corresponding: Elviss Dvinskis
 
 # Meaningful keywords, newline separated [manual entry]
 # Uncomment and populate the next line and list accordingly
-#categories: 
-# - git subtree
-# - git submodules
-# - templates
-# - repository structures
+categories: 
+ - software
+ - design
+ - architecture
+ - c4
 
 ---
 
-Software design is not just about writing code, it is about creating systems that **stand the test of time**. Good software design creates systems that enable reproducible science, foster collaboration, and remain usable and trustworthy for the long term. It provides a shared structure that allows researchers to build on each other’s work rather than starting from scratch.
+Writing code represents only one aspect of software design. The real challenge lies in creating systems that **stand the test of time**. Good software design creates systems that enable reproducible science, collaboration, and remain usable and trustworthy for the long term. It provides a shared structure that allows researchers to build on each other's work rather than starting from scratch.
 
+:::{.callout-tip appearance="simple" icon="false"}
+## {{< fa lightbulb >}} Guiding principles
 
-::: callout-tip
-## Guiding principles
 - **Simplicity over complexity**: simple designs are easier to review, reproduce, and maintain.  
 - **Design for change**: research evolves, so software must adapt to new methods and data.  
 - **Transparency is design**: architecture must be clear so results can be trusted and reviewed.  
 - **Iteration over perfection**: science is exploratory; architecture should evolve as insights emerge.  
 - **Balance trade-offs**: choices (performance vs. clarity, flexibility vs. precision) should be explicit and aligned with research goals.  
 - **Empowering researchers**: design should reduce barriers for scientists using, extending, or validating the software.
-- **FAIR by design**: architecture choices should support the **FAIR principles** — making software and its outputs Findable, Accessible, Interoperable, and Reusable.  
+- **FAIR by design**: architecture choices should support the FAIR principles, making software and its outputs Findable, Accessible, Interoperable, and Reusable.  
 :::
 
 ## Why software architecture matters in research
@@ -77,7 +77,7 @@ Scientific research thrives on reproducibility and transparency. Software that i
 
 
 ::: {.callout-important appearance="simple" icon="false"}
-Architecture in research software is not about building the biggest system, but about ensuring that scientific insight can grow without being constrained by the code.
+Good architecture in research software prioritizes flexibility over scale. The code should expand possibilities for scientific insight rather than restrict them.
 :::
 
 ## Step by step guide to designing research software
@@ -141,7 +141,7 @@ flowchart LR
     - the input data files  
 - These details make it possible for you and others to **reproduce results** later, which is central to good science.
 
-## The C4 Model for research software deign
+## The C4 Model for research software design
 
 When explaining software to collaborators, it is easy to get lost in too much detail or not enough detail. The **C4 model** provides a structured way to show software architecture at different levels, from the big picture down to the finer details. It is widely used in both industry and academia because it adapts well to different audiences: principal investigators, collaborators, new students, and developers.
 
@@ -201,7 +201,7 @@ This level is not always needed, but for critical parts of the software, it can 
 
 {{< video https://www.youtube.com/watch?v=x2-rSnhpw0g >}}
 
-::: {.callout-note collapse="false" appearance="default" icon="false"}
+:::{.callout-tip appearance="simple" icon="false"}
 ## {{< fa lightbulb >}} Why use C4 for research software?
 
 - **Clarity for different audiences**: from PIs to PhD students to RSEs, each level provides the right amount of detail.  
