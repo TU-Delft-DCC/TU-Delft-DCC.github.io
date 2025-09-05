@@ -26,7 +26,7 @@ hide-description: true
 # Authors of the document, will not be parsed [manual entry]
 # Uncomment and populate the next lines accordingly
 author_1: Manuel Garcia
-author_2: Raul Ortiz Merino
+author_2: Raúl Ortiz Merino
 
 # Maintainers of the document, will not be parsed [manual entry]
 # Uncomment and populate the next lines accordingly
