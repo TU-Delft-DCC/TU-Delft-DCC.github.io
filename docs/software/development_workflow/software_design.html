@@ -6,10 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="dcterms.date" content="2025-03-07">
-<meta name="description" content="Writing a good README">
+<meta name="dcterms.date" content="2025-08-29">
 
-<title>README</title>
+<title>Software design principles</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -32,8 +31,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="../../../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../../../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../../../">
-<link href="../../../docs/software/documentation/license.html" rel="next">
-<link href="../../../docs/software/documentation/index.html" rel="prev">
+<link href="../../../docs/software/documentation/index.html" rel="next">
+<link href="../../../docs/software/development_workflow/collaboration.html" rel="prev">
 <link href="../../../docs/img/cone.png" rel="icon" type="image/png">
 <script src="../../../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
@@ -80,6 +79,9 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 <style>html{ scroll-behavior: smooth; }</style>
+<script src="../../../site_libs/quarto-diagram/mermaid.min.js"></script>
+<script src="../../../site_libs/quarto-diagram/mermaid-init.js"></script>
+<link href="../../../site_libs/quarto-diagram/mermaid.css" rel="stylesheet">
 
 
 <link rel="stylesheet" href="../../../themes/custom.css">
@@ -304,7 +306,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../../docs/software/getting_started.html"><img src="../../../docs/img/laptop-code-solid.svg" style="filter: invert(0.5) sepia(1) saturate(5) hue-rotate(175deg);height:1em"> <strong>Research Software</strong></a></li><li class="breadcrumb-item"><a href="../../../docs/software/documentation/index.html">Documentation</a></li><li class="breadcrumb-item"><a href="../../../docs/software/documentation/write_a_readme.html">README</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../../docs/software/getting_started.html"><img src="../../../docs/img/laptop-code-solid.svg" style="filter: invert(0.5) sepia(1) saturate(5) hue-rotate(175deg);height:1em"> <strong>Research Software</strong></a></li><li class="breadcrumb-item"><a href="../../../docs/software/development_workflow/index.html">Development workflow</a></li><li class="breadcrumb-item"><a href="../../../docs/software/development_workflow/software_design.html">Software design</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -376,11 +378,11 @@ ul.task-list li input[type="checkbox"] {
       <div class="sidebar-item-container"> 
             <a href="../../../docs/software/development_workflow/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Development workflow</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth2 ">  
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth2 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../../docs/software/development_workflow/project_management.html" class="sidebar-item-text sidebar-link">
@@ -448,7 +450,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../docs/software/development_workflow/software_design.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../docs/software/development_workflow/software_design.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Software design</span></a>
   </div>
 </li>
@@ -458,14 +460,14 @@ ul.task-list li input[type="checkbox"] {
       <div class="sidebar-item-container"> 
             <a href="../../../docs/software/documentation/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Documentation</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth2 show">  
+      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../docs/software/documentation/write_a_readme.html" class="sidebar-item-text sidebar-link active">
+  <a href="../../../docs/software/documentation/write_a_readme.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">README</span></a>
   </div>
 </li>
@@ -1006,10 +1008,9 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#project-purpose" id="toc-project-purpose" class="nav-link active" data-scroll-target="#project-purpose">Project purpose</a></li>
-  <li><a href="#how-to-cite" id="toc-how-to-cite" class="nav-link" data-scroll-target="#how-to-cite">How to cite</a></li>
-  <li><a href="#installation-and-usage" id="toc-installation-and-usage" class="nav-link" data-scroll-target="#installation-and-usage">Installation and usage</a></li>
-  <li><a href="#license" id="toc-license" class="nav-link" data-scroll-target="#license">License</a></li>
+  <li><a href="#why-software-architecture-matters-in-research" id="toc-why-software-architecture-matters-in-research" class="nav-link active" data-scroll-target="#why-software-architecture-matters-in-research">Why software architecture matters in research</a></li>
+  <li><a href="#step-by-step-guide-to-designing-research-software" id="toc-step-by-step-guide-to-designing-research-software" class="nav-link" data-scroll-target="#step-by-step-guide-to-designing-research-software">Step by step guide to designing research software</a></li>
+  <li><a href="#the-c4-model-for-research-software-design" id="toc-the-c4-model-for-research-software-design" class="nav-link" data-scroll-target="#the-c4-model-for-research-software-design">The C4 Model for research software design</a></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/TU-Delft-DCC/TU-Delft-DCC.github.io/issues/new/choose" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div></nav>
     </div>
@@ -1017,12 +1018,14 @@ ul.task-list li input[type="checkbox"] {
 <main class="content" id="quarto-document-content">
 
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../../docs/software/getting_started.html"><img src="../../../docs/img/laptop-code-solid.svg" style="filter: invert(0.5) sepia(1) saturate(5) hue-rotate(175deg);height:1em"> <strong>Research Software</strong></a></li><li class="breadcrumb-item"><a href="../../../docs/software/documentation/index.html">Documentation</a></li><li class="breadcrumb-item"><a href="../../../docs/software/documentation/write_a_readme.html">README</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../../docs/software/getting_started.html"><img src="../../../docs/img/laptop-code-solid.svg" style="filter: invert(0.5) sepia(1) saturate(5) hue-rotate(175deg);height:1em"> <strong>Research Software</strong></a></li><li class="breadcrumb-item"><a href="../../../docs/software/development_workflow/index.html">Development workflow</a></li><li class="breadcrumb-item"><a href="../../../docs/software/development_workflow/software_design.html">Software design</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">README</h1>
+<h1 class="title">Software design principles</h1>
   <div class="quarto-categories">
-    <div class="quarto-category">documentation</div>
-    <div class="quarto-category">README</div>
+    <div class="quarto-category">software</div>
+    <div class="quarto-category">design</div>
+    <div class="quarto-category">architecture</div>
+    <div class="quarto-category">c4</div>
   </div>
   </div>
 
@@ -1034,14 +1037,14 @@ ul.task-list li input[type="checkbox"] {
     <div>
     <div class="quarto-title-meta-heading">Last reviewed</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">March 7, 2025</p>
+      <p class="date">August 29, 2025</p>
     </div>
   </div>
   
     <div>
     <div class="quarto-title-meta-heading">Last modified</div>
     <div class="quarto-title-meta-contents">
-      <p class="date-modified">July 11, 2025</p>
+      <p class="date-modified">August 29, 2025</p>
     </div>
   </div>
     
@@ -1052,56 +1055,258 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 <script async="" defer="" src="https://scripts.simpleanalyticscdn.com/latest.js"></script>
-<p>A <strong>README</strong> file is essential for your software project as it helps users understand the purpose of your project, how to install and use it, and how to contribute. While the specific content of a README can vary from project to project, a good README should always include the following sections:</p>
-<ol type="1">
-<li>The purpose of the project.</li>
-<li>How to cite the project.</li>
-<li>Installation and usage instructions.</li>
-<li>The terms under which the software is distributed (license).</li>
-</ol>
-<section id="project-purpose" class="level3">
-<h3 class="anchored" data-anchor-id="project-purpose">Project purpose</h3>
-<p>Clearly explain the purpose of your project, including its motivation and objectives. This section should serve as an introductory overview, helping users and contributors understand the essence of your project.</p>
-<p>Consider adding:</p>
-<ul>
-<li>Background information</li>
-<li>Comparison with alternatives, highlighting what sets your project apart</li>
-<li>Links to related references or documentation</li>
-</ul>
-</section>
-<section id="how-to-cite" class="level3">
-<h3 class="anchored" data-anchor-id="how-to-cite">How to cite</h3>
-<p>If you want users to cite your project when they use it, provide a citation in this section, referring to a publication or DOI of the software.</p>
-<p>For more information about citing the project, see the <a href="../../../docs/software/documentation/citation.html">citation guide</a>.</p>
-</section>
-<section id="installation-and-usage" class="level3">
-<h3 class="anchored" data-anchor-id="installation-and-usage">Installation and usage</h3>
-<p>This section should explain the steps needed to set up and use the software. Before installation, users must be aware of any prerequisites or dependencies that are required. This can include specific versions of programming languages, libraries, operating systems, data, and hardware.</p>
-<section id="installation-steps" class="level4">
-<h4 class="anchored" data-anchor-id="installation-steps"><strong>Installation steps</strong></h4>
-<p>Provide a step-by-step guide for installation. This can involve downloading the software from a repository, compiling code, or using a package manager. Consider using package managers, such as <code>pip</code> or <code>conda</code>, to simplify the installation.</p>
-<p><strong>Example:</strong> The <a href="https://github.com/scikit-learn/scikit-learn?tab=readme-ov-file#installation"><code>scikit-learn</code> GitHub repository</a> provides a good example of the <em>Installation</em> section of a README.</p>
-</section>
-<section id="usage" class="level4">
-<h4 class="anchored" data-anchor-id="usage"><strong>Usage</strong></h4>
-<p>You can include the simplest possible usage example directly in the README and provide more complex examples in additional files or links.</p>
-<p><strong>Example:</strong> The <a href="https://github.com/tensorflow/tensorflow?tab=readme-ov-file#install"><code>TensorFlow</code> GitHub repository</a> gives a small usage sample after installation instructions and provides a link with additional examples and tutorials.</p>
-</section>
-</section>
-<section id="license" class="level3">
-<h3 class="anchored" data-anchor-id="license">License</h3>
-<p>Your README should specify the licensing terms. For more information, see the <a href="../../../docs/software/documentation/license.html">License guide</a>.</p>
+<p>Writing code represents only one aspect of software design. The real challenge lies in creating systems that <strong>stand the test of time</strong>. Good software design creates systems that enable reproducible science, collaboration, and remain usable and trustworthy for the long term. It provides a shared structure that allows researchers to build on each other’s work rather than starting from scratch.</p>
 <div class="callout callout-style-simple callout-tip no-icon callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<i class="fa-solid fa-lightbulb" aria-label="lightbulb"></i> Tip
+<i class="fa-solid fa-lightbulb" aria-label="lightbulb"></i> Guiding principles
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>It is recommended to write README’s in markdown (<code>README.md</code>) formatting and placed in the project’s top-level directory. If you find your README is becoming too long, consider incorporating <a href="https://www.makeareadme.com/#more-documentation">additional documentation files</a> instead of omitting important details.</p>
+<ul>
+<li><strong>Simplicity over complexity</strong>: simple designs are easier to review, reproduce, and maintain.<br>
+</li>
+<li><strong>Design for change</strong>: research evolves, so software must adapt to new methods and data.<br>
+</li>
+<li><strong>Transparency is design</strong>: architecture must be clear so results can be trusted and reviewed.<br>
+</li>
+<li><strong>Iteration over perfection</strong>: science is exploratory; architecture should evolve as insights emerge.<br>
+</li>
+<li><strong>Balance trade-offs</strong>: choices (performance vs.&nbsp;clarity, flexibility vs.&nbsp;precision) should be explicit and aligned with research goals.<br>
+</li>
+<li><strong>Empowering researchers</strong>: design should reduce barriers for scientists using, extending, or validating the software.</li>
+<li><strong>FAIR by design</strong>: architecture choices should support the FAIR principles, making software and its outputs Findable, Accessible, Interoperable, and Reusable.<br>
+</li>
+</ul>
+</div>
+</div>
+<section id="why-software-architecture-matters-in-research" class="level2">
+<h2 class="anchored" data-anchor-id="why-software-architecture-matters-in-research">Why software architecture matters in research</h2>
+<p>Scientific research thrives on reproducibility and transparency. Software that is poorly structured or insufficiently documented risks becoming a “black box,” where results cannot be trusted or reused. A well-defined architecture helps to:</p>
+<ul>
+<li><strong>Ensure reproducibility</strong><br>
+By separating data handling, computation, and analysis, workflows can be rerun and verified.<br>
+</li>
+<li><strong>Enable collaboration</strong><br>
+Clear modular design lowers the entry barrier for new contributors (students, collaborators, or other labs).<br>
+</li>
+<li><strong>Support extensibility</strong><br>
+Research questions evolve; a good design makes it easier to test new hypotheses, add new algorithms, or integrate new data sources.<br>
+</li>
+<li><strong>Enhance sustainability</strong><br>
+Many scientific codes outlive the projects they were written for. Sustainable architecture ensures they can be maintained and reused beyond the initial scope.<br>
+</li>
+<li><strong>Bridge disciplines</strong><br>
+In multidisciplinary research, software is often used by scientists who are not software engineers. Transparent architecture helps communicate design decisions to a wide audience.</li>
+</ul>
+<div class="callout callout-style-simple callout-important no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<p>Good architecture in research software prioritizes flexibility over scale. The code should expand possibilities for scientific insight rather than restrict them.</p>
+</div>
+</div>
+</div>
+</section>
+<section id="step-by-step-guide-to-designing-research-software" class="level2">
+<h2 class="anchored" data-anchor-id="step-by-step-guide-to-designing-research-software">Step by step guide to designing research software</h2>
+<p>Designing architecture sounds abstract, but it can be done in simple steps. Think of it as planning your research workflow, but for code.</p>
+<section id="step-1-define-your-goals" class="level4">
+<h4 class="anchored" data-anchor-id="step-1-define-your-goals">Step 1: Define your goals</h4>
+<ul>
+<li>Focus on 3–5 goals (also called <em>quality attributes</em>), such as:
+<ul>
+<li>Be <strong>reproducible</strong> (others can run it and get the same results)<br>
+</li>
+<li>Be <strong>flexible</strong> (easy to test new ideas)<br>
+</li>
+<li>Be <strong>efficient</strong> (runs in reasonable time on available computers)<br>
+</li>
+<li>Be <strong>portable</strong> (runs on my laptop, a cluster, or the cloud)<br>
+</li>
+</ul></li>
+<li>Write these goals down in plain language. They will guide your choices.</li>
+</ul>
+</section>
+<section id="step-2-capture-scope-and-constraints" class="level4">
+<h4 class="anchored" data-anchor-id="step-2-capture-scope-and-constraints">Step 2: Capture scope and constraints</h4>
+<ul>
+<li>Research questions and hypotheses<br>
+</li>
+<li>Data types, sizes, and growth expectations<br>
+</li>
+<li>Compute targets (laptops, HPC, cloud)<br>
+</li>
+<li>Licensing, ethics, and data sensitivity (e.g., GDPR)</li>
+</ul>
+</section>
+<section id="step-3-draft-a-minimal-architecture" class="level4">
+<h4 class="anchored" data-anchor-id="step-3-draft-a-minimal-architecture">Step 3: Draft a minimal architecture</h4>
+<ul>
+<li>Sketch the big steps of your research pipeline, identify modules, and define how data flows between them. For example:
+<ul>
+<li>Data collection</li>
+<li>Cleaning and preprocessing</li>
+<li>Analysis or modeling</li>
+<li>Producing results</li>
+<li>Visualization and reporting</li>
+</ul></li>
+<li>Once you have these steps, make the design more concrete:
+<ul>
+<li><strong>Identify modules</strong>: break the workflow into parts such as <em>ingestion → preprocess → model → analyze → visualize</em>.<br>
+</li>
+<li><strong>Define data flow</strong>: show how inputs and outputs move between steps (what comes in, what goes out).</li>
+<li><strong>Describe interfaces</strong>: note what format or structure each step expects (e.g., “CSV file”, “JSON config”, “NetCDF dataset”).<br>
+</li>
+<li><strong>Draw a simple diagram</strong>: use a quick sketch, or a tool like Mermaid, PlantUML, or a C4 diagram (described below in more detail).</li>
+</ul></li>
+</ul>
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">flowchart LR
+  A[Data Collection] --&gt; B[Cleaning / Preprocess]
+  B --&gt; C[Analysis / Model]
+  C --&gt; D[Results]
+  D --&gt; E[Visualization / Reports]
+</pre>
+</div>
+<p></p><figcaption> Example minimal research pipeline architecture</figcaption> </figure><p></p>
+</div>
+</div>
+</div>
+</section>
+<section id="step-4-build-a-small-working-version" class="level4">
+<h4 class="anchored" data-anchor-id="step-4-build-a-small-working-version">Step 4: Build a small working version</h4>
+<ul>
+<li>Instead of trying to design everything at once, create a very simple version of your software that runs from start to finish.<br>
+</li>
+<li>Use a small dataset and pass it through all the steps (data → preprocess → analysis → results).<br>
+</li>
+<li>This “end-to-end slice” shows that your design works in practice and helps uncover problems early.<br>
+</li>
+<li>It also gives collaborators something concrete they can run, test, and discuss.</li>
+</ul>
+</section>
+<section id="step-5-automate-and-record-what-happens" class="level4">
+<h4 class="anchored" data-anchor-id="step-5-automate-and-record-what-happens">Step 5: Automate and record what happens</h4>
+<ul>
+<li>Once the small version works, make it easy to repeat and share:
+<ul>
+<li>Put your notes and diagrams in the same repository as the code.<br>
+</li>
+<li>Add a short test dataset that can be processed quickly (so others can check their setup).<br>
+</li>
+<li>Automate simple checks (e.g., run the pipeline on the test data after each change).<br>
+</li>
+<li>Record important details automatically, such as:
+<ul>
+<li>the software version<br>
+</li>
+<li>the parameters used<br>
+</li>
+<li>the input data files<br>
+</li>
+</ul></li>
+</ul></li>
+<li>These details make it possible for you and others to <strong>reproduce results</strong> later, which is central to good science.</li>
+</ul>
+</section>
+</section>
+<section id="the-c4-model-for-research-software-design" class="level2">
+<h2 class="anchored" data-anchor-id="the-c4-model-for-research-software-design">The C4 Model for research software design</h2>
+<p>When explaining software to collaborators, it is easy to get lost in too much detail or not enough detail. The <strong>C4 model</strong> provides a structured way to show software architecture at different levels, from the big picture down to the finer details. It is widely used in both industry and academia because it adapts well to different audiences: principal investigators, collaborators, new students, and developers.</p>
+<p>The “C4” stands for <strong>Context, Containers, Components, and Code</strong>. Think of it as zooming in on your software with a microscope, each step shows more detail.</p>
+<section id="level-1-system-context" class="level4">
+<h4 class="anchored" data-anchor-id="level-1-system-context">Level 1: System context</h4>
+<p>This is the <strong>big picture</strong>.<br>
+It shows how your research software fits into the overall scientific workflow:</p>
+<ul>
+<li>Who uses it (e.g., researchers, students, automated pipelines)<br>
+</li>
+<li>What external systems or tools it connects to (e.g., databases, HPC cluster, external datasets)<br>
+</li>
+<li>What the software produces (e.g., processed datasets, figures, reports)</li>
+</ul>
+<p>This view is useful for project proposals, publications, and discussions with collaborators who don’t need technical details.</p>
+<p>Here is how a simple research workflow could be shown at Level 1 (System Context):</p>
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">flowchart TB
+  Researcher --&gt;|provides data + config| Software[Research Software System]
+  Software --&gt;|results, figures, reports| Researcher
+  Software --&gt;|stores results| Repository[(Data/Results Repository)]
+  ExternalDB[(External Database)] --&gt;|datasets| Software
+</pre>
+</div>
+<p></p><figcaption> System context for a research pipeline</figcaption> </figure><p></p>
+</div>
+</div>
+</div>
+</section>
+<section id="level-2-containers" class="level4">
+<h4 class="anchored" data-anchor-id="level-2-containers">Level 2: Containers</h4>
+<p>This level zooms in to show the <strong>main building blocks</strong> inside your system.<br>
+A “container” here does <strong>not</strong> mean Docker (though it could), it just means a large part of your software that can run on its own. Examples:</p>
+<ul>
+<li>A command-line tool<br>
+</li>
+<li>A database or data store<br>
+</li>
+<li>A web interface or API<br>
+</li>
+<li>A workflow engine (e.g., Snakemake, Nextflow)</li>
+</ul>
+<p>This view shows how these pieces talk to each other and what responsibilities each one has.</p>
+</section>
+<section id="level-3-components" class="level4">
+<h4 class="anchored" data-anchor-id="level-3-components">Level 3: Components</h4>
+<p>Each container can be broken down into <strong>smaller parts</strong> called components.<br>
+For example, inside an “analysis” container, you might have:</p>
+<ul>
+<li>A data loader<br>
+</li>
+<li>A statistical model<br>
+</li>
+<li>A visualization module</li>
+</ul>
+<p>This view is useful for developers and contributors who need to understand how a part of the system works internally.</p>
+</section>
+<section id="level-4-code-optional" class="level4">
+<h4 class="anchored" data-anchor-id="level-4-code-optional">Level 4: Code (optional)</h4>
+<p>At the deepest level, you can describe the <strong>code structure</strong> itself (e.g., class diagrams, functions, or modules).<br>
+This level is not always needed, but for critical parts of the software, it can help with onboarding new developers or ensuring correctness.</p>
+<div class="quarto-video ratio ratio-16x9"><iframe data-external="1" src="https://www.youtube.com/embed/x2-rSnhpw0g" title="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div>
+<div class="callout callout-style-simple callout-tip no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<i class="fa-solid fa-lightbulb" aria-label="lightbulb"></i> Why use C4 for research software?
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul>
+<li><strong>Clarity for different audiences</strong>: from PIs to PhD students to RSEs, each level provides the right amount of detail.<br>
+</li>
+<li><strong>Shared understanding</strong>: reduces confusion when multiple people (from different fields) work on the same project.<br>
+</li>
+<li><strong>Transparency and reproducibility</strong>: makes it easier for others to understand how results are produced.<br>
+</li>
+<li><strong>Sustainability</strong>: helps future researchers maintain or extend the software long after the original team moves on.<br>
+</li>
+</ul>
 </div>
 </div>
 <div class="callout callout-style-simple callout-note no-icon callout-titled">
@@ -1110,18 +1315,36 @@ ul.task-list li input[type="checkbox"] {
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<i class="fa-solid fa-signs-post" aria-label="signs-post"></i> Learn more
+<i class="fa-solid fa-signs-post" aria-label="signs-post"></i> Further reading
 </div>
 </div>
 <div class="callout-body-container callout-body">
 <ul>
-<li><a href="https://www.makeareadme.com">Make a README - README 101</a></li>
-<li><a href="https://github.com/18F/open-source-guide/blob/18f-pages/pages/making-readmes-readable.md">Making READMEs readable</a></li>
+<li><a href="https://c4model.com/">C4 Model</a>: official site with examples and explanations.</li>
+<li><a href="https://static.codingthearchitecture.com/sddconf2014-software-architecture-for-developers-extract.pdf">Simon Brown’s book “Software Architecture for Developers”</a>: practical introduction to C4.</li>
+<li><a href="https://martinfowler.com/architecture/">Martin Fowler - “Essays on Software Architecture”</a><br>
+</li>
+<li>Practical tools
+<ul>
+<li><a href="https://github.com/hifis-net/awesome-rse">Awesome Research Software Engineering</a>: curated resources and tools.<br>
+</li>
+<li><a href="https://plantuml.com/">PlantUML</a>: diagramming tool often used in research docs.<br>
+</li>
+<li><a href="https://mermaid-js.github.io/mermaid-live-editor/">Mermaid Live Editor</a>: another useful to create and preview diagrams for documentation.</li>
+</ul></li>
+<li>Talks and videos
+<ul>
+<li><a href="https://www.youtube.com/playlist?list=PLpLblYHCzJAB6blBBa0O2BEYadVZV3JYf">Research Software Hour</a>: YouTube playlist with practical software design tips<br>
+</li>
+<li><a href="https://www.youtube.com/user/softwaresaved">Software Sustainability Institute YouTube</a>: talks and tutorials<br>
+</li>
+</ul></li>
 </ul>
 </div>
 </div>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->
@@ -1539,13 +1762,13 @@ ul.task-list li input[type="checkbox"] {
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../../../docs/software/documentation/index.html" class="pagination-link" aria-label="Documentation">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Documentation</span>
+      <a href="../../../docs/software/development_workflow/collaboration.html" class="pagination-link" aria-label="Collaboration">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Collaboration</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../../../docs/software/documentation/license.html" class="pagination-link" aria-label="Software licenses">
-        <span class="nav-page-text">Software licenses</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../../../docs/software/documentation/index.html" class="pagination-link" aria-label="Documentation">
+        <span class="nav-page-text">Documentation</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
