@@ -6,7 +6,7 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="dcterms.date" content="2025-07-01">
+<meta name="dcterms.date" content="2025-09-03">
 <meta name="description" content="how to set up a single-step SSH connection to a VPS using SSH tunneling">
 
 <title>Set up SSH tunneling for a VPS</title>
@@ -1031,7 +1031,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
    
   <ul>
   <li><a href="#prerequisites" id="toc-prerequisites" class="nav-link active" data-scroll-target="#prerequisites">Prerequisites</a></li>
-  <li><a href="#steps-for-linux-and-macos" id="toc-steps-for-linux-and-macos" class="nav-link" data-scroll-target="#steps-for-linux-and-macos">Steps for Linux and macOS</a></li>
+  <li><a href="#steps-for-linux-including-wsl-and-macos" id="toc-steps-for-linux-including-wsl-and-macos" class="nav-link" data-scroll-target="#steps-for-linux-including-wsl-and-macos">Steps for Linux (including WSL) and macOS</a></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/TU-Delft-DCC/TU-Delft-DCC.github.io/issues/new/choose" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div></nav>
     </div>
@@ -1059,14 +1059,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <div>
     <div class="quarto-title-meta-heading">Last reviewed</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">July 1, 2025</p>
+      <p class="date">September 3, 2025</p>
     </div>
   </div>
   
     <div>
     <div class="quarto-title-meta-heading">Last modified</div>
     <div class="quarto-title-meta-contents">
-      <p class="date-modified">August 28, 2025</p>
+      <p class="date-modified">September 3, 2025</p>
     </div>
   </div>
     
@@ -1077,8 +1077,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 <script async="" defer="" src="https://scripts.simpleanalyticscdn.com/latest.js"></script>
-<p>This guide explains how to set up a secure, single-step SSH connection to a Virtual Private Server (VPS) at TU Delft using SSH tunneling. By default, connecting to a VPS requires first accessing a <strong>Bastion Host</strong> (an intermediary server controlling access), making it a two-step process. However, by using SSH tunneling and SSH keys, you can connect to your VPS and other remote hosts in a single step.</p>
-<p>With the method described below, you will be able to connect directly from your local machine to your VPS, bypassing the need to log in to the bastion host separately. This setup also simplifies secure file transfers between your local machine and the VPS.</p>
+<p>This guide explains how to set up a secure, single-step Secure Shell (SSH) connection to a Virtual Private Server (VPS) at TU Delft. SSH is a protocol that allows secure remote access to servers over an unsecured network.</p>
+<p>Commonly, connecting to a VPS requires first accessing a <strong>Bastion Host</strong> (an intermediary server controlling access). Faculty-managed VPS setups at TU Delft can be accessed by two types of bastion hosts: <code>linux-bastion-ex.tudelft.nl</code> having a local /home directory, and <code>linux-bastion.tudelft.nl</code> having access to your own central /home directory. In this sense, <code>linux-bastion-ex.tudelft.nl</code> is a more secure option recommended for the steps below.</p>
+<p>Connecting to a VPS via a bastion host is a two-step process. However, by using SSH tunneling and SSH keys, you will be able to connect directly from your local machine to your VPS. This setup bypasses the need to log in to the bastion host separately, for example, simplifies secure file transfers between your local machine and the VPS.</p>
 <div class="callout callout-style-simple callout-important no-icon callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -1089,7 +1090,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Depending on your geogaphic location, access to a VPS via SSH may be blocked by the TU Delft firewall. In such cases, you must use a VPN connection via <a href="https://www.eduvpn.org/">eduVPN</a>. Access if usally blocked if you are connecting from your home network.</p>
+<p>Depending on your geographical location, access to a VPS via SSH may be blocked by the TU Delft firewall. For example, access is usually blocked if you are connecting from your home network. Therefore, before going through the following steps, please check the <a href="https://www.tudelft.nl/en/it-manuals/working-remotely">TU Delft manuals for working remotely</a> for <a href="https://www.tudelft.nl/en/it-manuals/applications/vpn">eduVPN</a> and <a href="https://www.tudelft.nl/ict-handleidingen/linux-bastion-host">bastion host</a>.</p>
 </div>
 </div>
 <section id="prerequisites" class="level3">
@@ -1097,13 +1098,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>Before starting, you need:</p>
 <ul>
 <li>A TU Delft NetID.</li>
-<li>Access to a VPS provided by TU Delft ICT, including a username and password.</li>
-<li>An SSH client installed on your local machine (usually included with most Linux and macOS distributions; for Windows, you can use a third-party SSH client like <a href="https://www.putty.org/">PuTTY</a>).</li>
-<li>A Linux or macOS terminal</li>
+<li>Access to a VPS provided by TU Delft ICT. Check <a href="../../docs/infrastructure/VPS_request.html">this guide</a> for more information on how to request a VPS.</li>
+<li>An SSH client installed on your local machine. This is usually included in most Linux and macOS distributions via a terminal or shell. For Windows, you can use a third-party SSH client like <a href="https://www.putty.org/">PuTTY</a> or a Windows Subsystem for Linux (WSL).</li>
 </ul>
 </section>
-<section id="steps-for-linux-and-macos" class="level3">
-<h3 class="anchored" data-anchor-id="steps-for-linux-and-macos">Steps for Linux and macOS</h3>
+<section id="steps-for-linux-including-wsl-and-macos" class="level3">
+<h3 class="anchored" data-anchor-id="steps-for-linux-including-wsl-and-macos">Steps for Linux (including WSL) and macOS</h3>
 <div class="callout callout-style-simple callout-tip no-icon callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -1122,13 +1122,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </ol>
 </div>
 </div>
-<section id="set-up-ssh-tunneling-for-a-host-linux-terminal" class="level4">
-<h4 class="anchored" data-anchor-id="set-up-ssh-tunneling-for-a-host-linux-terminal"><strong>Set up SSH tunneling for a host (Linux Terminal)</strong></h4>
+<section id="set-up-ssh-tunneling" class="level4">
+<h4 class="anchored" data-anchor-id="set-up-ssh-tunneling"><strong>Set up SSH tunneling</strong></h4>
 <ol type="1">
 <li>If you do not have an SSH key-pair, create one on the local machine. Go to the terminal and enter the following command. Replace <code>&lt;my-keyname&gt;</code> with a name of your choice for the SSH key, e.g., <code>id_rsa</code> or <code>id_ed25519</code>.</li>
 </ol>
 <div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span>  ssh-keygen <span class="at">-t</span> ed25519 <span class="at">-f</span> ~/.ssh/<span class="op">&lt;</span>my-keyname<span class="op">&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>You will be promted to crate a <em>passphrase</em>. We recommend you to add one to make the connection more secure. The passphrase will be asked every time you connect to the VPS. To skip the passphrase, press <code>Enter</code> when prompted. You should see something like this:</p>
+<p>You will be prompted to create a <em>passphrase</em>. We recommend you to add one to make the connection more secure. The passphrase will be asked every time you connect to the VPS. To skip the passphrase, press <code>Enter</code> when prompted. You should see something like this:</p>
 <div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ex">Generating</span> public/private ed25519 key pair.</span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="ex">Enter</span> passphrase for <span class="st">"ed25519"</span> <span class="er">(</span><span class="ex">empty</span> for no passphrase<span class="kw">)</span><span class="bu">:</span> </span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="ex">Enter</span> same passphrase again: </span>
@@ -1138,17 +1138,22 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a><span class="ex">SHA256:6j06srvun06gJ5UCmD+MVq6RsPuytCO5mF4hTELnWTg</span> root@local-machine</span>
 <span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a><span class="ex">The</span> key<span class="st">'s randomart image is:</span></span>
 <span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a><span class="st">+--[ED25519 256]--+</span></span>
-<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a><span class="st">| . ...           |</span></span>
-<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a><span class="st">|o.oEo            |</span></span>
-<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a><span class="st">|*. +.            |</span></span>
-<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a><span class="st">|=*+  .           |</span></span>
-<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a><span class="st">|o*=o+   S        |</span></span>
-<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a><span class="st">|..+=.. .         |</span></span>
-<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a><span class="st">|.+o.. o          |</span></span>
-<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a><span class="st">|*+oo.o.o.        |</span></span>
-<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a><span class="st">|B*oo*B*o..       |</span></span>
-<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a><span class="st">+----[SHA256]-----+</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>A private and public key will be added to <code>~/.ssh</code>.</p>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a><span class="st">&lt;image cut for security reasons&gt;</span></span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a><span class="st">+----[SHA256]-----+</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>A private and public key pair will be created in <code>~/.ssh</code>.</p>
+<div class="callout callout-style-simple callout-important no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<i class="fa-solid fa-info-circle" aria-label="info-circle"></i> Accessing .ssh
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><code>~/</code> in <code>~/.ssh</code> refers to your /home directory. As stated above, this is different for the two bastion hosts at TU Delft. For <code>linux-bastion-ex.tudelft.nl</code>, it refers to the local /home directory of the bastion host, while for <code>linux-bastion.tudelft.nl</code>, it refers to your central /home directory. <code>.</code> in <code>~/.ssh</code> refers to a hidden directory. To view hidden files and directories in the terminal, you can use the command <code>ls -a</code>.</p>
+</div>
+</div>
 <p>The <strong>public key is the file with the <code>.pub</code> extension</strong>, e.g., <code>&lt;my-keyname&gt;.pub</code></p>
 <div class="callout callout-style-simple callout-tip no-icon callout-titled">
 <div class="callout-header d-flex align-content-center">
@@ -1164,7 +1169,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 <ol start="2" type="1">
-<li><p>Log in to your VPS and, copy the <strong>content</strong> of your <strong>public key</strong> into the VPS <code>~/.ssh/authorized_keys</code> file. You can achieve this by copying the content of the public key file to the clipboard and pasting it into the <code>authorized_keys</code> file on the VPS. Be mindful and not remove anything from this file, or other SSH connections might stop working. Finally, save the file.</p></li>
+<li><p>Log in to your VPS and, copy the <strong>content</strong> of your <strong>public key</strong> into the VPS <code>~/.ssh/authorized_keys</code> file. You can achieve this by copying the content of the public key file to the clipboard and pasting it into the <code>authorized_keys</code> file on the VPS. Be mindful not to remove anything from this file, as other SSH connections might stop working. Finally, save the file.</p></li>
 <li><p>Create a new host for SSH connection. On your local machine, edit the <code>~/.ssh/config</code> file and add the following configuration. If the file does not exist, create it.</p></li>
 </ol>
 <div class="sourceCode" id="cb3"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="ex">Host</span> <span class="op">&lt;</span>host-nickname<span class="op">&gt;</span></span>
@@ -1175,7 +1180,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>Replace:</p>
 <ul>
 <li><code>&lt;host-nickname&gt;</code>: a name of your choice for the target host, e.g., <code>my-server</code>.</li>
-<li><code>&lt;target-host&gt;</code>: the actual name of the target host (FQDM), e.g, <code>server.tudelft.nl</code>.</li>
+<li><code>&lt;target-host&gt;</code>: the actual name of the target host (FQDM), e.g., <code>server.tudelft.nl</code>.</li>
 <li><code>&lt;target-username&gt;</code>: the username used to log in to the target host, usually your NetID.</li>
 <li><code>&lt;bastion-username&gt;</code>: the username used to log in to the bastion server (often same as NetID, but keep separate in case it differs).</li>
 <li><code>&lt;my-keyname&gt;</code>: the name of the SSH private key you created, e.g., <code>id_rsa</code>. If your private key is stored in a different location, replace the path accordingly.</li>
