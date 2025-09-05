@@ -50,9 +50,9 @@ categories:
 
 This guide explains how to set up a secure, single-step Secure Shell (SSH) connection to a Virtual Private Server (VPS) at TU Delft. SSH is a protocol that allows secure remote access to servers over an unsecured network. 
 
-Commonly, connecting to a VPS requires first accessing a **Bastion Host** (an intermediary server controlling access). Faculty managed setup as VPSs at TU Delft can be accessed by two types of bastion hosts: `linux-bastion-ex.tudelft.nl` having a local /home directory, and `linux-bastion.tudelft.nl` having access to your own central /home directory. In this sense, `linux-bastion-ex.tudelft.nl` is a more secure option recommended for the steps below. 
+Commonly, connecting to a VPS requires first accessing a **Bastion Host** (an intermediary server controlling access). Faculty-managed VPS setups at TU Delft can be accessed by two types of bastion hosts: `linux-bastion-ex.tudelft.nl` having a local /home directory, and `linux-bastion.tudelft.nl` having access to your own central /home directory. In this sense, `linux-bastion-ex.tudelft.nl` is a more secure option recommended for the steps below. 
 
-Connecting to a VPS via a bastion host, is a two-step process. However, by using SSH tunneling and SSH keys, you will be able to connect directly from your local machine to your VPS. This setup bypassing the need to log in to the bastion host separately, for example, simplifies secure file transfers between your local machine and the VPS.
+Connecting to a VPS via a bastion host is a two-step process. However, by using SSH tunneling and SSH keys, you will be able to connect directly from your local machine to your VPS. This setup bypasses the need to log in to the bastion host separately, for example, simplifies secure file transfers between your local machine and the VPS.
 
 :::{.callout-important appearance="simple" icon="false"}
 ## {{< fa info-circle >}} Accessing a VPS
@@ -64,9 +64,9 @@ Before starting, you need:
 
 * A TU Delft NetID.
 * Access to a VPS provided by TU Delft ICT. Check [this guide](../infrastructure/VPS_request.md) for more information on how to request a VPS.
-* An SSH client installed on your local machine. This is usually included in most Linux and macOS distributions via a terminal or shell. For Windows, you can use a third-party SSH client like [PuTTY](https://www.putty.org/) or a windows subsystem for Linux (wsl).
+* An SSH client installed on your local machine. This is usually included in most Linux and macOS distributions via a terminal or shell. For Windows, you can use a third-party SSH client like [PuTTY](https://www.putty.org/) or a Windows Subsystem for Linux (WSL).
 
-### Steps for Linux (including wsl) and macOS
+### Steps for Linux (including WSL) and macOS
 
 :::{.callout-tip appearance="simple" icon="false"}
 ## {{< fa lightbulb >}} Summary of steps
@@ -101,7 +101,7 @@ The key's randomart image is:
 +----[SHA256]-----+
 ```
 
-A private and public key will be added to `~/.ssh`. 
+A private and public key pair will be created in `~/.ssh`. 
 
 :::{.callout-important appearance="simple" icon="false"}
 ## {{< fa info-circle >}} Accessing .ssh
@@ -117,7 +117,7 @@ Similar to passwords, it is advised to rotate your SSH keys regularly (e.g., eve
 :::
 
 
-2. Log in to your VPS and, copy the **content** of your **public key** into the VPS `~/.ssh/authorized_keys` file. You can achieve this by copying the content of the public key file to the clipboard and pasting it into the `authorized_keys` file on the VPS. Be mindful and not remove anything from this file, or other SSH connections might stop working. Finally, save the file.
+2. Log in to your VPS and, copy the **content** of your **public key** into the VPS `~/.ssh/authorized_keys` file. You can achieve this by copying the content of the public key file to the clipboard and pasting it into the `authorized_keys` file on the VPS. Be mindful not to remove anything from this file, as other SSH connections might stop working. Finally, save the file.
 
 
 
@@ -134,7 +134,7 @@ Host <host-nickname>
 Replace:
 
 - `<host-nickname>`: a name of your choice for the target host, e.g., `my-server`.
-- `<target-host>`: the actual name of the target host (FQDM), e.g, `server.tudelft.nl`.
+- `<target-host>`: the actual name of the target host (FQDM), e.g., `server.tudelft.nl`.
 - `<target-username>`:  the username used to log in to the target host, usually your NetID.
 - `<bastion-username>`: the username used to log in to the bastion server (often same as NetID, but keep separate in case it differs).
 - `<my-keyname>`: the name of the SSH private key you created, e.g., `id_rsa`. If your private key is stored in a different location, replace the path accordingly.
