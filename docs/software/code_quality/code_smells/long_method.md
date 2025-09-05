@@ -50,7 +50,7 @@ categories:
 > 
 > **Robert C. Martin** (Uncle Bob)
 
-A "long method" is a common code where a method or function becomes overly long and handles multiple responsibilities at once. This makes the code hard to read, understand, test, and maintain. Long methods often indicate that a function is doing too much and may benefit from being broken into smaller, more focussed helper functions.
+A "long method" is a common code smell where a method or function becomes overly long and handles multiple responsibilities at once. This makes the code hard to read, understand, test, and maintain. Long methods often indicate that a function is doing too much and may benefit from being broken into smaller, more focussed helper functions.
 
 ## Symptoms
 A long method often:
