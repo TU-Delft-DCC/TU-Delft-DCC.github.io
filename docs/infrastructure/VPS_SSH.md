@@ -56,7 +56,7 @@ Connecting to a VPS via a bastion host is a two-step process. However, by using 
 
 :::{.callout-important appearance="simple" icon="false"}
 ## {{< fa info-circle >}} Accessing a VPS
-Depending on your geographic location, access to a VPS via SSH may be blocked by the TU Delft firewall. For example, access is usually blocked if you are connecting from your home network. Therefore, before going through the following steps, please check the [TU Delft manuals for working remotely](https://www.tudelft.nl/en/it-manuals/working-remotely) for [eduVPN](https://www.tudelft.nl/en/it-manuals/applications/vpn) and [bastion host](https://www.tudelft.nl/ict-handleidingen/linux-bastion-host).
+Depending on your geographical location, access to a VPS via SSH may be blocked by the TU Delft firewall. For example, access is usually blocked if you are connecting from your home network. Therefore, before going through the following steps, please check the [TU Delft manuals for working remotely](https://www.tudelft.nl/en/it-manuals/working-remotely) for [eduVPN](https://www.tudelft.nl/en/it-manuals/applications/vpn) and [bastion host](https://www.tudelft.nl/ict-handleidingen/linux-bastion-host).
 :::
 
 ### Prerequisites
