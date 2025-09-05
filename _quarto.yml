@@ -292,9 +292,9 @@ website:
           - section: "Remote servers"
             href: docs/infrastructure/remote_servers.md
             contents:
-              - text: Request form
+              - text: Server request form
                 href: docs/infrastructure/VPS_request.md
-              - text: Connection
+              - text: Server connection
                 href: docs/infrastructure/VPS_SSH.md
               - text: Data transfer
                 href: docs/infrastructure/moving_data.md
