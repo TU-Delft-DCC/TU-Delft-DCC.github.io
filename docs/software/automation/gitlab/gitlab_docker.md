@@ -3,11 +3,11 @@
 
 # We use this key to indicate the last reviewed date [manual entry, use YYYY-MM-DD]
 # Uncomment and populate the next line accordingly
-#date: YYYY-MM-DD
+date: 2025-08-29
 
 # We use this key to indicate the last modified date [manual entry, use YYYY-MM-DD]
 # Uncomment and populate the next line accordingly
-#date-modified: YYYY-MM-DD
+date-modified: 2025-09-05
 
 # Do not modify
 lang: en
