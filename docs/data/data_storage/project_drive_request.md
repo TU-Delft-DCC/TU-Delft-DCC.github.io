@@ -75,7 +75,7 @@ If you are accessing the *Project Data Storage (U:)* drive from outside the TU D
 #### **Step 1. Request storage via the TU Delft ICT form on TopDesk**
 You can make a request for data storage via a form available on the [TopDesk self-service portal](https://tudelft.topdesk.net/) (requires NetID sign-in); navigate to:
 
-> HOME ⇾ ICT SERVICES ⇾ IT WORKSPACE ⇾ DATA STORAGE ⇾ DATA STORAGE FOR RESEARCH: PROJECT DATA (U:) ⇾ APPLICATION FORM FOR DATA STORAGE
+> HOME ⇾ ICT SERVICES ⇾ IT WORKSPACE ⇾ DATA STORAGE ⇾ PROJECT DATA STORAGE - APPLICATION FORM
 
 #### **Step 2. Fill out and send the form according to your data storage preferences and requirements**
 The form has six main sections: "_**Caller**_", "_**Application**_", "_**Access for third parties**_", "_**Storage type**_", "_**Storage Requirements**_", and "_**Backup Retention**_".
