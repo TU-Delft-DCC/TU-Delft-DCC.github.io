@@ -48,22 +48,20 @@ categories:
 ---
 
 ## Background
-If you are using a **TU Delft GitLab instance** and you want to implement **DevOps or CI/CD pipelines**, you will need to install a **GitLab Runner** yourself. This runner must be set  up on a server, where it will respond to repository events such as commits or pull requests in your GitLab project.
+If you are using a **TU Delft GitLab instance** and you want to implement **DevOps or CI/CD pipelines**, you will need to install a **GitLab Runner** yourself. This runner must be set  up on a server, where it will respond to repository events such as commits or pull requests in your GitLab project. This guide will help you **deploy a GitLab Runner in a Docker container** on a server. Once set up, the runner will automatically execute CI/CD tests and store artifacts whenever a new commit is pushed to your GitLab repository.
 
 ## Quick overview of how it works
-To run a CI/CD pipeline, a `gitlab-runner` Docker container runs continuously on the server. When a new commit is pushed to the GitLab repository, it triggers the CI/CD process. The pipeline, defined in the `.gitlab-ci.yml` file, specifies the jobs to run (e.g., unit tests). The **Docker image** used for running the CI/CD jobs is specified in the first line of the `.gitlab-ci.yml` file. In the below example, we define `image:python:3.12.3`, a new container based on the **python:3.12.3** Docker image is spawned each time a commit is made. This container executes the tests on your Python scripts and generates artifacts, as outlined in the `.gitlab-ci.yml` file.
+To run a CI/CD pipeline, a `gitlab-runner` Docker container runs continuously on the server. When a new commit is pushed to the GitLab repository, it triggers the CI/CD process. The pipeline, defined in the `.gitlab-ci.yml` file, specifies the jobs to run (e.g., unit tests). The **Docker image** used for running the CI/CD jobs can be specified in the first line of the `.gitlab-ci.yml` file. In the below example, we define `image:python:3.12.3`, a new container based on the **python:3.12.3** Docker image is spawned each time a commit is made. This container executes the tests on your Python scripts and generates artifacts, as outlined in the `.gitlab-ci.yml` file.
 
 <img src="https://gitlab.tudelft.nl/acryan/data-management-for-researchers/-/wikis/uploads/711ac593ec886bd9216dff0591a82e6f/Untitled_Document__31_.png" width="600" style="display: block; margin: 0 auto;">
 
-## What this documentation will help achieve
-This guide will help you **deploy a GitLab Runner in a Docker container** on a server. Once set up, the runner will automatically execute CI/CD tests and store artifacts whenever a new commit is pushed to your GitLab repository.
 
 ## Prerequisites
 **Server:** This guide assumes you have access to a server to host the GitLab Runner. You can request a server from TU Delft ICT Services by following the instructions [here](../../../infrastructure/VPS_request.md). It is useful to set this up on a server so that Docker can be running continuously, and be ready to run CI/CD tests whenever a new commit occurs in the repository.
 
 **Docker:** A Docker container is used to run the GitLab Runner and initialize the CI/CD pipeline.
 
-**Gitlab runner:** "Runners are the agents that run the CI/CD jobs that come from GitLab. When you register a runner, you are setting up communication between your GitLab instance and the machine where GitLab Runner is installed. Runners usually process jobs on the same machine where you installed GitLab Runner." - [GitLab documentation](https://docs.gitlab.com)
+**Gitlab Runner:** "Runners are the agents that run the CI/CD jobs that come from GitLab. When you register a runner, you are setting up communication between your GitLab instance and the machine where GitLab Runner is installed. Runners usually process jobs on the same machine where you installed GitLab Runner." - [GitLab documentation](https://docs.gitlab.com)
 
 **GitLab repository:** A remote GitLab repository stores your project code and keeps track of its development. You're on one right now! :) If you haven’t already, log in to TU Delft’s GitLab instance at _gitlab.tudelft.nl_ using your **NetID and password**, and create a repository for your project.
 
@@ -121,7 +119,7 @@ apt install docker.io
 Now that you've instlled Docker, you can check its installation with `docker --version` from the terminal. The result should show the version of Docker you just installed.
 
 ### Step 4. Pull the `gitlab-runner` Docker image
-In order to run CI/CD jobs for your repository, you need to install GitLab Runner. GitLab Runner is an application that works with GitLab CI/CD to run jobs in a pipeline. Rather than install GitLab Runner directly on the server, we will run a lightweight version of it as a Docker container. To do so, we first need to pull the gitlab-runner Docker image by running:
+In order to run CI/CD jobs for your repository, you need to install GitLab Runner. GitLab Runner is an application that works with GitLab CI/CD to run jobs in a pipeline. Rather than install GitLab Runner directly on the server, we will run a lightweight version of it as a Docker container. To do so, we first need to pull the `gitlab-runner` Docker image by running:
 
 `docker pull gitlab/gitlab-runner`
 
@@ -129,7 +127,7 @@ You can check whether it was successful by running `docker images` - you should 
 
 ### Step 5. Create a unit test function stored as a file in the repository
 
-### Step 6. Set up the CI by configuration of the .gitlab-ci.yml file
+### Step 6. Set up the CI by configuration of the `.gitlab-ci.yml` file
 
 This file, located in the root of your repository, defines the CI/CD pipeline. It specifies the docker container to run, what scripts to run inside the container, and what to store as artifacts after the job completion.
 
@@ -137,7 +135,7 @@ In the first line of the file, specify the Docker image using: `image: <image_na
 
 :::{.callout-note appearance="simple" icon="false"}
 ## {{< fa exclamation-triangle  >}} Important
-> This file must be named **.gitlab-ci.yml** for the GitLab Runner to recognize it. Below is an example `.gitlab-ci.yml` file.
+> This file must be named `.gitlab-ci.yml` for the GitLab Runner to recognize it. Below is an example `.gitlab-ci.yml` file.
 > Only use spaces to indent your .yml configuration.
 :::
 
@@ -157,7 +155,6 @@ test:
       - venv/
   script: # Modify the commands below to build your repository.
     - pip install -r requirements.txt  # Install dependencies
-    - nosetests --with-coverage  --cover-html # Run tests with coverage
   artifacts:
     paths:
       - cover/ # Store coverage reports as artifacts
@@ -165,7 +162,7 @@ test:
 
 **Optional:** You can add tags to the `.gitlab-ci.yml` file to assign specific runners to jobs. If you use tags, ensure they match exactly when registering the runner.
 
-### Step 7. Setup the GitLab runner
+### Step 7. Setup the GitLab Runner
 
 - Follow the instructions [here](https://docs.gitlab.com/ee/tutorials/create_register_first_runner/#create-and-register-a-project-runner) **up to step 7** to create a GitLab Runner for your repository
 
@@ -185,7 +182,7 @@ gitlab/gitlab-runner:latest
 
 :::{.callout-note appearance="simple" icon="false"}
 ## {{< fa info-circle >}} Note
-on **Mac OS**, replace `/Users/Shared/` with `/srv/`
+on **macOS**, replace `/Users/Shared/` with `/srv/`
 :::
 
 
@@ -204,7 +201,7 @@ docker run --rm -it -v /srv/gitlab-runner/config:/etc/gitlab-runner gitlab/gitla
 
 :::{.callout-note appearance="simple" icon="false"}
 ## {{< fa info-circle >}} Note
-on **Mac OS**, replace `/Users/Shared/` with `/srv/`
+on **macOS**, replace `/Users/Shared/` with `/srv/`
 :::
 
 You will be prompted to answer the following questions:
@@ -238,8 +235,8 @@ Configuration (with the authentication token) was saved in "/etc/gitlab-runner/c
 
 ##### 1. Check Runner Status:
 
-- Go to your repository’s Settings > CI/CD.
-- Under Runners, expand the section to confirm that your runner is active (indicated by a green dot). This means the runner is ready to execute jobs, but it requires a trigger to start.
+- Go to your repository’s Settings ⇾ CI/CD.
+- Under *Runners*, expand the section to confirm that your runner is active (indicated by a green dot). This means the runner is ready to execute jobs, but it requires a trigger to start.
 
 ##### 2. Trigger the Pipeline:
 
@@ -247,10 +244,10 @@ Configuration (with the authentication token) was saved in "/etc/gitlab-runner/c
 
 ##### 3. Monitor Pipeline Status:
 
-- After the new commit, navigate to CI/CD > Pipelines in your project.
+- After the new commit, navigate to CI/CD ⇾ Pipelines in your project.
 - Check the status of your pipeline:
     - A green "passed" status with a checkmark means your pipeline ran successfully. Congratulations!
-    - A red "failed" status indicates an error. Review the error message to troubleshoot. Common issues include incorrect formatting in the .gitlab-ci.yml file or misconfigured test definitions.
+    - A red "failed" status indicates an error. Review the error message to troubleshoot. Common issues include incorrect formatting in the `.gitlab-ci.yml` file or misconfigured test definitions.
 
 <img src="https://gitlab.tudelft.nl/acryan/data-management-for-researchers/-/wikis/uploads/f7aadbc87f49d31de4da37a2f8a76ef3/Screen_Shot_2020-11-17_at_11.56.41.png" width="600" style="display: block; margin: 0 auto;">
 
