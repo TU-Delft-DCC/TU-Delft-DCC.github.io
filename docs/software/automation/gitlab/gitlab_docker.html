@@ -6,8 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="dcterms.date" content="2025-08-29">
 
-<title>CI with Gitlab</title>
+<title>CI with GitLab</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -1047,7 +1048,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <ul>
   <li><a href="#background" id="toc-background" class="nav-link active" data-scroll-target="#background">Background</a></li>
   <li><a href="#quick-overview-of-how-it-works" id="toc-quick-overview-of-how-it-works" class="nav-link" data-scroll-target="#quick-overview-of-how-it-works">Quick overview of how it works</a></li>
-  <li><a href="#what-this-documentation-will-help-achieve" id="toc-what-this-documentation-will-help-achieve" class="nav-link" data-scroll-target="#what-this-documentation-will-help-achieve">What this documentation will help achieve</a></li>
   <li><a href="#prerequisites" id="toc-prerequisites" class="nav-link" data-scroll-target="#prerequisites">Prerequisites</a></li>
   <li><a href="#toolssoftware" id="toc-toolssoftware" class="nav-link" data-scroll-target="#toolssoftware">Tools/Software</a></li>
   <li><a href="#steps" id="toc-steps" class="nav-link" data-scroll-target="#steps">Steps</a>
@@ -1055,13 +1055,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#step-1.-request-server-running-ubuntu" id="toc-step-1.-request-server-running-ubuntu" class="nav-link" data-scroll-target="#step-1.-request-server-running-ubuntu">Step 1. Request server running Ubuntu</a></li>
   <li><a href="#step-2.-connect-to-the-server-via-ssh" id="toc-step-2.-connect-to-the-server-via-ssh" class="nav-link" data-scroll-target="#step-2.-connect-to-the-server-via-ssh">Step 2. Connect to the server via ssh</a></li>
   <li><a href="#step-3.-install-docker-on-the-server" id="toc-step-3.-install-docker-on-the-server" class="nav-link" data-scroll-target="#step-3.-install-docker-on-the-server">Step 3. Install Docker on the server</a></li>
-  <li><a href="#step-4.-pull-the-gitlab-runner-docker-image" id="toc-step-4.-pull-the-gitlab-runner-docker-image" class="nav-link" data-scroll-target="#step-4.-pull-the-gitlab-runner-docker-image">Step 4. Pull the gitlab-runner Docker image</a></li>
+  <li><a href="#step-4.-pull-the-gitlab-runner-docker-image" id="toc-step-4.-pull-the-gitlab-runner-docker-image" class="nav-link" data-scroll-target="#step-4.-pull-the-gitlab-runner-docker-image">Step 4. Pull the <code>gitlab-runner</code> Docker image</a></li>
   <li><a href="#step-5.-create-a-unit-test-function-stored-as-a-file-in-the-repository" id="toc-step-5.-create-a-unit-test-function-stored-as-a-file-in-the-repository" class="nav-link" data-scroll-target="#step-5.-create-a-unit-test-function-stored-as-a-file-in-the-repository">Step 5. Create a unit test function stored as a file in the repository</a></li>
-  <li><a href="#step-6.-set-up-the-ci-by-configuration-of-the-.gitlab-ci.yml-file" id="toc-step-6.-set-up-the-ci-by-configuration-of-the-.gitlab-ci.yml-file" class="nav-link" data-scroll-target="#step-6.-set-up-the-ci-by-configuration-of-the-.gitlab-ci.yml-file">Step 6. Set up the CI by configuration of the .gitlab-ci.yml file</a></li>
-  <li><a href="#step-7.-setup-the-gitlab-runner" id="toc-step-7.-setup-the-gitlab-runner" class="nav-link" data-scroll-target="#step-7.-setup-the-gitlab-runner">Step 7. Setup the GitLab runner</a></li>
+  <li><a href="#step-6.-set-up-the-ci-by-configuration-of-the-.gitlab-ci.yml-file" id="toc-step-6.-set-up-the-ci-by-configuration-of-the-.gitlab-ci.yml-file" class="nav-link" data-scroll-target="#step-6.-set-up-the-ci-by-configuration-of-the-.gitlab-ci.yml-file">Step 6. Set up the CI by configuration of the <code>.gitlab-ci.yml</code> file</a></li>
+  <li><a href="#step-7.-setup-the-gitlab-runner" id="toc-step-7.-setup-the-gitlab-runner" class="nav-link" data-scroll-target="#step-7.-setup-the-gitlab-runner">Step 7. Setup the GitLab Runner</a></li>
   <li><a href="#step-8.-deploy-gitlab-runner-in-a-docker-container" id="toc-step-8.-deploy-gitlab-runner-in-a-docker-container" class="nav-link" data-scroll-target="#step-8.-deploy-gitlab-runner-in-a-docker-container">Step 8. Deploy GitLab runner in a Docker container</a></li>
   <li><a href="#step-9.-register-the-runner-using-authentication-token" id="toc-step-9.-register-the-runner-using-authentication-token" class="nav-link" data-scroll-target="#step-9.-register-the-runner-using-authentication-token">Step 9. Register the runner using authentication token</a></li>
-  <li><a href="#step-10.-check-that-the-cicd-process-is-activated-and-your-pipeline-runs-successfully" id="toc-step-10.-check-that-the-cicd-process-is-activated-and-your-pipeline-runs-successfully" class="nav-link" data-scroll-target="#step-10.-check-that-the-cicd-process-is-activated-and-your-pipeline-runs-successfully">Step 10. Check that the CI/CD process is activated and your pipeline runs successfully</a></li>
+  <li><a href="#step-10.-verify-the-cicd-pipeline" id="toc-step-10.-verify-the-cicd-pipeline" class="nav-link" data-scroll-target="#step-10.-verify-the-cicd-pipeline">Step 10. Verify the CI/CD Pipeline</a></li>
   </ul></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/TU-Delft-DCC/TU-Delft-DCC.github.io/issues/new/choose" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div></nav>
@@ -1072,15 +1072,32 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../../../docs/software/getting_started.html"><img src="../../../../docs/img/laptop-code-solid.svg" style="filter: invert(0.5) sepia(1) saturate(5) hue-rotate(175deg);height:1em"> <strong>Research Software</strong></a></li><li class="breadcrumb-item"><a href="../../../../docs/software/automation/ci_cd.html">Automation</a></li><li class="breadcrumb-item"><a href="../../../../docs/software/automation/gitlab/gitlab_docker.html">Continuous Integration with GitLab</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">CI with Gitlab</h1>
-</div>
+<h1 class="title">CI with GitLab</h1>
+  <div class="quarto-categories">
+    <div class="quarto-category">gitlab</div>
+    <div class="quarto-category">CI/CD</div>
+    <div class="quarto-category">docker</div>
+  </div>
+  </div>
 
 
 
 <div class="quarto-title-meta">
 
     
+    <div>
+    <div class="quarto-title-meta-heading">Last reviewed</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">August 29, 2025</p>
+    </div>
+  </div>
   
+    <div>
+    <div class="quarto-title-meta-heading">Last modified</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date-modified">September 5, 2025</p>
+    </div>
+  </div>
     
   </div>
   
@@ -1091,23 +1108,19 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script async="" defer="" src="https://scripts.simpleanalyticscdn.com/latest.js"></script>
 <section id="background" class="level2">
 <h2 class="anchored" data-anchor-id="background">Background</h2>
-<p>If you happen to be working with TU Delft GitLab instance and you want to implement DevOps or CI/CD pipelines, then you need to install a GitLab runner on your own. This should runner should be in a server, responding to changes such as commits or pull requests in your GitLab repository.</p>
+<p>If you are using a <strong>TU Delft GitLab instance</strong> and you want to implement <strong>DevOps or CI/CD pipelines</strong>, you will need to install a <strong>GitLab Runner</strong> yourself. This runner must be set up on a server, where it will respond to repository events such as commits or merge requests in your GitLab project. This guide will help you <strong>deploy a GitLab Runner in a Docker container</strong> on a server. Once set up, the runner will automatically execute CI/CD tests and store artifacts whenever a new commit is pushed to your GitLab repository.</p>
 </section>
 <section id="quick-overview-of-how-it-works" class="level2">
 <h2 class="anchored" data-anchor-id="quick-overview-of-how-it-works">Quick overview of how it works</h2>
-<p>In order to be ready to run CI/CD pipeline, a gitlab-runner Docker container is running on the server all the time. When a new commit is made in the GitLab repository, this triggers the CI/CD process to run a job (e.g., unit test) based on the pipeline defined in the .gitlab-ci.yml file in the repository. The container used to carry out the CI/CD tests is defined in the .gitlab-ci.yml file in the first line, and spawned from within the continuously running gitlab-runner container. In our example, we define <code>image:python:3.12.3</code> so every time a commit is made in the repository, a new container based on the python:3.12.3 Docker image is started and used to run tests on the python scripts and generate artifacts as defined in the .gitlab-ci.yml file.</p>
-<p><img src="https://gitlab.tudelft.nl/acryan/data-management-for-researchers/-/wikis/uploads/711ac593ec886bd9216dff0591a82e6f/Untitled_Document__31_.png" class="img-fluid"></p>
-</section>
-<section id="what-this-documentation-will-help-achieve" class="level2">
-<h2 class="anchored" data-anchor-id="what-this-documentation-will-help-achieve">What this documentation will help achieve</h2>
-<p>The documentation below will help you deploy GitLab runner in a Docker container on a server to automatically run CI/CD tests and store artifacts every time there is a new commit to a GitLab repository.</p>
+<p>To run a CI/CD pipeline, a <code>gitlab-runner</code> Docker container runs continuously on the server. When a new commit is pushed to the GitLab repository, it triggers the CI/CD process. The pipeline, defined in the <code>.gitlab-ci.yml</code> file, specifies the jobs to run (e.g., unit tests). The <strong>Docker image</strong> used for running the CI/CD jobs can be specified in the first line of the <code>.gitlab-ci.yml</code> file. In the below example, we define <code>image:python:3.12.3</code>, a new container based on the <strong>python:3.12.3</strong> Docker image is spawned each time a commit is made. This container executes the tests on your Python scripts and generates artifacts, as outlined in the <code>.gitlab-ci.yml</code> file.</p>
+<p><img src="https://gitlab.tudelft.nl/acryan/data-management-for-researchers/-/wikis/uploads/711ac593ec886bd9216dff0591a82e6f/Untitled_Document__31_.png" width="600" style="display: block; margin: 0 auto;"></p>
 </section>
 <section id="prerequisites" class="level2">
 <h2 class="anchored" data-anchor-id="prerequisites">Prerequisites</h2>
-<p><strong>Server:</strong> This example uses a server to run the whole process. You can request a server from TU Delft ICT service following these directions <a href="../../../../docs/infrastructure/VPS_request.html">here</a>. It is useful to set this up on a server so that Docker can be running continuously, and be ready to run CI/CD tests whenever a new commit occurs in the repository.</p>
-<p><strong>Docker:</strong> We use a Docker container to run the GitLab runner and initialise the CI/CD pipeline.</p>
-<p><strong>Gitlab runner:</strong> (from GitLab documentation) “Runners are the agents that run the CI/CD jobs that come from GitLab. When you register a runner, you are setting up communication between your GitLab instance and the machine where GitLab Runner is installed. Runners usually process jobs on the same machine where you installed GitLab Runner.” <a href="https://docs.gitlab.com">Link</a></p>
-<p><strong>GitLab repository:</strong> A remote repository that can store your code and keeps track of your project development. You’re on one right now! :) If you haven’t already, you use your netID and password to login to TU Delft’s GitLab instance at gitlab.tudelft.nl and create a repository containing your project code.</p>
+<p><strong>Server:</strong> This guide assumes you have access to a server to host the GitLab Runner. You can request a server from TU Delft ICT Services by following the instructions <a href="../../../../docs/infrastructure/VPS_request.html">here</a>. It is useful to set this up on a server so that Docker can be running continuously, and be ready to run CI/CD tests whenever a new commit occurs in the repository.</p>
+<p><strong>Docker:</strong> A Docker container is used to run the GitLab Runner and initialize the CI/CD pipeline.</p>
+<p><strong>GitLab Runner:</strong> “Runners are the agents that run the CI/CD jobs that come from GitLab. When you register a runner, you are setting up communication between your GitLab instance and the machine where GitLab Runner is installed. Runners usually process jobs on the same machine where you installed GitLab Runner.” - <a href="https://docs.gitlab.com">GitLab documentation</a></p>
+<p><strong>GitLab repository:</strong> A remote GitLab repository stores your project code and keeps track of its development. You’re on one right now! :) If you haven’t already, log in to TU Delft’s GitLab instance at <em>gitlab.tudelft.nl</em> using your <strong>NetID and password</strong>, and create a repository for your project.</p>
 <p><strong>CI/CD pipeline:</strong> “A CI/CD pipeline automates your software delivery process. The pipeline builds code, runs tests (CI), and safely deploys a new version of the application (CD)”.</p>
 </section>
 <section id="toolssoftware" class="level2">
@@ -1115,7 +1128,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <ul>
 <li>GitLab (TU Delft instance)</li>
 <li>Docker</li>
-<li>gitlab-runner Docker image</li>
+<li><code>gitlab-runner</code> Docker image</li>
 </ul>
 </section>
 <section id="steps" class="level2">
@@ -1124,41 +1137,64 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li>Request the server</li>
 <li>Connect to the server via ssh</li>
 <li>Install Docker on the server</li>
-<li>Pull in the gitlab-runner image</li>
+<li>Pull in the <code>gitlab-runner</code> image</li>
 <li>Create a unit test function stored as a file in the repository</li>
 <li>Make the .gitlab-ci.yml file</li>
-<li>Set up the GitLab runner</li>
-<li>Deploy the GitLab runner in a Docker container</li>
+<li>Set up the GitLab Runner</li>
+<li>Deploy the GitLab Runner in a Docker container</li>
 <li>Register the runner</li>
 <li>Test the CI/CD pipeline</li>
 </ol>
 <section id="step-1.-request-server-running-ubuntu" class="level3">
 <h3 class="anchored" data-anchor-id="step-1.-request-server-running-ubuntu">Step 1. Request server running Ubuntu</h3>
-<p>If you don’t have a VPS already, you can request one from TU Delft ICT. Instructions for requesting a server and storage from ICT can be found under <a href="../../../../docs/infrastructure/VPS_request.html">Remote servers/Request a Virtual Private Server</a>.</p>
-<p>We recommend the following configuration for configuring a GitLab runner:</p>
+<p>If you don’t have a VPS already, you can request one from TU Delft ICT. Instructions for requesting a server and storage are available <a href="../../../../docs/infrastructure/VPS_request.html">here</a>.</p>
+<p>Recommended Configuration for a GitLab Runner:</p>
 <ul>
 <li>Basic Configuration 4 (Ubuntu)</li>
-<li>No additional <strong>ports</strong> need to be configured for deploying a GitLab runner with Docker.</li>
-<li>Additional space if your Docker images are larger than ~10Gb.</li>
+<li>No additional <strong>ports</strong> need to be configured for deploying a GitLab Runner with Docker.</li>
+<li>Additional space if your Docker images exceed ~10Gb.</li>
 </ul>
 </section>
 <section id="step-2.-connect-to-the-server-via-ssh" class="level3">
 <h3 class="anchored" data-anchor-id="step-2.-connect-to-the-server-via-ssh">Step 2. Connect to the server via ssh</h3>
-<p>The email response from Sysadmin@TUDelft.nl confirming the successful deployment of your server should contain instructions to connect via ssh.</p>
-<p>The default login procedure is to connect to the Bastion host (an intermediary server) and then to your server, so it is a two-step process. Please check your email for Steps A and B as described by ICT admin.</p>
-<p>You can also connect to your server using Putty (Windows) or, on Mac/Linux, configure one-step access by storing ssh keys between your local machine and your server and designating an alias.</p>
-<p>When you are successfully connected, you should see in your terminal/command prompt something like this:</p>
-<p><img src="https://gitlab.tudelft.nl/acryan/data-management-for-researchers/-/wikis/uploads/048a06a817852a399c697582ae1e3a08/Screen_Shot_2020-11-17_at_10.30.31.png" class="img-fluid"></p>
+<p>The email response from Sysadmin@TUDelft.nl will include instructions for connecting to your server via SSH. The default login process involves:</p>
+<ul>
+<li>Connecting to the <strong>Bastion host</strong> (an intermediary server).</li>
+<li>Connecting to your assigned server (so it is a two-step process).</li>
+</ul>
+<p>Refer to your email provided by ICT admin for these steps.</p>
+<p>For <strong>Windows</strong>, you can use PuTTY to connect. For <strong>Mac/Linux</strong>, you can configure one-step access by storing SSH keys between your local machine and the server and setting up an alias.</p>
+<p>Upon successful connection, your terminal/command prompt should display something like this:</p>
+<p><img src="https://gitlab.tudelft.nl/acryan/data-management-for-researchers/-/wikis/uploads/048a06a817852a399c697582ae1e3a08/Screen_Shot_2020-11-17_at_10.30.31.png" width="500" style="display: block; margin: 0 auto;"></p>
 </section>
 <section id="step-3.-install-docker-on-the-server" class="level3">
 <h3 class="anchored" data-anchor-id="step-3.-install-docker-on-the-server">Step 3. Install Docker on the server</h3>
 <p>Servers often do not come with Docker installed, so you may need to do it by yourself. To check whether Docker is installed, run <code>docker --version</code>. If you get an error message, you can install it using the following commands:</p>
-<p><code>sudo su</code> (this will give you the root access) <code>apt install docker.io</code></p>
-<p>Now, Docker is installed. You can check if it is installed successfully by again typing <code>docker --version</code> in the terminal. The result should show the version of Docker you just installed.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># From https://docs.docker.com/engine/install/ubuntu</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Add Docker's official GPG key:</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> apt-get update</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> apt-get install ca-certificates curl</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> install <span class="at">-m</span> 0755 <span class="at">-d</span> /etc/apt/keyrings</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> curl <span class="at">-fsSL</span> https://download.docker.com/linux/ubuntu/gpg <span class="at">-o</span> /etc/apt/keyrings/docker.asc</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> chmod a+r /etc/apt/keyrings/docker.asc</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="co"># Add the repository to Apt sources:</span></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="bu">echo</span> <span class="dt">\</span></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>  <span class="st">"deb [arch=</span><span class="va">$(</span><span class="ex">dpkg</span> <span class="at">--print-architecture</span><span class="va">)</span><span class="st"> signed-by=/etc/apt/keyrings/docker.asc] https://download.docker.com/linux/ubuntu </span><span class="dt">\</span></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="st">  </span><span class="va">$(</span><span class="bu">.</span> /etc/os-release <span class="kw">&amp;&amp;</span> <span class="bu">echo</span> <span class="st">"</span><span class="va">${UBUNTU_CODENAME</span><span class="op">:-</span><span class="va">$VERSION_CODENAME}</span><span class="st">"</span><span class="va">)</span><span class="st"> stable"</span> <span class="kw">|</span> <span class="dt">\</span></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>  <span class="fu">sudo</span> tee /etc/apt/sources.list.d/docker.list <span class="op">&gt;</span> /dev/null</span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> apt-get update</span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a><span class="co"># Install the latest Docker packages</span></span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin</span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a><span class="co"># Verify that the installation is successful by running the hello-world image</span></span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> docker run hello-world</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Now that you’ve installed Docker, you can check its installation with <code>docker --version</code> from the terminal. The result should show the version of Docker you just installed.</p>
 </section>
 <section id="step-4.-pull-the-gitlab-runner-docker-image" class="level3">
-<h3 class="anchored" data-anchor-id="step-4.-pull-the-gitlab-runner-docker-image">Step 4. Pull the gitlab-runner Docker image</h3>
-<p>In order to run CI/CD jobs for your repository, you need to install GitLab Runner. GitLab Runner is an application that works with GitLab CI/CD to run jobs in a pipeline. Rather than install GitLab Runner directly on the server, we will run a lightweight version of it as a Docker container. To do so, we first need to pull the gitlab-runner Docker image by running:</p>
+<h3 class="anchored" data-anchor-id="step-4.-pull-the-gitlab-runner-docker-image">Step 4. Pull the <code>gitlab-runner</code> Docker image</h3>
+<p>In order to run CI/CD jobs for your repository, you need to install GitLab Runner. GitLab Runner is an application that works with GitLab CI/CD to run jobs in a pipeline. Rather than install GitLab Runner directly on the server, we will run a lightweight version of it as a Docker container. To do so, we first need to pull the <code>gitlab-runner</code> Docker image by running:</p>
 <p><code>docker pull gitlab/gitlab-runner</code></p>
 <p>You can check whether it was successful by running <code>docker images</code> - you should see the gitlab/gitlab-runner image listed in the output.</p>
 </section>
@@ -1166,94 +1202,167 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h3 class="anchored" data-anchor-id="step-5.-create-a-unit-test-function-stored-as-a-file-in-the-repository">Step 5. Create a unit test function stored as a file in the repository</h3>
 </section>
 <section id="step-6.-set-up-the-ci-by-configuration-of-the-.gitlab-ci.yml-file" class="level3">
-<h3 class="anchored" data-anchor-id="step-6.-set-up-the-ci-by-configuration-of-the-.gitlab-ci.yml-file">Step 6. Set up the CI by configuration of the .gitlab-ci.yml file</h3>
-<p>This file in the root of your repository defines what CI/CD tests to run upon each new commit. It does this by prescribing what container to run, what scripts to run inside the container, and what things to store as artefacts.</p>
-<p>In the first line of the file, you can write <code>image: &lt;image_name&gt;:&lt;tag&gt;</code> to indicate you want to run the runner in a Docker container container. <code>&lt;image_name&gt;</code> should be replaced by the name of the image you want to use to start a container and <code>&lt;tag&gt;</code> should be replaced by the tag of the image you want to use(image names can be found on DockerHub). Tag will be set to <code>latest</code> by default.</p>
-<p><strong>Important:</strong> The file must be named exactly <code>.gitlab-ci.yml</code> so it will be recognizable by GitLab runner. Below is an example .gitlab-ci.yml file.</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># This is a sample build configuration for Python.</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Check our guides at https://confluence.atlassian.com/x/x4UWN for more examples.</span></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Only use spaces to indent your .yml configuration.</span></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="co"># -----</span></span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="fu">test</span><span class="kw">:</span></span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="co">  # You can specify a custom docker image from Docker Hub as your build environment.</span></span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">image</span><span class="kw">:</span><span class="at"> python:3.12.3</span></span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">cache</span><span class="kw">:</span></span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">paths</span><span class="kw">:</span></span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="kw">-</span><span class="at"> .cache/pip</span></span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="kw">-</span><span class="at"> venv/</span></span>
-<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">script</span><span class="kw">:</span><span class="co"> # Modify the commands below to build your repository.</span></span>
-<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="kw">-</span><span class="at"> pip install -r requirements.txt</span></span>
-<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="kw">-</span><span class="at"> nosetests --with-coverage  --cover-html</span></span>
-<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">artifacts</span><span class="kw">:</span></span>
-<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">paths</span><span class="kw">:</span></span>
-<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="kw">-</span><span class="at"> cover/</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>Tags can be added as a final section in your .gitlab-ci.yml file (they are optional, we didn’t enter any in this example). You then need to enter these tags exactly when registering the runner.</p>
+<h3 class="anchored" data-anchor-id="step-6.-set-up-the-ci-by-configuration-of-the-.gitlab-ci.yml-file">Step 6. Set up the CI by configuration of the <code>.gitlab-ci.yml</code> file</h3>
+<p>This file, located in the root of your repository, defines the CI/CD pipeline. It specifies the docker container to run, what scripts to run inside the container, and what to store as artifacts after the job completion.</p>
+<p>In the first line of the file, specify the Docker image using: <code>image: &lt;image_name&gt;:&lt;tag&gt;</code> to indicate you want to run the runner in a Docker container. Replace <image_name> with the name of the Docker image (e.g., python, image names can be found on DockerHub). Replace <tag> with the image version (e.g., 3.12.3). If omitted, the latest tag is used by default.</tag></image_name></p>
+<div class="callout callout-style-simple callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span><i class="fa-solid fa-exclamation-triangle" aria-label="exclamation-triangle"></i> Important
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<blockquote class="blockquote">
+<p>This file must be named <code>.gitlab-ci.yml</code> for the GitLab Runner to recognize it. Below is an example <code>.gitlab-ci.yml</code> file. Only use spaces to indent your .yml configuration.</p>
+</blockquote>
+</div>
+</div>
+<div class="callout callout-style-simple callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span><i class="fa-solid fa-signs-post" aria-label="signs-post"></i> Learn more
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Check <a href="https://confluence.atlassian.com/x/x4UWN">Atlassian guides</a> for more examples.</p>
+</div>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Sample CI/CD configuration for Python</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="co"># -----</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="fu">test</span><span class="kw">:</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">image</span><span class="kw">:</span><span class="at"> python:3.12.3</span><span class="co"> # Docker image for the build environment</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">cache</span><span class="kw">:</span></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">paths</span><span class="kw">:</span></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="kw">-</span><span class="at"> .cache/pip</span></span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="kw">-</span><span class="at"> venv/</span></span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">script</span><span class="kw">:</span><span class="co"> # Modify the commands below to build your repository.</span></span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="kw">-</span><span class="at"> pip install -r requirements.txt</span><span class="co">  # Install dependencies</span></span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="kw">-</span><span class="at"> pytest</span></span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">artifacts</span><span class="kw">:</span></span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">paths</span><span class="kw">:</span></span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="kw">-</span><span class="at"> cover/</span><span class="co"> # Store coverage reports as artifacts</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p><strong>Optional:</strong> You can add tags to the <code>.gitlab-ci.yml</code> file to assign specific runners to jobs. If you use tags, ensure they match exactly when registering the runner.</p>
 </section>
 <section id="step-7.-setup-the-gitlab-runner" class="level3">
-<h3 class="anchored" data-anchor-id="step-7.-setup-the-gitlab-runner">Step 7. Setup the GitLab runner</h3>
+<h3 class="anchored" data-anchor-id="step-7.-setup-the-gitlab-runner">Step 7. Setup the GitLab Runner</h3>
 <ul>
-<li><p>Follow the instructions <a href="https://docs.gitlab.com/ee/tutorials/create_register_first_runner/#create-and-register-a-project-runner">here</a> <strong>till step 7</strong> to create a GitLab runner for your repository</p></li>
-<li><p>Choose ‘Linux’ under operating systems</p></li>
-<li><p>Copy the authentication token generated and keep it handy. It will be required in Step 9.</p></li>
+<li><p>Follow the instructions <a href="https://docs.gitlab.com/ee/tutorials/create_register_first_runner/#create-and-register-a-project-runner">here</a> <strong>up to step 7</strong> to create a GitLab Runner for your repository</p></li>
+<li><p>Choose <strong>Linux</strong> under operating systems</p></li>
+<li><p>Copy the <strong>authentication token</strong> generated during the process. You will need it for <strong>Step 9</strong>.</p></li>
 </ul>
 </section>
 <section id="step-8.-deploy-gitlab-runner-in-a-docker-container" class="level3">
 <h3 class="anchored" data-anchor-id="step-8.-deploy-gitlab-runner-in-a-docker-container">Step 8. Deploy GitLab runner in a Docker container</h3>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ex">docker</span> run <span class="at">-d</span> <span class="at">--name</span> gitlab-runner <span class="at">--restart</span> always <span class="dt">\</span></span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>-v /srv/gitlab-runner/config:/etc/gitlab-runner <span class="dt">\</span></span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>-v /var/run/docker.sock:/var/run/docker.sock <span class="dt">\</span></span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>gitlab/gitlab-runner:latest</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p><strong>on Mac OS, use /Users/Shared/ instead of /srv/</strong></p>
-<p>Check that gitlab-runner container is running using <code>docker ps -a</code></p>
+<p>Run the following command to deploy the GitLab Runner as a Docker container:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="ex">docker</span> run <span class="at">-d</span> <span class="at">--name</span> gitlab-runner <span class="at">--restart</span> always <span class="dt">\</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>-v /srv/gitlab-runner/config:/etc/gitlab-runner <span class="dt">\</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>-v /var/run/docker.sock:/var/run/docker.sock <span class="dt">\</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>gitlab/gitlab-runner:latest</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="callout callout-style-simple callout-warning no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Warning</span><i class="fa-solid fa-info-circle" aria-label="info-circle"></i> Warning
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Mounting <code>/var/run/docker.sock</code> lets any CI job control the host Docker daemon, effectively giving root access on the server. Use only on trusted projects, or consider alternatives!</p>
+</div>
+</div>
+<p>Check that <code>gitlab-runner</code> container is running with</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="ex">docker</span> ps <span class="at">-a</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 <section id="step-9.-register-the-runner-using-authentication-token" class="level3">
 <h3 class="anchored" data-anchor-id="step-9.-register-the-runner-using-authentication-token">Step 9. Register the runner using authentication token</h3>
 <p>Run the following command to register your runner and configure it to deploy in a Docker container on your server.</p>
-<p><code>docker run --rm -it -v /srv/gitlab-runner/config:/etc/gitlab-runner gitlab/gitlab-runner register</code></p>
-<p><strong>on Mac OS, use /Users/Shared/ instead of /srv/</strong></p>
-<p>In response to this command you will be prompted to answer the following questions</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="ex">-</span> GitLab URL: https://gitlab.tudelft.nl</span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="ex">-</span> gitlab-ci token: Paste the authentication token generated in Step 7.</span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="ex">-</span> Enter name of the runner: example-runner</span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="ex">-</span> Type of executor: docker</span>
-<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="ex">-</span> Default Docker image: Specify the same image as the one specified in the <span class="st">'image'</span> field of the .gitlab-ci.yml file.</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>See an example below.</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="ex">docker</span> run <span class="at">--rm</span> <span class="at">-it</span> <span class="at">-v</span> /srv/gitlab-runner/config:/etc/gitlab-runner gitlab/gitlab-runner register</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="ex">Enter</span> the GitLab instance URL <span class="er">(</span><span class="cf">for</span> example<span class="ex">,</span> https://gitlab.com/<span class="kw">)</span><span class="bu">:</span></span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="ex">https://gitlab.tudelft.nl</span></span>
-<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="ex">Enter</span> the registration token:</span>
-<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a><span class="ex">xxxxxxxxxxxxxxx</span></span>
-<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a><span class="ex">Verifying</span> runner... is valid                        runner=xxxxxxx</span>
-<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a><span class="ex">Enter</span> a name for the runner. This is stored only in the local config.toml file:</span>
-<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a><span class="ex">[xxxxxxx]:</span> example-runner</span>
-<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a><span class="ex">Enter</span> an executor: instance, kubernetes, docker-windows, docker-autoscaler, parallels, shell, ssh, virtualbox, docker+machine, custom, docker:</span>
-<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a><span class="ex">docker</span></span>
-<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a><span class="ex">Enter</span> the default Docker image <span class="er">(</span><span class="cf">for</span> example<span class="ex">,</span> ruby:2.7<span class="kw">)</span><span class="bu">:</span></span>
-<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a><span class="ex">julia:1.6</span></span>
-<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a><span class="ex">Runner</span> registered successfully. Feel free to start it, but if it<span class="st">'s running already the config should be automatically reloaded!</span></span>
-<span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-14"><a href="#cb5-14" aria-hidden="true" tabindex="-1"></a><span class="st">Configuration (with the authentication token) was saved in "/etc/gitlab-runner/config.toml"</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="callout callout-style-simple callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span><i class="fa-solid fa-info-circle" aria-label="info-circle"></i> Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>GitLab has migrated from registration tokens to authentication tokens. The new authentication tokens use the glrt- prefix and are created through the GitLab UI first, then used in the registration command.</p>
+</div>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="ex">docker</span> run <span class="at">--rm</span> <span class="at">-it</span> <span class="at">-v</span> /srv/gitlab-runner/config:/etc/gitlab-runner gitlab/gitlab-runner register</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>You will be prompted to answer the following questions:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="ex">Enter</span> the GitLab instance URL <span class="er">(</span><span class="cf">for</span> example<span class="ex">,</span> https://gitlab.com/<span class="kw">)</span><span class="bu">:</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="ex">https://gitlab.tudelft.nl</span></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a><span class="ex">Enter</span> the authentication token:</span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a><span class="ex">glrt-xxxxxxxxxxxxxxx</span></span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a><span class="ex">Verifying</span> runner... is valid                        runner=xxxxxxx</span>
+<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a><span class="ex">Enter</span> a name for the runner. This is stored only in the local config.toml file:</span>
+<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a><span class="ex">[xxxxxxx]:</span> example-runner</span>
+<span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-12"><a href="#cb6-12" aria-hidden="true" tabindex="-1"></a><span class="ex">Enter</span> an executor: instance, kubernetes, docker-windows, docker-autoscaler, parallels, shell, ssh, virtualbox, docker+machine, custom, docker:</span>
+<span id="cb6-13"><a href="#cb6-13" aria-hidden="true" tabindex="-1"></a><span class="ex">docker</span></span>
+<span id="cb6-14"><a href="#cb6-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-15"><a href="#cb6-15" aria-hidden="true" tabindex="-1"></a><span class="ex">Enter</span> the default Docker image <span class="er">(</span><span class="cf">for</span> example<span class="ex">,</span> ruby:2.7<span class="kw">)</span><span class="bu">:</span></span>
+<span id="cb6-16"><a href="#cb6-16" aria-hidden="true" tabindex="-1"></a><span class="ex">python:3.12.3</span></span>
+<span id="cb6-17"><a href="#cb6-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-18"><a href="#cb6-18" aria-hidden="true" tabindex="-1"></a><span class="ex">Runner</span> registered successfully. </span>
+<span id="cb6-19"><a href="#cb6-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-20"><a href="#cb6-20" aria-hidden="true" tabindex="-1"></a><span class="ex">Feel</span> free to start it, but if it is running already the config should be automatically reloaded!</span>
+<span id="cb6-21"><a href="#cb6-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-22"><a href="#cb6-22" aria-hidden="true" tabindex="-1"></a><span class="ex">Configuration</span> <span class="er">(</span><span class="ex">with</span> the authentication token<span class="kw">)</span> <span class="ex">was</span> saved in <span class="st">"/etc/gitlab-runner/config.toml"</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
-<section id="step-10.-check-that-the-cicd-process-is-activated-and-your-pipeline-runs-successfully" class="level3">
-<h3 class="anchored" data-anchor-id="step-10.-check-that-the-cicd-process-is-activated-and-your-pipeline-runs-successfully">Step 10. Check that the CI/CD process is activated and your pipeline runs successfully</h3>
+<section id="step-10.-verify-the-cicd-pipeline" class="level3">
+<h3 class="anchored" data-anchor-id="step-10.-verify-the-cicd-pipeline">Step 10. Verify the CI/CD Pipeline</h3>
+<section id="check-runner-status" class="level5">
+<h5 class="anchored" data-anchor-id="check-runner-status">1. Check Runner Status:</h5>
 <ul>
-<li><p>In your repository, navigate to Settings &gt; CI/CD &gt; Click on Expand under Runners: You should see that the runner is active as indicated by a green dot. This means that the CI pipeline is ready to run, but it needs to be triggered.</p></li>
-<li><p>In order to trigger the CI pipeline, you should make a new commit to the GitLab repository.</p></li>
-<li><p>After you have made a new commit to the repository, navigate to Your Project -&gt; Build -&gt; Pipelines to check the status of CI/CD pipelines connected to your repository. If you find a green message that says “passed” with a check mark then congratulations, your pipeline works! If you see a red message that says “failed”, check to see the error message associated with it - sometimes you need to reconfigure your .gitlab-ci.yml file to make sure it uses the correct formatting and defines the tests appropriately.</p></li>
+<li>Go to your repository’s Settings ⇾ CI/CD.</li>
+<li>Under <em>Runners</em>, expand the section to confirm that your runner is active (indicated by a green dot). This means the runner is ready to execute jobs, but it requires a trigger to start.</li>
 </ul>
-<p><img src="https://gitlab.tudelft.nl/acryan/data-management-for-researchers/-/wikis/uploads/f7aadbc87f49d31de4da37a2f8a76ef3/Screen_Shot_2020-11-17_at_11.56.41.png" class="img-fluid"></p>
-<!-- ## Notes and References
-This guide was created using multiple references on GitLab runner and Docker. If you would like more information or details, please refer to the links below.
-* https://www.hostinger.com/tutorials/how-to-install-docker-on-ubuntu
-* https://cloudcone.com/docs/article/how-to-install-and-run-docker-on-ubuntu-20-04-lts/
-* https://www.digitalocean.com/community/tutorials/how-to-install-and-use-docker-on-ubuntu-20-04
-* https://docs.gitlab.com/ee/topics/build_your_application.html
-* https://docs.gitlab.com/runner/executors/docker.html#define-image-and-services-from-gitlab-ciyml
-* https://gitlab.tudelft.nl/help/ci/yaml/index.md
-* https://docs.gitlab.com/ee/ci/docker/using_docker_images.html
-* https://semaphoreci.com/blog/cicd-pipeline -->
+</section>
+<section id="trigger-the-pipeline" class="level5">
+<h5 class="anchored" data-anchor-id="trigger-the-pipeline">2. Trigger the Pipeline:</h5>
+<ul>
+<li>Make a new commit to your GitLab repository. This will automatically trigger the pipeline to run.</li>
+</ul>
+</section>
+<section id="monitor-pipeline-status" class="level5">
+<h5 class="anchored" data-anchor-id="monitor-pipeline-status">3. Monitor Pipeline Status:</h5>
+<ul>
+<li>After the new commit, navigate to CI/CD ⇾ Pipelines in your project.</li>
+<li>Check the status of your pipeline:
+<ul>
+<li>A green “passed” status with a checkmark means your pipeline ran successfully. Congratulations!</li>
+<li>A red “failed” status indicates an error. Review the error message to troubleshoot. Common issues include incorrect formatting in the <code>.gitlab-ci.yml</code> file or misconfigured test definitions.</li>
+</ul></li>
+</ul>
+<p><img src="https://gitlab.tudelft.nl/acryan/data-management-for-researchers/-/wikis/uploads/f7aadbc87f49d31de4da37a2f8a76ef3/Screen_Shot_2020-11-17_at_11.56.41.png" width="600" style="display: block; margin: 0 auto;"></p>
+<div class="callout callout-style-simple callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span><i class="fa-solid fa-signs-post" aria-label="signs-post"></i> Learn more
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>This guide was created using multiple references on GitLab runner and Docker. If you would like more information or details, please refer to the links below.<br> - <a href="https://www.hostinger.com/tutorials/how-to-install-docker-on-ubuntu">Hostinger - how to install docker on Ubuntu</a><br> - <a href="https://cloudcone.com/docs/article/how-to-install-and-run-docker-on-ubuntu-20-04-lts/">Cloudclone - How to install docker on Ubuntu</a><br> - <a href="https://www.digitalocean.com/community/tutorials/how-to-install-and-use-docker-on-ubuntu-20-04">Digitalocean- How to install docker on Ubuntu</a><br> - <a href="https://docs.gitlab.com/ee/topics/build_your_application.html">GitLab - Use CI/CD to build your application</a><br> - <a href="https://docs.gitlab.com/runner/executors/docker.html#define-image-and-services-from-gitlab-ciyml">GitLab - Docker executor</a><br> - <a href="https://gitlab.tudelft.nl/help/ci/yaml/index.md">TU Delft - GitLab CI/CD YAML syntax reference</a><br> - <a href="https://docs.gitlab.com/ee/ci/docker/using_docker_images.html">GitLab - CI/CD jobs in Docker containers</a><br> - <a href="https://semaphoreci.com/blog/cicd-pipeline">Semaphore - Introduction to CI/CD pipeline</a><br></p>
+</div>
+</div>
 
 
+</section>
 </section>
 </section>
 
