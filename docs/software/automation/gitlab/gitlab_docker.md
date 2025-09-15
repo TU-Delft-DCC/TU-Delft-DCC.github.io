@@ -61,7 +61,7 @@ To run a CI/CD pipeline, a `gitlab-runner` Docker container runs continuously on
 
 **Docker:** A Docker container is used to run the GitLab Runner and initialize the CI/CD pipeline.
 
-**Gitlab Runner:** "Runners are the agents that run the CI/CD jobs that come from GitLab. When you register a runner, you are setting up communication between your GitLab instance and the machine where GitLab Runner is installed. Runners usually process jobs on the same machine where you installed GitLab Runner." - [GitLab documentation](https://docs.gitlab.com)
+**GitLab Runner:** "Runners are the agents that run the CI/CD jobs that come from GitLab. When you register a runner, you are setting up communication between your GitLab instance and the machine where GitLab Runner is installed. Runners usually process jobs on the same machine where you installed GitLab Runner." - [GitLab documentation](https://docs.gitlab.com)
 
 **GitLab repository:** A remote GitLab repository stores your project code and keeps track of its development. You're on one right now! :) If you haven’t already, log in to TU Delft’s GitLab instance at _gitlab.tudelft.nl_ using your **NetID and password**, and create a repository for your project.
 
@@ -112,8 +112,27 @@ Upon successful connection, your terminal/command prompt should display somethin
 Servers often do not come with Docker installed, so you may need to do it by yourself. To check whether Docker is installed, run `docker --version`. If you get an error message, you can install it using the following commands:
 
 ```bash
-sudo su # this will give you the root access
-apt install docker.io
+# From https://docs.docker.com/engine/install/ubuntu
+# Add Docker's official GPG key:
+sudo apt-get update
+sudo apt-get install ca-certificates curl
+sudo install -m 0755 -d /etc/apt/keyrings
+sudo curl -fsSL https://download.docker.com/linux/ubuntu/gpg -o /etc/apt/keyrings/docker.asc
+sudo chmod a+r /etc/apt/keyrings/docker.asc
+
+# Add the repository to Apt sources:
+echo \
+  "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.asc] https://download.docker.com/linux/ubuntu \
+  $(. /etc/os-release && echo "${UBUNTU_CODENAME:-$VERSION_CODENAME}") stable" | \
+  sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+sudo apt-get update
+
+# Install the latest Docker packages
+sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
+
+# Verify that the installation is successful by running the hello-world image
+sudo docker run hello-world
+
 ```
 
 Now that you've installed Docker, you can check its installation with `docker --version` from the terminal. The result should show the version of Docker you just installed.
@@ -155,6 +174,7 @@ test:
       - venv/
   script: # Modify the commands below to build your repository.
     - pip install -r requirements.txt  # Install dependencies
+    - pytest
   artifacts:
     paths:
       - cover/ # Store coverage reports as artifacts
@@ -179,13 +199,15 @@ docker run -d --name gitlab-runner --restart always \
 -v /var/run/docker.sock:/var/run/docker.sock \
 gitlab/gitlab-runner:latest
 ```
+:::{.callout-warning appearance="simple" icon="false"}
+## {{< fa info-circle >}} Warning
+Mounting `/var/run/docker.sock` lets any CI job control the host Docker daemon, effectively giving root access on the server. Use only on trusted projects, or consider alternatives!
+:::
 
 Check that `gitlab-runner` container is running with
 ``` bash
 docker ps -a
 ```
-
-The GitLab Runner uses the Docker executor in non-privileged mode by default, which provides secure isolation for your CI/CD jobs. This means containers cannot access the host system directly.
 
 ### Step 9. Register the runner using authentication token
 
