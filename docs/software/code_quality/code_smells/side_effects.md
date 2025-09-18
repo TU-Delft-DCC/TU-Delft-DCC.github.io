@@ -41,8 +41,9 @@ author_1: Maurits Kok
 # Meaningful keywords, newline separated [manual entry]
 # Uncomment and populate the next line and list accordingly
 categories: 
-- refactoring
-
+  - Software
+  - Refactoring
+  - Side Effects
 ---
 
 Side effects occur when a function modifies external state or interacts with the outside world beyond simply returning a value. This makes code less predictable, harder to test, and more difficult to debug.

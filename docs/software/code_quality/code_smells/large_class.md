@@ -41,8 +41,9 @@ author_1: Maurits Kok
 # Meaningful keywords, newline separated [manual entry]
 # Uncomment and populate the next line and list accordingly
 categories: 
-- refactoring
-
+  - Software
+  - Refactoring
+  - Large Classes
 ---
 
 A **monolithic design** is where an entire system is built as a single, tightly coupled unit without clear separation of responsibilities or modularization. This often leads to large, complex classes that handle multiple responsibilities, making the codebase harder to understand, modify, and maintain.
