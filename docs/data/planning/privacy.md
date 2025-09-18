@@ -41,9 +41,8 @@ title: Privacy
 # Meaningful keywords, newline separated [manual entry]
 # Uncomment and populate the next line and list accordingly
 categories: 
- - privacy
- - data
-
+ - Data
+ - Privacy
 ---
 
 In case you are working with sensitive data, it is important to consider the privacy of the individuals involved. This includes ensuring that personal data is collected, stored, and processed in compliance with relevant laws and regulations. 

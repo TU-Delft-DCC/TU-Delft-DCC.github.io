@@ -41,8 +41,13 @@ corresponding: Elviss Dvinskis
 # Meaningful keywords, newline separated [manual entry]
 # Uncomment and populate the next line and list accordingly
 categories: 
- - data
- - collection
+ - Data
+ - Collection
+ - Data Conventions
+ - Data Access
+ - Data Reuse
+ - eLabJournal
+ - RSpace
 
 ---
 

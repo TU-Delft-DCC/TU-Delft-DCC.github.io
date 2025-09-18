@@ -41,10 +41,10 @@ corresponding: Elviss Dvinskis
 # Meaningful keywords, newline separated [manual entry]
 # Uncomment and populate the next line and list accordingly
 categories: 
- - data
- - planning
- - dmp
- - privacy
+ - Data
+ - Planning
+ - DMP
+ - Privacy
 
 ---
 

@@ -40,10 +40,11 @@ corresponding: Elviss Dvinskis
 
 # Meaningful keywords, newline separated [manual entry]
 # Uncomment and populate the next line and list accordingly
-categories: 
- - eln
- - rspace
- - elabjournal
+categories:
+ - Data
+ - ELN
+ - RSpace
+ - eLABJournal
 
 ---
 

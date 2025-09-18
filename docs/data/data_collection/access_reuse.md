@@ -41,9 +41,9 @@ title: Access and reuse
 # Meaningful keywords, newline separated [manual entry]
 # Uncomment and populate the next line and list accordingly
 categories: 
- - data
- - access
- - reuse
+ - Data
+ - Data Access
+ - Data Reuse
 
 ---
 
