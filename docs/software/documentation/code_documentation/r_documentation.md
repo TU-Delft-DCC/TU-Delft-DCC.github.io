@@ -35,9 +35,12 @@ corresponding: Elviss Dvinskis
 
 # Meaningful keywords, newline separated [manual entry]
 # Uncomment and populate the next line and list accordingly
-#categories: 
-# - documentation
-# - r
+categories: 
+  - Software
+  - Documentation
+  - R
+  - roxygen2
+  - Vignettes
 
 ---
 

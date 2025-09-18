@@ -35,9 +35,12 @@ corresponding: Elviss Dvinskis
 
 # Meaningful keywords, newline separated [manual entry]
 # Uncomment and populate the next line and list accordingly
-#categories: 
-# - documentation
-# 
+categories: 
+  - Software
+  - Documentation
+  - Hosting
+  - GitHub Pages
+  - Read the Docs
 
 ---
 

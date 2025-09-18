@@ -34,9 +34,9 @@ corresponding: Elviss Dvinskis
 
 # Meaningful keywords, newline separated [manual entry]
 categories: 
- - documentation
- - FAIR software
-
+  - Software
+  - Documentation
+  - Licenses
 ---
 
 :::{.callout-warning}

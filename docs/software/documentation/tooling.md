@@ -35,11 +35,14 @@ corresponding: Elviss Dvinskis
 
 # Meaningful keywords, newline separated [manual entry]
 # Uncomment and populate the next line and list accordingly
-categories: 
- - sphinx
- - quarto
- - jupyterbook
-
+categories:
+  - Software
+  - Documentation
+  - Sphinx
+  - JupyterBook
+  - MkDocs
+  - Quarto
+  - pkgdown
 ---
 
 There are various tools available that can help you create, manage, and deploy project documentation more effectively.
