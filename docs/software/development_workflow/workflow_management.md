@@ -39,12 +39,11 @@ corresponding: Aysun Urhan
 
 # Meaningful keywords, newline separated [manual entry]
 # Uncomment and populate the next line and list accordingly
-#categories: 
-# - project management
-# - github
-# - issues
-# - project board
-
+categories:
+  - Software
+  - Project Organization
+  - Workflow Management
+  - Snakemake
 ---
 
 Workflow management for research software is the practice of organizing series of tasks related to research, such as how scientific code, data and experiments are developed, executed and shared to ensure reproducible, collaborative and efficient research. An example research workflow might include data processing, model training or running simulations, as well as recording and publishing the results. The main objective is not only about making the code run successfully, but about making it **reproducible**, **trackable** and **adaptable**.

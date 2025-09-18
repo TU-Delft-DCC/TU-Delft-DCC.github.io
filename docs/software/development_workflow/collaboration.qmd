@@ -40,12 +40,14 @@ corresponding: Elviss Dvinskis
 
 # Meaningful keywords, newline separated [manual entry]
 # Uncomment and populate the next line and list accordingly
-#categories: 
-# - collaboration
-# - forks
-# - pull requests
-# - github flow
-# - branches
+categories: 
+ - Software
+ - Version Control
+ - Collaboration
+ - Forks
+ - Pull Requests
+ - GitHub Flow
+ - Branches
 
 ---
 

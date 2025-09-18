@@ -40,12 +40,14 @@ corresponding: Elviss Dvinskis
 
 # Meaningful keywords, newline separated [manual entry]
 # Uncomment and populate the next line and list accordingly
-#categories: 
-# - project management
-# - github
-# - issues
-# - project board
-
+categories:
+ - Software
+ - Version Control
+ - Collaboration
+ - Project Management
+ - GitHub
+ - Issues
+ - Project Board
 ---
 
 [Git](https://git-scm.com/) is a distributed version control system that enables you to track changes in your code over time. Platforms like GitHub, GitLab and Bitbucket extend the features of git by providing a centralized location for storing repositories, collaborating, and providing powerful tools to plan, organize, and track your work efficiently.

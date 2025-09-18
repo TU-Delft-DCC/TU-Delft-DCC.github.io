@@ -41,15 +41,16 @@ corresponding: Elviss Dvinskis
 
 # Meaningful keywords, newline separated [manual entry]
 # Uncomment and populate the next line and list accordingly
-categories: 
- - python
- - environments
- - dependencies
- - conda
- - venv
- - virtualenv
- - pyproject.toml
- - uv
+categories:
+  - Software
+  - Environments
+  - Dependencies
+  - Python
+  - conda
+  - venv
+  - virtualenv
+  - pyproject.toml
+  - uv
 
 ---
 When working with Python, managing dependencies and environments is important to ensure your project can be reproduced and shared. 

@@ -40,10 +40,11 @@ author_2: Elviss Dvinskis
 
 # Meaningful keywords, newline separated [manual entry]
 # Uncomment and populate the next line and list accordingly
-#categories: 
-# - matlab
-# - environments
-# - dependencies
+categories: 
+  - Software
+  - Environments
+  - Dependencies
+  - MATLAB
 
 ---
 

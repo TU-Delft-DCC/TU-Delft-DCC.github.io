@@ -40,14 +40,13 @@ corresponding: Elviss Dvinskis
 
 # Meaningful keywords, newline separated [manual entry]
 # Uncomment and populate the next line and list accordingly
-#categories: 
-# - r
-# - environments
-# - dependencies
-# - conda
-# - renv
-
-
+categories:
+  - Software
+  - Environments
+  - Dependencies
+  - R
+  - conda
+  - renv
 ---
 
 R users often rely on RStudio Projects and `renv` to manage their development environments. RStudio Projects organize your workspace by managing file paths and configurations, while `renv` tracks and restores package dependencies to ensure reproducibility. Together, they provide a structured and reliable workflow for managing R projects.
