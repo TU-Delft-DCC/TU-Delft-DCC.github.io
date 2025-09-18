@@ -41,8 +41,9 @@ maintainer_1: Raúl Ortiz Merino
 # Meaningful keywords, newline separated [manual entry]
 # Uncomment and populate the next line and list accordingly
 categories: 
- - infrastructure
- - servers 
+ - Infrastructure
+ - Servers
+ - VPS
 
 ---
 

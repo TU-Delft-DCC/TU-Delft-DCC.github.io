@@ -40,9 +40,9 @@ corresponding: Raúl Ortiz Merino
 
 # Meaningful keywords, newline separated [manual entry]
 # Uncomment and populate the next line and list accordingly
-categories:
- - servers
- - infrastructure
+categories: 
+ - Infrastructure
+ - Servers
 
 ---
 

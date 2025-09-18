@@ -39,12 +39,15 @@ maintainer_1: Manuel Garcia
 
 # Meaningful keywords, newline separated [manual entry]
 # Uncomment and populate the next line and list accordingly
+
 categories: 
-- ssh tunneling
-- ssh keys
-- bastion host
-- vps 
-- scp
+ - Infrastructure
+ - Servers
+ - VPS
+ - SSH Tunneling
+ - SSH Keys
+ - Bastion Host
+ - scp
 
 ---
 
