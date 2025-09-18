@@ -40,10 +40,12 @@ author_2: Maurits Kok
 
 # Meaningful keywords, newline separated [manual entry]
 # Uncomment and populate the next line and list accordingly
-categories: 
- - gitlab
+categories:
+ - Software
+ - Automation
+ - GitLab
  - CI/CD
- - docker
+ - Docker
 
 ---
 

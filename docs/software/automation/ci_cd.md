@@ -40,11 +40,12 @@ corresponding: Elviss Dvinskis
 
 # Meaningful keywords, newline separated [manual entry]
 # Uncomment and populate the next line and list accordingly
-categories: 
- - automation
- - github
- - gitlab
- - ci/cd
+categories:
+  - Software
+  - Automation
+  - GitHub
+  - GitLab
+  - CI/CD
 
 ---
 
