@@ -40,9 +40,13 @@ corresponding: Elviss Dvinskis
 
 # Meaningful keywords, newline separated [manual entry]
 # Uncomment and populate the next line and list accordingly
-categories: 
- - package
- - R
+categories:
+  - Software
+  - Package
+  - R
+  - devtools
+  - usethis
+  - roxygen2
 
 ---
 

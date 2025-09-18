@@ -40,11 +40,12 @@ corresponding: Elviss Dvinskis
 
 # Meaningful keywords, newline separated [manual entry]
 # Uncomment and populate the next line and list accordingly
-categories: 
- - package
- - Python
- - pyproject.toml
- - uv
+categories:
+  - Software
+  - Package
+  - Python
+  - pyproject.toml
+  - uv
 ---
 
 By turning your code into a package and hosting it on a platform like PyPI (Python Package Index), you enhance the quality and sustainability of your software, promote reuse and embrace contributions from external collaborators.

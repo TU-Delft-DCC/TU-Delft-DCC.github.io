@@ -40,12 +40,11 @@ corresponding: Elviss Dvinskis
 
 # Meaningful keywords, newline separated [manual entry]
 # Uncomment and populate the next line and list accordingly
-categories: 
- - archive
- - software
- - zenodo
- - 4tu
-
+categories:
+  - Software
+  - Archive
+  - Zenodo
+  - 4TU
 ---
 
 Archiving your software ensures long-term availability and accessibility. By archiving your software, you can preserve its state at a specific point in time, making it easier for others to access and use it in the future.

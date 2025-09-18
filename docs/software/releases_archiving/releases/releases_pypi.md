@@ -40,12 +40,13 @@ corresponding: Elviss Dvinskis
 
 # Meaningful keywords, newline separated [manual entry]
 # Uncomment and populate the next line and list accordingly
-categories: 
- - package
- - release
- - python
- - pypi
- - testpypi
+categories:
+  - Software
+  - Package
+  - Release
+  - Python
+  - PyPI
+  - TestPyPI
 ---
 
 After bundling your source code into a package, you can publish it to PyPI. This will allow others to easily install your package using `pip`.
