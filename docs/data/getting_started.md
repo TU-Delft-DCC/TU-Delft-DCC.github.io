@@ -41,8 +41,8 @@ corresponding: Elviss Dvinskis
 # Meaningful keywords, newline separated [manual entry]
 # Uncomment and populate the next line and list accordingly
 categories:
- - data
- - getting started
+ - Data
+ - Getting Started
 ---
 
 This section provides resources to support data owners and users at various stages of the data lifecycle. It highlights important information and available tooling at TU Delft that can help you implement the Findable, Accessible, Interoperable, and Reproducible (FAIR) principles in your research data management practices.
