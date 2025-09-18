@@ -43,8 +43,9 @@ corresponding: Elviss Dvinskis
 categories:
   - Software
   - Archive
-  - Zenodo
   - 4TU
+  - Zenodo
+
 ---
 
 Archiving your software ensures long-term availability and accessibility. By archiving your software, you can preserve its state at a specific point in time, making it easier for others to access and use it in the future.
