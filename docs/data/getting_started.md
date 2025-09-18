@@ -7,7 +7,7 @@ date: 2024-11-11
 
 # We use this key to indicate the last modified date [manual entry, use YYYY-MM-DD]
 # Uncomment and populate the next line accordingly
-date-modified: 2025-07-11
+date-modified: 2025-09-18
 
 # Do not modify
 lang: en
@@ -40,11 +40,9 @@ corresponding: Elviss Dvinskis
 
 # Meaningful keywords, newline separated [manual entry]
 # Uncomment and populate the next line and list accordingly
-categories: 
- - FAIR
- - RDM
+categories:
  - data
-
+ - getting started
 ---
 
 This section provides resources to support data owners and users at various stages of the data lifecycle. It highlights important information and available tooling at TU Delft that can help you implement the Findable, Accessible, Interoperable, and Reproducible (FAIR) principles in your research data management practices.
