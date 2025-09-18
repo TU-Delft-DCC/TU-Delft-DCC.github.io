@@ -41,13 +41,13 @@ corresponding: Elviss Dvinskis
 # Meaningful keywords, newline separated [manual entry]
 # Uncomment and populate the next line and list accordingly
 categories: 
- - licenses
- - publishing
- - archiving
- - offboarding
- - ownership
- - data
-
+ - Data
+ - Licenses
+ - Release
+ - Publish
+ - Archive
+ - Offboarding
+ - Ownership
 ---
 
 Towards the end of the research cycle, data archiving (and publishing, when possible) is an essential step for the longevity and accessibility of your research. Archiving data means that it is preserved and remains accessible for future use. This process not only helps with the visibility of your work but also contributes to the advancement of knowledge in your field. Other researchers have the data available and can build upon your work. Learning how to effectively preserve and share your research isn't just good scientific practice - it's how your work makes a lasting impact.

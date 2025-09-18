@@ -42,9 +42,12 @@ corresponding: Elviss Dvinskis
 # Meaningful keywords, newline separated [manual entry]
 # Uncomment and populate the next line and list accordingly
 categories: 
- - publishing 
- - 4tu.researchdata
- - zenodo
+ - Data
+ - Release
+ - Publish
+ - Archive
+ - 4TU
+ - Zenodo
 
 ---
 Data repositories are online locations for storing research data long term. When data is published in a repository, it is (often) assigned a persistent digital object identifier (DOI), which ensures that the data is discoverable and accessible over time. When published, the data should be accompanied by an appropriate license and metadata describing your data. 
