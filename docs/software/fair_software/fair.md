@@ -35,9 +35,8 @@ corresponding: Elviss Dvinskis
 
 # Meaningful keywords, newline separated [manual entry]
 categories: 
- - FAIR
  - Software
-
+ - FAIR
 ---
 
 While originally targetting data management, the FAIR for Research Software (FAIR4RS) extends the [FAIR principles](../../data/fair_data/fair.md) to research software, which, unlike data, is executable and evolves over time. Ensuring the **f**indability of software involves metadata, identifiers, and version control systems, while **a**ccessibility includes guidelines for obtaining, installing, and running the software. **I**nteroperability involves adherence to community-driven standards or protocols, and **r**eusability requires detailed documentation and user guides to effectively apply the software in new research projects.

@@ -35,8 +35,8 @@ corresponding: Elviss Dvinskis
 
 # Meaningful keywords, newline separated [manual entry]
 categories: 
- - FAIR
  - Software
+ - FAIR
  - Checklist
 
 ---
