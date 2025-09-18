@@ -41,8 +41,11 @@ corresponding: Raul Ortiz Merino
 # Meaningful keywords, newline separated [manual entry]
 # Uncomment and populate the next line and list accordingly
 categories: 
- - data
- - storage
+ - Data
+ - Storage
+ - Data Security
+ - Data Sharing
+ - Data Backup
 
 ---
 

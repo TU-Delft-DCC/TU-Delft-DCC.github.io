@@ -40,8 +40,9 @@ corresponding: Raul Ortiz Merino
 # Meaningful keywords, newline separated [manual entry]
 # Uncomment and populate the next line and list accordingly
 categories: 
- - data
- - security
+ - Data
+ - Storage
+ - Data Security
 
 ---
 

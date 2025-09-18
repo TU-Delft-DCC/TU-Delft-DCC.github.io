@@ -40,9 +40,10 @@ maintainer_1: Elviss Dvinskis
 # Meaningful keywords, newline separated [manual entry]
 # Uncomment and populate the next line and list accordingly
 categories: 
+ - Data
+ - Storage
  - Project Data Storage
- - vps
-
+ - VPS
 ---
 
 *Project drive* storage can be mounted and made accessible in your TU Delft Virtual Private Server (VPS).

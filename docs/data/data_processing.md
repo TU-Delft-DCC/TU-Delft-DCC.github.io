@@ -41,8 +41,9 @@ title: Data processing
 # Meaningful keywords, newline separated [manual entry]
 # Uncomment and populate the next line and list accordingly
 categories: 
- - data processing
- - version control
+ - Data
+ - Data Processing
+ - Version Control
 
 --- 
 
