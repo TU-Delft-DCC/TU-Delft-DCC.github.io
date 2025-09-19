@@ -6,7 +6,7 @@
 date: 2025-07-02
 
 # We use this key to indicate the last modified date [manual entry]
-date-modified: 2025-07-08
+date-modified: 2025-09-19
 
 # Do not modify
 lang: en
@@ -40,8 +40,9 @@ corresponding: Raul Ortiz Merino
 # Meaningful keywords, newline separated [manual entry]
 # Uncomment and populate the next line and list accordingly
 categories: 
- - data
- - security
+ - Data
+ - Storage
+ - Data Security
 
 ---
 
