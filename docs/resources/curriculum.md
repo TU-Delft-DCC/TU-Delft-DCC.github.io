@@ -6,7 +6,7 @@
 #date: YYYY-MM-DD
 
 # We use this key to indicate the last modified date [automatic entry]
-date-modified: last-modified
+#date-modified: last-modified
 
 # Do not modify
 lang: en
