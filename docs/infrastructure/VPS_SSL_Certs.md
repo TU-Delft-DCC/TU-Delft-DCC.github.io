@@ -7,7 +7,7 @@
 
 # We use this key to indicate the last modified date [manual entry, use YYYY-MM-DD]
 # Uncomment and populate the next line accordingly
-#date-modified: YYYY-MM-DD
+date-modified: 2025-09-19
 
 # Do not modify
 lang: en
@@ -40,9 +40,10 @@ author_1: Ashley Cryan
 
 # Meaningful keywords, newline separated [manual entry]
 # Uncomment and populate the next line and list accordingly
-#categories: 
-# - 
-# - 
+categories: 
+ - Infrastructure
+ - Servers
+ - VPS
 
 ---
 

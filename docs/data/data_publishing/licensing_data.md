@@ -7,7 +7,7 @@ date: 2025-05-05
 
 # We use this key to indicate the last modified date [manual entry, use YYYY-MM-DD]
 # Uncomment and populate the next line accordingly
-date-modified: 2025-07-11
+date-modified: 2025-09-19
 
 # Do not modify
 lang: en
@@ -41,8 +41,8 @@ corresponding: Elviss Dvinskis
 # Meaningful keywords, newline separated [manual entry]
 # Uncomment and populate the next line and list accordingly
 categories: 
- - licenses
-
+ - Data
+ - Licenses
 ---
 
 When depositing data, selecting an appropriate license cannot be overlooked, as it defines the permissions and restrictions for others using your data. Clear labelling of licensing terms ensures that data can be shared and reused legally and ethically. 

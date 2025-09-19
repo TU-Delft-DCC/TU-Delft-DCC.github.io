@@ -7,7 +7,7 @@ date: 2025-02-14
 
 # We use this key to indicate the last modified date [manual entry, use YYYY-MM-DD]
 # Uncomment and populate the next line accordingly
-date-modified: 2025-08-25
+date-modified: 2025-09-19
 
 # Do not modify
 lang: en
@@ -41,15 +41,16 @@ corresponding: Elviss Dvinskis
 
 # Meaningful keywords, newline separated [manual entry]
 # Uncomment and populate the next line and list accordingly
-categories: 
- - python
- - environments
- - dependencies
- - conda
- - venv
- - virtualenv
- - pyproject.toml
- - uv
+categories:
+  - Software
+  - Environments
+  - Dependencies
+  - Python
+  - conda
+  - venv
+  - virtualenv
+  - pyproject.toml
+  - uv
 
 ---
 When working with Python, managing dependencies and environments is important to ensure your project can be reproduced and shared. 

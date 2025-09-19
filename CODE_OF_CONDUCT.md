@@ -1,9 +1,3 @@
----
-format:
-    html:
-        page-layout: full
----
-
 # Code of Conduct
 
 ## Our Pledge

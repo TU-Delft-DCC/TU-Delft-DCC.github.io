@@ -6,7 +6,7 @@
 date: 2025-09-03
 
 # We use this key to indicate the last modified date [manual entry, use YYYY-MM-DD]
-date-modified: 2025-09-03
+date-modified: 2025-09-19
 
 # Do not modify
 lang: en
@@ -39,12 +39,15 @@ maintainer_1: Manuel Garcia
 
 # Meaningful keywords, newline separated [manual entry]
 # Uncomment and populate the next line and list accordingly
+
 categories: 
-- ssh tunneling
-- ssh keys
-- bastion host
-- vps 
-- scp
+ - Infrastructure
+ - Servers
+ - VPS
+ - SSH Tunneling
+ - SSH Keys
+ - Bastion Host
+ - scp
 
 ---
 
