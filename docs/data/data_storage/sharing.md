@@ -6,7 +6,7 @@
 date: 2025-07-01
 
 # We use this key to indicate the last modified date [manual entry]
-date-modified: 2025-07-09
+date-modified: 2025-09-19
 
 # Do not modify
 lang: en
@@ -40,9 +40,9 @@ corresponding: Raul Ortiz Merino
 # Meaningful keywords, newline separated [manual entry]
 # Uncomment and populate the next line and list accordingly
 categories: 
- - data
- - sharing
-
+ - Data
+ - Storage
+ - Data Sharing
 ---
 
 This section covers aspects of data sharing, for *ongoing work*, throughout the *active* phase of a research project. The use of data repositories, the importance of data licenses, and the significance of metadata in sharing *completed work* are discussed in the section on [Archiving and publishing data](../data_publishing/archival_publishing_index.md).

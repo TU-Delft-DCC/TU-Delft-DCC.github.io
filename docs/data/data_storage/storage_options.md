@@ -7,7 +7,7 @@ date: 2025-08-26
 
 # We use this key to indicate the last modified date [manual entry, use YYYY-MM-DD]
 # Uncomment and populate the next line accordingly
-date-modified: 2025-08-26
+date-modified: 2025-09-19
 
 # Do not modify
 lang: en
@@ -41,8 +41,9 @@ corresponding: Raul Ortiz Merino
 # Meaningful keywords, newline separated [manual entry]
 # Uncomment and populate the next line and list accordingly
 categories: 
- - data
- - storage
+ - Data
+ - Storage
+ - Project Data Storage
 
 ---
 
