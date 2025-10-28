@@ -51,3 +51,5 @@ This section guides through the essential systems and services needed to manage 
 Computing infrastructure includes the servers and tools that enable you to handle data processing tasks, host research applications, and maintain secure access to resources. TU Delft provides managed infrastructure options, and the guides in this section address practical aspects of working with TU Delft infrastructure. Topics covered include requesting and accessing virtual private servers, establishing secure connections, transferring data to remote systems, configuring secure communications and web servers.
 
 You can use these resources to set up computing environments suited to your project requirements. This includes running computational analyses, hosting databases, and deploying research software and applications with secure, managed infrastructure backing your work.
+
+Most of these resources are private to the TU Delft network. However, you can also find a few details on how to enable external access when required, for example, in the case of a web server.
