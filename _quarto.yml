@@ -227,8 +227,8 @@ website:
                   href: docs/software/automation/gitlab/gitlab_docker.md
                 - text: Setting up a GitLab runner for MATLAB
                   href: docs/software/automation/gitlab/runner_matlab.md
-            - text: Tooling
-              href: docs/software/tools/tools.md
+#            - text: Tooling
+#              href: docs/software/tools/tools.md
 #        - text: <br>
 #        - section: <span style="filter:grayscale(100%);">📖</span> **Resources**
 #          contents:
