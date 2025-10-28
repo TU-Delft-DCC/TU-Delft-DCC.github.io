@@ -593,7 +593,7 @@
     "href": "docs/software/development_workflow/index.html",
     "title": "Development workflow",
     "section": "",
-    "text": "Version control and collaboration\nVersion control ensures transparency, reproducibility, and smooth teamwork. Clear branching strategies and consistent workflows make it easier to track changes, review code, and integrate contributions.\n\n\n\n\n Project Management\nManaging your projects through version control platforms.\n\nLearn more »\n\n\n\n Branch Management\nChoosing a branching strategy.\n\nLearn more »\n\n\n\n Collaboration\nCollaborative workflow.\n\nLearn more »\n\n\n\n\n\nProject organization\nA structured repository with defined folders, managed dependencies, and reusable components keeps you rproject consistent, scalable, and easier for others to understand and extend.\n\n\n\n\n Project Structure\nStructuring your project.\n\nLearn more »\n\n\n\n Project Templates and Reusability\nReusing projects and repositories.\n\nLearn more »\n\n\n\n Environments and Dependencies\nManaging your environments and dependencies.\n\nLearn more »\n\n\n\n Workflow Management\nTools for writing and managing workflows.\n\nLearn more »\n\n\n\n Software Design\nPrinciples for designing your software.\n\nLearn more »",
+    "text": "Version control and collaboration\nVersion control ensures transparency, reproducibility, and smooth teamwork. Clear branching strategies and consistent workflows make it easier to track changes, review code, and integrate contributions.\n\n\n\n\n Project Management\nManaging your projects through version control platforms.\n\nLearn more »\n\n\n\n Branch Management\nChoosing a branching strategy.\n\nLearn more »\n\n\n\n Collaboration\nCollaborative workflow.\n\nLearn more »\n\n\n\n\n\nProject organization\nA structured repository with defined folders, managed dependencies, and reusable components keeps your project consistent, scalable, and easier for others to understand and extend.\n\n\n\n\n Project Structure\nStructuring your project.\n\nLearn more »\n\n\n\n Project Templates and Reusability\nReusing projects and repositories.\n\nLearn more »\n\n\n\n Environments and Dependencies\nManaging your environments and dependencies.\n\nLearn more »\n\n\n\n Workflow Management\nTools for writing and managing workflows.\n\nLearn more »\n\n\n\n Software Design\nPrinciples for designing your software.\n\nLearn more »",
     "crumbs": [
       "<ins>Guides</ins>",
       "![](/docs/img/laptop-code-solid.svg){height=1em style='filter: invert(0.5) sepia(1) saturate(5) hue-rotate(175deg)'} **Research Software**",
@@ -1238,9 +1238,9 @@
   {
     "objectID": "docs/infrastructure/getting_started.html",
     "href": "docs/infrastructure/getting_started.html",
-    "title": "Overview",
+    "title": "Getting started",
     "section": "",
-    "text": "Under construction! 🏗️",
+    "text": "This section guides you through the essential systems and services needed to manage computational resources and collaborate effectively within TU Delft supported environments.\nComputing infrastructure includes the servers and tools that enable you to handle data processing tasks, host research applications, and maintain secure access to resources. TU Delft provides managed infrastructure options, and the guides in this section address practical aspects of working with TU Delft infrastructure. Topics covered include requesting and accessing virtual private servers, establishing secure connections, transferring data to remote systems, configuring secure communications and web servers.\nYou can use these resources to set up computing environments suited to your project requirements. This includes running computational analyses, hosting databases, and deploying research software and applications with secure, managed infrastructure backing your work.\nMost of these resources are private to the TU Delft network. However, you can also find a few details on how to enable external access when required, for example, in the case of a web server.",
     "crumbs": [
       "<ins>Guides</ins>",
       "![](/docs/img/gear.svg){height=1em style='filter: invert(0.5) sepia(1) saturate(5) hue-rotate(175deg)'} **Computing Infrastructure**",
@@ -2708,7 +2708,7 @@
     "href": "docs/software/development_workflow/project_management.html#github-benefits-for-researchers-and-organisations",
     "title": "Project management",
     "section": "GitHub benefits for researchers and organisations",
-    "text": "GitHub benefits for researchers and organisations\nResearchers at TU Delft are eligible to receive GitHub Educational benefits, which includes\n\nGitHub Team plan at no cost (check out the benefits)\nGitHub codespaces\nGitHub pages for private repositories\nAnd more!\n\nTo qualify for the benefits, you must:\n\nHave a GitHub account\nBe an educator, faculty member, or researcher at a recognized educational institution\nBe able to provide documentation from your institute demonstrating your employment\n\n\n\n\n\n\n\n Apply for Educational benefits",
+    "text": "GitHub benefits for researchers and organisations\nResearchers at TU Delft are eligible to receive GitHub Educational benefits, which includes\n\nGitHub Team plan at no cost (check out the benefits)\nGitHub Codespaces\nGitHub Pages for private repositories\nAnd more!\n\nTo qualify for the benefits, you must:\n\nHave a GitHub account\nBe an educator, faculty member, or researcher at a recognized educational institution\nBe able to provide documentation from your institute demonstrating your employment\n\n\n\n\n\n\n\n Apply for Educational benefits",
     "crumbs": [
       "<ins>Guides</ins>",
       "![](/docs/img/laptop-code-solid.svg){height=1em style='filter: invert(0.5) sepia(1) saturate(5) hue-rotate(175deg)'} **Research Software**",

@@ -162,8 +162,8 @@ To create a roadmap, it is useful to map out the key milestones and the tasks ne
 Researchers at TU Delft are eligible to receive [GitHub Educational benefits](https://github.com/education), which includes
 
 - GitHub Team plan at no cost (check out [the benefits](https://github.com/pricing))
-- GitHub codespaces
-- GitHub pages for private repositories
+- GitHub Codespaces
+- GitHub Pages for private repositories
 - And more!
 
 To qualify for the benefits, you must:
