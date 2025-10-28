@@ -85,7 +85,7 @@ Collaborative workflow.
 :::
 
 ### Project organization
-A structured repository with defined folders, managed dependencies, and reusable components keeps you rproject consistent, scalable, and easier for others to understand and extend.
+A structured repository with defined folders, managed dependencies, and reusable components keeps your project consistent, scalable, and easier for others to understand and extend.
 
 ::: {.content-block}
 ::: {.features}
