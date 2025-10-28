@@ -223,12 +223,17 @@ website:
             - section: "Automation"
               href: docs/software/automation/ci_cd.md
               contents:
-                - text: Continuous Integration with GitLab
-                  href: docs/software/automation/gitlab/gitlab_docker.md
-                - text: Setting up a GitLab runner for MATLAB
-                  href: docs/software/automation/gitlab/runner_matlab.md
-            - text: Tooling
-              href: docs/software/tools/tools.md
+                - text: GitHub Actions
+                  href: docs/software/automation/github_ci_cd.md
+                - text: GitLab pipelines
+                  href: docs/software/automation/gitlab_ci_cd.md
+                  contents:
+                    - text: Continuous Integration with GitLab
+                      href: docs/software/automation/gitlab/gitlab_docker.md
+                    - text: Setting up a GitLab runner for MATLAB
+                      href: docs/software/automation/gitlab/runner_matlab.md
+#            - text: Tooling
+#              href: docs/software/tools/tools.md
 #        - text: <br>
 #        - section: <span style="filter:grayscale(100%);">📖</span> **Resources**
 #          contents:
