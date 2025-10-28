@@ -6,10 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="dcterms.date" content="2025-01-31">
-<meta name="description" content="Overview of common code smells and how to address them">
+<meta name="dcterms.date" content="2025-08-22">
 
-<title>Code smells</title>
+<title>GitHub Actions</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -22,6 +21,41 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -32,8 +66,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="../../../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../../../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../../../">
-<link href="../../../docs/software/code_quality/code_smells/long_method.html" rel="next">
-<link href="../../../docs/software/code_quality/refactoring.html" rel="prev">
+<link href="../../../docs/software/automation/gitlab_ci_cd.html" rel="next">
+<link href="../../../docs/software/automation/ci_cd.html" rel="prev">
 <link href="../../../docs/img/cone.png" rel="icon" type="image/png">
 <script src="../../../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
@@ -84,7 +118,6 @@ ul.task-list li input[type="checkbox"] {
 
 
 <link rel="stylesheet" href="../../../themes/custom.css">
-<link rel="stylesheet" href="styles.css">
 </head>
 
 <body class="nav-sidebar docked nav-fixed quarto-light"><script id="quarto-html-before-body" type="application/javascript">
@@ -307,7 +340,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../../docs/software/getting_started.html"><img src="../../../docs/img/laptop-code-solid.svg" style="filter: invert(0.5) sepia(1) saturate(5) hue-rotate(175deg);height:1em"> <strong>Research Software</strong></a></li><li class="breadcrumb-item"><a href="../../../docs/software/code_quality/index.html">Code quality</a></li><li class="breadcrumb-item"><a href="../../../docs/software/code_quality/code_smells.html">Code smells</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../../docs/software/getting_started.html"><img src="../../../docs/img/laptop-code-solid.svg" style="filter: invert(0.5) sepia(1) saturate(5) hue-rotate(175deg);height:1em"> <strong>Research Software</strong></a></li><li class="breadcrumb-item"><a href="../../../docs/software/automation/ci_cd.html">Automation</a></li><li class="breadcrumb-item"><a href="../../../docs/software/automation/github_ci_cd.html">GitHub Actions</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -547,11 +580,11 @@ ul.task-list li input[type="checkbox"] {
       <div class="sidebar-item-container"> 
             <a href="../../../docs/software/code_quality/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Code quality</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth2 show">  
+      <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../../docs/software/code_quality/code_style.html" class="sidebar-item-text sidebar-link">
@@ -566,13 +599,13 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="../../../docs/software/code_quality/code_smells.html" class="sidebar-item-text sidebar-link active">
+            <a href="../../../docs/software/code_quality/code_smells.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Code smells</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-7" class="collapse list-unstyled sidebar-section depth3 show">  
+      <ul id="quarto-sidebar-section-7" class="collapse list-unstyled sidebar-section depth3 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../../docs/software/code_quality/code_smells/long_method.html" class="sidebar-item-text sidebar-link">
@@ -751,14 +784,14 @@ ul.task-list li input[type="checkbox"] {
       <div class="sidebar-item-container"> 
             <a href="../../../docs/software/automation/ci_cd.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Automation</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-10" role="navigation" aria-expanded="false" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-10" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-10" class="collapse list-unstyled sidebar-section depth2 ">  
+      <ul id="quarto-sidebar-section-10" class="collapse list-unstyled sidebar-section depth2 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../docs/software/automation/github_ci_cd.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../docs/software/automation/github_ci_cd.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">GitHub Actions</span></a>
   </div>
 </li>
@@ -1019,19 +1052,31 @@ ul.task-list li input[type="checkbox"] {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#automating-testing" id="toc-automating-testing" class="nav-link active" data-scroll-target="#automating-testing">Automating testing</a></li>
+  <li><a href="#automating-documentation-generation" id="toc-automating-documentation-generation" class="nav-link" data-scroll-target="#automating-documentation-generation">Automating documentation generation</a></li>
+  <li><a href="#workflows-for-building-python-packages" id="toc-workflows-for-building-python-packages" class="nav-link" data-scroll-target="#workflows-for-building-python-packages">Workflows for building Python packages</a></li>
+  <li><a href="#additional-concepts" id="toc-additional-concepts" class="nav-link" data-scroll-target="#additional-concepts">Additional concepts</a></li>
+  <li><a href="#sonar" id="toc-sonar" class="nav-link" data-scroll-target="#sonar">Sonar</a></li>
+  </ul>
+<div class="toc-actions"><ul><li><a href="https://github.com/TU-Delft-DCC/TU-Delft-DCC.github.io/issues/new/choose" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../../docs/software/getting_started.html"><img src="../../../docs/img/laptop-code-solid.svg" style="filter: invert(0.5) sepia(1) saturate(5) hue-rotate(175deg);height:1em"> <strong>Research Software</strong></a></li><li class="breadcrumb-item"><a href="../../../docs/software/code_quality/index.html">Code quality</a></li><li class="breadcrumb-item"><a href="../../../docs/software/code_quality/code_smells.html">Code smells</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../../docs/software/getting_started.html"><img src="../../../docs/img/laptop-code-solid.svg" style="filter: invert(0.5) sepia(1) saturate(5) hue-rotate(175deg);height:1em"> <strong>Research Software</strong></a></li><li class="breadcrumb-item"><a href="../../../docs/software/automation/ci_cd.html">Automation</a></li><li class="breadcrumb-item"><a href="../../../docs/software/automation/github_ci_cd.html">GitHub Actions</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">Code smells</h1>
+<h1 class="title">GitHub Actions</h1>
   <div class="quarto-categories">
     <div class="quarto-category">Software</div>
-    <div class="quarto-category">Refactoring</div>
+    <div class="quarto-category">Automation</div>
+    <div class="quarto-category">GitHub</div>
+    <div class="quarto-category">CI/CD</div>
   </div>
   </div>
 
@@ -1043,14 +1088,14 @@ ul.task-list li input[type="checkbox"] {
     <div>
     <div class="quarto-title-meta-heading">Last reviewed</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">January 31, 2025</p>
+      <p class="date">August 22, 2025</p>
     </div>
   </div>
   
     <div>
     <div class="quarto-title-meta-heading">Last modified</div>
     <div class="quarto-title-meta-contents">
-      <p class="date-modified">September 19, 2025</p>
+      <p class="date-modified">October 28, 2025</p>
     </div>
   </div>
     
@@ -1060,110 +1105,390 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-
-<script async="" defer="" src="https://scripts.simpleanalyticscdn.com/latest.js"></script><div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="../../../docs/img/bad_code_design.PNG" class="img-fluid figure-img" alt="Drawing of a pyramid with various traps resembling code smells." width="600"></p>
-<figcaption>CC-BY-4.0 © 2021 Balaban et al.</figcaption>
-</figure>
-</div>
-<p>Code smells are software characteristics that suggest there might be an issue with the code’s design or implementation. While code smells themselves might not always indicate a bug or malfunction, they can make the code harder to understand and extend, which can lead to bugs and other issues down the line. Code smells are usually noticed and addressed during code reviews, when writing tests, adding new features, fixing bugs, and during automated code analysis.</p>
+<script async="" defer="" src="https://scripts.simpleanalyticscdn.com/latest.js"></script>
+<p><a href="https://docs.github.com/en/actions">GitHub Actions</a> is a CI/CD platform that automates building, testing, and deploying code. You can set up workflows that build and test every pull request in your repository, and optionally deploy changes after those pull requests are merged, triggered automatically based on your chosen rules.</p>
 <div class="callout callout-style-simple callout-tip no-icon callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Tip</span><i class="fa-solid fa-lightbulb" aria-label="lightbulb"></i> How to use these cards?
+<span class="screen-reader-only">Tip</span><i class="fa-solid fa-lightbulb" aria-label="lightbulb"></i> Exploring GitHub Actions
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Each guide provides an overview of a code smell, its symptoms and an example on <a href="../../../docs/software/code_quality/refactoring.html">how to refactor it</a>. We don’t intend to cover all refactoring techniques, but we aim to provide a starting point for identifying and addressing common code smells.</p>
+<p><a href="https://docs.github.com/en/actions/quickstart">Setting up a demo workflow in GitHub Actions.</a></p>
 </div>
 </div>
-<div class="grid">
-<div class="g-col-4">
-<section id="long-method" class="level5 code-smell-card">
-<h5 class="anchored" data-anchor-id="long-method">Long Method</h5>
-<p><strong>Problem:</strong> A function is very long and hard to understand.</p>
-<div class="refactor-link">
-<p><a href="../../../docs/software/code_quality/code_smells/long_method.html"><i class="fa-solid fa-wrench" aria-label="wrench"></i> Refactor long methods</a></p>
+<div class="callout callout-style-simple callout-tip no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span><i class="fa-solid fa-lightbulb" aria-label="lightbulb"></i> Tips
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul>
+<li>GitHub has templates available. Go to the <strong>Actions tab</strong> in your repository and select <strong>new workflow</strong> for an overview.</li>
+<li>You can find <a href="https://github.com/sdras/awesome-actions"><strong>workflow examples</strong></a> shared in the community.</li>
+<li>Add <strong><code>workflow_dispatch</code></strong> as a trigger for your GitHub Actions workflow. With this trigger, you can <a href="https://docs.github.com/en/actions/managing-workflow-runs/manually-running-a-workflow"><strong>manually run an action</strong></a>, instead of having to rely on external triggers. This is quite useful when testing your workflow.</li>
+<li>Test your workflow in a separate branch to avoid committing many small changes during debugging of the workflow.</li>
+</ul>
+</div>
+</div>
+<section id="automating-testing" class="level3">
+<h3 class="anchored" data-anchor-id="automating-testing">Automating testing</h3>
+<p>A common usecase of automation is to trigger automatic testing when pushing changes and creating pull requests.</p>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true" href="">Python</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false" href="">MATLAB</a></li></ul>
+<div class="tab-content">
+<div id="tabset-1-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-1-1-tab">
+<p>The example below is taken from the CodeRefinery lesson on <a href="https://coderefinery.github.io/testing/continuous-integration/">Continuous Integration</a>.</p>
+<div class="callout callout-style-simple callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span><i class="fa-solid fa-circle-check" aria-label="circle-check"></i> Python testing
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-3" class="callout-3-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">name</span><span class="kw">:</span><span class="at"> Python package testing</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">on</span><span class="kw">:</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">push</span><span class="kw">:</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">branches</span><span class="kw">:</span><span class="at"> </span><span class="kw">[</span><span class="at"> </span><span class="st">"main"</span><span class="kw">,</span><span class="at"> </span><span class="st">"develop"</span><span class="at"> </span><span class="kw">]</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">pull_request</span><span class="kw">:</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">branches</span><span class="kw">:</span><span class="at"> </span><span class="kw">[</span><span class="at"> </span><span class="st">"main"</span><span class="kw">,</span><span class="at"> </span><span class="st">"develop"</span><span class="at"> </span><span class="kw">]</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">workflow_dispatch</span><span class="kw">:</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="at">  </span></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="fu">jobs</span><span class="kw">:</span></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">test</span><span class="kw">:</span></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">permissions</span><span class="kw">:</span></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="fu">contents</span><span class="kw">:</span><span class="at"> read</span></span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="fu">pull-requests</span><span class="kw">:</span><span class="at"> write</span></span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">runs-on</span><span class="kw">:</span><span class="at"> ubuntu-latest</span></span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">steps</span><span class="kw">:</span></span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="kw">-</span><span class="at"> </span><span class="fu">uses</span><span class="kw">:</span><span class="at"> actions/checkout@v4</span></span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="kw">-</span><span class="at"> </span><span class="fu">name</span><span class="kw">:</span><span class="at"> Set up Python 3.10</span></span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="fu">uses</span><span class="kw">:</span><span class="at"> actions/setup-python@v5</span></span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="fu">with</span><span class="kw">:</span></span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a><span class="at">        </span><span class="fu">python-version</span><span class="kw">:</span><span class="at"> </span><span class="st">"3.10"</span></span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="kw">-</span><span class="at"> </span><span class="fu">name</span><span class="kw">:</span><span class="at"> Install dependencies</span></span>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a><span class="fu">      run</span><span class="kw">: </span><span class="ch">|</span></span>
+<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a>        python -m pip install --upgrade pip</span>
+<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a>        python -m pip install flake8 pytest pytest-cov</span>
+<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a>        if [ -f requirements.txt ]; then pip install -r requirements.txt; fi</span>
+<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="kw">-</span><span class="at"> </span><span class="fu">name</span><span class="kw">:</span><span class="at"> Lint with flake8</span></span>
+<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a><span class="fu">      run</span><span class="kw">: </span><span class="ch">|</span></span>
+<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a>        # stop the job if there are Python syntax errors or undefined names</span>
+<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a>        flake8 . --count --select=E9,F63,F7,F82 --show-source --statistics</span>
+<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a>        # exit-zero treats all errors as warnings. The GitHub editor is 127 chars wide</span>
+<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a>        flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics</span>
+<span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="kw">-</span><span class="at"> </span><span class="fu">name</span><span class="kw">:</span><span class="at"> Test with pytest and calculate coverage</span></span>
+<span id="cb1-36"><a href="#cb1-36" aria-hidden="true" tabindex="-1"></a><span class="fu">      run</span><span class="kw">: </span><span class="ch">|</span></span>
+<span id="cb1-37"><a href="#cb1-37" aria-hidden="true" tabindex="-1"></a>        pytest --cov-report "xml:coverage.xml"  --cov=.</span>
+<span id="cb1-38"><a href="#cb1-38" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="kw">-</span><span class="at"> </span><span class="fu">name</span><span class="kw">:</span><span class="at"> Create Coverage </span></span>
+<span id="cb1-39"><a href="#cb1-39" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="fu">if</span><span class="kw">:</span><span class="at"> ${{ github.event_name == 'pull_request' }}</span></span>
+<span id="cb1-40"><a href="#cb1-40" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="fu">uses</span><span class="kw">:</span><span class="at"> orgoro/coverage@v3.1</span></span>
+<span id="cb1-41"><a href="#cb1-41" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="fu">with</span><span class="kw">:</span></span>
+<span id="cb1-42"><a href="#cb1-42" aria-hidden="true" tabindex="-1"></a><span class="at">          </span><span class="fu">coverageFile</span><span class="kw">:</span><span class="at"> coverage.xml</span></span>
+<span id="cb1-43"><a href="#cb1-43" aria-hidden="true" tabindex="-1"></a><span class="at">          </span><span class="fu">token</span><span class="kw">:</span><span class="at"> ${{ secrets.GITHUB_TOKEN }}</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+</div>
+</div>
+</div>
+<div id="tabset-1-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-2-tab">
+<p>MATLAB has multiple <a href="https://github.com/matlab-actions">pre-defined GitHub Actions available</a> to use in your workflows.</p>
+<div class="callout callout-style-simple callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-4-contents" aria-controls="callout-4" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span><i class="fa-solid fa-circle-check" aria-label="circle-check"></i> MATLAB testing
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-4" class="callout-4-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">name</span><span class="kw">:</span><span class="at"> Generate Test and Coverage Artifacts</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="fu">on</span><span class="kw">:</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">push</span><span class="kw">:</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">branches</span><span class="kw">:</span><span class="at"> </span><span class="kw">[</span><span class="at"> </span><span class="st">"main"</span><span class="kw">,</span><span class="at"> </span><span class="st">"develop"</span><span class="at"> </span><span class="kw">]</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">pull_request</span><span class="kw">:</span></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">branches</span><span class="kw">:</span><span class="at"> </span><span class="kw">[</span><span class="at"> </span><span class="st">"main"</span><span class="kw">,</span><span class="at"> </span><span class="st">"develop"</span><span class="at"> </span><span class="kw">]</span></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">workflow_dispatch</span><span class="kw">:</span></span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a><span class="at"> </span></span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a><span class="fu">jobs</span><span class="kw">:</span></span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">test</span><span class="kw">:</span></span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">name</span><span class="kw">:</span><span class="at"> Run MATLAB Tests</span></span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">runs-on</span><span class="kw">:</span><span class="at"> ubuntu-latest</span></span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">steps</span><span class="kw">:</span></span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="kw">-</span><span class="at"> </span><span class="fu">name</span><span class="kw">:</span><span class="at"> Check out repository</span></span>
+<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a><span class="at">        </span><span class="fu">uses</span><span class="kw">:</span><span class="at"> actions/checkout@v4</span></span>
+<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="kw">-</span><span class="at"> </span><span class="fu">name</span><span class="kw">:</span><span class="at"> Set up MATLAB</span></span>
+<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a><span class="at">        </span><span class="fu">uses</span><span class="kw">:</span><span class="at"> matlab-actions/setup-matlab@v2</span></span>
+<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a><span class="at">        </span><span class="fu">with</span><span class="kw">:</span></span>
+<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a><span class="at">          </span><span class="fu">release</span><span class="kw">:</span><span class="at"> R2024a</span></span>
+<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="kw">-</span><span class="at"> </span><span class="fu">name</span><span class="kw">:</span><span class="at"> Run tests</span></span>
+<span id="cb2-21"><a href="#cb2-21" aria-hidden="true" tabindex="-1"></a><span class="at">        </span><span class="fu">uses</span><span class="kw">:</span><span class="at"> matlab-actions/run-tests@v2</span></span>
+<span id="cb2-22"><a href="#cb2-22" aria-hidden="true" tabindex="-1"></a><span class="at">        </span><span class="fu">with</span><span class="kw">:</span></span>
+<span id="cb2-23"><a href="#cb2-23" aria-hidden="true" tabindex="-1"></a><span class="at">          </span><span class="fu">source-folder</span><span class="kw">:</span><span class="at"> src</span></span>
+<span id="cb2-24"><a href="#cb2-24" aria-hidden="true" tabindex="-1"></a><span class="at">          </span><span class="fu">test-results-junit</span><span class="kw">:</span><span class="at"> test-results/results.xml</span></span>
+<span id="cb2-25"><a href="#cb2-25" aria-hidden="true" tabindex="-1"></a><span class="at">          </span><span class="fu">code-coverage-cobertura</span><span class="kw">:</span><span class="at"> code-coverage/coverage.xml</span></span>
+<span id="cb2-26"><a href="#cb2-26" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="kw">-</span><span class="at"> </span><span class="fu">name</span><span class="kw">:</span><span class="at"> Upload coverage reports to Codecov</span></span>
+<span id="cb2-27"><a href="#cb2-27" aria-hidden="true" tabindex="-1"></a><span class="at">        </span><span class="fu">uses</span><span class="kw">:</span><span class="at"> codecov/codecov-action@v4</span></span>
+<span id="cb2-28"><a href="#cb2-28" aria-hidden="true" tabindex="-1"></a><span class="at">        </span><span class="fu">with</span><span class="kw">:</span></span>
+<span id="cb2-29"><a href="#cb2-29" aria-hidden="true" tabindex="-1"></a><span class="at">          </span><span class="fu">file</span><span class="kw">:</span><span class="at"> code-coverage/coverage.xml</span></span>
+<span id="cb2-30"><a href="#cb2-30" aria-hidden="true" tabindex="-1"></a><span class="at">          </span><span class="fu">token</span><span class="kw">:</span><span class="at"> ${{ secrets.CODECOV_TOKEN }}</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+</div>
+</div>
+<p>This workflow uses Codecov to analyse the coverage report (free service for public repositories).</p>
+<p>⮕ Learn more about <a href="https://about.codecov.io/">Codecov</a></p>
+</div>
+</div>
 </div>
 </section>
+<section id="automating-documentation-generation" class="level3">
+<h3 class="anchored" data-anchor-id="automating-documentation-generation">Automating documentation generation</h3>
+<p><a href="https://docs.github.com/en/pages/getting-started-with-github-pages/about-github-pages">GitHub Pages</a> is a static site hosting service that takes HTML, CSS, and JavaScript files straight from a repository on GitHub, optionally runs the files through a build process, and publishes a website.</p>
+<p>In order to deploy the documentation generated by the workflow below, you need to navigate to <strong>Settings -&gt; Pages</strong> in your repository and set:</p>
+<ol type="1">
+<li>Source: “Deploy from a branch”</li>
+<li>Branch: <code>gh-pages</code> from <code>root</code></li>
+</ol>
+<p>It is a best practice to only deploy new documentation to the <code>gh-pages</code> branch upon a Pull Request to the <code>main</code> branch. This avoids mismatches between the available source code and the documentation.</p>
+<div class="callout callout-style-simple callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-5-contents" aria-controls="callout-5" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
 </div>
-<div class="g-col-4">
-<section id="large-classes" class="level5 code-smell-card">
-<h5 class="anchored" data-anchor-id="large-classes">Large Classes</h5>
-<p><strong>Problem:</strong> A class contains too many responsibilities or functionalities.</p>
-<div class="refactor-link">
-<p><a href="../../../docs/software/code_quality/code_smells/large_class.html"><i class="fa-solid fa-wrench" aria-label="wrench"></i> Refactor large classes</a></p>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span><i class="fa-solid fa-file-code" aria-label="file-code"></i> Sphinx building with <code>gh-pages</code> from branch
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-5" class="callout-5-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">name</span><span class="kw">:</span><span class="at"> Sphinx documentation</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="fu">on</span><span class="kw">:</span><span class="at"> </span><span class="kw">[</span><span class="at">push</span><span class="kw">,</span><span class="at"> pull_request</span><span class="kw">,</span><span class="at"> workflow_dispatch</span><span class="kw">]</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="fu">permissions</span><span class="kw">:</span></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">contents</span><span class="kw">:</span><span class="at"> write</span></span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a><span class="fu">jobs</span><span class="kw">:</span></span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">docs</span><span class="kw">:</span></span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">runs-on</span><span class="kw">:</span><span class="at"> ubuntu-latest</span></span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">steps</span><span class="kw">:</span></span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="kw">-</span><span class="at"> </span><span class="fu">uses</span><span class="kw">:</span><span class="at"> actions/checkout@v4</span></span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="kw">-</span><span class="at"> </span><span class="fu">uses</span><span class="kw">:</span><span class="at"> actions/setup-python@v5</span></span>
+<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a><span class="at">        </span><span class="fu">with</span><span class="kw">:</span></span>
+<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a><span class="at">          </span><span class="fu">python-version</span><span class="kw">:</span><span class="at"> </span><span class="st">'3.12'</span></span>
+<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="kw">-</span><span class="at"> </span><span class="fu">name</span><span class="kw">:</span><span class="at"> Install dependencies</span></span>
+<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a><span class="fu">        run</span><span class="kw">: </span><span class="ch">|</span></span>
+<span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a>          pip install -r docs/requirements.txt</span>
+<span id="cb3-19"><a href="#cb3-19" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="kw">-</span><span class="at"> </span><span class="fu">name</span><span class="kw">:</span><span class="at"> Sphinx build</span></span>
+<span id="cb3-20"><a href="#cb3-20" aria-hidden="true" tabindex="-1"></a><span class="fu">        run</span><span class="kw">: </span><span class="ch">|</span></span>
+<span id="cb3-21"><a href="#cb3-21" aria-hidden="true" tabindex="-1"></a>          sphinx-build docs/ docs/_build/</span>
+<span id="cb3-22"><a href="#cb3-22" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="kw">-</span><span class="at"> </span><span class="fu">name</span><span class="kw">:</span><span class="at"> Deploy to GitHub Pages</span></span>
+<span id="cb3-23"><a href="#cb3-23" aria-hidden="true" tabindex="-1"></a><span class="at">        </span><span class="fu">uses</span><span class="kw">:</span><span class="at"> peaceiris/actions-gh-pages@v4</span></span>
+<span id="cb3-24"><a href="#cb3-24" aria-hidden="true" tabindex="-1"></a><span class="at">        </span><span class="fu">if</span><span class="kw">:</span><span class="at"> ${{ github.event_name == 'push' &amp;&amp; github.ref == 'refs/heads/main' }}</span></span>
+<span id="cb3-25"><a href="#cb3-25" aria-hidden="true" tabindex="-1"></a><span class="at">        </span><span class="fu">with</span><span class="kw">:</span></span>
+<span id="cb3-26"><a href="#cb3-26" aria-hidden="true" tabindex="-1"></a><span class="at">          </span><span class="fu">publish_branch</span><span class="kw">:</span><span class="at"> gh-pages</span></span>
+<span id="cb3-27"><a href="#cb3-27" aria-hidden="true" tabindex="-1"></a><span class="at">          </span><span class="fu">github_token</span><span class="kw">:</span><span class="at"> ${{ secrets.GITHUB_TOKEN }}</span></span>
+<span id="cb3-28"><a href="#cb3-28" aria-hidden="true" tabindex="-1"></a><span class="at">          </span><span class="fu">publish_dir</span><span class="kw">:</span><span class="at"> docs/_build/</span></span>
+<span id="cb3-29"><a href="#cb3-29" aria-hidden="true" tabindex="-1"></a><span class="at">          </span><span class="fu">force_orphan</span><span class="kw">:</span><span class="at"> </span><span class="ch">true</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+</div>
+</div>
+<div class="callout callout-style-simple callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span><i class="fa-solid fa-circle-check" aria-label="circle-check"></i> Customizing the workflow
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>This example assumes you have a separate <code>requirements.txt</code> in the <code>/docs</code> folder. Update the location of the <code>requirements.txt</code> if you store the Sphinx dependencies in the root.</p>
+</div>
+</div>
+<div class="callout callout-style-simple callout-warning no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Warning</span><i class="fa-solid fa-triangle-exclamation" aria-label="triangle-exclamation"></i> Warning
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul>
+<li>With the GitHub Free plan, Pages cannot be deployed from a private repository.</li>
+<li>GitHub Pages sites are publicly available on the internet, even if the repository for the site is private.</li>
+</ul>
+</div>
 </div>
 </section>
+<section id="workflows-for-building-python-packages" class="level3">
+<h3 class="anchored" data-anchor-id="workflows-for-building-python-packages">Workflows for building Python packages</h3>
+<p>You can automate publishing a new version of your Python package with a GitHub Action. Notice that in the workflow below, the trigger is the creation of a new release on GitHub.</p>
+<div class="callout callout-style-simple callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-8-contents" aria-controls="callout-8" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
 </div>
-<div class="g-col-4">
-<section id="code-duplication" class="level5 code-smell-card">
-<h5 class="anchored" data-anchor-id="code-duplication">Code Duplication</h5>
-<p><strong>Problem:</strong> The same or very similar code appears in multiple places.</p>
-<div class="refactor-link">
-<p><a href="../../../docs/software/code_quality/code_smells/duplication.html"><i class="fa-solid fa-wrench" aria-label="wrench"></i> Refactor duplicate code</a></p>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span><i class="fa-solid fa-info-circle" aria-label="info-circle"></i> Building a Python package
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-8" class="callout-8-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">name</span><span class="kw">:</span><span class="at"> Upload Python Package</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="fu">on</span><span class="kw">:</span></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">release</span><span class="kw">:</span></span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">types</span><span class="kw">:</span><span class="at"> </span><span class="kw">[</span><span class="at">published</span><span class="kw">]</span></span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a><span class="fu">jobs</span><span class="kw">:</span></span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">deploy</span><span class="kw">:</span></span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">runs-on</span><span class="kw">:</span><span class="at"> ubuntu-latest</span></span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">steps</span><span class="kw">:</span></span>
+<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="kw">-</span><span class="at"> </span><span class="fu">uses</span><span class="kw">:</span><span class="at"> actions/checkout@v4</span></span>
+<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="kw">-</span><span class="at"> </span><span class="fu">name</span><span class="kw">:</span><span class="at"> Set up Python</span></span>
+<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a><span class="at">        </span><span class="fu">uses</span><span class="kw">:</span><span class="at"> actions/setup-python@v5</span></span>
+<span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a><span class="at">        </span><span class="fu">with</span><span class="kw">:</span></span>
+<span id="cb4-15"><a href="#cb4-15" aria-hidden="true" tabindex="-1"></a><span class="at">          </span><span class="fu">python-version</span><span class="kw">:</span><span class="at"> </span><span class="st">'3.12'</span></span>
+<span id="cb4-16"><a href="#cb4-16" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="kw">-</span><span class="at"> </span><span class="fu">name</span><span class="kw">:</span><span class="at"> Install dependencies</span></span>
+<span id="cb4-17"><a href="#cb4-17" aria-hidden="true" tabindex="-1"></a><span class="fu">        run</span><span class="kw">: </span><span class="ch">|</span></span>
+<span id="cb4-18"><a href="#cb4-18" aria-hidden="true" tabindex="-1"></a>          python -m pip install --upgrade pip</span>
+<span id="cb4-19"><a href="#cb4-19" aria-hidden="true" tabindex="-1"></a>          pip install build</span>
+<span id="cb4-20"><a href="#cb4-20" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="kw">-</span><span class="at"> </span><span class="fu">name</span><span class="kw">:</span><span class="at"> Build package</span></span>
+<span id="cb4-21"><a href="#cb4-21" aria-hidden="true" tabindex="-1"></a><span class="at">        </span><span class="fu">run</span><span class="kw">:</span><span class="at"> python -m build</span></span>
+<span id="cb4-22"><a href="#cb4-22" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="kw">-</span><span class="at"> </span><span class="fu">name</span><span class="kw">:</span><span class="at"> Publish package</span></span>
+<span id="cb4-23"><a href="#cb4-23" aria-hidden="true" tabindex="-1"></a><span class="at">        </span><span class="fu">uses</span><span class="kw">:</span><span class="at"> pypa/gh-action-pypi-publish@release/v1</span></span>
+<span id="cb4-24"><a href="#cb4-24" aria-hidden="true" tabindex="-1"></a><span class="at">        </span><span class="fu">with</span><span class="kw">:</span></span>
+<span id="cb4-25"><a href="#cb4-25" aria-hidden="true" tabindex="-1"></a><span class="at">          </span><span class="fu">password</span><span class="kw">:</span><span class="at"> ${{ secrets.PYPI_API_TOKEN }}</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+</div>
+</div>
+<p>This action should only run after all other workflows (such as testing and building) have passed.</p>
+</section>
+<section id="additional-concepts" class="level3">
+<h3 class="anchored" data-anchor-id="additional-concepts">Additional concepts</h3>
+<section id="variables-and-secrets" class="level4">
+<h4 class="anchored" data-anchor-id="variables-and-secrets">Variables and secrets</h4>
+<p>Secrets are variables that you create in an organization, repository, or repository environment. The secrets that you create are available to use in GitHub Actions workflows. GitHub Actions can only read a secret if you explicitly include the secret in a workflow.</p>
+<p>⮕ More information on <a href="https://docs.github.com/en/actions/security-guides/using-secrets-in-github-actions">using secrets in GitHub Actions</a>.</p>
+</section>
+<section id="matrix-strategy" class="level4">
+<h4 class="anchored" data-anchor-id="matrix-strategy">Matrix strategy</h4>
+<p>A matrix strategy lets you use variables in a single job definition to automatically create multiple job runs that are based on the combinations of the variables. For example, you can use a matrix strategy to test your code in multiple versions of a language or on multiple operating systems.</p>
+<p>A job will run for each possible combination of the variables. In the example below, the workflow will run 12 jobs, one for each combination of the <code>os</code> and <code>python-version</code> variables.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">jobs</span><span class="kw">:</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">example_matrix</span><span class="kw">:</span></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">strategy</span><span class="kw">:</span></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="fu">matrix</span><span class="kw">:</span></span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a><span class="at">        </span><span class="fu">os</span><span class="kw">:</span><span class="at"> </span><span class="kw">[</span><span class="at">ubuntu-latest</span><span class="kw">,</span><span class="at"> windows-latest</span><span class="kw">,</span><span class="at"> macos-latest</span><span class="kw">]</span></span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a><span class="at">        </span><span class="fu">python-version</span><span class="kw">:</span><span class="at"> </span><span class="kw">[</span><span class="st">'3.10'</span><span class="kw">,</span><span class="at"> </span><span class="st">'3.11'</span><span class="kw">,</span><span class="at"> </span><span class="st">'3.12'</span><span class="kw">,</span><span class="at"> </span><span class="st">'3.13'</span><span class="kw">]</span><span class="at">       </span></span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">runs-on</span><span class="kw">:</span><span class="at"> ${{ matrix.os }}</span></span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">steps</span><span class="kw">:</span></span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="kw">-</span><span class="at"> </span><span class="fu">uses</span><span class="kw">:</span><span class="at"> actions/checkout@v4</span></span>
+<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="kw">-</span><span class="at"> </span><span class="fu">uses</span><span class="kw">:</span><span class="at"> actions/setup-python@v5</span></span>
+<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a><span class="at">        </span><span class="fu">with</span><span class="kw">:</span></span>
+<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a><span class="at">          </span><span class="fu">python-version</span><span class="kw">:</span><span class="at"> ${{ matrix.python-version }}</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>⮕ More information on <a href="https://docs.github.com/en/actions/using-jobs/using-a-matrix-for-your-jobs">using a matrix for your jobs</a>.</p>
+<div class="callout callout-style-simple callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span><i class="fa-solid fa-info-circle" aria-label="info-circle"></i> Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>If you want deterministic runner environments, specify exact versions (e.g., <code>macos-15</code>) instead of <code>latest</code>, since the <code>latest</code> aliases will migrate over time.</p>
+</div>
 </div>
 </section>
-</div>
-<div class="g-col-4">
-<section id="hard-coded-values" class="level5 code-smell-card">
-<h5 class="anchored" data-anchor-id="hard-coded-values">Hard-Coded Values</h5>
-<p><strong>Problem:</strong> Literal values (e.g., numeric values or strings) are directly embedded in the code.</p>
-<div class="refactor-link">
-<p><a href="../../../docs/software/code_quality/code_smells/hardcoded_values.html"><i class="fa-solid fa-wrench" aria-label="wrench"></i> Refactor hard-coded values</a></p>
-</div>
+<section id="artifacts" class="level4">
+<h4 class="anchored" data-anchor-id="artifacts">Artifacts</h4>
+<p><a href="https://docs.github.com/en/actions/using-workflows/storing-workflow-data-as-artifacts">Artifacts</a> are files or sets of files that are produced during the execution of a workflow and need to be stored or shared between jobs in a workflow.</p>
+<p>To upload an artifact, you typically add a step in your workflow:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">steps</span><span class="kw">:</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="kw">-</span><span class="at"> </span><span class="fu">name</span><span class="kw">:</span><span class="at"> Upload build output</span></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">uses</span><span class="kw">:</span><span class="at"> actions/upload-artifact@v4</span></span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">with</span><span class="kw">:</span></span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="fu">name</span><span class="kw">:</span><span class="at"> build-output</span></span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="fu">path</span><span class="kw">:</span><span class="at"> &lt;path/to/build/output&gt;</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Artifacts can be downloaded in subsequent jobs of the same workflow run using the <code>actions/download-artifact</code> action. This is done with a step like:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">steps</span><span class="kw">:</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="kw">-</span><span class="at"> </span><span class="fu">name</span><span class="kw">:</span><span class="at"> Download build output</span></span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">uses</span><span class="kw">:</span><span class="at"> actions/download-artifact@v4</span></span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">with</span><span class="kw">:</span></span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="fu">name</span><span class="kw">:</span><span class="at"> build-output</span></span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="fu">path</span><span class="kw">:</span><span class="at"> &lt;path/to/download&gt;</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>By default, artifacts are retained for 90 days, but this can be configured per workflow or at the repository/organization level.</p>
 </section>
-</div>
-<div class="g-col-4">
-<section id="deep-nesting" class="level5 code-smell-card">
-<h5 class="anchored" data-anchor-id="deep-nesting">Deep Nesting</h5>
-<p><strong>Problem:</strong> There are excessive levels of nested for-loops or if-statements.</p>
-<div class="refactor-link">
-<p><a href="../../../docs/software/code_quality/code_smells/deep_nesting.html"><i class="fa-solid fa-wrench" aria-label="wrench"></i> Refactor nested logic</a></p>
-</div>
 </section>
+<section id="sonar" class="level3">
+<h3 class="anchored" data-anchor-id="sonar">Sonar</h3>
+<p>To automate checking your code quality, you can also make use of a third-party service. <a href="https://docs.sonarcloud.io/">SonarQube Cloud (previously known as SonarCloud)</a> is a cloud-based code analysis service designed to detect coding issues in many different programming languages. The <a href="https://docs.sonarsource.com/sonarqube-cloud/administering-sonarcloud/managing-subscription/subscription-plans/">free plan</a> allows you to analyze an unlimited number of <strong>public repositories</strong>. Private projects will not be importable on this plan.</p>
+<ol type="1">
+<li>Make your repository public.</li>
+<li>Link your GitHub repository via their <a href="https://sonarcloud.io/login">login page</a>.</li>
+<li>Follow the <a href="https://docs.sonarsource.com/sonarqube-cloud/getting-started/github/">instructions</a> to set up the code analysis.</li>
+</ol>
+<p>You can also integrate <a href="https://docs.sonarsource.com/sonarqube-cloud/advanced-setup/ci-based-analysis/github-actions-for-sonarcloud/">SonarQube Cloud code analysis in GitHub Actions</a>. Typically, you would create a new workflow file, for example <code>.github/workflows/sonar.yml</code>, and configure triggers to your needs. You will need to set up a token in GitHub Secrets and configure what needs to be analyzed in <code>sonar-project.properties</code>.</p>
+<div class="callout callout-style-simple callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-10-contents" aria-controls="callout-10" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
 </div>
-<div class="g-col-4">
-<section id="many-inputs" class="level5 code-smell-card">
-<h5 class="anchored" data-anchor-id="many-inputs">Many Inputs</h5>
-<p><strong>Problem:</strong> Functions require a long list of parameters.</p>
-<div class="refactor-link">
-<p><a href="../../../docs/software/code_quality/code_smells/many_arguments.html"><i class="fa-solid fa-wrench" aria-label="wrench"></i> Refactor argument lists</a></p>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span><i class="fa-solid fa-circle-check" aria-label="circle-check"></i> Example of SonarQube Cloud GitHub Action
 </div>
-</section>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div class="g-col-4">
-<section id="inappropriate-intimacy" class="level5 code-smell-card">
-<h5 class="anchored" data-anchor-id="inappropriate-intimacy">Inappropriate Intimacy</h5>
-<p><strong>Problem:</strong> Two classes or methods depend too much on each other’s internals.</p>
-<div class="refactor-link">
-<p><a href="../../../docs/software/code_quality/code_smells/inappropriate_intimacy.html"><i class="fa-solid fa-wrench" aria-label="wrench"></i> Refactor coupling</a></p>
-</div>
-</section>
-</div>
-<div class="g-col-4">
-<section id="side-effects" class="level5 code-smell-card">
-<h5 class="anchored" data-anchor-id="side-effects">Side Effects</h5>
-<p><strong>Problem:</strong> Changes in one part of the code cause unexpected behavior in another.</p>
-<div class="refactor-link">
-<p><a href="../../../docs/software/code_quality/code_smells/side_effects.html"><i class="fa-solid fa-wrench" aria-label="wrench"></i> Refactor side effects</a></p>
-</div>
-</section>
-</div>
-<div class="g-col-4">
-<section id="commented-out-code" class="level5 code-smell-card">
-<h5 class="anchored" data-anchor-id="commented-out-code">Commented out Code</h5>
-<p><strong>Problem:</strong> There is a significant amount of outdated or commented-out code.</p>
-<div class="refactor-link">
-<p><a href="../../../docs/software/code_quality/code_smells/dead_code.html"><i class="fa-solid fa-wrench" aria-label="wrench"></i> Refactor commented code</a></p>
-</div>
-</section>
+<div id="callout-10" class="callout-10-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<pre><code>name: SonarQube Cloud Workflow
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+      types: [opened, synchronize, reopened]
+
+jobs:
+  sonarqube:
+    name: SonarQube
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0  
+      - name: SonarQubeScan
+        uses: SonarSource/sonarqube-scan-action@v4
+        env: 
+          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}</code></pre>
 </div>
 </div>
+</div>
+<p>The basic usage step-by-step is described in their <a href="https://github.com/SonarSource/sonarqube-scan-action">GitHub repository</a>.</p>
 <div class="callout callout-style-simple callout-note no-icon callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -1175,13 +1500,13 @@ ul.task-list li input[type="checkbox"] {
 </div>
 <div class="callout-body-container callout-body">
 <ul>
-<li><a href="https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1008549">Ten simple rules for quick and dirty scientific programming</a></li>
-<li><a href="https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1005510">Good enough practices in scientific computing</a></li>
+<li><a href="https://docs.sonarsource.com/sonarqube-cloud/advanced-setup/analysis-parameters/">Possible analysis parameters</a></li>
 </ul>
 </div>
 </div>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -1599,13 +1924,13 @@ ul.task-list li input[type="checkbox"] {
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../../../docs/software/code_quality/refactoring.html" class="pagination-link" aria-label="Refactoring">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Refactoring</span>
+      <a href="../../../docs/software/automation/ci_cd.html" class="pagination-link" aria-label="Automation">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Automation</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../../../docs/software/code_quality/code_smells/long_method.html" class="pagination-link" aria-label="Long method">
-        <span class="nav-page-text">Long method</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../../../docs/software/automation/gitlab_ci_cd.html" class="pagination-link" aria-label="GitLab pipelines">
+        <span class="nav-page-text">GitLab pipelines</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
@@ -1617,7 +1942,7 @@ ul.task-list li input[type="checkbox"] {
 </div>   
     <div class="nav-footer-center">
 <p>© 2025 <a href="https://www.tudelft.nl/digital-competence-centre">TU Delft DCC</a>. Licensed under <a href="https://creativecommons.org/licenses/by/4.0/">CC-BY-4.0</a>.</p>
-<div class="toc-actions"><ul><li><a href="https://github.com/TU-Delft-DCC/TU-Delft-DCC.github.io/issues/new/choose" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div></div>
+<div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/TU-Delft-DCC/TU-Delft-DCC.github.io/issues/new/choose" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div></div>
     <div class="nav-footer-right">
 <p>Found these guides helpful? <a href="https://github.com/TU-Delft-DCC/TU-Delft-DCC.github.io"><i class="fa-regular fa-star" aria-label="star"></i> us on GitHub</a>.</p>
 </div>

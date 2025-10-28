@@ -6,10 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="dcterms.date" content="2025-01-31">
-<meta name="description" content="Overview of common code smells and how to address them">
+<meta name="dcterms.date" content="2025-08-22">
 
-<title>Code smells</title>
+<title>GitLab pipelines</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -32,8 +31,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="../../../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../../../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../../../">
-<link href="../../../docs/software/code_quality/code_smells/long_method.html" rel="next">
-<link href="../../../docs/software/code_quality/refactoring.html" rel="prev">
+<link href="../../../docs/software/automation/gitlab/gitlab_docker.html" rel="next">
+<link href="../../../docs/software/automation/github_ci_cd.html" rel="prev">
 <link href="../../../docs/img/cone.png" rel="icon" type="image/png">
 <script src="../../../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
@@ -84,7 +83,6 @@ ul.task-list li input[type="checkbox"] {
 
 
 <link rel="stylesheet" href="../../../themes/custom.css">
-<link rel="stylesheet" href="styles.css">
 </head>
 
 <body class="nav-sidebar docked nav-fixed quarto-light"><script id="quarto-html-before-body" type="application/javascript">
@@ -307,7 +305,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../../docs/software/getting_started.html"><img src="../../../docs/img/laptop-code-solid.svg" style="filter: invert(0.5) sepia(1) saturate(5) hue-rotate(175deg);height:1em"> <strong>Research Software</strong></a></li><li class="breadcrumb-item"><a href="../../../docs/software/code_quality/index.html">Code quality</a></li><li class="breadcrumb-item"><a href="../../../docs/software/code_quality/code_smells.html">Code smells</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../../docs/software/getting_started.html"><img src="../../../docs/img/laptop-code-solid.svg" style="filter: invert(0.5) sepia(1) saturate(5) hue-rotate(175deg);height:1em"> <strong>Research Software</strong></a></li><li class="breadcrumb-item"><a href="../../../docs/software/automation/ci_cd.html">Automation</a></li><li class="breadcrumb-item"><a href="../../../docs/software/automation/gitlab_ci_cd.html">GitLab pipelines</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -547,11 +545,11 @@ ul.task-list li input[type="checkbox"] {
       <div class="sidebar-item-container"> 
             <a href="../../../docs/software/code_quality/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Code quality</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth2 show">  
+      <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../../docs/software/code_quality/code_style.html" class="sidebar-item-text sidebar-link">
@@ -566,13 +564,13 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="../../../docs/software/code_quality/code_smells.html" class="sidebar-item-text sidebar-link active">
+            <a href="../../../docs/software/code_quality/code_smells.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Code smells</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-7" class="collapse list-unstyled sidebar-section depth3 show">  
+      <ul id="quarto-sidebar-section-7" class="collapse list-unstyled sidebar-section depth3 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../../docs/software/code_quality/code_smells/long_method.html" class="sidebar-item-text sidebar-link">
@@ -751,11 +749,11 @@ ul.task-list li input[type="checkbox"] {
       <div class="sidebar-item-container"> 
             <a href="../../../docs/software/automation/ci_cd.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Automation</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-10" role="navigation" aria-expanded="false" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-10" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-10" class="collapse list-unstyled sidebar-section depth2 ">  
+      <ul id="quarto-sidebar-section-10" class="collapse list-unstyled sidebar-section depth2 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../../docs/software/automation/github_ci_cd.html" class="sidebar-item-text sidebar-link">
@@ -764,13 +762,13 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="../../../docs/software/automation/gitlab_ci_cd.html" class="sidebar-item-text sidebar-link">
+            <a href="../../../docs/software/automation/gitlab_ci_cd.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">GitLab pipelines</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#" role="navigation" aria-expanded="false" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="" class="collapse list-unstyled sidebar-section depth3 ">  
+      <ul id="" class="collapse list-unstyled sidebar-section depth3 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../../docs/software/automation/gitlab/gitlab_docker.html" class="sidebar-item-text sidebar-link">
@@ -1026,12 +1024,14 @@ ul.task-list li input[type="checkbox"] {
 <main class="content" id="quarto-document-content">
 
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../../docs/software/getting_started.html"><img src="../../../docs/img/laptop-code-solid.svg" style="filter: invert(0.5) sepia(1) saturate(5) hue-rotate(175deg);height:1em"> <strong>Research Software</strong></a></li><li class="breadcrumb-item"><a href="../../../docs/software/code_quality/index.html">Code quality</a></li><li class="breadcrumb-item"><a href="../../../docs/software/code_quality/code_smells.html">Code smells</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../../docs/software/getting_started.html"><img src="../../../docs/img/laptop-code-solid.svg" style="filter: invert(0.5) sepia(1) saturate(5) hue-rotate(175deg);height:1em"> <strong>Research Software</strong></a></li><li class="breadcrumb-item"><a href="../../../docs/software/automation/ci_cd.html">Automation</a></li><li class="breadcrumb-item"><a href="../../../docs/software/automation/gitlab_ci_cd.html">GitLab pipelines</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">Code smells</h1>
+<h1 class="title">GitLab pipelines</h1>
   <div class="quarto-categories">
     <div class="quarto-category">Software</div>
-    <div class="quarto-category">Refactoring</div>
+    <div class="quarto-category">Automation</div>
+    <div class="quarto-category">GitLab</div>
+    <div class="quarto-category">CI/CD</div>
   </div>
   </div>
 
@@ -1043,14 +1043,14 @@ ul.task-list li input[type="checkbox"] {
     <div>
     <div class="quarto-title-meta-heading">Last reviewed</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">January 31, 2025</p>
+      <p class="date">August 22, 2025</p>
     </div>
   </div>
   
     <div>
     <div class="quarto-title-meta-heading">Last modified</div>
     <div class="quarto-title-meta-contents">
-      <p class="date-modified">September 19, 2025</p>
+      <p class="date-modified">October 28, 2025</p>
     </div>
   </div>
     
@@ -1061,123 +1061,24 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<script async="" defer="" src="https://scripts.simpleanalyticscdn.com/latest.js"></script><div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="../../../docs/img/bad_code_design.PNG" class="img-fluid figure-img" alt="Drawing of a pyramid with various traps resembling code smells." width="600"></p>
-<figcaption>CC-BY-4.0 © 2021 Balaban et al.</figcaption>
-</figure>
-</div>
-<p>Code smells are software characteristics that suggest there might be an issue with the code’s design or implementation. While code smells themselves might not always indicate a bug or malfunction, they can make the code harder to understand and extend, which can lead to bugs and other issues down the line. Code smells are usually noticed and addressed during code reviews, when writing tests, adding new features, fixing bugs, and during automated code analysis.</p>
-<div class="callout callout-style-simple callout-tip no-icon callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Tip</span><i class="fa-solid fa-lightbulb" aria-label="lightbulb"></i> How to use these cards?
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Each guide provides an overview of a code smell, its symptoms and an example on <a href="../../../docs/software/code_quality/refactoring.html">how to refactor it</a>. We don’t intend to cover all refactoring techniques, but we aim to provide a starting point for identifying and addressing common code smells.</p>
-</div>
-</div>
-<div class="grid">
-<div class="g-col-4">
-<section id="long-method" class="level5 code-smell-card">
-<h5 class="anchored" data-anchor-id="long-method">Long Method</h5>
-<p><strong>Problem:</strong> A function is very long and hard to understand.</p>
-<div class="refactor-link">
-<p><a href="../../../docs/software/code_quality/code_smells/long_method.html"><i class="fa-solid fa-wrench" aria-label="wrench"></i> Refactor long methods</a></p>
+<script async="" defer="" src="https://scripts.simpleanalyticscdn.com/latest.js"></script><p>As previously mentioned in the <a href="../../../docs/software/development_workflow/project_management.html#version-control-platforms">Project management</a> section, TU Delft has its own GitLab instance. However, it does not (yet) have preconfigured servers available to run <a href="https://docs.gitlab.com/ee/ci/pipelines/"><strong>GitLab pipelines</strong></a>, the equivalent of GitHub Actions.</p>
+<p>In order to set up a pipeline, you will need to request a TU Delft Virtual Private Server and configure a GitLab runner there. The DCC has developed a step-by-step guide (see below), along with guidance on setting up a CI pipeline for a MATLAB environment.</p>
+<div class="content-block">
+<div class="features">
+<section id="continuous-integration-with-gitlab" class="level3 feature">
+<h3 class="anchored" data-anchor-id="continuous-integration-with-gitlab"><i class="fa-brands fa-square-gitlab" aria-label="square-gitlab"></i> Continuous Integration with GitLab</h3>
+<p>Set up CI/CD for your project in TU Delft GitLab.</p>
+<div class="learn-more">
+<p><a href="../../../docs/software/automation/gitlab/gitlab_docker.html">Learn more »</a></p>
 </div>
 </section>
-</div>
-<div class="g-col-4">
-<section id="large-classes" class="level5 code-smell-card">
-<h5 class="anchored" data-anchor-id="large-classes">Large Classes</h5>
-<p><strong>Problem:</strong> A class contains too many responsibilities or functionalities.</p>
-<div class="refactor-link">
-<p><a href="../../../docs/software/code_quality/code_smells/large_class.html"><i class="fa-solid fa-wrench" aria-label="wrench"></i> Refactor large classes</a></p>
+<section id="setting-up-a-gitlab-runner-for-matlab" class="level3 feature">
+<h3 class="anchored" data-anchor-id="setting-up-a-gitlab-runner-for-matlab"><i class="fa-brands fa-square-gitlab" aria-label="square-gitlab"></i> Setting up a GitLab runner for MATLAB</h3>
+<p>Create a CI pipeline for a MATLAB environment in TU Delft GitLab.</p>
+<div class="learn-more">
+<p><a href="../../../docs/software/automation/gitlab/runner_matlab.html">Learn more »</a></p>
 </div>
 </section>
-</div>
-<div class="g-col-4">
-<section id="code-duplication" class="level5 code-smell-card">
-<h5 class="anchored" data-anchor-id="code-duplication">Code Duplication</h5>
-<p><strong>Problem:</strong> The same or very similar code appears in multiple places.</p>
-<div class="refactor-link">
-<p><a href="../../../docs/software/code_quality/code_smells/duplication.html"><i class="fa-solid fa-wrench" aria-label="wrench"></i> Refactor duplicate code</a></p>
-</div>
-</section>
-</div>
-<div class="g-col-4">
-<section id="hard-coded-values" class="level5 code-smell-card">
-<h5 class="anchored" data-anchor-id="hard-coded-values">Hard-Coded Values</h5>
-<p><strong>Problem:</strong> Literal values (e.g., numeric values or strings) are directly embedded in the code.</p>
-<div class="refactor-link">
-<p><a href="../../../docs/software/code_quality/code_smells/hardcoded_values.html"><i class="fa-solid fa-wrench" aria-label="wrench"></i> Refactor hard-coded values</a></p>
-</div>
-</section>
-</div>
-<div class="g-col-4">
-<section id="deep-nesting" class="level5 code-smell-card">
-<h5 class="anchored" data-anchor-id="deep-nesting">Deep Nesting</h5>
-<p><strong>Problem:</strong> There are excessive levels of nested for-loops or if-statements.</p>
-<div class="refactor-link">
-<p><a href="../../../docs/software/code_quality/code_smells/deep_nesting.html"><i class="fa-solid fa-wrench" aria-label="wrench"></i> Refactor nested logic</a></p>
-</div>
-</section>
-</div>
-<div class="g-col-4">
-<section id="many-inputs" class="level5 code-smell-card">
-<h5 class="anchored" data-anchor-id="many-inputs">Many Inputs</h5>
-<p><strong>Problem:</strong> Functions require a long list of parameters.</p>
-<div class="refactor-link">
-<p><a href="../../../docs/software/code_quality/code_smells/many_arguments.html"><i class="fa-solid fa-wrench" aria-label="wrench"></i> Refactor argument lists</a></p>
-</div>
-</section>
-</div>
-<div class="g-col-4">
-<section id="inappropriate-intimacy" class="level5 code-smell-card">
-<h5 class="anchored" data-anchor-id="inappropriate-intimacy">Inappropriate Intimacy</h5>
-<p><strong>Problem:</strong> Two classes or methods depend too much on each other’s internals.</p>
-<div class="refactor-link">
-<p><a href="../../../docs/software/code_quality/code_smells/inappropriate_intimacy.html"><i class="fa-solid fa-wrench" aria-label="wrench"></i> Refactor coupling</a></p>
-</div>
-</section>
-</div>
-<div class="g-col-4">
-<section id="side-effects" class="level5 code-smell-card">
-<h5 class="anchored" data-anchor-id="side-effects">Side Effects</h5>
-<p><strong>Problem:</strong> Changes in one part of the code cause unexpected behavior in another.</p>
-<div class="refactor-link">
-<p><a href="../../../docs/software/code_quality/code_smells/side_effects.html"><i class="fa-solid fa-wrench" aria-label="wrench"></i> Refactor side effects</a></p>
-</div>
-</section>
-</div>
-<div class="g-col-4">
-<section id="commented-out-code" class="level5 code-smell-card">
-<h5 class="anchored" data-anchor-id="commented-out-code">Commented out Code</h5>
-<p><strong>Problem:</strong> There is a significant amount of outdated or commented-out code.</p>
-<div class="refactor-link">
-<p><a href="../../../docs/software/code_quality/code_smells/dead_code.html"><i class="fa-solid fa-wrench" aria-label="wrench"></i> Refactor commented code</a></p>
-</div>
-</section>
-</div>
-</div>
-<div class="callout callout-style-simple callout-note no-icon callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Note</span><i class="fa-solid fa-signs-post" aria-label="signs-post"></i> Learn more
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<ul>
-<li><a href="https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1008549">Ten simple rules for quick and dirty scientific programming</a></li>
-<li><a href="https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1005510">Good enough practices in scientific computing</a></li>
-</ul>
 </div>
 </div>
 
@@ -1599,13 +1500,13 @@ ul.task-list li input[type="checkbox"] {
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../../../docs/software/code_quality/refactoring.html" class="pagination-link" aria-label="Refactoring">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Refactoring</span>
+      <a href="../../../docs/software/automation/github_ci_cd.html" class="pagination-link" aria-label="GitHub Actions">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">GitHub Actions</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../../../docs/software/code_quality/code_smells/long_method.html" class="pagination-link" aria-label="Long method">
-        <span class="nav-page-text">Long method</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../../../docs/software/automation/gitlab/gitlab_docker.html" class="pagination-link" aria-label="Continuous Integration with GitLab">
+        <span class="nav-page-text">Continuous Integration with GitLab</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

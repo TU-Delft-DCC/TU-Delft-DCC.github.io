@@ -17,7 +17,7 @@ language:
 
 # Title of the document [manual entry]
 # Uncomment and populate the next line accordingly
-title: Automation for software development
+title: GitLab pipelines
 
 # Brief overview of the document (will be used in listings) [manual entry]
 # Uncomment and populate the next line and uncomment "hide-description: true".
@@ -43,36 +43,33 @@ corresponding: Elviss Dvinskis
 categories:
   - Software
   - Automation
-  - GitHub
   - GitLab
   - CI/CD
 
 ---
 
-Continuous Integration (CI) refers to the build and unit testing stages of the software release process. Every committed revision can trigger an automated build and test. With Continuous Delivery (CD), code changes are automatically built, tested, and prepared for a release to production.
+As previously mentioned in the [Project management](../development_workflow/project_management.md#version-control-platforms) section, TU Delft has its own GitLab instance. However, it does not (yet) have preconfigured servers available to run [**GitLab pipelines**](https://docs.gitlab.com/ee/ci/pipelines/), the equivalent of GitHub Actions. 
 
-![Source: Solidstudio (solidstudio.io). [Asset path](https://cdn.sanity.io/images/lofvu8al/production/e37ce13c88889f048aa2b1acae7d6cbfeea5678f-2048x876.png).](https://solidstudio.io/_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2Flofvu8al%2Fproduction%2Fe37ce13c88889f048aa2b1acae7d6cbfeea5678f-2048x876.png&w=640&q=75){width=60%}
-
-You can implement Continuous Integration and Continuous Delivery (CI/CD) workflows for your research software using either GitHub Actions or GitLab pipelines. Choose the platform that fits your project needs based on factors such as privacy and security needs, collaboration requirements, and available features.
+In order to set up a pipeline, you will need to request a TU Delft Virtual Private Server and configure a GitLab runner there. The DCC has developed a step-by-step guide (see below), along with guidance on setting up a CI pipeline for a MATLAB environment.
 
 ::: {.content-block}
 ::: {.features}
 
 ::: {.feature}
-### {{< fa brands square-github >}} GitHub Actions
-GitHub Actions workflows and concepts.
+### {{< fa brands square-gitlab >}} Continuous Integration with GitLab
+Set up CI/CD for your project in TU Delft GitLab.
 
 ::: {.learn-more}
-[Learn more »](./github_ci_cd.md)
+[Learn more »](./gitlab/gitlab_docker.md)
 :::
 :::
 
 ::: {.feature}
-### {{< fa brands square-gitlab >}} GitLab pipelines
-GitLab pipelines in TU Delft GitLab.
+### {{< fa brands square-gitlab >}} Setting up a GitLab runner for MATLAB
+Create a CI pipeline for a MATLAB environment in TU Delft GitLab.
 
 ::: {.learn-more}
-[Learn more »](./gitlab_ci_cd.md)
+[Learn more »](./gitlab/runner_matlab.md)
 :::
 :::
 
