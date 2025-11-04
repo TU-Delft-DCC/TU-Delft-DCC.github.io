@@ -12,6 +12,7 @@ project:
     - "CODE_OF_CONDUCT.md"
     - "docs/**/*.md"
     - "docs/**/*.qmd"
+    - "listings.qmd"
     # Do not render
     - "!docs/infrastructure/getting_started_susan.md"
     - "!docs/infrastructure/giving_sudo_privilege.md"
@@ -71,6 +72,8 @@ website:
             href: CODE_OF_CONDUCT.md
           - text: About the DCC
             href: https://www.tudelft.nl/digital-competence-centre
+      - href: listings.qmd
+        text: Listings
     tools:
       - icon: github
         href: https://github.com/TU-Delft-DCC/TU-Delft-DCC.github.io/
