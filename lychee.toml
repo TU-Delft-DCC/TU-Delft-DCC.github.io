@@ -35,15 +35,19 @@ max_retries = 2
 
 #############################  Requests  ############################
 
+max_retries = 5
+max_concurrency = 3
+
 # User agent to send with each request.
-# user_agent = "curl/8.11.1"
+method = "get"
+user_agent = "curl/8.11.1"
 
 # Website timeout from connect to response finished.
 # Increase timeout for slower networks (default is 20s)
 timeout = 30
 
 # Minimum wait time in seconds between retries of failed requests.
-retry_wait_time = 3
+retry_wait_time = 2
 
 # Comma-separated list of accepted status codes for valid links.
 # Supported values are:
