@@ -13,7 +13,7 @@ no_progress = false
 
 # Enable link caching. This can be helpful to avoid checking the same links on
 # multiple runs.
-cache = false
+cache = true
 
 # Discard all cached requests older than this duration.
 # max_cache_age = "1h"
