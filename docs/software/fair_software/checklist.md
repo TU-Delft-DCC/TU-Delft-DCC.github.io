@@ -6,7 +6,7 @@ date: 2025-03-06
 
 # We use this key to indicate the last modified date [manual entry, use YYYY-MM-DD]
 # Uncomment and populate the next line accordingly
-date-modified: 2025-09-19
+date-modified: 2025-11-06
 
 # Do not modify
 lang: en
@@ -138,7 +138,7 @@ _Recommended_
 
 _Optional_
 
-- [ ] Documentation tools ([Sphinx](https://coderefinery.github.io/documentation/sphinx/), [JupyterBook](https://jupyterbook.org/intro.html), [Quarto](https://quarto.org/docs/guide/))
+- [ ] Documentation tools ([Sphinx](https://coderefinery.github.io/documentation/sphinx/), [JupyterBook](https://jupyterbook.org/stable/), [Quarto](https://quarto.org/docs/guide/))
 - [ ] Build an [API reference](https://developer.lsst.io/python/numpydoc.html) from docstrings
 - [ ] Hosting ([GitHub Pages](https://pages.github.com/), [Readthedocs](https://readthedocs.org/))
 
