@@ -44,7 +44,7 @@ categories:
  - Data
  - ELN
  - RSpace
- - eLABJournal
+ - eLabJournal
 
 ---
 

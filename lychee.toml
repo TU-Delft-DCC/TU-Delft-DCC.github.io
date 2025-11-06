@@ -13,7 +13,7 @@ no_progress = false
 
 # Enable link caching. This can be helpful to avoid checking the same links on
 # multiple runs.
-cache = false
+cache = true
 
 # Discard all cached requests older than this duration.
 # max_cache_age = "1h"
@@ -31,19 +31,20 @@ max_redirects = 10
 max_retries = 2
 
 # Maximum number of concurrent link checks.
-# max_concurrency = 14
+max_concurrency = 3
 
 #############################  Requests  ############################
 
 # User agent to send with each request.
-# user_agent = "curl/8.11.1"
+method = "get"
+user_agent = "curl/8.11.1"
 
 # Website timeout from connect to response finished.
 # Increase timeout for slower networks (default is 20s)
 timeout = 30
 
 # Minimum wait time in seconds between retries of failed requests.
-retry_wait_time = 3
+retry_wait_time = 2
 
 # Comma-separated list of accepted status codes for valid links.
 # Supported values are:
@@ -52,7 +53,7 @@ retry_wait_time = 3
 # accept = "200..=204, 429"
 # accept = ["200", "429"]
 # accept = "200, 429"
-accept = ["200", "429", "403"]
+accept = ["200..=204", "429", "403"]
 
 # Proceed for server connections considered insecure (invalid TLS).
 insecure = false
