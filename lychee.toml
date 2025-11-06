@@ -31,12 +31,9 @@ max_redirects = 10
 max_retries = 2
 
 # Maximum number of concurrent link checks.
-# max_concurrency = 14
+max_concurrency = 3
 
 #############################  Requests  ############################
-
-max_retries = 5
-max_concurrency = 3
 
 # User agent to send with each request.
 method = "get"
