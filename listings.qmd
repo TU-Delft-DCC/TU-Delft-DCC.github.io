@@ -1,5 +1,5 @@
 ---
-title: "Listings page"
+title: "Catalogue"
 listing:
   contents: 
     - "docs/data/**/*.md"
@@ -21,6 +21,6 @@ listing:
 
 ---
 
-While the search functionality (top right corner) provides easy access to a particular guide searching by keywords, you can also use this *listings* page to explore all available guides across all topics. 
+While the search functionality (top right corner) provides easy access to a particular guide searching by keywords, you can also use this *listings* page (catalogue) to explore all available guides across all topics. 
 
 Each guide has keywords at the top, and these are clickable. Clicking on a category will bring you back to this page filtered to relevant guides. You can either browse by category using the filters on the right, sort by title or date, or use the search box to find specific topics of interest.
