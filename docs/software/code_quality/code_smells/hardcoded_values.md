@@ -68,7 +68,7 @@ def calculate_area(radius):
 
 def check_temperature(temperature):
     # Hard-coded temperature values for thresholding
-    if temperature > 30: # What does 30 represent
+    if temperature > 30: # What does 30 represent?
         print("It's too hot!")
     elif temperature < 10:
         print("It's too cold!")
@@ -83,7 +83,7 @@ calculate_area <- function(radius) {
 
 check_temperature <- function(temperature) {
   # Hard-coded temperature values for thresholding
-  if (temperature > 30) {  # What does 30 represent
+  if (temperature > 30) {  # What does 30 represent?
     print("It's too hot!")
   } else if (temperature < 10) {
     print("It's too cold!")
