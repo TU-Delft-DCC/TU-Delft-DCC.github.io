@@ -5,8 +5,8 @@
 # Uncomment and populate the next line accordingly
 date: 2025-08-01
 
-# We use this key to indicate the last modified date [automatic entry]
-date-modified: last-modified
+# We use this key to indicate the last modified date [manual entry, use YYYY-MM-DD]
+date-modified: 2025-08-27
 
 # Do not modify
 lang: en
@@ -40,128 +40,94 @@ corresponding: Manuel G. Garcia
 # Meaningful keywords, newline separated [manual entry]
 # Uncomment and populate the next line and list accordingly
 categories: 
-- web server 
 - infrastructure
+- web server 
 - Apache
-- Ubuntu
 - Nginx
 
 ---
 
-If you want to host a website or a web application of some sort, you are going to need to work with a webserver. 
-The job of a web server is to serve content on the internet. To achieve that goal, it acts as a middleman between two machines.
-The *client machine*  requests content or tasks to the   *server machine*.  A web server typically sits on the *server manchine*, although not necessarly,  and manage requests from multiple clients.   Two of the most popular web servers are **Apache** and **Nginx** (pronounced "Engine-X").
+If you want to host a website or a web application, you will need to work with a web server. The job of a web server is to serve content on the internet by acting as a middleman between client machines and server machines. When a client requests content, the web server processes that request and delivers the appropriate response. Popular web server software includes **Apache** and **Nginx**.
 
-This guide provides you with a list of general considerations to take into account when setting up a web server. Links to step-by-step guides are provided for the most popular web servers, Apache and Nginx.
+This guide provides general considerations to take into account when setting up a web server, along with links to resources for the most commonly used web server platforms. For specific implementation guidance, consult the official documentation for your chosen web server software and operating system.
 
 ## Considerations when setting up a web server
 
-* **Operating System**: The choice of operating system can affect the performance and security of your web server. 
-* **Hardware Requirements**: Ensure that the s1erver hardware meets the requirements for your web application. 
-* **Web Server Software**: Choose between popular web server software like Apache, Nginx.
-* **Security**: Implement security measures  to protect your server from vulnerabilities.
-* **Maintainance**: Regularly update your web server software and operating system to ensure security and performance. Monitor server logs for any unusual activity.
+* **Operating system**: Choose an operating system that provides appropriate performance, security, and compatibility for your needs.
+* **Hardware requirements**: Ensure that the server hardware meets the requirements for your web application and expected traffic levels.
+* **Web server software**: Select web server software that aligns with your application requirements (e.g. Apache or Nginx).
+* **Security**: Implement security measures to protect your server from vulnerabilities.
+* **Maintenance**: Regularly update your web server software and operating system to ensure security and performance. Monitor server logs for any unusual activity.
 
-### Operating System
-     
-The operating system you choose for your web server can significantly impact its performance, security, and compatibility with various software. You need a server-grade operating system because web servers often run on enterprise-grade hardware and require robust performance and security features.
-Linux-based systems are commonly used for web servers due to their stability and security features. Some of the most popular distributions include:
+### Operating system
 
-* [Ubuntu Server](https://ubuntu.com/download/server), 
-* [CentOS](https://www.centos.org/download/), and 
-* [Debian](https://www.debian.org/).
+The choice of operating system significantly impacts your web server's performance, security, and maintenance requirements. Server-grade operating systems are designed for continuous operation and provide robust performance features needed for web hosting environments.
 
-For Windows-based servers, you can use [Windows Server](https://www.microsoft.com/en-us/windows-server). A license is required for Windows Server, while Linux distributions are typically free to use. 
-At TU Delft, you can request a Personal Virtual Server (VPS) preinstalled with Ubuntu Server or Windows Server. Which one you choose depends on your familiarity with the operating system and the specific requirements of your web application. However, Linux-based servers are generally preferred for web hosting due to their lower resource requirements, free licensing, and strong community support.
+**Linux-based systems** are widely used for web servers due to their stability, security features, and cost-effectiveness. Popular distributions include:
 
-### Hardware Requirments
+* **Ubuntu Server**: Offers long-term support (LTS) versions with regular security updates and extensive community resources
+* **Debian**: Known for stability and security
+* **Enterprise Linux distributions**: Include commercially supported options like Red Hat Enterprise Linux (as well as community-driven alternatives)
 
-Consider what type of hardware you need for your web server. This includes the CPU, RAM, and storage capacity. 
-The hardware requirements depend a mix of factors, including the expected traffic (number of user per day, number of request per user), the complexity of the web application, and the type of content being served.
+**Windows Server** provides an alternative for environments requiring Windows-specific technologies or where teams have existing Windows expertise. Commercial licensing is required for Windows Server installations.
 
-It is difficult to exactly estimate the hardware requirements for a web server without knowing the details of a web application and performing perfomance tests, but here are some general guidelines:
+At TU Delft, you can request a VPS preinstalled with Ubuntu Server or Windows Server. Which one you choose depends on your familiarity with the operating system and the specific requirements of your web application. However, Linux-based servers are generally preferred for web hosting due to their lower resource requirements, free licensing, and strong community support.
 
-- **CPU**: A multi-core processor is recommended for handling multiple requests simultaneously. For small to medium-sized applications, a quad-core CPU should suffice.
-- **RAM**: At least 2 GB of RAM is recommended for small applications (e.g., website with a few web pages). For larger applications (e.g., dashboards, data processing platforms, geoportals) or those with high traffic (e.g., 100's of users per day), consider 4 GB or more.
-- **Storage**:
-  SSDs are preferred for faster data access. The storage capacity depends on the size of your web application and the amount of data you expect to store. A minimum of 20 GB is recommended for small applications, while larger applications may require 100 GB or more.
+### Hardware requirements
 
-### Web Server Software
+Hardware requirements depend on multiple factors including expected traffic volume, application complexity, data processing needs, and performance requirements. Without performance testing specific to your application, exact requirements can be difficult to determine.
 
-The two most popular web servers are **Apache** and **Nginx**. Sometimes, the choice of web server software is determined by you web application. For example, a web application built with PHP is typically served by Apache, while a web application built with Node.js is typically served by Nginx. 
+**General guidelines** for basic web server hardware:
 
-The tables below compare Apache and Nginx on various features and performance aspects. The comparions were generated by an AI assistant, and reviewed by our team for accuracy.
+- **CPU**: Multi-core processors handle concurrent requests more effectively. Current-generation processors with adequate cores are recommended for most applications.
+- **RAM**: Memory requirements vary significantly based on type and expected load. Start with sufficient RAM for your base operating system and application stack, then monitor and adjust based on actual usage patterns.
+- **Storage**: SSDs provide better performance than traditional hard drives. Storage capacity should account for your application files, data, logs, and future requirements.
 
+### Web server software
 
-| Feature                            | Apache HTTP Server                     | NGINX                                       |
-| ---------------------------------- | -------------------------------------- | ------------------------------------------- |
-| **Architecture**                   | Process/thread-based (prefork, worker) | Event-driven, asynchronous                  |
-| **Performance**                    | Slower under high load or concurrency  | High-performance with many concurrent users |
-| **Static File Serving**            | Good                                   | Excellent (very fast & lightweight)         |
-| **Dynamic Content**                | Built-in via modules (e.g., mod\_php)  | Delegates to upstream (e.g., via FastCGI)   |
-| **Configuration Syntax**           | Verbose, flexible `.htaccess`, complex | Simpler, consistent, but less flexible      |
-| **.htaccess Support**              | Yes (per-directory overrides)          | No `.htaccess`; central config only         |
-| **Reverse Proxy / Load Balancing** | Basic                                  | First-class support, efficient              |
-| **TLS/SSL Handling**               | Full support                           | Full support, plus modern config tools      |
-| **Resource Usage**                 | Heavier (more RAM per connection)      | Lightweight, better under heavy load        |
-| **Modules**                        | Many built-in or loadable modules      | Fewer, but more focused                     |
-| **Platform**                       | Cross-platform                         | Mostly Linux/Unix (Windows support exists)  |
+Different web servers excel in different scenarios. The two most popular web servers are **Apache** and **Nginx**. Sometimes, the choice of a web server software is determined by your web application. For example, PHP applications can be served by either Apache (using mod_php) or Nginx (using PHP-FPM), while Node.js applications are commonly served by Nginx as a reverse proxy
 
-: Key differences between Apache and Nginx web servers, source: ChatGPT.
+The following table provides a general comparison of key characteristics:
 
+| Characteristic | Apache | Nginx |
+|----------------|--------|-------|
+| **Architecture** | Process/thread-based | Event-driven, asynchronous |
+| **Configuration** | Extensive options, flexible | Simpler syntax, centralized |
+| **Static Content** | Good performance | Excellent (very fast & lightweight) |
+| **Dynamic Content** | Built-in module support | Typically uses external processors |
+| **Resource Usage** | Higher memory per connection | Lightweight, better under heavy load |
+| **Learning Curve** | Moderate | Varies by use case |
+| **Platform** | Cross-platform | Mostly Linux/Unix (Windows support exists)  |
 
-| Feature                | Apache                         | NGINX                              |
-| ---------------------- | ------------------------------ | ---------------------------------- |
-| **Performance**        | Slower for static file serving | Faster, optimized                  |
-| **Resource Usage**     | Higher memory per request      | Efficient, low memory              |
-| **TLS, gzip, caching** | Supported                      | Built-in, highly optimized         |
-| **Best Use Case**      | Low traffic, legacy sites      | Modern frontends, high-concurrency |
-
-: Comparison between Apache and Nginx web servers for the case of *statics* web applications. Source: ChatGPT.
-
-
+Modern web applications often use **application servers** or **runtime environments** (such as PHP-FPM, Node.js, or Python WSGI servers) in conjunction with web servers to handle dynamic content generation.
 
 :::{.callout-note appearance="simple" icon="false"}
-## {{< fa info-circle >}} Static vs Dynamic Web Applications
-Static web applications serve exactly the same content, such as HTML, CSS, JS. images, to all of its users.
-Dynamic web applications serve content that must be generated based a user specific input or choice, therefore, they depend on technologies like PHP, Python, NodeJS, Django, etc., to adapts the content been server.
+## {{< fa info-circle >}} Static vs Dynamic Applications
+*Static web applications* serve the same content (HTML, CSS, JavaScript, images) to all users. *Dynamic web applications* generate content based on user input, database queries, or other variables, requiring server-side processing.
 :::
-
- 
-
-| Feature                    | Apache                                 | NGINX                                            |
-| -------------------------- | -------------------------------------- | ------------------------------------------------ |
-| **Dynamic handling**       | Built-in via modules (e.g., `mod_php`) | Delegates via FastCGI/Reverse proxy              |
-| **Configuration**          | Flexible with `.htaccess`              | Centralized, consistent                          |
-| **Performance under load** | May slow down with many threads        | Scales better with async model                   |
-| **Language support**       | Good for PHP                           | Good for proxying to Django, Node, Flask, etc.   |
-| **Reverse proxy features** | Basic                                  | Advanced** (load balancing, buffering, failover) |
-
-: Comparison between Apache and Nginx web servers for the case of *dynamic* web applications,  source: ChatGPT.
-
 
 ### Security
 
-Security is a critical aspect of web server management. You should keep in mind that a web server is typically open to anyone on the Internet, and therefore, expose to many cyber attacks. Here are some key security measures to consider:
+Security is a critical aspect of web server management. You should keep in mind that a web server is typically open to anyone on the internet, and therefore, exposed to many cyber attacks. Here are some key security measures to consider:
 
 * **Firewall**: Configure a firewall to restrict access to the web server. Only allow necessary ports (e.g., 80 for HTTP, 443 for HTTPS).
 * **SSL/TLS**: Use SSL/TLS certificates to encrypt data in transit. This ensures that data exchanged between the client and server is secure.
 * **Regular Updates**: Keep the web server software and operating system up to date with the latest security patches.
 * **Access Control**: Implement strict access controls to limit who can access the server and its resources. Use SSH keys for secure remote access instead of passwords.
-* **Hardening**: Follow best practices for hardening your web server, such as disabling unnecessary modules, using secure configurations, and limiting user permissions, such as [SSL configurations recomended by the Mozilla organisation](https://ssl-config.mozilla.org/)
-* * **Monitoring**: Regularly monitor server logs for suspicious activity and set up alerts for potential security breaches.
+* **Hardening**: Follow best practices for hardening your web server, such as disabling unnecessary modules, using secure configurations, and limiting user permissions, such as [SSL configurations recommended by the Mozilla organisation](https://ssl-config.mozilla.org/)
+* **Monitoring**: Set up logging and monitoring to detect unusual activity or potential security issues.
 * **Backup**: Regularly back up your web server data and configurations to recover from potential data loss or security incidents.
 
-### Maintainance
+### Maintenance
 
-To ensure optimal performance and security of a web server, you need to perform regular maintenance tasks. This includes:
+To ensure optimal performance and security of a web server, you need to perform regular maintenance tasks. Plan for regular maintenance activities:
 
 * **Monitoring**: Regularly check server logs for errors or unusual activity. 
-* **Updates**: Apply security patches and updates to the web server software and operating system.
-* **Backups**: Regularly back up server configurations and data to prevent data loss.
+* **Updates and patches**: Establish procedures for applying security updates and software patches in a timely manner.
+* **Backups**: Regularly back up server configurations and data to prevent loss.
 * **Renewal of SSL Certificates**: Ensure that SSL/TLS certificates are renewed before they expire to maintain secure connections.
 
 :::{.callout-tip appearance="simple" icon="false"}
 ## {{< fa lightbulb >}} Do not overlook maintenance
-The time, cost and effort of maintaining a web server is often overlooked. Setting up a web server is relatively straightforward, but maintaining it requires ongoing effort and vigilance because you want you web application to be available and secure at all times. Unmaintained web servers are vulnerable to security and data privacy threats.  
+The time, cost and effort of maintaining a web server is often overlooked. While initial setup may be straightforward, maintaining security, availability, and performance requires continuous attention and resources. Unmaintained web servers are vulnerable to security and privacy threats.  
 :::

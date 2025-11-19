@@ -7,7 +7,7 @@ date: 2025-04-02
 
 # We use this key to indicate the last modified date [manual entry, use YYYY-MM-DD]
 # Uncomment and populate the next line accordingly
-date-modified: 2025-07-11
+date-modified: 2025-08-25
 
 # Do not modify
 lang: en
@@ -44,6 +44,7 @@ categories:
  - package
  - Python
  - pyproject.toml
+ - uv
 ---
 
 By turning your code into a package and hosting it on a platform like PyPI (Python Package Index), you enhance the quality and sustainability of your software, promote reuse and embrace contributions from external collaborators.
@@ -334,3 +335,15 @@ pip install -e .
 ## Next steps
 
 Once you have your package ready, you can publish it. Visit our [*Release your Python package*](../releases/releases_pypi.md) guide for information on how to publish your package to PyPI.
+
+### Using `uv` for building and releasing Python packages
+
+If you're looking to streamline your Python packaging workflow even further, consider using `uv`. Alongside traditional tooling, `uv` offers a fast, unified workflow for packaging. It reads project metadata from `pyproject.toml`, builds source and wheel distributions, and can publish directly to package indexes (e.g., PyPI). This consolidates steps that typically require separate tools (e.g., `build` and `twine`) and helps keep release processes consistent across local development and continuous integration.
+
+In practice, `uv build` produces artifacts under `dist/` using the configured build backend, and `uv publish` can upload those artifacts using PyPI API tokens or interactive credentials. Because `uv` also manages environments and Python runtimes, the same tool can be used to create an isolated build environment, lock dependencies for reproducibility, and run test commands before releasing.
+
+:::{.callout-note appearance="simple" icon="false"}
+## {{< fa signs-post >}} Learn more
+
+- [`uv` documentation](https://docs.astral.sh/uv/)
+:::
