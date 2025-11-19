@@ -7,7 +7,7 @@ date: 2025-04-02
 
 # We use this key to indicate the last modified date [manual entry, use YYYY-MM-DD]
 # Uncomment and populate the next line accordingly
-date-modified: 2025-08-25
+date-modified: 2025-09-19
 
 # Do not modify
 lang: en
@@ -40,11 +40,12 @@ corresponding: Elviss Dvinskis
 
 # Meaningful keywords, newline separated [manual entry]
 # Uncomment and populate the next line and list accordingly
-categories: 
- - package
- - Python
- - pyproject.toml
- - uv
+categories:
+  - Software
+  - Package
+  - Python
+  - pyproject.toml
+  - uv
 ---
 
 By turning your code into a package and hosting it on a platform like PyPI (Python Package Index), you enhance the quality and sustainability of your software, promote reuse and embrace contributions from external collaborators.

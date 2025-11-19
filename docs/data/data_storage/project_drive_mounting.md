@@ -6,7 +6,7 @@
 date: 2025-07-04
 
 # We use this key to indicate the last modified date [manual entry]
-date-modified: 2025-07-07
+date-modified: 2025-09-19
 
 # Do not modify
 lang: en
@@ -40,9 +40,10 @@ maintainer_1: Elviss Dvinskis
 # Meaningful keywords, newline separated [manual entry]
 # Uncomment and populate the next line and list accordingly
 categories: 
+ - Data
+ - Storage
  - Project Data Storage
- - vps
-
+ - VPS
 ---
 
 *Project drive* storage can be mounted and made accessible in your TU Delft Virtual Private Server (VPS).

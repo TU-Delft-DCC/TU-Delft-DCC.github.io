@@ -3,11 +3,11 @@
 
 # We use this key to indicate the last reviewed date [manual entry, use YYYY-MM-DD]
 # Uncomment and populate the next line accordingly
-date: 2024-12-07
+date: 2025-08-29
 
 # We use this key to indicate the last modified date [manual entry, use YYYY-MM-DD]
 # Uncomment and populate the next line accordingly
-date-modified: 2025-07-11
+date-modified: 2025-09-19
 
 # Do not modify
 lang: en
@@ -31,47 +31,50 @@ title: Servers
 
 # Maintainers of the document, will not be parsed [manual entry]
 # Uncomment and populate the next lines accordingly
-maintainer_1: Yasel Quintero
-#maintainer_2:
+maintainer_1: Raúl Ortiz Merino
+maintainer_2: Yasel Quintero
 
 # To whom reach out regarding the document, will not be parsed [manual entry]
 # Uncomment and populate the next line accordingly
-corresponding: Yasel Quintero
+corresponding: Raúl Ortiz Merino
 
 # Meaningful keywords, newline separated [manual entry]
 # Uncomment and populate the next line and list accordingly
-categories:
- - servers
- - infrastructure
+categories: 
+ - Infrastructure
+ - Servers
 
 ---
 
-TU Delft offers its employees the use of physical or virtual servers. These servers are known as faculty managed servers and can be requested to conduct work related to a specific project within a faculty.
+A *server* is a computer that handles *requests* (data, services, or programs) from other computers, known as *clients*, over a network. Servers are often a critical component of architectural solutions for data management and software deployment. There are many reasons why you as a researcher may need to use a server, for example:
+
+* You need a machine to handle large amounts of requests 
+* You want to outsource the maintenance of a server to TU Delft ICT
+* You would like to rely on safety and security administrated by the university, including backups
+* A part of your analysis should be running continuously, and cannot do it with your own machine 
 
 :::{.callout-note appearance="simple" icon="false"}
 ## {{< fa info-circle >}} Note
-It is not possible to use the servers to set up services that are already provided by the ICT department.
+It is not recommended to use servers to set up services that are already provided by the ICT department. When in doubt, you can always contact your Faculty ICT Manager (FIM) and/or Faculty Data Steward.
 :::
 
 #### **Virtual vs physical servers**
 
-There is a choice between virtual and physical servers. Virtual servers are provided free of charge and can be requested via TOPdesk. Physical servers can be requested by contacting the faculty's IT manager, and any associated costs are paid by the purchasing department.
+All servers are a physical computer sitting somewhere. However, there is a common distiction between virtual and physical servers, where a virtual server is an independent instance provided by a larger physical server. Virtual servers are provided free of charge and can be requested via TOPdesk. Physical server placement can be requested by contacting the faculty's IT manager, and any associated costs are paid by the purchasing researcher and/or department.
 
-In most cases, a virtual server is the most suitable option. However, a physical server may be necessary when it is intended for use as a GPU or computing cluster.
+In most cases, a virtual server is the most suitable option. However, a physical server may be necessary when it is intended for specific use cases (e.g., laboratory equipment, sensor data acquisition, image processing).
 
-#### **Server configuration**
+TU Delft offers its employees the use of physical or virtual servers, these servers are referred as faculty managed servers which are therefore *private* to the university network by default. *Virtual Private Servers* (VPS) can be requested as described in the next guide [*Request a VPS*](VPS_request.md), whereas physical server placement follow a different procedure for which we strongly encourage you to consult your FIM.
 
-When requesting a virtual server, users can choose from a range of predefined hardware and operating system configurations. The following operating systems are available: Windows Server 2019, Windows Server 2022, Red Hat Enterprise Linux (latest supported version), and Ubuntu (latest LTS version).
+#### **Relevant considerations**
 
-If additional capacity is needed, it can be requested via the 'ICT malfunction' or 'Request ICT service' forms in TOPdesk. This includes options such as increasing the number of processors, cores per processor, RAM, or disk storage.
-
-Some considerations:
+Having a Faculty Managed Server (either virtual or physical) can poise several advantages:
 
 * ICT provides the server, operating system, and network access. 
-* Users are granted administrator privileges, allowing them to install any required software, provided it complies with the conditions specified in the request form.
-* Access can be granted to both TU Delft members and external users.
 * ICT provides daily backups, restoration services, and virus scanning for Windows servers.
 * ICT ensures that the server operating system remains up to date (e.g., security patches), except for Linux systems.
+* Access can be granted to both TU Delft members and external users.
+* Users are granted administrator privileges, allowing them to install any required software, provided it complies with the conditions specified in the request form.
 
 :::{.callout-tip appearance="simple" icon="false"}
 ## {{< fa lightbulb >}} Tip
@@ -81,13 +84,7 @@ Detailed information on managing the server, including network and firewall sett
 #### **Example use cases** 
 
 - Performing computational or data processing tasks that require a dedicated server environment.
-- Running an instance of a service or application, such as ABAQUS, COMSOL, or other specialized tools for a lab or research group.
+- Running an instance of a service, application, or other specialized tools for a lab or research group not currently centrally provided by the university.
 - Hosting a static website, a web application, or an API for a project.
 - Hosting databases, such as MySQL, PostgreSQL, MongoDB, or other database management systems.
-- Deploying and managing TU Delft GitLab runners for CI/CD pipelines.
 
-#### **Relevant links**  
-
-- [Intranet page](https://intranet.tudelft.nl/en/-/hosting-servers?p_l_back_url=%2Fen%2Fgroup%2Fguest%2Fsearch%3Fq%3Dvirtual%2Bprivate%2Bserver) for faculty managed servers
-- [TOPdesk form](https://tudelft.topdesk.net/tas/public/ssp/content/serviceflow?unid=418c986f186d4934848dc2712039ed34&openedFromService=true) to request a new virtual server
-- [Intranet page](https://intranet.tudelft.nl/-/faculty-it-manager) for faculty IT managers

@@ -7,7 +7,7 @@ date: 2025-05-05
 
 # We use this key to indicate the last modified date [manual entry, use YYYY-MM-DD]
 # Uncomment and populate the next line accordingly
-date-modified: 2025-07-11
+date-modified: 2025-09-19
 
 # Do not modify
 lang: en
@@ -41,10 +41,9 @@ corresponding: Elviss Dvinskis
 # Meaningful keywords, newline separated [manual entry]
 # Uncomment and populate the next line and list accordingly
 categories: 
- - offboarding
- - ownership
- - data management
-
+ - Data
+ - Offboarding
+ - Ownership
 ---
 
 Offboarding procedures are necessary for ensuring the continuity and integrity of research data when team members leave or transition roles. Establishing clear ownership protocols and conducting thorough offboarding processes help maintain data accessibility, prevent loss, and ensure compliance with institutional policies. To achieve effective offboarding, document data responsibilities, transfer access rights, and conduct exit interviews to capture essential knowledge and insights. 

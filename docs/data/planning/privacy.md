@@ -7,7 +7,7 @@ date: 2025-05-09
 
 # We use this key to indicate the last modified date [manual entry, use YYYY-MM-DD]
 # Uncomment and populate the next line accordingly
-date-modified: 2025-07-11
+date-modified: 2025-09-19
 
 # Do not modify
 lang: en
@@ -41,9 +41,8 @@ title: Privacy
 # Meaningful keywords, newline separated [manual entry]
 # Uncomment and populate the next line and list accordingly
 categories: 
- - privacy
- - data
-
+ - Data
+ - Privacy
 ---
 
 In case you are working with sensitive data, it is important to consider the privacy of the individuals involved. This includes ensuring that personal data is collected, stored, and processed in compliance with relevant laws and regulations. 

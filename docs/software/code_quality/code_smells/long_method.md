@@ -7,7 +7,7 @@ date: 2025-02-01
 
 # We use this key to indicate the last modified date [manual entry, use YYYY-MM-DD]
 # Uncomment and populate the next line accordingly
-date-modified: 2025-07-11
+date-modified: 2025-09-19
 
 # Do not modify
 lang: en
@@ -41,8 +41,9 @@ author_1: Maurits Kok
 # Meaningful keywords, newline separated [manual entry]
 # Uncomment and populate the next line and list accordingly
 categories: 
-- refactoring 
-# - 
+  - Software
+  - Refactoring
+  - Long Methods
 
 ---
 
@@ -50,7 +51,7 @@ categories:
 > 
 > **Robert C. Martin** (Uncle Bob)
 
-A "long method" is a common code where a method or function becomes overly long and handles multiple responsibilities at once. This makes the code hard to read, understand, test, and maintain. Long methods often indicate that a function is doing too much and may benefit from being broken into smaller, more focussed helper functions.
+A "long method" is a common code smell where a method or function becomes overly long and handles multiple responsibilities at once. This makes the code hard to read, understand, test, and maintain. Long methods often indicate that a function is doing too much and may benefit from being broken into smaller, more focussed helper functions.
 
 ## Symptoms
 A long method often:

@@ -7,7 +7,7 @@ date: 2025-05-05
 
 # We use this key to indicate the last modified date [manual entry, use YYYY-MM-DD]
 # Uncomment and populate the next line accordingly
-date-modified: 2025-07-11
+date-modified: 2025-09-19
 
 # Do not modify
 lang: en
@@ -42,9 +42,12 @@ corresponding: Elviss Dvinskis
 # Meaningful keywords, newline separated [manual entry]
 # Uncomment and populate the next line and list accordingly
 categories: 
- - publishing 
- - 4tu.researchdata
- - zenodo
+ - Data
+ - Release
+ - Publish
+ - Archive
+ - 4TU
+ - Zenodo
 
 ---
 Data repositories are online locations for storing research data long term. When data is published in a repository, it is (often) assigned a persistent digital object identifier (DOI), which ensures that the data is discoverable and accessible over time. When published, the data should be accompanied by an appropriate license and metadata describing your data. 

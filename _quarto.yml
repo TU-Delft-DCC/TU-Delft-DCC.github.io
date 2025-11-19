@@ -12,18 +12,10 @@ project:
     - "CODE_OF_CONDUCT.md"
     - "docs/**/*.md"
     - "docs/**/*.qmd"
+    - "listings.qmd"
     # Do not render
-    - "!_under_development/**"
-    - "!slides/**"
     - "!docs/infrastructure/getting_started_susan.md"
-    - "!docs/infrastructure/VPS_SSH_connect.md"
-    - "!docs/infrastructure/giving_sudo_privilages.md"
-    - "!docs/infrastructure/configure_passwordless_login.md"
-    - "!docs/infrastructure/gitlab/runner_python.md"
-    - "!docs/infrastructure/gitlab/runner_docker.md"
-    - "!docs/software/documentation.md"
-    - "!docs/software/containers/podman.md"
-    - "!docs/data/to_be_deleted_publishing.md"
+    - "!docs/infrastructure/giving_sudo_privilege.md"
     - "!docs/_archived/**"
 execute: 
   freeze: true # When freeze: true is set, it tells Quarto to "freeze" the execution of code chunks.
@@ -80,10 +72,10 @@ website:
             href: CODE_OF_CONDUCT.md
           - text: About the DCC
             href: https://www.tudelft.nl/digital-competence-centre
-    tools:
-      - icon: github
-        href: https://github.com/TU-Delft-DCC/TU-Delft-DCC.github.io/
-        text: DCC GitHub
+    # tools:
+    #   - icon: github
+    #     href: https://github.com/TU-Delft-DCC/TU-Delft-DCC.github.io/
+    #     text: DCC GitHub
   sidebar:
     - title: "Guides"
       style: "docked"
@@ -132,6 +124,8 @@ website:
                   href: docs/software/development_workflow/branch_management.qmd
                 - text: Collaboration
                   href: docs/software/development_workflow/collaboration.qmd
+                - text: Software design
+                  href: docs/software/development_workflow/software_design.qmd                  
             - section: "Documentation"
               href: docs/software/documentation/index.md
               contents:
@@ -230,12 +224,17 @@ website:
             - section: "Automation"
               href: docs/software/automation/ci_cd.md
               contents:
-                - text: Continuous Integration with GitLab
-                  href: docs/software/automation/gitlab/gitlab_docker.md
-                - text: Setting up a GitLab runner for MATLAB
-                  href: docs/software/automation/gitlab/runner_matlab.md
-            - text: Tooling
-              href: docs/software/tools/tools.md
+                - text: GitHub Actions
+                  href: docs/software/automation/github_ci_cd.md
+                - text: GitLab pipelines
+                  href: docs/software/automation/gitlab_ci_cd.md
+                  contents:
+                    - text: Continuous Integration with GitLab
+                      href: docs/software/automation/gitlab/gitlab_docker.md
+                    - text: Setting up a GitLab runner for MATLAB
+                      href: docs/software/automation/gitlab/runner_matlab.md
+#            - text: Tooling
+#              href: docs/software/tools/tools.md
 #        - text: <br>
 #        - section: <span style="filter:grayscale(100%);">📖</span> **Resources**
 #          contents:
@@ -301,17 +300,21 @@ website:
           - section: "Remote servers"
             href: docs/infrastructure/remote_servers.md
             contents:
-              - text: Request a VPS
+              - text: Server request form
                 href: docs/infrastructure/VPS_request.md
-              - href: docs/infrastructure/VPS_SSH.md
-                text: Setting up SSH tunneling
-              - href: docs/infrastructure/moving_data.md
-                text: Moving data to remote servers
-              - href: docs/infrastructure/VPS_SSL_Certs.md
-                text: Configure SSL certificates
-              - href: docs/infrastructure/web_servers.md
-                text: Web servers
-
+              - text: Server connection
+                href: docs/infrastructure/VPS_SSH.md
+              - text: Data transfer
+                href: docs/infrastructure/moving_data.md
+              - text: Web servers
+                href: docs/infrastructure/web_servers.md
+                contents:
+                  - text: SSL certificates
+                    href: docs/infrastructure/VPS_SSL_Certs.md
+          - text: <br>
+        - text: ---
+        - href: listings.qmd
+          text: "![](/docs/img/catalog.svg){height=1em style='filter: invert(0.5) sepia(1) saturate(5) hue-rotate(175deg)'} **Catalogue**"
     # - title: "TU Delft Support"
     #   contents: 
     #   - href: docs/tud-support/index.md

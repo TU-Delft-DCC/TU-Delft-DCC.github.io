@@ -7,7 +7,7 @@ date: 2025-02-24
 
 # We use this key to indicate the last modified date [manual entry, use YYYY-MM-DD]
 # Uncomment and populate the next line accordingly
-date-modified: 2025-07-11
+date-modified: 2025-09-19
 
 # Do not modify
 lang: en
@@ -40,13 +40,16 @@ corresponding: Elviss Dvinskis
 
 # Meaningful keywords, newline separated [manual entry]
 # Uncomment and populate the next line and list accordingly
-#categories: 
-# - development workflow
-# - 
+categories: 
+- Software
+- Version Control
+- Collaboration
+- Project Organization
 
 ---
 
-A well-organized workspace and clear software development process make research easier and more effective. Organizing your project repository clearly and following steps for working alone or with others can help improve your research and make it easier to expand. This section provides guidance on how to manage your project, structure your project, reuse projects, manage environments and dependencies, choose a branching strategy, and collaborate with others.
+### Version control and collaboration
+Version control ensures transparency, reproducibility, and smooth teamwork. Clear branching strategies and consistent workflows make it easier to track changes, review code, and integrate contributions.
 
 ::: {.content-block}
 ::: {.features}
@@ -61,7 +64,34 @@ Managing your projects through version control platforms.
 :::
 
 ::: {.feature}
-### {{< fa folder-tree >}} Project Structue
+### {{< fa code-branch >}} Branch Management
+Choosing a branching strategy.
+
+::: {.learn-more}
+[Learn more »](./branch_management.qmd)
+:::
+:::
+
+::: {.feature}
+### {{< fa code-fork >}} Collaboration
+Collaborative workflow.
+
+::: {.learn-more}
+[Learn more »](./collaboration.qmd)
+:::
+:::
+
+:::
+:::
+
+### Project organization
+A structured repository with defined folders, managed dependencies, and reusable components keeps your project consistent, scalable, and easier for others to understand and extend.
+
+::: {.content-block}
+::: {.features}
+
+::: {.feature}
+### {{< fa folder-tree >}} Project Structure
 Structuring your project.
 
 ::: {.learn-more}
@@ -97,22 +127,14 @@ Tools for writing and managing workflows.
 :::
 
 ::: {.feature}
-### {{< fa code-branch >}} Branch Management
-Choosing a branching strategy.
+### {{< fa palette >}} Software Design
+Principles for designing your software.
 
 ::: {.learn-more}
-[Learn more »](./branch_management.qmd)
+[Learn more »](./software_design.qmd)
 :::
 :::
 
-::: {.feature}
-### {{< fa code-fork >}} Collaboration
-Collaborative workflow.
-
-::: {.learn-more}
-[Learn more »](./collaboration.qmd)
-:::
-:::
 
 :::
 :::

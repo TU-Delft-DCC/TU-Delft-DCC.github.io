@@ -7,7 +7,7 @@ date: 2025-02-10
 
 # We use this key to indicate the last modified date [manual entry, use YYYY-MM-DD]
 # Uncomment and populate the next line accordingly
-date-modified: 2025-07-11
+date-modified: 2025-09-19
 
 # Do not modify
 lang: en
@@ -40,8 +40,9 @@ author_1: Maurits Kok
 
 # Meaningful keywords, newline separated [manual entry]
 # Uncomment and populate the next line and list accordingly
-categories:
-    - testing
+categories: 
+    - Software
+    - Testing
     - MATLAB
 
 ---

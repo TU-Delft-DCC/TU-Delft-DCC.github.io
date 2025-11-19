@@ -6,7 +6,7 @@ repo-actions: false
 css: /themes/tiles.css
 ---
 
-These guides provide a starting point for Research Software, Research Data, and Research Computing at TU Delft. This is an initiative from the TU Delft [Digital Competence Centre](/docs/community/dcc.md).
+These guides provide a starting point for Research Software, Research Data, and Research Computing at TU Delft. This is an initiative from the TU Delft [Digital Competence Centre](https://www.tudelft.nl/digital-competence-centre).
 
 {{< fa check >}} Shared solutions for **research support staff**<br>
 {{< fa check >}} Practical guides for **researchers**<br>

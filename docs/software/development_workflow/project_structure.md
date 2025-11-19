@@ -7,7 +7,7 @@ date: 2025-02-24
 
 # We use this key to indicate the last modified date [manual entry, use YYYY-MM-DD]
 # Uncomment and populate the next line accordingly
-date-modified: 2025-07-11
+date-modified: 2025-09-19
 
 # Do not modify
 lang: en
@@ -40,10 +40,10 @@ corresponding: Elviss Dvinskis
 
 # Meaningful keywords, newline separated [manual entry]
 # Uncomment and populate the next line and list accordingly
-#categories: 
-# - repository structures
-# - 
-# - 
+categories:
+  - Software
+  - Project Organization
+  - Repository Structure
 
 ---
 

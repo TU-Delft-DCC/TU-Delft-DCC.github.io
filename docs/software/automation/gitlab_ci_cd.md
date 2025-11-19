@@ -3,11 +3,11 @@
 
 # We use this key to indicate the last reviewed date [manual entry, use YYYY-MM-DD]
 # Uncomment and populate the next line accordingly
-date: 2025-04-04
+date: 2025-08-22
 
 # We use this key to indicate the last modified date [manual entry, use YYYY-MM-DD]
 # Uncomment and populate the next line accordingly
-date-modified: 2025-09-19
+date-modified: 2025-10-28
 
 # Do not modify
 lang: en
@@ -17,7 +17,7 @@ language:
 
 # Title of the document [manual entry]
 # Uncomment and populate the next line accordingly
-title: Packaging
+title: GitLab pipelines
 
 # Brief overview of the document (will be used in listings) [manual entry]
 # Uncomment and populate the next line and uncomment "hide-description: true".
@@ -42,33 +42,34 @@ corresponding: Elviss Dvinskis
 # Uncomment and populate the next line and list accordingly
 categories:
   - Software
-  - Package
-  - Python
-  - R
+  - Automation
+  - GitLab
+  - CI/CD
 
 ---
 
-Packaging allows developers to bundle their code into a format that is easily installable and manageable across different environments. By creating a package/library, you ensure that all necessary components, including dependencies and configuration files, are included in a single unit, simplifying the installation process for users. Here you can find how to package your Python or R projects for distribution.
+As previously mentioned in the [Project management](../development_workflow/project_management.md#version-control-platforms) section, TU Delft has its own GitLab instance. However, it does not (yet) have preconfigured servers available to run [**GitLab pipelines**](https://docs.gitlab.com/ee/ci/pipelines/), the equivalent of GitHub Actions. 
 
+In order to set up a pipeline, you will need to request a TU Delft Virtual Private Server and configure a GitLab runner there. The DCC has developed a step-by-step guide (see below), along with guidance on setting up a CI pipeline for a MATLAB environment.
 
 ::: {.content-block}
 ::: {.features}
 
 ::: {.feature}
-### {{< fa box-open >}} Create a Python package
-Bundle your Python project.
+### {{< fa brands square-gitlab >}} Continuous Integration with GitLab
+Set up CI/CD for your project in TU Delft GitLab.
 
 ::: {.learn-more}
-[Learn more »](./packaging_python.md)
+[Learn more »](./gitlab/gitlab_docker.md)
 :::
 :::
 
 ::: {.feature}
-### {{< fa box-open >}} Create an R package
-Bundle your R project.
+### {{< fa brands square-gitlab >}} Setting up a GitLab runner for MATLAB
+Create a CI pipeline for a MATLAB environment in TU Delft GitLab.
 
 ::: {.learn-more}
-[Learn more »](./packaging_r.md)
+[Learn more »](./gitlab/runner_matlab.md)
 :::
 :::
 
