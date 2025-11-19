@@ -61,9 +61,12 @@ When a function or method takes many parameters (inputs), it can become difficul
 :::
 
 ## Example - Long parameter list
-Here’s an example of a function that takes many parameters:
+Here's an example of a function that takes many parameters:
 
-```python	
+::: {.panel-tabset}
+
+## Python
+```python
 def process_machine_operation(machine_id, temperature, pressure, speed, duration):
     # Perform machine operation
     print("Machine ID:", machine_id)
@@ -74,12 +77,36 @@ def process_machine_operation(machine_id, temperature, pressure, speed, duration
 
 # Usage
 process_machine_operation(
-    machine_id="M001", 
-    temperature=100.5, 
-    pressure=200.0, 
-    speed=1500.0, 
+    machine_id="M001",
+    temperature=100.5,
+    pressure=200.0,
+    speed=1500.0,
     duration=5.0)
-```	
+```
+
+## R
+```r
+process_machine_operation <- function(machine_id, temperature, pressure, speed, duration) {
+  # Perform machine operation
+  print(paste("Machine ID:", machine_id))
+  print(paste("Temperature:", temperature))
+  print(paste("Pressure:", pressure))
+  print(paste("Speed:", speed))
+  print(paste("Operation Duration:", duration))
+}
+
+# Usage
+process_machine_operation(
+  machine_id = "M001",
+  temperature = 100.5,
+  pressure = 200.0,
+  speed = 1500.0,
+  duration = 5.0
+)
+```
+
+:::
+
 This function takes a lot of information at once: the machine ID, temperature, pressure, speed, and duration. If the function grows even more complex, it will become very hard to keep track of what each parameter means, and it could make the code difficult to maintain.
 
 
@@ -90,7 +117,11 @@ To solve this problem, we can do one or both of the following:
 2. **Use Objects to Group Related Data:** Instead of passing many individual pieces of information, we can group them together into one object or structure that holds related information.
 
 
-#### 1. Using a Dataclass
+#### 1. Using a Dataclass (or List in R)
+
+::: {.panel-tabset}
+
+## Python
 ```python
 from dataclasses import dataclass
 
@@ -103,8 +134,28 @@ class MachineOperationData:
     speed: float
     duration: float
 ```
-Now, instead of passing five separate parameters to our function, we’ll just pass one object that holds everything. Next, we change our `process_machine_operation` function to accept this new object, making it simpler and cleaner.
 
+## R
+```r
+# Create a list to group the machine operation parameters
+operation_data <- list(
+  machine_id = "M001",
+  temperature = 100.5,
+  pressure = 200.0,
+  speed = 1500.0,
+  duration = 5.0
+)
+```
+
+:::
+
+
+Now, instead of passing five separate parameters to our function, we'll just pass one object that holds everything. Next, we change our `process_machine_operation` function to accept this new object, making it simpler and cleaner.
+
+
+::: {.panel-tabset}
+
+## Python
 ```python
 def process_machine_operation(operation_data):
     # Perform machine operation
@@ -114,24 +165,55 @@ def process_machine_operation(operation_data):
     print("Speed:", operation_data.speed)
     print("Operation Duration:", operation_data.duration)
 
-# Usage 
+# Usage
 operation_data = MachineOperationData(
-    machine_id="M001", 
-    temperature=100.5, 
-    pressure=200.0, 
-    speed=1500.0, 
+    machine_id="M001",
+    temperature=100.5,
+    pressure=200.0,
+    speed=1500.0,
     duration=5.0)
+
 process_machine_operation(operation_data)
 ```
 
+## R
+```r
+process_machine_operation <- function(operation_data) {
+  # Perform machine operation
+  print(paste("Machine ID:", operation_data$machine_id))
+  print(paste("Temperature:", operation_data$temperature))
+  print(paste("Pressure:", operation_data$pressure))
+  print(paste("Speed:", operation_data$speed))
+  print(paste("Operation Duration:", operation_data$duration))
+}
+
+# Usage
+operation_data <- list(
+  machine_id = "M001",
+  temperature = 100.5,
+  pressure = 200.0,
+  speed = 1500.0,
+  duration = 5.0
+)
+
+process_machine_operation(operation_data)
+```
+:::
+
+
 :::{.callout-tip}
-You can combine dataclasses with data validation through [**Pydantic**](https://docs.pydantic.dev/latest/).
+**Python**: You can combine dataclasses with data validation through [**Pydantic**](https://docs.pydantic.dev/latest/).
+
+**R**: For more structured validation, consider using the `R6` package for object-oriented programming or the `vctrs` package for data validation.
 :::
 
 #### 2. Divide and conquer
 
-Although using a single dataclass is a good start, we don’t want our data structure to become too big and complicated. If the dataclass starts holding too much data, it can make the code harder to understand. Instead, we can break it into smaller, simpler data classes that work together. For example:
+Although using a single dataclass is a good start, we don't want our data structure to become too big and complicated. If the dataclass starts holding too much data, it can make the code harder to understand. Instead, we can break it into smaller, simpler data classes that work together. For example:
 
+::: {.panel-tabset}
+
+## Python
 ```python
 @dataclass
 class Machine:
@@ -158,10 +240,40 @@ class MachineOperationData:
 
 def process_machine_operation(operation_data):
     print("Machine ID:", operation_data.machine.machine_id)
-    
+
     # Implement machine operation
-```	
-Here, instead of having one large `MachineOperationData` dataclass, we’ve divided it into smaller pieces. Each class now represents a specific part of the data, which can then be used individually as smaller classes or grouped together as needed. This approach keeps everything organized and easy to work with.
+```
+
+## R
+```r
+# Create nested lists to organize related data
+operation_data <- list(
+  machine = list(
+    machine_id = "M001",
+    manufacturer = "TechCorp"
+  ),
+  operation_parameters = list(
+    temperature = 100.5,
+    pressure = 200.0,
+    speed = 1500.0,
+    duration = 5.0
+  ),
+  environmental_conditions = list(
+    humidity = 65.0,
+    altitude = 500.0
+  )
+)
+
+process_machine_operation <- function(operation_data) {
+  print(paste("Machine ID:", operation_data$machine$machine_id))
+
+  # Implement machine operation
+}
+```
+
+:::
+
+Here, instead of having one large `MachineOperationData` dataclass, we've divided it into smaller pieces. Each class (or list in R) now represents a specific part of the data, which can then be used individually as smaller classes or grouped together as needed. This approach keeps everything organized and easy to work with.
 
 ## Key takeaways
 - Don’t pass too many parameters. If a function requires many parameters, it’s a sign that the function might be doing too much. Group related data together to reduce the number of parameters or break the function into smaller parts.
