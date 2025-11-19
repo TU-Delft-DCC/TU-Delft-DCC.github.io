@@ -117,7 +117,7 @@ To solve this problem, we can do one or both of the following:
 2. **Use Objects to Group Related Data:** Instead of passing many individual pieces of information, we can group them together into one object or structure that holds related information.
 
 
-#### 1. Using a Dataclass (or List in R)
+#### 1. Using a Dataclass (or S3 Classes in R)
 
 ::: {.panel-tabset}
 
@@ -137,14 +137,19 @@ class MachineOperationData:
 
 ## R
 ```r
-# Create a list to group the machine operation parameters
-operation_data <- list(
-  machine_id = "M001",
-  temperature = 100.5,
-  pressure = 200.0,
-  speed = 1500.0,
-  duration = 5.0
-)
+# Create an S3 class to group the machine operation parameters
+MachineOperationData <- function(machine_id, temperature, pressure, speed, duration) {
+  structure(
+    list(
+      machine_id = machine_id,
+      temperature = temperature,
+      pressure = pressure,
+      speed = speed,
+      duration = duration
+    ),
+    class = "MachineOperationData"
+  )
+}
 ```
 
 :::
@@ -175,6 +180,9 @@ operation_data = MachineOperationData(
 
 process_machine_operation(operation_data)
 ```
+:::{.callout-tip}
+**Python**: You can combine dataclasses with data validation through [**Pydantic**](https://docs.pydantic.dev/latest/).
+:::
 
 ## R
 ```r
@@ -188,7 +196,7 @@ process_machine_operation <- function(operation_data) {
 }
 
 # Usage
-operation_data <- list(
+operation_data <- MachineOperationData(
   machine_id = "M001",
   temperature = 100.5,
   pressure = 200.0,
@@ -198,14 +206,15 @@ operation_data <- list(
 
 process_machine_operation(operation_data)
 ```
-:::
 
 
 :::{.callout-tip}
-**Python**: You can combine dataclasses with data validation through [**Pydantic**](https://docs.pydantic.dev/latest/).
 
-**R**: For more structured validation, consider using the `R6` package for object-oriented programming or the `vctrs` package for data validation.
+**R**: S3 is R's lightweight object-oriented system. For more advanced OOP features and validation, consider using the `R6` package or the `S7` package.
 :::
+
+:::
+
 
 #### 2. Divide and conquer
 
@@ -246,22 +255,43 @@ def process_machine_operation(operation_data):
 
 ## R
 ```r
-# Create nested lists to organize related data
-operation_data <- list(
-  machine = list(
-    machine_id = "M001",
-    manufacturer = "TechCorp"
-  ),
-  operation_parameters = list(
-    temperature = 100.5,
-    pressure = 200.0,
-    speed = 1500.0,
-    duration = 5.0
-  ),
-  environmental_conditions = list(
-    humidity = 65.0,
-    altitude = 500.0
+# Define constructor functions for each component
+Machine <- function(machine_id, manufacturer) {
+  structure(
+    list(machine_id = machine_id, manufacturer = manufacturer),
+    class = "Machine"
   )
+}
+
+OperationParameters <- function(temperature, pressure, speed, duration) {
+  structure(
+    list(temperature = temperature, pressure = pressure,
+         speed = speed, duration = duration),
+    class = "OperationParameters"
+  )
+}
+
+EnvironmentalConditions <- function(humidity, altitude) {
+  structure(
+    list(humidity = humidity, altitude = altitude),
+    class = "EnvironmentalConditions"
+  )
+}
+
+MachineOperationData <- function(machine, operation_parameters, environmental_conditions) {
+  structure(
+    list(machine = machine,
+         operation_parameters = operation_parameters,
+         environmental_conditions = environmental_conditions),
+    class = "MachineOperationData"
+  )
+}
+
+# Usage with composed S3 classes
+operation_data <- MachineOperationData(
+  machine = Machine("M001", "TechCorp"),
+  operation_parameters = OperationParameters(100.5, 200.0, 1500.0, 5.0),
+  environmental_conditions = EnvironmentalConditions(65.0, 500.0)
 )
 
 process_machine_operation <- function(operation_data) {
@@ -273,7 +303,7 @@ process_machine_operation <- function(operation_data) {
 
 :::
 
-Here, instead of having one large `MachineOperationData` dataclass, we've divided it into smaller pieces. Each class (or list in R) now represents a specific part of the data, which can then be used individually as smaller classes or grouped together as needed. This approach keeps everything organized and easy to work with.
+Here, instead of having one large `MachineOperationData` class, we've divided it into smaller pieces. Each class now represents a specific part of the data, which can then be used individually or grouped together as needed. This approach keeps everything organized and easy to work with.
 
 ## Key takeaways
 - Don’t pass too many parameters. If a function requires many parameters, it’s a sign that the function might be doing too much. Group related data together to reduce the number of parameters or break the function into smaller parts.
@@ -284,4 +314,5 @@ Here, instead of having one large `MachineOperationData` dataclass, we've divide
 :::{.callout-note appearance="simple" icon="false"}
 ## {{< fa signs-post >}} Learn more
 - [RealPython - Data Classes](https://realpython.com/python-data-classes/)
+- [R S3 Classes](https://adv-r.hadley.nz/s3.html)
 :::
