@@ -63,15 +63,19 @@ A long method often:
 ## Example - Long method
 Below is an example of a function that is doing too much:
 
+::: {.panel-tabset}
+
+## Python
+
 ```python
 def load_data(filepath: str):
     # Check if data file exists
     if not os.path.exists(filepath):
         raise FileNotFoundError("File not found")
-    
+
     _, extension = os.path.splitext(filepath)
 
-    # Load data based on file extension    
+    # Load data based on file extension
     if extension == ".json":
         with open(filepath, "r") as file:
             # If file extension is .json: load json data
@@ -85,13 +89,50 @@ def load_data(filepath: str):
         data = read_csv(filepath)
     else:
         raise ValueError(f"Unsupported file format: {extension}")
-    
+
     # Verify content of data set
     if not isinstance(data, (list, dict, pd.DataFrame)):
         raise ValueError("Invalid data format")
 
     return data
 ```
+
+## R
+
+```r
+load_data <- function(filepath) {
+  # Check if data file exists
+  if (!file.exists(filepath)) {
+    stop("File not found")
+  }
+
+  # Extract file extension
+  extension <- tools::file_ext(filepath)
+
+  # Load data based on file extension
+  if (extension == "json") {
+    # If file extension is .json: load json data
+    data <- jsonlite::read_json(filepath)
+  } else if (extension == "rds") {
+    # If file extension is .rds: load serialized R object
+    data <- readRDS(filepath)
+  } else if (extension == "csv") {
+    # If file extension is .csv: load csv data
+    data <- read.csv(filepath)
+  } else {
+    stop(paste("Unsupported file format:", extension))
+  }
+
+  # Verify content of data set
+  if (!is.data.frame(data) && !is.list(data)) {
+    stop("Invalid data format")
+  }
+
+  return(data)
+}
+```
+
+:::
 
 
 #### Issues
@@ -105,10 +146,13 @@ Identify logical blocks of code within the long method/function and extract them
 
 #### Example solution long method
 
+::: {.panel-tabset}
+
+## Python
 
 ```python
 def load_data(filepath: str) -> Data:
-    verify_filepath(filepath: str)  
+    verify_filepath(filepath: str)
     data = read_data(filepath: str)
     verify_data(data)
     return data
@@ -122,7 +166,7 @@ def verify_filepath(filepath: str):
 def read_data(filepath: str) -> Data:
     # Extract file extension
     _, extension = os.path.splitext(filepath)
-    
+
     # Create dictionary mapping file extensions to read functions
     data_types = {
         ".json": read_from_json,
@@ -142,6 +186,67 @@ def read_from_json(filepath: str): pass
 def read_from_pickle(filepath: str): pass
 def read_from_csv(filepath: str): pass
 ```
+
+## R
+
+```r
+# Main function that orchestrates the workflow
+load_data <- function(filepath) {
+  verify_filepath(filepath)
+  data <- read_data(filepath)
+  verify_data(data)
+  return(data)
+}
+
+# Helper function to verify file path
+verify_filepath <- function(filepath) {
+  if (!file.exists(filepath)) {
+    stop("File not found")
+  }
+}
+
+# Helper function to read data from file based on its extension
+read_data <- function(filepath) {
+  # Extract file extension
+  extension <- tools::file_ext(filepath)
+
+  # Create list mapping file extensions to read functions
+  data_readers <- list(
+    json = read_from_json,
+    rds = read_from_rds,
+    csv = read_from_csv
+  )
+
+  # Select read function based on file extension
+  if (!(extension %in% names(data_readers))) {
+    stop(paste("Unsupported file format:", extension))
+  }
+
+  return(data_readers[[extension]](filepath))
+}
+
+# Helper function to verify data
+verify_data <- function(data) {
+  if (!is.data.frame(data) && !is.list(data)) {
+    stop("Invalid data format")
+  }
+}
+
+# Placeholder helper functions to read data from different file formats
+read_from_json <- function(filepath) {
+  jsonlite::read_json(filepath)
+}
+
+read_from_rds <- function(filepath) {
+  readRDS(filepath)
+}
+
+read_from_csv <- function(filepath) {
+  read.csv(filepath)
+}
+```
+
+:::
 
 ## Key takeaways
 
