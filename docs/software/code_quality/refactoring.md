@@ -79,14 +79,21 @@ Refactoring is the process of **restructuring existing code without changing its
 Refactoring should be done gradually, improving code in small controlled 
 steps without introducing new functionalities. Keep these principles in mind:
 
-{{< fa broom >}} **Maintain clean code** - Aim for clarity, simplicity, and readability.  
-{{< fa ban >}} **Avoid adding new features** - Focus on improving structure, not functionality.  
-{{< fa check-double >}} **Ensure tests pass** - Verify that all existing tests still succeed to prevent new bugs.
+- {{< fa broom >}} **Maintain clean code** &mdash; Aim for clarity, simplicity, and readability.
 
-<!-- Add recomentdation by dave farley -->
+- {{< fa shoe-prints >}} **Always work in small tiny steps** &mdash; So that you can easily identify if a change to the code changes the program's behaviour. 
 
+- {{< fa ban >}} **Avoid adding new features** &mdash; Focus on improving structure, not functionality. 
 
-## Dave Farley's refactoring method
+- {{< fa check-double >}} **Ensure tests pass** &mdash; Verify that all existing tests succeed before starting with refactoring. If there are no tests, consider writing some basic tests first to cover the existing functionality. 
+
+- {{< fa vial-circle-check >}} **Test often** &mdash; So that you can be sure the program's behaviour remains unchanged. 
+
+- {{< fa code-commit >}} **Commit often** &mdash;  Use a version control system and commit often, so that you can easily revert changes if something goes wrong. 
+
+- {{< fa bullseye >}} **Remember, you can stop at any point** &mdash; Refactoring can be an endless taks if you aim for perfection. Instead aim to leave the code in a better state than you found it.
+
+## Farley's refactoring method
 
 Refactoring can be approached in various ways. Here, we present a simple four-step method proposed by Dave Farley in his book *"Continuous Delivery"*. This method emphasizes safety and gradual improvement.
 
@@ -119,14 +126,10 @@ When composing methods, consider the following guidelines:
 - Rename things (functions, classes, variables), so that their behaviour is clear in the code.
 
 
-
-::: {.lean-more}
-{{< fa arrow-right >}} [Learn more: How to refactor?](https://refactoring.guru/refactoring/how-to)
-:::
-
 :::{.callout-note appearance="simple" icon="false"}
 ## {{< fa signs-post >}} Learn more
 - [Refactoring techniques from Refactoring.Guru](https://refactoring.guru/refactoring/techniques)
 - [eScience Center - Lesson on refactoring](https://carpentries-incubator.github.io/python-intermediate-development/34-code-refactoring.html)
 - [The Alan Turing Institute - Refactoring](https://alan-turing-institute.github.io/rse-course/html/module07_construction_and_design/07_04_refactoring.html)
+- [Dave Farley's Refactoring Course - Free ](https://courses.cd.training/courses/refactoring-tutorial)
 :::
