@@ -59,6 +59,11 @@ Duplicated code occurs when similar or identical blocks of code appear multiple 
 - Adding a new feature results in copy-pasting existing code rather than reusing it.
 
 ## Example - Duplicate code in functions
+
+::: {.panel-tabset}
+
+### Python
+
 ```python
 def time_of_flight_ball(initial_velocity, launch_angle):
     g = 9.81  # Earth's gravity (m/s²)
@@ -71,16 +76,40 @@ def time_of_flight_rocket(initial_velocity, launch_angle):
 def time_of_flight_satellite(initial_velocity, launch_angle):
     g = 9.81
     return (2 * initial_velocity * np.sin(launch_angle)) / g
-
 ```
 
-### Solution 
+### R
+
+```r
+time_of_flight_ball <- function(initial_velocity, launch_angle) {
+  g <- 9.81  # Earth's gravity (m/s²)
+  return((2 * initial_velocity * sin(launch_angle)) / g)
+}
+
+time_of_flight_rocket <- function(initial_velocity, launch_angle) {
+  g <- 9.81
+  return((2 * initial_velocity * sin(launch_angle)) / g)
+}
+
+time_of_flight_satellite <- function(initial_velocity, launch_angle) {
+  g <- 9.81
+  return((2 * initial_velocity * sin(launch_angle)) / g)
+}
+```
+
+:::
+
+### Solution
 - Refactor the code to accept parameters as arguments, instead of hard-coding them.
 - Extract common functionality into functions or methods.
 - Refactor duplicated code into higher-level abstractions.
 - Make use of utility functions to centralize common code and avoid duplication.
 
-```python	
+::: {.panel-tabset}
+
+### Python
+
+```python
 def time_of_flight(initial_velocity, launch_angle, gravity=9.81):
     """Compute time of flight for any projectile."""
     return (2 * initial_velocity * np.sin(launch_angle)) / gravity
@@ -89,7 +118,23 @@ def time_of_flight(initial_velocity, launch_angle, gravity=9.81):
 tof_ball = time_of_flight(30, np.pi/4)       # Time of flight for a ball
 tof_rocket = time_of_flight(100, np.pi/3)    # Time of flight for a rocket
 tof_mars_probe = time_of_flight(300, np.pi/6, gravity=3.71)  # Gravity adjusted for Mars
-```	
+```
+
+### R
+
+```r
+time_of_flight <- function(initial_velocity, launch_angle, gravity = 9.81) {
+  # Compute time of flight for any projectile
+  return((2 * initial_velocity * sin(launch_angle)) / gravity)
+}
+
+# Usage
+tof_ball <- time_of_flight(30, pi/4)       # Time of flight for a ball
+tof_rocket <- time_of_flight(100, pi/3)    # Time of flight for a rocket
+tof_mars_probe <- time_of_flight(300, pi/6, gravity = 3.71)  # Gravity adjusted for Mars
+```
+
+:::	
 
 ## Key takeaways
 - Extracting common functionality into functions or methods can help reduce duplication and improve code reuse.
