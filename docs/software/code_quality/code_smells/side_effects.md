@@ -67,6 +67,11 @@ Instead, non-pure functions often:
 :::
 
 ## Example - Function with side effects
+
+::: {.panel-tabset}
+
+### Python
+
 ```python
 # Modifies global state (side effect)
 data = []
@@ -76,13 +81,32 @@ def add_item(item):
 
 add_item("A")
 print(data)  # ['A'] - Output depends on previous calls
-
 ```
+
+### R
+
+```r
+# Modifies global state (side effect)
+data <- c()
+
+add_item <- function(item) {
+  data <<- c(data, item)  # Changes external variable using <<-
+}
+
+add_item("A")
+print(data)  # [1] "A" - Output depends on previous calls
+```
+
+:::
 
 ### Solutions
 
 #### 1. Separate pure and non-pure functions
 Keep your computational logic (pure) separate from side-effect operations (non-pure).
+
+::: {.panel-tabset}
+
+### Python
 
 ```python
 def process_data(data):  # Pure function: no external state modification
@@ -98,8 +122,31 @@ processed = process_data(numbers)
 save_to_file("output.txt", processed)
 ```
 
+### R
+
+```r
+process_data <- function(data) {  # Pure function: no external state modification
+  return(data^2)
+}
+
+save_to_file <- function(filename, data) {  # Non-pure: writes to a file
+  writeLines(as.character(data), con = filename)
+}
+
+# Usage
+numbers <- c(1, 2, 3)
+processed <- process_data(numbers)
+save_to_file("output.txt", processed)
+```
+
+:::
+
 #### 2. Avoid mutating global variables
 Use function parameters and return values instead of modifying external variables.
+
+::: {.panel-tabset}
+
+### Python
 
 ```python
 def add_item(data, item):
@@ -108,6 +155,19 @@ def add_item(data, item):
 data = []
 data = add_item(data, "A")  # Safe: no side effects
 ```
+
+### R
+
+```r
+add_item <- function(data, item) {
+  return(c(data, item))  # Returns a new vector instead of modifying global state
+}
+
+data <- c()
+data <- add_item(data, "A")  # Safe: no side effects
+```
+
+:::
 
 ## Key takeaways
 
