@@ -131,7 +131,6 @@ The command above uses the `openssl rsa` tool to decrypt the private key file. T
     rm ~/decrypted_privkey.pem  ~/fullchain.pem ~/privkey.pem
     ```
 
-
 ## Renew Certificate
 
 SSL/TLS certificates have a validity period, after which they expire and need to be renewed. HARICA certificates are valid for up to one year. To renew your certificate, you need to follow the same steps as [requesting a new certificate](#request-certificate). Make sure to do this before the current certificate expires to avoid any disruptions in your website's HTTPS availability.
