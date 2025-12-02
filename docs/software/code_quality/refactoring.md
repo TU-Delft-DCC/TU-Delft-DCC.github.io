@@ -121,6 +121,7 @@ To reduce cyclomatic complexity:
 At the last step, focus on improving the structure and readability of the code by extracting methods or functions from existing code blocks. This involves breaking down large methods into smaller, more manageable pieces that each perform a single task or function. 
 
 When composing methods, consider the following guidelines:
+
 - Make each extracted method (or function) tell its own story. This requires to understand the context of the code within a program and how it is expected to be read and interpreted by other developers. 
 - Ideally, each method tells a single, well structured and easy-to-understand story. If that's not the case, the code is poorly written, and should be refactored. 
 - Rename things (functions, classes, variables), so that their behaviour is clear in the code.
