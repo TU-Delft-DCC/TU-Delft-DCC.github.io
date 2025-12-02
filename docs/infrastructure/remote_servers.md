@@ -7,7 +7,7 @@ date: 2025-08-29
 
 # We use this key to indicate the last modified date [manual entry, use YYYY-MM-DD]
 # Uncomment and populate the next line accordingly
-date-modified: 2025-09-19
+date-modified: 2025-12-02
 
 # Do not modify
 lang: en
@@ -17,7 +17,7 @@ language:
 
 # Title of the document [manual entry]
 # Uncomment and populate the next line accordingly
-title: Servers
+title: Remote Servers
 
 # Brief overview of the document (will be used in listings) [manual entry]
 # Uncomment and populate the next line and uncomment "hide-description: true".

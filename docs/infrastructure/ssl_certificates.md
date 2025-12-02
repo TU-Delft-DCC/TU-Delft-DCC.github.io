@@ -7,7 +7,7 @@
 
 # We use this key to indicate the last modified date [manual entry, use YYYY-MM-DD]
 # Uncomment and populate the next line accordingly
-date-modified: 2025-09-19
+date-modified: 2025-12-02
 
 # Do not modify
 lang: en
@@ -21,22 +21,22 @@ title: Configure SSL certificates
 
 # Brief overview of the document (will be used in listings) [manual entry]
 # Uncomment and populate the next line and uncomment "hide-description: true".
-#description: Short description of the document
-#hide-description: true
+description: Requesting and configuring SSL certificates on TU Delft VPS
+hide-description: true
 
 # Authors of the document, will not be parsed [manual entry]
 # Uncomment and populate the next lines accordingly
-author_1: Ashley Cryan
+author_1: Manuel G. Garcia
 #author_2:
 
 # Maintainers of the document, will not be parsed [manual entry]
 # Uncomment and populate the next lines accordingly
-#maintainer_1: Name Surname
+maintainer_1: Manuel G. Garcia
 #maintainer_2:
 
 # To whom reach out regarding the document, will not be parsed [manual entry]
 # Uncomment and populate the next line accordingly
-#corresponding: Name Surname
+corresponding: Manuel G. Garcia
 
 # Meaningful keywords, newline separated [manual entry]
 # Uncomment and populate the next line and list accordingly
@@ -44,6 +44,7 @@ categories:
  - Infrastructure
  - Servers
  - VPS
+ - Cybersecurity
 
 ---
 

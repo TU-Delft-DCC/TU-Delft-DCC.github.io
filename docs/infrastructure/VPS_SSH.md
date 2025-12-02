@@ -6,7 +6,7 @@
 date: 2025-09-03
 
 # We use this key to indicate the last modified date [manual entry, use YYYY-MM-DD]
-date-modified: 2025-09-19
+date-modified: 2025-12-02
 
 # Do not modify
 lang: en
@@ -47,7 +47,8 @@ categories:
  - SSH Tunneling
  - SSH Keys
  - Bastion Host
- - scp
+ - SCP
+ - Cybersecurity
 
 ---
 
