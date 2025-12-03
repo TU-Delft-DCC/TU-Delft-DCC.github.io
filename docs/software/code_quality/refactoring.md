@@ -55,9 +55,9 @@ categories:
 
 Refactoring is the process of **restructuring existing code without changing its external behaviour**. It improves maintainability and readability, making future developments smoother and reducing the likelihood of bugs. Key benefits include:
 
-- **Improving readability** - Writing code that's easier to understand, benefits both yourself and future developers.
+- **Improving readability** - Writing code that is easier to understand, benefits both yourself and future developers.
 - **Reducing complexity** - Simplifying complex structures by breaking down large functions or removing unnecessary dependencies.
-- **Optimizing design** - Creating a more robust and adaptable codebase for long-term growth. 
+- **Optimizing design** - Creating a more robust and adaptable codebase for long-term growth.
 - **Eliminating redundancies** - Removing duplicate or unnecessary code.
 - **Ensuring consistency** - Following a consistent coding style for a cleaner, more maintanable codebase.
 
@@ -81,7 +81,7 @@ steps without introducing new functionalities. Keep these principles in mind:
 
 {{< fa broom >}} **Maintain clean code** - Aim for clarity, simplicity, and readability.
 
-{{< fa shoe-prints >}} **Always work in small steps** - So that you can easily identify if a change to the code changes the its behaviour. 
+{{< fa shoe-prints >}} **Always work in small steps** - So that you can easily identify whether a change to the code changes its behaviour. 
 
 {{< fa ban >}} **Avoid adding new features** - Focus on improving structure, not functionality. 
 
@@ -95,7 +95,7 @@ steps without introducing new functionalities. Keep these principles in mind:
 
 ## Farley's refactoring method
 
-Refactoring can be approached in various ways. Here, is a simple four-step method proposed by Dave Farley in his book *"Continuous Delivery"*. This method emphasizes safety and gradual improvement.
+Refactoring can be approached in various ways. Here is a simple four-step method proposed by Dave Farley in his book *"Continuous Delivery"*. This method emphasizes safety and gradual improvement.
 
 ### 1. Write approval tests
 
@@ -123,7 +123,7 @@ At the last step, focus on improving the structure and readability of the code b
 When composing methods, consider the following guidelines:
 
 - Make each extracted method (or function) tell its own story. This requires understanding the context of the code within a program and how it is expected to be read and interpreted by other developers. 
-- Ideally, each method tells a single, well structured and easy-to-understand story. If that is not the case, the code is poorly written and should be refactored. 
+- Ideally, each method tells a single, well-structured and easy-to-understand story. If that is not the case, the code is poorly written and should be refactored. 
 - Rename things (functions, classes, variables) so that their behaviour is clear in the code.
 
 
