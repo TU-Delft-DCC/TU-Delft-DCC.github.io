@@ -95,7 +95,7 @@ steps without introducing new functionalities. Keep these principles in mind:
 
 ## Farley's refactoring method
 
-Refactoring can be approached in various ways. Here is a simple four-step method proposed by Dave Farley in his book [*"Continuous Delivery"*](https://www.oreilly.com/library/view/continuous-delivery-reliable/9780321670250/). This method emphasizes safety and gradual improvement.
+Refactoring can be approached in various ways. Here is a simple four-step method proposed by Dave Farley online course  *"Refactoring legacy code"*.^[Farley, D. (n.d.) Refactoring legacy code (Online Course). CD.Training.  [https://courses.cd.training/courses/refactoring-tutorial](https://courses.cd.training/courses/refactoring-tutorial)] This method emphasizes safety and gradual improvement.
 
 ### 1. Write approval tests
 
@@ -110,7 +110,83 @@ While doing so, be cautious when removing code, but take some chances when reduc
 
 Cyclomatic complexity refers to the number of logical branches or pathways used in the code to implement functionality and behaviour. The overuse of **if statements** and **loops** is an indication of code with high levels of cyclomatic complexity. 
 
-To reduce cyclomatic complexity:
+::: {.panel-tabset}
+
+## Python
+As an example, consider the following code snippet with high cyclomatic complexity due to multiple branching statements:
+
+```python
+def get_discount(customer_type, is_holiday):
+    if customer_type == "VIP":
+        if is_holiday:
+            return 0.3
+        else:
+            return 0.2
+    elif customer_type == "MEMBER":
+        if is_holiday:
+            return 0.2
+        else:
+            return 0.1
+    else:
+        if is_holiday:
+            return 0.1
+        else:
+            return 0.0
+```
+
+Instead, we can refactor this code to reduce its cyclomatic complexity by using a dictionary and conditional logic:
+
+```python
+def get_discount(customer_type, is_holiday):
+    base_discounts = {"VIP": 0.2, "MEMBER": 0.1}
+    discount = base_discounts.get(customer_type, 0.0)
+    if is_holiday:
+        discount += 0.1
+    return discount
+```
+
+## R
+As an example, consider the following code snippet with high cyclomatic complexity due to multiple branching statements:
+
+```r
+get_discount <- function(customer_type, is_holiday) {
+  if (customer_type == "VIP") {
+    if (is_holiday) {
+      return(0.3)
+    } else {
+      return(0.2)
+    }
+  } else if (customer_type == "MEMBER") {
+    if (is_holiday) {
+      return(0.2)
+    } else {
+      return(0.1)
+    }
+  } else {
+    if (is_holiday) {
+      return(0.1)
+    } else {
+      return(0.0)
+    }
+  }
+}
+```
+
+Instead, we can refactor this code to reduce its cyclomatic complexity by using a named vector and conditional logic:
+
+```r
+get_discount <- function(customer_type, is_holiday) {
+  base_discounts <- c(VIP = 0.2, MEMBER = 0.1)
+  discount <- base_discounts[customer_type] %||% 0.0
+  if (is_holiday) {
+    discount <- discount + 0.1
+  }
+  return(discount)
+}
+```
+:::
+
+**To reduce cyclomatic complexity:**
 
 - Reduce branching or pathways in the code.
 - Bring related code together, and keep unrelated code apart.
@@ -120,7 +196,7 @@ To reduce cyclomatic complexity:
 
 At the last step, focus on improving the structure and readability of the code by extracting methods or functions from existing code blocks. This involves breaking down large methods into smaller, more manageable pieces that each perform a single task or function. 
 
-When composing methods, consider the following guidelines:
+**When composing methods, do the following:**
 
 - Make each extracted method (or function) tell its own story. This requires understanding the context of the code within a program and how it is expected to be read and interpreted by other developers. 
 - Ideally, each method tells a single, well-structured and easy-to-understand story. If that is not the case, the code is poorly written and should be refactored. 
@@ -132,5 +208,5 @@ When composing methods, consider the following guidelines:
 - [Refactoring techniques from Refactoring.Guru](https://refactoring.guru/refactoring/techniques)
 - [eScience Center - Lesson on refactoring](https://carpentries-incubator.github.io/python-intermediate-development/34-code-refactoring.html)
 - [The Alan Turing Institute - Refactoring](https://alan-turing-institute.github.io/rse-course/html/module07_construction_and_design/07_04_refactoring.html)
-- [Dave Farley's Refactoring Course (Free) ](https://courses.cd.training/courses/refactoring-tutorial)
+- [Dave Farley's Refactoring Course](https://courses.cd.training/courses/refactoring-tutorial)
 :::
