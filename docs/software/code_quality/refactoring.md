@@ -53,7 +53,7 @@ categories:
 
 ## What is refactoring?
 
-Refactoring is the process of **restructuring existing code without changing its external behavior**. It improves maintainability and readability, making future developments smoother and reducing the likelihood of bugs. Key benefits include:
+Refactoring is the process of **restructuring existing code without changing its external behaviour**. It improves maintainability and readability, making future developments smoother and reducing the likelihood of bugs. Key benefits include:
 
 - **Improving readability** - Writing code that's easier to understand, benefits both yourself and future developers.
 - **Reducing complexity** - Simplifying complex structures by breaking down large functions or removing unnecessary dependencies.
@@ -97,34 +97,34 @@ steps without introducing new functionalities. Keep these principles in mind:
 
 Refactoring can be approached in various ways. Here, is a simple four-step method proposed by Dave Farley in his book *"Continuous Delivery"*. This method emphasizes safety and gradual improvement.
 
-### 1. Write Approval Tests
+### 1. Write approval tests
 
-Create software tests for the code that will be refactored. *Approval tests* are software tests that check the outputs of a program or part of a program. Aproval tests are important in refactoring because we need to know if changes in the code affect the code's behaviour.
+Create software tests for the code that will be refactored. *Approval tests* are software tests that check the outputs of a program or part of a program. Approval tests are important in refactoring because we need to know if changes in the code affect its behaviour.
 
-### 2. Reduce Clutter
+### 2. Reduce clutter
 
 Remove unnecessary code, such as [unused (dead) code](./code_smells/dead_code.md), and [repeated code](./code_smells/duplication.md). 
-While doing so, be cautious when removing code, but take some chances when reducing clutter. To safely reduce clutter,  rely on *version control* to undo changes, and in *approval tests* to check that code changes do not affect the program's behaviour.
+While doing so, be cautious when removing code, but take some chances when reducing clutter. To safely reduce clutter, rely on version control to undo changes, and on approval tests to check that code changes do not affect its behaviour.
 
-### 3. Reduce Cyclomatic Complexity
+### 3. Reduce cyclomatic complexity
 
-Cyclomatric complexity refers to the number of logical branches or pathways used in the code to implement a program's functionality and behaviour. The overuse of **if statements** and **loops** is an indication of code with high levels of cyclomatic complexity. 
+Cyclomatic complexity refers to the number of logical branches or pathways used in the code to implement functionality and behaviour. The overuse of **if statements** and **loops** is an indication of code with high levels of cyclomatic complexity. 
 
 To reduce cyclomatic complexity:
 
-- Reduce branching/pathways of the code.
+- Reduce branching or pathways in the code.
 - Bring related code together, and keep unrelated code apart.
-- Look for blocks of code that can be separated in methods or functions; this is known as method extraction.
+- Look for blocks of code that can be separated in methods or functions; this is known as *method extraction*.
 
-### 4. Composing Methods
+### 4. Composing methods
 
 At the last step, focus on improving the structure and readability of the code by extracting methods or functions from existing code blocks. This involves breaking down large methods into smaller, more manageable pieces that each perform a single task or function. 
 
 When composing methods, consider the following guidelines:
 
-- Make each extracted method (or function) tell its own story. This requires to understand the context of the code within a program and how it is expected to be read and interpreted by other developers. 
-- Ideally, each method tells a single, well structured and easy-to-understand story. If that's not the case, the code is poorly written, and should be refactored. 
-- Rename things (functions, classes, variables), so that their behaviour is clear in the code.
+- Make each extracted method (or function) tell its own story. This requires understanding the context of the code within a program and how it is expected to be read and interpreted by other developers. 
+- Ideally, each method tells a single, well structured and easy-to-understand story. If that is not the case, the code is poorly written and should be refactored. 
+- Rename things (functions, classes, variables) so that their behaviour is clear in the code.
 
 
 :::{.callout-note appearance="simple" icon="false"}
