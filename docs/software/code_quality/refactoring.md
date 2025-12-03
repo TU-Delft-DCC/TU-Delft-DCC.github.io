@@ -64,7 +64,7 @@ Refactoring is the process of **restructuring existing code without changing its
 ### When should you refactor?
 ![CC-BY-4.0 © 2021 Balaban et al.](/docs/img/refactoring.PNG){width=50%}
 
-1. **Rule of three:** If you find yourself writing the same or similiar code for the third time, it's time to refactor.
+1. **Rule of three:** If you find yourself writing the same or similar code for the third time, it's time to refactor.
 2. **Before adding a feature:** Cleaning up existing code makes it easier to integrate a new functionality.
 3. **When fixing a bug:** Cleaning up surrounding code can help uncover and fix the issue faster.
 4. **During code reviews:** Refactoring during code reviews can prevent issues from becoming part of the public codebase and streamline the development process.
@@ -91,7 +91,7 @@ steps without introducing new functionalities. Keep these principles in mind:
 
 {{< fa code-commit >}} **Commit often** - Use a version control system and commit often, so that you can easily revert changes if something goes wrong. 
 
-{{< fa bullseye >}} **Remember, you can stop at any point** - Refactoring can be an endless taks if you aim for perfection. Instead aim to leave the code in a better state than you found it.
+{{< fa bullseye >}} **Remember, you can stop at any point** - Refactoring can be an endless task if you aim for perfection. Instead aim to leave the code in a better state than you found it.
 
 ## Farley's refactoring method
 
@@ -132,5 +132,5 @@ When composing methods, consider the following guidelines:
 - [Refactoring techniques from Refactoring.Guru](https://refactoring.guru/refactoring/techniques)
 - [eScience Center - Lesson on refactoring](https://carpentries-incubator.github.io/python-intermediate-development/34-code-refactoring.html)
 - [The Alan Turing Institute - Refactoring](https://alan-turing-institute.github.io/rse-course/html/module07_construction_and_design/07_04_refactoring.html)
-- [Dave Farley's Refactoring Course - Free ](https://courses.cd.training/courses/refactoring-tutorial)
+- [Dave Farley's Refactoring Course (Free) ](https://courses.cd.training/courses/refactoring-tutorial)
 :::
