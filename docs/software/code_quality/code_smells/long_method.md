@@ -85,7 +85,7 @@ def load_data(filepath: str):
             # If file extionsion is .pickle: load pickled data
             data = pickle.load(file)
     elif extension == ".csv":
-        # If file extionsion is .csv: load cvs data
+        # If file extionsion is .csv: load csv data
         data = read_csv(filepath)
     else:
         raise ValueError(f"Unsupported file format: {extension}")
@@ -118,7 +118,7 @@ load_data <- function(filepath) {
     data <- readRDS(filepath)
   } else if (extension == "csv") {
     # If file extension is .csv: load csv data
-    data <- read.csv(filepath)
+    data <- readr::read_csv(filepath) # or read.csv(filepath)
   } else {
     stop(paste("Unsupported file format:", extension))
   }
@@ -242,7 +242,7 @@ read_from_rds <- function(filepath) {
 }
 
 read_from_csv <- function(filepath) {
-  read.csv(filepath)
+  readr::read_csv(filepath) # or read.csv(filepath)
 }
 ```
 
