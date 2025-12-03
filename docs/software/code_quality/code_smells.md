@@ -150,7 +150,7 @@ Each guide provides an overview of a code smell, its symptoms and an example on 
 ::: {.g-col-4}
 ::: {.code-smell-card}
 ##### Dead Code
-**Problem:** There is unsued or commented-out code.  
+**Problem:** There is unused or commented-out code.  
 
 ::: {.refactor-link}
 [{{< fa wrench >}} Refactor unused code](./code_smells/dead_code.md)
