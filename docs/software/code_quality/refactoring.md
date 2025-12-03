@@ -7,7 +7,7 @@ date: 2025-02-06
 
 # We use this key to indicate the last modified date [manual entry, use YYYY-MM-DD]
 # Uncomment and populate the next line accordingly
-date-modified: 2025-09-19
+date-modified: 2025-12-03
 
 # Do not modify
 lang: en
@@ -27,7 +27,7 @@ hide-description: true
 # Authors of the document, will not be parsed [manual entry]
 # Uncomment and populate the next lines accordingly
 author_1: Maurits Kok
-#author_2:
+author_2: Manuel Garcia
 
 # Maintainers of the document, will not be parsed [manual entry]
 # Uncomment and populate the next lines accordingly
@@ -79,23 +79,23 @@ Refactoring is the process of **restructuring existing code without changing its
 Refactoring should be done gradually, improving code in small controlled 
 steps without introducing new functionalities. Keep these principles in mind:
 
-- {{< fa broom >}} **Maintain clean code** &mdash; Aim for clarity, simplicity, and readability.
+{{< fa broom >}} **Maintain clean code** - Aim for clarity, simplicity, and readability.
 
-- {{< fa shoe-prints >}} **Always work in small tiny steps** &mdash; So that you can easily identify if a change to the code changes the program's behaviour. 
+{{< fa shoe-prints >}} **Always work in small steps** - So that you can easily identify if a change to the code changes the its behaviour. 
 
-- {{< fa ban >}} **Avoid adding new features** &mdash; Focus on improving structure, not functionality. 
+{{< fa ban >}} **Avoid adding new features** - Focus on improving structure, not functionality. 
 
-- {{< fa check-double >}} **Ensure tests pass** &mdash; Verify that all existing tests succeed before starting with refactoring. If there are no tests, consider writing some basic tests first to cover the existing functionality. 
+{{< fa check-double >}} **Ensure tests pass** - Verify that all existing tests succeed before starting with refactoring. If there are no tests, consider writing some basic tests first to cover the existing functionality. 
 
-- {{< fa vial-circle-check >}} **Test often** &mdash; So that you can be sure the program's behaviour remains unchanged. 
+{{< fa vial-circle-check >}} **Test often** - So that you can be sure the behaviour remains unchanged.
 
-- {{< fa code-commit >}} **Commit often** &mdash;  Use a version control system and commit often, so that you can easily revert changes if something goes wrong. 
+{{< fa code-commit >}} **Commit often** - Use a version control system and commit often, so that you can easily revert changes if something goes wrong. 
 
-- {{< fa bullseye >}} **Remember, you can stop at any point** &mdash; Refactoring can be an endless taks if you aim for perfection. Instead aim to leave the code in a better state than you found it.
+{{< fa bullseye >}} **Remember, you can stop at any point** - Refactoring can be an endless taks if you aim for perfection. Instead aim to leave the code in a better state than you found it.
 
 ## Farley's refactoring method
 
-Refactoring can be approached in various ways. Here, we present a simple four-step method proposed by Dave Farley in his book *"Continuous Delivery"*. This method emphasizes safety and gradual improvement.
+Refactoring can be approached in various ways. Here, is a simple four-step method proposed by Dave Farley in his book *"Continuous Delivery"*. This method emphasizes safety and gradual improvement.
 
 ### 1. Write Approval Tests
 
@@ -103,7 +103,7 @@ Create software tests for the code that will be refactored. *Approval tests* are
 
 ### 2. Reduce Clutter
 
-Remove unnecessary code, such as commented-out code, [unused (dead) code](./code_smells/dead_code.md), and [repeated code](./code_smells/duplication.md). 
+Remove unnecessary code, such as [unused (dead) code](./code_smells/dead_code.md), and [repeated code](./code_smells/duplication.md). 
 While doing so, be cautious when removing code, but take some chances when reducing clutter. To safely reduce clutter,  rely on *version control* to undo changes, and in *approval tests* to check that code changes do not affect the program's behaviour.
 
 ### 3. Reduce Cyclomatic Complexity
