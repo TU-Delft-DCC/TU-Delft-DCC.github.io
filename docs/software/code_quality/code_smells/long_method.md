@@ -82,10 +82,10 @@ def load_data(filepath: str):
             data = json.load(file)
     elif extension == ".pickle":
         with open(filepath, "rb") as file:
-            # If file extionsion is .pickle: load pickled data
+            # If file extension is .pickle: load pickled data
             data = pickle.load(file)
     elif extension == ".csv":
-        # If file extionsion is .csv: load csv data
+        # If file extension is .csv: load csv data
         data = read_csv(filepath)
     else:
         raise ValueError(f"Unsupported file format: {extension}")
