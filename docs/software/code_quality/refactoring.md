@@ -95,7 +95,7 @@ steps without introducing new functionalities. Keep these principles in mind:
 
 ## Farley's refactoring method
 
-Refactoring can be approached in various ways. Here is a simple four-step method proposed by Dave Farley in his book *"Continuous Delivery"*. This method emphasizes safety and gradual improvement.
+Refactoring can be approached in various ways. Here is a simple four-step method proposed by Dave Farley in his book [*"Continuous Delivery"*](https://www.oreilly.com/library/view/continuous-delivery-reliable/9780321670250/). This method emphasizes safety and gradual improvement.
 
 ### 1. Write approval tests
 
