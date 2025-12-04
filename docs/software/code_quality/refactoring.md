@@ -95,7 +95,7 @@ steps without introducing new functionalities. Keep these principles in mind:
 
 ## Farley's refactoring method
 
-Refactoring can be approached in various ways. Here is a simple four-step method proposed by Dave Farley online course  *"Refactoring legacy code"*.^[Farley, D. (n.d.) Refactoring legacy code (Online Course). CD.Training.  [https://courses.cd.training/courses/refactoring-tutorial](https://courses.cd.training/courses/refactoring-tutorial)] This method emphasizes safety and gradual improvement.
+Refactoring can be approached in various ways. Here is a simple four-step method proposed by Dave Farley in his online course  *"Refactoring legacy code"*.^[Farley, D. (n.d.) Refactoring legacy code (Online Course). CD.Training.  [https://courses.cd.training/courses/refactoring-tutorial](https://courses.cd.training/courses/refactoring-tutorial)] This method emphasizes safety and gradual improvement.
 
 ### 1. Write approval tests
 
@@ -110,6 +110,8 @@ While doing so, be cautious when removing code, but take some chances when reduc
 
 Cyclomatic complexity refers to the number of logical branches or pathways used in the code to implement functionality and behaviour. The overuse of **if statements** and **loops** is an indication of code with high levels of cyclomatic complexity. 
 
+:::{.callout-tip appearance="simple" icon="false" collapse="true"}
+## {{< fa lightbulb >}} Example
 ::: {.panel-tabset}
 
 ## Python
@@ -184,6 +186,7 @@ get_discount <- function(customer_type, is_holiday) {
   return(discount)
 }
 ```
+:::
 :::
 
 **To reduce cyclomatic complexity:**
