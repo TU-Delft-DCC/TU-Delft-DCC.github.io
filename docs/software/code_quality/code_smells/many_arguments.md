@@ -7,7 +7,7 @@ date: 2025-02-06
 
 # We use this key to indicate the last modified date [manual entry, use YYYY-MM-DD]
 # Uncomment and populate the next line accordingly
-date-modified: 2025-09-19
+date-modified: 2025-12-04
 
 # Do not modify
 lang: en
@@ -27,7 +27,7 @@ title: Many arguments
 # Authors of the document, will not be parsed [manual entry]
 # Uncomment and populate the next lines accordingly
 author_1: Maurits Kok
-#author_2:
+author_2: Manuel Garcia
 
 # Maintainers of the document, will not be parsed [manual entry]
 # Uncomment and populate the next lines accordingly
