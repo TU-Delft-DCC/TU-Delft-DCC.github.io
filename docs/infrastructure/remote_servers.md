@@ -7,7 +7,7 @@ date: 2025-08-29
 
 # We use this key to indicate the last modified date [manual entry, use YYYY-MM-DD]
 # Uncomment and populate the next line accordingly
-date-modified: 2025-09-19
+date-modified: 2025-12-02
 
 # Do not modify
 lang: en
@@ -17,7 +17,7 @@ language:
 
 # Title of the document [manual entry]
 # Uncomment and populate the next line accordingly
-title: Servers
+title: Remote Servers
 
 # Brief overview of the document (will be used in listings) [manual entry]
 # Uncomment and populate the next line and uncomment "hide-description: true".
@@ -64,7 +64,7 @@ All servers are a physical computer sitting somewhere. However, there is a commo
 
 In most cases, a virtual server is the most suitable option. However, a physical server may be necessary when it is intended for specific use cases (e.g., laboratory equipment, sensor data acquisition, image processing).
 
-TU Delft offers its employees the use of physical or virtual servers, these servers are referred as faculty managed servers which are therefore *private* to the university network by default. *Virtual Private Servers* (VPS) can be requested as described in the next guide [*Request a VPS*](VPS_request.md), whereas physical server placement follow a different procedure for which we strongly encourage you to consult your FIM.
+TU Delft offers its employees the use of physical or virtual servers, these servers are referred as faculty managed servers which are therefore *private* to the university network by default. *Virtual Private Servers* (VPS) can be requested as described in the next guide [*Request a VPS*](vps_request.md), whereas physical server placement follow a different procedure for which we strongly encourage you to consult your FIM.
 
 #### **Relevant considerations**
 

@@ -6,7 +6,7 @@
 date: 2025-09-03
 
 # We use this key to indicate the last modified date [manual entry, use YYYY-MM-DD]
-date-modified: 2025-09-19
+date-modified: 2025-12-02
 
 # Do not modify
 lang: en
@@ -47,7 +47,8 @@ categories:
  - SSH Tunneling
  - SSH Keys
  - Bastion Host
- - scp
+ - SCP
+ - Cybersecurity
 
 ---
 
@@ -66,7 +67,7 @@ Depending on your geographical location, access to a VPS via SSH may be blocked 
 Before starting, you need:
 
 * A TU Delft NetID.
-* Access to a VPS provided by TU Delft ICT. Check [this guide](../infrastructure/VPS_request.md) for more information on how to request a VPS.
+* Access to a VPS provided by TU Delft ICT. Check [this guide](../infrastructure/vps_request.md) for more information on how to request a VPS.
 * An SSH client installed on your local machine. This is usually included in most Linux and macOS distributions via a terminal or shell. For Windows, you can use a third-party SSH client like [PuTTY](https://www.putty.org/) or a Windows Subsystem for Linux (WSL).
 
 ### Steps for Linux (including WSL) and macOS
