@@ -7,7 +7,7 @@ date: 2025-02-03
 
 # We use this key to indicate the last modified date [manual entry, use YYYY-MM-DD]
 # Uncomment and populate the next line accordingly
-date-modified: 2025-09-19
+date-modified: 2025-11-27
 
 # Do not modify
 lang: en
@@ -62,11 +62,15 @@ Deep nesting occurs when there are too many levels of indentation in the code, m
 
 ## Example - Deeply nested conditional statements
 
+::: {.panel-tabset}
+
+### Python
+
 ```python
 def validate_model_convergence(model):
     if model.convergence > 1:
         if model.convergence < 0.1:
-            if model.secondary_condition == True
+            if model.secondary_condition == True:
                 return True
             else:
                 return False
@@ -75,6 +79,28 @@ def validate_model_convergence(model):
     else:
         return False
 ```
+
+### R
+
+```r
+validate_model_convergence <- function(model) {
+  if (model$convergence > 1) {
+    if (model$convergence < 0.1) {
+      if (model$secondary_condition == TRUE) {
+        return(TRUE)
+      } else {
+        return(FALSE)
+      }
+    } else {
+      return(FALSE)
+    }
+  } else {
+    return(FALSE)
+  }
+}
+```
+
+:::
 
 ### Solutions
 
@@ -86,6 +112,11 @@ Refactoring deep nesting improves readability and maintainability. Techniques to
 
 
 #### Solution 1: Using early returns
+
+::: {.panel-tabset}
+
+### Python
+
 ```python
 def validate_model_convergence(model):
     if model.convergence <= 1:
@@ -95,15 +126,36 @@ def validate_model_convergence(model):
     if not model.secondary_condition:
         return False
     return True
-        
 ```
 
-Thia solution uses early returns to reduce the nesting level and make the code more readable. Each condition is checked separately, and if it fails, the function returns immediately, avoiding further nesting and evaluation of unnecessary conditions.
+### R
+
+```r
+validate_model_convergence <- function(model) {
+  if (model$convergence <= 1) {
+    return(FALSE)
+  }
+  if (model$convergence >= 0.1) {
+    return(FALSE)
+  }
+  if (!model$secondary_condition) {
+    return(FALSE)
+  }
+  return(TRUE)
+}
+```
+
+:::
+
+This solution uses early returns to reduce the nesting level and make the code more readable. Each condition is checked separately, and if it fails, the function returns immediately, avoiding further nesting and evaluation of unnecessary conditions.
 
 #### Solution 2: Using `all` for conciseness
 
 Alternatively, we can use the `all` function to check multiple conditions in a single line, which can make the code more concise and easier to read.
 
+::: {.panel-tabset}
+
+### Python
 
 ```python
 def validate_model_convergence(model):
@@ -112,15 +164,36 @@ def validate_model_convergence(model):
         model.convergence < 0.1,
         model.secondary_condition,
     ])
-
 ```
+
+### R
+
+```r
+validate_model_convergence <- function(model) {
+  all(
+    model$convergence > 1,
+    model$convergence < 0.1,
+    model$secondary_condition
+  )
+}
+```
+
+:::
+
 
 
 
 ## Example - Deeply nested loops
-In this example, we have three nested loops to iterate over three 3D arrays and sum their corresponding elements. This code can be refactored using NumPy to improve performance and readability.
+
+In this example, we have three nested loops to iterate over three 3D arrays and sum their corresponding elements. This code can be refactored using vectorized operations to improve performance and readability.
+
+::: {.panel-tabset}
+
+### Python
 
 ```python
+import numpy as np
+
 # Create three random 10x10x10 arrays
 A = np.random.rand(10, 10, 10)
 B = np.random.rand(10, 10, 10)
@@ -132,12 +205,40 @@ for i in range(10):
     for j in range(10):
         for k in range(10):
             result[i, j, k] = A[i, j, k] + B[i, j, k] + C[i, j, k]
-``` 
+```
+
+### R
+
+```r
+# Create three random 10x10x10 arrays
+A <- array(runif(1000), dim = c(10, 10, 10))
+B <- array(runif(1000), dim = c(10, 10, 10))
+C <- array(runif(1000), dim = c(10, 10, 10))
+
+# Using nested loops (inefficient)
+result <- array(0, dim = c(10, 10, 10))
+for (i in 1:10) {
+  for (j in 1:10) {
+    for (k in 1:10) {
+      result[i, j, k] <- A[i, j, k] + B[i, j, k] + C[i, j, k]
+    }
+  }
+}
+```
+
+:::
 
 ### Solution
-Using NumPy, we can perform the same operation without nested loops, which is more efficient and easier to read.
+
+Using vectorized operations, we can perform the same operation without nested loops, which is more efficient and easier to read.
+
+::: {.panel-tabset}
+
+### Python
 
 ```python
+import numpy as np
+
 # Create three random 10x10x10 arrays
 A = np.random.rand(10, 10, 10)
 B = np.random.rand(10, 10, 10)
@@ -146,6 +247,20 @@ C = np.random.rand(10, 10, 10)
 # Vectorized solution (fast & efficient)
 result = A + B + C
 ```
+
+### R
+
+```r
+# Create three random 10x10x10 arrays
+A <- array(runif(1000), dim = c(10, 10, 10))
+B <- array(runif(1000), dim = c(10, 10, 10))
+C <- array(runif(1000), dim = c(10, 10, 10))
+
+# Vectorized solution (fast & efficient)
+result <- A + B + C
+```
+
+:::
 
 ## Key takeaways
 - Deep nesting makes code harder to read and maintain.

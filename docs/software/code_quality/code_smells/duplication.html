@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.8.25">
+<meta name="generator" content="quarto-1.8.26">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -77,9 +77,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../../../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../../../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../../../site_libs/quarto-html/quarto-syntax-highlighting-95f147d06fdb9f8ce149f95e323965f4.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="../../../../site_libs/quarto-html/quarto-syntax-highlighting-dark-95f147d06fdb9f8ce149f95e323965f4.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<link href="../../../../site_libs/quarto-html/quarto-syntax-highlighting-95f147d06fdb9f8ce149f95e323965f4.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<link href="../../../../site_libs/quarto-html/quarto-syntax-highlighting-68c8bffd90dad8f2b55c52d7b6410dc0.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../../../site_libs/quarto-html/quarto-syntax-highlighting-dark-68c8bffd90dad8f2b55c52d7b6410dc0.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../../../../site_libs/quarto-html/quarto-syntax-highlighting-68c8bffd90dad8f2b55c52d7b6410dc0.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="../../../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="../../../../site_libs/bootstrap/bootstrap-9f63569fccaa7f60ebae5bbb4b4d3d13.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
@@ -353,10 +353,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
-    <div class="pt-lg-2 mt-2 text-left sidebar-header sidebar-header-stacked">
-      <a href="../../../../index.html" class="sidebar-logo-link">
-      </a>
-      </div>
     <div class="sidebar-menu-container"> 
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
@@ -639,7 +635,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../../../docs/software/code_quality/code_smells/many_arguments.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Many inputs</span></a>
+ <span class="menu-text">Many arguments</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -657,7 +653,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../../../docs/software/code_quality/code_smells/dead_code.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Commented out code</span></a>
+ <span class="menu-text">Dead code</span></a>
   </div>
 </li>
       </ul>
@@ -1105,7 +1101,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <div>
     <div class="quarto-title-meta-heading">Last modified</div>
     <div class="quarto-title-meta-contents">
-      <p class="date-modified">September 19, 2025</p>
+      <p class="date-modified">December 4, 2025</p>
     </div>
   </div>
     
@@ -1131,6 +1127,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="example---duplicate-code-in-functions" class="level2">
 <h2 class="anchored" data-anchor-id="example---duplicate-code-in-functions">Example - Duplicate code in functions</h2>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true" href="">Python</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false" href="">R</a></li></ul>
+<div class="tab-content">
+<div id="tabset-1-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-1-1-tab">
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> time_of_flight_ball(initial_velocity, launch_angle):</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>    g <span class="op">=</span> <span class="fl">9.81</span>  <span class="co"># Earth's gravity (m/s²)</span></span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> (<span class="dv">2</span> <span class="op">*</span> initial_velocity <span class="op">*</span> np.sin(launch_angle)) <span class="op">/</span> g</span>
@@ -1142,6 +1142,25 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> time_of_flight_satellite(initial_velocity, launch_angle):</span>
 <span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>    g <span class="op">=</span> <span class="fl">9.81</span></span>
 <span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> (<span class="dv">2</span> <span class="op">*</span> initial_velocity <span class="op">*</span> np.sin(launch_angle)) <span class="op">/</span> g</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<div id="tabset-1-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-2-tab">
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>time_of_flight_ball <span class="ot">&lt;-</span> <span class="cf">function</span>(initial_velocity, launch_angle) {</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>  g <span class="ot">&lt;-</span> <span class="fl">9.81</span>  <span class="co"># Earth's gravity (m/s²)</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">return</span>((<span class="dv">2</span> <span class="sc">*</span> initial_velocity <span class="sc">*</span> <span class="fu">sin</span>(launch_angle)) <span class="sc">/</span> g)</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>time_of_flight_rocket <span class="ot">&lt;-</span> <span class="cf">function</span>(initial_velocity, launch_angle) {</span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>  g <span class="ot">&lt;-</span> <span class="fl">9.81</span></span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">return</span>((<span class="dv">2</span> <span class="sc">*</span> initial_velocity <span class="sc">*</span> <span class="fu">sin</span>(launch_angle)) <span class="sc">/</span> g)</span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>time_of_flight_satellite <span class="ot">&lt;-</span> <span class="cf">function</span>(initial_velocity, launch_angle) {</span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>  g <span class="ot">&lt;-</span> <span class="fl">9.81</span></span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>  <span class="fu">return</span>((<span class="dv">2</span> <span class="sc">*</span> initial_velocity <span class="sc">*</span> <span class="fu">sin</span>(launch_angle)) <span class="sc">/</span> g)</span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+</div>
+</div>
 <section id="solution" class="level3">
 <h3 class="anchored" data-anchor-id="solution">Solution</h3>
 <ul>
@@ -1150,14 +1169,32 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li>Refactor duplicated code into higher-level abstractions.</li>
 <li>Make use of utility functions to centralize common code and avoid duplication.</li>
 </ul>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> time_of_flight(initial_velocity, launch_angle, gravity<span class="op">=</span><span class="fl">9.81</span>):</span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>    <span class="co">"""Compute time of flight for any projectile."""</span></span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> (<span class="dv">2</span> <span class="op">*</span> initial_velocity <span class="op">*</span> np.sin(launch_angle)) <span class="op">/</span> gravity</span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Usage</span></span>
-<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>tof_ball <span class="op">=</span> time_of_flight(<span class="dv">30</span>, np.pi<span class="op">/</span><span class="dv">4</span>)       <span class="co"># Time of flight for a ball</span></span>
-<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>tof_rocket <span class="op">=</span> time_of_flight(<span class="dv">100</span>, np.pi<span class="op">/</span><span class="dv">3</span>)    <span class="co"># Time of flight for a rocket</span></span>
-<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>tof_mars_probe <span class="op">=</span> time_of_flight(<span class="dv">300</span>, np.pi<span class="op">/</span><span class="dv">6</span>, gravity<span class="op">=</span><span class="fl">3.71</span>)  <span class="co"># Gravity adjusted for Mars</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-2-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-1" role="tab" aria-controls="tabset-2-1" aria-selected="true" href="">Python</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-2-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-2" role="tab" aria-controls="tabset-2-2" aria-selected="false" href="">R</a></li></ul>
+<div class="tab-content">
+<div id="tabset-2-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-2-1-tab">
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> time_of_flight(initial_velocity, launch_angle, gravity<span class="op">=</span><span class="fl">9.81</span>):</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>    <span class="co">"""Compute time of flight for any projectile."""</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> (<span class="dv">2</span> <span class="op">*</span> initial_velocity <span class="op">*</span> np.sin(launch_angle)) <span class="op">/</span> gravity</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Usage</span></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>tof_ball <span class="op">=</span> time_of_flight(<span class="dv">30</span>, np.pi<span class="op">/</span><span class="dv">4</span>)       <span class="co"># Time of flight for a ball</span></span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>tof_rocket <span class="op">=</span> time_of_flight(<span class="dv">100</span>, np.pi<span class="op">/</span><span class="dv">3</span>)    <span class="co"># Time of flight for a rocket</span></span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>tof_mars_probe <span class="op">=</span> time_of_flight(<span class="dv">300</span>, np.pi<span class="op">/</span><span class="dv">6</span>, gravity<span class="op">=</span><span class="fl">3.71</span>)  <span class="co"># Gravity adjusted for Mars</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<div id="tabset-2-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-2-2-tab">
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>time_of_flight <span class="ot">&lt;-</span> <span class="cf">function</span>(initial_velocity, launch_angle, <span class="at">gravity =</span> <span class="fl">9.81</span>) {</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Compute time of flight for any projectile</span></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">return</span>((<span class="dv">2</span> <span class="sc">*</span> initial_velocity <span class="sc">*</span> <span class="fu">sin</span>(launch_angle)) <span class="sc">/</span> gravity)</span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Usage</span></span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>tof_ball <span class="ot">&lt;-</span> <span class="fu">time_of_flight</span>(<span class="dv">30</span>, pi<span class="sc">/</span><span class="dv">4</span>)       <span class="co"># Time of flight for a ball</span></span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>tof_rocket <span class="ot">&lt;-</span> <span class="fu">time_of_flight</span>(<span class="dv">100</span>, pi<span class="sc">/</span><span class="dv">3</span>)    <span class="co"># Time of flight for a rocket</span></span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a>tof_mars_probe <span class="ot">&lt;-</span> <span class="fu">time_of_flight</span>(<span class="dv">300</span>, pi<span class="sc">/</span><span class="dv">6</span>, <span class="at">gravity =</span> <span class="fl">3.71</span>)  <span class="co"># Gravity adjusted for Mars</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+</div>
+</div>
 </section>
 </section>
 <section id="key-takeaways" class="level2">

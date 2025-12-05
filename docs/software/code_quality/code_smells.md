@@ -7,7 +7,7 @@ date: 2025-01-31
 
 # We use this key to indicate the last modified date [manual entry, use YYYY-MM-DD]
 # Uncomment and populate the next line accordingly
-date-modified: 2025-09-19
+date-modified: 2025-12-03
 
 # Do not modify
 lang: en
@@ -116,7 +116,7 @@ Each guide provides an overview of a code smell, its symptoms and an example on 
 
 ::: {.g-col-4}
 ::: {.code-smell-card}
-##### Many Inputs
+##### Many Arguments
 **Problem:** Functions require a long list of parameters.  
 
 ::: {.refactor-link}
@@ -149,11 +149,11 @@ Each guide provides an overview of a code smell, its symptoms and an example on 
 
 ::: {.g-col-4}
 ::: {.code-smell-card}
-##### Commented out Code
-**Problem:** There is a significant amount of outdated or commented-out code.  
+##### Dead Code
+**Problem:** There is unused or commented-out code.  
 
 ::: {.refactor-link}
-[{{< fa wrench >}} Refactor commented code](./code_smells/dead_code.md)
+[{{< fa wrench >}} Refactor unused code](./code_smells/dead_code.md)
 :::
 :::
 :::

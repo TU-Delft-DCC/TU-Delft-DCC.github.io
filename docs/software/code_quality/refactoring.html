@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.8.25">
+<meta name="generator" content="quarto-1.8.26">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -21,6 +21,41 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -42,9 +77,9 @@ ul.task-list li input[type="checkbox"] {
 <script src="../../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-95f147d06fdb9f8ce149f95e323965f4.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-dark-95f147d06fdb9f8ce149f95e323965f4.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-95f147d06fdb9f8ce149f95e323965f4.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-68c8bffd90dad8f2b55c52d7b6410dc0.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-dark-68c8bffd90dad8f2b55c52d7b6410dc0.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-68c8bffd90dad8f2b55c52d7b6410dc0.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="../../../site_libs/bootstrap/bootstrap-9f63569fccaa7f60ebae5bbb4b4d3d13.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
@@ -318,10 +353,6 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
-    <div class="pt-lg-2 mt-2 text-left sidebar-header sidebar-header-stacked">
-      <a href="../../../index.html" class="sidebar-logo-link">
-      </a>
-      </div>
     <div class="sidebar-menu-container"> 
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
@@ -604,7 +635,7 @@ ul.task-list li input[type="checkbox"] {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../../docs/software/code_quality/code_smells/many_arguments.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Many inputs</span></a>
+ <span class="menu-text">Many arguments</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -622,7 +653,7 @@ ul.task-list li input[type="checkbox"] {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../../docs/software/code_quality/code_smells/dead_code.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Commented out code</span></a>
+ <span class="menu-text">Dead code</span></a>
   </div>
 </li>
       </ul>
@@ -1032,9 +1063,18 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#what-is-refactoring" id="toc-what-is-refactoring" class="nav-link active" data-scroll-target="#what-is-refactoring">What is refactoring?</a></li>
+  <li><a href="#what-is-refactoring" id="toc-what-is-refactoring" class="nav-link active" data-scroll-target="#what-is-refactoring">What is refactoring?</a>
+  <ul class="collapse">
   <li><a href="#when-should-you-refactor" id="toc-when-should-you-refactor" class="nav-link" data-scroll-target="#when-should-you-refactor">When should you refactor?</a></li>
   <li><a href="#how-to-refactor-code-effectively" id="toc-how-to-refactor-code-effectively" class="nav-link" data-scroll-target="#how-to-refactor-code-effectively">How to refactor code effectively?</a></li>
+  </ul></li>
+  <li><a href="#farleys-refactoring-method" id="toc-farleys-refactoring-method" class="nav-link" data-scroll-target="#farleys-refactoring-method">Farley’s refactoring method</a>
+  <ul class="collapse">
+  <li><a href="#write-approval-tests" id="toc-write-approval-tests" class="nav-link" data-scroll-target="#write-approval-tests">1. Write approval tests</a></li>
+  <li><a href="#reduce-clutter" id="toc-reduce-clutter" class="nav-link" data-scroll-target="#reduce-clutter">2. Reduce clutter</a></li>
+  <li><a href="#reduce-cyclomatic-complexity" id="toc-reduce-cyclomatic-complexity" class="nav-link" data-scroll-target="#reduce-cyclomatic-complexity">3. Reduce cyclomatic complexity</a></li>
+  <li><a href="#composing-methods" id="toc-composing-methods" class="nav-link" data-scroll-target="#composing-methods">4. Composing methods</a></li>
+  </ul></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/TU-Delft-DCC/TU-Delft-DCC.github.io/issues/new/choose" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div></nav>
     </div>
@@ -1067,7 +1107,7 @@ ul.task-list li input[type="checkbox"] {
     <div>
     <div class="quarto-title-meta-heading">Last modified</div>
     <div class="quarto-title-meta-contents">
-      <p class="date-modified">September 19, 2025</p>
+      <p class="date-modified">December 3, 2025</p>
     </div>
   </div>
     
@@ -1082,17 +1122,16 @@ ul.task-list li input[type="checkbox"] {
 <p>“Always leave the code you’re editing a little better than you found it.”</p>
 <p><strong>Robert C. Martin</strong> (Uncle Bob)</p>
 </blockquote>
-<section id="what-is-refactoring" class="level3">
-<h3 class="anchored" data-anchor-id="what-is-refactoring">What is refactoring?</h3>
-<p>Refactoring is the process of <strong>restructuring existing code without changing its external behavior</strong>. It improves maintainability and readability, making future developments smoother and reducing the likelihood of bugs. Key benefits include:</p>
+<section id="what-is-refactoring" class="level2">
+<h2 class="anchored" data-anchor-id="what-is-refactoring">What is refactoring?</h2>
+<p>Refactoring is the process of <strong>restructuring existing code without changing its external behaviour</strong>. It improves maintainability and readability, making future developments smoother and reducing the likelihood of bugs. Key benefits include:</p>
 <ul>
-<li><strong>Improving readability</strong> - Writing code that’s easier to understand, benefits both yourself and future developers.</li>
+<li><strong>Improving readability</strong> - Writing code that is easier to understand, benefits both yourself and future developers.</li>
 <li><strong>Reducing complexity</strong> - Simplifying complex structures by breaking down large functions or removing unnecessary dependencies.</li>
 <li><strong>Optimizing design</strong> - Creating a more robust and adaptable codebase for long-term growth.</li>
 <li><strong>Eliminating redundancies</strong> - Removing duplicate or unnecessary code.</li>
 <li><strong>Ensuring consistency</strong> - Following a consistent coding style for a cleaner, more maintanable codebase.</li>
 </ul>
-</section>
 <section id="when-should-you-refactor" class="level3">
 <h3 class="anchored" data-anchor-id="when-should-you-refactor">When should you refactor?</h3>
 <div class="quarto-figure quarto-figure-center">
@@ -1102,7 +1141,7 @@ ul.task-list li input[type="checkbox"] {
 </figure>
 </div>
 <ol type="1">
-<li><strong>Rule of three:</strong> If you find yourself writing the same or similiar code for the third time, it’s time to refactor.</li>
+<li><strong>Rule of three:</strong> If you find yourself writing the same or similar code for the third time, it’s time to refactor.</li>
 <li><strong>Before adding a feature:</strong> Cleaning up existing code makes it easier to integrate a new functionality.</li>
 <li><strong>When fixing a bug:</strong> Cleaning up surrounding code can help uncover and fix the issue faster.</li>
 <li><strong>During code reviews:</strong> Refactoring during code reviews can prevent issues from becoming part of the public codebase and streamline the development process.</li>
@@ -1115,12 +1154,124 @@ ul.task-list li input[type="checkbox"] {
 <section id="how-to-refactor-code-effectively" class="level3">
 <h3 class="anchored" data-anchor-id="how-to-refactor-code-effectively">How to refactor code effectively?</h3>
 <p>Refactoring should be done gradually, improving code in small controlled steps without introducing new functionalities. Keep these principles in mind:</p>
-<p><i class="fa-solid fa-broom" aria-label="broom"></i> <strong>Maintain clean code</strong> - Aim for clarity, simplicity, and readability.<br>
-<i class="fa-solid fa-ban" aria-label="ban"></i> <strong>Avoid adding new features</strong> - Focus on improving structure, not functionality.<br>
-<i class="fa-solid fa-check-double" aria-label="check-double"></i> <strong>Ensure tests pass</strong> - Verify that all existing tests still succeed to prevent new bugs.</p>
-<div class="lean-more">
-<p><i class="fa-solid fa-arrow-right" aria-label="arrow-right"></i> <a href="https://refactoring.guru/refactoring/how-to">Learn more: How to refactor?</a></p>
+<p><i class="fa-solid fa-broom" aria-label="broom"></i> <strong>Maintain clean code</strong> - Aim for clarity, simplicity, and readability.</p>
+<p><i class="fa-solid fa-shoe-prints" aria-label="shoe-prints"></i> <strong>Always work in small steps</strong> - So that you can easily identify whether a change to the code changes its behaviour.</p>
+<p><i class="fa-solid fa-ban" aria-label="ban"></i> <strong>Avoid adding new features</strong> - Focus on improving structure, not functionality.</p>
+<p><i class="fa-solid fa-check-double" aria-label="check-double"></i> <strong>Ensure tests pass</strong> - Verify that all existing tests succeed before starting with refactoring. If there are no tests, consider writing some basic tests first to cover the existing functionality.</p>
+<p><i class="fa-solid fa-vial-circle-check" aria-label="vial-circle-check"></i> <strong>Test often</strong> - So that you can be sure the behaviour remains unchanged.</p>
+<p><i class="fa-solid fa-code-commit" aria-label="code-commit"></i> <strong>Commit often</strong> - Use a version control system and commit often, so that you can easily revert changes if something goes wrong.</p>
+<p><i class="fa-solid fa-bullseye" aria-label="bullseye"></i> <strong>Remember, you can stop at any point</strong> - Refactoring can be an endless task if you aim for perfection. Instead aim to leave the code in a better state than you found it.</p>
+</section>
+</section>
+<section id="farleys-refactoring-method" class="level2">
+<h2 class="anchored" data-anchor-id="farleys-refactoring-method">Farley’s refactoring method</h2>
+<p>Refactoring can be approached in various ways. Here is a simple four-step method proposed by Dave Farley in his online course <em>“Refactoring legacy code”</em>.<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> This method emphasizes safety and gradual improvement.</p>
+<section id="write-approval-tests" class="level3">
+<h3 class="anchored" data-anchor-id="write-approval-tests">1. Write approval tests</h3>
+<p>Create software tests for the code that will be refactored. <em>Approval tests</em> are software tests that check the outputs of a program or part of a program. Approval tests are important in refactoring because we need to know if changes in the code affect its behaviour.</p>
+</section>
+<section id="reduce-clutter" class="level3">
+<h3 class="anchored" data-anchor-id="reduce-clutter">2. Reduce clutter</h3>
+<p>Remove unnecessary code, such as <a href="../../../docs/software/code_quality/code_smells/dead_code.html">unused (dead) code</a>, and <a href="../../../docs/software/code_quality/code_smells/duplication.html">repeated code</a>. While doing so, be cautious when removing code, but take some chances when reducing clutter. To safely reduce clutter, rely on version control to undo changes, and on approval tests to check that code changes do not affect its behaviour.</p>
+</section>
+<section id="reduce-cyclomatic-complexity" class="level3">
+<h3 class="anchored" data-anchor-id="reduce-cyclomatic-complexity">3. Reduce cyclomatic complexity</h3>
+<p>Cyclomatic complexity refers to the number of logical branches or pathways used in the code to implement functionality and behaviour. The overuse of <strong>if statements</strong> and <strong>loops</strong> is an indication of code with high levels of cyclomatic complexity.</p>
+<div class="callout callout-style-simple callout-tip no-icon callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
 </div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span><i class="fa-solid fa-lightbulb" aria-label="lightbulb"></i> Example
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-1" class="callout-1-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true" href="">Python</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false" href="">R</a></li></ul>
+<div class="tab-content">
+<div id="tabset-1-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-1-1-tab">
+<p>As an example, consider the following code snippet with high cyclomatic complexity due to multiple branching statements:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> get_discount(customer_type, is_holiday):</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> customer_type <span class="op">==</span> <span class="st">"VIP"</span>:</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> is_holiday:</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>            <span class="cf">return</span> <span class="fl">0.3</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>        <span class="cf">else</span>:</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>            <span class="cf">return</span> <span class="fl">0.2</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>    <span class="cf">elif</span> customer_type <span class="op">==</span> <span class="st">"MEMBER"</span>:</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> is_holiday:</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>            <span class="cf">return</span> <span class="fl">0.2</span></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>        <span class="cf">else</span>:</span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>            <span class="cf">return</span> <span class="fl">0.1</span></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>    <span class="cf">else</span>:</span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> is_holiday:</span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>            <span class="cf">return</span> <span class="fl">0.1</span></span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>        <span class="cf">else</span>:</span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>            <span class="cf">return</span> <span class="fl">0.0</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Instead, we can refactor this code to reduce its cyclomatic complexity by using a dictionary and conditional logic:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> get_discount(customer_type, is_holiday):</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>    base_discounts <span class="op">=</span> {<span class="st">"VIP"</span>: <span class="fl">0.2</span>, <span class="st">"MEMBER"</span>: <span class="fl">0.1</span>}</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>    discount <span class="op">=</span> base_discounts.get(customer_type, <span class="fl">0.0</span>)</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> is_holiday:</span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>        discount <span class="op">+=</span> <span class="fl">0.1</span></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> discount</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<div id="tabset-1-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-2-tab">
+<p>As an example, consider the following code snippet with high cyclomatic complexity due to multiple branching statements:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>get_discount <span class="ot">&lt;-</span> <span class="cf">function</span>(customer_type, is_holiday) {</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> (customer_type <span class="sc">==</span> <span class="st">"VIP"</span>) {</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> (is_holiday) {</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>      <span class="fu">return</span>(<span class="fl">0.3</span>)</span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>    } <span class="cf">else</span> {</span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>      <span class="fu">return</span>(<span class="fl">0.2</span>)</span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>  } <span class="cf">else</span> <span class="cf">if</span> (customer_type <span class="sc">==</span> <span class="st">"MEMBER"</span>) {</span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> (is_holiday) {</span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>      <span class="fu">return</span>(<span class="fl">0.2</span>)</span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>    } <span class="cf">else</span> {</span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a>      <span class="fu">return</span>(<span class="fl">0.1</span>)</span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a>  } <span class="cf">else</span> {</span>
+<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> (is_holiday) {</span>
+<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a>      <span class="fu">return</span>(<span class="fl">0.1</span>)</span>
+<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a>    } <span class="cf">else</span> {</span>
+<span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a>      <span class="fu">return</span>(<span class="fl">0.0</span>)</span>
+<span id="cb3-19"><a href="#cb3-19" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb3-20"><a href="#cb3-20" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb3-21"><a href="#cb3-21" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Instead, we can refactor this code to reduce its cyclomatic complexity by using a named vector and conditional logic:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>get_discount <span class="ot">&lt;-</span> <span class="cf">function</span>(customer_type, is_holiday) {</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>  base_discounts <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="at">VIP =</span> <span class="fl">0.2</span>, <span class="at">MEMBER =</span> <span class="fl">0.1</span>)</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>  discount <span class="ot">&lt;-</span> base_discounts[customer_type] <span class="sc">%||%</span> <span class="fl">0.0</span></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> (is_holiday) {</span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>    discount <span class="ot">&lt;-</span> discount <span class="sc">+</span> <span class="fl">0.1</span></span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">return</span>(discount)</span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<p><strong>To reduce cyclomatic complexity:</strong></p>
+<ul>
+<li>Reduce branching or pathways in the code.</li>
+<li>Bring related code together, and keep unrelated code apart.</li>
+<li>Look for blocks of code that can be separated in methods or functions; this is known as <em>method extraction</em>.</li>
+</ul>
+</section>
+<section id="composing-methods" class="level3">
+<h3 class="anchored" data-anchor-id="composing-methods">4. Composing methods</h3>
+<p>At the last step, focus on improving the structure and readability of the code by extracting methods or functions from existing code blocks. This involves breaking down large methods into smaller, more manageable pieces that each perform a single task or function.</p>
+<p><strong>When composing methods, do the following:</strong></p>
+<ul>
+<li>Make each extracted method (or function) tell its own story. This requires understanding the context of the code within a program and how it is expected to be read and interpreted by other developers.</li>
+<li>Ideally, each method tells a single, well-structured and easy-to-understand story. If that is not the case, the code is poorly written and should be refactored.</li>
+<li>Rename things (functions, classes, variables) so that their behaviour is clear in the code.</li>
+</ul>
 <div class="callout callout-style-simple callout-note no-icon callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -1135,14 +1286,22 @@ ul.task-list li input[type="checkbox"] {
 <li><a href="https://refactoring.guru/refactoring/techniques">Refactoring techniques from Refactoring.Guru</a></li>
 <li><a href="https://carpentries-incubator.github.io/python-intermediate-development/34-code-refactoring.html">eScience Center - Lesson on refactoring</a></li>
 <li><a href="https://alan-turing-institute.github.io/rse-course/html/module07_construction_and_design/07_04_refactoring.html">The Alan Turing Institute - Refactoring</a></li>
+<li><a href="https://courses.cd.training/courses/refactoring-tutorial">Dave Farley’s Refactoring Course</a></li>
 </ul>
 </div>
 </div>
 
 
 </section>
+</section>
 
-</main> <!-- /main -->
+
+<div id="quarto-appendix" class="default"><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
+
+<ol>
+<li id="fn1"><p>Farley, D. (n.d.) Refactoring legacy code (Online Course). CD.Training. <a href="https://courses.cd.training/courses/refactoring-tutorial">https://courses.cd.training/courses/refactoring-tutorial</a><a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     // Ensure there is a toggle, if there isn't float one in the top right
