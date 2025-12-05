@@ -51,7 +51,7 @@ categories:
 In web servers, SSL/TLS certificates are used to encrypt the communication between a web server and the client (e.g. web browser). In a web server, this is what makes it possible to have HTTPS connections instead of HTTP connections. HTTPS connections are secure, meaning that the data exchanged between the server and the client is encrypted and cannot be intercepted or read by third parties.
 In order to do this, you need an SSL certificate from a certificate signing authority.
 
-When a webserver certificate is expired or invalid, a web browser will show you a warning saying it is risky to access a website. This is because the browser cannot verify the identity of the web server, and therefore cannot ensure that the connection is secure. If you are a website owner, it is important to ensure that your SSL certificate is valid and up-to-date to avoid these warnings and maintain the trust of your users. 
+When a web server certificate is expired or invalid, a web browser will show you a warning saying it is risky to access a website. This is because the browser cannot verify the identity of the web server, and therefore cannot ensure that the connection is secure. If you are a website owner, it is important to ensure that your SSL certificate is valid and up-to-date to avoid these warnings and maintain the trust of your users. 
 
 This guide shows how to request and prepare an SSL/TLS certificate from HARICA, a Certification Authority trusted by TU Delft ICT. TU Delft staff can request SSL/TLS certificates using the **Academic login** option on the [HARICA website](https://cm.harica.gr/Login). You can opt to use [Let's Encrypt](https://letsencrypt.org/how-it-works/) certificates via Certbot instead, which also provides free SSL certificates, but these certificates need to be renewed every 90 days. The HARICA certificates are valid for up to one year.
 
@@ -125,7 +125,7 @@ The command above uses the `openssl rsa` tool to decrypt the private key file. T
     sudo chmod 600 <web-server-directory>/privkey.pem
     ```
 
-7. Configure the webserver to use HTTPS, and restart the web server. The configuration steps depend on the web server you are using (e.g., Apache, Nginx). Consult the documentation for your specific web server for instructions on how to enable HTTPS.
+7. Configure the web server to use HTTPS, and restart the web server. The configuration steps depend on the web server you are using (e.g., Apache, Nginx). Consult the documentation for your specific web server for instructions on how to enable HTTPS.
 
 8.  Delete the temporary certificate files and decrypted private key from your home directory to maintain security:
 
