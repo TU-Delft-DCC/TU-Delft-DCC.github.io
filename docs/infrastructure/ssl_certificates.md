@@ -79,7 +79,7 @@ When creating an SSL/TLS certificate, HARICA will prompt you to set **passphrase
 For configuring the web server, you typically need two specific files: `fullchain.pem` and `privkey.pem` (the private key file you downloaded when requesting the certificate).
 You need to upload these files to the server, decrypt the private key file, and place them in the appropriate directory with the correct permissions. The instructions below assume you have a remote server running a Linux-based OS, you have SSH access to it, and have set a [host nickname](./vps_ssh.md#set-up-ssh-tunneling).
 
-1. Rename the PEM bundle file as `fullchain.pem`, and the private key file as `privkey.pem`. The names do not have to be exactly these, but it is a common convention.
+1. Rename the PEM bundle file as `fullchain.pem`, and the private key file as `privkey.pem`. These exact names are not required, but they are common conventions.
 2. Upload the new `fullchain.pem` and the `privkey.pem` using `scp` to your home directory on the server. 
 
     ```bash
