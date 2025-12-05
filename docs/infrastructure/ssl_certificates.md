@@ -69,7 +69,7 @@ To request SSL/TLS certificates via HARICA, follow these steps:
 
 :::{.callout-important appearance="simple" icon="false"}
 ## {{< fa info-circle >}} Private key and passphrase
-When creating an SSL/TLS certificate HARICA will prompt you to set **passphrase** and download a private key file. This file is essential for using the SSL/TLS certificate. Ensure that you securely store this private key file and do not forget the passphrase. If either the private key file or the passphrase is lost, you will need to request a new SSL/TLS certificate.
+When creating an SSL/TLS certificate, HARICA will prompt you to set **passphrase** and download a private key file. This file is essential for using the SSL/TLS certificate. Ensure that you securely store this private key file and do not forget the passphrase. If either the private key file or the passphrase is lost, you will need to request a new SSL/TLS certificate.
 :::
 
 3. Once the new certificates are issued, you will be notified by email. Log in to the HARICA website and download the certificate as a **PEM bundle** file.
