@@ -65,7 +65,7 @@ Using unsecure HTTP connections can expose sensitive information, such as login 
 To request SSL/TLS certificates via HARICA, follow these steps:
 
 1. Log in to the [HARICA website](https://cm.harica.gr/Login) using your TU Delft credentials.
-2. Follow the [instructions on the HARICA website to create an SSL certificate](https://guides.harica.gr/docs/Guides/Server-Certificate/Request-for-Domain-Validated-DV/). You need to do so for the qualified domain name associated with your Server. E.g. `my-site.tudelft.nl`.
+2. Follow the [instructions on the HARICA website to create an SSL certificate](https://guides.harica.gr/docs/Guides/Server-Certificate/Request-for-Domain-Validated-DV/). You need to do so for the qualified domain name associated with your server (e.g. `my-site.tudelft.nl`).
 
 :::{.callout-important appearance="simple" icon="false"}
 ## {{< fa info-circle >}} Private key and passphrase
