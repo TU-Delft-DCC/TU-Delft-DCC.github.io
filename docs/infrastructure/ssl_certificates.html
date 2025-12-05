@@ -6,10 +6,10 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="dcterms.date" content="2025-09-03">
-<meta name="description" content="how to set up a single-step SSH connection to a VPS using SSH tunneling">
+<meta name="dcterms.date" content="2025-12-02">
+<meta name="description" content="Requesting and configuring SSL certificates on TU Delft VPS">
 
-<title>Set up SSH tunneling for a VPS</title>
+<title>Configure SSL/TLS certificates</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -67,8 +67,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../../">
-<link href="../../docs/infrastructure/moving_data.html" rel="next">
-<link href="../../docs/infrastructure/VPS_request.html" rel="prev">
+<link href="../../docs/infrastructure/web_servers.html" rel="prev">
 <link href="../../docs/img/cone.png" rel="icon" type="image/png">
 <script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
@@ -340,7 +339,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../docs/infrastructure/getting_started.html"><img src="../../docs/img/gear.svg" style="filter: invert(0.5) sepia(1) saturate(5) hue-rotate(175deg);height:1em"> <strong>Computing Infrastructure</strong></a></li><li class="breadcrumb-item"><a href="../../docs/infrastructure/remote_servers.html">Remote servers</a></li><li class="breadcrumb-item"><a href="../../docs/infrastructure/VPS_SSH.html">Server connection</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../docs/infrastructure/getting_started.html"><img src="../../docs/img/gear.svg" style="filter: invert(0.5) sepia(1) saturate(5) hue-rotate(175deg);height:1em"> <strong>Computing Infrastructure</strong></a></li><li class="breadcrumb-item"><a href="../../docs/infrastructure/web_servers.html">Web servers</a></li><li class="breadcrumb-item"><a href="../../docs/infrastructure/ssl_certificates.html">SSL certificates</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -999,20 +998,20 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <div class="sidebar-item-container"> 
             <a href="../../docs/infrastructure/remote_servers.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Remote servers</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-17" role="navigation" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-17" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-17" class="collapse list-unstyled sidebar-section depth2 show">  
+      <ul id="quarto-sidebar-section-17" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../docs/infrastructure/VPS_request.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Server request form</span></a>
+  <a href="../../docs/infrastructure/vps_request.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Request VPS</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../docs/infrastructure/VPS_SSH.html" class="sidebar-item-text sidebar-link active">
+  <a href="../../docs/infrastructure/vps_ssh.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Server connection</span></a>
   </div>
 </li>
@@ -1022,23 +1021,23 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
  <span class="menu-text">Data transfer</span></a>
   </div>
 </li>
+      </ul>
+  </li>
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a href="../../docs/infrastructure/web_servers.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Web servers</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#" role="navigation" aria-expanded="false" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-18" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="" class="collapse list-unstyled sidebar-section depth3 ">  
+      <ul id="quarto-sidebar-section-18" class="collapse list-unstyled sidebar-section depth2 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../docs/infrastructure/VPS_SSL_Certs.html" class="sidebar-item-text sidebar-link">
+  <a href="../../docs/infrastructure/ssl_certificates.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">SSL certificates</span></a>
   </div>
 </li>
-      </ul>
-  </li>
       </ul>
   </li>
           <li class="sidebar-item">
@@ -1063,8 +1062,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#prerequisites" id="toc-prerequisites" class="nav-link active" data-scroll-target="#prerequisites">Prerequisites</a></li>
-  <li><a href="#steps-for-linux-including-wsl-and-macos" id="toc-steps-for-linux-including-wsl-and-macos" class="nav-link" data-scroll-target="#steps-for-linux-including-wsl-and-macos">Steps for Linux (including WSL) and macOS</a></li>
+  <li><a href="#request-certificate" id="toc-request-certificate" class="nav-link active" data-scroll-target="#request-certificate">Request Certificate</a>
+  <ul class="collapse">
+  <li><a href="#prepare-certificate-on-the-server" id="toc-prepare-certificate-on-the-server" class="nav-link" data-scroll-target="#prepare-certificate-on-the-server">Prepare Certificate on the Server</a></li>
+  </ul></li>
+  <li><a href="#renew-certificate" id="toc-renew-certificate" class="nav-link" data-scroll-target="#renew-certificate">Renew Certificate</a></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/TU-Delft-DCC/TU-Delft-DCC.github.io/issues/new/choose" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div></nav>
     </div>
@@ -1072,17 +1074,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <main class="content" id="quarto-document-content">
 
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../docs/infrastructure/getting_started.html"><img src="../../docs/img/gear.svg" style="filter: invert(0.5) sepia(1) saturate(5) hue-rotate(175deg);height:1em"> <strong>Computing Infrastructure</strong></a></li><li class="breadcrumb-item"><a href="../../docs/infrastructure/remote_servers.html">Remote servers</a></li><li class="breadcrumb-item"><a href="../../docs/infrastructure/VPS_SSH.html">Server connection</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../docs/infrastructure/getting_started.html"><img src="../../docs/img/gear.svg" style="filter: invert(0.5) sepia(1) saturate(5) hue-rotate(175deg);height:1em"> <strong>Computing Infrastructure</strong></a></li><li class="breadcrumb-item"><a href="../../docs/infrastructure/web_servers.html">Web servers</a></li><li class="breadcrumb-item"><a href="../../docs/infrastructure/ssl_certificates.html">SSL certificates</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">Set up SSH tunneling for a VPS</h1>
+<h1 class="title">Configure SSL/TLS certificates</h1>
   <div class="quarto-categories">
     <div class="quarto-category">Infrastructure</div>
     <div class="quarto-category">Servers</div>
     <div class="quarto-category">VPS</div>
-    <div class="quarto-category">SSH Tunneling</div>
-    <div class="quarto-category">SSH Keys</div>
-    <div class="quarto-category">Bastion Host</div>
-    <div class="quarto-category">scp</div>
+    <div class="quarto-category">Cybersecurity</div>
   </div>
   </div>
 
@@ -1094,14 +1093,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <div>
     <div class="quarto-title-meta-heading">Last reviewed</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">September 3, 2025</p>
+      <p class="date">December 2, 2025</p>
     </div>
   </div>
   
     <div>
     <div class="quarto-title-meta-heading">Last modified</div>
     <div class="quarto-title-meta-contents">
-      <p class="date-modified">September 19, 2025</p>
+      <p class="date-modified">December 2, 2025</p>
     </div>
   </div>
     
@@ -1112,122 +1111,113 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 <script async="" defer="" src="https://scripts.simpleanalyticscdn.com/latest.js"></script>
-<p>This guide explains how to set up a secure, single-step Secure Shell (SSH) connection to a Virtual Private Server (VPS) at TU Delft. SSH is a protocol that allows secure remote access to servers over an unsecured network.</p>
-<p>Commonly, connecting to a VPS requires first accessing a <strong>Bastion Host</strong> (an intermediary server controlling access). Faculty-managed VPS setups at TU Delft can be accessed by two types of bastion hosts: <code>linux-bastion-ex.tudelft.nl</code> having a local /home directory, and <code>linux-bastion.tudelft.nl</code> having access to your own central /home directory. In this sense, <code>linux-bastion-ex.tudelft.nl</code> is a more secure option recommended for the steps below.</p>
-<p>Connecting to a VPS via a bastion host is a two-step process. However, by using SSH tunneling and SSH keys, you will be able to connect directly from your local machine to your VPS. This setup bypasses the need to log in to the bastion host separately, for example, simplifies secure file transfers between your local machine and the VPS.</p>
+<p>In web servers, SSL/TLS certificates are used to encrypt the communication between a web server and the client (e.g.&nbsp;web browser). In a web server, this is what makes it possible to have HTTPS connections instead of HTTP connections. HTTPS connections are secure, meaning that the data exchanged between the server and the client is encrypted and cannot be intercepted or read by third parties. In order to do this, you need an SSL certificate from a certificate signing authority.</p>
+<p>When a web server certificate expires or becomes invalid, a web browser will show you a warning saying it is risky to access a website. This is because the browser cannot verify the identity of the web server, and therefore cannot ensure that the connection is secure. If you are a website owner, it is important to ensure that your SSL certificate is valid and up-to-date to avoid these warnings and maintain the trust of your users.</p>
+<p>This guide shows how to request and prepare an SSL/TLS certificate from HARICA, a Certification Authority trusted by TU Delft ICT. TU Delft staff can request SSL/TLS certificates using the <strong>Academic login</strong> option on the <a href="https://cm.harica.gr/Login">HARICA website</a>. You can opt to use <a href="https://letsencrypt.org/how-it-works/">Let’s Encrypt</a> certificates via Certbot instead, which also provides free SSL certificates, but these certificates need to be renewed every 90 days. The HARICA certificates are valid for up to one year.</p>
+<div class="callout callout-style-simple callout-warning no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Warning</span><i class="fa-solid fa-exclamation-circle" aria-label="exclamation-circle"></i> Unsecure connections
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Using unsecure HTTP connections can expose sensitive information, such as login credentials and personal data, to potential attackers. It can also make it easier for attackers to intercept and manipulate the data being exchanged between the client and server. Therefore, avoid accessing and deploying websites that do not use HTTPS, especially when transmitting sensitive information.</p>
+</div>
+</div>
+<section id="request-certificate" class="level2">
+<h2 class="anchored" data-anchor-id="request-certificate">Request Certificate</h2>
+<p>To request SSL/TLS certificates via HARICA, follow these steps:</p>
+<ol type="1">
+<li>Log in to the <a href="https://cm.harica.gr/Login">HARICA website</a> using your TU Delft credentials.</li>
+<li>Follow the <a href="https://guides.harica.gr/docs/Guides/Server-Certificate/Request-for-Domain-Validated-DV/">instructions on the HARICA website to create an SSL certificate</a>. You need to do so for the qualified domain name associated with your server (e.g.&nbsp;<code>my-site.tudelft.nl</code>).</li>
+</ol>
 <div class="callout callout-style-simple callout-important no-icon callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Important</span><i class="fa-solid fa-info-circle" aria-label="info-circle"></i> Accessing a VPS
+<span class="screen-reader-only">Important</span><i class="fa-solid fa-info-circle" aria-label="info-circle"></i> Private key and passphrase
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Depending on your geographical location, access to a VPS via SSH may be blocked by the TU Delft firewall. For example, access is usually blocked if you are connecting from your home network. Therefore, before going through the following steps, please check the <a href="https://www.tudelft.nl/en/it-manuals/working-remotely">TU Delft manuals for working remotely</a> for <a href="https://www.tudelft.nl/en/it-manuals/applications/vpn">eduVPN</a> and <a href="https://www.tudelft.nl/ict-handleidingen/linux-bastion-host">bastion host</a>.</p>
+<p>When creating an SSL/TLS certificate, HARICA will prompt you to set <strong>passphrase</strong> and download a private key file. This file is essential for using the SSL/TLS certificate. Ensure that you securely store this private key file and do not forget the passphrase. If either the private key file or the passphrase is lost, you will need to request a new SSL/TLS certificate.</p>
 </div>
 </div>
-<section id="prerequisites" class="level3">
-<h3 class="anchored" data-anchor-id="prerequisites">Prerequisites</h3>
-<p>Before starting, you need:</p>
-<ul>
-<li>A TU Delft NetID.</li>
-<li>Access to a VPS provided by TU Delft ICT. Check <a href="../../docs/infrastructure/VPS_request.html">this guide</a> for more information on how to request a VPS.</li>
-<li>An SSH client installed on your local machine. This is usually included in most Linux and macOS distributions via a terminal or shell. For Windows, you can use a third-party SSH client like <a href="https://www.putty.org/">PuTTY</a> or a Windows Subsystem for Linux (WSL).</li>
-</ul>
+<ol start="3" type="1">
+<li>Once the new certificates are issued, you will be notified by email. Log in to the HARICA website and download the certificate as a <strong>PEM bundle</strong> file.</li>
+</ol>
+<section id="prepare-certificate-on-the-server" class="level3">
+<h3 class="anchored" data-anchor-id="prepare-certificate-on-the-server">Prepare Certificate on the Server</h3>
+<p>For configuring the web server, you typically need two specific files: <code>fullchain.pem</code> and <code>privkey.pem</code> (the private key file you downloaded when requesting the certificate). You need to upload these files to the server, decrypt the private key file, and place them in the appropriate directory with the correct permissions. The instructions below assume you have a remote server running a Linux-based OS, you have SSH access to it, and have set a <a href="../../docs/infrastructure/vps_ssh.html#set-up-ssh-tunneling">host nickname</a>.</p>
+<ol type="1">
+<li><p>Rename the PEM bundle file as <code>fullchain.pem</code>, and the private key file as <code>privkey.pem</code>. These exact names are not required, but they are common conventions.</p></li>
+<li><p>Upload the new <code>fullchain.pem</code> and the <code>privkey.pem</code> using <code>scp</code> to your home directory on the server.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># From the directory where you downloaded the certificate and private key files:</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">scp</span> ./fullchain.pem <span class="op">&lt;</span>host-nickname<span class="op">&gt;</span>:~/ </span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="fu">scp</span> ./privkey.pem <span class="op">&lt;</span>host-nickname<span class="op">&gt;</span>:~/</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div></li>
+<li><p>Log in to the server via SSH, and check the files have been uploaded correctly:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ssh</span> <span class="op">&lt;</span>host-nickname<span class="op">&gt;</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="fu">ls</span> ~/</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="co"># You should see the files 'fullchain.pem' and 'privkey.pem' listed.</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div></li>
+<li><p>Decrypt the private key file. Before using it on the web server, you need a decrypted copy of it.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="ex">openssl</span> rsa <span class="at">-in</span> ~/privkey.pem <span class="at">-out</span> ~/decrypted_privkey.pem </span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="co"># You will be prompted to enter the passphrase you set during the initial certificate creation.</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div></li>
+</ol>
+<div class="callout callout-style-simple callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span><i class="fa-solid fa-info-circle" aria-label="info-circle"></i> Encryption algorithms
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>The command above uses the <code>openssl rsa</code> tool to decrypt the private key file. This command works for RSA-encrypted private keys. If your private key uses a different encryption algorithm, consult the OpenSSL documentation. The encryption algorithm is decided when creating the private key during the certificate request.</p>
+</div>
+</div>
+<ol start="5" type="1">
+<li><p>Copy the certificate and private key files to the appropriate directory for your web server. This is dictated by the web server you are using.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> cp ~/fullchain.pem <span class="op">&lt;</span>web-server-directory<span class="op">&gt;</span>/fullchain.pem</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> cp ~/decrypted_privkey.pem <span class="op">&lt;</span>web-server-directory<span class="op">&gt;</span>/privkey.pem</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div></li>
+<li><p>Set the correct permissions for the certificate files. This ensures that only the root user can read the private key file, while the fullchain file can be read by others as needed:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> chown root:maintainers <span class="op">&lt;</span>web-server-directory<span class="op">&gt;</span>/fullchain.pem <span class="op">&lt;</span>web-server-directory<span class="op">&gt;</span>/privkey.pem</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> chmod 644 <span class="op">&lt;</span>web-server-directory<span class="op">&gt;</span>/fullchain.pem</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> chmod 600 <span class="op">&lt;</span>web-server-directory<span class="op">&gt;</span>/privkey.pem</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div></li>
+<li><p>Configure the web server to use HTTPS, and restart the web server. The configuration steps depend on the web server you are using (e.g., Apache, Nginx). Consult the documentation for your specific web server for instructions on how to enable HTTPS.</p></li>
+<li><p>Delete the temporary certificate files and decrypted private key from your home directory to maintain security:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">rm</span> ~/decrypted_privkey.pem  ~/fullchain.pem ~/privkey.pem</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div></li>
+</ol>
 </section>
-<section id="steps-for-linux-including-wsl-and-macos" class="level3">
-<h3 class="anchored" data-anchor-id="steps-for-linux-including-wsl-and-macos">Steps for Linux (including WSL) and macOS</h3>
-<div class="callout callout-style-simple callout-tip no-icon callout-titled">
+</section>
+<section id="renew-certificate" class="level2">
+<h2 class="anchored" data-anchor-id="renew-certificate">Renew Certificate</h2>
+<p>SSL/TLS certificates have a validity period, after which they expire and need to be renewed. HARICA certificates are valid for up to one year. To renew your certificate, you need to follow the same steps as <a href="#request-certificate">requesting a new certificate</a>. Make sure to do this before the current certificate expires to avoid any disruptions in your website’s HTTPS availability.</p>
+<p>Let’s Encrypt certificates, on the other hand, are valid for 90 days. If you are using Let’s Encrypt certificates, consider setting up automatic renewal using tools like <a href="https://certbot.eff.org/">Certbot</a> to ensure your certificates are always up-to-date.</p>
+<div class="callout callout-style-simple callout-note no-icon callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Tip</span><i class="fa-solid fa-lightbulb" aria-label="lightbulb"></i> Summary of steps
+<span class="screen-reader-only">Note</span><i class="fa-solid fa-signs-post" aria-label="signs-post"></i> Learn more
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<ol type="1">
-<li>Create SSH keys.</li>
-<li>Copy SSH keys to bastion host and remote server.</li>
-<li>Create a new host for SSH connection.</li>
-<li>Test connection.</li>
-</ol>
-</div>
-</div>
-<section id="set-up-ssh-tunneling" class="level4">
-<h4 class="anchored" data-anchor-id="set-up-ssh-tunneling"><strong>Set up SSH tunneling</strong></h4>
-<ol type="1">
-<li>If you do not have an SSH key-pair, create one on the local machine. Go to the terminal and enter the following command. Replace <code>&lt;my-keyname&gt;</code> with a name of your choice for the SSH key, e.g., <code>id_rsa</code> or <code>id_ed25519</code>.</li>
-</ol>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span>  ssh-keygen <span class="at">-t</span> ed25519 <span class="at">-f</span> ~/.ssh/<span class="op">&lt;</span>my-keyname<span class="op">&gt;</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>You will be prompted to create a <em>passphrase</em>. We recommend you to add one to make the connection more secure. The passphrase will be asked every time you connect to the VPS. To skip the passphrase, press <code>Enter</code> when prompted. You should see something like this:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ex">Generating</span> public/private ed25519 key pair.</span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="ex">Enter</span> passphrase for <span class="st">"ed25519"</span> <span class="er">(</span><span class="ex">empty</span> for no passphrase<span class="kw">)</span><span class="bu">:</span> </span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="ex">Enter</span> same passphrase again: </span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="ex">Your</span> identification has been saved in ~/.ssh/<span class="op">&lt;</span>my-keyname<span class="op">&gt;</span></span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="ex">Your</span> public key has been saved in ~/.ssh/<span class="op">&lt;</span>my-keyname<span class="op">&gt;</span>.pub</span>
-<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a><span class="ex">The</span> key fingerprint is:</span>
-<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a><span class="ex">SHA256:6j06srvun06gJ5UCmD+MVq6RsPuytCO5mF4hTELnWTg</span> root@local-machine</span>
-<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a><span class="ex">The</span> key<span class="st">'s randomart image is:</span></span>
-<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a><span class="st">+--[ED25519 256]--+</span></span>
-<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a><span class="st">&lt;image cut for security reasons&gt;</span></span>
-<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a><span class="st">+----[SHA256]-----+</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>A private and public key pair will be created in <code>~/.ssh</code>.</p>
-<div class="callout callout-style-simple callout-important no-icon callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Important</span><i class="fa-solid fa-info-circle" aria-label="info-circle"></i> Accessing .ssh
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p><code>~/</code> in <code>~/.ssh</code> refers to your /home directory. As stated above, this is different for the two bastion hosts at TU Delft. For <code>linux-bastion-ex.tudelft.nl</code>, it refers to the local /home directory of the bastion host, while for <code>linux-bastion.tudelft.nl</code>, it refers to your central /home directory. <code>.</code> in <code>~/.ssh</code> refers to a hidden directory. To view hidden files and directories in the terminal, you can use the command <code>ls -a</code>.</p>
-</div>
-</div>
-<p>The <strong>public key is the file with the <code>.pub</code> extension</strong>, e.g., <code>&lt;my-keyname&gt;.pub</code></p>
-<div class="callout callout-style-simple callout-tip no-icon callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Tip</span><i class="fa-solid fa-lightbulb" aria-label="lightbulb"></i> Tip
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Similar to passwords, it is advised to rotate your SSH keys regularly (e.g., every 6 months). You can do this by generating a new key pair and replacing the old one on your local machine and VPS.</p>
-</div>
-</div>
-<ol start="2" type="1">
-<li><p>Log in to your VPS and, copy the <strong>content</strong> of your <strong>public key</strong> into the VPS <code>~/.ssh/authorized_keys</code> file. You can achieve this by copying the content of the public key file to the clipboard and pasting it into the <code>authorized_keys</code> file on the VPS. Be mindful not to remove anything from this file, as other SSH connections might stop working. Finally, save the file.</p></li>
-<li><p>Create a new host for SSH connection. On your local machine, edit the <code>~/.ssh/config</code> file and add the following configuration. If the file does not exist, create it.</p></li>
-</ol>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="ex">Host</span> <span class="op">&lt;</span>host-nickname<span class="op">&gt;</span></span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>    <span class="ex">HostName</span> <span class="op">&lt;</span>target-host<span class="op">&gt;</span></span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>    <span class="ex">User</span> <span class="op">&lt;</span>target-username<span class="op">&gt;</span></span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>    <span class="ex">ProxyJump</span> <span class="op">&lt;</span>bastion-username<span class="op">&gt;</span>@linux-bastion-ex.tudelft.nl</span>
-<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>    <span class="ex">IdentityFile</span> ~/.ssh/<span class="op">&lt;</span>my-keyname<span class="op">&gt;</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>Replace:</p>
 <ul>
-<li><code>&lt;host-nickname&gt;</code>: a name of your choice for the target host, e.g., <code>my-server</code>.</li>
-<li><code>&lt;target-host&gt;</code>: the actual name of the target host (FQDM), e.g., <code>server.tudelft.nl</code>.</li>
-<li><code>&lt;target-username&gt;</code>: the username used to log in to the target host, usually your NetID.</li>
-<li><code>&lt;bastion-username&gt;</code>: the username used to log in to the bastion server (often same as NetID, but keep separate in case it differs).</li>
-<li><code>&lt;my-keyname&gt;</code>: the name of the SSH private key you created, e.g., <code>id_rsa</code>. If your private key is stored in a different location, replace the path accordingly.</li>
+<li><a href="https://letsencrypt.org/how-it-works/">Domain validation and certificate issuance by Let’s Encrypt</a></li>
+<li><a href="https://www.geeksforgeeks.org/computer-networks/secure-socket-layer-ssl/">SSL security protocol by GeeksforGeeks</a></li>
 </ul>
-<ol start="4" type="1">
-<li>Test the SSH tunneling connection. Connect to the VPS using <em>SSH tunneling</em> by typing the command below. Use your <em>bastion-password</em> when asked. This is usually the password associated with your NetID.</li>
-</ol>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> ssh <span class="op">&lt;</span>host-nickname<span class="op">&gt;</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>If you encounter problems with the connection, use the debug mode <code>ssh -vvv &lt;host-nickname&gt;</code> to find out what might have gone wrong. This command will provide detailed information about the connection process and can help you troubleshoot any issues.</p>
+</div>
+</div>
 
 
-</section>
 </section>
 
 </main> <!-- /main -->
@@ -1646,14 +1636,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../../docs/infrastructure/VPS_request.html" class="pagination-link" aria-label="Server request form">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Server request form</span>
+      <a href="../../docs/infrastructure/web_servers.html" class="pagination-link" aria-label="Web servers">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Web servers</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../../docs/infrastructure/moving_data.html" class="pagination-link" aria-label="Data transfer">
-        <span class="nav-page-text">Data transfer</span> <i class="bi bi-arrow-right-short"></i>
-      </a>
   </div>
 </nav>
 </div> <!-- /content -->

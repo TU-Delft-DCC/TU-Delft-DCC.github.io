@@ -1005,13 +1005,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <ul id="quarto-sidebar-section-17" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../../docs/infrastructure/VPS_request.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Server request form</span></a>
+  <a href="../../../../docs/infrastructure/vps_request.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Request VPS</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../../docs/infrastructure/VPS_SSH.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../../docs/infrastructure/vps_ssh.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Server connection</span></a>
   </div>
 </li>
@@ -1021,23 +1021,23 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
  <span class="menu-text">Data transfer</span></a>
   </div>
 </li>
+      </ul>
+  </li>
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a href="../../../../docs/infrastructure/web_servers.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Web servers</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#" role="navigation" aria-expanded="false" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-18" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="" class="collapse list-unstyled sidebar-section depth3 ">  
+      <ul id="quarto-sidebar-section-18" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../../docs/infrastructure/VPS_SSL_Certs.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../../docs/infrastructure/ssl_certificates.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">SSL certificates</span></a>
   </div>
 </li>
-      </ul>
-  </li>
       </ul>
   </li>
           <li class="sidebar-item">
@@ -1135,7 +1135,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="prerequisites" class="level2">
 <h2 class="anchored" data-anchor-id="prerequisites">Prerequisites</h2>
-<p><strong>Server:</strong> This guide assumes you have access to a server to host the GitLab Runner. You can request a server from TU Delft ICT Services by following the instructions <a href="../../../../docs/infrastructure/VPS_request.html">here</a>. It is useful to set this up on a server so that Docker can be running continuously, and be ready to run CI/CD tests whenever a new commit occurs in the repository.</p>
+<p><strong>Server:</strong> This guide assumes you have access to a server to host the GitLab Runner. You can request a server from TU Delft ICT Services by following the instructions <a href="../../../../docs/infrastructure/vps_request.html">here</a>. It is useful to set this up on a server so that Docker can be running continuously, and be ready to run CI/CD tests whenever a new commit occurs in the repository.</p>
 <p><strong>Docker:</strong> A Docker container is used to run the GitLab Runner and initialize the CI/CD pipeline.</p>
 <p><strong>GitLab Runner:</strong> “Runners are the agents that run the CI/CD jobs that come from GitLab. When you register a runner, you are setting up communication between your GitLab instance and the machine where GitLab Runner is installed. Runners usually process jobs on the same machine where you installed GitLab Runner.” - <a href="https://docs.gitlab.com">GitLab documentation</a></p>
 <p><strong>GitLab repository:</strong> A remote GitLab repository stores your project code and keeps track of its development. You’re on one right now! :) If you haven’t already, log in to TU Delft’s GitLab instance at <em>gitlab.tudelft.nl</em> using your <strong>NetID and password</strong>, and create a repository for your project.</p>
@@ -1165,7 +1165,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </ol>
 <section id="step-1.-request-server-running-ubuntu" class="level3">
 <h3 class="anchored" data-anchor-id="step-1.-request-server-running-ubuntu">Step 1. Request server running Ubuntu</h3>
-<p>If you don’t have a VPS already, you can request one from TU Delft ICT. Instructions for requesting a server and storage are available <a href="../../../../docs/infrastructure/VPS_request.html">here</a>.</p>
+<p>If you don’t have a VPS already, you can request one from TU Delft ICT. Instructions for requesting a server and storage are available <a href="../../../../docs/infrastructure/vps_request.html">here</a>.</p>
 <p>Recommended Configuration for a GitLab Runner:</p>
 <ul>
 <li>Basic Configuration 4 (Ubuntu)</li>
