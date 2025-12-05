@@ -59,7 +59,7 @@ To run a CI/CD pipeline, a `gitlab-runner` Docker container runs continuously on
 
 
 ## Prerequisites
-**Server:** This guide assumes you have access to a server to host the GitLab Runner. You can request a server from TU Delft ICT Services by following the instructions [here](../../../infrastructure/VPS_request.md). It is useful to set this up on a server so that Docker can be running continuously, and be ready to run CI/CD tests whenever a new commit occurs in the repository.
+**Server:** This guide assumes you have access to a server to host the GitLab Runner. You can request a server from TU Delft ICT Services by following the instructions [here](../../../infrastructure/vps_request.md). It is useful to set this up on a server so that Docker can be running continuously, and be ready to run CI/CD tests whenever a new commit occurs in the repository.
 
 **Docker:** A Docker container is used to run the GitLab Runner and initialize the CI/CD pipeline.
 
@@ -87,7 +87,7 @@ To run a CI/CD pipeline, a `gitlab-runner` Docker container runs continuously on
 10. Test the CI/CD pipeline
 
 ### Step 1. Request server running Ubuntu
-If you don't have a VPS already, you can request one from TU Delft ICT. Instructions for requesting a server and storage are available [here](../../../infrastructure/VPS_request.md).
+If you don't have a VPS already, you can request one from TU Delft ICT. Instructions for requesting a server and storage are available [here](../../../infrastructure/vps_request.md).
 
 Recommended Configuration for a GitLab Runner:
 

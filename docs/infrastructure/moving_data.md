@@ -125,7 +125,7 @@ scp -i <path-to-custom-private-ssh-key> -o "ProxyJump <bastion-username>@linux-b
 
 ### Transferring files using SSH tunneling
 
-If [SSH tunneling](VPS_SSH.md) has been configured correctly for the remote host, you can copy files to and from a remote host as follows:
+If [SSH tunneling](vps_ssh.md) has been configured correctly for the remote host, you can copy files to and from a remote host as follows:
 
 ```bash
 # Copy TO remote host

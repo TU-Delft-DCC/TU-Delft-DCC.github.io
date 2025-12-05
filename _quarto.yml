@@ -300,17 +300,17 @@ website:
           - section: "Remote servers"
             href: docs/infrastructure/remote_servers.md
             contents:
-              - text: Server request form
-                href: docs/infrastructure/VPS_request.md
+              - text: Request VPS
+                href: docs/infrastructure/vps_request.md
               - text: Server connection
-                href: docs/infrastructure/VPS_SSH.md
+                href: docs/infrastructure/vps_ssh.md
               - text: Data transfer
                 href: docs/infrastructure/moving_data.md
-              - text: Web servers
-                href: docs/infrastructure/web_servers.md
-                contents:
-                  - text: SSL certificates
-                    href: docs/infrastructure/VPS_SSL_Certs.md
+          - section: "Web servers"
+            href: docs/infrastructure/web_servers.md
+            contents:  
+              - text: SSL certificates
+                href: docs/infrastructure/ssl_certificates.md
           - text: <br>
         - text: ---
         - href: listings.qmd
