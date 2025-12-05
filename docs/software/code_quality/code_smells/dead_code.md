@@ -7,7 +7,7 @@ date: 2025-02-04
 
 # We use this key to indicate the last modified date [manual entry, use YYYY-MM-DD]
 # Uncomment and populate the next line accordingly
-date-modified: 2025-09-19
+date-modified: 2025-12-05
 
 # Do not modify
 lang: en
@@ -47,7 +47,7 @@ categories:
 
 ---
 
-Dead code refers to unused or unreachable code that remains in the codebase but serves no functional purpose. Commented-out code consists of inactive code blocks that developers have disabled rather than deleting. Both contribute to clutter and reduce maintainability.
+Dead code refers to unused or unreachable code that remains in the codebase, but serves no functional purpose. Commented-out code consists of inactive code blocks that developers have disabled rather than deleting. Both contribute to clutter and reduce maintainability.
 
 ## Symptoms
 
