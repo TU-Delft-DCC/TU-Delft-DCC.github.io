@@ -53,7 +53,7 @@ In order to do this, you need an SSL certificate from a certificate signing auth
 
 When a webserver certificate is expired or invalid, a web browser will show you a warning saying it is risky to access a website. This is because the browser cannot verify the identity of the web server, and therefore cannot ensure that the connection is secure. If you are a website owner, it is important to ensure that your SSL certificate is valid and up-to-date to avoid these warnings and maintain the trust of your users. 
 
-This guide shows how to request and prepare an SSL/TLS certificate from HARICA, a Certification Authority trusted by TU Delft ICT. TU Delft staff can request SSL/TSL certificates using the **Academic login** option on the [HARICA website](https://cm.harica.gr/Login). You can opt to use [Let's Encrypt](https://letsencrypt.org/how-it-works/) certificates via Certbot instead, which also provides free SSL certificates, but these certificates need to be renewed every 90 days. The HARICA certificates are valid for up to one year.
+This guide shows how to request and prepare an SSL/TLS certificate from HARICA, a Certification Authority trusted by TU Delft ICT. TU Delft staff can request SSL/TLS certificates using the **Academic login** option on the [HARICA website](https://cm.harica.gr/Login). You can opt to use [Let's Encrypt](https://letsencrypt.org/how-it-works/) certificates via Certbot instead, which also provides free SSL certificates, but these certificates need to be renewed every 90 days. The HARICA certificates are valid for up to one year.
 
 :::{.callout-warning appearance="simple" icon="false"}
 ## {{< fa exclamation-circle >}}  Unsecure connections
@@ -69,7 +69,7 @@ To request SSL/TLS certificates via HARICA, follow these steps:
 
 :::{.callout-important appearance="simple" icon="false"}
 ## {{< fa info-circle >}} Private key and passphrase
-When creating an SSL/TSL certificate HARICA will prompt you to set **passphrase** and download a private key file. This file is essential for using the SSL/TSL certificate. Ensure that you securely store this private key file and do not forget the passphrase. If either the private key file or the passphrase is lost, you will need to request a new SSL/TSL certificate.
+When creating an SSL/TLS certificate HARICA will prompt you to set **passphrase** and download a private key file. This file is essential for using the SSL/TLS certificate. Ensure that you securely store this private key file and do not forget the passphrase. If either the private key file or the passphrase is lost, you will need to request a new SSL/TLS certificate.
 :::
 
 3. Once the new certificates are issued, you will be notified by email. Log in to the HARICA website and download the certificate as a **PEM bundle** file.
@@ -116,7 +116,7 @@ The command above uses the `openssl rsa` tool to decrypt the private key file. T
     sudo cp ~/fullchain.pem <web-server-directory>/fullchain.pem
     sudo cp ~/decrypted_privkey.pem <web-server-directory>/privkey.pem
     ```
-    
+
 6. Set the correct permissions for the certificate files. This ensures that only the root user can read the private key file, while the fullchain file can be read by others as needed:
 
     ```bash
