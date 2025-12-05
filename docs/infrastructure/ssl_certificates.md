@@ -110,11 +110,13 @@ You need to upload these files to the server, decrypt the private key file, and 
 The command above uses the `openssl rsa` tool to decrypt the private key file. This command works for RSA-encrypted private keys. If your private key uses a different encryption algorithm, consult the OpenSSL documentation. The encryption algorithm is decided when creating the private key during the certificate request. 
 :::
 
-5. Copy the certificate and private key files to the appropriate directory for your web server. This is dictated by the web server you are using. 
+5. Copy the certificate and private key files to the appropriate directory for your web server. This is dictated by the web server you are using.
+
     ```bash
     sudo cp ~/fullchain.pem <web-server-directory>/fullchain.pem
     sudo cp ~/decrypted_privkey.pem <web-server-directory>/privkey.pem
     ```
+    
 6. Set the correct permissions for the certificate files. This ensures that only the root user can read the private key file, while the fullchain file can be read by others as needed:
 
     ```bash
