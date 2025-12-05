@@ -172,13 +172,13 @@ website:
                       href: docs/software/code_quality/code_smells/hardcoded_values.md
                     - text: Deep nesting
                       href: docs/software/code_quality/code_smells/deep_nesting.md
-                    - text: Many inputs
+                    - text: Many arguments
                       href: docs/software/code_quality/code_smells/many_arguments.md
                     - text: Inappropriate intimacy
                       href: docs/software/code_quality/code_smells/inappropriate_intimacy.md
                     - text: Side effects
                       href: docs/software/code_quality/code_smells/side_effects.md
-                    - text: Commented out code
+                    - text: Dead code
                       href: docs/software/code_quality/code_smells/dead_code.md
                 - text: Online services
                   href: docs/software/code_quality/online_services.md

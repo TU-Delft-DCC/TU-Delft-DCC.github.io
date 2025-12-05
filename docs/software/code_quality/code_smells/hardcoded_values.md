@@ -7,7 +7,7 @@ date: 2025-02-03
 
 # We use this key to indicate the last modified date [manual entry, use YYYY-MM-DD]
 # Uncomment and populate the next line accordingly
-date-modified: 2025-09-19
+date-modified: 2025-12-05
 
 # Do not modify
 lang: en
@@ -27,7 +27,7 @@ hide-description: true
 # Authors of the document, will not be parsed [manual entry]
 # Uncomment and populate the next lines accordingly
 author_1: Maurits Kok
-#author_2:
+author_2: Manuel Garcia
 
 # Maintainers of the document, will not be parsed [manual entry]
 # Uncomment and populate the next lines accordingly
@@ -57,6 +57,10 @@ Hard-coding variables occurs when constants, configuration values, or logic are 
 - A small behavior change requires altering the core code, instead of adjusting an input parameters of config file.
 
 ## Example - Hard coding and magic numbers
+
+::: {.panel-tabset}
+
+## Python
 ```python
 def calculate_area(radius):
     # Hard-coded value of pi
@@ -64,11 +68,30 @@ def calculate_area(radius):
 
 def check_temperature(temperature):
     # Hard-coded temperature values for thresholding
-    if temperature > 30: # What does 30 represent
+    if temperature > 30: # What does 30 represent?
         print("It's too hot!")
     elif temperature < 10:
         print("It's too cold!")
 ```
+
+## R
+```r
+calculate_area <- function(radius) {
+  # Hard-coded value of pi
+  return(3.14 * radius * radius)  # What if you need more precision?
+}
+
+check_temperature <- function(temperature) {
+  # Hard-coded temperature values for thresholding
+  if (temperature > 30) {  # What does 30 represent?
+    print("It's too hot!")
+  } else if (temperature < 10) {
+    print("It's too cold!")
+  }
+}
+```
+
+:::
 
 #### Issues
 
@@ -80,11 +103,14 @@ def check_temperature(temperature):
 ### Solution
 Using named constants and configurable parameters makes the code more readable, maintainable, and flexible.
 
+::: {.panel-tabset}
+
+## Python
 ```python
 import numpy as np  # Use a library constant
 
-HOT_THRESHOLD = 30  # Defined constant for readability
-COLD_THRESHOLD = 10  # Defined constant for readability
+HOT_THRESHOLD = 30  # Define named constant for readability
+COLD_THRESHOLD = 10  # Define named constant for readability
 
 def calculate_area(radius):  # Default parameter allows customization
     return np.pi * radius * radius # Use library constant for pi
@@ -96,17 +122,54 @@ def check_temperature(temperature, hot_threshold=HOT_THRESHOLD, cold_threshold=C
         print("It's too cold!")
 ```
 
+## R
+```r
+# Define constants at the top of the script
+HOT_THRESHOLD <- 30  # Define named constant for readability
+COLD_THRESHOLD <- 10  # Define named constant for readability
+
+calculate_area <- function(radius) {
+  # Use pi constant from base R
+  return(pi * radius * radius)  # Use built-in pi constant for precision
+}
+
+check_temperature <- function(temperature, hot_threshold = HOT_THRESHOLD, cold_threshold = COLD_THRESHOLD) {
+  if (temperature > hot_threshold) {  # Use named constants for readability
+    print("It's too hot!")
+  } else if (temperature < cold_threshold) {
+    print("It's too cold!")
+  }
+}
+```
+
+:::
+
 ## Example - Rigid code
 This simulation hard-codes the time step and duration, making it rigid.
 
+::: {.panel-tabset}
+
+## Python
 ```python
 def run_simulation():
     step_size = 0.01  # Fixed timestep
     total_time = 10  # Fixed total duration
     for t in range(0, total_time, step_size):
         update_system(t)
-
 ```
+
+## R
+```r
+run_simulation <- function() {
+  step_size <- 0.01  # Fixed timestep
+  total_time <- 10  # Fixed total duration
+  for (t in seq(0, total_time - step_size, by = step_size)) {
+    update_system(t)
+  }
+}
+```
+
+:::
 
 #### Issues
 - Change the step size of total duration required modifying the source code.
@@ -115,6 +178,9 @@ def run_simulation():
 ### Solution
 Introduce function parameters or external configuration files for flexibility and reproducibility.
 
+::: {.panel-tabset}
+
+## Python
 ```python
 def run_simulation(step_size=0.01, total_time=10):
     for t in range(0, total_time, step_size):
@@ -123,6 +189,20 @@ def run_simulation(step_size=0.01, total_time=10):
 # Calling with different configurations
 run_simulation(step_size=0.05, total_time=20)  # Adjust without modifying the underlying code
 ```
+
+## R
+```r
+run_simulation <- function(step_size = 0.01, total_time = 10) {
+  for (t in seq(0, total_time - step_size, by = step_size)) {
+    update_system(t)
+  }
+}
+
+# Calling with different configurations
+run_simulation(step_size = 0.05, total_time = 20)  # Adjust without modifying the underlying code
+```
+
+:::
 
 For larger projects, moving configuration values to a separate file or class can further improve reproducibility and maintainability. Users would then only need to adjust the (text-based) configuration file without touching the core code.
 
@@ -133,6 +213,9 @@ simulation:
   total_time: 10
 ```
 
+::: {.panel-tabset}
+
+## Python
 ```python
 import yaml
 
@@ -143,6 +226,24 @@ def load_config(file_path="config.yaml"):
 config = load_config()
 run_simulation(config['simulation']['step_size'], config['simulation']['total_time'])
 ```
+
+## R
+```r
+# Install yaml package if needed: install.packages("yaml")
+library(yaml)
+
+load_config <- function(file_path = "config.yaml") {
+  return(yaml::read_yaml(file_path))
+}
+
+config <- load_config()
+run_simulation(
+  step_size = config$simulation$step_size,
+  total_time = config$simulation$total_time
+)
+```
+
+:::
 
 ## Key takeaways
 - Use named constants for improved readability.
