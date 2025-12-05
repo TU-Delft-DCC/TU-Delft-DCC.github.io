@@ -143,5 +143,5 @@ Let's Encrypt certificates, on the other hand, are valid for 90 days. If you are
 :::{.callout-note appearance="simple" icon="false"}
 ## {{< fa signs-post >}} Learn more
 - [Domain validation and certificate issuance by Let's Encrypt](https://letsencrypt.org/how-it-works/)
-- [SSL secutiry protocol by GeekforGeeks](https://www.geeksforgeeks.org/computer-networks/secure-socket-layer-ssl/)
+- [SSL secutiry protocol by GeeksforGeeks](https://www.geeksforgeeks.org/computer-networks/secure-socket-layer-ssl/)
 :::
