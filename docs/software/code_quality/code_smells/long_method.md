@@ -7,7 +7,7 @@ date: 2025-02-01
 
 # We use this key to indicate the last modified date [manual entry, use YYYY-MM-DD]
 # Uncomment and populate the next line accordingly
-date-modified: 2025-09-19
+date-modified: 2025-12-03
 
 # Do not modify
 lang: en
@@ -27,7 +27,7 @@ hide-description: true
 # Authors of the document, will not be parsed [manual entry]
 # Uncomment and populate the next lines accordingly
 author_1: Maurits Kok
-#author_2:
+author_2: Manuel Garcia
 
 # Maintainers of the document, will not be parsed [manual entry]
 # Uncomment and populate the next lines accordingly
@@ -82,10 +82,10 @@ def load_data(filepath: str):
             data = json.load(file)
     elif extension == ".pickle":
         with open(filepath, "rb") as file:
-            # If file extionsion is .pickle: load pickled data
+            # If file extension is .pickle: load pickled data
             data = pickle.load(file)
     elif extension == ".csv":
-        # If file extionsion is .csv: load cvs data
+        # If file extension is .csv: load csv data
         data = read_csv(filepath)
     else:
         raise ValueError(f"Unsupported file format: {extension}")
@@ -118,7 +118,7 @@ load_data <- function(filepath) {
     data <- readRDS(filepath)
   } else if (extension == "csv") {
     # If file extension is .csv: load csv data
-    data <- read.csv(filepath)
+    data <- readr::read_csv(filepath) # or read.csv(filepath)
   } else {
     stop(paste("Unsupported file format:", extension))
   }
@@ -242,7 +242,7 @@ read_from_rds <- function(filepath) {
 }
 
 read_from_csv <- function(filepath) {
-  read.csv(filepath)
+  readr::read_csv(filepath) # or read.csv(filepath)
 }
 ```
 

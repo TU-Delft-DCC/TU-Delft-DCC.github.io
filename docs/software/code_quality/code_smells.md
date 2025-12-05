@@ -7,7 +7,7 @@ date: 2025-01-31
 
 # We use this key to indicate the last modified date [manual entry, use YYYY-MM-DD]
 # Uncomment and populate the next line accordingly
-date-modified: 2025-09-19
+date-modified: 2025-12-03
 
 # Do not modify
 lang: en
@@ -150,7 +150,7 @@ Each guide provides an overview of a code smell, its symptoms and an example on 
 ::: {.g-col-4}
 ::: {.code-smell-card}
 ##### Dead Code
-**Problem:** There is unsued or commented-out code.  
+**Problem:** There is unused or commented-out code.  
 
 ::: {.refactor-link}
 [{{< fa wrench >}} Refactor unused code](./code_smells/dead_code.md)
