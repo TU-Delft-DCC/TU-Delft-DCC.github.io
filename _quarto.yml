@@ -311,7 +311,20 @@ website:
             contents:  
               - text: SSL certificates
                 href: docs/infrastructure/ssl_certificates.md
-          - text: <br>
+        - text: <br>
+        - section: "![](/docs/img/gear.svg){height=1em style='filter: invert(0.5) sepia(1) saturate(5) hue-rotate(175deg)'} **Research Support Staff Guide**"
+          contents:
+            - text: Getting started
+              href: docs/tud-support/index.md
+            - section: "About TU Delft Research Support"
+              href: docs/tud-support/about.qmd
+            - text: "Contacts & Support Landscape"
+              href: docs/tud-support/contacts.qmd
+            - text: "Learning & Training"
+              href: docs/tud-support/learning.qmd 
+            - text: "Soft Skills for Research Support"
+              href: docs/tud-support/soft_skills.qmd 
+        - text: <br>
         - text: ---
         - href: listings.qmd
           text: "![](/docs/img/catalog.svg){height=1em style='filter: invert(0.5) sepia(1) saturate(5) hue-rotate(175deg)'} **Catalogue**"
