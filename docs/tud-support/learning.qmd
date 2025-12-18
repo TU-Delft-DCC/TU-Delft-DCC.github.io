@@ -44,4 +44,101 @@ author_1: Aysun Urhan
 
 ---
 
-🚧 Under construction! 🏗️
+## Learning foundations for research support staff
+
+Research support roles at TU Delft span software, data, infrastructure, policy, and coordination.  
+While depth differs per role, many **learning foundations are shared** across support functions.
+
+This section provides a common orientation to learning and development. It can be used for:
+
+- onboarding and self-orientation,
+- identifying learning priorities,
+- conversations about professional growth.
+- finding structured training & courses to follow.
+
+## Core technical foundations
+
+Most research support staff benefit from familiarity with the following areas, regardless of their primary role.
+
+#### Version control and collaboration
+- Understanding Git-based workflows
+- Working with issues, pull requests, and reviews
+- Using version control as shared documentation
+
+#### Reproducibility concepts
+- Managing dependencies and environments
+- Documenting workflows and assumptions
+- Understanding the difference between repeatability and reproducibility
+
+#### Programming and scripting awareness
+- Reading and modifying code when needed
+- Understanding commonly used research languages
+- Knowing when custom code is appropriate and when it is not
+
+#### Documentation practices
+- Writing clear onboarding instructions
+- Capturing decisions and rationale
+- Creating reusable templates and examples
+
+#### FAIR principles
+- Applying FAIR to data and software
+- Understanding metadata, licensing, and citation
+- Knowing relevant archiving and publishing platforms
+
+## Role-specific expertise
+
+Different research support roles naturally go deeper in different areas.  
+This diversity is a strength and enables effective collaboration.
+
+**Research software–focused roles**
+
+- Software design and architecture
+- Testing and continuous integration
+- Packaging, releases, and reuse
+- Performance and scalability considerations
+
+**Data-focused support roles**
+
+- Data Management Plans
+- Research data policies and compliance
+- Metadata and documentation standards
+- Data storage, archiving, and sharing
+
+**Infrastructure and research IT roles**
+
+- Compute and storage platforms
+- Security and access management
+- Reliability and monitoring
+- Supporting reproducible environments
+
+**Library and Open Science roles**
+
+- Licensing and copyright
+- Open access and publishing workflows
+- Training and community enablement
+- Policy interpretation and guidance
+
+## Structured training & course sources
+
+In addition to self-directed learning, the following structured training opportunities are valuable for support staff across TU Delft:
+
+### TU Delft internal offerings
+
+- **Software Carpentry / Data Carpentry lessons** — foundational workshops on Git, the command line, Python, and R.  
+  [*(See DCC Courses and Workshops)*](https://tu-delft-dcc.github.io/docs/resources/courses.html)
+- **Delft High Performance Computing courses** — training in supercomputing and computational science fundamentals. [*More information on the DHPC website*](https://www.tudelft.nl/dhpc)
+- **TU Delft MOOCs** — self-paced online courses offered by the university, including topics such as *Open Science*, *Automated Software Testing*, *AI, Data & Digitalisation*, and *Unix Tools*. [*See more here*](https://online-learning.tudelft.nl)
+- **CodeRefinery workshops** — collaborative lessons on version control, testing, CI/CD, and documentation practices. [*CodeRefinery*](https://coderefinery.org)
+
+### External & community training
+
+- **eScience Center workshops** — intermediate to advanced workshops on research software development topics. [*eScience Center*](https://www.esciencecenter.nl/training/)
+- **SURF training events** — workshops covering use of shared computing infrastructure. [*SURF training events*](https://www.surf.nl/en/events)
+- **Software Sustainability Institute resources** — training and guides on sustainable research software quality. [*link*](https://www.software.ac.uk/training)
+- **R Café and community forums** — peer-learning and community events, e.g., for R users and data practitioners. [*R Cafe*](https://www.tudelft.nl/library/research-support/r-cafe)
+- **4TU.ResearchData training** — events and resources focused on FAIR data practices. [*4TU.ResearchData*](
+https://researchdata.4tu.nl/en/trainings/)
+
+### TU Delft Library training
+
+- **Research data management workshops** — offered by TU Delft Library’s Research Support Services, covering RDM concepts, FAIR data practices, and policy literacy. [*TU Delft Library training*](https://www.tudelft.nl/library/research-support/training-workshops) 
