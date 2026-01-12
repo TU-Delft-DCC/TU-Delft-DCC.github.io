@@ -1022,8 +1022,14 @@ ul.task-list li input[type="checkbox"] {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#types-of-source-code-documentation" id="toc-types-of-source-code-documentation" class="nav-link active" data-scroll-target="#types-of-source-code-documentation">Types of source code documentation</a></li>
+  </ul>
+<div class="toc-actions"><ul><li><a href="https://github.com/TU-Delft-DCC/TU-Delft-DCC.github.io/issues/new/choose" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -1066,8 +1072,8 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-
-<script async="" defer="" src="https://scripts.simpleanalyticscdn.com/latest.js"></script><p>Good code documentation acts as the bridge between developers and users by clearly explaining the functionality and rationale behind your code. Whether you’re writing inline comments or structured documentation, the key is to make your code readable, maintainable, and accessible to both current and future contributors.</p>
+<script async="" defer="" src="https://scripts.simpleanalyticscdn.com/latest.js"></script>
+<p>Good code documentation acts as the bridge between developers and users by clearly explaining the functionality and rationale behind your code. Whether you’re writing inline comments or structured documentation, the key is to make your code readable, maintainable, and accessible to both current and future contributors.</p>
 <div class="content-block">
 <div class="features">
 <section id="python-projects" class="level3 feature">
@@ -1093,8 +1099,37 @@ ul.task-list li input[type="checkbox"] {
 </section>
 </div>
 </div>
+<section id="types-of-source-code-documentation" class="level3">
+<h3 class="anchored" data-anchor-id="types-of-source-code-documentation">Types of source code documentation</h3>
+<ol type="1">
+<li><strong>Code comments</strong> are inline annotations meant for developers who read or maintain the source code. They are useful for clarifying complex parts of code, noting why certain decisions were made in specific blocks or lines.</li>
+</ol>
+<div class="callout callout-style-simple callout-tip no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Good code comments should:
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul>
+<li>explain parts that are not intuitive from the code itself</li>
+<li>explain the purpose of a piece of code (why over how)</li>
+<li>need to be kept up-to-date as wrong comments are not caught through testing</li>
+<li><strong>not</strong> replace readable and structured code</li>
+<li><strong>not</strong> turn old code into commented zombie code (see <a href="../../../../docs/software/code_quality/code_smells/dead_code.html">code smells</a>)</li>
+<li><strong>not</strong> repeat in natural language what is written in your code</li>
+</ul>
+</div>
+</div>
+<ol start="2" type="1">
+<li><strong>Docstrings</strong> (or equivalent structured documentation comments, e.g., <code>#'</code> roxygen blocks in R) provide a description of the function, class, or module that follows immediately after it. They should contain all the relevant information needed for using them, rather than explaining how the code works. Docstrings are available to users without looking at the source code (as opposed to comments) and can be used to generate user documentation.</li>
+</ol>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -1530,7 +1565,7 @@ ul.task-list li input[type="checkbox"] {
 </div>   
     <div class="nav-footer-center">
 <p>© 2025 <a href="https://www.tudelft.nl/digital-competence-centre">TU Delft DCC</a>. Licensed under <a href="https://creativecommons.org/licenses/by/4.0/">CC-BY-4.0</a>.</p>
-<div class="toc-actions"><ul><li><a href="https://github.com/TU-Delft-DCC/TU-Delft-DCC.github.io/issues/new/choose" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div></div>
+<div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/TU-Delft-DCC/TU-Delft-DCC.github.io/issues/new/choose" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div></div>
     <div class="nav-footer-right">
 <p>Found these guides helpful? <a href="https://github.com/TU-Delft-DCC/TU-Delft-DCC.github.io"><i class="fa-regular fa-star" aria-label="star"></i> us on GitHub</a>.</p>
 </div>

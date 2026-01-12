@@ -44,36 +44,17 @@ categories:
 
 ---
 
-- **Code readability** is detailed in a coding style guide.
-- **Code comments** are useful for clarifying complex parts of code, noting why certain decisions were made in specific blocks or lines.
-- **Docstrings** provide a description of the function, class, or module that follows immediately after it is defined, and should contain all the relevant information needed for using them, rather than explaining how the code works. Ideally, every module should have a docstring, and so should every function and class that a module makes available. 
 
 :::{.callout-note appearance="simple" icon="false"}
-## {{< fa signs-post >}} Further reading
+## {{< fa signs-post >}} General introduction
 [Documenting Python code](https://realpython.com/documenting-python-code/)
 :::
 
-## Code comments
-
-Code comments are inline annotations meant for developers who read or maintain the source code. They should:
-
-- explain parts that are not intuitive from the code itself
-- explain the purpose of a piece of code (why over how)
-- need to be kept up-to-date as wrong comments are not caught through testing
-- **do not** replace readable and structured code
-- **do not** turn old code into commented zombie code (see code smells)
-- **do not** repeat in natural language what is written in your code, e.g.
-
-```python
-# Now we check if the age of a patient is greater than 18
-if age_patient > 18:
-```
 
 ## Docstrings
 Docstrings are structured comments, associated with segments (rather than lines) of code which can be used to generate documentation for users (and yourself!) of your project. They allow you to provide documentation to a segment (function, class, method) that is relevant for the user. Docstrings are placed in triple quotes `"""` and enable automated generation of API documentation.
 
 Two docstring styles are commonly used for their readability:
-
 
 ::: {.panel-tabset}
 
