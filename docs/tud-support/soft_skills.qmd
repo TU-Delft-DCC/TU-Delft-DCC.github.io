@@ -1,0 +1,180 @@
+---
+# Insert this YAML header (including the opening and closing ---) at the beginning of the document and fill it out accordingly
+
+# We use this key to indicate the last reviewed date [manual entry, use YYYY-MM-DD]
+# Uncomment and populate the next line accordingly
+date: 2025-12-14
+
+# We use this key to indicate the last modified date [manual entry, use YYYY-MM-DD]
+# Uncomment and populate the next line accordingly
+date-modified: 2025-12-14
+
+# Do not modify
+lang: en
+language: 
+  title-block-published: "Last reviewed"
+  title-block-modified: "Last modified"
+
+# Title of the document [manual entry]
+# Uncomment and populate the next line accordingly
+title: Soft Skills for Research Support
+
+# Brief overview of the document (will be used in listings) [manual entry]
+# Uncomment and populate the next line and uncomment "hide-description: true".
+#description: Short description of the document
+#hide-description: true
+
+# Authors of the document, will not be parsed [manual entry]
+# Uncomment and populate the next lines accordingly
+author_1: Aysun Urhan
+
+# Maintainers of the document, will not be parsed [manual entry]
+# Uncomment and populate the next lines accordingly
+#maintainer_1: Name Surname
+#maintainer_2:
+
+# To whom reach out regarding the document, will not be parsed [manual entry]
+# Uncomment and populate the next line accordingly
+#corresponding: Name Surname
+
+# Meaningful keywords, newline separated [manual entry]
+# Uncomment and populate the next line and list accordingly
+#categories: 
+
+
+---
+
+Research support is fundamentally **working with people**.
+
+Whether you are supporting software, data, infrastructure, or policy, your effectiveness depends on how well you:
+- understand people’s needs,
+- communicate constraints and trade-offs,
+- coordinate across organizational boundaries,
+- and create trust over time.
+
+::: {.callout-note appearance="simple"}
+Soft skills are what really make good practices scale and stick.
+:::
+
+
+### Communication as translation
+
+A core soft skill in research support is **translation**:
+- between researchers and technical systems,
+- between different support roles,
+- between short-term needs and long-term sustainability.
+
+Good communication often looks like:
+- asking clarifying questions early,
+- summarizing decisions in writing,
+- naming assumptions explicitly.
+
+#### Useful questions to ask
+
+- *“What problem are we trying to solve?”*
+- *“Who will use this, and when?”*
+- *“What would success look like in three months?”*
+- *“What happens if we do nothing?”*
+
+::: {.callout-tip appearance="simple"}
+If a request feels vague, it probably is. Clarifying scope is support work, not a delay.
+:::
+
+
+### Managing expectations and scope
+
+Many support challenges arise from **implicit expectations**.
+
+As a support professional, it is often necessary to:
+- make trade-offs explicit,
+- limit scope to what is feasible,
+- push back on unrealistic timelines.
+
+#### Language that helps
+
+- *“I can help with X now; Y would need to come later.”*
+- *“We can do this quickly, or we can make it sustainable: which matters more here?”*
+- *“Who will maintain this after the project ends?”*
+
+::: {.callout-important appearance="simple"}
+Saying “no” is part of responsible support especially when it protects sustainability and maintainability.
+:::
+
+### Collaboration across roles and units
+
+Research support at TU Delft is **distributed by design**.  
+No single role covers everything.
+
+Effective collaboration means:
+- knowing what other roles do,
+- recognizing when to involve others,
+- avoiding ownership gaps.
+
+#### Good coordination practices
+
+- Involve other support roles early when work overlaps
+- Be explicit about responsibilities and handovers
+- Document decisions so others can follow later
+
+::: {.callout-note appearance="simple"}
+Good coordination reduces duplicated effort.
+:::
+
+
+### Teaching 
+
+Support work is not just about solving today’s problem, it is about **reducing future support load**.
+
+Teaching can be informal and lightweight:
+- pairing once instead of fixing silently,
+- explaining the *why*, not just the *how*,
+- leaving behind documentation or templates.
+
+#### Small enablement moves that scale
+
+- Write down the steps you just explained verbally
+- Turn a repeated question into a short guide section
+- Share a reusable example instead of a one-off fix
+
+::: {.callout-tip appearance="simple"}
+If you solve the same problem twice, it is time to document it.
+:::
+
+
+### Navigating ambiguity
+
+Support work often involves:
+- incomplete information,
+- shifting priorities,
+- unclear ownership.
+
+This is perfectly normal and we should learn to be comfortable with it. To enable that, helpful habits include:
+- making uncertainty explicit,
+- proposing a next small step,
+- revisiting decisions as context changes.
+
+
+### Professional boundaries and sustainability
+
+Finally, sustainable support requires **boundaries**.
+
+This includes:
+- protecting time for documentation and learning,
+- avoiding overcommitment,
+- recognizing when work should stop or change direction.
+
+#### Signals to watch for
+
+- repeated “quick fixes” with no lasting improvement
+- undocumented decisions that keep resurfacing
+- work that depends entirely on one person
+
+### In summary
+
+Soft skills in research support are about:
+
+- clarity over cleverness,
+- sustainability over speed,
+- coordination over heroics.
+
+They are learned through practice, reflection; they take time.

@@ -1,0 +1,92 @@
+---
+# Insert this YAML header (including the opening and closing ---) at the beginning of the document and fill it out accordingly
+
+# We use this key to indicate the last reviewed date [manual entry, use YYYY-MM-DD]
+# Uncomment and populate the next line accordingly
+date: 2025-12-14
+
+# We use this key to indicate the last modified date [manual entry, use YYYY-MM-DD]
+# Uncomment and populate the next line accordingly
+date-modified: 2025-12-14
+
+# Do not modify
+lang: en
+language: 
+  title-block-published: "Last reviewed"
+  title-block-modified: "Last modified"
+
+# Title of the document [manual entry]
+# Uncomment and populate the next line accordingly
+title: Contacts & Support Landscape
+
+# Brief overview of the document (will be used in listings) [manual entry]
+# Uncomment and populate the next line and uncomment "hide-description: true".
+#description: Short description of the document
+#hide-description: true
+
+# Authors of the document, will not be parsed [manual entry]
+# Uncomment and populate the next lines accordingly
+author_1: Aysun Urhan
+
+# Maintainers of the document, will not be parsed [manual entry]
+# Uncomment and populate the next lines accordingly
+#maintainer_1: Name Surname
+#maintainer_2:
+
+# To whom reach out regarding the document, will not be parsed [manual entry]
+# Uncomment and populate the next line accordingly
+#corresponding: Name Surname
+
+# Meaningful keywords, newline separated [manual entry]
+# Uncomment and populate the next line and list accordingly
+#categories: 
+
+
+---
+
+TU Delft research support is **distributed**, and knowing *where to ask what* is a core skill.
+
+This page helps you route questions efficiently.
+
+### Peer support (first stop)
+For: sense-checking, best practices, informal advice.
+
+- Colleagues in your faculty or department
+- Cross-faculty RSE / data steward / support networks
+- Internal community channels
+
+### Library research support
+
+- FAIR and Open Science guidance
+- Training and workshops
+- Data management planning connections
+
+### ICT department
+
+- compute, storage, networking
+- access issues and platforms
+- CI, deployment, and tooling environments
+
+### Faculty-level support
+
+- domain-specific workflows
+- local policies and practices
+- coordination with research groups
+
+:::{.callout-important appearance="simple" icon="true"}
+## When to involve the DCC?
+
+- a question spans multiple support domains,
+- existing guidance is missing or unclear,
+- solutions should be shared TU Delft–wide.
+:::
+
+---
+
+:::{.callout-tip appearance="simple" icon="true"}
+## Communication norms
+
+- Ask questions in shared channels where possible
+- Document decisions and patterns for reuse
+- Escalate early when dependencies cross support units
+:::
