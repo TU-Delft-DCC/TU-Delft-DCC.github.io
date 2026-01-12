@@ -94,4 +94,4 @@ Documenting R projects with `roxygen2`.
 - **not** repeat in natural language what is written in your code
 :::
 
-2. **Docstrings** provide a description of the function, class, or module that follows immediately after it is defined. It should contain all the relevant information needed for using them, rather than explaining how the code works. Docstrings are available to users without looking at the source code (as opposed to comments) and can be used to generate user documentation. 
+2. **Docstrings** (or equivalent structured documentation comments, e.g., `#'` roxygen blocks in R) provide a description of the function, class, or module that follows immediately after it. They should contain all the relevant information needed for using them, rather than explaining how the code works. Docstrings are available to users without looking at the source code (as opposed to comments) and can be used to generate user documentation.
