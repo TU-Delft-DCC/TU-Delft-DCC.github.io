@@ -27,9 +27,9 @@ website:
   #
   favicon: docs/img/cone.png
   announcement: 
-    icon: pencil
+    icon: patch-check
     dismissable: true
-    content: "**Information!** We are now actively updating our content. Please be aware that content and locations are subject to change. Thank you for your patience!"
+    content: "**Great news!** We have had a major update to our guides! Feel free to explore! If you have any feedback, please visit our [contributing guidelines](https://tu-delft-dcc.github.io/CONTRIBUTING.html). If you find these guides useful, [{{<fa regular star>}} us on GitHub](https://github.com/TU-Delft-DCC/TU-Delft-DCC.github.io)."
     type: success
     position: below-navbar
   site-url: https://tu-delft-dcc.github.io/
@@ -41,7 +41,7 @@ website:
     left: |
       Powered by [{{< iconify simple-icons:quarto >}} Quarto](https://quarto.org).
     center: |
-      &copy; 2025 [TU Delft DCC](https://www.tudelft.nl/digital-competence-centre). Licensed under [CC-BY-4.0](https://creativecommons.org/licenses/by/4.0/).
+      &copy; 2026 [TU Delft DCC](https://www.tudelft.nl/digital-competence-centre). Licensed under [CC-BY-4.0](https://creativecommons.org/licenses/by/4.0/).
     right: 
           Found these guides helpful? [{{<fa regular star>}} us on GitHub](https://github.com/TU-Delft-DCC/TU-Delft-DCC.github.io).
     border: false
@@ -105,6 +105,10 @@ website:
               contents:
                 - text: Project management
                   href: docs/software/development_workflow/project_management.md
+                - text: Branch management
+                  href: docs/software/development_workflow/branch_management.qmd
+                - text: Collaboration
+                  href: docs/software/development_workflow/collaboration.qmd
                 - text: Project structure
                   href: docs/software/development_workflow/project_structure.md
                 - text: Project templates and reusability
@@ -119,13 +123,9 @@ website:
                     - text: R
                       href: docs/software/development_workflow/envs_dependencies/r_envs_dependencies.md
                 - text: Workflow management
-                  href: docs/software/development_workflow/workflow_management.md                
-                - text: Branch management
-                  href: docs/software/development_workflow/branch_management.qmd
-                - text: Collaboration
-                  href: docs/software/development_workflow/collaboration.qmd
+                  href: docs/software/development_workflow/workflow_management.md
                 - text: Software design
-                  href: docs/software/development_workflow/software_design.qmd                  
+                  href: docs/software/development_workflow/software_design.qmd
             - section: "Documentation"
               href: docs/software/documentation/index.md
               contents:
