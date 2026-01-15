@@ -27,7 +27,7 @@ website:
   #
   favicon: docs/img/cone.png
   announcement: 
-    icon: pencil
+    icon: patch-check
     dismissable: true
     content: "**Great news!** We have had a major update to our guides! Feel free to explore! If you have any feedback, please visit our [contributing guidelines](CONTRIBUTING.md)."
     type: success
