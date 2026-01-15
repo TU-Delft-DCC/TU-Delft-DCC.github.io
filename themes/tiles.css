@@ -14,7 +14,7 @@
   }
   
 /* For wide screens: 4 columns */
-@media (min-width: 1500px) {
+@media (min-width: 1400px) {
   .tool {
     grid-template-columns: repeat(4, 1fr);
   }
