@@ -29,7 +29,7 @@ website:
   announcement: 
     icon: patch-check
     dismissable: true
-    content: "**Great news!** We have had a major update to our guides! Feel free to explore! If you have any feedback, please visit our [contributing guidelines](CONTRIBUTING.md). If you find these guides useful, [{{<fa regular star>}} us on GitHub](https://github.com/TU-Delft-DCC/TU-Delft-DCC.github.io)."
+    content: "**Great news!** We have had a major update to our guides! Feel free to explore! If you have any feedback, please visit our [contributing guidelines](./CONTRIBUTING.md). If you find these guides useful, [{{<fa regular star>}} us on GitHub](https://github.com/TU-Delft-DCC/TU-Delft-DCC.github.io)."
     type: success
     position: below-navbar
   site-url: https://tu-delft-dcc.github.io/
@@ -125,7 +125,7 @@ website:
                 - text: Workflow management
                   href: docs/software/development_workflow/workflow_management.md
                 - text: Software design
-                  href: docs/software/development_workflow/software_design.qmd                  
+                  href: docs/software/development_workflow/software_design.qmd
             - section: "Documentation"
               href: docs/software/documentation/index.md
               contents:
