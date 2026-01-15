@@ -29,7 +29,7 @@ website:
   announcement: 
     icon: pencil
     dismissable: true
-    content: "**Information!** We are now actively updating our content. Please be aware that content and locations are subject to change. Thank you for your patience!"
+    content: "**Great news!** We have had a major update to our guides! Feel free to explore! If you have any feedback, please visit our [contributing guidelines](CONTRIBUTING.md)."
     type: success
     position: below-navbar
   site-url: https://tu-delft-dcc.github.io/
