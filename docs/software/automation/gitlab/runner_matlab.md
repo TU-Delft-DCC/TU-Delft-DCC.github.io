@@ -53,11 +53,11 @@ categories:
 With the continuous method of software development, you continuously build, test, and deploy iterative code changes. This iterative process helps reduce the chance that you develop new code based on buggy or failed previous versions. With this method, you strive to have less human intervention or even no intervention at all, from the development of new code until its deployment.
 
 ### Purpose of this guide
-With this guide, you will create a Continuous Integration Pipeline on a repository within the [TU Delft Gitlab](https://gitlab.tudelft.nl) to use a Matlab environment.
+With this guide, you will create a Continuous Integration Pipeline on a repository within the [TU Delft Gitlab](https://gitlab.tudelft.nl) to use a MATLAB environment.
 
 ## Prerequisites
 
-- TU Delft netID
+- TU Delft NetID
 - MATLAB account
 - Basic knowledge of Linux (for setting up a server)
 - Basic knowledge of Docker (for creating a custom MATLAB image)
@@ -83,13 +83,13 @@ _Pipeline configuration begins with jobs. Jobs are the most fundamental element 
 ## Steps
 1. Request a TU Delft Virtual Private Server
 1. Set up a Gitlab runner
-1. Create a Docker image with a custom Matlab installation
+1. Create a Docker image with a custom MATLAB installation
 1. Create a Gitlab runner
 1. Register a Gitlab runner
-1. Obtain a Matlab license file
+1. Obtain a MATLAB license file
 1. Configure the CI/CD pipeline
 1. Add a job to test the pipeline
-1. Optional: Updating the Matlab version
+1. Optional: Updating the MATLAB version
 
 ### Step 1. Request a TU Delft VPS
 If you want to work with the TU Delft Gitlab instance and you want to implement CI/CD pipelines, then you need to install a Gitlab runner on your own. Runners are the agents that run the CI/CD jobs that come from GitLab. Currently, the TU Delft instance does not provide this feature out-of-the-box. Therefore, we need a separate (virtual) server to run the Gitlab runners and execute the jobs in the CI/CD pipeline.
@@ -98,7 +98,7 @@ The TU Delft offers Virtual Private Servers (VPS) for researchers through the [T
 
 **VPS requirements**
 
-- 50Gb disk space (the Matlab installation in this guide requires ~10 Gb, but this depends on the size of the installed addons)
+- 50Gb disk space (the MATLAB installation in this guide requires ~10 Gb, but this depends on the size of the installed addons)
 
 ### Step 2. Set up a Gitlab runner
 To set up a gitlab runner on the VPS, please follow this [guide for setting up GitLab runners](./gitlab_docker.md).
@@ -131,7 +131,7 @@ In summary, the steps are:
     sudo docker ps -a
     ```    
 
-### Step 3. Create a Docker image containing a custom Matlab installation
+### Step 3. Create a Docker image containing a custom MATLAB installation
 In order for a Gitlab runner to execute MATLAB code, it needs to be able to access a container with MATLAB installed. The aim of this step is to create a Docker image with MATLAB installation that can be used by a Gitlab runner. By building our own Docker image, we can specify the MATLAB version and customize the installed toolboxes.
 
 :::{.callout-note}
@@ -378,7 +378,7 @@ check_matlab:
     # Change the mac-address to match the MATLAB license
     - sudo ifconfig eth0 hw ether "$MAC_ADDRESS"
 
-    # Add the Matlab license to the Matlab installation in the container
+    # Add the MATLAB license to the MATLAB installation in the container
     - sudo mkdir /opt/matlab/licenses
     - sudo mv ${MATLAB_LICENSE} /opt/matlab/licenses/license.lic   
   script:    
