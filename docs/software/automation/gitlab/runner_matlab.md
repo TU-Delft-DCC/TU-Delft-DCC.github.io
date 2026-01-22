@@ -422,7 +422,7 @@ Under **Settings -> CI/CD -> Variables**, scroll down to **Project variables** a
 
 - Type: `File`
 - Environments: `All (default)`
-- Visibility: `Visible` (The license contains sensitive information, but it's format is incompatible with the `masked` settings)
+- Visibility: `Visible` (The license contains sensitive information, but its format is incompatible with the `masked` settings)
 - Key: `MATLAB_LICENSE`
 - Value: Paste the content of the downloaded `license.lic` file here
 
