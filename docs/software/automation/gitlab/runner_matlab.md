@@ -210,9 +210,9 @@ In your user folder on the VPS (/home/username), create a file called `Dockerfil
 sudo nano Dockerfile
 ```
 
-and copy the content below in the Dockerfile. Make sure to update the MATLAB release and installed addons to your requirements (see in bold). This example uses MATLAB r2025b and includes the Parallel Computing Toolbox and the Mapping Toolbox. For a list of available product names, see [here](https://github.com/mathworks-ref-arch/matlab-dockerfile/tree/main/mpm-input-files).
+and copy the content below in the Dockerfile. This Dockerfile is based on  [MATLAB Dockerfile 2021](https://github.com/mathworks-ref-arch/matlab-dockerfile/blob/8bfb39430f3c26635b6147094ffbf139caa1cf62/Dockerfile).
 
-[MATLAB Dockerfile 2021](https://github.com/mathworks-ref-arch/matlab-dockerfile/blob/8bfb39430f3c26635b6147094ffbf139caa1cf62/Dockerfile)
+Make sure to update the MATLAB release and installed addons to your requirements (see in bold). This example uses MATLAB r2025b and includes the Parallel Computing Toolbox and the Mapping Toolbox. For a list of available product names, see [here](https://github.com/mathworks-ref-arch/matlab-dockerfile/tree/main/mpm-input-files).
 
 ::: {.callout-note collapse=true appearance="simple" icon="false"}
 ## {{< fa info-circle >}} Dockerfile for custom MATLAB image
@@ -261,10 +261,10 @@ WORKDIR /home/matlab
 </pre>
 :::
 
-To build a Docker image with the name `matlab-gitlab` and the version reference `r2021b`, run the following command in the folder containing the Dockerfile:
+To build a Docker image with the name `matlab-gitlab` and the version reference `r2025b`, run the following command in the folder containing the Dockerfile:
 
 ```bash
-sudo docker build . -t matlab-gitlab:r2021b
+sudo docker build . -t matlab-gitlab:r2025b
 ```
 
 You can verify the presence of the image with
