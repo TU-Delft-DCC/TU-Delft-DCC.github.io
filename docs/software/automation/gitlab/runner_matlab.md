@@ -454,7 +454,7 @@ After committing, the pipeline should run and execute the job `check_matlab`. Yo
 If all went well, you have successfully setup a GitLab runner to run MATLAB code. Congrats! 
 
 ### Step 9. Optional: Updating the MATLAB version
-If you need to update the MATLAB version of the Docker container, you will need to go throught the following steps:
+If you need to update the MATLAB version of the Docker container, you will need to go through the following steps:
 
 1. Update the MATLAB version in the Dockerfile
 1. Build the docker image with
