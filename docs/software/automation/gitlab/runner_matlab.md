@@ -194,7 +194,8 @@ In summary, the steps are:
 ### Step 3. Create a Docker image containing a custom MATLAB installation
 In order for a GitLab runner to execute MATLAB code, it needs to be able to access a container with MATLAB installed. The aim of this step is to create a Docker image with MATLAB installation that can be used by a GitLab runner. By building our own Docker image, we can specify the MATLAB version and customize the installed toolboxes.
 
-:::{.callout-note}
+:::{.callout-note appearance="simple" icon="false"}
+## {{< fa info-circle >}} Note
 We have looked into using the Docker images developed by [Mathworks](https://hub.docker.com/r/mathworks). When running these images, you are prompted to supply your MATLAB's account username and password to activate the instance. Although it is possible to create a new image from such an activated container and use it on the VPS, we have so far not been able to get this solution working with GitLab runners. We thus rely on downloading a license file (step 6) and storing it as a Variable in the GitLab repository (step 7).
 :::
 
@@ -213,8 +214,8 @@ and copy the content below in the Dockerfile. Make sure to update the MATLAB rel
 
 [MATLAB Dockerfile 2021](https://github.com/mathworks-ref-arch/matlab-dockerfile/blob/8bfb39430f3c26635b6147094ffbf139caa1cf62/Dockerfile)
 
-::: {.callout-note collapse=true}
-### Dockerfile for custom MATLAB image
+::: {.callout-note collapse=true appearance="simple" icon="false"}
+## {{< fa info-circle >}} Dockerfile for custom MATLAB image
 
 <pre>
 # Copyright 2019 - 2021 The MathWorks, Inc.
@@ -273,7 +274,8 @@ sudo docker images
 
 This image is now available locally on the VPS. 
 
-:::{.callout-tip}
+:::{.callout-tip appearance="simple" icon="false"}
+## {{< fa lightbulb >}} Tip
 You can also [upload your Docker image to Dockerhub](https://docs.docker.com/engine/reference/commandline/push/) and have it available from there. This removes the need to build the image on the VPS as it can be pulled directly from DockerHub.
 :::
 
@@ -331,8 +333,8 @@ sudo docker restart gitlab-runner
 
 After registering the runner, the configuration file should contain:
 
-:::{.callout-note collapse=true}
-### config.toml
+:::{.callout-note collapse=true appearance="simple"}
+### `config.toml`
 ```bash
 concurrent = 1
 check_interval = 0
