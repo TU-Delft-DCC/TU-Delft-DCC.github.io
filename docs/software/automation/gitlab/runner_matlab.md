@@ -63,7 +63,8 @@ With this guide, you will create a Continuous Integration Pipeline on a reposito
 - Basic knowledge of Docker (for creating a custom MATLAB image)
 - Know which MATLAB version and toolboxes you want to use in the CI/CD pipeline
 
-:::{.callout-tip}
+:::{.callout-tip appearance="simple" icon="false"}
+## {{< fa lightbulb >}} Tip
 To learn more about Docker containers, please look at the [Reproducible Computational Environments Using Docker lesson](https://carpentries-incubator.github.io/docker-introduction/) from the Software Carpentries or our general guide on setting up [GitLab runners with Docker](./gitlab_docker.md).
 :::
 
@@ -118,7 +119,7 @@ In summary, the steps are:
 1. _Optional: Move default storage location to larger drive_  
     If the file space in the Docker Root directory is not adequate, we must relocate the Docker Root. 
 
-:::{.callout-important collapse=true}
+:::{.callout-important appearance="simple" collapse=true}
 # Relocating the Docker root directory
 
 ## Procedure
