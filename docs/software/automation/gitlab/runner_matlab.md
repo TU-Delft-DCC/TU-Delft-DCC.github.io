@@ -421,7 +421,7 @@ Here, we opted to have it accessible through the GitLab settings together with t
 Under **Settings -> CI/CD -> Variables**, scroll down to **Project variables** and select **Add variable**.
 
 - Type: `File`
-- Enviroments: `All (default)`
+- Environments: `All (default)`
 - Visibility: `Visible` (The license contains sensitive information, but it's format is incompatible with the `masked` settings)
 - Key: `MATLAB_LICENSE`
 - Value: Paste the content of the downloaded `license.lic` file here
