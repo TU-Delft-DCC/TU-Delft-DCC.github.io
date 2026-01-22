@@ -139,10 +139,10 @@ In summary, the steps are:
     sudo mkdir -p /data/docker
     ```
 
-3. Move Docker root to the new directory structure:
+3. Move the existing Docker data into the new directory structure:
 
     ```bash
-    sudo mv /var/lib/docker/ /data/docker/
+    sudo mv /var/lib/docker/* /data/docker/
     ```
 
 4. Edit the file `/etc/docker/daemon.json`. If the file does not exist, create the file with the following command:
