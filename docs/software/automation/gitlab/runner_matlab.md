@@ -378,7 +378,7 @@ The following steps for activating MATLAB on an offline machine are adapted from
 1. Activate the license through the License Center to obtain license file
 
 **1. Obtain your Host ID**  
-The MATLAB license can only be activated for a specifc computer. In the Docker container, we will set the hostID of the container to **0242ac11ffff**.
+The MATLAB license can only be activated for a specific computer. In the Docker container, we will set the hostID of the container to **0242ac11ffff**.
 
 :::{.callout-note appearance="simple" icon="false"}
 ## {{< fa info-circle >}} Note
