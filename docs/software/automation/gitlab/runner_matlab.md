@@ -449,7 +449,7 @@ check_matlab:
     # Run a MATLAB function/script through the -batch argument
     - matlab -batch "disp('hello world!')"
 ```
-After commiting, the pipeline should run and execute the job `check_matlab`. You can check the status of the pipeline via **CI/CD -> Pipelines**.
+After committing, the pipeline should run and execute the job `check_matlab`. You can check the status of the pipeline via **CI/CD -> Pipelines**.
 
 If all went well, you have successfully setup a GitLab runner to run MATLAB code. Congrats! 
 
