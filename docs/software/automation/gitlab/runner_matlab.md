@@ -7,7 +7,7 @@ date: 2026-01-20
 
 # We use this key to indicate the last modified date [manual entry, use YYYY-MM-DD]
 # Uncomment and populate the next line accordingly
-date-modified: 2026-01-20
+date-modified: 2026-01-22
 
 # Do not modify
 lang: en
