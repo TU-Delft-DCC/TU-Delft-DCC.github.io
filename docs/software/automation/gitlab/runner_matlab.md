@@ -123,7 +123,7 @@ In summary, the steps are:
 # Relocating the Docker root directory
 
 ## Procedure
- To relocate the Docker root directory, complete the following steps as root or a user with "sudo all' privileges:
+ To relocate the Docker root directory, complete the following steps as root or a user with "sudo all" privileges:
 
  1. Stop the Docker services:
     
