@@ -380,7 +380,8 @@ The following steps for activating MATLAB on an offline machine are adapted from
 **1. Obtain your Host ID**  
 The MATLAB license can only be activated for a specifc computer. In the Docker container, we will set the hostID of the container to **0242ac11ffff**.
 
-:::{.callout-note}
+:::{.callout-note appearance="simple" icon="false"}
+## {{< fa info-circle >}} Note
 Docker automatically assigns an IP address to each running container, starting from 172.17.0.2 until 172.17.0.255. These IP addresses determine the container's MAC address (see [here](https://docs.gz.ro/modify-linux-hostid.html) for more details), which in turn needs to match with our license. To prevent the MAC address of the MATLAB container from switching and thereby invalidating the license, we will set it to 02:42:ac:11:ff:ff in the `.gitlab-ci.yml` file.
 :::
 
@@ -405,7 +406,8 @@ The MATLAB license is created for a specific user. In the Docker container, we w
 ### Step 7. Configure the CI/CD pipeline on GitLab
 Before we can run a CI job, we need to configure the license in our GitLab repository. Having the license available as a GitLab variable allows us to renew it without having to change the MATLAB image.
 
-:::{.callout-warning collapse=true}
+:::{.callout-warning appearance="simple" collapse=true}
+## Warning
 Alternatively, we could have added the license file directly to the Docker image. With the license file in the same folder as the Dockerfile and adding the following command to the Dockerfile, we can build a Docker image with an activated MATLAB:
 
   ```bash
@@ -461,7 +463,8 @@ If you need to update the MATLAB version of the Docker container, you will need 
 3. Update the CI Variable `MATLAB_LICENSE` with the new license content
 4. Update the image names (not the tags) in `.gitlab-ci.yml` to use the new image.
 
-:::{.callout-tip}
+:::{.callout-tip appearance="simple" icon="false"}
+## {{< fa lightbulb >}} Tip
 The solution presented in this guide relies on using a license file for activation. As this license is tied to a specific host ID and username, only one may be used at a time. For more complex, multi-version setups, consider exploring network licenses, or GitHub as the hosting platform.
 :::
 
