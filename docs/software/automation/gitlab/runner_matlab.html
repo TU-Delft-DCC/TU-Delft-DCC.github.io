@@ -2,10 +2,11 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.8.26">
+<meta name="generator" content="quarto-1.8.27">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="dcterms.date" content="2026-01-20">
 
 <title>Setting up a GitLab runner for MATLAB</title>
 <style>
@@ -75,9 +76,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../../../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../../../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../../../site_libs/quarto-html/quarto-syntax-highlighting-68c8bffd90dad8f2b55c52d7b6410dc0.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="../../../../site_libs/quarto-html/quarto-syntax-highlighting-dark-68c8bffd90dad8f2b55c52d7b6410dc0.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<link href="../../../../site_libs/quarto-html/quarto-syntax-highlighting-68c8bffd90dad8f2b55c52d7b6410dc0.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<link href="../../../../site_libs/quarto-html/quarto-syntax-highlighting-1d5e050edb13250d4f64432100cad504.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../../../site_libs/quarto-html/quarto-syntax-highlighting-dark-1d5e050edb13250d4f64432100cad504.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../../../../site_libs/quarto-html/quarto-syntax-highlighting-1d5e050edb13250d4f64432100cad504.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="../../../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="../../../../site_libs/bootstrap/bootstrap-9f63569fccaa7f60ebae5bbb4b4d3d13.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
@@ -1070,13 +1071,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#steps" id="toc-steps" class="nav-link" data-scroll-target="#steps">Steps</a>
   <ul class="collapse">
   <li><a href="#step-1.-request-a-tu-delft-vps" id="toc-step-1.-request-a-tu-delft-vps" class="nav-link" data-scroll-target="#step-1.-request-a-tu-delft-vps">Step 1. Request a TU Delft VPS</a></li>
-  <li><a href="#step-2.-setting-up-gitlab-runners" id="toc-step-2.-setting-up-gitlab-runners" class="nav-link" data-scroll-target="#step-2.-setting-up-gitlab-runners">Step 2. Setting up Gitlab runners</a></li>
-  <li><a href="#step-3.-create-a-docker-image-containing-a-custom-matlab-installation" id="toc-step-3.-create-a-docker-image-containing-a-custom-matlab-installation" class="nav-link" data-scroll-target="#step-3.-create-a-docker-image-containing-a-custom-matlab-installation">Step 3. Create a Docker image containing a custom Matlab installation</a></li>
-  <li><a href="#step-4.-register-the-matlab-runner" id="toc-step-4.-register-the-matlab-runner" class="nav-link" data-scroll-target="#step-4.-register-the-matlab-runner">Step 4. Register the MATLAB runner</a></li>
-  <li><a href="#step-5.-obtain-a-matlab-license-file" id="toc-step-5.-obtain-a-matlab-license-file" class="nav-link" data-scroll-target="#step-5.-obtain-a-matlab-license-file">Step 5. Obtain a MATLAB license file</a></li>
-  <li><a href="#step-6.-configure-the-cicd-pipeline-on-gitlab" id="toc-step-6.-configure-the-cicd-pipeline-on-gitlab" class="nav-link" data-scroll-target="#step-6.-configure-the-cicd-pipeline-on-gitlab">Step 6. Configure the CI/CD pipeline on Gitlab</a></li>
-  <li><a href="#step-7.-add-a-job-to-test-the-pipeline" id="toc-step-7.-add-a-job-to-test-the-pipeline" class="nav-link" data-scroll-target="#step-7.-add-a-job-to-test-the-pipeline">Step 7. Add a job to test the pipeline</a></li>
-  <li><a href="#step-8.-optional-updating-the-matlab-version" id="toc-step-8.-optional-updating-the-matlab-version" class="nav-link" data-scroll-target="#step-8.-optional-updating-the-matlab-version">Step 8. Optional: Updating the MATLAB version</a></li>
+  <li><a href="#step-2.-set-up-a-gitlab-runner" id="toc-step-2.-set-up-a-gitlab-runner" class="nav-link" data-scroll-target="#step-2.-set-up-a-gitlab-runner">Step 2. Set up a GitLab runner</a></li>
+  <li><a href="#step-3.-create-a-docker-image-containing-a-custom-matlab-installation" id="toc-step-3.-create-a-docker-image-containing-a-custom-matlab-installation" class="nav-link" data-scroll-target="#step-3.-create-a-docker-image-containing-a-custom-matlab-installation">Step 3. Create a Docker image containing a custom MATLAB installation</a></li>
+  <li><a href="#step-4.-create-the-gitlab-runner" id="toc-step-4.-create-the-gitlab-runner" class="nav-link" data-scroll-target="#step-4.-create-the-gitlab-runner">Step 4. Create the GitLab runner</a></li>
+  <li><a href="#step-5.-register-the-matlab-runner" id="toc-step-5.-register-the-matlab-runner" class="nav-link" data-scroll-target="#step-5.-register-the-matlab-runner">Step 5. Register the MATLAB runner</a></li>
+  <li><a href="#step-6.-obtain-a-matlab-license-file" id="toc-step-6.-obtain-a-matlab-license-file" class="nav-link" data-scroll-target="#step-6.-obtain-a-matlab-license-file">Step 6. Obtain a MATLAB license file</a></li>
+  <li><a href="#step-7.-configure-the-cicd-pipeline-on-gitlab" id="toc-step-7.-configure-the-cicd-pipeline-on-gitlab" class="nav-link" data-scroll-target="#step-7.-configure-the-cicd-pipeline-on-gitlab">Step 7. Configure the CI/CD pipeline on GitLab</a></li>
+  <li><a href="#step-8.-add-a-job-to-test-the-pipeline" id="toc-step-8.-add-a-job-to-test-the-pipeline" class="nav-link" data-scroll-target="#step-8.-add-a-job-to-test-the-pipeline">Step 8. Add a job to test the pipeline</a></li>
+  <li><a href="#step-9.-optional-updating-the-matlab-version" id="toc-step-9.-optional-updating-the-matlab-version" class="nav-link" data-scroll-target="#step-9.-optional-updating-the-matlab-version">Step 9. Optional: Updating the MATLAB version</a></li>
   </ul></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/TU-Delft-DCC/TU-Delft-DCC.github.io/issues/new/choose" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div></nav>
@@ -1102,11 +1104,17 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="quarto-title-meta">
 
     
+    <div>
+    <div class="quarto-title-meta-heading">Last reviewed</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">January 20, 2026</p>
+    </div>
+  </div>
   
     <div>
     <div class="quarto-title-meta-heading">Last modified</div>
     <div class="quarto-title-meta-contents">
-      <p class="date-modified">September 19, 2025</p>
+      <p class="date-modified">January 22, 2026</p>
     </div>
   </div>
     
@@ -1122,28 +1130,29 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>With the continuous method of software development, you continuously build, test, and deploy iterative code changes. This iterative process helps reduce the chance that you develop new code based on buggy or failed previous versions. With this method, you strive to have less human intervention or even no intervention at all, from the development of new code until its deployment.</p>
 <section id="purpose-of-this-guide" class="level3">
 <h3 class="anchored" data-anchor-id="purpose-of-this-guide">Purpose of this guide</h3>
-<p>With this guide, you will create a Continuous Integration Pipeline on a repository within the <a href="https://gitlab.tudelft.nl">TU Delft Gitlab</a> to use a Matlab environment.</p>
+<p>With this guide, you will create a Continuous Integration Pipeline on a repository within the <a href="https://gitlab.tudelft.nl">TU Delft GitLab</a> to use a MATLAB environment.</p>
 </section>
 </section>
 <section id="prerequisites" class="level2">
 <h2 class="anchored" data-anchor-id="prerequisites">Prerequisites</h2>
 <ul>
-<li>TU Delft netID</li>
+<li>TU Delft NetID</li>
 <li>MATLAB account</li>
 <li>Basic knowledge of Linux (for setting up a server)</li>
 <li>Basic knowledge of Docker (for creating a custom MATLAB image)</li>
+<li>Know which MATLAB version and toolboxes you want to use in the CI/CD pipeline</li>
 </ul>
-<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout callout-style-simple callout-tip no-icon callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
-<i class="callout-icon"></i>
+<i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Tip
+<span class="screen-reader-only">Tip</span><i class="fa-solid fa-lightbulb" aria-label="lightbulb"></i> Tip
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>To learn more about Docker containers, please look at the <a href="https://carpentries-incubator.github.io/docker-introduction/">Reproducible Computational Environments Using Docker lesson</a> from the Software Carpentries.</p>
+<p>To learn more about Docker containers, please look at the <a href="https://carpentries-incubator.github.io/docker-introduction/">Reproducible Computational Environments Using Docker lesson</a> from the Software Carpentries or our general guide on setting up <a href="../../../../docs/software/automation/gitlab/gitlab_docker.html">GitLab runners with Docker</a>.</p>
 </div>
 </div>
 </section>
@@ -1152,88 +1161,138 @@ Tip
 <p><strong>CI/CD pipeline</strong><br>
 <em>A CI/CD pipeline automates your software delivery process. The pipeline builds code, runs tests (Continuous Intergation), and safely deploys a new version of the application (Continuous Delivery).</em></p>
 <p><strong>Docker</strong><br>
-<em>We use a Docker container to run the Gitlab runner and initialise the CI/CD pipeline.</em></p>
-<p><strong>Gitlab runner</strong> (from GitLab documentation)<br>
+<em>We use a Docker container to run the GitLab runner and initialise the CI/CD pipeline.</em></p>
+<p><strong>GitLab runner</strong> (from GitLab documentation)<br>
 <em>Runners are the agents that run the CI/CD jobs that come from GitLab. When you register a runner, you are setting up communication between your GitLab instance and the machine where GitLab Runner is installed. Runners usually process jobs on the same machine where you installed GitLab Runner.</em></p>
-<p><strong>Gitlab jobs</strong><br>
-<em>Pipeline configuration begins with jobs. Jobs are the most fundamental element of a <code>.gitlab-ci.yml</code> file. Each job is executed by a Gitlab runner. See Gitlab documentation for more <a href="https://docs.gitlab.com/ee/ci/jobs/">info</a>.</em></p>
+<p><strong>GitLab jobs</strong><br>
+<em>Pipeline configuration begins with jobs. Jobs are the most fundamental element of a <code>.gitlab-ci.yml</code> file. Each job is executed by a GitLab runner. See GitLab documentation for more <a href="https://docs.gitlab.com/ee/ci/jobs/">info</a>.</em></p>
 </section>
 <section id="steps" class="level2">
 <h2 class="anchored" data-anchor-id="steps">Steps</h2>
 <ol type="1">
 <li>Request a TU Delft Virtual Private Server</li>
-<li>Set up a Gitlab runner</li>
-<li>Create a Docker image with a custom Matlab installation</li>
-<li>Register a gitlab runner for the Matlab container</li>
-<li>Obtain a Matlab license file</li>
+<li>Set up a GitLab runner</li>
+<li>Create a Docker image with a custom MATLAB installation</li>
+<li>Create a GitLab runner</li>
+<li>Register a GitLab runner</li>
+<li>Obtain a MATLAB license file</li>
 <li>Configure the CI/CD pipeline</li>
 <li>Add a job to test the pipeline</li>
-<li>Optional: Updating the Matlab version</li>
+<li>Optional: Updating the MATLAB version</li>
 </ol>
 <section id="step-1.-request-a-tu-delft-vps" class="level3">
 <h3 class="anchored" data-anchor-id="step-1.-request-a-tu-delft-vps">Step 1. Request a TU Delft VPS</h3>
-<p>If you want to work with the TU Delft Gitlab instance and you want to implement CI/CD pipelines, then you need to install a Gitlab runner on your own. Runners are the agents that run the CI/CD jobs that come from GitLab. Currently, the TU Delft instance does not provide this feature out-of-the-box. Therefore, we need a separate (virtual) server to run the Gitlab runners and execute the jobs in the CI/CD pipeline.</p>
-<p>The TU Delft offers Virtual Private Servers (VPS) for researchers through the <a href="https://tudelft.topdesk.net/tas/public/ssp/content/serviceflow?unid=418c986f186d4934848dc2712039ed34">TopDesk selfservice portal</a>. If you don’t have a VPS already, please follow this guide to <a href="../../../../docs/infrastructure/vps_request.html">request a Virtual Private Server</a>)</p>
+<p>If you want to work with the TU Delft GitLab instance and you want to implement CI/CD pipelines, then you need to install a GitLab runner on your own. Runners are the agents that run the CI/CD jobs that come from GitLab. Currently, the TU Delft instance does not provide this feature out-of-the-box. Therefore, we need a separate (virtual) server to run the GitLab runners and execute the jobs in the CI/CD pipeline.</p>
+<p>The TU Delft offers Virtual Private Servers (VPS) for researchers through the <a href="https://tudelft.topdesk.net/tas/public/ssp/content/serviceflow?unid=418c986f186d4934848dc2712039ed34">TopDesk selfservice portal</a>. If you don’t have a VPS already, please follow this guide to <a href="../../../../docs/infrastructure/vps_request.html">request a Virtual Private Server</a>.</p>
 <p><strong>VPS requirements</strong></p>
 <ul>
-<li>50Gb disk space (the Matlab installation in this guide requires ~10 Gb, but this depends on the size of the installed addons)</li>
+<li>50Gb disk space (the MATLAB installation in this guide requires ~10 Gb, but this depends on the size of the installed addons)</li>
 </ul>
 </section>
-<section id="step-2.-setting-up-gitlab-runners" class="level3">
-<h3 class="anchored" data-anchor-id="step-2.-setting-up-gitlab-runners">Step 2. Setting up Gitlab runners</h3>
-<p>To set up a gitlab runner on the VPS, please follow this <a href="../../../../docs/software/automation/gitlab/gitlab_docker.html">guide for setting up GitLab runners</a>.</p>
-<p><strong>TLDR</strong></p>
+<section id="step-2.-set-up-a-gitlab-runner" class="level3">
+<h3 class="anchored">Step 2. Set up a GitLab runner</h3>
+<p>To set up a GitLab runner on the VPS, please follow this <a href="../../../../docs/software/automation/gitlab/gitlab_docker.html">guide for setting up GitLab runners</a>.</p>
+<p>In summary, the steps are:</p>
 <ol type="1">
 <li><p>Install docker with</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> apt install docker.io</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div></li>
 <li><p>Verify installation with</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> docker <span class="at">--version</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div></li>
 <li><p><em>Optional: Move default storage location to larger drive</em><br>
-If the file space in the Docker Root directory is not adequate, we must relocate the Docker Root. Please consult this <a href="https://www.ibm.com/docs/en/z-logdata-analytics/5.1.0?topic=compose-relocating-docker-root-directory">guide for instructions</a>.</p></li>
-<li><p>Deploy the gitlab-runner with</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="ex">docker</span> run <span class="at">-d</span> <span class="at">--name</span> gitlab-runner <span class="at">--restart</span> always <span class="dt">\</span></span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>-v /srv/gitlab-runner/config:/etc/gitlab-runner <span class="dt">\</span></span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>-v /var/run/docker.sock:/var/run/docker.sock <span class="dt">\</span></span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>gitlab/gitlab-runner:latest</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div></li>
-<li><p>Verify deployment with</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> docker ps <span class="at">-a</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div></li>
+If the file space in the Docker Root directory is not adequate, we must relocate the Docker Root.</p></li>
 </ol>
-</section>
-<section id="step-3.-create-a-docker-image-containing-a-custom-matlab-installation" class="level3">
-<h3 class="anchored" data-anchor-id="step-3.-create-a-docker-image-containing-a-custom-matlab-installation">Step 3. Create a Docker image containing a custom Matlab installation</h3>
-<p>In order for a Gitlab runner to execute MATLAB code, it needs to be able to access a container with MATLAB installed. The aim of this step is to create a Docker image with MATLAB installation that can be used by a Gitlab runner. By building our own Docker image, we can specify the MATLAB version and customize the installed toolboxes.</p>
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center">
+<div class="callout callout-style-simple callout-important callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Note
+<span class="screen-reader-only">Important</span>Relocating the Docker root directory
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-2" class="callout-2-contents callout-collapse collapse">
+<section id="procedure" class="level2 callout-body-container callout-body">
+<h2 class="anchored" data-anchor-id="procedure">Procedure</h2>
+<p>To relocate the Docker root directory, complete the following steps as root or a user with “sudo all” privileges:</p>
+<ol type="1">
+<li><p>Stop the Docker services:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> systemctl stop docker</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> systemctl stop docker.socket</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> systemctl stop containerd</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div></li>
+<li><p>Create the necessary directory structure into which to move Docker root by running the following command. In this example, we will move the Docker root to <code>/data/docker</code>:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> mkdir <span class="at">-p</span> /data/docker</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div></li>
+<li><p>Move the existing Docker data into the new directory structure:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> mv /var/lib/docker/<span class="pp">*</span> /data/docker/</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div></li>
+<li><p>Edit the file <code>/etc/docker/daemon.json</code>. If the file does not exist, create the file with the following command:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> nano /etc/docker/daemon.json</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Add the following content to the file and save the file:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7"><pre class="sourceCode json code-with-copy"><code class="sourceCode json"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">{</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"data-root"</span><span class="fu">:</span> <span class="st">"/data/docker"</span></span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="fu">}</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div></li>
+<li><p>Restart the Docker services:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb8"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> systemctl start docker   </span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>After you run the command, all Docker services through dependency management will be started automatically.</p></li>
+<li><p>Validate the new Docker root location</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb9"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> docker info <span class="at">-f</span> <span class="st">'{{.DockerRootDir}}'</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>The output should be similar to the following, indicating that the Docker root directory has been successfully relocated:</p>
+<pre><code> /data/docker</code></pre></li>
+</ol>
+</section>
+</div>
+</div>
+<ol type="1">
+<li><p>Deploy the gitlab-runner with</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb11"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> docker run <span class="at">-d</span> <span class="at">--name</span> gitlab-runner <span class="at">--restart</span> always <span class="dt">\</span></span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>-v /srv/gitlab-runner/config:/etc/gitlab-runner <span class="dt">\</span></span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>-v /var/run/docker.sock:/var/run/docker.sock <span class="dt">\</span></span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a>gitlab/gitlab-runner:latest</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div></li>
+<li><p>Verify deployment with</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb12"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> docker ps <span class="at">-a</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div></li>
+</ol>
+</section>
+<section id="step-3.-create-a-docker-image-containing-a-custom-matlab-installation" class="level3">
+<h3 class="anchored" data-anchor-id="step-3.-create-a-docker-image-containing-a-custom-matlab-installation">Step 3. Create a Docker image containing a custom MATLAB installation</h3>
+<p>In order for a GitLab runner to execute MATLAB code, it needs to be able to access a container with MATLAB installed. The aim of this step is to create a Docker image with MATLAB installation that can be used by a GitLab runner. By building our own Docker image, we can specify the MATLAB version and customize the installed toolboxes.</p>
+<div class="callout callout-style-simple callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span><i class="fa-solid fa-info-circle" aria-label="info-circle"></i> Note
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>We have looked into using the Docker images developed by <a href="https://hub.docker.com/r/mathworks">Mathworks</a>. When running these images, you are prompted to supply your MATLAB’s account username and password to activate the instance. Although it is possible to create a new image from such an activated container and use it on the VPS, we have so far not been able to get this solution working with Gitlab runners. We thus rely on downloading a license file (step 6) and storing it as a Variable on Gitlab (step 7).</p>
+<p>We have looked into using the Docker images developed by <a href="https://hub.docker.com/r/mathworks">Mathworks</a>. When running these images, you are prompted to supply your MATLAB’s account username and password to activate the instance. Although it is possible to create a new image from such an activated container and use it on the VPS, we have so far not been able to get this solution working with GitLab runners. We thus rely on downloading a license file (step 6) and storing it as a Variable in the GitLab repository (step 7).</p>
 </div>
 </div>
 <p>This Dockerfile is based on MATLAB’s <a href="https://github.com/mathworks-ref-arch/matlab-dockerfile">Dockerfile template</a>. We will make the following modifications to this template:</p>
 <ul>
-<li>set <code>bash</code> as the default run command (Gitlab runners need to access a shell)</li>
+<li>set <code>bash</code> as the default run command (GitLab runners need to access a shell)</li>
 <li>add additional MATLAB products with the flag <code>--products</code>. In this example, we have added the Parallel Computing Toolbox and the Mapping Toolbox.</li>
 </ul>
 <p>In your user folder on the VPS (/home/username), create a file called <code>Dockerfile</code></p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> nano Dockerfile</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>and copy the content below in the Dockerfile. Make sure to update the MATLAB release and installed addons to your requirements (see in bold).</p>
-<div class="callout callout-style-simple callout-note no-icon">
-<div class="callout-body d-flex">
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb13"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> nano Dockerfile</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>and copy the content below in the Dockerfile. This Dockerfile is based on <a href="https://github.com/mathworks-ref-arch/matlab-dockerfile/blob/8bfb39430f3c26635b6147094ffbf139caa1cf62/Dockerfile">MATLAB Dockerfile 2021</a>.</p>
+<p>Make sure to update the MATLAB release and installed addons to your requirements (see in bold). This example uses MATLAB r2025b and includes the Parallel Computing Toolbox and the Mapping Toolbox. For a list of available product names, see <a href="https://github.com/mathworks-ref-arch/matlab-dockerfile/tree/main/mpm-input-files">here</a>.</p>
+<div class="callout callout-style-simple callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-4-contents" aria-controls="callout-4" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
-<div class="callout-body-container">
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span><i class="fa-solid fa-info-circle" aria-label="info-circle"></i> Dockerfile for custom MATLAB image
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-4" class="callout-4-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
 <pre># Copyright 2019 - 2021 The MathWorks, Inc.
 
 # To specify which MATLAB release to install in the container, edit the value of the MATLAB_RELEASE argument.
 # Use lower case to specify the release, for example: ARG MATLAB_RELEASE=r2020a
-<b>ARG MATLAB_RELEASE=r2021b</b>
+<b>ARG MATLAB_RELEASE=r2025b</b>
 
 # When you start the build stage, this Dockerfile by default uses the Ubuntu-based matlab-deps image.
 # To check the available matlab-deps images, see: https://hub.docker.com/r/mathworks/matlab-deps
@@ -1273,18 +1332,18 @@ WORKDIR /home/matlab
 </div>
 </div>
 </div>
-<p>To build a Docker image with the name <code>matlab-gitlab</code> and the version reference <code>r2021b</code>, run the following command in the folder containing the Dockerfile:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> docker build . <span class="at">-t</span> matlab-gitlab:r2021b</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>To build a Docker image with the name <code>matlab-gitlab</code> and the version reference <code>r2025b</code>, run the following command in the folder containing the Dockerfile:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb14"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> docker build . <span class="at">-t</span> matlab-gitlab:r2025b</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>You can verify the presence of the image with</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> docker images</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb15"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> docker images</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>This image is now available locally on the VPS.</p>
-<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout callout-style-simple callout-tip no-icon callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
-<i class="callout-icon"></i>
+<i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Tip
+<span class="screen-reader-only">Tip</span><i class="fa-solid fa-lightbulb" aria-label="lightbulb"></i> Tip
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -1292,72 +1351,86 @@ Tip
 </div>
 </div>
 </section>
-<section id="step-4.-register-the-matlab-runner" class="level3">
-<h3 class="anchored" data-anchor-id="step-4.-register-the-matlab-runner">Step 4. Register the MATLAB runner</h3>
-<p>After deploying the gitlab-runner in step 2, we need to register a new runner for our <code>matlab-gitlab</code> image. Run the following command to register your runner and configure it to deploy in a Docker container on your server.</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb8"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="ex">docker</span> run <span class="at">--rm</span> <span class="at">-it</span> <span class="at">-v</span> /srv/gitlab-runner/config:/etc/gitlab-runner gitlab/gitlab-runner register</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>In response to this command you will be prompted to answer a series of questions. You can find the required gitlab-ci token in your Gitlab repository under <strong>Settings -&gt; CI/CD -&gt; Runners</strong>:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb9"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> docker run <span class="at">--rm</span> <span class="at">-it</span> <span class="at">-v</span> /srv/gitlab-runner/config:/etc/gitlab-runner gitlab/gitlab-runner register <span class="dt">\</span></span>
-<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">--non-interactive</span> <span class="dt">\</span></span>
-<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">--url</span> <span class="st">"https://gitlab.tudelft.nl/"</span> <span class="dt">\</span></span>
-<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">--registration-token</span> <span class="st">"REPOSITORY_TOKEN"</span> <span class="dt">\</span></span>
-<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">--executor</span> <span class="st">"docker"</span> <span class="dt">\</span></span>
-<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a>  <span class="at">--docker-image</span> matlab-gitlab:r2021b <span class="dt">\</span></span>
-<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a>  <span class="at">--description</span> <span class="st">"matlab-runner"</span> <span class="dt">\</span></span>
-<span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a>  <span class="at">--tag-list</span> <span class="st">"matlab"</span> <span class="dt">\</span></span>
-<span id="cb9-9"><a href="#cb9-9" aria-hidden="true" tabindex="-1"></a>  <span class="at">--docker-privileged</span><span class="op">=</span>true <span class="dt">\</span></span>
-<span id="cb9-10"><a href="#cb9-10" aria-hidden="true" tabindex="-1"></a>  <span class="at">--docker-cap-add</span> <span class="st">"NET_ADMIN"</span> <span class="dt">\</span></span>
-<span id="cb9-11"><a href="#cb9-11" aria-hidden="true" tabindex="-1"></a>  <span class="at">--docker-pull-policy</span> <span class="st">"if-not-present"</span> <span class="dt">\</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<section id="step-4.-create-the-gitlab-runner" class="level3">
+<h3 class="anchored" data-anchor-id="step-4.-create-the-gitlab-runner">Step 4. Create the GitLab runner</h3>
+<p>You can find the required gitlab-ci token in your GitLab repository under <strong>Settings -&gt; CI/CD -&gt; Runners</strong>.</p>
+<ol type="1">
+<li>Press: <strong>Create project runner</strong></li>
+<li>Add a tag for the runner: <code>matlab</code>. This tag will be used to call this specific runner in the CI/CD config <code>gitlab-ci.yml</code>.</li>
+<li>Press: <strong>Create runner</strong></li>
+<li>Under <strong>Step 1</strong>, the runner authentication token is shown. You will need this token during the next step.</li>
+</ol>
+</section>
+<section id="step-5.-register-the-matlab-runner" class="level3">
+<h3 class="anchored" data-anchor-id="step-5.-register-the-matlab-runner">Step 5. Register the MATLAB runner</h3>
+<p>After deploying the gitlab-runner in step 2, we need to register a new runner for our <code>matlab-gitlab:r2025b</code> image. Run the following command to register your runner and configure it to deploy in a Docker container on your server.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb16"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> docker run <span class="at">--rm</span> <span class="at">-it</span> <span class="at">-v</span> /srv/gitlab-runner/config:/etc/gitlab-runner gitlab/gitlab-runner register </span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>In response to this command you will be prompted to answer a series of questions:</p>
+<ol type="1">
+<li>Enter the GitLab instance URL: <code>https://gitlab.tudelft.nl/</code></li>
+<li>Enter the registration token: <authentication token=""> (from step 4)</authentication></li>
+<li>Enter a name for the runner: <code>matlab-runner</code></li>
+<li>Enter an executor: <code>docker</code></li>
+<li>Enter the default Docker image: <code>matlab-gitlab:r2025b</code> (name of the image created in step 3)</li>
+</ol>
+<p>The runner configurations are stored in <code>/srv/gitlab-runner/config/config.toml</code>.</p>
+<p>To finish the setup of the MATLAB runner, we need to modify the configuration file to add some additional Docker settings.</p>
+<p>Open the configuration file with</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb17"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> nano /srv/gitlab-runner/config/config.toml</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>update the following line</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb18"><pre class="sourceCode toml code-with-copy"><code class="sourceCode toml"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="dt">privileged</span> <span class="op">=</span> <span class="cn">true</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>and add the following line under <code>[runners.docker]</code>:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb19"><pre class="sourceCode toml code-with-copy"><code class="sourceCode toml"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="dt">pull_policy</span> <span class="op">=</span> <span class="st">"if-not-present"</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>For the changes to take effect, restart the gitlab-runner with</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb10"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> docker restart gitlab-runner</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>The runner configurations are stored in <code>/srv/gitlab-runner/config/config.toml</code>. If you would like to view or or modify the MATLAB runner, run</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb11"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> nano /srv/gitlab-runner/config/config.toml</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb20"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> docker restart gitlab-runner</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>After registering the runner, the configuration file should contain:</p>
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-4-contents" aria-controls="callout-4" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout callout-style-simple callout-note callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-6-contents" aria-controls="callout-6" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Note
+<span class="screen-reader-only">Note</span><code>config.toml</code>
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-4" class="callout-4-contents callout-collapse collapse">
+<div id="callout-6" class="callout-6-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb12"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="ex">concurrent</span> = 4</span>
-<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a><span class="ex">check_interval</span> = 0</span>
-<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a><span class="ex">[session_server]</span></span>
-<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a>  <span class="ex">session_timeout</span> = 1800</span>
-<span id="cb12-6"><a href="#cb12-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-7"><a href="#cb12-7" aria-hidden="true" tabindex="-1"></a><span class="ex">[[runners]]</span></span>
-<span id="cb12-8"><a href="#cb12-8" aria-hidden="true" tabindex="-1"></a>  <span class="ex">name</span> = <span class="st">"matlab-gitlab"</span></span>
-<span id="cb12-9"><a href="#cb12-9" aria-hidden="true" tabindex="-1"></a>  <span class="ex">url</span> = <span class="st">"https://gitlab.tudelft.nl"</span></span>
-<span id="cb12-10"><a href="#cb12-10" aria-hidden="true" tabindex="-1"></a>  <span class="ex">token</span> = <span class="st">"&lt;token&gt;"</span></span>
-<span id="cb12-11"><a href="#cb12-11" aria-hidden="true" tabindex="-1"></a>  <span class="ex">executor</span> = <span class="st">"docker"</span></span>
-<span id="cb12-12"><a href="#cb12-12" aria-hidden="true" tabindex="-1"></a>  <span class="ex">[runners.custom_build_dir]</span></span>
-<span id="cb12-13"><a href="#cb12-13" aria-hidden="true" tabindex="-1"></a>  <span class="ex">[runners.cache]</span></span>
-<span id="cb12-14"><a href="#cb12-14" aria-hidden="true" tabindex="-1"></a>    <span class="ex">[runners.cache.s3]</span></span>
-<span id="cb12-15"><a href="#cb12-15" aria-hidden="true" tabindex="-1"></a>    <span class="ex">[runners.cache.gcs]</span></span>
-<span id="cb12-16"><a href="#cb12-16" aria-hidden="true" tabindex="-1"></a>    <span class="ex">[runners.cache.azure]</span></span>
-<span id="cb12-17"><a href="#cb12-17" aria-hidden="true" tabindex="-1"></a>  <span class="ex">[runners.docker]</span></span>
-<span id="cb12-18"><a href="#cb12-18" aria-hidden="true" tabindex="-1"></a>    <span class="ex">tls_verify</span> = false</span>
-<span id="cb12-19"><a href="#cb12-19" aria-hidden="true" tabindex="-1"></a>    <span class="ex">image</span> = <span class="st">"matlab-gitlab:r2021b"</span></span>
-<span id="cb12-20"><a href="#cb12-20" aria-hidden="true" tabindex="-1"></a>    <span class="ex">privileged</span> = true</span>
-<span id="cb12-21"><a href="#cb12-21" aria-hidden="true" tabindex="-1"></a>    <span class="ex">disable_entrypoint_overwrite</span> = false</span>
-<span id="cb12-22"><a href="#cb12-22" aria-hidden="true" tabindex="-1"></a>    <span class="ex">cap_add</span> = <span class="pp">[</span><span class="st">"NET_ADMIN"</span><span class="pp">]</span></span>
-<span id="cb12-23"><a href="#cb12-23" aria-hidden="true" tabindex="-1"></a>    <span class="ex">oom_kill_disable</span> = false</span>
-<span id="cb12-24"><a href="#cb12-24" aria-hidden="true" tabindex="-1"></a>    <span class="ex">disable_cache</span> = false</span>
-<span id="cb12-25"><a href="#cb12-25" aria-hidden="true" tabindex="-1"></a>    <span class="ex">volumes</span> = <span class="pp">[</span><span class="st">"/cache"</span><span class="pp">]</span></span>
-<span id="cb12-26"><a href="#cb12-26" aria-hidden="true" tabindex="-1"></a>    <span class="ex">pull_policy</span> = <span class="st">"if-not-present"</span></span>
-<span id="cb12-27"><a href="#cb12-27" aria-hidden="true" tabindex="-1"></a>    <span class="ex">shm_size</span> = 0</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb21"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="ex">concurrent</span> = 1</span>
+<span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a><span class="ex">check_interval</span> = 0</span>
+<span id="cb21-3"><a href="#cb21-3" aria-hidden="true" tabindex="-1"></a><span class="ex">shutdown_timeout</span> = 0</span>
+<span id="cb21-4"><a href="#cb21-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-5"><a href="#cb21-5" aria-hidden="true" tabindex="-1"></a><span class="ex">[session_server]</span></span>
+<span id="cb21-6"><a href="#cb21-6" aria-hidden="true" tabindex="-1"></a>  <span class="ex">session_timeout</span> = 1800</span>
+<span id="cb21-7"><a href="#cb21-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-8"><a href="#cb21-8" aria-hidden="true" tabindex="-1"></a><span class="ex">[[runners]]</span></span>
+<span id="cb21-9"><a href="#cb21-9" aria-hidden="true" tabindex="-1"></a>  <span class="ex">name</span> = <span class="st">"matlab-gitlab"</span></span>
+<span id="cb21-10"><a href="#cb21-10" aria-hidden="true" tabindex="-1"></a>  <span class="ex">url</span> = <span class="st">"https://gitlab.tudelft.nl"</span></span>
+<span id="cb21-11"><a href="#cb21-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">id</span> = <span class="op">&lt;</span>runner id<span class="op">&gt;</span></span>
+<span id="cb21-12"><a href="#cb21-12" aria-hidden="true" tabindex="-1"></a>  <span class="ex">token</span> = <span class="st">"&lt;authentication token&gt;"</span></span>
+<span id="cb21-13"><a href="#cb21-13" aria-hidden="true" tabindex="-1"></a>  <span class="ex">executor</span> = <span class="st">"docker"</span></span>
+<span id="cb21-14"><a href="#cb21-14" aria-hidden="true" tabindex="-1"></a>  <span class="ex">[runners.custom_build_dir]</span></span>
+<span id="cb21-15"><a href="#cb21-15" aria-hidden="true" tabindex="-1"></a>  <span class="ex">[runners.cache]</span></span>
+<span id="cb21-16"><a href="#cb21-16" aria-hidden="true" tabindex="-1"></a>    <span class="ex">[runners.cache.s3]</span></span>
+<span id="cb21-17"><a href="#cb21-17" aria-hidden="true" tabindex="-1"></a>    <span class="ex">[runners.cache.gcs]</span></span>
+<span id="cb21-18"><a href="#cb21-18" aria-hidden="true" tabindex="-1"></a>    <span class="ex">[runners.cache.azure]</span></span>
+<span id="cb21-19"><a href="#cb21-19" aria-hidden="true" tabindex="-1"></a>  <span class="ex">[runners.docker]</span></span>
+<span id="cb21-20"><a href="#cb21-20" aria-hidden="true" tabindex="-1"></a>    <span class="ex">tls_verify</span> = false</span>
+<span id="cb21-21"><a href="#cb21-21" aria-hidden="true" tabindex="-1"></a>    <span class="ex">image</span> = <span class="st">"matlab-gitlab:r2025b"</span></span>
+<span id="cb21-22"><a href="#cb21-22" aria-hidden="true" tabindex="-1"></a>    <span class="ex">privileged</span> = true</span>
+<span id="cb21-23"><a href="#cb21-23" aria-hidden="true" tabindex="-1"></a>    <span class="ex">disable_entrypoint_overwrite</span> = false</span>
+<span id="cb21-24"><a href="#cb21-24" aria-hidden="true" tabindex="-1"></a>    <span class="ex">oom_kill_disable</span> = false</span>
+<span id="cb21-25"><a href="#cb21-25" aria-hidden="true" tabindex="-1"></a>    <span class="ex">disable_cache</span> = false</span>
+<span id="cb21-26"><a href="#cb21-26" aria-hidden="true" tabindex="-1"></a>    <span class="ex">volumes</span> = <span class="pp">[</span><span class="st">"/cache"</span><span class="pp">]</span></span>
+<span id="cb21-27"><a href="#cb21-27" aria-hidden="true" tabindex="-1"></a>    <span class="ex">shm_size</span> = 0</span>
+<span id="cb21-28"><a href="#cb21-28" aria-hidden="true" tabindex="-1"></a>    <span class="ex">network_mtu</span> = 0</span>
+<span id="cb21-29"><a href="#cb21-29" aria-hidden="true" tabindex="-1"></a>    <span class="ex">pull_policy</span> = <span class="st">"if-not-present"</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </div>
 </div>
 </section>
-<section id="step-5.-obtain-a-matlab-license-file" class="level3">
-<h3 class="anchored" data-anchor-id="step-5.-obtain-a-matlab-license-file">Step 5. Obtain a MATLAB license file</h3>
+<section id="step-6.-obtain-a-matlab-license-file" class="level3">
+<h3 class="anchored" data-anchor-id="step-6.-obtain-a-matlab-license-file">Step 6. Obtain a MATLAB license file</h3>
 <p>Every TU Delft employee has access to an Individual MATLAB license. Normally, you would activate MATLAB only once after installation through an online activation step. However, this does not work for a Docker container as it is relaunched for each CI trigger.</p>
 <p>The following steps for activating MATLAB on an offline machine are adapted from the <a href="https://nl.mathworks.com/matlabcentral/answers/259627-how-do-i-activate-matlab-or-other-mathworks-products-without-an-internet-connection">MATLAB Forum</a>:</p>
 <ol type="1">
@@ -1366,14 +1439,14 @@ Note
 <li>Activate the license through the License Center to obtain license file</li>
 </ol>
 <p><strong>1. Obtain your Host ID</strong><br>
-The MATLAB license can only be activated for a specifc computer. In the Docker container, we will set the hostID of the container to <strong>0242ac11ffff</strong>.</p>
-<div class="callout callout-style-default callout-note callout-titled">
+The MATLAB license can only be activated for a specific computer. In the Docker container, we will set the hostID of the container to <strong>0242ac11ffff</strong>.</p>
+<div class="callout callout-style-simple callout-note no-icon callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
-<i class="callout-icon"></i>
+<i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Note
+<span class="screen-reader-only">Note</span><i class="fa-solid fa-info-circle" aria-label="info-circle"></i> Note
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -1384,101 +1457,98 @@ Note
 The MATLAB license is created for a specific user. In the Docker container, we will set the username to <strong>matlab</strong>.</p>
 <p><strong>3. Activate the license through the License Center to obtain license file</strong></p>
 <ol type="1">
-<li>Go to the License Center: https://www.mathworks.com/mwaccount</li>
-<li>Under My Software, click the license number you want to activate. If you do not see your license number, in the bottom right hand corner, click View Additional Licenses or Trials.</li>
-<li>Click the Install and Activate tab</li>
-<li>Click Activate to Retrieve License File and/or Activate a Computer</li>
+<li>Go to the License Center: <a href="https://www.mathworks.com/mwaccount" class="uri">https://www.mathworks.com/mwaccount</a></li>
+<li>Under My Software, click the license for <strong>Designated Computer</strong></li>
+<li>Click the tab: <strong>Install and Activate</strong></li>
+<li>Under related tasks, click <strong>Activate to Retrieve License File</strong></li>
 <li>Enter the following information:
 <ul>
-<li>the release you are activating = <strong>r2021b</strong> (same version as in the Dockerfile)</li>
+<li>the release you are activating = <strong>r2025b</strong> (same version as in the Dockerfile)</li>
 <li>the operating system = <strong>Linux</strong></li>
 <li>the host ID = <strong>0242ac11ffff</strong></li>
-<li>your user or login name = <strong>matlab</strong></li>
-<li>the Activation Label = <strong>matlab-gitlab</strong><br>
+<li>the Computer Label = <strong>matlab-gitlab</strong><br>
 </li>
 </ul></li>
-<li>Download the <code>license.lic</code> file</li>
+<li>Select <strong>Continue</strong></li>
+<li>Download the <code>license.lic</code> file and save it to your local machine.</li>
 </ol>
 </section>
-<section id="step-6.-configure-the-cicd-pipeline-on-gitlab" class="level3">
-<h3 class="anchored" data-anchor-id="step-6.-configure-the-cicd-pipeline-on-gitlab">Step 6. Configure the CI/CD pipeline on Gitlab</h3>
-<p>Before we can run a CI job, we need to configure a few settings in our Gitlab repository</p>
-<p><strong>1. Add tag to MATLAB runner</strong><br>
-Under <strong>Settings -&gt; CI/CD -&gt; Runners</strong> we can find the available specific runners. Press the edit button on the matlab-gitlab runner and add the tag <code>matlab-gitlab</code>. With this, we can call more easily call this specific runner within our CI pipeline.</p>
-<p><strong>2. Add license as Variable</strong><br>
-Under <strong>Settings -&gt; CI/CD -&gt; Variables</strong> add a new variable called <code>MATLAB_LICENSE</code>, past the content of the downloaded <code>license.lic</code> file and set <code>type</code> to <code>file</code>. Having the license available as a Gitlab variable allows us to update it without having to change the MATLAB image.</p>
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center">
+<section id="step-7.-configure-the-cicd-pipeline-on-gitlab" class="level3">
+<h3 class="anchored" data-anchor-id="step-7.-configure-the-cicd-pipeline-on-gitlab">Step 7. Configure the CI/CD pipeline on GitLab</h3>
+<p>Before we can run a CI job, we need to configure the license in our GitLab repository. Having the license available as a GitLab variable allows us to renew it without having to change the MATLAB image.</p>
+<div class="callout callout-style-simple callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-8-contents" aria-controls="callout-8" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Note
+<span class="screen-reader-only">Warning</span>Warning
 </div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
+<div id="callout-8" class="callout-8-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>Alternatively, we could have added the license file directly to the Docker image. With the license file in the same folder as the Dockerfile and adding the following command to the Dockerfile, we can build a Docker image with an activated MATLAB:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb13"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="ex">COPY</span> license.lic /opt/matlab/licenses/</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>Here, we opted to have it accessible through the Gitlab settings together with the accompanying hostid.</p>
-<div class="callout callout-style-default callout-warning callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Warning
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Never share any Docker images that contain license files or other confidential information.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb22"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="ex">COPY</span> license.lic /opt/matlab/licenses/</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Here, we opted to have it accessible through the GitLab settings together with the accompanying hostid.</p>
+<p><strong>Never share any Docker images that contain license files or other confidential information.</strong></p>
 </div>
 </div>
 </div>
-</div>
+<p>Under <strong>Settings -&gt; CI/CD -&gt; Variables</strong>, scroll down to <strong>Project variables</strong> and select <strong>Add variable</strong>.</p>
+<ul>
+<li>Type: <code>File</code></li>
+<li>Environments: <code>All (default)</code></li>
+<li>Visibility: <code>Visible</code> (The license contains sensitive information, but its format is incompatible with the <code>masked</code> settings)</li>
+<li>Key: <code>MATLAB_LICENSE</code></li>
+<li>Value: Paste the content of the downloaded <code>license.lic</code> file here</li>
+</ul>
 </section>
-<section id="step-7.-add-a-job-to-test-the-pipeline" class="level3">
-<h3 class="anchored" data-anchor-id="step-7.-add-a-job-to-test-the-pipeline">Step 7. Add a job to test the pipeline</h3>
+<section id="step-8.-add-a-job-to-test-the-pipeline" class="level3">
+<h3 class="anchored" data-anchor-id="step-8.-add-a-job-to-test-the-pipeline">Step 8. Add a job to test the pipeline</h3>
 <p>To test the pipeline, add the following content to <code>.gitlab-ci.yml</code> via <strong>CI/CD -&gt; Editor</strong> in your repository.</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb14"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="fu">variables</span><span class="kw">:</span></span>
-<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">MAC_ADDRESS</span><span class="kw">:</span><span class="at"> 02:42:ac:11:ff:ff</span></span>
-<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a><span class="fu">check_matlab</span><span class="kw">:</span></span>
-<span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">tags</span><span class="kw">:</span><span class="at"> </span></span>
-<span id="cb14-6"><a href="#cb14-6" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="kw">-</span><span class="at"> matlab-gitlab</span></span>
-<span id="cb14-7"><a href="#cb14-7" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">before_script</span><span class="kw">:</span></span>
-<span id="cb14-8"><a href="#cb14-8" aria-hidden="true" tabindex="-1"></a><span class="co">    # Change the mac-address to match the MATLAB license</span></span>
-<span id="cb14-9"><a href="#cb14-9" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="kw">-</span><span class="at"> sudo ifconfig eth0 hw ether "$MAC_ADDRESS"</span></span>
-<span id="cb14-10"><a href="#cb14-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-11"><a href="#cb14-11" aria-hidden="true" tabindex="-1"></a><span class="co">    # Add the Matlab license to the Matlab installation in the container</span></span>
-<span id="cb14-12"><a href="#cb14-12" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="kw">-</span><span class="at"> sudo mkdir /opt/matlab/licenses</span></span>
-<span id="cb14-13"><a href="#cb14-13" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="kw">-</span><span class="at"> sudo mv ${MATLAB_LICENSE} /opt/matlab/licenses/license.lic   </span></span>
-<span id="cb14-14"><a href="#cb14-14" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">script</span><span class="kw">:</span><span class="at">    </span></span>
-<span id="cb14-15"><a href="#cb14-15" aria-hidden="true" tabindex="-1"></a><span class="co">    # Run a MATLAB function/script through the -batch argument</span></span>
-<span id="cb14-16"><a href="#cb14-16" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="kw">-</span><span class="at"> matlab -batch "disp('hello world!')"</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>After commiting, the pipeline should run and execute the job <code>check_matlab</code>. You can check the status of the pipeline via <strong>CI/CD -&gt; Pipelines</strong>.</p>
-<p>If all went well, you have successfully setup a Gitlab runner to run MATLAB code. Congrats!</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb23"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="fu">variables</span><span class="kw">:</span></span>
+<span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">MAC_ADDRESS</span><span class="kw">:</span><span class="at"> 02:42:ac:11:ff:ff</span></span>
+<span id="cb23-3"><a href="#cb23-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-4"><a href="#cb23-4" aria-hidden="true" tabindex="-1"></a><span class="fu">check_matlab</span><span class="kw">:</span></span>
+<span id="cb23-5"><a href="#cb23-5" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">tags</span><span class="kw">:</span><span class="at"> </span></span>
+<span id="cb23-6"><a href="#cb23-6" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="kw">-</span><span class="at"> matlab</span></span>
+<span id="cb23-7"><a href="#cb23-7" aria-hidden="true" tabindex="-1"></a><span class="co">  # Optional : specify the docker image to use for this job if other than default in the runner config.toml</span></span>
+<span id="cb23-8"><a href="#cb23-8" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">image</span><span class="kw">:</span><span class="at"> matlab-gitlab:r2025b</span></span>
+<span id="cb23-9"><a href="#cb23-9" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">before_script</span><span class="kw">:</span></span>
+<span id="cb23-10"><a href="#cb23-10" aria-hidden="true" tabindex="-1"></a><span class="co">    # Change the mac-address to match the MATLAB license</span></span>
+<span id="cb23-11"><a href="#cb23-11" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="kw">-</span><span class="at"> sudo ifconfig eth0 hw ether "$MAC_ADDRESS"</span></span>
+<span id="cb23-12"><a href="#cb23-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-13"><a href="#cb23-13" aria-hidden="true" tabindex="-1"></a><span class="co">    # Add the MATLAB license to the MATLAB installation in the container</span></span>
+<span id="cb23-14"><a href="#cb23-14" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="kw">-</span><span class="at"> sudo mkdir /opt/matlab/licenses</span></span>
+<span id="cb23-15"><a href="#cb23-15" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="kw">-</span><span class="at"> sudo mv ${MATLAB_LICENSE} /opt/matlab/licenses/license.lic   </span></span>
+<span id="cb23-16"><a href="#cb23-16" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">script</span><span class="kw">:</span><span class="at">    </span></span>
+<span id="cb23-17"><a href="#cb23-17" aria-hidden="true" tabindex="-1"></a><span class="co">    # Run a MATLAB function/script through the -batch argument</span></span>
+<span id="cb23-18"><a href="#cb23-18" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="kw">-</span><span class="at"> matlab -batch "disp('hello world!')"</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>After committing, the pipeline should run and execute the job <code>check_matlab</code>. You can check the status of the pipeline via <strong>CI/CD -&gt; Pipelines</strong>.</p>
+<p>If all went well, you have successfully setup a GitLab runner to run MATLAB code. Congrats!</p>
 </section>
-<section id="step-8.-optional-updating-the-matlab-version" class="level3">
-<h3 class="anchored" data-anchor-id="step-8.-optional-updating-the-matlab-version">Step 8. Optional: Updating the MATLAB version</h3>
-<p>If you need to update the MATLAB version of the Docker container, you will need to go throught the following steps:</p>
+<section id="step-9.-optional-updating-the-matlab-version" class="level3">
+<h3 class="anchored" data-anchor-id="step-9.-optional-updating-the-matlab-version">Step 9. Optional: Updating the MATLAB version</h3>
+<p>If you need to update the MATLAB version of the Docker container, you will need to go through the following steps:</p>
 <ol type="1">
 <li>Update the MATLAB version in the Dockerfile</li>
 <li>Build the docker image with <code>sudo docker build . -t matlab-gitlab:&lt;version&gt;</code></li>
-<li>Download a new <code>license.lic</code> file (see step 5 of this guide)</li>
+<li>Download a new <code>license.lic</code> file for the new version (see step 5 of this guide)</li>
 <li>Update the CI Variable <code>MATLAB_LICENSE</code> with the new license content</li>
 <li>Update the image names (not the tags) in <code>.gitlab-ci.yml</code> to use the new image.</li>
 </ol>
-<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout callout-style-simple callout-tip no-icon callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
-<i class="callout-icon"></i>
+<i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Note
+<span class="screen-reader-only">Tip</span><i class="fa-solid fa-lightbulb" aria-label="lightbulb"></i> Tip
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>If you want to test your code with multiple MATLAB versions to ensure backward compatibility, please look at this <a href="https://forum.gitlab.com/t/testing-with-all-version-combinations-of-python-django/7408">example</a> to use multiple docker images.</p>
+<p>The solution presented in this guide relies on using a license file for activation. As this license is tied to a specific host ID and username, only one may be used at a time. For more complex, multi-version setups, consider exploring network licenses, or GitHub as the hosting platform.</p>
 </div>
 </div>
 <!-- ## References
