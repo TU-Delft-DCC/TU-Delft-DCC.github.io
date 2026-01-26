@@ -49,8 +49,7 @@ categories:
 
 ---
 
-This section describes how to transfer data to and from a TU Delft virtual server.
-The procedure is different depending on whether the server runs a Windows or Linux-based operating system. Although there are many ways to transfer data from one machine to another, TU Delft servers only support a few of them.
+This section describes how to transfer data to and from a TU Delft virtual server. The procedure is different depending on whether the server runs a Windows or Linux-based operating system. 
 
 
 ## Linux servers
@@ -139,25 +138,31 @@ $ scp <host-nickname>:<full-path-remote-file>/ <path-my-local-directory>/
 
 ## Windows servers
 
-Transferring data to and from a TU Delft Windows server is done via the Citrix platform, using the app's built-in menu shown in the image below.
+Transferring data to and from a TU Delft Windows server is most easily managed using TU Delft Network Drives. These drives provide a central storage space that is accessible from both your local machine and your virtual server. There are many different drives which are used for different purposes; refer to the [Data Storage for Researchers](https://tudelft.topdesk.net/tas/public/ssp/content/detail/service?unid=846ebb16181c43b5836c063a917dd199) page in TopDesk for more details.
 
-![Citrix Menu. Buttons from left to right: *Download*, *Upload*, *Multimonitor*, *Clipboard*, and *Settings*.](../img/citrix_menu.png){fig-align="left"}
+The process of tranfering data to and from your server involves two main stages: mounting the drive locally to "upload" your files, and accessing them once you are logged into the server.
 
-### Transferring files
+**Step 1: Add network drived to your local computer**
 
-1. Open a web browser and log into your Windows server as usual via the [Citrix portal](https://weblogin.tudelft.nl/Citrix/TUDAppsWeb/).
-2. Open the Citrix menu located at the center-top of the server window and click on the _Upload_ or _Download_ button, as shown in the image above.
-3. A pop-up window will open on where you can select the files you wish to transfer to the server.
+First, you must connect your local computer to the TU Delft network drives:
 
-It is not possible to directly transfer files to or from the server's C: or D: drives. Instead, you upload or download files to your personal TU Delft drive which is connected to the server. Using the Windows File Explorer and standard copy/paste or drag-and-drop operations, you can transfer the data from your personal drive to the server's C: or D: drives.
- 
+* For Windows users: follow the [TU Delft Guide for Windows](https://tudelft.selfguide.com/instruction/d01933ea-5030-42ce-bf46-08dddbccce29) which shows how to add network drives to your File Explorer.
+* For macOS users: follow the [TU Delft Guide for macOS](https://tudelft.selfguide.com/instruction/52b28376-51ad-4e80-5dfe-08dde60b89ae) which shows how to access network drives via Finder.
+
+Once added, you can simply drag and drop files from your computer into the drives. 
+
+**Step 2: Access files on the Windows Server**
+
+The network drives are configured to mount automatically whenever you log into a TU Delft Windows server.
+
+1. Connect to your Windows server as per usual.
+2. Open File Explorer and navigate to This PC.
+3. You will see your network drives listed under Network Locations.
+4. To Upload: Copy files from the network drive and paste them onto the server’s local disk (e.g., the Desktop).
+5. To Download: Move files from the server into the network drive. They will immediately become available on your local computer via the drive you mounted in Step 1.
+
 ::: {.callout-warning appearance="simple" icon="false"}
 ## {{< fa info-circle >}} Warning
 
-TU Delft Windows servers have a limited amount of disk space in the C: drive. ICT instructs users to install applications and store data in the D: drive of the server to avoid running out of memory. Alternatively, you can use your personal TU Delft drive, which is also connected to the server. More information can be found at the bottom of the [TOPdesk form](https://tudelft.topdesk.net/tas/public/ssp/content/serviceflow?unid=418c986f186d4934848dc2712039ed34&openedFromService=true) to request a new VPS.
+TU Delft Windows servers have a limited amount of disk space in the C: drive. ICT instructs users to install applications and store data in the D: drive of the server to avoid running out of storage memory. Alternatively, you can use your personal TU Delft drive, which is also connected to the server. More information can be found at the bottom of the [TOPdesk form](https://tudelft.topdesk.net/tas/public/ssp/content/serviceflow?unid=418c986f186d4934848dc2712039ed34&openedFromService=true) to request a new VPS.
 :::
-
-### Using the clipboard
-
-TU Delft Windows servers do not allow to directly copy or paste text from the clipboard. Instead, you must use Citrix's clipboard functionality. To do so, open the Citrix's menu located at the center-top of the window and click on the _Clipboard_ button. A pop-up window will open on which you can copy or paste the text you wish to transfer. Note that it is only possible to transfer text via the clipboard; images or files are not supported.
-
