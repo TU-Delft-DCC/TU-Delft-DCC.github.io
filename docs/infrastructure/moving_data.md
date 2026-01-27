@@ -77,7 +77,7 @@ scp <target-username>@<remote-server>:<full-path/remote-file> <path-to-local-dir
 
 **Connecting via the Bastion Host**
 
-All connections to TU Delft Linux VPS, including data tranfers, must be routed through an intermediary server called the Bastion Host. There are two supported ways to route `scp` connections through the Bastion Host:
+All connections to TU Delft Linux VPS, including data transfers, must be routed through an intermediary server called the Bastion Host. There are two supported ways to route `scp` connections through the Bastion Host:
 
 1. **ProxyJump**: explicitly routes each `scp` command through the bastion host
 2. **SSH tunneling**: uses a pre-configured SSH setup that allows direct access via a host alias
