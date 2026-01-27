@@ -148,7 +148,7 @@ $ scp <host-nickname>:<full-path-remote-file>/ <path-to-local-directory>/
 
 Transferring data to and from a TU Delft Windows server is most easily managed using TU Delft Network Drives. These drives provide a central storage space that is accessible from both your local machine and your virtual server. There are many different drives which are used for different purposes; refer to the [Data Storage for Researchers](https://tudelft.topdesk.net/tas/public/ssp/content/detail/service?unid=846ebb16181c43b5836c063a917dd199) page in TopDesk for more details.
 
-The process of tranfering data to and from your server involves two main stages: mounting the drive locally to "upload" your files, and accessing them once you are logged into the server.
+The process of transferring data to and from your server involves two main stages: mounting the drive locally to "upload" your files, and accessing them once you are logged into the server.
 
 **Step 1: Add network drives to your local computer**
 
