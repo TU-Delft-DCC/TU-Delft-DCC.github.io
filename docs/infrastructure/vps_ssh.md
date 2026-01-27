@@ -3,10 +3,10 @@
 
 # We use this key to indicate the last reviewed date [manual entry, use YYYY-MM-DD]
 # Uncomment and populate the next line accordingly
-date: 2025-09-03
+date: 2026-01-27
 
 # We use this key to indicate the last modified date [manual entry, use YYYY-MM-DD]
-date-modified: 2026-01-26
+date-modified: 2026-01-27
 
 # Do not modify
 lang: en
@@ -20,7 +20,7 @@ title: Connecting to remote servers
 
 # Brief overview of the document (will be used in listings) [manual entry]
 # Uncomment and populate the next line and uncomment "hide-description: true".
-description: how to set up a single-step SSH connection to a VPS using SSH tunneling
+description: Secure connection to TU Delft virtual servers using SSH (Linux) or RDP (Windows).
 hide-description: true
 
 # Authors of the document, will not be parsed [manual entry]
@@ -32,7 +32,7 @@ author_3: Yasel Quintero
 # Maintainers of the document, will not be parsed [manual entry]
 # Uncomment and populate the next lines accordingly
 maintainer_1: Manuel Garcia
-#maintainer_2:
+maintainer_2: Yasel Quintero
 
 # To whom reach out regarding the document, will not be parsed [manual entry]
 # Uncomment and populate the next line accordingly

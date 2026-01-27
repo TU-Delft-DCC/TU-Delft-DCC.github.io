@@ -3,11 +3,11 @@
 
 # We use this key to indicate the last reviewed date [manual entry, use YYYY-MM-DD]
 # Uncomment and populate the next line accordingly
-date: 2025-07-09
+date: 2026-01-27
 
 # We use this key to indicate the last modified date [manual entry, use YYYY-MM-DD]
 # Uncomment and populate the next line accordingly
-date-modified: 2025-09-19
+date-modified: 2026-01-27
 
 # Do not modify
 lang: en
@@ -17,11 +17,11 @@ language:
 
 # Title of the document [manual entry]
 # Uncomment and populate the next line accordingly
-title: Moving data to remote servers
+title: Transfering data to and from remote servers
 
 # Brief overview of the document (will be used in listings) [manual entry]
 # Uncomment and populate the next line and uncomment "hide-description: true".
-description: Securely transfer data to and from TU Delft virtual servers using SCP or Citrix.
+description: Secure data transfer to and from TU Delft virtual servers using scp (Linux) or Network Drives (Windows).
 hide-description: true
 
 # Authors of the document, will not be parsed [manual entry]
@@ -45,16 +45,44 @@ categories:
  - Data
  - Servers
  - scp
- - Citrix
+ - network drives
 
 ---
 
-This section describes how to transfer data to and from a TU Delft virtual server. The procedure is different depending on whether the server runs a Windows or Linux-based operating system. 
+This section describes how to transfer data to and from a TU Delft virtual private server (VPS). Common scenarios in which you might need to transfer data between hosts include uploading scripts, downloading results, or transferring configuration files. The procedure is different depending on whether the server runs a Windows or Linux-based operating system.
 
+:::{.callout-important appearance="simple" icon="false"}
+## {{< fa info-circle >}} Off-Campus Access
+When working off-campus you must be connected to eduVPN to access your VPS. Please refer to the TU Delft manuals for [working remotely](https://www.tudelft.nl/en/it-manuals/working-remotely) and [configuring eduVPN](https://www.tudelft.nl/en/it-manuals/applications/vpn).
+:::
 
 ## Linux servers
 
-The `scp` command is a secure file transfer utility that allows you to copy files between Linux-based hosts (this includes macOS) on a network. It uses SSH for data transfer, providing the same authentication and security as SSH. Common scenarios in which you might need to transfer data between hosts include uploading scripts, downloading results, or transferring configuration files.
+The `scp` utility is the standard tool for secure file transfers on Linux and macOS. It uses the Secure Shell (SSH) protocol, which means that if you can connect to a server using `ssh`, you can also transfer files to and from it using `scp`.
+
+The `scp` command is executed from a command-line interface on your local computer:
+
+* **Linux, macOS and WSL**: open the Terminal application
+* **Windows**: open PowerShell or use the Windows Subsystem for Linux (WSL)
+
+The general syntax of the `scp` command is:
+
+```bash
+# Copy TO remote server
+scp <path-to-local-file> <target-username>@<remote-server>:<full-path/remote-directory>/
+
+# Copy FROM remote server
+scp <target-username>@<remote-server>:<full-path/remote-file> <path-to-local-directory>/
+```
+
+**Connecting via the Bastion Host**
+
+All connections to TU Delft Linux VPS, including data tranfers, must be routed through an intermediary server called the Bastion Host. There are two supported ways to route `scp` connections through the Bastion Host:
+
+1. **ProxyJump**: explicitly routes each `scp` command through the bastion host
+2. **SSH tunneling**: uses a pre-configured SSH setup that allows direct access via a host alias
+
+The following sections describe both approaches.
 
 :::{.callout-tip appearance="simple" icon="false"}
 ## {{< fa lightbulb >}} Moving large data batches
@@ -68,36 +96,17 @@ If you need to transfer large files or a multitude of small files, consider usin
 Notice that `scp` will overwrite files in the destination directory without prompting if they already exist. Always double-check the paths and filenames to avoid accidental data loss.
 :::
 
-### Prerequisites
-Before starting, you need:
-
-* SCP (Secure Copy Protocol) installed on your local machine. SCP is a command-line utility that allows you to securely transfer files between hosts on a network.
-* SSH access to the remote host (e.g., VPS) you want to connect to.
-
-### Moving data via SCP
-To copy data to and from a remote host using the `scp` command, you can use the following syntax:
-
-```bash
-# Copy TO Remote Host
-scp <path-my-local-file> <target-username>@<remote-host>:<full-path/remote-directory>/
-```
-
-```bash
-# Copy FROM Remote Host
-scp <target-username>@<remote-host>:<full-path/my-remote-file> <path-my-local-directory>/
-```
-
-:::{.callout-tip appearance="simple" icon="false"}
-## {{< fa lightbulb >}} Moving files to restricted directories
+::: {.callout-warning appearance="simple" icon="false"}
+## {{< fa info-circle >}} Permissions
 
 Some directories on the remote host may require elevated permissions to write files. If you encounter a "Permission denied" error, you may need to use `sudo` to copy files to those directories. However, using `scp` with `sudo` directly is not supported. Instead, you can copy the file to a temporary directory `/tmp` where you have write access and then move it to the desired location using `sudo` after connecting to the remote host.
 :::
 
-### Transferring files using `ProxyJump`
+### Transferring files using ProxyJump
 
-In the case of a VPS hosted by TU Delft, you need to copy data to a remote host via a bastion host (an intermediary server). Therefore, you must use the `-o` option of `scp` to specify a `ProxyJump` that will connect to the bastion host first. Alternatively, you can choose to transfer files using [SSH tunneling](#transferring-files-using-ssh-tunneling).
+When using `ProxyJump`, the bastion host is specified directly in the `scp` command via the `-o` option. This approach requires no prior SSH tunneling configuration and is suitable for occasional file transfers.
 
-#### Transfer to remote host
+**Transfer TO remote server**
 
 ```bash
 # If using default SSH key name, for example, id_ed25519 or id_rsa
@@ -107,10 +116,9 @@ scp -o "ProxyJump <bastion-username>@linux-bastion-ex.tudelft.nl" <path-my-local
 # If using a custom SSH key name, for example, my_custom_key
 scp  -i <path-to-custom-private-ssh-key> -o "ProxyJump <bastion-username>@linux-bastion-ex.tudelft.nl" \ 
 <path-my-local-file>  <target-username>@<remote-host>:<full-path-remote-directory>/
-
 ```
 
-#### Transfer from remote host
+**Transfer FROM remote server**
 
 ```bash
 # If using default SSH key name, for example, id_ed25519 or id_rsa
@@ -124,16 +132,16 @@ scp -i <path-to-custom-private-ssh-key> -o "ProxyJump <bastion-username>@linux-b
 
 ### Transferring files using SSH tunneling
 
-If [SSH tunneling](vps_ssh.md) has been configured correctly for the remote host, you can copy files to and from a remote host as follows:
+If SSH tunneling has been configured, file transfers can be performed without explicitly referencing the bastion host. This method is recommended for frequent use, as it simplifies commands and reduces repetition.
+
+Instructions for establishing an SSH connection to a Linux VPS and configuring SSH tunneling are provided in our [Server Connection guide](vps_ssh.md).
 
 ```bash
-# Copy TO remote host
-$ <path-my-local-file> <host-nickname>:<full-path-remote-directory>/
-```
+# Copy TO remote server
+$ <path-to-local-file> <host-nickname>:<full-path-remote-directory>/
 
-```bash
-# Copy FROM remote host
-$ scp <host-nickname>:<full-path-remote-file>/ <path-my-local-directory>/ 
+# Copy FROM remote server
+$ scp <host-nickname>:<full-path-remote-file>/ <path-to-local-directory>/ 
 ```
 
 ## Windows servers
@@ -142,7 +150,7 @@ Transferring data to and from a TU Delft Windows server is most easily managed u
 
 The process of tranfering data to and from your server involves two main stages: mounting the drive locally to "upload" your files, and accessing them once you are logged into the server.
 
-**Step 1: Add network drived to your local computer**
+**Step 1: Add network drives to your local computer**
 
 First, you must connect your local computer to the TU Delft network drives:
 
@@ -151,7 +159,7 @@ First, you must connect your local computer to the TU Delft network drives:
 
 Once added, you can simply drag and drop files from your computer into the drives. 
 
-**Step 2: Access files on the Windows Server**
+**Step 2: Access files on the Windows server**
 
 The network drives are configured to mount automatically whenever you log into a TU Delft Windows server.
 
