@@ -17,7 +17,7 @@ language:
 
 # Title of the document [manual entry]
 # Uncomment and populate the next line accordingly
-title: Transfering data to and from remote servers
+title: Transferring data to and from remote servers
 
 # Brief overview of the document (will be used in listings) [manual entry]
 # Uncomment and populate the next line and uncomment "hide-description: true".
@@ -104,7 +104,7 @@ Some directories on the remote host may require elevated permissions to write fi
 
 ### Transferring files using ProxyJump
 
-When using `ProxyJump`, the bastion host is specified directly in the `scp` command via the `-o` option. This approach requires no prior SSH tunneling configuration and is suitable for occasional file transfers.
+When using ProxyJump, the bastion host is specified directly in the `scp` command via the `-o` option. This approach requires no prior SSH tunneling configuration and is suitable for occasional file transfers.
 
 **Transfer TO remote server**
 
