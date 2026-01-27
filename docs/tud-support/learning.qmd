@@ -58,87 +58,61 @@ This section provides a common orientation to learning and development. It can b
 
 ## Core technical foundations
 
-Most research support staff benefit from familiarity with the following areas, regardless of their primary role.
+These are baseline technical skills expected across most research support roles (RSEs, RDEs, data stewards and related roles).
 
-#### Version control and collaboration
-- Understanding Git-based workflows
-- Working with issues, pull requests, and reviews
-- Using version control as shared documentation
+- Version control with Git
+- Programming or scripting (e.g. Python, R, and/or C/C++)
+- Linux and shell usage
+- Working on shared research infrastructure
+- Understanding of structured data and common data formats
+- Basic testing and validation practices
 
-#### Reproducibility concepts
-- Managing dependencies and environments
-- Documenting workflows and assumptions
-- Understanding the difference between repeatability and reproducibility
+#### Software oriented roles (e.g. RSEs)
 
-#### Programming and scripting awareness
-- Reading and modifying code when needed
-- Understanding commonly used research languages
-- Knowing when custom code is appropriate and when it is not
+- Software design and modularization
+- Code maintainability and refactoring
+- Automated testing and CI/CD
 
-#### Documentation practices
-- Writing clear onboarding instructions
-- Capturing decisions and rationale
-- Creating reusable templates and examples
+#### Data oriented roles (e.g. RDEs)
 
-#### FAIR principles
-- Applying FAIR to data and software
-- Understanding metadata, licensing, and citation
-- Knowing relevant archiving and publishing platforms
-
-## Role-specific expertise
-
-Different research support roles naturally go deeper in different areas.  
-This diversity is a strength and enables effective collaboration.
-
-**Research software–focused roles**
-
-- Software design and architecture
-- Testing and continuous integration
-- Packaging, releases, and reuse
-- Performance and scalability considerations
-
-**Data-focused support roles**
-
-- Data Management Plans
-- Research data policies and compliance
-- Metadata and documentation standards
-- Data storage, archiving, and sharing
-
-**Infrastructure and research IT roles**
-
-- Compute and storage platforms
-- Security and access management
-- Reliability and monitoring
-- Supporting reproducible environments
-
-**Library and Open Science roles**
-
-- Licensing and copyright
-- Open access and publishing workflows
-- Training and community enablement
-- Policy interpretation and guidance
+- Data modeling and schema design
+- Metadata concepts and standards
+- Data validation, quality check and ETL pipelines
 
 ## Structured training & course sources
 
 In addition to self-directed learning, the following structured training opportunities are valuable for support staff across TU Delft:
 
-### TU Delft internal offerings
+#### Software architecture & maintainability
 
-- **Software Carpentry / Data Carpentry lessons** — foundational workshops on Git, the command line, Python, and R.  
-  [*(See DCC Courses and Workshops)*](https://tu-delft-dcc.github.io/docs/resources/courses.html)
-- **Delft High Performance Computing courses** — training in supercomputing and computational science fundamentals. [*More information on the DHPC website*](https://www.tudelft.nl/dhpc)
-- **TU Delft MOOCs** — self-paced online courses offered by the university, including topics such as *Open Science*, *Automated Software Testing*, *AI, Data & Digitalisation*, and *Unix Tools*. [*See more here*](https://online-learning.tudelft.nl)
-- **CodeRefinery workshops** — collaborative lessons on version control, testing, CI/CD, and documentation practices. [*CodeRefinery*](https://coderefinery.org)
+- Code Refinery – modular design, refactoring, and sustainability: <https://coderefinery.org/>
+- Netherlands eScience Center – software development best practices: <https://www.esciencecenter.nl/software-development-best-practices/>
+- The Turing Way (software sustainability & design) <https://the-turing-way.netlify.app/>
 
-### External & community training
+#### Testing, CI/CD, and quality assurance
 
-- **eScience Center workshops** — intermediate to advanced workshops on research software development topics. [*eScience Center*](https://www.esciencecenter.nl/training/)
-- **SURF training events** — workshops covering use of shared computing infrastructure. [*SURF training events*](https://www.surf.nl/en/events)
-- **Software Sustainability Institute resources** — training and guides on sustainable research software quality. [*link*](https://www.software.ac.uk/training)
-- **R Café and community forums** — peer-learning and community events, e.g., for R users and data practitioners. [*R Cafe*](https://www.tudelft.nl/library/research-support/r-cafe)
-- **4TU.ResearchData training** — events and resources focused on FAIR data practices. [*4TU.ResearchData*](
-https://researchdata.4tu.nl/en/trainings/)
+- Code Refinery – Testing & CI lessons: <https://coderefinery.org/lessons/>
+- pytest documentation: <https://docs.pytest.org/>
+- Property-based testing (Hypothesis): <https://hypothesis.readthedocs.io/>
+- GitHub Actions (CI pipelines): <https://docs.github.com/en/actions>
+- GitLab CI/CD: <https://docs.gitlab.com/ee/ci/>
 
-### TU Delft Library training
+#### High-performance computing (HPC) & GPU programming
 
-- **Research data management workshops** — offered by TU Delft Library’s Research Support Services, covering RDM concepts, FAIR data practices, and policy literacy. [*TU Delft Library training*](https://www.tudelft.nl/library/research-support/training-workshops) 
+- DelftBlue documentation: <https://doc.dhpc.tudelft.nl/delftblue/>
+- SURF HPC & parallel programming courses: <https://www.surf.nl/en/training-courses-for-research>
+- MPI tutorial (official): <https://mpitutorial.com/>
+- OpenMP documentation: <https://www.openmp.org/resources/>
+- CUDA programming guide: <https://docs.nvidia.com/cuda/>
+
+#### Reproducibility, packaging, and deployment
+
+- Conda documentation: <https://docs.conda.io/>
+- Spack (HPC-focused package manager): <https://spack.io/>
+- Reproducible research – The Turing Way: <https://the-turing-way.netlify.app/reproducible-research/>
+
+#### Containers
+
+- Docker documentation: <https://docs.docker.com/>
+- Apptainer (Singularity) documentation: <https://apptainer.org/docs/>
+- Containers on HPC (SURF): <https://www.surf.nl/en/training-courses-for-research>
