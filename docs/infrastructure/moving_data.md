@@ -44,8 +44,8 @@ categories:
  - Infrastructure
  - Data
  - Servers
- - scp
- - network drives
+ - SCP
+ - Network Drives
 
 ---
 
