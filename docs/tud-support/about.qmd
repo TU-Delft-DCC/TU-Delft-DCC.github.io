@@ -47,6 +47,7 @@ author_1: Aysun Urhan
 ### What is Research Software Engineering?
 
 Research Software Engineering (RSE) refers to the practices and roles that ensure research software is:
+
 - correct and reliable,
 - reusable and maintainable,
 - documented and reproducible,
