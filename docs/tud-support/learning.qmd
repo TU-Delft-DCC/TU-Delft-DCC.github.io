@@ -87,29 +87,29 @@ In addition to self-directed learning, the following structured training opportu
 
 - Code Refinery – modular design, refactoring, and sustainability: <https://coderefinery.org/>
 - Netherlands eScience Center – software development best practices: <https://www.esciencecenter.nl/software-development-best-practices/>
-- The Turing Way (software sustainability & design) <https://the-turing-way.netlify.app/>
+- The Turing Way (software sustainability & design) <https://book.the-turing-way.org/>
 
 #### Testing, CI/CD, and quality assurance
 
 - Code Refinery – Testing & CI lessons: <https://coderefinery.org/lessons/>
-- pytest documentation: <https://docs.pytest.org/>
-- Property-based testing (Hypothesis): <https://hypothesis.readthedocs.io/>
+- pytest documentation: <https://docs.pytest.org/en/stable/>
+- Property-based testing (Hypothesis): <https://hypothesis.readthedocs.io/en/latest/>
 - GitHub Actions (CI pipelines): <https://docs.github.com/en/actions>
-- GitLab CI/CD: <https://docs.gitlab.com/ee/ci/>
+- GitLab CI/CD: <https://docs.gitlab.com/ci/>
 
 #### High-performance computing (HPC) & GPU programming
 
 - DelftBlue documentation: <https://doc.dhpc.tudelft.nl/delftblue/>
-- SURF HPC & parallel programming courses: <https://www.surf.nl/en/training-courses-for-research>
+- SURF HPC & parallel programming courses: <https://www.surf.nl/en/agenda?filter=research>
 - MPI tutorial (official): <https://mpitutorial.com/>
 - OpenMP documentation: <https://www.openmp.org/resources/>
 - CUDA programming guide: <https://docs.nvidia.com/cuda/>
 
 #### Reproducibility, packaging, and deployment
 
-- Conda documentation: <https://docs.conda.io/>
+- Conda documentation: <https://docs.conda.io/latest/>
 - Spack (HPC-focused package manager): <https://spack.io/>
-- Reproducible research – The Turing Way: <https://the-turing-way.netlify.app/reproducible-research/>
+- Reproducible research – The Turing Way: <https://book.the-turing-way.org/reproducible-research/reproducible-research/>
 
 #### Containers
 
