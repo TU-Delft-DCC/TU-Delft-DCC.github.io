@@ -70,7 +70,7 @@ Cloud for Research (Cloud4Research) supports researchers in using cloud services
 ### Library 
 All data mangers working in DCC are employed by TU Delft Library-Research Data and Software.
 
-- About TU Delft Library organization: [https://www.tudelft.nl/en/library/about-the-library/the-organisation](https://www.tudelft.nl/en/library/about-the-library/the-organisation)
+- About TU Delft Library organization: <https://www.tudelft.nl/en/library/visit/about-the-library/our-organisation>
 - Research Services governance: [https://openworking.wordpress.com/2023/05/22/organisation-of-research-services-department-tu-delft-library/](https://openworking.wordpress.com/2023/05/22/organisation-of-research-services-department-tu-delft-library/)
 
 The Library regularly hosts public events such as trainings and meetups. Rooms can be requested for meetings open to the TU Delft community.
@@ -78,8 +78,8 @@ The Library regularly hosts public events such as trainings and meetups. Rooms c
 ### Research Data and Software
 Research Data and Software (RDS) focuses on research data management, training, and policy development. The team works closely with other research support units at TU Delft, including the 4TU.ResearchData repository.
 
-- Research Data and Software team: [https://www.tudelft.nl/library/research-data-management](https://www.tudelft.nl/library/research-data-management)
-- Copyright support: [https://www.tudelft.nl/library/copyright](https://www.tudelft.nl/library/copyright)
+- Research Data and Software team: <https://www.tudelft.nl/library/data-management>
+- Copyright support: <https://www.tudelft.nl/library/support/copyright>
 - Open Access publishing: [https://www.tudelft.nl/en/library/support/library-for-researchers/publishing-outreach/creating-your-publishing-strategy](https://www.tudelft.nl/en/library/support/library-for-researchers/publishing-outreach/creating-your-publishing-strategy)
 - TU Delft Open Publishing: [https://www.tudelft.nl/en/library/current-topics/open-publishing](https://www.tudelft.nl/en/library/current-topics/open-publishing)
 
@@ -89,7 +89,7 @@ Open Science is a key part of TU Delft’s mission to deliver science to society
 The DCC is a deliverable of the FAIR data and software project within the Open Science Programme 2020–2024.
 
 - Open Science organization: [https://www.tudelft.nl/open-science/about/organisation](https://www.tudelft.nl/open-science/about/organisation)
-- Position of the DCC in Open Science: [https://www.tudelft.nl/open-science/about/projects/fair-data-and-fair-software](https://www.tudelft.nl/open-science/about/projects/fair-data-and-fair-software)
+- Position of the DCC in Open Science: <https://www.tudelft.nl/en/open-science/about/projects/fair-data-and-fair-software>
 - Internal Open Science coordination (TU Delft intranet / Teams): available to TU Delft staff, contact DCC if you would like to join the internal Teams channel
 
 ### Open Science Community Delft
@@ -100,8 +100,7 @@ The Open Science Community Delft supports researchers, educators, students, and 
 ### Open Hardware
 The Open Hardware project promotes open-source hardware within TU Delft by supporting researchers and students and by offering training activities and learning materials.
 
-- Open Hardware as part of the Open Science Programme: [https://www.tudelft.nl/open-science/about/projects/open-hardware](https://www.tudelft.nl/open-science/about/projects/open-hardware)
-- Open Hardware TU Delft: [https://www.tudelft.nl/open-hardware](https://www.tudelft.nl/open-hardware)
+- Open Hardware TU Delft: <https://www.tudelft.nl/en/open-science/about/projects/open-hardware>
 - Open Hardware Academy: [https://www.openhardware.academy/01_Welcome.html](https://www.openhardware.academy/01_Welcome.html)
 
 ### Delft High Performance Computing Center
@@ -115,7 +114,7 @@ The Delft High Performance Computing Center (DHPC) provides advanced computing i
 ### Data Stewards
 TU Delft has appointed a disciplinary data steward at each faculty and a central data stewardship coordinator. Data stewards support researchers directly, develop faculty-specific workflows, and provide training related to data and software management.
 
-- Data stewardship overview: [https://www.tudelft.nl/en/library/research-data-management/r/support/data-stewardship](https://www.tudelft.nl/en/library/research-data-management/r/support/data-stewardship)
+- Data stewardship overview: <https://www.tudelft.nl/en/library/data-management/get-support-on-data-management/data-stewardship-at-tu-delft>
 - Faculty data stewards: [https://www.tudelft.nl/en/library/research-data-management/r/support/data-stewardship/contact](https://www.tudelft.nl/en/library/research-data-management/r/support/data-stewardship/contact)
 - Generic contact email: <datastewards@tudelft.nl>
 
@@ -148,20 +147,19 @@ NL-RSE connects the Dutch community of research software engineers and contribut
 ### The Carpentries
 The Carpentries teach foundational coding and data science skills to researchers worldwide. DCC RSEs and data managers are trained instructors within the Carpentries community.
 
-- Public Carpentries schedule at TU Delft: <https://www.tudelft.nl/library/research-data-management/r/training-evenementen/training-voor-onderzoekers/software-carpentry-workshops>
+- Public Carpentries schedule at TU Delft: <https://www.tudelft.nl/library/data-management/trainingen/trainingen-voor-onderzoekers-en/software-carpentry-workshops>
 
 ### Code Refinery
 Code Refinery provides training in essential software and data skills for research and operates as a collaborative training network.
 
 - Core lessons: <https://coderefinery.org/lessons/core/>
 - Upcoming workshops: <https://coderefinery.org/workshops/upcoming/>
-- Public Code Refinery workshops at TU Delft: <https://www.tudelft.nl/en/library/research-data-management/r/training-events/training-for-researchers/coderefinery-workshops-good-practices-in-research-software-development>
+- Public Code Refinery workshops at TU Delft: <https://www.tudelft.nl/en/library/current-topics/research-data-management/r/training-events/training-for-researchers/coderefinery-workshops-good-practices-in-research-software-development>
 
 ### SURF
 SURF is the cooperative association of Dutch educational and research institutions providing shared digital infrastructure and services.
 
-- SURF training: <https://www.surf.nl/en/training-courses-for-research>
-- SURF events: <https://www.surf.nl/en/agenda/research-and-ict>
+- SURF events and training: <https://www.surf.nl/en/agenda/>
 
 ### NWO
 The Dutch Research Council (NWO) funds and supports scientific research and innovation in the Netherlands. Digital Competence Centers at Dutch universities were initially funded by NWO and continue to be supported through national programmes.
@@ -171,9 +169,9 @@ The Dutch Research Council (NWO) funds and supports scientific research and inno
 ### Thematic Digital Competence Centers
 Thematic Digital Competence Centers (TDCCs) support cross-institutional research communities within specific domains. TU Delft participates in the Natural and Engineering Sciences (NES) domain.
 
-- Life Science & Health (LSH): <https://tdcc.nl/lsh/>
-- Natural and Engineering Sciences (NES): <https://tdcc.nl/nes/>
-- Social Sciences and Humanities (SSH): <https://tdcc.nl/ssh/>
+- Life Science & Health (LSH): <https://tdcc.nl/about-tdcc/lsh/>
+- Natural and Engineering Sciences (NES): <https://tdcc.nl/about-tdcc/nes/>
+- Social Sciences and Humanities (SSH): <https://tdcc.nl/about-tdcc/ssh/>
 
 :::{.callout-important appearance="simple" icon="true"}
 ## When to involve the DCC?
