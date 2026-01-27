@@ -91,7 +91,7 @@ Connecting to a TU Delft Linux VPS requires first accessing a [Bastion Host](htt
 
 ### Connecting from Linux, macOS or the WSL
 
-Connecting to a VPS via a bastion host is typically a two-step process. However, by using **ssh tunneling** and ssh keys, you can establish a connection from your local machine to your VPS in a single step. This simplifies the connection process and makes secure file transfers between your local machine and the VPS much more efficient.
+Connecting to a VPS via a bastion host is typically a two-step process. However, by using **SSH tunneling** and SSH keys, you can establish a connection from your local machine to your VPS in a single step. This simplifies the connection process and makes secure file transfers between your local machine and the VPS much more efficient.
 
 :::{.callout-tip appearance="simple" icon="false"}
 ## {{< fa lightbulb >}} Summary of steps
@@ -128,8 +128,8 @@ The key's randomart image is:
 A private and public key pair will be created in `~/.ssh`. 
 
 :::{.callout-important appearance="simple" icon="false"}
-## {{< fa info-circle >}} Accessing .ssh
-`~/` in `~/.ssh` refers to your /home directory. As stated above, this is different for the two bastion hosts at TU Delft. For `linux-bastion-ex.tudelft.nl`, it refers to the local /home directory of the bastion host, while for `linux-bastion.tudelft.nl`, it refers to your central /home directory.
+## {{< fa info-circle >}} Accessing `.ssh`
+`~/` in `~/.ssh` refers to your `/home` directory. As stated above, this is different for the two bastion hosts at TU Delft. For `linux-bastion-ex.tudelft.nl`, it refers to the local `/home` directory of the bastion host, while for `linux-bastion.tudelft.nl`, it refers to your central `/home` directory.
 `.` in `~/.ssh` refers to a hidden directory. To view hidden files and directories in the terminal, you can use the command `ls -a`.
 :::
 
@@ -170,7 +170,7 @@ Host <host-nickname>
 Replace:
 
 - `<host-nickname>`: a name of your choice for the target host, e.g., `my-server`.
-- `<target-host>`: the actual name of the target host (FQDM), e.g., `server.tudelft.nl`.
+- `<target-host>`: the actual name of the target host (FQDN), e.g., `server.tudelft.nl`.
 - `<target-username>`:  the username used to log in to the target host, usually your NetID.
 - `<bastion-username>`: the username used to log in to the bastion server (often same as NetID, but keep separate in case it differs).
 - `<my-keyname>`: the name of the SSH private key you created, e.g., `id_rsa`. If your private key is stored in a different location, replace the path accordingly.
