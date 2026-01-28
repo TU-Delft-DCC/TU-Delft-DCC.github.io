@@ -48,7 +48,7 @@ categories:
 
 This section guides you through the essential systems and services needed to manage computational resources and collaborate effectively within TU Delft supported environments.
 
-Computing infrastructure includes the servers and tools that enable you to handle data processing tasks, host research applications, and maintain secure access to resources. TU Delft provides managed infrastructure options, and the guides in this section address practical aspects of working with TU Delft infrastructure. Topics covered include requesting and accessing virtual private servers, establishing secure connections, transferring data to remote systems, configuring secure communications and web servers.
+Computing infrastructure includes the servers and tools that enable you to handle data processing tasks, host research applications, and maintain secure access to resources. TU Delft provides managed infrastructure options, and the guides in this section address practical aspects of working with TU Delft infrastructure. Topics covered include requesting and accessing virtual private servers, establishing secure connections, transferring data to and from remote systems, configuring secure communications and web servers.
 
 You can use these resources to set up computing environments suited to your project requirements. This includes running computational analyses, hosting databases, and deploying research software and applications with secure, managed infrastructure backing your work.
 

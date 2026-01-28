@@ -6,10 +6,10 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="dcterms.date" content="2025-09-03">
-<meta name="description" content="how to set up a single-step SSH connection to a VPS using SSH tunneling">
+<meta name="dcterms.date" content="2026-01-27">
+<meta name="description" content="Secure connection to TU Delft virtual servers using SSH (Linux) or RDP (Windows).">
 
-<title>Set up SSH tunneling for a VPS</title>
+<title>Connecting to remote servers</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -1063,8 +1063,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#prerequisites" id="toc-prerequisites" class="nav-link active" data-scroll-target="#prerequisites">Prerequisites</a></li>
-  <li><a href="#steps-for-linux-including-wsl-and-macos" id="toc-steps-for-linux-including-wsl-and-macos" class="nav-link" data-scroll-target="#steps-for-linux-including-wsl-and-macos">Steps for Linux (including WSL) and macOS</a></li>
+  <li><a href="#connecting-to-a-windows-server" id="toc-connecting-to-a-windows-server" class="nav-link active" data-scroll-target="#connecting-to-a-windows-server">Connecting to a Windows server</a></li>
+  <li><a href="#connecting-to-a-linux-server" id="toc-connecting-to-a-linux-server" class="nav-link" data-scroll-target="#connecting-to-a-linux-server">Connecting to a Linux server</a>
+  <ul class="collapse">
+  <li><a href="#connecting-from-linux-macos-or-the-wsl" id="toc-connecting-from-linux-macos-or-the-wsl" class="nav-link" data-scroll-target="#connecting-from-linux-macos-or-the-wsl">Connecting from Linux, macOS or the WSL</a></li>
+  </ul></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/TU-Delft-DCC/TU-Delft-DCC.github.io/issues/new/choose" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div></nav>
     </div>
@@ -1074,7 +1077,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../docs/infrastructure/getting_started.html"><img src="../../docs/img/gear.svg" style="filter: invert(0.5) sepia(1) saturate(5) hue-rotate(175deg);height:1em"> <strong>Computing Infrastructure</strong></a></li><li class="breadcrumb-item"><a href="../../docs/infrastructure/remote_servers.html">Remote servers</a></li><li class="breadcrumb-item"><a href="../../docs/infrastructure/vps_ssh.html">Server connection</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">Set up SSH tunneling for a VPS</h1>
+<h1 class="title">Connecting to remote servers</h1>
   <div class="quarto-categories">
     <div class="quarto-category">Infrastructure</div>
     <div class="quarto-category">Servers</div>
@@ -1095,14 +1098,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <div>
     <div class="quarto-title-meta-heading">Last reviewed</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">September 3, 2025</p>
+      <p class="date">January 27, 2026</p>
     </div>
   </div>
   
     <div>
     <div class="quarto-title-meta-heading">Last modified</div>
     <div class="quarto-title-meta-contents">
-      <p class="date-modified">December 2, 2025</p>
+      <p class="date-modified">January 27, 2026</p>
     </div>
   </div>
     
@@ -1113,33 +1116,48 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 <script async="" defer="" src="https://scripts.simpleanalyticscdn.com/latest.js"></script>
-<p>This guide explains how to set up a secure, single-step Secure Shell (SSH) connection to a Virtual Private Server (VPS) at TU Delft. SSH is a protocol that allows secure remote access to servers over an unsecured network.</p>
-<p>Commonly, connecting to a VPS requires first accessing a <strong>Bastion Host</strong> (an intermediary server controlling access). Faculty-managed VPS setups at TU Delft can be accessed by two types of bastion hosts: <code>linux-bastion-ex.tudelft.nl</code> having a local /home directory, and <code>linux-bastion.tudelft.nl</code> having access to your own central /home directory. In this sense, <code>linux-bastion-ex.tudelft.nl</code> is a more secure option recommended for the steps below.</p>
-<p>Connecting to a VPS via a bastion host is a two-step process. However, by using SSH tunneling and SSH keys, you will be able to connect directly from your local machine to your VPS. This setup bypasses the need to log in to the bastion host separately, for example, simplifies secure file transfers between your local machine and the VPS.</p>
+<p>This guide provides instructions for establishing a secure connection to your TU Delft Virtual Private Server (VPS). Connection methods vary based on your local operating system and whether your remote server runs Windows or Linux.</p>
+<p>Before you begin, ensure you have the following:</p>
+<ul>
+<li>A valid TU Delft NetID.</li>
+<li>Access to a TU Delft VPS. If you do not have one, follow our <a href="../../docs/infrastructure/vps_request.html">VPS Request</a> guide to request a new server. To access a server owned by a colleague, the owner must contact ICT to grant you permission.</li>
+<li>An SSH or RDP client application. More details are provided below.</li>
+</ul>
 <div class="callout callout-style-simple callout-important no-icon callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Important</span><i class="fa-solid fa-info-circle" aria-label="info-circle"></i> Accessing a VPS
+<span class="screen-reader-only">Important</span><i class="fa-solid fa-info-circle" aria-label="info-circle"></i> Off-Campus Access
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Depending on your geographical location, access to a VPS via SSH may be blocked by the TU Delft firewall. For example, access is usually blocked if you are connecting from your home network. Therefore, before going through the following steps, please check the <a href="https://www.tudelft.nl/en/it-manuals/working-remotely">TU Delft manuals for working remotely</a> for <a href="https://www.tudelft.nl/en/it-manuals/applications/vpn">eduVPN</a> and <a href="https://www.tudelft.nl/ict-handleidingen/linux-bastion-host">bastion host</a>.</p>
+<p>When working off-campus you must be connected to eduVPN to access your VPS. Please refer to the TU Delft manuals for <a href="https://www.tudelft.nl/en/it-manuals/working-remotely">working remotely</a> and <a href="https://www.tudelft.nl/en/it-manuals/applications/vpn">configuring eduVPN</a>.</p>
 </div>
 </div>
-<section id="prerequisites" class="level3">
-<h3 class="anchored" data-anchor-id="prerequisites">Prerequisites</h3>
-<p>Before starting, you need:</p>
+<section id="connecting-to-a-windows-server" class="level2">
+<h2 class="anchored" data-anchor-id="connecting-to-a-windows-server">Connecting to a Windows server</h2>
+<p>The standard method for connecting to a Windows VPS is through a <strong>Remote Desktop Protocol (RDP)</strong> connection. An RDP connection allows you to access the remote machine using a visual “desktop” environment, where you can use your mouse and keyboard just as you would on your local computer.</p>
+<p>To establish this connection, you require a Remote Desktop client on your local computer. The tool you will use depends on your local operating system:</p>
 <ul>
-<li>A TU Delft NetID.</li>
-<li>Access to a VPS provided by TU Delft ICT. Check <a href="../../docs/infrastructure/vps_request.html">this guide</a> for more information on how to request a VPS.</li>
-<li>An SSH client installed on your local machine. This is usually included in most Linux and macOS distributions via a terminal or shell. For Windows, you can use a third-party SSH client like <a href="https://www.putty.org/">PuTTY</a> or a Windows Subsystem for Linux (WSL).</li>
+<li><strong>Windows</strong>: use the built-in Remote Desktop Connection (MSTSC) application and follow the <a href="https://filelist.tudelft.nl/ICT%20Handleidingen/2%20-%20Nieuwe%20handleidingen/Citrix%20Folder/RDP/RDP%20-%20Remote%20Access%20to%20Server%20-%20Windows%20-%20v1.0.pdf">RDP Manual for Windows</a>.</li>
+<li><strong>macOS</strong>: download and install the <a href="https://apps.apple.com/us/app/windows-app/id1295203466?mt=12">Windows App</a> from the Mac App Store and follow the <a href="https://filelist.tudelft.nl/ICT%20Handleidingen/2%20-%20Nieuwe%20handleidingen/Citrix%20Folder/RDP/RDP%20-%20Remote%20Access%20to%20Server%20-%20macOS%20-%20v1.0.pdf">RDP Manual for MacOS</a>.</li>
+<li><strong>Linux</strong>: download and install the Remmina client and follow the <a href="https://filelist.tudelft.nl/ICT%20Handleidingen/2%20-%20Nieuwe%20handleidingen/Citrix%20Folder/RDP/RDP%20-%20Remote%20Access%20to%20Server%20-%20Linux%20-%20v1.0.pdf">RDP Manual for Linux</a>.</li>
 </ul>
 </section>
-<section id="steps-for-linux-including-wsl-and-macos" class="level3">
-<h3 class="anchored" data-anchor-id="steps-for-linux-including-wsl-and-macos">Steps for Linux (including WSL) and macOS</h3>
+<section id="connecting-to-a-linux-server" class="level2">
+<h2 class="anchored" data-anchor-id="connecting-to-a-linux-server">Connecting to a Linux server</h2>
+<p>The standard method for connecting to a Linux VPS is through a Secure Shell (SSH) connection. This creates an encrypted “tunnel” between your computer and the server, allowing you to type commands directly into the remote machine.</p>
+<p>To establish this connection, you require an SSH client on your local computer. The tool you will use depends on the operating system of your local computer:</p>
+<ul>
+<li><strong>macOS and Linux</strong>: You do not need to install additional software. You can use the built-in Terminal application already available on your system.</li>
+<li><strong>Windows</strong>: While modern Windows versions include basic SSH support via cmd or PowerShell, it is often more user-friendly to use a dedicated application. We recommend <a href="https://www.putty.org/">PuTTY</a>. Alternatively, you may use the <a href="https://learn.microsoft.com/en-us/windows/wsl/">Windows Subsystem for Linux (WSL)</a>.</li>
+</ul>
+<p>Connecting to a TU Delft Linux VPS requires first accessing a <a href="https://intranet.tudelft.nl/en/ict-en/linux-bastion-host">Bastion Host</a> (an intermediary server controlling access). VPS can be accessed by two types of bastion hosts: <code>linux-bastion-ex.tudelft.nl</code> which provides a local <code>/home</code> directory, and <code>linux-bastion.tudelft.nl</code> which provides access to your central university <code>/home</code> directory. In this sense, <code>linux-bastion-ex.tudelft.nl</code> is a more secure option and recommended for the steps below.</p>
+<section id="connecting-from-linux-macos-or-the-wsl" class="level3">
+<h3 class="anchored" data-anchor-id="connecting-from-linux-macos-or-the-wsl">Connecting from Linux, macOS or the WSL</h3>
+<p>Connecting to a VPS via a bastion host is typically a two-step process. However, by using <strong>SSH tunneling</strong> and SSH keys, you can establish a connection from your local machine to your VPS in a single step. This simplifies the connection process and makes secure file transfers between your local machine and the VPS much more efficient.</p>
 <div class="callout callout-style-simple callout-tip no-icon callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -1158,13 +1176,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </ol>
 </div>
 </div>
-<section id="set-up-ssh-tunneling" class="level4">
-<h4 class="anchored" data-anchor-id="set-up-ssh-tunneling"><strong>Set up SSH tunneling</strong></h4>
-<ol type="1">
-<li>If you do not have an SSH key-pair, create one on the local machine. Go to the terminal and enter the following command. Replace <code>&lt;my-keyname&gt;</code> with a name of your choice for the SSH key, e.g., <code>id_rsa</code> or <code>id_ed25519</code>.</li>
-</ol>
+<p><strong>1. Create SSH keys</strong></p>
+<p>If you do not have an SSH key-pair, create one on the local machine. Open the terminal and enter the following command. Replace <code>&lt;my-keyname&gt;</code> with a name of your choice for the SSH key, e.g., <code>id_rsa</code> or <code>id_ed25519</code>.</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span>  ssh-keygen <span class="at">-t</span> ed25519 <span class="at">-f</span> ~/.ssh/<span class="op">&lt;</span>my-keyname<span class="op">&gt;</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>You will be prompted to create a <em>passphrase</em>. We recommend you to add one to make the connection more secure. The passphrase will be asked every time you connect to the VPS. To skip the passphrase, press <code>Enter</code> when prompted. You should see something like this:</p>
+<p>You will be prompted to create a <em>passphrase</em>. We recommend you to add one to make the connection more secure. The passphrase will be requested every time you connect to the VPS. To skip the passphrase, press <code>Enter</code> when prompted. You should see something like this:</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ex">Generating</span> public/private ed25519 key pair.</span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="ex">Enter</span> passphrase for <span class="st">"ed25519"</span> <span class="er">(</span><span class="ex">empty</span> for no passphrase<span class="kw">)</span><span class="bu">:</span> </span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="ex">Enter</span> same passphrase again: </span>
@@ -1183,11 +1198,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Important</span><i class="fa-solid fa-info-circle" aria-label="info-circle"></i> Accessing .ssh
+<span class="screen-reader-only">Important</span><i class="fa-solid fa-info-circle" aria-label="info-circle"></i> Accessing <code>.ssh</code>
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p><code>~/</code> in <code>~/.ssh</code> refers to your /home directory. As stated above, this is different for the two bastion hosts at TU Delft. For <code>linux-bastion-ex.tudelft.nl</code>, it refers to the local /home directory of the bastion host, while for <code>linux-bastion.tudelft.nl</code>, it refers to your central /home directory. <code>.</code> in <code>~/.ssh</code> refers to a hidden directory. To view hidden files and directories in the terminal, you can use the command <code>ls -a</code>.</p>
+<p><code>~/</code> in <code>~/.ssh</code> refers to your <code>/home</code> directory. As stated above, this is different for the two bastion hosts at TU Delft. For <code>linux-bastion-ex.tudelft.nl</code>, it refers to the local <code>/home</code> directory of the bastion host, while for <code>linux-bastion.tudelft.nl</code>, it refers to your central <code>/home</code> directory. <code>.</code> in <code>~/.ssh</code> refers to a hidden directory. To view hidden files and directories in the terminal, you can use the command <code>ls -a</code>.</p>
 </div>
 </div>
 <p>The <strong>public key is the file with the <code>.pub</code> extension</strong>, e.g., <code>&lt;my-keyname&gt;.pub</code></p>
@@ -1204,27 +1219,32 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>Similar to passwords, it is advised to rotate your SSH keys regularly (e.g., every 6 months). You can do this by generating a new key pair and replacing the old one on your local machine and VPS.</p>
 </div>
 </div>
-<ol start="2" type="1">
-<li><p>Log in to your VPS and, copy the <strong>content</strong> of your <strong>public key</strong> into the VPS <code>~/.ssh/authorized_keys</code> file. You can achieve this by copying the content of the public key file to the clipboard and pasting it into the <code>authorized_keys</code> file on the VPS. Be mindful not to remove anything from this file, as other SSH connections might stop working. Finally, save the file.</p></li>
-<li><p>Create a new host for SSH connection. On your local machine, edit the <code>~/.ssh/config</code> file and add the following configuration. If the file does not exist, create it.</p></li>
-</ol>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="ex">Host</span> <span class="op">&lt;</span>host-nickname<span class="op">&gt;</span></span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>    <span class="ex">HostName</span> <span class="op">&lt;</span>target-host<span class="op">&gt;</span></span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>    <span class="ex">User</span> <span class="op">&lt;</span>target-username<span class="op">&gt;</span></span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>    <span class="ex">ProxyJump</span> <span class="op">&lt;</span>bastion-username<span class="op">&gt;</span>@linux-bastion-ex.tudelft.nl</span>
-<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>    <span class="ex">IdentityFile</span> ~/.ssh/<span class="op">&lt;</span>my-keyname<span class="op">&gt;</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p><strong>2. Copy SSH keys to bastion host and remote server</strong></p>
+<p>You must “authorize” your key on both the bastion and your VPS. The easiest way to do this is using the <code>ssh-copy-id</code> command:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># First, authorize the key in the bastion host</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="ex">ssh-copy-id</span> <span class="at">-i</span> ~/.ssh/<span class="op">&lt;</span>my-keyname<span class="op">&gt;</span>.pub <span class="op">&lt;</span>netID<span class="op">&gt;</span>@linux-bastion-ex.tudelft.nl</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Second, authorize the key on your VPS (you will go through the bastion)</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="ex">ssh-copy-id</span> <span class="at">-i</span> ~/.ssh/<span class="op">&lt;</span>my-keyname<span class="op">&gt;</span>.pub <span class="at">-o</span> ProxyJump=<span class="op">&lt;</span>netID<span class="op">&gt;</span>@linux-bastion-ex.tudelft.nl <span class="op">&lt;</span>netID<span class="op">&gt;</span>@<span class="op">&lt;</span>vps-address<span class="op">&gt;</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>You will be prompted to enter your password when executing both commands.</p>
+<p><strong>3. Create a new host for SSH connection</strong></p>
+<p>On your local machine, edit the <code>~/.ssh/config</code> file and add the following configuration. If the file does not exist, create it.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="ex">Host</span> <span class="op">&lt;</span>host-nickname<span class="op">&gt;</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>    <span class="ex">HostName</span> <span class="op">&lt;</span>target-host<span class="op">&gt;</span></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>    <span class="ex">User</span> <span class="op">&lt;</span>target-username<span class="op">&gt;</span></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>    <span class="ex">ProxyJump</span> <span class="op">&lt;</span>bastion-username<span class="op">&gt;</span>@linux-bastion-ex.tudelft.nl</span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>    <span class="ex">IdentityFile</span> ~/.ssh/<span class="op">&lt;</span>my-keyname<span class="op">&gt;</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>Replace:</p>
 <ul>
 <li><code>&lt;host-nickname&gt;</code>: a name of your choice for the target host, e.g., <code>my-server</code>.</li>
-<li><code>&lt;target-host&gt;</code>: the actual name of the target host (FQDM), e.g., <code>server.tudelft.nl</code>.</li>
+<li><code>&lt;target-host&gt;</code>: the actual name of the target host (FQDN), e.g., <code>server.tudelft.nl</code>.</li>
 <li><code>&lt;target-username&gt;</code>: the username used to log in to the target host, usually your NetID.</li>
 <li><code>&lt;bastion-username&gt;</code>: the username used to log in to the bastion server (often same as NetID, but keep separate in case it differs).</li>
 <li><code>&lt;my-keyname&gt;</code>: the name of the SSH private key you created, e.g., <code>id_rsa</code>. If your private key is stored in a different location, replace the path accordingly.</li>
 </ul>
-<ol start="4" type="1">
-<li>Test the SSH tunneling connection. Connect to the VPS using <em>SSH tunneling</em> by typing the command below. Use your <em>bastion-password</em> when asked. This is usually the password associated with your NetID.</li>
-</ol>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> ssh <span class="op">&lt;</span>host-nickname<span class="op">&gt;</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p><strong>4. Test the SSH tunneling connection</strong></p>
+<p>Connect to the VPS using <em>SSH tunneling</em> by typing the command below. Use your <em>bastion-password</em> when asked. This is usually the password associated with your NetID.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> ssh <span class="op">&lt;</span>host-nickname<span class="op">&gt;</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>If you encounter problems with the connection, use the debug mode <code>ssh -vvv &lt;host-nickname&gt;</code> to find out what might have gone wrong. This command will provide detailed information about the connection process and can help you troubleshoot any issues.</p>
 
 

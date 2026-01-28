@@ -6,10 +6,10 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="dcterms.date" content="2025-07-09">
-<meta name="description" content="Securely transfer data to and from TU Delft virtual servers using SCP or Citrix.">
+<meta name="dcterms.date" content="2026-01-27">
+<meta name="description" content="Secure data transfer to and from TU Delft virtual servers using scp (Linux) or Network Drives (Windows).">
 
-<title>Moving data to remote servers</title>
+<title>Transferring data to and from remote servers</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -1065,16 +1065,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <ul>
   <li><a href="#linux-servers" id="toc-linux-servers" class="nav-link active" data-scroll-target="#linux-servers">Linux servers</a>
   <ul class="collapse">
-  <li><a href="#prerequisites" id="toc-prerequisites" class="nav-link" data-scroll-target="#prerequisites">Prerequisites</a></li>
-  <li><a href="#moving-data-via-scp" id="toc-moving-data-via-scp" class="nav-link" data-scroll-target="#moving-data-via-scp">Moving data via SCP</a></li>
-  <li><a href="#transferring-files-using-proxyjump" id="toc-transferring-files-using-proxyjump" class="nav-link" data-scroll-target="#transferring-files-using-proxyjump">Transferring files using <code>ProxyJump</code></a></li>
+  <li><a href="#transferring-files-using-proxyjump" id="toc-transferring-files-using-proxyjump" class="nav-link" data-scroll-target="#transferring-files-using-proxyjump">Transferring files using ProxyJump</a></li>
   <li><a href="#transferring-files-using-ssh-tunneling" id="toc-transferring-files-using-ssh-tunneling" class="nav-link" data-scroll-target="#transferring-files-using-ssh-tunneling">Transferring files using SSH tunneling</a></li>
   </ul></li>
-  <li><a href="#windows-servers" id="toc-windows-servers" class="nav-link" data-scroll-target="#windows-servers">Windows servers</a>
-  <ul class="collapse">
-  <li><a href="#transferring-files" id="toc-transferring-files" class="nav-link" data-scroll-target="#transferring-files">Transferring files</a></li>
-  <li><a href="#using-the-clipboard" id="toc-using-the-clipboard" class="nav-link" data-scroll-target="#using-the-clipboard">Using the clipboard</a></li>
-  </ul></li>
+  <li><a href="#windows-servers" id="toc-windows-servers" class="nav-link" data-scroll-target="#windows-servers">Windows servers</a></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/TU-Delft-DCC/TU-Delft-DCC.github.io/issues/new/choose" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div></nav>
     </div>
@@ -1084,13 +1078,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../docs/infrastructure/getting_started.html"><img src="../../docs/img/gear.svg" style="filter: invert(0.5) sepia(1) saturate(5) hue-rotate(175deg);height:1em"> <strong>Computing Infrastructure</strong></a></li><li class="breadcrumb-item"><a href="../../docs/infrastructure/remote_servers.html">Remote servers</a></li><li class="breadcrumb-item"><a href="../../docs/infrastructure/moving_data.html">Data transfer</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">Moving data to remote servers</h1>
+<h1 class="title">Transferring data to and from remote servers</h1>
   <div class="quarto-categories">
     <div class="quarto-category">Infrastructure</div>
     <div class="quarto-category">Data</div>
     <div class="quarto-category">Servers</div>
-    <div class="quarto-category">scp</div>
-    <div class="quarto-category">Citrix</div>
+    <div class="quarto-category">SCP</div>
+    <div class="quarto-category">Network Drives</div>
   </div>
   </div>
 
@@ -1102,14 +1096,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <div>
     <div class="quarto-title-meta-heading">Last reviewed</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">July 9, 2025</p>
+      <p class="date">January 27, 2026</p>
     </div>
   </div>
   
     <div>
     <div class="quarto-title-meta-heading">Last modified</div>
     <div class="quarto-title-meta-contents">
-      <p class="date-modified">September 19, 2025</p>
+      <p class="date-modified">January 27, 2026</p>
     </div>
   </div>
     
@@ -1120,10 +1114,41 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 <script async="" defer="" src="https://scripts.simpleanalyticscdn.com/latest.js"></script>
-<p>This section describes how to transfer data to and from a TU Delft virtual server. The procedure is different depending on whether the server runs a Windows or Linux-based operating system. Although there are many ways to transfer data from one machine to another, TU Delft servers only support a few of them.</p>
+<p>This section describes how to transfer data to and from a TU Delft virtual private server (VPS). Common scenarios in which you might need to transfer data between hosts include uploading scripts, downloading results, or transferring configuration files. The procedure is different depending on whether the server runs a Windows or Linux-based operating system.</p>
+<div class="callout callout-style-simple callout-important no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Important</span><i class="fa-solid fa-info-circle" aria-label="info-circle"></i> Off-Campus Access
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>When working off-campus you must be connected to eduVPN to access your VPS. Please refer to the TU Delft manuals for <a href="https://www.tudelft.nl/en/it-manuals/working-remotely">working remotely</a> and <a href="https://www.tudelft.nl/en/it-manuals/applications/vpn">configuring eduVPN</a>.</p>
+</div>
+</div>
 <section id="linux-servers" class="level2">
 <h2 class="anchored" data-anchor-id="linux-servers">Linux servers</h2>
-<p>The <code>scp</code> command is a secure file transfer utility that allows you to copy files between Linux-based hosts (this includes macOS) on a network. It uses SSH for data transfer, providing the same authentication and security as SSH. Common scenarios in which you might need to transfer data between hosts include uploading scripts, downloading results, or transferring configuration files.</p>
+<p>The <code>scp</code> utility is the standard tool for secure file transfers on Linux and macOS. It uses the Secure Shell (SSH) protocol, which means that if you can connect to a server using <code>ssh</code>, you can also transfer files to and from it using <code>scp</code>.</p>
+<p>The <code>scp</code> command is executed from a command-line interface on your local computer:</p>
+<ul>
+<li><strong>Linux, macOS and WSL</strong>: open the Terminal application</li>
+<li><strong>Windows</strong>: open PowerShell or use the Windows Subsystem for Linux (WSL)</li>
+</ul>
+<p>The general syntax of the <code>scp</code> command is:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Copy TO remote server</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">scp</span> <span class="op">&lt;</span>path-to-local-file<span class="op">&gt;</span> <span class="op">&lt;</span>target-username<span class="op">&gt;</span>@<span class="op">&lt;</span>remote-server<span class="op">&gt;</span>:<span class="op">&lt;</span>full-path/remote-directory<span class="op">&gt;</span>/</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Copy FROM remote server</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="fu">scp</span> <span class="op">&lt;</span>target-username<span class="op">&gt;</span>@<span class="op">&lt;</span>remote-server<span class="op">&gt;</span>:<span class="op">&lt;</span>full-path/remote-file<span class="op">&gt;</span> <span class="op">&lt;</span>path-to-local-directory<span class="op">&gt;</span>/</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p><strong>Connecting via the Bastion Host</strong></p>
+<p>All connections to TU Delft Linux VPS, including data transfers, must be routed through an intermediary server called the Bastion Host. There are two supported ways to route <code>scp</code> connections through the Bastion Host:</p>
+<ol type="1">
+<li><strong>ProxyJump</strong>: explicitly routes each <code>scp</code> command through the bastion host</li>
+<li><strong>SSH tunneling</strong>: uses a pre-configured SSH setup that allows direct access via a host alias</li>
+</ol>
+<p>The following sections describe both approaches.</p>
 <div class="callout callout-style-simple callout-tip no-icon callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -1150,85 +1175,70 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>Notice that <code>scp</code> will overwrite files in the destination directory without prompting if they already exist. Always double-check the paths and filenames to avoid accidental data loss.</p>
 </div>
 </div>
-<section id="prerequisites" class="level3">
-<h3 class="anchored" data-anchor-id="prerequisites">Prerequisites</h3>
-<p>Before starting, you need:</p>
-<ul>
-<li>SCP (Secure Copy Protocol) installed on your local machine. SCP is a command-line utility that allows you to securely transfer files between hosts on a network.</li>
-<li>SSH access to the remote host (e.g., VPS) you want to connect to.</li>
-</ul>
-</section>
-<section id="moving-data-via-scp" class="level3">
-<h3 class="anchored" data-anchor-id="moving-data-via-scp">Moving data via SCP</h3>
-<p>To copy data to and from a remote host using the <code>scp</code> command, you can use the following syntax:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Copy TO Remote Host</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">scp</span> <span class="op">&lt;</span>path-my-local-file<span class="op">&gt;</span> <span class="op">&lt;</span>target-username<span class="op">&gt;</span>@<span class="op">&lt;</span>remote-host<span class="op">&gt;</span>:<span class="op">&lt;</span>full-path/remote-directory<span class="op">&gt;</span>/</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Copy FROM Remote Host</span></span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="fu">scp</span> <span class="op">&lt;</span>target-username<span class="op">&gt;</span>@<span class="op">&lt;</span>remote-host<span class="op">&gt;</span>:<span class="op">&lt;</span>full-path/my-remote-file<span class="op">&gt;</span> <span class="op">&lt;</span>path-my-local-directory<span class="op">&gt;</span>/</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="callout callout-style-simple callout-tip no-icon callout-titled">
+<div class="callout callout-style-simple callout-warning no-icon callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Tip</span><i class="fa-solid fa-lightbulb" aria-label="lightbulb"></i> Moving files to restricted directories
+<span class="screen-reader-only">Warning</span><i class="fa-solid fa-info-circle" aria-label="info-circle"></i> Permissions
 </div>
 </div>
 <div class="callout-body-container callout-body">
 <p>Some directories on the remote host may require elevated permissions to write files. If you encounter a “Permission denied” error, you may need to use <code>sudo</code> to copy files to those directories. However, using <code>scp</code> with <code>sudo</code> directly is not supported. Instead, you can copy the file to a temporary directory <code>/tmp</code> where you have write access and then move it to the desired location using <code>sudo</code> after connecting to the remote host.</p>
 </div>
 </div>
-</section>
 <section id="transferring-files-using-proxyjump" class="level3">
-<h3 class="anchored" data-anchor-id="transferring-files-using-proxyjump">Transferring files using <code>ProxyJump</code></h3>
-<p>In the case of a VPS hosted by TU Delft, you need to copy data to a remote host via a bastion host (an intermediary server). Therefore, you must use the <code>-o</code> option of <code>scp</code> to specify a <code>ProxyJump</code> that will connect to the bastion host first. Alternatively, you can choose to transfer files using <a href="#transferring-files-using-ssh-tunneling">SSH tunneling</a>.</p>
-<section id="transfer-to-remote-host" class="level4">
-<h4 class="anchored" data-anchor-id="transfer-to-remote-host">Transfer to remote host</h4>
+<h3 class="anchored" data-anchor-id="transferring-files-using-proxyjump">Transferring files using ProxyJump</h3>
+<p>When using ProxyJump, the bastion host is specified directly in the <code>scp</code> command via the <code>-o</code> option. This approach requires no prior SSH tunneling configuration and is suitable for occasional file transfers.</p>
+<p><strong>Transfer TO remote server</strong></p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># If using default SSH key name, for example, id_ed25519 or id_rsa</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="fu">scp</span> <span class="at">-o</span> <span class="st">"ProxyJump &lt;bastion-username&gt;@linux-bastion-ex.tudelft.nl"</span> <span class="op">&lt;</span>path-my-local-file<span class="op">&gt;</span> <span class="dt">\ </span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="op">&lt;</span>target-username<span class="op">&gt;</span>@<span class="op">&lt;</span>remote-host<span class="op">&gt;</span>:<span class="op">&lt;</span>full-path/remote-directory<span class="op">&gt;</span>/</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="co"># If using a custom SSH key name, for example, my_custom_key</span></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a><span class="fu">scp</span>  <span class="at">-i</span> <span class="op">&lt;</span>path-to-custom-private-ssh-key<span class="op">&gt;</span> -o <span class="st">"ProxyJump &lt;bastion-username&gt;@linux-bastion-ex.tudelft.nl"</span> <span class="dt">\ </span></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a><span class="op">&lt;</span>path-my-local-file<span class="op">&gt;</span>  <span class="op">&lt;</span>target-username<span class="op">&gt;</span>@<span class="op">&lt;</span>remote-host<span class="op">&gt;</span>:<span class="op">&lt;</span>full-path-remote-directory<span class="op">&gt;</span>/</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p><strong>Transfer FROM remote server</strong></p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># If using default SSH key name, for example, id_ed25519 or id_rsa</span></span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="fu">scp</span> <span class="at">-o</span> <span class="st">"ProxyJump &lt;bastion-username&gt;@linux-bastion-ex.tudelft.nl"</span> <span class="op">&lt;</span>path-my-local-file<span class="op">&gt;</span> <span class="dt">\ </span></span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="op">&lt;</span>target-username<span class="op">&gt;</span>@<span class="op">&lt;</span>remote-host<span class="op">&gt;</span>:<span class="op">&lt;</span>full-path/remote-directory<span class="op">&gt;</span>/</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="fu">scp</span> <span class="at">-o</span> <span class="st">"ProxyJump &lt;bastion-username&gt;@linux-bastion-ex.tudelft.nl"</span> <span class="dt">\ </span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="op">&lt;</span>target-username<span class="op">&gt;</span>@<span class="op">&lt;</span>remote-host<span class="op">&gt;</span>:<span class="op">&lt;</span>full-path-remote-file<span class="op">&gt;</span>/ <span class="op">&lt;</span>path-my-local-directory<span class="op">&gt;</span>/</span>
 <span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="co"># If using a custom SSH key name, for example, my_custom_key</span></span>
-<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a><span class="fu">scp</span>  <span class="at">-i</span> <span class="op">&lt;</span>path-to-custom-private-ssh-key<span class="op">&gt;</span> -o <span class="st">"ProxyJump &lt;bastion-username&gt;@linux-bastion-ex.tudelft.nl"</span> <span class="dt">\ </span></span>
-<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a><span class="op">&lt;</span>path-my-local-file<span class="op">&gt;</span>  <span class="op">&lt;</span>target-username<span class="op">&gt;</span>@<span class="op">&lt;</span>remote-host<span class="op">&gt;</span>:<span class="op">&lt;</span>full-path-remote-directory<span class="op">&gt;</span>/</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</section>
-<section id="transfer-from-remote-host" class="level4">
-<h4 class="anchored" data-anchor-id="transfer-from-remote-host">Transfer from remote host</h4>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># If using default SSH key name, for example, id_ed25519 or id_rsa</span></span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="fu">scp</span> <span class="at">-o</span> <span class="st">"ProxyJump &lt;bastion-username&gt;@linux-bastion-ex.tudelft.nl"</span> <span class="dt">\ </span></span>
-<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="op">&lt;</span>target-username<span class="op">&gt;</span>@<span class="op">&lt;</span>remote-host<span class="op">&gt;</span>:<span class="op">&lt;</span>full-path-remote-file<span class="op">&gt;</span>/ <span class="op">&lt;</span>path-my-local-directory<span class="op">&gt;</span>/</span>
-<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a><span class="co"># If using a custom SSH key name, for example, my_custom_key</span></span>
-<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a><span class="fu">scp</span> <span class="at">-i</span> <span class="op">&lt;</span>path-to-custom-private-ssh-key<span class="op">&gt;</span> -o <span class="st">"ProxyJump &lt;bastion-username&gt;@linux-bastion-ex.tudelft.nl"</span> <span class="dt">\</span></span>
-<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a><span class="op">&lt;</span>target-username<span class="op">&gt;</span>@<span class="op">&lt;</span>remote-host<span class="op">&gt;</span>:<span class="op">&lt;</span>full-path-remote-file<span class="op">&gt;</span>/ <span class="op">&lt;</span>path-my-local-directory<span class="op">&gt;</span>/</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</section>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a><span class="fu">scp</span> <span class="at">-i</span> <span class="op">&lt;</span>path-to-custom-private-ssh-key<span class="op">&gt;</span> -o <span class="st">"ProxyJump &lt;bastion-username&gt;@linux-bastion-ex.tudelft.nl"</span> <span class="dt">\</span></span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a><span class="op">&lt;</span>target-username<span class="op">&gt;</span>@<span class="op">&lt;</span>remote-host<span class="op">&gt;</span>:<span class="op">&lt;</span>full-path-remote-file<span class="op">&gt;</span>/ <span class="op">&lt;</span>path-my-local-directory<span class="op">&gt;</span>/</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 <section id="transferring-files-using-ssh-tunneling" class="level3">
 <h3 class="anchored" data-anchor-id="transferring-files-using-ssh-tunneling">Transferring files using SSH tunneling</h3>
-<p>If <a href="../../docs/infrastructure/vps_ssh.html">SSH tunneling</a> has been configured correctly for the remote host, you can copy files to and from a remote host as follows:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Copy TO remote host</span></span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> <span class="op">&lt;</span>path-my-local-file<span class="op">&gt;</span> <span class="op">&lt;</span>host-nickname<span class="op">&gt;</span>:<span class="op">&lt;</span>full-path-remote-directory<span class="op">&gt;</span>/</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Copy FROM remote host</span></span>
-<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> scp <span class="op">&lt;</span>host-nickname<span class="op">&gt;</span>:<span class="op">&lt;</span>full-path-remote-file<span class="op">&gt;</span>/ <span class="op">&lt;</span>path-my-local-directory<span class="op">&gt;</span>/ </span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>If SSH tunneling has been configured, file transfers can be performed without explicitly referencing the bastion host. This method is recommended for frequent use, as it simplifies commands and reduces repetition.</p>
+<p>Instructions for establishing an SSH connection to a Linux VPS and configuring SSH tunneling are provided in our <a href="../../docs/infrastructure/vps_ssh.html">Server Connection guide</a>.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Copy TO remote server</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> scp <span class="op">&lt;</span>path-to-local-file<span class="op">&gt;</span> <span class="op">&lt;</span>host-nickname<span class="op">&gt;</span>:<span class="op">&lt;</span>full-path-remote-directory<span class="op">&gt;</span>/</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Copy FROM remote server</span></span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> scp <span class="op">&lt;</span>host-nickname<span class="op">&gt;</span>:<span class="op">&lt;</span>full-path-remote-file<span class="op">&gt;</span>/ <span class="op">&lt;</span>path-to-local-directory<span class="op">&gt;</span>/ </span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 </section>
 <section id="windows-servers" class="level2">
 <h2 class="anchored" data-anchor-id="windows-servers">Windows servers</h2>
-<p>Transferring data to and from a TU Delft Windows server is done via the Citrix platform, using the app’s built-in menu shown in the image below.</p>
-<div class="quarto-figure quarto-figure-left">
-<figure class="figure">
-<p><img src="../img/citrix_menu.png" class="img-fluid figure-img"></p>
-<figcaption>Citrix Menu. Buttons from left to right: <em>Download</em>, <em>Upload</em>, <em>Multimonitor</em>, <em>Clipboard</em>, and <em>Settings</em>.</figcaption>
-</figure>
-</div>
-<section id="transferring-files" class="level3">
-<h3 class="anchored" data-anchor-id="transferring-files">Transferring files</h3>
+<p>Transferring data to and from a TU Delft Windows server is most easily managed using TU Delft Network Drives. These drives provide a central storage space that is accessible from both your local machine and your virtual server. There are many different drives which are used for different purposes; refer to the <a href="https://tudelft.topdesk.net/tas/public/ssp/content/detail/service?unid=846ebb16181c43b5836c063a917dd199">Data Storage for Researchers</a> page in TopDesk for more details.</p>
+<p>The process of transferring data to and from your server involves two main stages: mounting the drive locally to “upload” your files, and accessing them once you are logged into the server.</p>
+<p><strong>Step 1: Add network drives to your local computer</strong></p>
+<p>First, you must connect your local computer to the TU Delft network drives:</p>
+<ul>
+<li>For Windows users: follow the <a href="https://tudelft.selfguide.com/instruction/d01933ea-5030-42ce-bf46-08dddbccce29">TU Delft Guide for Windows</a> which shows how to add network drives to your File Explorer.</li>
+<li>For macOS users: follow the <a href="https://tudelft.selfguide.com/instruction/52b28376-51ad-4e80-5dfe-08dde60b89ae">TU Delft Guide for macOS</a> which shows how to access network drives via Finder.</li>
+</ul>
+<p>Once added, you can simply drag and drop files from your computer into the drives.</p>
+<p><strong>Step 2: Access files on the Windows server</strong></p>
+<p>The network drives are configured to mount automatically whenever you log into a TU Delft Windows server.</p>
 <ol type="1">
-<li>Open a web browser and log into your Windows server as usual via the <a href="https://weblogin.tudelft.nl/Citrix/TUDAppsWeb/">Citrix portal</a>.</li>
-<li>Open the Citrix menu located at the center-top of the server window and click on the <em>Upload</em> or <em>Download</em> button, as shown in the image above.</li>
-<li>A pop-up window will open on where you can select the files you wish to transfer to the server.</li>
+<li>Connect to your Windows server as per usual.</li>
+<li>Open File Explorer and navigate to This PC.</li>
+<li>You will see your network drives listed under Network Locations.</li>
+<li>To Upload: Copy files from the network drive and paste them onto the server’s local disk (e.g., the Desktop).</li>
+<li>To Download: Move files from the server into the network drive. They will immediately become available on your local computer via the drive you mounted in Step 1.</li>
 </ol>
-<p>It is not possible to directly transfer files to or from the server’s C: or D: drives. Instead, you upload or download files to your personal TU Delft drive which is connected to the server. Using the Windows File Explorer and standard copy/paste or drag-and-drop operations, you can transfer the data from your personal drive to the server’s C: or D: drives.</p>
 <div class="callout callout-style-simple callout-warning no-icon callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -1239,16 +1249,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>TU Delft Windows servers have a limited amount of disk space in the C: drive. ICT instructs users to install applications and store data in the D: drive of the server to avoid running out of memory. Alternatively, you can use your personal TU Delft drive, which is also connected to the server. More information can be found at the bottom of the <a href="https://tudelft.topdesk.net/tas/public/ssp/content/serviceflow?unid=418c986f186d4934848dc2712039ed34&amp;openedFromService=true">TOPdesk form</a> to request a new VPS.</p>
+<p>TU Delft Windows servers have a limited amount of disk space in the C: drive. ICT instructs users to install applications and store data in the D: drive of the server to avoid running out of storage memory. Alternatively, you can use your personal TU Delft drive, which is also connected to the server. More information can be found at the bottom of the <a href="https://tudelft.topdesk.net/tas/public/ssp/content/serviceflow?unid=418c986f186d4934848dc2712039ed34&amp;openedFromService=true">TOPdesk form</a> to request a new VPS.</p>
 </div>
 </div>
-</section>
-<section id="using-the-clipboard" class="level3">
-<h3 class="anchored" data-anchor-id="using-the-clipboard">Using the clipboard</h3>
-<p>TU Delft Windows servers do not allow to directly copy or paste text from the clipboard. Instead, you must use Citrix’s clipboard functionality. To do so, open the Citrix’s menu located at the center-top of the window and click on the <em>Clipboard</em> button. A pop-up window will open on which you can copy or paste the text you wish to transfer. Note that it is only possible to transfer text via the clipboard; images or files are not supported.</p>
 
 
-</section>
 </section>
 
 </main> <!-- /main -->
