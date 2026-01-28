@@ -147,10 +147,10 @@ You must "authorize" your key on both the bastion and your VPS. The easiest way 
 
 ```bash
 # First, authorize the key in the bastion host
-ssh-copy-id -i ~/.ssh/<my-keyname> <netID>@linux-bastion-ex.tudelft.nl
+ssh-copy-id -i ~/.ssh/<my-keyname>.pub <netID>@linux-bastion-ex.tudelft.nl
 
 # Second, authorize the key on your VPS (you will go through the bastion)
-ssh-copy-id -i ~/.ssh/<my-keyname> -o ProxyJump=<netID>@linux-bastion-ex.tudelft.nl <netID>@<vps-address>
+ssh-copy-id -i ~/.ssh/<my-keyname>.pub -o ProxyJump=<netID>@linux-bastion-ex.tudelft.nl <netID>@<vps-address>
 ```
 
 You will be prompted to enter your password when executing both commands.
