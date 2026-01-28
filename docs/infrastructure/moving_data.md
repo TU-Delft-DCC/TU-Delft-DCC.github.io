@@ -138,7 +138,7 @@ Instructions for establishing an SSH connection to a Linux VPS and configuring S
 
 ```bash
 # Copy TO remote server
-$ <path-to-local-file> <host-nickname>:<full-path-remote-directory>/
+$ scp <path-to-local-file> <host-nickname>:<full-path-remote-directory>/
 
 # Copy FROM remote server
 $ scp <host-nickname>:<full-path-remote-file>/ <path-to-local-directory>/ 
