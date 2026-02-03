@@ -47,27 +47,15 @@ categories:
  - GitLab
  - CI/CD
 
+css: style.css
 ---
 
-## Background
+## Introduction
 With the continuous method of software development, you continuously build, test, and deploy iterative code changes. This iterative process helps reduce the chance that you develop new code based on buggy or failed previous versions. With this method, you strive to have less human intervention or even no intervention at all, from the development of new code until its deployment.
 
-### Purpose of this guide
 With this guide, you will create a Continuous Integration Pipeline on a repository within the [TU Delft GitLab](https://gitlab.tudelft.nl) to use a MATLAB environment.
 
-## Prerequisites
-
-- TU Delft NetID
-- MATLAB account
-- Basic knowledge of Linux (for setting up a server)
-- Basic knowledge of Docker (for creating a custom MATLAB image)
-- Know which MATLAB version and toolboxes you want to use in the CI/CD pipeline
-
-:::{.callout-tip appearance="simple" icon="false"}
-## {{< fa lightbulb >}} Tip
-To learn more about Docker containers, please look at the [Reproducible Computational Environments Using Docker lesson](https://carpentries-incubator.github.io/docker-introduction/) from the Software Carpentries or our general guide on setting up [GitLab runners with Docker](./gitlab_docker.md).
-:::
-
+:::{.callout-note appearance="simple" icon="false" collapse="true"}
 ## Glossary of terms
 **CI/CD pipeline**  
 _A CI/CD pipeline automates your software delivery process. The pipeline builds code, runs tests (Continuous Intergation), and safely deploys a new version of the application (Continuous Delivery)._
@@ -80,29 +68,43 @@ _Runners are the agents that run the CI/CD jobs that come from GitLab. When you 
 
 **GitLab jobs**  
 _Pipeline configuration begins with jobs. Jobs are the most fundamental element of a `.gitlab-ci.yml` file. Each job is executed by a GitLab runner. See GitLab documentation for more [info](https://docs.gitlab.com/ee/ci/jobs/)._
+:::
 
-## Steps
-1. Request a TU Delft Virtual Private Server
-1. Set up a GitLab runner
-1. Create a Docker image with a custom MATLAB installation
-1. Create a GitLab runner
-1. Register a GitLab runner
-1. Obtain a MATLAB license file
-1. Configure the CI/CD pipeline
-1. Add a job to test the pipeline
-1. Optional: Updating the MATLAB version
+#### Prerequisites
+- TU Delft NetID
+- MATLAB account
+- Basic knowledge of Linux (for setting up a server)
+- Basic knowledge of Docker (for creating a custom MATLAB image)
+- Know which MATLAB version and toolboxes you want to use in the CI/CD pipeline
 
-### Step 1. Request a TU Delft VPS
-If you want to work with the TU Delft GitLab instance and you want to implement CI/CD pipelines, then you need to install a GitLab runner on your own. Runners are the agents that run the CI/CD jobs that come from GitLab. Currently, the TU Delft instance does not provide this feature out-of-the-box. Therefore, we need a separate (virtual) server to run the GitLab runners and execute the jobs in the CI/CD pipeline.
+#### Steps
+:::{.callout .steps}
+- [Step 1. Request a TU Delft Virtual Private Server](#step-1.-request-a-tu-delft-vps)
+- [Step 2. Set up a GitLab runner](#step-2.-set-up-a-gitlab-runner)
+- [Step 3. Create a Docker image with a custom MATLAB installation](#step-3.-create-a-docker-image-containing-a-custom-matlab-installation)
+- [Step 4. Create a GitLab runner](#step-4.-create-the-gitlab-runner)
+- [Step 5. Register a GitLab runner](#step-5.-register-the-matlab-runner)
+- [Step 6. Obtain a MATLAB license file](#step-6.-obtain-a-matlab-license-file)
+- [Step 7. Configure the CI/CD pipeline](#step-7.-configure-the-cicd-pipeline-on-gitlab)
+- [Step 8. Add a job to test the pipeline](#step-8.-add-a-job-to-test-the-pipeline)
+- [Step 9. (Optional) Update the MATLAB version](#step-9.-optional-updating-the-matlab-version)
+:::
+
+
+## Step 1. Request a TU Delft VPS
+The TU Delft GitLab instance does not have runners available by default. To set up a runner for the repository, we need to deploy one on a separate (virtual) server in order to execute the jobs in the CI/CD pipeline. In order to accomodate the size of MATLAB, ensure to request **50Gb of disk space** (the MATLAB installation in this guide requires ~10 Gb, but this depends on the size of the installed addons).
 
 The TU Delft offers Virtual Private Servers (VPS) for researchers through the [TopDesk selfservice portal](https://tudelft.topdesk.net/tas/public/ssp/content/serviceflow?unid=418c986f186d4934848dc2712039ed34). If you don't have a VPS already, please follow this guide to [request a Virtual Private Server](../../../infrastructure/vps_request.md).
 
-**VPS requirements**
 
-- 50Gb disk space (the MATLAB installation in this guide requires ~10 Gb, but this depends on the size of the installed addons)
 
-### Step 2. Set up a GitLab runner
+## Step 2. Set up a GitLab runner
 To set up a GitLab runner on the VPS, please follow this [guide for setting up GitLab runners](./gitlab_docker.md).
+
+:::{.callout-tip appearance="simple" icon="false"}
+## {{< fa lightbulb >}} Tip
+To learn more about Docker containers, please look at the [Reproducible Computational Environments Using Docker lesson](https://carpentries-incubator.github.io/docker-introduction/) from the Software Carpentries or our general guide on setting up [GitLab runners with Docker](./gitlab_docker.md).
+:::
 
 In summary, the steps are:
 
@@ -191,7 +193,7 @@ In summary, the steps are:
     sudo docker ps -a
     ```    
 
-### Step 3. Create a Docker image containing a custom MATLAB installation
+## Step 3. Create a Docker image containing a custom MATLAB installation
 In order for a GitLab runner to execute MATLAB code, it needs to be able to access a container with MATLAB installed. The aim of this step is to create a Docker image with MATLAB installation that can be used by a GitLab runner. By building our own Docker image, we can specify the MATLAB version and customize the installed toolboxes.
 
 :::{.callout-note appearance="simple" icon="false"}
@@ -201,8 +203,8 @@ We have looked into using the Docker images developed by [Mathworks](https://hub
 
 This Dockerfile is based on MATLAB's [Dockerfile template](https://github.com/mathworks-ref-arch/matlab-dockerfile). We will make the following modifications to this template:
 
-- set `bash` as the default run command (GitLab runners need to access a shell)
-- add additional MATLAB products with the flag `--products`. In this example, we have added the Parallel Computing Toolbox and the Mapping Toolbox.
+1. set `bash` as the default run command (GitLab runners need to access a shell)
+2. add additional MATLAB products with the flag `--products`. In this example, we have added the Parallel Computing Toolbox and the Mapping Toolbox.
 
 In your user folder on the VPS (/home/username), create a file called `Dockerfile`
 
@@ -279,7 +281,7 @@ This image is now available locally on the VPS.
 You can also [upload your Docker image to Dockerhub](https://docs.docker.com/engine/reference/commandline/push/) and have it available from there. This removes the need to build the image on the VPS as it can be pulled directly from DockerHub.
 :::
 
-### Step 4. Create the GitLab runner
+## Step 4. Create the GitLab runner
 
 You can find the required gitlab-ci token in your GitLab repository under **Settings -> CI/CD -> Runners**. 
 
@@ -368,7 +370,7 @@ shutdown_timeout = 0
 ```
 :::
 
-### Step 6. Obtain a MATLAB license file
+## Step 6. Obtain a MATLAB license file
 Every TU Delft employee has access to an Individual MATLAB license. Normally, you would activate MATLAB only once after installation through an online activation step. However, this does not work for a Docker container as it is relaunched for each CI trigger. 
 
 The following steps for activating MATLAB on an offline machine are adapted from the [MATLAB Forum](https://nl.mathworks.com/matlabcentral/answers/259627-how-do-i-activate-matlab-or-other-mathworks-products-without-an-internet-connection):
@@ -403,7 +405,7 @@ The MATLAB license is created for a specific user. In the Docker container, we w
 7. Download the `license.lic` file and save it to your local machine.
 
 
-### Step 7. Configure the CI/CD pipeline on GitLab
+## Step 7. Configure the CI/CD pipeline on GitLab
 Before we can run a CI job, we need to configure the license in our GitLab repository. Having the license available as a GitLab variable allows us to renew it without having to change the MATLAB image.
 
 :::{.callout-warning appearance="simple" collapse=true}
@@ -426,7 +428,7 @@ Under **Settings -> CI/CD -> Variables**, scroll down to **Project variables** a
 - Key: `MATLAB_LICENSE`
 - Value: Paste the content of the downloaded `license.lic` file here
 
-### Step 8. Add a job to test the pipeline
+## Step 8. Add a job to test the pipeline
 To test the pipeline, add the following content to `.gitlab-ci.yml` via **CI/CD -> Editor** in your repository. 
 
 ```yaml
@@ -453,7 +455,7 @@ After committing, the pipeline should run and execute the job `check_matlab`. Yo
 
 If all went well, you have successfully setup a GitLab runner to run MATLAB code. Congrats! 
 
-### Step 9. Optional: Updating the MATLAB version
+### Step 9. Optional: Update the MATLAB version
 If you need to update the MATLAB version of the Docker container, you will need to go through the following steps:
 
 1. Update the MATLAB version in the Dockerfile

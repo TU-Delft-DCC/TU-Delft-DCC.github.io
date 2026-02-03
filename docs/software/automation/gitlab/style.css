@@ -1,0 +1,43 @@
+.callout.steps {
+  border: none;
+  box-shadow: none;
+  background-color: #d9f0f6;
+}
+.callout.steps .callout-body {
+  font-size: 1rem;
+}
+.callout.steps ul {
+  list-style: none;
+  padding-left: 0;
+}
+.callout.steps li::before {
+  content: "❯ "; /* Font Awesome chevron-right */
+  font-family: "Font Awesome 6 Free";
+  margin-right: .4em;
+  color: #222222;
+}
+.callout.steps ul li:hover {
+  background-color: #f7faff; /* lighter tile color */
+  border-radius: 4px;        /* optional: soften edges */
+}
+.callout.steps ul li:hover::before {
+  color: #222222; /* change chevron color on hover */
+  font-weight: 900;
+}
+
+/* DARK MODE ------------------------------------------------------------ */
+body.quarto-dark .callout.steps {
+    background-color: #0a3a48;
+}
+body.quarto-dark .callout.steps ul li {
+    color: #e0e8eb;
+}
+body.quarto-dark .callout.steps ul li::before {
+    color: #8fc4e8
+}
+body.quarto-dark .callout.steps ul li:hover {
+    background-color: #12495b;
+}
+body.quarto-dark .callout.steps ul li:hover::before {
+    color: #4fb3ff;
+}
