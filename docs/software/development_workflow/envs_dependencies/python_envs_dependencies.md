@@ -182,54 +182,106 @@ Consider using tools that offer more sophisticated dependency management by inte
 
 #### **Using `uv` for environments and dependencies**
 
-Besides the aforementioned tools, `uv` is becoming increasingly adopted because it manages project dependencies and environments (much like Poetry), provides Python version management, and a lockfile in **one tool**, and is considerably faster. It can replace `pip`, `virtualenv`, `pyenv`, and `pip‑tools`, and others in day‑to‑day workflows.
+Besides the aforementioned tools, `uv` is becoming increasingly adopted because it provides fast, reproducible Python dependency management built around `pyproject.toml` and a lockfile (`uv.lock`), and can create and manage virtual environments as well as download and select Python versions.
 
-Instead of relying on a `requirements.txt` file (as with `pip`), `uv` maintains a `uv.lock` lockfile that records the fully resolved dependency graph.
+In practice, `uv` can replace `pip`, and often `virtualenv`, while also covering much of what tools like Poetry are used for but with a **clearer separation of responsibilities**. 
 
+::: {.callout-tip icon="false"}
+## {{< fa lightbulb >}} `uv` excels at Python-level dependencies
+
+- `uv` does not replace system or distribution-level package managers (such as `conda`, `apt`, or `brew`)
+- It is best suited for managing Python-level dependencies on top of an existing Python interpreter
+- The python interpreter can come from the system, a virtual environment, or a `conda` environment
+:::
+
+Getting started with `uv`:
+- `uv` manages Python dependencies, not your operating system or system libraries. Before starting, decide who owns the Python interpreter in your project:
+
+1. Use `venv + uv`
+Use this when all dependencies are available from PyPI wheels
+
+- Create a new project
 ```bash
-# Create/refresh uv.lock
-uv lock                   
-# Install only what is in the lock
-uv sync --locked
-```
-
-You can also work with an existing `requirements.txt` file with `uv`. Or export the dependencies to a `requirements.txt` file.
-
-```bash
-# Does not remove extra packages already in the env
-uv pip install -r requirements.txt
-
-# Prunes extra packages in your env to match the file exactly
-uv pip sync requirements.txt
-
-# Export the dependencies
-uv export --format requirements-txt -o requirements.txt
-```
-
-You can migrate a project to `pyproject.toml` (import from requirements).
-
-```bash
-uv add -r requirements.txt
-uv add --dev -r requirements-dev.txt
-```
-
-A typical workflow to set up an environment to run Jupyter notebooks.
-```bash
-# Scaffold a new project, create pyproject.toml
+mkdir my_project
+cd my_project
 uv init
-
-# Pin your python version                            
-uv python pin 3.12
-
-# Add notebook dependencies to the project
-uv add --dev ipykernel jupyterlab
-
-# Resolve dependencies and install them exactly
-uv lock && uv sync --locked
-
-# Launch a Jupyter notebook from the project env
-uv run --with jupyter jupyter lab
 ```
+- Create a virtual environment
+```bash
+uv env --python 3.12 --seed
+```
+Now you should have a `.venv/` directory and `pip` installed into it
+
+- Add dependencies
+```bash
+uv add numpy pandas
+```
+The command above will update the `pyproject.toml` file, install packages into `.venv` and create a lockfile `uv.lock`
+
+- Run commands inside the environment
+```bash
+uv run python script.py
+uv run pytest
+```
+
+Activating the virtual environment is optional, since the commands with `uv` are by default run inside the environment.
+```bash
+source .venv/bin/activate
+```
+
+2. `conda + uv`
+Use this when you need non-Python libraries managed by `conda`
+
+- Create and activate a `conda` environment
+```bash
+conda create -n myenv python=3.12
+conda activate myenv
+```
+
+- Install `uv` into the `conda` environment (unless you already have `uv` installed system-wide)
+```bash
+conda install -c conda-forge uv
+```
+
+- Initialize the project
+```bash
+uv init
+```
+
+- Add dependencies
+```bash
+uv add numpy pandas
+```
+
+This time, packages will be installed into the active `conda` environment
+
+- Recreate the environment later
+```bash
+uv sync
+```
+
+This installs exactly what is declared in `pyproject.toml` and `uv.lock`
+
+::: {.callout-tip icon="false"}
+## {{< fa lightbulb >}} Some useful commands to make the most out of `uv`
+
+- `uv add --dev <package>`: add a development dependency
+- `uv pip list`: list installed Python pacakges
+- `uv pip tree`: show dependency tree
+- `uv run <command>`: run a command in the environment
+:::
+
+- What if you already have a `requirements.txt` file?
+  - You can migrate your project to `uv` in a straightforward manner and have `pyproject.toml` and `uv.lock` to become the core pieces to reproduce
+  ```bash
+  # Initialize uv
+  uv init
+
+  # Add everything from requirements.txt
+  uv add -r requirements.txt
+  ```
+  - After running the above commands, you should have a `pyproject.toml` file with the dependencies, where the versions are resolved and everything is installed into the environment
+  - With your `uv.lock` file, the `requirements.txt` file becomes obsolete. You can still keep it around for reference, but ideally you stop updating it manually
 
 :::{.callout-note appearance="simple" icon="false"}
 ## {{< fa signs-post >}} Learn more
