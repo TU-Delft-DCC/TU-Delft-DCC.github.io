@@ -272,7 +272,7 @@ This installs exactly what is declared in `pyproject.toml` and `uv.lock`
 
 #### **What if you already have a `requirements.txt` file?**
 
-- You can migrate your project to `uv` in a straightforward manner aso that `pyproject.toml` and `uv.lock` become the core pieces for reproducing your environment
+- You can migrate your project to `uv` in a straightforward manner so that `pyproject.toml` and `uv.lock` become the core pieces for reproducing your environment
 
 ```bash
 # Initialize uv
