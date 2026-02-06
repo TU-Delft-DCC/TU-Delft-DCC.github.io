@@ -265,7 +265,7 @@ This installs exactly what is declared in `pyproject.toml` and `uv.lock`
 ## {{< fa lightbulb >}} Some useful commands to make the most out of `uv`
 
 - `uv add --dev <package>`: add a development dependency
-- `uv pip list`: list installed Python pacakges
+- `uv pip list`: list installed Python packages
 - `uv pip tree`: show dependency tree
 - `uv run <command>`: run a command in the environment
 :::
