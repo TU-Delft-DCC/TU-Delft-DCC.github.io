@@ -271,16 +271,19 @@ This installs exactly what is declared in `pyproject.toml` and `uv.lock`
 :::
 
 #### **What if you already have a `requirements.txt` file?**
-  - You can migrate your project to `uv` in a straightforward manner and have `pyproject.toml` and `uv.lock` to become the core pieces to reproduce
-  ```bash
-  # Initialize uv
-  uv init
 
-  # Add everything from requirements.txt
-  uv add -r requirements.txt
-  ```
-  - After running the above commands, you should have a `pyproject.toml` file with the dependencies, where the versions are resolved and everything is installed into the environment
-  - With your `uv.lock` file, the `requirements.txt` file becomes obsolete. You can still keep it around for reference, but ideally you stop updating it manually
+- You can migrate your project to `uv` in a straightforward manner aso that `pyproject.toml` and `uv.lock` become the core pieces for reproducing your environment
+
+```bash
+# Initialize uv
+uv init
+
+# Add everything from requirements.txt
+uv add -r requirements.txt
+```
+
+- After running the above commands, you should have a `pyproject.toml` file with the dependencies, where the versions are resolved and everything is installed into the environment
+- With your `uv.lock` file, the `requirements.txt` file becomes obsolete. You can still keep it around for reference, but ideally you stop updating it manually
 
 :::{.callout-note appearance="simple" icon="false"}
 ## {{< fa signs-post >}} Learn more
