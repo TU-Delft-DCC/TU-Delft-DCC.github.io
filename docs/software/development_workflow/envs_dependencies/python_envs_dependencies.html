@@ -1256,39 +1256,114 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 <section id="using-uv-for-environments-and-dependencies" class="level4">
 <h4 class="anchored" data-anchor-id="using-uv-for-environments-and-dependencies"><strong>Using <code>uv</code> for environments and dependencies</strong></h4>
-<p>Besides the aforementioned tools, <code>uv</code> is becoming increasingly adopted because it manages project dependencies and environments (much like Poetry), provides Python version management, and a lockfile in <strong>one tool</strong>, and is considerably faster. It can replace <code>pip</code>, <code>virtualenv</code>, <code>pyenv</code>, and <code>pip‑tools</code>, and others in day‑to‑day workflows.</p>
-<p>Instead of relying on a <code>requirements.txt</code> file (as with <code>pip</code>), <code>uv</code> maintains a <code>uv.lock</code> lockfile that records the fully resolved dependency graph.</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Create/refresh uv.lock</span></span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="ex">uv</span> lock                   </span>
-<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Install only what is in the lock</span></span>
-<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a><span class="ex">uv</span> sync <span class="at">--locked</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>You can also work with an existing <code>requirements.txt</code> file with <code>uv</code>. Or export the dependencies to a <code>requirements.txt</code> file.</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Does not remove extra packages already in the env</span></span>
-<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="ex">uv</span> pip install <span class="at">-r</span> requirements.txt</span>
-<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Prunes extra packages in your env to match the file exactly</span></span>
-<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a><span class="ex">uv</span> pip sync requirements.txt</span>
-<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Export the dependencies</span></span>
-<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a><span class="ex">uv</span> export <span class="at">--format</span> requirements-txt <span class="at">-o</span> requirements.txt</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>You can migrate a project to <code>pyproject.toml</code> (import from requirements).</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="ex">uv</span> add <span class="at">-r</span> requirements.txt</span>
-<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="ex">uv</span> add <span class="at">--dev</span> <span class="at">-r</span> requirements-dev.txt</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>A typical workflow to set up an environment to run Jupyter notebooks.</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb8"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Scaffold a new project, create pyproject.toml</span></span>
-<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="ex">uv</span> init</span>
-<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Pin your python version                            </span></span>
-<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a><span class="ex">uv</span> python pin 3.12</span>
-<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Add notebook dependencies to the project</span></span>
-<span id="cb8-8"><a href="#cb8-8" aria-hidden="true" tabindex="-1"></a><span class="ex">uv</span> add <span class="at">--dev</span> ipykernel jupyterlab</span>
-<span id="cb8-9"><a href="#cb8-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-10"><a href="#cb8-10" aria-hidden="true" tabindex="-1"></a><span class="co"># Resolve dependencies and install them exactly</span></span>
-<span id="cb8-11"><a href="#cb8-11" aria-hidden="true" tabindex="-1"></a><span class="ex">uv</span> lock <span class="kw">&amp;&amp;</span> <span class="ex">uv</span> sync <span class="at">--locked</span></span>
-<span id="cb8-12"><a href="#cb8-12" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-13"><a href="#cb8-13" aria-hidden="true" tabindex="-1"></a><span class="co"># Launch a Jupyter notebook from the project env</span></span>
-<span id="cb8-14"><a href="#cb8-14" aria-hidden="true" tabindex="-1"></a><span class="ex">uv</span> run <span class="at">--with</span> jupyter jupyter lab</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Besides the aforementioned tools, <code>uv</code> is becoming increasingly adopted because it provides fast, reproducible Python dependency management built around <code>pyproject.toml</code> and a lockfile (<code>uv.lock</code>), and can create and manage virtual environments as well as download and select Python versions.</p>
+<p>In practice, <code>uv</code> can replace <code>pip</code>, and often <code>virtualenv</code>, while also covering much of what tools like Poetry are used for but with a <strong>clearer separation of responsibilities</strong>.</p>
+<div class="callout callout-style-simple callout-tip no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span><i class="fa-solid fa-lightbulb" aria-label="lightbulb"></i> <code>uv</code> excels at Python-level dependencies
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul>
+<li><code>uv</code> does not replace system or distribution-level package managers (such as <code>conda</code>, <code>apt</code>, or <code>brew</code>)</li>
+<li>It is best suited for managing Python-level dependencies on top of an existing Python interpreter</li>
+<li>The Python interpreter can come from the system, a virtual environment, or a <code>conda</code> environment</li>
+</ul>
+</div>
+</div>
+</section>
+<section id="getting-started-with-uv" class="level4">
+<h4 class="anchored" data-anchor-id="getting-started-with-uv"><strong>Getting started with <code>uv</code></strong></h4>
+<p><code>uv</code> manages Python dependencies, not your operating system or system libraries. Before starting, decide where your Python interpreter comes from in your project:</p>
+<ol type="1">
+<li><strong>Use <code>venv + uv</code>. Use this when all dependencies are available from PyPI wheels</strong></li>
+</ol>
+<ul>
+<li>Create a new project</li>
+</ul>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">mkdir</span> my_project</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> my_project</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="ex">uv</span> init</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<ul>
+<li>Create a virtual environment</li>
+</ul>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="ex">uv</span> venv <span class="at">--python</span> 3.12 <span class="at">--seed</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Now you should have a <code>.venv/</code> directory and <code>pip</code> installed into it</p>
+<ul>
+<li>Add dependencies</li>
+</ul>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="ex">uv</span> add numpy pandas</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>The command above will update the <code>pyproject.toml</code> file, install packages into <code>.venv</code>, and create a lockfile <code>uv.lock</code></p>
+<ul>
+<li>Run commands inside the environment</li>
+</ul>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb8"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="ex">uv</span> run python script.py</span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="ex">uv</span> run pytest</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Activating the virtual environment is optional, since the commands with <code>uv</code> are by default run inside the environment.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb9"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="bu">source</span> .venv/bin/activate</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<ol start="2" type="1">
+<li><strong>Use <code>conda + uv</code>. Use this when you need non-Python libraries managed by <code>conda</code></strong></li>
+</ol>
+<ul>
+<li>Create and activate a <code>conda</code> environment</li>
+</ul>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb10"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="ex">conda</span> create <span class="at">-n</span> myenv python=3.12</span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="ex">conda</span> activate myenv</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<ul>
+<li>Install <code>uv</code> into the <code>conda</code> environment (unless you already have <code>uv</code> installed system-wide)</li>
+</ul>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb11"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="ex">conda</span> install <span class="at">-c</span> conda-forge uv</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<ul>
+<li>Initialize the project</li>
+</ul>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb12"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="ex">uv</span> init</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<ul>
+<li>Add dependencies</li>
+</ul>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb13"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="ex">uv</span> add numpy pandas</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>This time, packages will be installed into the active <code>conda</code> environment</p>
+<ul>
+<li>Recreate the environment later</li>
+</ul>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb14"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="ex">uv</span> sync</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>This installs exactly what is declared in <code>pyproject.toml</code> and <code>uv.lock</code></p>
+<div class="callout callout-style-simple callout-tip no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span><i class="fa-solid fa-lightbulb" aria-label="lightbulb"></i> Some useful commands to make the most out of <code>uv</code>
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul>
+<li><code>uv add --dev &lt;package&gt;</code>: add a development dependency</li>
+<li><code>uv pip list</code>: list installed Python packages</li>
+<li><code>uv pip tree</code>: show dependency tree</li>
+<li><code>uv run &lt;command&gt;</code>: run a command in the environment</li>
+</ul>
+</div>
+</div>
+</section>
+<section id="what-if-you-already-have-a-requirements.txt-file" class="level4">
+<h4 class="anchored" data-anchor-id="what-if-you-already-have-a-requirements.txt-file"><strong>What if you already have a <code>requirements.txt</code> file?</strong></h4>
+<ul>
+<li>You can migrate your project to <code>uv</code> in a straightforward manner so that <code>pyproject.toml</code> and <code>uv.lock</code> become the core pieces for reproducing your environment</li>
+</ul>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb15"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Initialize uv</span></span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a><span class="ex">uv</span> init</span>
+<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Add everything from requirements.txt</span></span>
+<span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a><span class="ex">uv</span> add <span class="at">-r</span> requirements.txt</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<ul>
+<li>After running the above commands, you should have a <code>pyproject.toml</code> file with the dependencies, where the versions are resolved and everything is installed into the environment</li>
+<li>With your <code>uv.lock</code> file, the <code>requirements.txt</code> file becomes obsolete. You can still keep it around for reference, but ideally you stop updating it manually</li>
+</ul>
 <div class="callout callout-style-simple callout-note no-icon callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
