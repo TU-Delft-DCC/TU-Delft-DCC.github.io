@@ -191,14 +191,14 @@ In practice, `uv` can replace `pip`, and often `virtualenv`, while also covering
 
 - `uv` does not replace system or distribution-level package managers (such as `conda`, `apt`, or `brew`)
 - It is best suited for managing Python-level dependencies on top of an existing Python interpreter
-- The python interpreter can come from the system, a virtual environment, or a `conda` environment
+- The Python interpreter can come from the system, a virtual environment, or a `conda` environment
 :::
 
-Getting started with `uv`:
-- `uv` manages Python dependencies, not your operating system or system libraries. Before starting, decide who owns the Python interpreter in your project:
+#### **Getting started with `uv`**
 
-1. Use `venv + uv`
-Use this when all dependencies are available from PyPI wheels
+`uv` manages Python dependencies, not your operating system or system libraries. Before starting, decide who owns the Python interpreter in your project:
+
+1. **Use `venv + uv`. Use this when all dependencies are available from PyPI wheels**
 
 - Create a new project
 ```bash
@@ -229,8 +229,7 @@ Activating the virtual environment is optional, since the commands with `uv` are
 source .venv/bin/activate
 ```
 
-2. `conda + uv`
-Use this when you need non-Python libraries managed by `conda`
+2. **Use `conda + uv`. Use this when you need non-Python libraries managed by `conda`**
 
 - Create and activate a `conda` environment
 ```bash
@@ -271,7 +270,7 @@ This installs exactly what is declared in `pyproject.toml` and `uv.lock`
 - `uv run <command>`: run a command in the environment
 :::
 
-- What if you already have a `requirements.txt` file?
+#### **What if you already have a `requirements.txt` file?**
   - You can migrate your project to `uv` in a straightforward manner and have `pyproject.toml` and `uv.lock` to become the core pieces to reproduce
   ```bash
   # Initialize uv
