@@ -196,7 +196,7 @@ In practice, `uv` can replace `pip`, and often `virtualenv`, while also covering
 
 #### **Getting started with `uv`**
 
-`uv` manages Python dependencies, not your operating system or system libraries. Before starting, decide who owns the Python interpreter in your project:
+`uv` manages Python dependencies, not your operating system or system libraries. Before starting, decide where your Python interpreter comes from in your project:
 
 1. **Use `venv + uv`. Use this when all dependencies are available from PyPI wheels**
 
