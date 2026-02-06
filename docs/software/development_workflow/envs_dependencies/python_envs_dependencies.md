@@ -216,7 +216,7 @@ Now you should have a `.venv/` directory and `pip` installed into it
 ```bash
 uv add numpy pandas
 ```
-The command above will update the `pyproject.toml` file, install packages into `.venv` and create a lockfile `uv.lock`
+The command above will update the `pyproject.toml` file, install packages into `.venv`, and create a lockfile `uv.lock`
 
 - Run commands inside the environment
 ```bash
