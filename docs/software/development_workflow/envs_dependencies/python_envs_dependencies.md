@@ -208,7 +208,7 @@ uv init
 ```
 - Create a virtual environment
 ```bash
-uv env --python 3.12 --seed
+uv venv --python 3.12 --seed
 ```
 Now you should have a `.venv/` directory and `pip` installed into it
 
