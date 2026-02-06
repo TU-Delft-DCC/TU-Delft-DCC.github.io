@@ -186,7 +186,7 @@ Besides the aforementioned tools, `uv` is becoming increasingly adopted because 
 
 In practice, `uv` can replace `pip`, and often `virtualenv`, while also covering much of what tools like Poetry are used for but with a **clearer separation of responsibilities**. 
 
-::: {.callout-tip icon="false"}
+::: {.callout-tip appearance="simple" icon="false"}
 ## {{< fa lightbulb >}} `uv` excels at Python-level dependencies
 
 - `uv` does not replace system or distribution-level package managers (such as `conda`, `apt`, or `brew`)
@@ -261,7 +261,7 @@ uv sync
 
 This installs exactly what is declared in `pyproject.toml` and `uv.lock`
 
-::: {.callout-tip icon="false"}
+::: {.callout-tip appearance="simple" icon="false"}
 ## {{< fa lightbulb >}} Some useful commands to make the most out of `uv`
 
 - `uv add --dev <package>`: add a development dependency
