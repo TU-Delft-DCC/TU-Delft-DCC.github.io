@@ -1,0 +1,98 @@
+---
+# Insert this YAML header (including the opening and closing ---) at the beginning of the document and fill it out accordingly
+
+# We use this key to indicate the last reviewed date [manual entry, use YYYY-MM-DD]
+# Uncomment and populate the next line accordingly
+date: 2025-12-14
+
+# We use this key to indicate the last modified date [manual entry, use YYYY-MM-DD]
+# Uncomment and populate the next line accordingly
+date-modified: 2025-12-14
+
+# Do not modify
+lang: en
+language: 
+  title-block-published: "Last reviewed"
+  title-block-modified: "Last modified"
+
+# Title of the document [manual entry]
+# Uncomment and populate the next line accordingly
+title: About Research Support at TU Delft
+
+# Brief overview of the document (will be used in listings) [manual entry]
+# Uncomment and populate the next line and uncomment "hide-description: true".
+#description: Short description of the document
+#hide-description: true
+
+# Authors of the document, will not be parsed [manual entry]
+# Uncomment and populate the next lines accordingly
+author_1: Aysun Urhan
+
+# Maintainers of the document, will not be parsed [manual entry]
+# Uncomment and populate the next lines accordingly
+#maintainer_1: Name Surname
+#maintainer_2:
+
+# To whom reach out regarding the document, will not be parsed [manual entry]
+# Uncomment and populate the next line accordingly
+#corresponding: Name Surname
+
+# Meaningful keywords, newline separated [manual entry]
+# Uncomment and populate the next line and list accordingly
+#categories: 
+
+
+---
+
+### What is Research Software Engineering?
+
+Research Software Engineering (RSE) refers to the practices and roles that ensure research software is:
+
+- correct and reliable,
+- reusable and maintainable,
+- documented and reproducible,
+- FAIR and openly shareable where possible.
+
+RSE work is not limited to people with “RSE” in their job title; many support roles perform RSE tasks as part of their work.
+
+::: {.grid}
+::: {.g-col-12 .g-col-md-6}
+#### Software-focused support
+- Developing and maintaining research code
+- Improving workflows and automation
+- Introducing testing and CI
+:::
+
+::: {.g-col-12 .g-col-md-6}
+#### Reproducibility & sustainability
+- Packaging and environment management
+- Documentation and onboarding
+- Long-term maintenance considerations
+:::
+
+::: {.g-col-12 .g-col-md-6}
+#### Advisory & coordination
+- Translating research needs into technical solutions
+- Aligning software, data, and infrastructure practices
+- Supporting interdisciplinary teams
+:::
+
+::: {.g-col-12 .g-col-md-6}
+#### Training
+- Training researchers and colleagues
+- Developing templates and guidance
+- Scaling good practices across projects
+:::
+:::
+
+### How success is measured
+
+Across support roles, success often looks like:
+- reduced friction in research workflows,
+- fewer recurring technical issues,
+- easier onboarding for new contributors,
+- improved reproducibility and transparency.
+
+::: callout-important
+If your work makes research easier for the next person, you are creating long-term value.
+:::
