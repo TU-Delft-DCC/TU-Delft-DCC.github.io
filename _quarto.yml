@@ -54,26 +54,12 @@ website:
     logo: docs/img/tud/logo_white_crop.png
     collapse-below: lg # It determines at which screen size the navbar should collapse into a mobile-friendly format (typically a hamburger menu)
     right:
-      # - href: index.md
-      #   text: Overview
       - href: index.md
         text: <ins>Guides</ins>
       - href: docs/resources/courses.md
         text: <ins>Courses and Workshops</ins>
-      - text: <ins>TU Delft Support Staff Onboarding</ins>
-        menu: 
-          - href: docs/tud-support/index.md
-            text: Getting started
-          - href: docs/tud-support/about.qmd
-            text: About TU Delft Research Support
-          - href: docs/tud-support/contacts.qmd
-            text: Contacts & Support Landscape
-          - href: docs/tud-support/learning.qmd
-            text: Learning & Training
-          - href: docs/tud-support/soft_skills.qmd
-            text: Soft Skills for Research Support
-      # - href: docs/listing.md
-      #   text: References
+      - href: docs/tud-support/index.md
+        text: Staff Onboarding
       - text: Community
         menu:
           - text: Contributing
@@ -82,11 +68,27 @@ website:
             href: CODE_OF_CONDUCT.md
           - text: About the DCC
             href: https://www.tudelft.nl/digital-competence-centre
-    # tools:
-    #   - icon: github
-    #     href: https://github.com/TU-Delft-DCC/TU-Delft-DCC.github.io/
-    #     text: DCC GitHub
+    tools:
+      - icon: github
+        href: https://github.com/TU-Delft-DCC/TU-Delft-DCC.github.io/
+        text: DCC GitHub
+
   sidebar:
+    - title: "Onboarding"
+      style: "docked"
+      collapse-level: 2
+      align: left
+      contents:
+        - text: Getting started
+          href: docs/tud-support/index.md
+        - text: About TU Delft Research Support
+          href: docs/tud-support/about.qmd
+        - text: Contacts & Support Landscape
+          href: docs/tud-support/contacts.qmd
+        - text: Learning & Training
+          href: docs/tud-support/learning.qmd
+        - text: Soft Skills for Research Support
+          href: docs/tud-support/soft_skills.qmd
     - title: "Guides"
       style: "docked"
       collapse-level: 2
