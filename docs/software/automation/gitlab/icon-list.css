@@ -1,17 +1,17 @@
 /* GitHub Docs–style numbered circles */
-.github-steps ol {
+.icon-list ol {
   counter-reset: step-counter;
   padding-left: 2.2rem;
 }
 
-.github-steps ol > li {
+.icon-list ol > li {
   position: relative;
   list-style: none;
   margin: 1rem 0;
   counter-increment: step-counter;
 }
 
-.github-steps ol > li::before {
+.icon-list ol > li::before {
   content: counter(step-counter);
   position: absolute;
   left: -2.2rem;
@@ -26,4 +26,17 @@
   text-align: center;
   line-height: 1.6rem;
   font-size: 0.9rem;
+}
+
+
+/* Restart numbering for nested ordered lists inside the same block */
+.icon-list ol ol {
+  counter-reset: step-counter;
+}
+
+
+/* DARK MODE ------------------------------------------------------------ */
+body.quarto-dark .icon-list ol > li::before {
+  background-color: #b58900;
+  color: #0a0c10; /* or #ffffff */
 }

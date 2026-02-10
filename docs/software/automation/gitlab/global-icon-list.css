@@ -1,25 +1,27 @@
-/* Global GitHub-style numbered circles for all ordered lists */
-ol {
+/* Style all ordered lists except TOC, breadcrumbs, and footnotes */
+:where(main, .quarto-article)
+  ol:not(nav[role="doc-toc"] ol):not(.breadcrumb):not(.footnotes ol) {
   counter-reset: step-counter;
-  padding-left: 2.2rem; /* create space for circles */
-  list-style: none;     /* hide default numbers */
+  padding-left: 2.2rem;
+  list-style: none;
 }
 
-ol > li {
+:where(main, .quarto-article)
+  ol:not(nav[role="doc-toc"] ol):not(.breadcrumb):not(.footnotes ol) > li {
   position: relative;
   margin: 1rem 0;
   counter-increment: step-counter;
 }
 
-ol > li::before {
+:where(main, .quarto-article)
+  ol:not(nav[role="doc-toc"] ol):not(.breadcrumb):not(.footnotes ol) > li::before {
   content: counter(step-counter);
   position: absolute;
   left: -2.2rem;
   top: -0.08rem;
   width: 1.6rem;
   height: 1.6rem;
-
-  background-color: #0969da; /* GitHub blue */
+  background-color: #0076C2;
   color: #fff;
   border-radius: 50%;
   font-weight: 600;
@@ -28,14 +30,21 @@ ol > li::before {
   font-size: 0.9rem;
 }
 
-/* Restart counter for nested lists.
-   Remove this if you want continuous numbering across levels. */
-ol ol {
+/* Reset counters for nested lists */
+:where(main, .quarto-article) ol ol {
   counter-reset: step-counter;
 }
 
-/* Optional: opt out on a specific list */
-ol.no-steps,
-ol.no-steps > li {
+/* Optional opt-out */
+:where(main, .quarto-article) ol.no-steps,
+:where(main, .quarto-article) ol.no-steps > li {
   all: revert;
+}
+
+/* DARK MODE ------------------------------------------------------------ */
+/* Must match the exact same selector structure */
+body.quarto-dark :where(main, .quarto-article)
+  ol:not(nav[role="doc-toc"] ol):not(.breadcrumb):not(.footnotes ol) > li::before {
+  background-color: #b58900;
+  color: #0a0c10; /* or #ffffff */
 }
