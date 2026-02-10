@@ -1,0 +1,41 @@
+/* Global GitHub-style numbered circles for all ordered lists */
+ol {
+  counter-reset: step-counter;
+  padding-left: 2.2rem; /* create space for circles */
+  list-style: none;     /* hide default numbers */
+}
+
+ol > li {
+  position: relative;
+  margin: 1rem 0;
+  counter-increment: step-counter;
+}
+
+ol > li::before {
+  content: counter(step-counter);
+  position: absolute;
+  left: -2.2rem;
+  top: -0.08rem;
+  width: 1.6rem;
+  height: 1.6rem;
+
+  background-color: #0969da; /* GitHub blue */
+  color: #fff;
+  border-radius: 50%;
+  font-weight: 600;
+  text-align: center;
+  line-height: 1.6rem;
+  font-size: 0.9rem;
+}
+
+/* Restart counter for nested lists.
+   Remove this if you want continuous numbering across levels. */
+ol ol {
+  counter-reset: step-counter;
+}
+
+/* Optional: opt out on a specific list */
+ol.no-steps,
+ol.no-steps > li {
+  all: revert;
+}

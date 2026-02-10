@@ -47,7 +47,9 @@ categories:
  - GitLab
  - CI/CD
 
-css: steps-style.css
+css: 
+  - steps-style.css
+  - global-icon-list.css
 ---
 
 ## Introduction
@@ -89,6 +91,7 @@ _Pipeline configuration begins with jobs. Jobs are the most fundamental element 
 - [Step 9. (Optional) Update the MATLAB version](#step-9.-optional-update-the-matlab-version)
 :::
 
+
 ## Step 1. Request a TU Delft VPS
 The TU Delft GitLab instance does not have runners available by default. To set up a runner for the repository, we need to deploy one on a separate (virtual) server in order to execute the jobs in the CI/CD pipeline. In order to accomodate the size of MATLAB, ensure to request **50Gb of disk space** (the MATLAB installation in this guide requires ~10 Gb, but this depends on the size of the installed addons).
 
@@ -99,6 +102,7 @@ To set up a GitLab runner on the VPS, please follow this [guide for setting up G
 
 :::{.callout-tip appearance="simple" icon="false"}
 ## {{< fa lightbulb >}} Tip
+
 For a general introduction into Docker containers, have a look at the [Reproducible Computational Environments Using Docker lesson](https://carpentries-incubator.github.io/docker-introduction/) from the Software Carpentries.
 :::
 
@@ -109,19 +113,70 @@ In summary, the steps are:
     ```bash
     sudo apt install docker.io
     ```
+
 2. Verify installation with  
 
     ```bash 
     sudo docker --version
     ```
-3. _Optional: Move default storage location to larger drive_  
-    If the file space in the Docker Root directory is not adequate, we must relocate the Docker Root. 
 
-:::{.callout-note appearance="simple" icon="false" collapse=true}
+3. Optional: Move default storage location to larger drive  
 
-  {{< include _docker_root.md >}}
+   :::{.callout-note appearance="simple" collapse="true"}
+   ## Relocate docker root
+ 
+   1. Stop the Docker services:
+    
+        ```bash
+        sudo systemctl stop docker
+        sudo systemctl stop docker.socket
+        sudo systemctl stop containerd
+        ```
 
-:::
+    2. Create the necessary directory structure into which to move Docker root by running the following command. In this example, we will move the Docker root to `/data/docker`:  
+
+        ```bash
+        sudo mkdir -p /data/docker
+        ```
+
+    3. Move the existing Docker data into the new directory structure:
+
+        ```bash
+        sudo mv /var/lib/docker/* /data/docker/
+        ```
+
+    4. Edit the file `/etc/docker/daemon.json`. If the file does not exist, create the file with the following command:
+
+        ```bash
+        sudo nano /etc/docker/daemon.json
+        ```
+        Add the following content to the file and save the file:
+
+        ```json
+        {
+          "data-root": "/data/docker"
+        }
+        ```
+
+    5. Restart the Docker services:
+
+        ```bash
+        sudo systemctl start docker   
+        ```
+        After you run the command, all Docker services through dependency management will be started automatically.
+
+    6. Validate the new Docker root location
+
+        ```bash
+        sudo docker info -f '{{.DockerRootDir}}'
+        ```
+        The output should be similar to the following, indicating that the Docker root directory has been successfully relocated:
+
+        ```
+        /data/docker
+        ```
+ 
+   :::
 
 4. Deploy the gitlab-runner with
 
@@ -131,17 +186,20 @@ In summary, the steps are:
     -v /var/run/docker.sock:/var/run/docker.sock \
     gitlab/gitlab-runner:latest
     ```
+
 5. Verify deployment with  
 
     ```bash
     sudo docker ps -a
     ```    
 
+
 ## Step 3. Create a Docker image containing a custom MATLAB installation
 In order for a GitLab runner to execute MATLAB code, it needs to be able to access a container with MATLAB installed. The aim of this step is to create a Docker image with MATLAB installation that can be used by a GitLab runner. By building our own Docker image, we can specify the MATLAB version and customize the installed toolboxes.
 
 :::{.callout-note appearance="simple" icon="false"}
 ## {{< fa info-circle >}} Note
+
 We have looked into using the Docker images developed by [Mathworks](https://hub.docker.com/r/mathworks). When running these images, you are prompted to supply your MATLAB's account username and password to activate the instance. Although it is possible to create a new image from such an activated container and use it on the VPS, we have so far not been able to get this solution working with GitLab runners. We thus rely on downloading a license file (step 6) and storing it as a Variable in the GitLab repository (step 7).
 :::
 
@@ -151,40 +209,89 @@ The Dockerfile below is based on MATLAB's [MATLAB Dockerfile 2021](https://githu
 - Set `bash` as the default run command (GitLab runners need to access a shell)
 - Add additional MATLAB products with the flag `--products`. In this example, we have added the `Parallel Computing Toolbox` and the `Mapping Toolbox`.
 
+
 1. In your user folder on the VPS (/home/username), create a file called `Dockerfile`
 
-  ```bash
-  sudo nano Dockerfile
-  ```
+    ```bash
+    sudo nano Dockerfile
+    ```
+
 2. Copy the content below in the Dockerfile. 
 
-::: {.callout-note collapse=true appearance="simple" icon="false"}
-{{< include _matlab_dockerfile.md >}}
-:::
+   :::{.callout-note collapse=true appearance="simple" icon="false"}
+   ## {{< fa info-circle >}} Dockerfile for custom MATLAB image
 
-:::{.callout-tip appearance="simple" icon="false"}
-## {{< fa lightbulb >}} Tip
-This example uses MATLAB `r2025b` and includes the `Parallel Computing Toolbox` and the `Mapping Toolbox`. For a list of available product names, see [here](https://github.com/mathworks-ref-arch/matlab-dockerfile/tree/main/mpm-input-files).
-:::
+    <pre>
+    # Copyright 2019 - 2021 The MathWorks, Inc.
+
+    # To specify which MATLAB release to install in the container, edit the value of the MATLAB_RELEASE argument.
+    # Use lower case to specify the release, for example: ARG MATLAB_RELEASE=r2020a
+    <b><mark>ARG MATLAB_RELEASE=r2025b</mark></b>
+
+    # When you start the build stage, this Dockerfile by default uses the Ubuntu-based matlab-deps image.
+    # To check the available matlab-deps images, see: https://hub.docker.com/r/mathworks/matlab-deps
+    FROM mathworks/matlab-deps:${MATLAB_RELEASE}
+
+    # Declare the global argument to use at the current build stage
+    ARG MATLAB_RELEASE
+
+    # Install mpm dependencies
+    RUN export DEBIAN_FRONTEND=noninteractive && apt-get update && \
+        apt-get install --no-install-recommends --yes \
+        wget \
+        unzip \
+        ca-certificates && \
+        apt-get clean && apt-get autoremove
+
+    # Run mpm to install MATLAB in the target location and delete the mpm installation afterwards
+    RUN wget -q https://www.mathworks.com/mpm/glnxa64/mpm && \ 
+        chmod +x mpm && \
+        ./mpm install \
+        --release=${MATLAB_RELEASE} \
+        --destination=/opt/matlab \
+        <b><mark>--products MATLAB Parallel_Computing_Toolbox Mapping_Toolbox && \</mark></b>
+        rm -f mpm /tmp/mathworks_root.log && \
+        ln -s /opt/matlab/bin/matlab /usr/local/bin/matlab
+
+    # Add "matlab" user and grant sudo permission.
+    RUN adduser --shell /bin/bash --disabled-password --gecos "" matlab && \
+        echo "matlab ALL=(ALL) NOPASSWD: ALL" > /etc/sudoers.d/matlab && \
+        chmod 0440 /etc/sudoers.d/matlab
+
+    # Set user and work directory
+    USER matlab
+    WORKDIR /home/matlab
+    <b><mark>CMD ["bash"]</mark></b>
+    </pre>
+
+   :::
+
+   :::{.callout-tip appearance="simple" icon="false"}
+   ## {{< fa lightbulb >}} Tip
+
+   This example uses MATLAB `r2025b` and includes the `Parallel Computing Toolbox` and the `Mapping Toolbox`. For a list of available product names, see [here](https://github.com/mathworks-ref-arch/matlab-dockerfile/tree/main/mpm-input-files).
+
+   :::
 
 3. To build a Docker image with the name `matlab-gitlab` and the version reference `r2025b`, run the following command in the folder containing the Dockerfile:
 
-  ```bash
-  sudo docker build . -t matlab-gitlab:r2025b
-  ```
+    ```bash
+    sudo docker build . -t matlab-gitlab:r2025b
+    ```
 
-  You can verify the presence of the image with
+    You can verify the presence of the image with
 
-  ```bash
-  sudo docker images
-  ```
+    ```bash
+    sudo docker images
+    ```
 
-This image is now available locally on the VPS. 
+    This image is now available locally on the VPS. 
 
-:::{.callout-tip appearance="simple" icon="false"}
-## {{< fa lightbulb >}} Tip
-You can also [upload your Docker image to Dockerhub](https://docs.docker.com/engine/reference/commandline/push/) and have it available from there. This removes the need to build the image on the VPS as it can be pulled directly from DockerHub.
-:::
+   :::{.callout-tip appearance="simple" icon="false"}
+   ## {{< fa lightbulb >}} Tip
+
+   You can also [upload your Docker image to Dockerhub](https://docs.docker.com/engine/reference/commandline/push/) and have it available from there. This removes the need to build the image on the VPS as it can be pulled directly from DockerHub.
+   :::
 
 ## Step 4. Create the GitLab runner
 You can find the required gitlab-ci token in your GitLab repository under **Settings -> CI/CD -> Runners**. 
