@@ -210,7 +210,7 @@ To start, open PuTTY and enter the connection details for the Bastion Host:
 
 **2. Configure automatic login to your VPS**
 
-In the left-hand sidebar, navigate to "Connection > SSH". Locate the "Remote command" text box and enter `ssh -t <netid>@<vps-address>`. With this configuration, PuTTY first connects to the bastion host and then automatically starts an SSH session to your VPS.
+In the left-hand sidebar, navigate to "Connection > SSH". Locate the "Remote command" text box and enter `ssh -t <netID>@<vps-address>`. With this configuration, PuTTY first connects to the bastion host and then automatically starts an SSH session to your VPS.
 
 ![](../img/putty_command.png)
 
