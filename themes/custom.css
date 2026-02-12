@@ -60,3 +60,77 @@
   margin-bottom: 0.2rem;
   color: rgb(84, 85, 85);
 }
+
+/* Button Styling */
+.goto-btn {
+    background-color: #00A6D6;
+    color: white;
+    text-align: center;
+    padding: 12px 24px;    
+    border-radius: 5px;
+    font-size: 1rem;
+    text-decoration: none;
+    display: inline-block;
+    margin-left: 0;
+    border-radius: 24px 24px 0px 24px;
+}
+
+.goto-btn:hover {
+  background-color: #0C2340;           
+  color: #fdf6e3;
+  border-radius: 24px;
+}
+
+body.quarto-dark .goto-btn {
+  background-color: #BA8E23;          /* Solar accent */
+  color: #222;                        /* Contrast text */
+}
+
+body.quarto-dark .goto-btn:hover {
+  background-color: #555;             /* Dark hover */
+  color: #fdf6e3;
+}
+
+.callout.steps {
+  border: none;
+  box-shadow: none;
+  background-color: #d9f0f6;
+}
+.callout.steps .callout-body {
+  font-size: 1rem;
+}
+.callout.steps ul {
+  list-style: none;
+  padding-left: 0;
+}
+.callout.steps li::before {
+  content: "❯ "; /* Font Awesome chevron-right */
+  font-family: "Font Awesome 6 Free";
+  margin-right: .4em;
+  color: #222222;
+}
+.callout.steps ul li:hover {
+  background-color: #f7faff; /* lighter tile color */
+  border-radius: 4px;        /* optional: soften edges */
+}
+.callout.steps ul li:hover::before {
+  color: #222222; /* change chevron color on hover */
+  font-weight: 900;
+}
+
+/* DARK MODE ------------------------------------------------------------ */
+body.quarto-dark .callout.steps {
+    background-color: #0a3a48;
+}
+body.quarto-dark .callout.steps ul li {
+    color: #e0e8eb;
+}
+body.quarto-dark .callout.steps ul li::before {
+    color: #8fc4e8
+}
+body.quarto-dark .callout.steps ul li:hover {
+    background-color: #12495b;
+}
+body.quarto-dark .callout.steps ul li:hover::before {
+    color: #4fb3ff;
+}
