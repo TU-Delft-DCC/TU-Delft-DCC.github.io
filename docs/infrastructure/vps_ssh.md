@@ -88,10 +88,22 @@ To establish this connection, you require an SSH client on your local computer. 
 
 Connecting to a TU Delft Linux VPS requires first accessing a [Bastion Host](https://intranet.tudelft.nl/en/ict-en/linux-bastion-host) (an intermediary server controlling access). VPS can be accessed by two types of bastion hosts: `linux-bastion-ex.tudelft.nl` which provides a local `/home` directory, and `linux-bastion.tudelft.nl` which provides access to your central university `/home` directory. In this sense, `linux-bastion-ex.tudelft.nl` is a more secure option and recommended for the steps below. 
 
+Access from the bastion to your VPS is via SSH keys. When you request a Linux VPS, ICT pre-configures SSH keys between `linux-bastion-ex.tudelft.nl` and your new VPS. This means that once you are on the bastion, you can connect to your VPS using ssh <netID>@<vps-address>.
 
 ### Connecting from Linux, macOS or the WSL
 
-Connecting to a VPS via a bastion host is typically a two-step process. However, by using **SSH tunneling** and SSH keys, you can establish a connection from your local machine to your VPS in a single step. This simplifies the connection process and makes secure file transfers between your local machine and the VPS much more efficient.
+To connect to your VPS, open the terminal and enter the following command:
+
+```bash
+ ssh -t <netID>@linux-bastion-ex.tudelft.nl "ssh <netID>@<vps-address>"
+```
+
+This command will first connect you to the bastion host and then immediately initiate a second SSH connection to your VPS. You will be prompted to enter your TU Delft netID password to connect to the bastion. Because ICT has already configured the SSH keys between the bastion and your VPS, the bastion will use this key to log you in directly to your VPS.
+
+#### **SSH Tunneling**
+
+While the command above is useful for quick terminal access, SSH tunneling streamlines the connection by creating a direct path to your VPS. Once configured, you won't need to manually pass through the bastion every time; your local computer will handle the "jump" in the background. This is specially helpful for simplified data transfers via the `scp` command.
+
 
 :::{.callout-tip appearance="simple" icon="false"}
 ## {{< fa lightbulb >}} Summary of steps
@@ -149,11 +161,19 @@ You must "authorize" your key on both the bastion and your VPS. The easiest way 
 # First, authorize the key in the bastion host
 ssh-copy-id -i ~/.ssh/<my-keyname>.pub <netID>@linux-bastion-ex.tudelft.nl
 
-# Second, authorize the key on your VPS (you will go through the bastion)
-ssh-copy-id -i ~/.ssh/<my-keyname>.pub -o ProxyJump=<netID>@linux-bastion-ex.tudelft.nl <netID>@<vps-address>
+# Second, authorize the key on your VPS:
+# 1. Copy the key to the bastion
+scp ~/.ssh/<my-keyname>.pub <netID>@linux-bastion-ex.tudelft.nl:~/localkey.pub
+# 2. Connect to the bastion
+ssh <netID>@linux-bastion-ex.tudelft.nl
+# 3. Authorize key on the VPS
+ssh-copy-id -f -i ~/localkey.pub <netID>@<vps-address>
+# 4. Delete temporary file and logout from the bastion
+rm ~/localkey.pub
+logout
 ```
 
-You will be prompted to enter your password when executing both commands.
+You will be prompted to enter your TU Delft netID password during both steps.
 
 **3. Create a new host for SSH connection** 
 
@@ -186,3 +206,30 @@ $ ssh <host-nickname>
 
 If you encounter problems with the connection, use the debug mode `ssh -vvv <host-nickname>` to find out what might have gone wrong. This command will provide detailed information about the connection process and can help you troubleshoot any issues.
 
+### Connecting from Windows
+
+Connecting to your Linux VPS from Windows can be easily done using [PuTTY](https://www.putty.org/). The intermediate connection to the bastion is handled via a "remote command". This setup allows you to authenticate once with the bastion and land directly in your VPS.
+
+**1. Configure the Bastion connection**  
+
+To start, open PuTTY and enter the connection details for the Bastion Host:
+
+* **Host Name**: `<netID>@linux-bastion-ex.tudelft.nl`
+* **Port**: `22`
+* **Connection type**: `SSH`
+
+![](../img/putty_session.png)
+
+**2. Configure automatic login to your VPS**
+
+In the left-hand sidebar, navigate to "Connection > SSH". Locate the "Remote command" text box and enter `ssh -t <netID>@<vps-address>`. With this configuration, PuTTY first connects to the bastion host and then automatically starts an SSH session to your VPS.
+
+![](../img/putty_command.png)
+
+**3. Optional: save the session**
+
+Save the session details to avoid re-entering these settings each time you connect to your VPS. To do so, navigate back to "Session" on the left-hand sidebar and enter a name under "Saved Sessions", for example "TU Delft VPS". Click Save.
+
+**4. Connect**
+
+Click "Open" at the bottom of the window to start the connection. You will be prompted for your TU Delft password. The first time you connect you may see a host key warning. Verify the host and accept it to continue.
