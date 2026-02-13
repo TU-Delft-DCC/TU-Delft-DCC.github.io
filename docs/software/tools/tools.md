@@ -3,11 +3,11 @@
 
 # We use this key to indicate the last reviewed date [manual entry, use YYYY-MM-DD]
 # Uncomment and populate the next line accordingly
-date: 2025-03-20
+#date: YYYY-MM-DD
 
 # We use this key to indicate the last modified date [manual entry, use YYYY-MM-DD]
 # Uncomment and populate the next line accordingly
-date-modified: 2025-09-19
+#date-modified: YYYY-MM-DD
 
 # Do not modify
 lang: en
@@ -17,17 +17,17 @@ language:
 
 # Title of the document [manual entry]
 # Uncomment and populate the next line accordingly
-title: Packaging, releases and archiving
+title: Tooling
 
 # Brief overview of the document (will be used in listings) [manual entry]
 # Uncomment and populate the next line and uncomment "hide-description: true".
-description: Overview of packaging, releasing, and archiving research software
+#description: Short description of the document
 #hide-description: true
 
 # Authors of the document, will not be parsed [manual entry]
 # Uncomment and populate the next lines accordingly
-author_1: Elviss Dvinskis
-author_2: Maurits Kok
+#author_1: Name Surname
+#author_2:
 
 # Maintainers of the document, will not be parsed [manual entry]
 # Uncomment and populate the next lines accordingly
@@ -40,45 +40,9 @@ author_2: Maurits Kok
 
 # Meaningful keywords, newline separated [manual entry]
 # Uncomment and populate the next line and list accordingly
-categories:
-  - Software
-  - Package
-  - Release
-  - Archive
+#categories: 
+# - 
+# - 
 
 ---
-
-Eventually your software will be at a sharable and publishable point. One way to distribute your software is to package it and release it on a platform like PyPI (Python Package Index), or CRAN (Comprehensive R Archive Network). Additionally, you want to archive your software for long-term preservation in repositories like Zenodo or 4TU.
-
-::: {.content-block}
-::: {.features}
-
-::: {.feature}
-### {{< fa box-open >}} Packaging
-Package your software.
-
-::: {.learn-more}
-[Learn more »](./packaging/packaging.md)
-:::
-:::
-
-::: {.feature}
-### {{< fa box >}} Releases
-Publish your software.
-
-::: {.learn-more}
-[Learn more »](./releases/releases.md)
-:::
-:::
-
-::: {.feature}
-### {{< fa box-archive >}} Archiving
-Archive your software.
-
-::: {.learn-more}
-[Learn more »](./archiving.md)
-:::
-:::
-
-:::
-:::
+🏗️ Under construction!
