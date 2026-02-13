@@ -82,9 +82,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="../../site_libs/quarto-html/quarto-syntax-highlighting-1d5e050edb13250d4f64432100cad504.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-9f63569fccaa7f60ebae5bbb4b4d3d13.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../../site_libs/bootstrap/bootstrap-dark-b87838516fd491c7318cc311eb8edcd8.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="../../site_libs/bootstrap/bootstrap-9f63569fccaa7f60ebae5bbb4b4d3d13.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-d68843bf984bad7ccdec13bae8068b2b.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-dark-0d6df155cc0ddd3bf2df0fb95ff2c699.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../../site_libs/bootstrap/bootstrap-d68843bf984bad7ccdec13bae8068b2b.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script src="../../site_libs/quarto-contrib/iconify-2.1.0/iconify-icon.min.js"></script>
 <link href="../../site_libs/quarto-contrib/fontawesome6-1.2.0/all.min.css" rel="stylesheet">
 <link href="../../site_libs/quarto-contrib/fontawesome6-1.2.0/latex-fontsize.css" rel="stylesheet">
@@ -1067,6 +1067,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#connecting-to-a-linux-server" id="toc-connecting-to-a-linux-server" class="nav-link" data-scroll-target="#connecting-to-a-linux-server">Connecting to a Linux server</a>
   <ul class="collapse">
   <li><a href="#connecting-from-linux-macos-or-the-wsl" id="toc-connecting-from-linux-macos-or-the-wsl" class="nav-link" data-scroll-target="#connecting-from-linux-macos-or-the-wsl">Connecting from Linux, macOS or the WSL</a></li>
+  <li><a href="#connecting-from-windows" id="toc-connecting-from-windows" class="nav-link" data-scroll-target="#connecting-from-windows">Connecting from Windows</a></li>
   </ul></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/TU-Delft-DCC/TU-Delft-DCC.github.io/issues/new/choose" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div></nav>
@@ -1155,9 +1156,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li><strong>Windows</strong>: While modern Windows versions include basic SSH support via cmd or PowerShell, it is often more user-friendly to use a dedicated application. We recommend <a href="https://www.putty.org/">PuTTY</a>. Alternatively, you may use the <a href="https://learn.microsoft.com/en-us/windows/wsl/">Windows Subsystem for Linux (WSL)</a>.</li>
 </ul>
 <p>Connecting to a TU Delft Linux VPS requires first accessing a <a href="https://intranet.tudelft.nl/en/ict-en/linux-bastion-host">Bastion Host</a> (an intermediary server controlling access). VPS can be accessed by two types of bastion hosts: <code>linux-bastion-ex.tudelft.nl</code> which provides a local <code>/home</code> directory, and <code>linux-bastion.tudelft.nl</code> which provides access to your central university <code>/home</code> directory. In this sense, <code>linux-bastion-ex.tudelft.nl</code> is a more secure option and recommended for the steps below.</p>
+<p>Access from the bastion to your VPS is via SSH keys. When you request a Linux VPS, ICT pre-configures SSH keys between <code>linux-bastion-ex.tudelft.nl</code> and your new VPS. This means that once you are on the bastion, you can connect to your VPS using ssh <netid>@<vps-address>.</vps-address></netid></p>
 <section id="connecting-from-linux-macos-or-the-wsl" class="level3">
 <h3 class="anchored" data-anchor-id="connecting-from-linux-macos-or-the-wsl">Connecting from Linux, macOS or the WSL</h3>
-<p>Connecting to a VPS via a bastion host is typically a two-step process. However, by using <strong>SSH tunneling</strong> and SSH keys, you can establish a connection from your local machine to your VPS in a single step. This simplifies the connection process and makes secure file transfers between your local machine and the VPS much more efficient.</p>
+<p>To connect to your VPS, open the terminal and enter the following command:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a> <span class="fu">ssh</span> <span class="at">-t</span> <span class="op">&lt;</span>netID<span class="op">&gt;</span>@linux-bastion-ex.tudelft.nl <span class="st">"ssh &lt;netID&gt;@&lt;vps-address&gt;"</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>This command will first connect you to the bastion host and then immediately initiate a second SSH connection to your VPS. You will be prompted to enter your TU Delft netID password to connect to the bastion. Because ICT has already configured the SSH keys between the bastion and your VPS, the bastion will use this key to log you in directly to your VPS.</p>
+<section id="ssh-tunneling" class="level4">
+<h4 class="anchored" data-anchor-id="ssh-tunneling"><strong>SSH Tunneling</strong></h4>
+<p>While the command above is useful for quick terminal access, SSH tunneling streamlines the connection by creating a direct path to your VPS. Once configured, you won’t need to manually pass through the bastion every time; your local computer will handle the “jump” in the background. This is specially helpful for simplified data transfers via the <code>scp</code> command.</p>
 <div class="callout callout-style-simple callout-tip no-icon callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -1178,19 +1185,19 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 <p><strong>1. Create SSH keys</strong></p>
 <p>If you do not have an SSH key-pair, create one on the local machine. Open the terminal and enter the following command. Replace <code>&lt;my-keyname&gt;</code> with a name of your choice for the SSH key, e.g., <code>id_rsa</code> or <code>id_ed25519</code>.</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span>  ssh-keygen <span class="at">-t</span> ed25519 <span class="at">-f</span> ~/.ssh/<span class="op">&lt;</span>my-keyname<span class="op">&gt;</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span>  ssh-keygen <span class="at">-t</span> ed25519 <span class="at">-f</span> ~/.ssh/<span class="op">&lt;</span>my-keyname<span class="op">&gt;</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>You will be prompted to create a <em>passphrase</em>. We recommend you to add one to make the connection more secure. The passphrase will be requested every time you connect to the VPS. To skip the passphrase, press <code>Enter</code> when prompted. You should see something like this:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ex">Generating</span> public/private ed25519 key pair.</span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="ex">Enter</span> passphrase for <span class="st">"ed25519"</span> <span class="er">(</span><span class="ex">empty</span> for no passphrase<span class="kw">)</span><span class="bu">:</span> </span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="ex">Enter</span> same passphrase again: </span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="ex">Your</span> identification has been saved in ~/.ssh/<span class="op">&lt;</span>my-keyname<span class="op">&gt;</span></span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="ex">Your</span> public key has been saved in ~/.ssh/<span class="op">&lt;</span>my-keyname<span class="op">&gt;</span>.pub</span>
-<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a><span class="ex">The</span> key fingerprint is:</span>
-<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a><span class="ex">SHA256:6j06srvun06gJ5UCmD+MVq6RsPuytCO5mF4hTELnWTg</span> root@local-machine</span>
-<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a><span class="ex">The</span> key<span class="st">'s randomart image is:</span></span>
-<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a><span class="st">+--[ED25519 256]--+</span></span>
-<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a><span class="st">&lt;image cut for security reasons&gt;</span></span>
-<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a><span class="st">+----[SHA256]-----+</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="ex">Generating</span> public/private ed25519 key pair.</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="ex">Enter</span> passphrase for <span class="st">"ed25519"</span> <span class="er">(</span><span class="ex">empty</span> for no passphrase<span class="kw">)</span><span class="bu">:</span> </span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="ex">Enter</span> same passphrase again: </span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="ex">Your</span> identification has been saved in ~/.ssh/<span class="op">&lt;</span>my-keyname<span class="op">&gt;</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="ex">Your</span> public key has been saved in ~/.ssh/<span class="op">&lt;</span>my-keyname<span class="op">&gt;</span>.pub</span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a><span class="ex">The</span> key fingerprint is:</span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a><span class="ex">SHA256:6j06srvun06gJ5UCmD+MVq6RsPuytCO5mF4hTELnWTg</span> root@local-machine</span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a><span class="ex">The</span> key<span class="st">'s randomart image is:</span></span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a><span class="st">+--[ED25519 256]--+</span></span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a><span class="st">&lt;image cut for security reasons&gt;</span></span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a><span class="st">+----[SHA256]-----+</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>A private and public key pair will be created in <code>~/.ssh</code>.</p>
 <div class="callout callout-style-simple callout-important no-icon callout-titled">
 <div class="callout-header d-flex align-content-center">
@@ -1221,19 +1228,27 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 <p><strong>2. Copy SSH keys to bastion host and remote server</strong></p>
 <p>You must “authorize” your key on both the bastion and your VPS. The easiest way to do this is using the <code>ssh-copy-id</code> command:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># First, authorize the key in the bastion host</span></span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="ex">ssh-copy-id</span> <span class="at">-i</span> ~/.ssh/<span class="op">&lt;</span>my-keyname<span class="op">&gt;</span>.pub <span class="op">&lt;</span>netID<span class="op">&gt;</span>@linux-bastion-ex.tudelft.nl</span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Second, authorize the key on your VPS (you will go through the bastion)</span></span>
-<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="ex">ssh-copy-id</span> <span class="at">-i</span> ~/.ssh/<span class="op">&lt;</span>my-keyname<span class="op">&gt;</span>.pub <span class="at">-o</span> ProxyJump=<span class="op">&lt;</span>netID<span class="op">&gt;</span>@linux-bastion-ex.tudelft.nl <span class="op">&lt;</span>netID<span class="op">&gt;</span>@<span class="op">&lt;</span>vps-address<span class="op">&gt;</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>You will be prompted to enter your password when executing both commands.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># First, authorize the key in the bastion host</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="ex">ssh-copy-id</span> <span class="at">-i</span> ~/.ssh/<span class="op">&lt;</span>my-keyname<span class="op">&gt;</span>.pub <span class="op">&lt;</span>netID<span class="op">&gt;</span>@linux-bastion-ex.tudelft.nl</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Second, authorize the key on your VPS:</span></span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a><span class="co"># 1. Copy the key to the bastion</span></span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a><span class="fu">scp</span> ~/.ssh/<span class="op">&lt;</span>my-keyname<span class="op">&gt;</span>.pub <span class="op">&lt;</span>netID<span class="op">&gt;</span>@linux-bastion-ex.tudelft.nl:~/localkey.pub</span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a><span class="co"># 2. Connect to the bastion</span></span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a><span class="fu">ssh</span> <span class="op">&lt;</span>netID<span class="op">&gt;</span>@linux-bastion-ex.tudelft.nl</span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a><span class="co"># 3. Authorize key on the VPS</span></span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a><span class="ex">ssh-copy-id</span> <span class="at">-f</span> <span class="at">-i</span> ~/localkey.pub <span class="op">&lt;</span>netID<span class="op">&gt;</span>@<span class="op">&lt;</span>vps-address<span class="op">&gt;</span></span>
+<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a><span class="co"># 4. Delete temporary file and logout from the bastion</span></span>
+<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a><span class="fu">rm</span> ~/localkey.pub</span>
+<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a><span class="bu">logout</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>You will be prompted to enter your TU Delft netID password during both steps.</p>
 <p><strong>3. Create a new host for SSH connection</strong></p>
 <p>On your local machine, edit the <code>~/.ssh/config</code> file and add the following configuration. If the file does not exist, create it.</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="ex">Host</span> <span class="op">&lt;</span>host-nickname<span class="op">&gt;</span></span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>    <span class="ex">HostName</span> <span class="op">&lt;</span>target-host<span class="op">&gt;</span></span>
-<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>    <span class="ex">User</span> <span class="op">&lt;</span>target-username<span class="op">&gt;</span></span>
-<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>    <span class="ex">ProxyJump</span> <span class="op">&lt;</span>bastion-username<span class="op">&gt;</span>@linux-bastion-ex.tudelft.nl</span>
-<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>    <span class="ex">IdentityFile</span> ~/.ssh/<span class="op">&lt;</span>my-keyname<span class="op">&gt;</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="ex">Host</span> <span class="op">&lt;</span>host-nickname<span class="op">&gt;</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>    <span class="ex">HostName</span> <span class="op">&lt;</span>target-host<span class="op">&gt;</span></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>    <span class="ex">User</span> <span class="op">&lt;</span>target-username<span class="op">&gt;</span></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>    <span class="ex">ProxyJump</span> <span class="op">&lt;</span>bastion-username<span class="op">&gt;</span>@linux-bastion-ex.tudelft.nl</span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>    <span class="ex">IdentityFile</span> ~/.ssh/<span class="op">&lt;</span>my-keyname<span class="op">&gt;</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>Replace:</p>
 <ul>
 <li><code>&lt;host-nickname&gt;</code>: a name of your choice for the target host, e.g., <code>my-server</code>.</li>
@@ -1244,8 +1259,28 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </ul>
 <p><strong>4. Test the SSH tunneling connection</strong></p>
 <p>Connect to the VPS using <em>SSH tunneling</em> by typing the command below. Use your <em>bastion-password</em> when asked. This is usually the password associated with your NetID.</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> ssh <span class="op">&lt;</span>host-nickname<span class="op">&gt;</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> ssh <span class="op">&lt;</span>host-nickname<span class="op">&gt;</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>If you encounter problems with the connection, use the debug mode <code>ssh -vvv &lt;host-nickname&gt;</code> to find out what might have gone wrong. This command will provide detailed information about the connection process and can help you troubleshoot any issues.</p>
+</section>
+</section>
+<section id="connecting-from-windows" class="level3">
+<h3 class="anchored" data-anchor-id="connecting-from-windows">Connecting from Windows</h3>
+<p>Connecting to your Linux VPS from Windows can be easily done using <a href="https://www.putty.org/">PuTTY</a>. The intermediate connection to the bastion is handled via a “remote command”. This setup allows you to authenticate once with the bastion and land directly in your VPS.</p>
+<p><strong>1. Configure the Bastion connection</strong></p>
+<p>To start, open PuTTY and enter the connection details for the Bastion Host:</p>
+<ul>
+<li><strong>Host Name</strong>: <code>&lt;netID&gt;@linux-bastion-ex.tudelft.nl</code></li>
+<li><strong>Port</strong>: <code>22</code></li>
+<li><strong>Connection type</strong>: <code>SSH</code></li>
+</ul>
+<p><img src="../img/putty_session.png" class="img-fluid"></p>
+<p><strong>2. Configure automatic login to your VPS</strong></p>
+<p>In the left-hand sidebar, navigate to “Connection &gt; SSH”. Locate the “Remote command” text box and enter <code>ssh -t &lt;netID&gt;@&lt;vps-address&gt;</code>. With this configuration, PuTTY first connects to the bastion host and then automatically starts an SSH session to your VPS.</p>
+<p><img src="../img/putty_command.png" class="img-fluid"></p>
+<p><strong>3. Optional: save the session</strong></p>
+<p>Save the session details to avoid re-entering these settings each time you connect to your VPS. To do so, navigate back to “Session” on the left-hand sidebar and enter a name under “Saved Sessions”, for example “TU Delft VPS”. Click Save.</p>
+<p><strong>4. Connect</strong></p>
+<p>Click “Open” at the bottom of the window to start the connection. You will be prompted for your TU Delft password. The first time you connect you may see a host key warning. Verify the host and accept it to continue.</p>
 
 
 </section>
