@@ -21,7 +21,7 @@ title: Side effects and external state
 
 # Brief overview of the document (will be used in listings) [manual entry]
 # Uncomment and populate the next line and uncomment "hide-description: true".
-description: Side effects occur when a function modifies external state or interacts with the outside world beyond simply returning a value, making the code harder to understand, test, and maintain
+description: Functions that modify external state or interact with the outside world beyond returning a value, making code harder to understand, test, and maintain
 #hide-description: true
 
 # Authors of the document, will not be parsed [manual entry]

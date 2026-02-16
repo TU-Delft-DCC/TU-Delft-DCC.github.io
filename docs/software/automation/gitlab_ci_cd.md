@@ -21,7 +21,7 @@ title: GitLab pipelines
 
 # Brief overview of the document (will be used in listings) [manual entry]
 # Uncomment and populate the next line and uncomment "hide-description: true".
-#description: Short description of the document
+description: GitLab CI/CD pipelines for automating software development
 #hide-description: true
 
 # Authors of the document, will not be parsed [manual entry]
