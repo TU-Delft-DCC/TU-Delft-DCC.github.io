@@ -57,7 +57,7 @@ MATLAB does not use virtual environments like Python, where isolated environment
 To check dependencies in a project:
 
 - Use [**`requiredfilesandproducts`**](https://nl.mathworks.com/help/matlab/ref/matlab.codetools.requiredfilesandproducts.html) to identify required MathWorks toolboxes for a script of function.
-- Use the the [**Dependency Analyzer**](https://nl.mathworks.com/help/matlab/matlab_prog/analyze-project-dependencies.html) to detect file dependencies.
+- Use the [**Dependency Analyzer**](https://nl.mathworks.com/help/matlab/matlab_prog/analyze-project-dependencies.html) to detect file dependencies.
 
 
 ### Custom MATLAB Dependency Manager

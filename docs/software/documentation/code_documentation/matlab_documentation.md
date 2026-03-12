@@ -46,7 +46,7 @@ categories:
 MATLAB has published a set of [Coding Guidelines](https://github.com/mathworks/MATLAB-Coding-Guidelines/blob/main/MATLAB-Coding-Guidelines.md) in 2025, which includes a section on code comments. Code comments are an essential part of code documentation, as they help explain the purpose and functionality of the code to other developers (and your future self).
 
 ## Docstrings
-Docstrings are structured comments, associated with segments (rather than lines) of code which can be used to generate user documentation for users of your project. If properly formated, docstrings can be automatically extracted and compiled into user-friendly formats such as HTML or PDF, and can be accessed through the `help` function in MATLAB. 
+Docstrings are structured comments, associated with segments (rather than lines) of code which can be used to generate user documentation for users of your project. If properly formatted, docstrings can be automatically extracted and compiled into user-friendly formats such as HTML or PDF, and can be accessed through the `help` function in MATLAB. 
 
 Unfortunately, MATLAB does not offer a defined standard for docstring formatting, but the following structure is used by MATLAB for internal functions.
 

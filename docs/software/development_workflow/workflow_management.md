@@ -109,7 +109,7 @@ Although it was originally developed to create scalable bioinformatics and genom
 - If Python and Make were to have a baby.
 - You can describe workflows using a **human readable**, **Python based language**.
 - It has **built-in caching**: if some steps of your workflow have already been run, Snakemake can recognize that and avoid rerunning the same analyses.
-- It can accommodate both **serial and parallel jobs** since each "work units" in a workflow can be run independently of one another.
+- It can accommodate both **serial and parallel jobs** since each work unit in a workflow can be run independently of one another.
 - It makes **debugging** easier since it keeps track of all files generated, you can identify which steps in your workflow have failed.
 - **Integration with conda** allows you to define conda environments for both the whole workflow and individual steps. 
 - You can incorporate tools or methods written in different scripting languages.
