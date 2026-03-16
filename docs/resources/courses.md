@@ -21,7 +21,7 @@ title: Courses and workshops
 
 # Brief overview of the document (will be used in listings) [manual entry]
 # Uncomment and populate the next line and uncomment "hide-description: true".
-description: Overview of data management and research software training at TU Delft
+#description: Short description of the document
 #hide-description: true
 
 # Authors of the document, will not be parsed [manual entry]

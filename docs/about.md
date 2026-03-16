@@ -21,7 +21,7 @@ title: About these guides
 
 # Brief overview of the document (will be used in listings) [manual entry]
 # Uncomment and populate the next line and uncomment "hide-description: true".
-description: Purpose, audience, and goals of the DCC Guides
+#description: Short description of the document
 #hide-description: true
 
 # Authors of the document, will not be parsed [manual entry]
