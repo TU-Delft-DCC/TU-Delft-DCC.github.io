@@ -76,7 +76,7 @@ require_https = false
 # remap = ["https://example.com http://example.invalid"]
 
 # Base URL or website root directory to check relative URLs.
-base = "https://tu-delft-dcc.github.io"
+base_url = "https://tu-delft-dcc.github.io"
 
 # HTTP basic auth support. This will be the username and password passed to the
 # authorization HTTP header. See
