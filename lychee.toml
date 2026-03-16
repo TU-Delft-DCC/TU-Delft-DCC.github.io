@@ -13,7 +13,7 @@ no_progress = false
 
 # Enable link caching. This can be helpful to avoid checking the same links on
 # multiple runs.
-cache = true
+cache = false
 
 # Discard all cached requests older than this duration.
 # max_cache_age = "1h"
@@ -76,7 +76,7 @@ require_https = false
 # remap = ["https://example.com http://example.invalid"]
 
 # Base URL or website root directory to check relative URLs.
-# base = "https://example.com"
+base = "https://tu-delft-dcc.github.io"
 
 # HTTP basic auth support. This will be the username and password passed to the
 # authorization HTTP header. See
@@ -140,4 +140,4 @@ exclude_link_local = false
 exclude_loopback = false
 
 # Check mail addresses
-include_mail = true
+include_mail = false
