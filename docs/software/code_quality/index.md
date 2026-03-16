@@ -99,6 +99,6 @@ Services that provide code quality analysis.
 
 :::{.callout-note appearance="simple" icon="false"}
 ## {{< fa signs-post >}} Learn more
-- [The Turing Way - Writing Robust Code](https://the-turing-way.netlify.app/reproducible-research/code-quality/code-quality-robust.html?highlight=error)
+- [The Turing Way - Writing Robust Code](https://book.the-turing-way.org/reproducible-research/code-quality/code-quality-robust)
 - [Utrecht University - Workshop on Writing Reproducible Code](https://utrechtuniversity.github.io/workshop-computational-reproducibility/)
 :::
