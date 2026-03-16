@@ -174,7 +174,7 @@ Consider using tools that offer more sophisticated dependency management by inte
 ## {{< fa signs-post >}} Learn more
 
 - [CodeRefinery - Recording dependencies](https://coderefinery.github.io/reproducible-research/dependencies/)
-- [The Turing Way - Package Management Systems](https://the-turing-way.netlify.app/reproducible-research/renv/renv-package)
+- [The Turing Way - Package Management Systems](https://book.the-turing-way.org/reproducible-research/renv/renv-package)
 - [Conda documentation](https://docs.conda.io/projects/conda/en/stable/user-guide/getting-started.html)
 - [virtualenv documentation](https://virtualenv.pypa.io/en/latest/)
 - [virtualenvwrapper extension](https://virtualenvwrapper.readthedocs.io/en/latest/)

@@ -74,8 +74,8 @@ Formatters are tools that automatically adjust the formatting of your code to ma
 
 :::{.callout-note appearance="simple" icon="false"}
 ## {{< fa signs-post >}} Learn more
-- [The Turing Way - Code Quality](https://the-turing-way.netlify.app/reproducible-research/code-quality)
-- [The Turing Way - Code Style](https://the-turing-way.netlify.app/reproducible-research/code-quality/code-quality-style)
+- [The Turing Way - Code Quality](https://book.the-turing-way.org/reproducible-research/code-quality)
+- [The Turing Way - Code Style](https://book.the-turing-way.org/reproducible-research/code-quality/code-quality-style)
 - [RealPython - Python Code Quality](https://realpython.com/python-code-quality/)
 - [RealPython - PEP8](https://realpython.com/python-pep8/)
 :::

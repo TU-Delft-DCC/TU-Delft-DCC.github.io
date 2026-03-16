@@ -52,10 +52,10 @@ This guide explains how to write and execute tests in MATLAB. For additional det
 ## Writing tests
 MATLAB supports **script-based**, **function-based**, and **class-based** unit tests, allowing for a range of testing strategies from simple to advanced use cases. See the MATLAB documentation for more information:
 
-- [Matlab - Ways to write unit tests](https://nl.mathworks.com/help/matlab/matlab_prog/ways-to-write-unit-tests.html)
-    - [Script-based testing](https://nl.mathworks.com/help/matlab/matlab_prog/write-script-based-unit-tests.html)
-    - [Function-based testing](https://nl.mathworks.com/help/matlab/matlab_prog/write-function-based-unit-tests.html)
-    - [Class-based testing](https://nl.mathworks.com/help/matlab/matlab_prog/author-class-based-unit-tests-in-matlab.html)
+- [Matlab - Ways to write unit tests](https://www.mathworks.com/help/matlab/matlab_prog/ways-to-write-unit-tests.html)
+    - [Script-based testing](https://www.mathworks.com/help/matlab/matlab_prog/write-script-based-unit-tests.html)
+    - [Function-based testing](https://www.mathworks.com/help/matlab/matlab_prog/function-based-unit-tests.html)
+    - [Class-based testing](https://www.mathworks.com/help/matlab/matlab_prog/class-based-unit-tests.html)
 
 
 #### Convention for writing tests
