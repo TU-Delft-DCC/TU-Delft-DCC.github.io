@@ -22,7 +22,7 @@ title: Testing in Python
 # Brief overview of the document (will be used in listings) [manual entry]
 # Uncomment and populate the next line and uncomment "hide-description: true".
 description: Writing and running tests in Python
-#hide-description: true
+hide-description: true
 
 # Authors of the document, will not be parsed [manual entry]
 # Uncomment and populate the next lines accordingly

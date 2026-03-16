@@ -20,7 +20,7 @@ title: Code of conduct
 # Brief overview of the document (will be used in listings) [manual entry]
 # Uncomment and populate the next line and uncomment "hide-description: true".
 description: A code of conduct establishes expectations for behavior within your project's community
-#hide-description: true
+hide-description: true
 
 # Authors of the document, will not be parsed [manual entry]
 author_1: Maurits Kok

@@ -22,7 +22,7 @@ title: Dead code
 # Brief overview of the document (will be used in listings) [manual entry]
 # Uncomment and populate the next line and uncomment "hide-description: true".
 description: Identifying and eliminating dead code and commented-out sections through refactoring
-#hide-description: true
+hide-description: true
 
 # Authors of the document, will not be parsed [manual entry]
 # Uncomment and populate the next lines accordingly
