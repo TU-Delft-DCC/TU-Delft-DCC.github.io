@@ -21,8 +21,8 @@ title: Remote Servers
 
 # Brief overview of the document (will be used in listings) [manual entry]
 # Uncomment and populate the next line and uncomment "hide-description: true".
-description: Overview of virtual and physical server options for research at TU Delft
-#hide-description: true
+description: Virtual and physical servers at TU Delft
+hide-description: true
 
 # Authors of the document, will not be parsed [manual entry]
 # Uncomment and populate the next lines accordingly
