@@ -51,7 +51,7 @@ categories:
 >
 > **Antoine de Saint-Exupéry**
 
-Duplicated code occurs when similar or identical blocks of code appear multiple times within a codebase. This can increase maintenance efforts, as changes in one place might require corresponding changes elsewhere, leading to inconsistencies and a higher chance of errors. 
+Duplicated code occurs when similar or identical blocks of code appear multiple times within a codebase. This can increase maintenance efforts, as changes in one place might require corresponding changes elsewhere, leading to inconsistencies and higher changes or errors. 
 
 ## Symptoms
 - The same logic appears in multiple places, sometimes with minor variations.
