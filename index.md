@@ -1,5 +1,6 @@
 ---
 title: Welcome to the DCC Guides!
+description: Starting point for Research Software, Research Data, and Computing guides at TU Delft
 toc: true
 page-navigation: false
 repo-actions: false

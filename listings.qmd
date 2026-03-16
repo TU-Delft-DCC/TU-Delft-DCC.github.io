@@ -1,5 +1,6 @@
 ---
 title: "Catalogue"
+description: Searchable catalogue of all available guides on research software, data, and infrastructure
 listing:
   contents: 
     - "docs/data/**/*.md"

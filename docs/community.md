@@ -1,4 +1,13 @@
-# Community
+---
+lang: en
+language: 
+  title-block-published: "Last reviewed"
+  title-block-modified: "Last modified"
+
+title: Community
+
+description: TU Delft research support community partners and related organizations
+---
 
 ## Partners within the TU Delft
 
