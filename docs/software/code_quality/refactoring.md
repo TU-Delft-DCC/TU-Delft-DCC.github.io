@@ -59,7 +59,7 @@ Refactoring is the process of **restructuring existing code without changing its
 - **Reducing complexity** - Simplifying complex structures by breaking down large functions or removing unnecessary dependencies.
 - **Optimizing design** - Creating a more robust and adaptable codebase for long-term growth.
 - **Eliminating redundancies** - Removing duplicate or unnecessary code.
-- **Ensuring consistency** - Following a consistent coding style for a cleaner, more maintanable codebase.
+- **Ensuring consistency** - Following a consistent coding style for a cleaner, more maintainable codebase.
 
 ### When should you refactor?
 ![CC-BY-4.0 © 2021 Balaban et al.](/docs/img/refactoring.PNG){width=50%}

@@ -21,8 +21,8 @@ title: Environment and dependency management in Python
 
 # Brief overview of the document (will be used in listings) [manual entry]
 # Uncomment and populate the next line and uncomment "hide-description: true".
-#description: Short description of the document
-#hide-description: true
+description: Managing environments and dependencies in Python projects
+hide-description: true
 
 # Authors of the document, will not be parsed [manual entry]
 # Uncomment and populate the next lines accordingly
@@ -174,7 +174,7 @@ Consider using tools that offer more sophisticated dependency management by inte
 ## {{< fa signs-post >}} Learn more
 
 - [CodeRefinery - Recording dependencies](https://coderefinery.github.io/reproducible-research/dependencies/)
-- [The Turing Way - Package Management Systems](https://the-turing-way.netlify.app/reproducible-research/renv/renv-package)
+- [The Turing Way - Package Management Systems](https://book.the-turing-way.org/reproducible-research/renv/renv-package)
 - [Conda documentation](https://docs.conda.io/projects/conda/en/stable/user-guide/getting-started.html)
 - [virtualenv documentation](https://virtualenv.pypa.io/en/latest/)
 - [virtualenvwrapper extension](https://virtualenvwrapper.readthedocs.io/en/latest/)

@@ -19,8 +19,8 @@ title: FAIR checklist for research software
 
 # Brief overview of the document (will be used in listings) [manual entry]
 # Uncomment and populate the next line and uncomment "hide-description: true".
-#description: Short description of the document
-#hide-description: true
+description: Checklist for ensuring FAIR principles in research software development
+hide-description: true
 
 # Authors of the document, will not be parsed [manual entry]
 author_1: Maurits Kok
@@ -172,7 +172,7 @@ _Essential_
 _Recommended_
 
 - [ ] [Defensive programming](https://swcarpentry.github.io/python-novice-inflammation/10-defensive.html)
-- [ ] Test your software with [integration tests](https://the-turing-way.netlify.app/reproducible-research/testing/testing-integrationtest.html) and [unit tests](https://the-turing-way.netlify.app/reproducible-research/testing/testing-unittest.html)
+- [ ] Test your software with [integration tests](https://book.the-turing-way.org/reproducible-research/testing/testing-integrationtest.html) and [unit tests](https://book.the-turing-way.org/reproducible-research/testing/testing-unittest/)
 - [ ] Make use of [Continuous Integration](https://coderefinery.github.io/testing/continuous-integration/) to automate testing
 
 _Optional_
@@ -187,7 +187,7 @@ _Essential_
 
 _Recommended_
 - [ ] [Defensive programming](https://swcarpentry.github.io/python-novice-inflammation/10-defensive.html)
-- [ ] Test your software with [integration tests](https://the-turing-way.netlify.app/reproducible-research/testing/testing-integrationtest.html) and [unit tests](https://the-turing-way.netlify.app/reproducible-research/testing/testing-unittest.html)
+- [ ] Test your software with [integration tests](https://book.the-turing-way.org/reproducible-research/testing/testing-integrationtest.html) and [unit tests](https://book.the-turing-way.org/reproducible-research/testing/testing-unittest.html)
 - [ ] Make use of [Continuous Integration](https://coderefinery.github.io/testing/continuous-integration/) to automate testing
 
 _Optional_
@@ -251,7 +251,7 @@ _Recommended_
 
 _Optional_
 
-- [ ] [Continuous Integration](https://the-turing-way.netlify.app/reproducible-research/ci/ci-options.html) for automated build and release
+- [ ] [Continuous Integration](https://book.the-turing-way.org/reproducible-research/ci/ci-options.html) for automated build and release
 
 ## **Releases** (`.md` format)
 
@@ -267,7 +267,7 @@ _Recommended_
 - [ ] [Releasing guide](https://docs.github.com/en/repositories/releasing-projects-on-github/managing-releases-in-a-repository)
 
 _Optional_
-- [ ] [Continuous Integration](https://the-turing-way.netlify.app/reproducible-research/ci/ci-options.html) for automated build and release
+- [ ] [Continuous Integration](https://book.the-turing-way.org/reproducible-research/ci/ci-options.html) for automated build and release
 ``` 
 :::
 
@@ -278,7 +278,7 @@ _Optional_
 :::{seealso}
 For more information on the principles behind FAIR software, please have a look at the following resources:
 
-- [The Turing Way - Guide for Reproducible Research](https://the-turing-way.netlify.app/reproducible-research/reproducible-research.html) - general guide to reproducible research
+- [The Turing Way - Guide for Reproducible Research](https://book.the-turing-way.org/reproducible-research/reproducible-research.html) - general guide to reproducible research
 - [Towards FAIR principles for research software](https://content.iospress.com/articles/data-science/ds190026) - publication on the translation of FAIR principles for data to FAIR principles for software
 - [From FAIR research data toward FAIR and open research software](https://doi.org/10.1515/itit-2019-0040)
 - [FAIR Principles for Research Software](https://zenodo.org/records/6623556)

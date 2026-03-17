@@ -134,6 +134,6 @@ It is advisable to contact your faculty's data steward regarding licensing quest
 - [TU Delft Guidelines on Research Software](https://zenodo.org/records/4629635) - the TU Delft Research Software Policy approved by the Executive Board
 - [Choose a license](https://choosealicense.com) - a simplified guide on choosing an open-source license
 - [tl;drLegal](https://www.tldrlegal.com) - Plain English summaries of software licenses
-- [The Turing Way - Licensing](https://the-turing-way.netlify.app/reproducible-research/licensing)
+- [The Turing Way - Licensing](https://book.the-turing-way.org/reproducible-research/licensing)
 - [GitHub - Adding a license to a repository](https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contributions/adding-a-license-to-a-repository)
 :::

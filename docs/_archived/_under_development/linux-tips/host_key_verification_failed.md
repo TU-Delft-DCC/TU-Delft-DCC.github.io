@@ -44,7 +44,7 @@ If you ever get a warning like this, stop and determine whether there is a reaso
   - If root wants to ssh to the server, just removing entry in the /root/.ssh/known_hosts file is all right.
   - If testuser wants to ssh to the server, then remove the entry in the file /home/testuser/.ssh/known_hosts.
 
-3. In this case, we will remove the the third line for the destination server 192.0.2.103 from the file /home/testuser/.ssh/known_hosts.
+3. In this case, we will remove the third line for the destination server 192.0.2.103 from the file /home/testuser/.ssh/known_hosts.
 
 ```
 $ sed -i '3d' /home/testuser/.ssh/known_hosts
@@ -80,4 +80,3 @@ ECDSA key fingerprint is SHA256:V+iGp3gwSlnpbtYv4Niq6tcMMSZivSnYWQIaJnUvHb4.
 Are you sure you want to continue connecting (yes/no)? yes
 Warning: Permanently added '192.0.2.103' (ECDSA) to the list of known hosts.
 ```
-

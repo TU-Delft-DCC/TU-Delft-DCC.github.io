@@ -1,4 +1,7 @@
 # Lychee Configuration
+
+root_dir = "_site"
+
 # Built on top of the example from https://lychee.cli.rs/usage/config/
 #############################  Display  #############################
 
@@ -13,7 +16,7 @@ no_progress = false
 
 # Enable link caching. This can be helpful to avoid checking the same links on
 # multiple runs.
-cache = true
+cache = false
 
 # Discard all cached requests older than this duration.
 # max_cache_age = "1h"
@@ -76,7 +79,7 @@ require_https = false
 # remap = ["https://example.com http://example.invalid"]
 
 # Base URL or website root directory to check relative URLs.
-# base = "https://example.com"
+# base_url = "https://tu-delft-dcc.github.io"
 
 # HTTP basic auth support. This will be the username and password passed to the
 # authorization HTTP header. See
@@ -115,7 +118,9 @@ exclude = [
   # Test/dummy environments
   '^https?://github\.com/your_repo',
   '^https?://doi\.org/11\.1111/11111',
-  '^https?://next\.data\.4tu\.nl'
+  '^https?://doi\\.org',
+  '^https?://next\.data\.4tu\.nl',
+
 ]
 
 # Exclude these filesystem paths from getting checked.
@@ -140,4 +145,4 @@ exclude_link_local = false
 exclude_loopback = false
 
 # Check mail addresses
-include_mail = true
+include_mail = false
