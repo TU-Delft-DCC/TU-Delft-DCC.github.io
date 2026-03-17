@@ -21,7 +21,7 @@ title: Transferring data to and from remote servers
 
 # Brief overview of the document (will be used in listings) [manual entry]
 # Uncomment and populate the next line and uncomment "hide-description: true".
-description: Secure data transfer to and from TU Delft virtual servers using scp (Linux) or Network Drives (Windows).
+description: Secure data transfer to and from TU Delft virtual servers using scp (Linux) or Network Drives (Windows)
 hide-description: true
 
 # Authors of the document, will not be parsed [manual entry]
