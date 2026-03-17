@@ -21,8 +21,8 @@ title: Environment and dependency management in MATLAB
 
 # Brief overview of the document (will be used in listings) [manual entry]
 # Uncomment and populate the next line and uncomment "hide-description: true".
-#description: Short description of the document
-#hide-description: true
+description: Managing environments and dependencies in MATLAB projects
+hide-description: true
 
 # Authors of the document, will not be parsed [manual entry]
 # Uncomment and populate the next lines accordingly
@@ -57,7 +57,7 @@ MATLAB does not use virtual environments like Python, where isolated environment
 To check dependencies in a project:
 
 - Use [**`requiredfilesandproducts`**](https://nl.mathworks.com/help/matlab/ref/matlab.codetools.requiredfilesandproducts.html) to identify required MathWorks toolboxes for a script of function.
-- Use the the [**Dependency Analyzer**](https://nl.mathworks.com/help/matlab/matlab_prog/analyze-project-dependencies.html) to detect file dependencies.
+- Use the [**Dependency Analyzer**](https://nl.mathworks.com/help/matlab/matlab_prog/analyze-project-dependencies.html) to detect file dependencies.
 
 
 ### Custom MATLAB Dependency Manager

@@ -20,7 +20,7 @@ title: Connecting to remote servers
 
 # Brief overview of the document (will be used in listings) [manual entry]
 # Uncomment and populate the next line and uncomment "hide-description: true".
-description: Secure connection to TU Delft virtual servers using SSH (Linux) or RDP (Windows).
+description: Secure connection to TU Delft virtual servers using SSH (Linux) or RDP (Windows)
 hide-description: true
 
 # Authors of the document, will not be parsed [manual entry]
