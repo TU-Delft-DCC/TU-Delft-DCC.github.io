@@ -118,7 +118,9 @@ exclude = [
   # Test/dummy environments
   '^https?://github\.com/your_repo',
   '^https?://doi\.org/11\.1111/11111',
-  '^https?://next\.data\.4tu\.nl'
+  '^https?://doi\\.org',
+  '^https?://next\.data\.4tu\.nl',
+
 ]
 
 # Exclude these filesystem paths from getting checked.

@@ -21,8 +21,8 @@ title: Data collection
 
 # Brief overview of the document (will be used in listings) [manual entry]
 # Uncomment and populate the next line and uncomment "hide-description: true".
-#description: Short description of the document
-#hide-description: true
+description: Overview of data collection practices, conventions, access/reuse, and TU Delft tools like eLabJournal and RSpace
+hide-description: true
 
 # Authors of the document, will not be parsed [manual entry]
 # Uncomment and populate the next lines accordingly
