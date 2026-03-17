@@ -53,7 +53,7 @@ retry_wait_time = 2
 # accept = "200..=204, 429"
 # accept = ["200", "429"]
 # accept = "200, 429"
-accept = ["200..=204", "429", "403"]
+accept = ["200..=204", "429", "403", "500"]
 
 # Proceed for server connections considered insecure (invalid TLS).
 insecure = false
@@ -114,6 +114,7 @@ exclude = [
   
   # Test/dummy environments
   '^https?://github\.com/your_repo',
+  '^https?://doi\.org/11\.1111/11111',
   '^https?://doi\\.org',
   '^https?://next\.data\.4tu\.nl',
 
