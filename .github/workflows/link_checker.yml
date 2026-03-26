@@ -40,9 +40,6 @@ jobs:
         uses: lycheeverse/lychee-action@v2
         with:
           args: >-
-            --no-cache
-            --max-cache-age 0
-            --verbose
             --config lychee.toml
             './**/*.md' 
             './**/*.qmd' 
