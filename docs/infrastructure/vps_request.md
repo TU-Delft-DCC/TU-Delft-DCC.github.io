@@ -70,9 +70,15 @@ Common use cases for VPSs covered in these guides include:
 4. Login to your server for the first time
 
 ### Step 1: Navigate to the TU Delft server request form
-You can make a request for a server via the [TopDesk self service portal](https://tudelft.topdesk.net/tas/public/ssp/content/detail/service?unid=71ba4c9678e041fd99dad8e7e11dd0e2). If the link does not work, you can also navigate to the TopDesk portal homepage and type "Faculty managed Servers" in the search box. Alternatively, you can navigate to the form via:
+You can make a request for a server via the [TopDesk self service portal](https://tudelft.topdesk.net/tas/public/ssp/content/serviceflow?unid=3a67785fb4c94601949dbc8c9cb6b0eb). If the link does not work, you can also navigate to the TopDesk portal homepage and type "Faculty managed Servers" in the search box. Alternatively, you can navigate to the form via:
 
 > ICT SERVICES ⇾ IT FOR RESEARCH ⇾ FACULTY MANAGED SERVERS.
+
+:::{.callout-important appearance="simple" icon="false"}
+
+## {{< fa exclamation-triangle >}} Faculty Managed Server vs Virtual Private Server (VPS)
+TU Delft uses the term Faculty Managed Server to refer to virtual servers that are managed by TU Delft. This is different from a physical server, which is a physical machine. Throughout these guides we use the term VPS for simplicity and to avoid confusion.
+:::
 
 ### Step 2: Fill and send the form according to your preferences and needs
 The form is divided into three sections: "_**Caller**_", "_**General Questions**_", and "_**Technical Questions**_".
