@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.8.27">
+<meta name="generator" content="quarto-1.9.36">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -11,6 +11,9 @@
 
 <title>Code quality</title>
 <style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
 div.columns{display: flex; gap: min(4vw, 1.5em);}
@@ -37,19 +40,18 @@ ul.task-list li input[type="checkbox"] {
 <link href="../../../docs/img/cone.png" rel="icon" type="image/png">
 <script src="../../../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="../../../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
 <script src="../../../site_libs/quarto-html/popper.min.js"></script>
 <script src="../../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-1d5e050edb13250d4f64432100cad504.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-dark-1d5e050edb13250d4f64432100cad504.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-1d5e050edb13250d4f64432100cad504.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-176b38be48070efe3d434d0a95bef3fe.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-dark-176b38be48070efe3d434d0a95bef3fe.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-176b38be48070efe3d434d0a95bef3fe.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../../site_libs/bootstrap/bootstrap-d68843bf984bad7ccdec13bae8068b2b.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../../../site_libs/bootstrap/bootstrap-dark-0d6df155cc0ddd3bf2df0fb95ff2c699.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="../../../site_libs/bootstrap/bootstrap-d68843bf984bad7ccdec13bae8068b2b.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="../../../site_libs/bootstrap/bootstrap-4a1e9a42e3ed3412a26fa61bf7ba508b.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../../site_libs/bootstrap/bootstrap-dark-4d58ad75f844c6429d0198777a1162f1.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../../../site_libs/bootstrap/bootstrap-4a1e9a42e3ed3412a26fa61bf7ba508b.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script src="../../../site_libs/quarto-contrib/iconify-2.1.0/iconify-icon.min.js"></script>
 <link href="../../../site_libs/quarto-contrib/fontawesome6-1.2.0/all.min.css" rel="stylesheet">
 <link href="../../../site_libs/quarto-contrib/fontawesome6-1.2.0/latex-fontsize.css" rel="stylesheet">
@@ -1074,29 +1076,29 @@ ul.task-list li input[type="checkbox"] {
 <p>The quality of your research software plays a crucial role in its reliability, maintainability, and scalability. Writing <strong>clean code</strong> means developing code that is easy to read, understand - not for just you, but for others as well. <strong>Well-structured code</strong> simplifies debugging and allows for future modifications and extensions, ensuring your software remains useful and adaptable over time.</p>
 <div class="content-block">
 <div class="features">
-<section id="code-style" class="level3 feature">
-<h3 class="anchored" data-anchor-id="code-style"><i class="fa-solid fa-file-code" aria-label="file-code"></i> Code Style</h3>
+<section id="b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c2066612066696c652d636f6465203e7d7d-code-style" class="level3 feature">
+<h3 class="anchored" data-anchor-id="b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c2066612066696c652d636f6465203e7d7d-code-style"><i class="fa-solid fa-file-code" aria-label="file-code"></i> Code Style</h3>
 <p>Conventions and guidelines used to write and format code.</p>
 <div class="learn-more">
 <p><a href="../../../docs/software/code_quality/code_style.html">Learn more »</a></p>
 </div>
 </section>
-<section id="refactoring" class="level3 feature">
-<h3 class="anchored" data-anchor-id="refactoring"><i class="fa-solid fa-wrench" aria-label="wrench"></i> Refactoring</h3>
+<section id="b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c206661207772656e6368203e7d7d-refactoring" class="level3 feature">
+<h3 class="anchored" data-anchor-id="b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c206661207772656e6368203e7d7d-refactoring"><i class="fa-solid fa-wrench" aria-label="wrench"></i> Refactoring</h3>
 <p>Restructuring existing code without changing its external behavior.</p>
 <div class="learn-more">
 <p><a href="../../../docs/software/code_quality/refactoring.html">Learn more »</a></p>
 </div>
 </section>
-<section id="code-smells" class="level3 feature">
-<h3 class="anchored" data-anchor-id="code-smells"><i class="fa-solid fa-poo" aria-label="poo"></i> Code Smells</h3>
+<section id="b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c20666120706f6f203e7d7d-code-smells" class="level3 feature">
+<h3 class="anchored" data-anchor-id="b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c20666120706f6f203e7d7d-code-smells"><i class="fa-solid fa-poo" aria-label="poo"></i> Code Smells</h3>
 <p>Symptoms of poor code quality that can indicate deeper problems.</p>
 <div class="learn-more">
 <p><a href="../../../docs/software/code_quality/code_smells.html">Learn more »</a></p>
 </div>
 </section>
-<section id="online-services" class="level3 feature">
-<h3 class="anchored" data-anchor-id="online-services"><i class="fa-solid fa-shield-alt" aria-label="shield-alt"></i> Online services</h3>
+<section id="b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c20666120736869656c642d616c74203e7d7d-online-services" class="level3 feature">
+<h3 class="anchored" data-anchor-id="b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c20666120736869656c642d616c74203e7d7d-online-services"><i class="fa-solid fa-shield-alt" aria-label="shield-alt"></i> Online services</h3>
 <p>Services that provide code quality analysis.</p>
 <div class="learn-more">
 <p><a href="../../../docs/software/code_quality/online_services.html">Learn more »</a></p>

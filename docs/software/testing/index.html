@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.8.27">
+<meta name="generator" content="quarto-1.9.36">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -11,6 +11,9 @@
 
 <title>Software testing</title>
 <style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
 div.columns{display: flex; gap: min(4vw, 1.5em);}
@@ -37,19 +40,18 @@ ul.task-list li input[type="checkbox"] {
 <link href="../../../docs/img/cone.png" rel="icon" type="image/png">
 <script src="../../../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="../../../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
 <script src="../../../site_libs/quarto-html/popper.min.js"></script>
 <script src="../../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-1d5e050edb13250d4f64432100cad504.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-dark-1d5e050edb13250d4f64432100cad504.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-1d5e050edb13250d4f64432100cad504.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-176b38be48070efe3d434d0a95bef3fe.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-dark-176b38be48070efe3d434d0a95bef3fe.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-176b38be48070efe3d434d0a95bef3fe.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../../site_libs/bootstrap/bootstrap-d68843bf984bad7ccdec13bae8068b2b.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../../../site_libs/bootstrap/bootstrap-dark-0d6df155cc0ddd3bf2df0fb95ff2c699.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="../../../site_libs/bootstrap/bootstrap-d68843bf984bad7ccdec13bae8068b2b.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="../../../site_libs/bootstrap/bootstrap-4a1e9a42e3ed3412a26fa61bf7ba508b.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../../site_libs/bootstrap/bootstrap-dark-4d58ad75f844c6429d0198777a1162f1.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../../../site_libs/bootstrap/bootstrap-4a1e9a42e3ed3412a26fa61bf7ba508b.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script src="../../../site_libs/quarto-contrib/iconify-2.1.0/iconify-icon.min.js"></script>
 <link href="../../../site_libs/quarto-contrib/fontawesome6-1.2.0/all.min.css" rel="stylesheet">
 <link href="../../../site_libs/quarto-contrib/fontawesome6-1.2.0/latex-fontsize.css" rel="stylesheet">
@@ -1068,43 +1070,43 @@ ul.task-list li input[type="checkbox"] {
 <script async="" defer="" src="https://scripts.simpleanalyticscdn.com/latest.js"></script><p>When you’re writing software – especially for research – it’s important to make sure your programs work as expected. Testing is like a safety net: it helps you catch mistakes early and keeps your code reliable as you add new features or make changes. In research software, tests are even more crucial because they help ensure that your results are accurate and that others can reproduce your work. Beyond detecting bugs early, it is an investment in the quality and long-term maintainability of your codebase.</p>
 <div class="content-block">
 <div class="features">
-<section id="approach-to-testing" class="level3 feature">
-<h3 class="anchored" data-anchor-id="approach-to-testing"><i class="fa-solid fa-route" aria-label="route"></i> Approach to testing</h3>
+<section id="b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c20666120726f757465203e7d7d-approach-to-testing" class="level3 feature">
+<h3 class="anchored" data-anchor-id="b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c20666120726f757465203e7d7d-approach-to-testing"><i class="fa-solid fa-route" aria-label="route"></i> Approach to testing</h3>
 <p>A guide to help you get started with testing your software.</p>
 <div class="learn-more">
 <p><a href="../../../docs/software/testing/strategies.html">Learn more »</a></p>
 </div>
 </section>
-<section id="test-types" class="level3 feature">
-<h3 class="anchored" data-anchor-id="test-types"><i class="fa-solid fa-cubes" aria-label="cubes"></i> Test types</h3>
+<section id="b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c206661206375626573203e7d7d-test-types" class="level3 feature">
+<h3 class="anchored" data-anchor-id="b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c206661206375626573203e7d7d-test-types"><i class="fa-solid fa-cubes" aria-label="cubes"></i> Test types</h3>
 <p>Different types of tests to ensure your software works as expected.</p>
 <div class="learn-more">
 <p><a href="../../../docs/software/testing/test_types.html">Learn more »</a></p>
 </div>
 </section>
-<section id="additional-concepts" class="level3 feature">
-<h3 class="anchored" data-anchor-id="additional-concepts"><i class="fa-solid fa-magnifying-glass" aria-label="magnifying-glass"></i> Additional concepts</h3>
+<section id="b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c206661206d61676e696679696e672d676c617373203e7d7d-additional-concepts" class="level3 feature">
+<h3 class="anchored" data-anchor-id="b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c206661206d61676e696679696e672d676c617373203e7d7d-additional-concepts"><i class="fa-solid fa-magnifying-glass" aria-label="magnifying-glass"></i> Additional concepts</h3>
 <p>More concepts to help you write better tests.</p>
 <div class="learn-more">
 <p><a href="../../../docs/software/testing/intermediate.html">Learn more »</a></p>
 </div>
 </section>
-<section id="python-testing" class="level3 feature">
-<h3 class="anchored" data-anchor-id="python-testing"><i class="fa-solid fa-flask" aria-label="flask"></i> Python testing</h3>
+<section id="b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c20666120666c61736b203e7d7d-python-testing" class="level3 feature">
+<h3 class="anchored" data-anchor-id="b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c20666120666c61736b203e7d7d-python-testing"><i class="fa-solid fa-flask" aria-label="flask"></i> Python testing</h3>
 <p>Testing your Python code.</p>
 <div class="learn-more">
 <p><a href="../../../docs/software/testing/python.html">Learn more »</a></p>
 </div>
 </section>
-<section id="matlab-testing" class="level3 feature">
-<h3 class="anchored" data-anchor-id="matlab-testing"><i class="fa-solid fa-flask" aria-label="flask"></i> MATLAB testing</h3>
+<section id="b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c20666120666c61736b203e7d7d-matlab-testing" class="level3 feature">
+<h3 class="anchored" data-anchor-id="b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c20666120666c61736b203e7d7d-matlab-testing"><i class="fa-solid fa-flask" aria-label="flask"></i> MATLAB testing</h3>
 <p>Testing your MATLAB code.</p>
 <div class="learn-more">
 <p><a href="../../../docs/software/testing/matlab.html">Learn more »</a></p>
 </div>
 </section>
-<section id="r-testing" class="level3 feature">
-<h3 class="anchored" data-anchor-id="r-testing"><i class="fa-solid fa-flask" aria-label="flask"></i> R testing</h3>
+<section id="b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c20666120666c61736b203e7d7d-r-testing" class="level3 feature">
+<h3 class="anchored" data-anchor-id="b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c20666120666c61736b203e7d7d-r-testing"><i class="fa-solid fa-flask" aria-label="flask"></i> R testing</h3>
 <p>Testing your R code.</p>
 <div class="learn-more">
 <p><a href="../../../docs/software/testing/r_test.html">Learn more »</a></p>
