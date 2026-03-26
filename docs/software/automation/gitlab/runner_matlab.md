@@ -99,7 +99,7 @@ Ensure you have the following ready:
 ## Step 1. Request a TU Delft VPS
 The TU Delft GitLab instance does not have runners available by default. To set up a runner for the repository, we need to deploy one on a separate (virtual) server in order to execute the jobs in the CI/CD pipeline. In order to accomodate the size of MATLAB, ensure to request **50Gb of disk space** (the MATLAB installation in this guide requires ~10 Gb, but this depends on the size of the installed addons).
 
-For additional information, please follow this guide to [request a Faculty Managed Server](../../../infrastructure/vps_request.md).
+For additional information, please follow this guide to [request a VPS](../../../infrastructure/vps_request.md).
 
 [Request a TU Delft Faculty Managed Server {{< fa angle-right >}}](https://tudelft.topdesk.net/tas/public/ssp/content/serviceflow?unid=3a67785fb4c94601949dbc8c9cb6b0eb){.goto-btn}
 
