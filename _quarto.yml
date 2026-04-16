@@ -58,6 +58,8 @@ website:
         text: <ins>Guides</ins>
       - href: docs/resources/courses.md
         text: <ins>Courses and Workshops</ins>
+      - href: docs/rse-onboarding/index.md
+        text: RSE Onboarding
       - href: docs/tud-support/index.md
         text: Staff Onboarding
       - text: Community
@@ -74,7 +76,26 @@ website:
         text: DCC GitHub
 
   sidebar:
-    - title: "Onboarding"
+    - title: "RSE Onboarding"
+      style: "docked"
+      collapse-level: 2
+      align: left
+      contents:
+        - text: Welcome to the DCC!
+          href: docs/rse-onboarding/index.md
+        - text: Getting started
+          href: docs/rse-onboarding/getting_started.md
+        - text: Onboarding checklists
+          href: docs/rse-onboarding/onboarding_checklists.md
+        - text: Organisation & partners
+          href: docs/rse-onboarding/organisation_and_partners.md
+        - text: Curriculum
+          href: docs/rse-onboarding/curriculum.md
+        - text: Bookmarks
+          href: docs/rse-onboarding/bookmarks.md
+        - text: References
+          href: docs/rse-onboarding/references.md
+    - title: "Staff Onboarding"
       style: "docked"
       collapse-level: 2
       align: left
