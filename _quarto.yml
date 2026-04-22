@@ -81,7 +81,7 @@ website:
       collapse-level: 2
       align: left
       contents:
-        - text: Welcome to the DCC!
+        - text: Welcome!
           href: docs/rse-onboarding/index.md
         - text: Getting started
           href: docs/rse-onboarding/getting_started.md
