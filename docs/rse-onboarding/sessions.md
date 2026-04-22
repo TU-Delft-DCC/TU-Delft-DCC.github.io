@@ -45,6 +45,38 @@ corresponding: Raul Ortiz Merino
 # - 
 
 ---
-# Onboarding checklists
 
-We have created a number of checklists to help you get started at the DCC. These checklists are meant to be used as a guide and are not exhaustive. If you have any questions, please ask your mentor or the DCC team.
+# Onboarding sessions
+
+::: {.callout-tip}
+## Checklist
+
+## Session 1
+- [ ] Onboarding issues?
+- [ ] Go over onboarding documentation
+- [ ] Go through checklists
+- [ ] Introduce MS Teams environment
+
+## Session 2
+- [ ] Onboarding issues?
+- [ ] Organisation
+- [ ] Teaching
+:::
+
+::: {.callout-note collapse=true} 
+## Copy to GitHub issue
+
+```markdown
+## Checklist
+
+## Session 1
+- [ ] Onboarding issues?
+- [ ] Go over onboarding documentation
+- [ ] Go through checklists
+- [ ] Introduce MS Teams environment
+
+## Session 2
+- [ ] Onboarding issues?
+- [ ] Organisation
+- [ ] Teaching
+```

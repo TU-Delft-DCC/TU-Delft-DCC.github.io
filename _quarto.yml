@@ -94,6 +94,17 @@ website:
               href: docs/rse-onboarding/communication_channels.md
         - text: Onboarding checklists
           href: docs/rse-onboarding/onboarding_checklists.md
+          contents:
+            - text: New RSEs
+              href: docs/rse-onboarding/new_rse.md
+            - text: Onboarding sessions
+              href: docs/rse-onboarding/sessions.md
+            - text: Your first 30, 60, 90 days
+              href: docs/rse-onboarding/30-60-90.md
+            - text: Checklist for mentor
+              href: docs/rse-onboarding/mentor.md
+            - text: Checklist for admin
+              href: docs/rse-onboarding/admin.md
         - text: Organisation & partners
           href: docs/rse-onboarding/organisation_and_partners.md
         - text: Curriculum

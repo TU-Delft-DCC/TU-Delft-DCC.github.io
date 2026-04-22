@@ -45,6 +45,31 @@ corresponding: Raul Ortiz Merino
 # - 
 
 ---
-# Onboarding checklists
 
-We have created a number of checklists to help you get started at the DCC. These checklists are meant to be used as a guide and are not exhaustive. If you have any questions, please ask your mentor or the DCC team.
+# Administrative checklist for new DCC staff
+
+The following checklist is meant for the DCC team to ensure that all administrative tasks are completed when a new RSE joins. 
+
+::: {.callout-tip}
+## Checklist
+- [ ] Send welcoming e-mail out (by DCC coordinator) to announce the new RSE to relevant TU Delft partners (ICT Innovation, Data Stewards, Open Science Community) 
+- [ ] Request building(s) access 
+- [ ] Add account to Teams
+- [ ] Add to national communities (LCRDM, RDM, etc.)
+- [ ] Add profile to intranet
+- [ ] Add to DCC GitHub organisations
+:::
+
+::: {.callout-note collapse=true} 
+## Copy to GitHub issue
+
+```markdown
+## Checklist
+- [ ] Send welcoming e-mail out (by DCC coordinator) to announce the new RSE to relevant TU Delft partners (ICT Innovation, Data Stewards, Open Science Community) 
+- [ ] Request building(s) access 
+- [ ] Add account to Teams
+- [ ] Add to national communities (LCRDM, RDM, etc.)
+- [ ] Add profile to intranet
+- [ ] Add to DCC GitHub organisation(s)
+```
+:::
