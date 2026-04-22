@@ -45,3 +45,11 @@ corresponding: Raul Ortiz Merino
 # - 
 
 ---
+
+# Communication channels
+
+Similar to the meetings mentioned in the previous section, make sure to join or setup communication channels depending on your affiliations. Keep an eye out for:
+
+- Slack or Microsoft Teams environments
+- Mobile messaging apps
+- Mailing lists

@@ -45,3 +45,38 @@ corresponding: Raul Ortiz Merino
 # - 
 
 ---
+
+# Meetings and events
+
+## Upcoming onboarding meetings
+
+You may be eager to start getting right into work but, before that, onboarding meetings are a good way to get to know people, facilities, and resources. Some onboarding meetings may or may not be available for you depending on your affiliations, below some examples for you to check:
+
+- General onboarding and campus tour. In the TU Delft Intranet, go to [Introduction programme for new staff](https://intranet.tudelft.nl/en/group/guest/human-resources-en/introduction-programme-for-new-staff), and look for Welcome meeting & Campus tour: ‘Welcome by the Executive Board’.
+
+Depending on your affiliations:
+
+- Consortium (if you are part of a large multi-partner project)
+- Faculty
+- Deparment and/or section
+- Supervisor
+
+## Recurring meetings
+
+Similar to the onboarding meetings above, make sure to join or setup recurrent meetings depending on your affiliations. 
+
+Depending on the relationship you set with the TU Delft DCC, you might gain access to:
+
+- DCC standup meetings every Tuesday 10:00-10:30 (hybrid / changing location) for short project feedback and/or brainstorming.
+- DCC Coding Sessions every two weeks on Friday from 10:00-12:00 for lectures, workshops or tutorials.
+
+## Upcoming events and courses
+
+A non exhaustive list of events to keep an eye out for includes:
+
+- The Carpentries
+- Code Refinery
+- SURF
+- Netherlands eScience Center
+- Delft High Performance Computing Center
+- TU Delft R-café

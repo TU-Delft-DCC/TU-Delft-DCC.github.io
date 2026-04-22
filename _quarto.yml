@@ -85,6 +85,13 @@ website:
           href: docs/rse-onboarding/index.md
         - text: Getting started
           href: docs/rse-onboarding/getting_started.md
+          contents:
+            - text: Starting at the TU Delft
+              href: docs/rse-onboarding/starting_at_TUD.md
+            - text: Meetings and events
+              href: docs/rse-onboarding/meetings_and_events.md
+            - text: Communication channel(s)
+              href: docs/rse-onboarding/communication_channels.md
         - text: Onboarding checklists
           href: docs/rse-onboarding/onboarding_checklists.md
         - text: Organisation & partners
@@ -95,6 +102,7 @@ website:
           href: docs/rse-onboarding/bookmarks.md
         - text: References
           href: docs/rse-onboarding/references.md
+#
     - title: "Staff Onboarding"
       style: "docked"
       collapse-level: 2
@@ -110,6 +118,7 @@ website:
           href: docs/tud-support/learning.qmd
         - text: Soft Skills for Research Support
           href: docs/tud-support/soft_skills.qmd
+#
     - title: "Guides"
       style: "docked"
       collapse-level: 2
