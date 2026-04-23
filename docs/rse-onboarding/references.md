@@ -109,7 +109,7 @@ Research Institute - <https://qutech.nl/>
 
 * RDS team - <https://www.tudelft.nl/library/research-data-management/r/buttons/contact> 
 
-* Copyrights issues - <https://www.tudelft.nl/library/copyright> 
+* Copyright issues - <https://www.tudelft.nl/library/copyright> 
 
 * Open Access Publishing - <https://www.tudelft.nl/en/library/support/library-for-researchers/publishing-outreach/creating-your-publishing-strategy> 
 
@@ -125,8 +125,6 @@ Research Institute - <https://qutech.nl/>
 
 * Position DCC in Open Science - <https://www.tudelft.nl/open-science/about/projects/fair-data-and-fair-software> 
 
-* Teams channel - <https://teams.microsoft.com/l/team/19%3a694b885163b2469b860d7237a3304988%40thread.tacv2/conversations?groupId=c0054249-eb17-47f9-91b0-a294c161d7c9&tenantId=096e524d-6929-4030-8cd3-8ab42de0887b> 
-
 * (INOSC) - <https://osc-international.com/> 
 
 * Open Science community website - <https://osc-delft.github.io/> 
@@ -139,8 +137,6 @@ Research Institute - <https://qutech.nl/>
 
 * DelftBlue - <https://www.tudelft.nl/dhpc/system> 
 
-* Dennis Palagin - <https://www.tudelft.nl/en/staff/d.palagin/> 
-
 * Delft Blue Team - <https://www.tudelft.nl/dhpc/organisation/team> 
 
 * Delft Blue documentation - <https://doc.dhpc.tudelft.nl/delftblue/> 
@@ -148,8 +144,6 @@ Research Institute - <https://qutech.nl/>
 * Courses - <https://www.tudelft.nl/cse/education/courses> 
 
 * Mattermost chat - <https://mattermost.tudelft.nl/dhpc> 
-
-* faculty data stewards - <https://www.tudelft.nl/library/research-data-management/r/support/data-stewardship/contact> 
 
 * Data stewards overview - <https://www.tudelft.nl/en/library/research-data-management/r/support/data-stewardship> 
 
@@ -167,23 +161,15 @@ Research Institute - <https://qutech.nl/>
 
 * Alessandra Soro - <https://community.data.4tu.nl/members/asoro/> 
 
-* Roel Jansen - <https://community.data.4tu.nl/members/rrejanssen/> 
-
 * Training materials - <https://www.esciencecenter.nl/training-materials/> 
 
 * Events calendar - <https://www.esciencecenter.nl/events/> 
 
-* Mateusz Kuzak - <https://www.esciencecenter.nl/team/mateusz-kuzak-msc/> 
-
 * Carlos Martinez-Ortiz - <https://www.esciencecenter.nl/team/dr-carlos-martinez-ortiz/> 
-
-* Lieke de Boer - <https://www.esciencecenter.nl/team/dr-lieke-de-boer/> 
 
 * NL-RSE website - <https://nl-rse.org/> 
 
 * Public schedule Carpentries TU Delft - <https://www.tudelft.nl/library/research-data-management/r/training-evenementen/training-voor-onderzoekers/software-carpentry-workshops> 
-
-* Internal schedule - <https://docs.google.com/spreadsheets/d/1Oz9Q0w-A80wQs3kfxFa4Ob-5rQpHn5ou4W7rdWOslPE/edit?gid=0#gid=0> 
 
 * Paula Martinez Lavancy - <https://www.tudelft.nl/library/research-data-management/r/support/data-stewardship/contact/paula-martinez-lavanchy> 
 
@@ -216,8 +202,6 @@ Research Institute - <https://qutech.nl/>
 * Natural and Engineering Sciences (NES) - <https://tdcc.nl/nes/> 
 
 * Social Sciences and Humanities (SSH) - <https://tdcc.nl/ssh/> 
-
-* Mira Stanic - <https://tdcc.nl/community-coordinator-nes/> 
 
 
 
@@ -267,23 +251,9 @@ Research Institute - <https://qutech.nl/>
 
 * DCC Sharepoint Landing Page - <https://tud365.sharepoint.com/sites/FAIRSupportTeam/> 
 
-* Full Team - agenda and notes 2025 - <https://tud365.sharepoint.com/:w:/r/sites/FAIRSupportTeam/_layouts/15/Doc.aspx?sourcedoc=%7BE9FAB128-A6C8-477E-B68D-7673A23490B3%7D&file=2025%20Team%20Meetings%20-%20agenda%20and%20notes.docx&action=default&mobileredirect=true> 
-
 * DCC Guides - <https://tu-delft-dcc.github.io/> 
 
 * DCC Onboarding - <https://tu-delft-dcc.github.io/DCC_onboarding/> 
-
-* DCC Initiatives - project board - <https://tasks.office.com/tud365.onmicrosoft.com/en-US/Home/Planner#/plantaskboard?groupId=734ba893-72ca-411b-a1af-f7d208d5fb95&planId=HHB1x_SGnUG392NsoaczU5YAE2QV> 
-
-* DCC Initiatives - documents - <https://tud365.sharepoint.com/sites/FAIRSupportTeam/Gedeelde%20documenten/Forms/AllItems.aspx?RootFolder=%2Fsites%2FFAIRSupportTeam%2FGedeelde%20documenten%2FDCC%2DInitiatives&FolderCTID=0x012000BCC69E24AE02D74CABCE472FB71E165A> 
-
-* Library training schedule - <https://docs.google.com/spreadsheets/d/13hw40pYPSrtiCo3zSpA-vpA0WnOHLoGQOKSRXCecgpw/edit?usp=sharing> 
-
-* DCC Applications review list 2024 - <https://tud365.sharepoint.com/sites/FAIRSupportTeam/Lists/Autumn%2023%20Application%20list/Anonymous.aspx> 
-
-* DCC Support Documentation Templates - <https://tud365.sharepoint.com/sites/FAIRSupportTeam/Gedeelde%20documenten/Forms/AllItems.aspx?FolderCTID=0x012000BCC69E24AE02D74CABCE472FB71E165A&id=%2Fsites%2FFAIRSupportTeam%2FGedeelde%20documenten%2FApplications%2FSupport%20documentation&viewid=662daa90%2Da532%2D4c1f%2D8bc1%2D33f678712720> 
-
-* Clockify - Time Tracking Software - <https://clockify.me/timesheet> 
 
 
 
@@ -339,83 +309,12 @@ Research Institute - <https://qutech.nl/>
 
 
 
-## Docs/dcc-model/projects 
-
-* call texts on our website - <https://www.tudelft.nl/en/library/support/library-for-researchers/setting-up-research/dcc/calls/dcc-call-for-applications-autumn-2023> 
-
-* DCC dashboard - <https://tudelftdcc.shinyapps.io/dccapp/> 
-
-* Showcase projects - <https://www.tudelft.nl/en/library/support/library-for-researchers/setting-up-research/dcc/showcase-projects> 
-
-* Testimonials - <https://www.youtube.com/playlist?list=PLdHnT1NHNDE8_4XPQ3DcwoXaGMXSKTu0x> 
-
-* folder structure - <https://tud365.sharepoint.com/:i:/r/sites/FAIRSupportTeam/Gedeelde%20documenten/Applications/Folder%20structure%20for%20application%20process.png?csf=1&web=1&e=CfxPpE> 
-
-* Clockify - <https://app.clockify.me/en/login> 
-
-* Application Sharepoint list - <https://tud365.sharepoint.com/sites/FAIRSupportTeam/Lists/Autumn%2023%20Application%20list/Anonymous.aspx> 
-
-* 'Applications' channel in the DCC Support Team - <https://teams.microsoft.com/l/channel/19%3a0bb82e1cb31d45f3aabfa08d81530a6f%40thread.tacv2/Applications?groupId=734ba893-72ca-411b-a1af-f7d208d5fb95&tenantId=096e524d-6929-4030-8cd3-8ab42de0887b> 
-
-* Available templates - <https://tud365.sharepoint.com/:f:/r/sites/FAIRSupportTeam/Gedeelde%20documenten/Applications/Support%20documentation?csf=1&web=1&e=XR7MNT> 
-
-* Clockify - Time Tracking Software - <https://clockify.me/timesheet> 
-
-
-
-## Docs/dcc-model/initiatives 
-
-* Initiative Proposal Workflow - <https://tud365.sharepoint.com/:w:/r/sites/FAIRSupportTeam/Gedeelde%20documenten/Team%20organisation/propose-initiatives.docx?d=wb74791213e9d432a8765ce9705ba5a64&csf=1&web=1&e=rpjYq8> 
-
-* DCC guides - <https://tu-delft-dcc.github.io/> 
-
-* contributing guidelines - <https://tu-delft-dcc.github.io/CONTRIBUTING.html> 
-
-* FAIR for Research Software Program - <https://tu-delft-dcc.github.io/FAIR4RS/> 
-
-* helper availability - <https://tud365.sharepoint.com/:x:/r/sites/FAIRSupportTeam/_layouts/15/Doc.aspx?sourcedoc=%7BC3BB21B1-BB98-4D57-B4D5-C5FE2532F4D8%7D&file=Helper%20availability%20for%20FAIR4RS%202023.xlsx&action=default&mobileredirect=true> 
-
-* Code & Data Office Hours service - <https://tudelft.nl/dcc/ooh> 
-
-* storage solutions - <https://tudelft.topdesk.net/tas/public/ssp/content/detail/service?unid=f359caaa60264f99b0084941736786ae&from=dfa773f7-f382-4998-b0a2-2e8cda31e419> 
-
-* Cloud4Research - <https://tu-delft-ict-innovation.github.io/Cloud4Research/> 
-
-* DCC Testbed documentation - <https://tud365.sharepoint.com/:w:/r/sites/FAIRSupportTeam/Gedeelde%20documenten/Tooling,%20supercomputer%20and%20platforms/Testbed%20Server/testbed%20virtual%20server.docx?d=w2903079c6cac429a91fd3b3e3fce040e&csf=1&web=1&e=2YMqS9> 
-
-
-
-## Docs/dcc-model/day-to-day 
-
-* rolling agenda - <https://tud365.sharepoint.com/:w:/r/sites/FAIRSupportTeam/Gedeelde%20documenten/Meetings/DCC%20full%20team%20meetings%20(weekly)/2024%20FullTeam%20-%20agenda%20and%20notes.docx?d=w687cdc98514444d4bfd10c0c6cffe429&csf=1&web=1&e=cjkiRR> 
-
-* 2023 DCC Full Team - agenda and notes - <https://tud365.sharepoint.com/:w:/r/sites/FAIRSupportTeam/Gedeelde%20documenten/Meetings/DCC%20full%20team%20meetings%20(weekly)/2023%20FullTeam%20-%20agenda%20and%20notes.docx?d=we9294dfa011b4d0ca2536cef2934f6e3&csf=1&web=1&e=CM0aOX> 
-
-* 2024 DCC Full Team - agenda and notes - <https://tud365.sharepoint.com/:w:/r/sites/FAIRSupportTeam/Gedeelde%20documenten/Meetings/DCC%20full%20team%20meetings%20(weekly)/2024%20FullTeam%20-%20agenda%20and%20notes.docx?d=w687cdc98514444d4bfd10c0c6cffe429&csf=1&web=1&e=cjkiRR> 
-
-* 2025 DCC Full Team - agenda and notes - <https://tud365.sharepoint.com/:w:/r/sites/FAIRSupportTeam/_layouts/15/Doc2.aspx?action=edit&sourcedoc=%7Be9fab128-a6c8-477e-b68d-7673a23490b3%7D&wdOrigin=TEAMS-MAGLEV.teamsSdk_ns.rwc&wdExp=TEAMS-TREATMENT&wdhostclicktime=1734085429122&web=1> 
-
-* coding session schedule - <https://tud365.sharepoint.com/:w:/r/sites/FAIRSupportTeam/Gedeelde%20documenten/Meetings/DCC%20coding%20sessions/2024%20Schedule%20-%20Coding%20Sessions.docx?d=w9212bf47844d4a16a69b7c9fbf0c8f66&csf=1&web=1&e=A0iS6K&xsdata=MDV8MDJ8RS5Edmluc2tpc0B0dWRlbGZ0Lm5sfGEyYTYwZTRhODY4MjRkNThkMTNkMDhkYzU0OTNlYWFjfDA5NmU1MjRkNjkyOTQwMzA4Y2QzOGFiNDJkZTA4ODdifDB8MHw2Mzg0NzgyNDE0Nzk3MTU0MTR8VW5rbm93bnxUV0ZwYkdac2IzZDhleUpXSWpvaU1DNHdMakF3TURBaUxDSlFJam9pVjJsdU16SWlMQ0pCVGlJNklrMWhhV3dpTENKWFZDSTZNbjA9fDB8fHw%3d&sdata=U09vWnY0K242eDUrNkVSRllIaGNQdXFBYU11bjloL09WcEVodlhiU3V0QT0%3d> 
-
-* DCC Support Team - <https://teams.microsoft.com/l/channel/19%3a24a18c3d711149379d2bdacaf6829803%40thread.tacv2/Team%2520organisation?groupId=734ba893-72ca-411b-a1af-f7d208d5fb95&tenantId=096e524d-6929-4030-8cd3-8ab42de0887b> 
-
-* here - <https://www.tudelft.nl/en/it-manuals/e-mail-and-calendar> 
-
-* 'rules of engagement' - <https://tud365.sharepoint.com/:w:/r/sites/FAIRSupportTeam/Gedeelde%20documenten/Team%20organisation/Communication/Communication-Interaction.docx?d=wdace302afc0a428a969bc15eecbe4210&csf=1&web=1&e=z7cmLU> 
-
-
 
 ## Docs/getting-started/index 
 
 * Intranet page for new employees - <https://intranet.tudelft.nl/en/-/i-m-a-new-employee> 
 
 * Good to know - <https://www.tudelft.nl/over-tu-delft/werken-bij-tu-delft/nederland-tu-delft/support-for-international-employees/at-tu-delft/good-to-know> 
-
-
-
-## Docs/getting-started/ms-teams 
-
-* Autumn 23 Application List - <https://tud365.sharepoint.com/sites/FAIRSupportTeam/Lists/Autumn%2023%20Application%20list/Anonymous.aspx> 
 
 
 
