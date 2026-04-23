@@ -19,7 +19,7 @@ no_progress = false
 cache = true
 
 # Discard all cached requests older than this duration.
-max_cache_age = "1h"
+max_cache_age = "24h"
 
 #############################  Runtime  #############################
 
