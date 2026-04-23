@@ -68,7 +68,7 @@ Permissive licenses allow for broad reuse with minimal restrictions, while restr
 
 :::{.callout-note appearance="simple" icon="false"}
 ## {{< fa signs-post >}} Learn more
-- [Creative Commons Licenses](https://creativecommons.org/share-your-work/cclicenses/)
+- [Creative Commons Licenses](https://creativecommons.org/cc-licenses/)
 :::
 
 ## Other data licenses
