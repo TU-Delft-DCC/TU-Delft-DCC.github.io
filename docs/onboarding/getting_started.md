@@ -17,12 +17,12 @@ language:
 
 # Title of the document [manual entry]
 # Uncomment and populate the next line accordingly
-title: Starting at the TU Delft
+title: Starting at TU Delft
 
 # Brief overview of the document (will be used in listings) [manual entry]
 # Uncomment and populate the next line and uncomment "hide-description: true".
-#description: Short description of the document
-#hide-description: true
+description: Starting at TU Delft in an RSE-like role
+hide-description: true
 
 # Authors of the document, will not be parsed [manual entry]
 # Uncomment and populate the next lines accordingly
@@ -40,9 +40,10 @@ corresponding: Raul Ortiz Merino
 
 # Meaningful keywords, newline separated [manual entry]
 # Uncomment and populate the next line and list accordingly
-categories: 
- - Intranet
-# - 
+categories:
+  - Onboarding
+  - RSE
+  - Intranet
 
 ---
 
