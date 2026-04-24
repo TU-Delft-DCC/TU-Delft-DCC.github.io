@@ -47,25 +47,21 @@ corresponding: Raul Ortiz Merino
 ---
 # TU Delft partners
 
-The DCC has many partners, both within the university and outside. In this
-document, we aim to provide a list of partners we interact
+The DCC has many partners, both within the university and outside. In this document, we aim to provide a list of partners we interact
 with on a regular basis. 
 
 ## Researchers
-The TU Delft is a technical university with eight
-[faculties](https://www.tudelft.nl/en/about-tu-delft/organisation/faculties) and the [QuTech](https://qutech.nl/)Research Institute. The DCC is a central (virtual) team
-that provides support to all faculties. QuTech is an independent research institute with their own software developemnt team.
+The TU Delft is a technical university with eight [faculties](https://www.tudelft.nl/en/about-tu-delft/organisation/faculties) and the [QuTech](https://qutech.nl/) Research Institute. The DCC is a central (virtual) team that provides support to all faculties. QuTech is an independent research institute with their own software development team.
 
 - [TU Delft organogram](https://www.tudelft.nl/en/about-tu-delft/organisation)
+- [TU Delft Interactive organogram](https://intranet.tudelft.nl/organisatie)
 - [About TU Delft](https://www.tudelft.nl/en/about-tu-delft)
 
 ## ICT
-All research software engineers working in the DCC are employed by ICT - Innovation. Here, you can find the [ICT organogram July 2024](../images/Organogram_ICT_07-2024.pdf).
+All Research Software Engineers working at the DCC are employed by ICT Innovation.
 
 ### ICT - Innovation
-The Innovation department is headed by
-[Julie Beardsell](https://www.tudelft.nl/staff/j.a.beardsell/), who is the direct line manager of the research software engineers and the DCC coordinator. 
-The department hosts various experts and picks up projects that don't fit the other (more regular) departments. The Innovation department meets up every six weeks.
+The Innovation department is headed by [Julie Beardsell](https://www.tudelft.nl/staff/j.a.beardsell/), who is the direct line manager of the research software engineers and the DCC coordinator. The department hosts various experts and picks up projects that don't fit the other (more regular) departments.
 
 ### Cloud for Research
 A couple of members of the ICT Innovation department form the Cloud4Research initiative. They provide a contact point to support researchers in using cloud services for their research.
@@ -73,7 +69,7 @@ A couple of members of the ICT Innovation department form the Cloud4Research ini
 - [Cloud4Research](https://tu-delft-ict-innovation.github.io/Cloud4Research/)
 
 ## Library
-All data managers working in the DCC are employed by [TU Delft Library](https://www.tudelft.nl/en/library)  - Research Data and Software. 
+All Research Data Engineers working at the DCC are employed by [TU Delft Library](https://www.tudelft.nl/en/library) - Research Data and Software. 
 
 - [About TUD library organisation](https://www.tudelft.nl/en/library/about-the-library/the-organisation)
 - [TUD Research Services governance](https://openworking.wordpress.com/2023/05/22/organisation-of-research-services-department-tu-delft-library/). 
@@ -81,7 +77,7 @@ All data managers working in the DCC are employed by [TU Delft Library](https://
 The library is a frequent host of events (trainings, meetups, etc.). If you organise a meeting open to the public, you can request a [room in a TU Delft Library](https://www.tudelft.nl/en/library/using-the-library/facilities-study-places/overview-of-rooms).  
 
 ### Research Data and Software
-Research Data and Software (RDS) is a team dealing with Research Data Management-related, trainings, policies, etc. Up until recently, this team comprised colleagues who worked on the [4TU.ResearchData](https://data.4tu.nl/info/en/) repository. Since January 2023, the teams have split, but continue to work closely with each other.  [Yan Wang](https://www.tudelft.nl/en/library/research-data-management/r/support/data-stewardship/contact/yan-wang) is head of RDS team and is thus the line manager of DCC data engineers.
+Research Data and Software (RDS) is a team dealing with Research Data Management-related, trainings, policies, etc. Up until recently, this team comprised colleagues who worked on the [4TU.ResearchData](https://data.4tu.nl/info/en/) repository. Since January 2023, the teams have split, but continue to work closely with each other. [Yan Wang](https://www.tudelft.nl/en/library/research-data-management/r/support/data-stewardship/contact/yan-wang) is head of RDS team and is thus the line manager of DCC Research Data Engineers.
 
 ### Links
 - [RDS team](https://www.tudelft.nl/library/research-data-management/r/buttons/contact)
@@ -96,7 +92,7 @@ Research Data and Software (RDS) is a team dealing with Research Data Management
 
 With the Open Science Programme 2020-2024, Research and Education in the Open Era, TU Delft wishes to take Open Science to the next level: a situation in which Open Science has become the default way of practising research and education, and the 'information era' has become the 'open era'. 
 
-The DCC is a deliverable of the FAIR data and software project of the Open Science Program 2020-2024.
+The DCC was originally part of the FAIR data and software project of the Open Science Program 2020-2024.
 
 ## Links
 - [Organisation](https://www.tudelft.nl/open-science/about/organisation)
@@ -115,7 +111,7 @@ The Open Hardware project aims to further embed open-source hardware into the Op
 
 ### Links
 - [Deliverable from Open Science Program](https://www.tudelft.nl/open-science/about/projects/open-hardware)
-- https://www.tudelft.nl/open-hardware
+- <https://www.tudelft.nl/open-hardware>
 - [Open Hardware Academy](https://www.openhardware.academy/01_Welcome.html)
 
 ## Delft High Performance Computing Center
@@ -126,35 +122,23 @@ The Open Hardware project aims to further embed open-source hardware into the Op
 - [Courses](https://www.tudelft.nl/cse/education/courses) - courses overview
 - [Mattermost chat](https://mattermost.tudelft.nl/dhpc) - Users chat 
 
-
 ## Data Stewards
-The TU Delft has appointed at least one disciplinary data steward at each faculty and a data stewardship coordinator based at the Library. The [faculty data stewards](https://www.tudelft.nl/library/research-data-management/r/support/data-stewardship/contact) interact with researchers directly and act as the first
-contact point for any data and code-related requests, develop faculty-specific
-policies and workflows, and deliver training for faculty staff. The data
-stewards were initially funded by TU Delft's Executive Board from 2018 until the
-end of 2020. This pilot was successful and the data stewards are now embedded as
-permanent members of staff, funded from faculty budgets. 
+The TU Delft has appointed at least one disciplinary data steward at each faculty and a data stewardship coordinator based at the Library. The [faculty data stewards](https://www.tudelft.nl/library/research-data-management/r/support/data-stewardship/contact) interact with researchers directly and act as the first contact point for any data and code-related requests, develop faculty-specific policies and workflows, and deliver training for faculty staff. The data stewards were initially funded by TU Delft's Executive Board from 2018 until the end of 2020. This pilot was successful and the data stewards are now embedded as permanent members of staff, funded from faculty budgets. 
 
 - [Data stewards overview](https://www.tudelft.nl/en/library/research-data-management/r/support/data-stewardship)
 - [Faculty data stewards](https://www.tudelft.nl/en/library/research-data-management/r/support/data-stewardship/contact)
-- Generic email: datastewards@tudelft.nl
 
 ## Faculty ICT Managers
-The Faculty IT Manager (FIM) is the relationship manager between customers and
-the Shared Service Center ICT (SSC-ICT). They act as an advisor, source of
-information, and point of contact. For the DCC, they can be a partner for more
-ICT-focussed solutions such as (data)storage and faculty servers.
+The Faculty IT Manager (FIM) is the relationship manager between customers and the Shared Service Center ICT (SSC-ICT). They act as an advisor, source of information, and point of contact. For the DCC, they can be a partner for more ICT-focussed solutions such as (data)storage and faculty servers.
 
 ### Links
 - [FIM information](https://intranet.tudelft.nl/en/-/faculty-it-manager)
-- Faculty Information Security Coordinator
-
 
 ## 4TU.ResearchData
 [4TU.ResearchData](https://data.4tu.nl/info/en/) is an international data repository for science, engineering and design. Its services include curation, sharing, long-term access and preservation of research datasets. These services are available to anyone around the world. In addition, 4TU.ResearchData also offers training and resources to researchers to support them in making research data findable, accessible, interoperable and reproducible (FAIR). TU Delft hosts the employees and teh infrastructure for 4TU.ResearchData.
 
-**DCC involvememt**  
-The DCC is often involved in archiving data and software within a 4TU.ResearchData repository (in collaboration with the Data Stewards) and DCC members are active in the community. Currently, the development team will replace the repository back-end with an in-house developed open-source version, called [Djehuty](https://community.data.4tu.nl/2023/01/30/we-are-going-free-and-open-source/). The DCC might become an consultant or contributor to the project.
+**DCC involvement**  
+The DCC is often involved in archiving data and software within a 4TU.ResearchData repository (in collaboration with the Data Stewards) and DCC members are active in the community. Currently, the development team develops and maintains an in-house developed open-source version, called [Djehuty](https://community.data.4tu.nl/2023/01/30/we-are-going-free-and-open-source/).
 
 ### Links
 - [Join the community](https://community.data.4tu.nl/join-our-community/).
@@ -167,39 +151,27 @@ Useful contacts:
 # External stakeholders
 
 ## eScience Center
-Founded in 2012 as an independent foundation by NWO and SURF, the Netherlands
-eScience Center is the national centre with the digital skills to create
-innovative software solutions in academic research. 
+Founded in 2012 as an independent foundation by NWO and SURF, the Netherlands eScience Center is the national centre with the digital skills to create innovative software solutions in academic research. 
 
-We award research projects based on calls for proposals, and we train
-researchers in the use of research software. Our contribution is primarily
-in-kind. We offer our expertise in the form of research software engineers
-(RSEs), the technology specialists with expert digital skills who work with us
-at the Center. 
+We award research projects based on calls for proposals, and we train researchers in the use of research software. Our contribution is primarily in-kind. We offer our expertise in the form of research software engineers (RSEs), the technology specialists with expert digital skills who work with us at the Center. 
 
 - [Training materials](https://www.esciencecenter.nl/training-materials/)
 - [Events calendar](https://www.esciencecenter.nl/events/)
 
 Useful contacts:  
 
-- [Carlos Martinez-Ortiz](https://www.esciencecenter.nl/team/dr-carlos-martinez-ortiz/) - Community Manager, Natural Sciences & Engineering  
+- [Carlos Martinez-Ortiz](https://www.esciencecenter.nl/team/dr-carlos-martinez-ortiz/) - Community Manager, Natural Sciences & Engineering
 
 
 ## RSE NL
-NL-RSE brings together the community of people writing and contributing to
-research software from Dutch universities, knowledge institutes, companies and
-other organizations to share knowledge, to organize meetings, and raise
-awareness for the scientific recognition of research software. The network has
-been established by the eScience Center in 2017 and has 200+ members from more
-than 30 institutes across the country.
+NL-RSE brings together the community of people writing and contributing to research software from Dutch universities, knowledge institutes, companies and other organizations to share knowledge, to organize meetings, and raise awareness for the scientific recognition of research software. The network has been established by the eScience Center in 2017 and has 200+ members from more than 30 institutes across the country.
 
 - [NL-RSE website](https://nl-rse.org/)
-
 
 ## Carpentries
 The Carpentries teaches foundational coding and data science skills to researchers worldwide. The Carpentries project comprises the Software Carpentry, Data Carpentry, and Library Carpentry communities of Instructors, Trainers, Maintainers, helpers, and supporters who share a mission to teach foundational computational and data science skills to researchers. 
 
-All RSE's and data managers in the DCC are trained instructors in the Carpentries. 
+All members of the DCC are trained instructors in the Carpentries. 
 
 - [Public schedule Carpentries TU Delft](https://www.tudelft.nl/library/research-data-management/r/training-evenementen/training-voor-onderzoekers/software-carpentry-workshops)
 - TU Delft Coordinator: [Paula Martinez Lavancy](https://www.tudelft.nl/library/research-data-management/r/support/data-stewardship/contact/paula-martinez-lavanchy)
@@ -207,8 +179,6 @@ All RSE's and data managers in the DCC are trained instructors in the Carpentrie
 
 ## Code Refinery
 [The Code Refinery](https://coderefinery.org/) teaches all the essential tools which are usually skipped in academic education so everyone can make full use of software, computing, and data. They don't just give courses, but are a training network that you can join to share the effort and bring better courses to your community.
-
-The Code Refinery is currently hosting two workshops per year that the TU Delft joins. Members of the DCC act as exercise leaders. 
 
 - [Core Lessons](https://coderefinery.org/lessons/core/)
 - [Code Refinery upcoming workshops](https://coderefinery.org/workshops/upcoming/)
@@ -228,7 +198,7 @@ The Dutch Research Council [(NWO)](https://www.nwo.nl/en) is one of the most imp
 
 The Digital Competence Centers at the Dutch universities were initially funded by the NWO and continues to be supported by them.
 
-https://www.nwo.nl/en/news/digital-competence-centers-knowledge-institutions-forging-ahead
+<https://www.nwo.nl/en/news/digital-competence-centers-knowledge-institutions-forging-ahead>
 
 
 ## Thematic DCCs
@@ -241,5 +211,3 @@ To support this, the [implementation plan](https://www.nwo.nl/en/news/setup-them
 - [Social Sciences and Humanities (SSH)](https://tdcc.nl/ssh/)
 
 The TDCC-NES is based at the TU Delft.
-
-- Joanne Yeomans - Network manager NES domain
