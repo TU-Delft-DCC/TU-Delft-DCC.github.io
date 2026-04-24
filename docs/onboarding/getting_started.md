@@ -47,8 +47,9 @@ categories:
 
 ---
 
-:::{.callout-tip}  
-## Start here!
+:::{.callout-tip appearance="simple" icon="false"}
+## {{< fa lightbulb >}} Start here!
+
 Being a new employee, the [TU Delft Intranet](https://intranet.tudelft.nl/en/) contains an overview of useful information and activities in preparation of starting your new job and during your first days/weeks, as well as tips for continuing your exploration of the TU Delft community. You need to log in with your **NetID** to get access to the content. 
 
 - [Intranet page for new employees](https://intranet.tudelft.nl/en/-/i-m-a-new-employee) (NetID required)
