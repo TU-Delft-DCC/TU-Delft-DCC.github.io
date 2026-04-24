@@ -88,11 +88,8 @@ RSE work is not limited to people with “RSE” in their job title; many suppor
 ### How success is measured
 
 Across support roles, success often looks like:
+
 - reduced friction in research workflows,
 - fewer recurring technical issues,
 - easier onboarding for new contributors,
 - improved reproducibility and transparency.
-
-::: callout-important
-If your work makes research easier for the next person, you are creating long-term value.
-:::

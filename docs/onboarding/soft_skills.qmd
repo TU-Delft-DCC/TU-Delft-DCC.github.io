@@ -47,6 +47,7 @@ author_1: Aysun Urhan
 Research support is fundamentally **working with people**.
 
 Whether you are supporting software, data, infrastructure, or policy, your effectiveness depends on how well you:
+
 - understand people’s needs,
 - communicate constraints and trade-offs,
 - coordinate across organizational boundaries,
@@ -60,11 +61,13 @@ Soft skills are what really make good practices scale and stick.
 ### Communication as translation
 
 A core soft skill in research support is **translation**:
+
 - between researchers and technical systems,
 - between different support roles,
 - between short-term needs and long-term sustainability.
 
 Good communication often looks like:
+
 - asking clarifying questions early,
 - summarizing decisions in writing,
 - naming assumptions explicitly.
@@ -86,6 +89,7 @@ If a request feels vague, it probably is. Clarifying scope is support work, not 
 Many support challenges arise from **implicit expectations**.
 
 As a support professional, it is often necessary to:
+
 - make trade-offs explicit,
 - limit scope to what is feasible,
 - push back on unrealistic timelines.
@@ -106,6 +110,7 @@ Research support at TU Delft is **distributed by design**.
 No single role covers everything.
 
 Effective collaboration means:
+
 - knowing what other roles do,
 - recognizing when to involve others,
 - avoiding ownership gaps.
@@ -126,6 +131,7 @@ Good coordination reduces duplicated effort.
 Support work is not just about solving today’s problem, it is about **reducing future support load**.
 
 Teaching can be informal and lightweight:
+
 - pairing once instead of fixing silently,
 - explaining the *why*, not just the *how*,
 - leaving behind documentation or templates.
@@ -144,11 +150,13 @@ If you solve the same problem twice, it is time to document it.
 ### Navigating ambiguity
 
 Support work often involves:
+
 - incomplete information,
 - shifting priorities,
 - unclear ownership.
 
 This is perfectly normal and we should learn to be comfortable with it. To enable that, helpful habits include:
+
 - making uncertainty explicit,
 - proposing a next small step,
 - revisiting decisions as context changes.
@@ -159,6 +167,7 @@ This is perfectly normal and we should learn to be comfortable with it. To enabl
 Finally, sustainable support requires **boundaries**.
 
 This includes:
+
 - protecting time for documentation and learning,
 - avoiding overcommitment,
 - recognizing when work should stop or change direction.

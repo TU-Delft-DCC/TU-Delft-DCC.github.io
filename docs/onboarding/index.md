@@ -3,11 +3,11 @@
 
 # We use this key to indicate the last reviewed date [manual entry, use YYYY-MM-DD]
 # Uncomment and populate the next line accordingly
-date: 2025-12-14
+date: 2026-04-24
 
 # We use this key to indicate the last modified date [manual entry, use YYYY-MM-DD]
 # Uncomment and populate the next line accordingly
-date-modified: 2025-12-14
+date-modified: 2026-04-24
 
 # Do not modify
 lang: en
@@ -17,7 +17,7 @@ language:
 
 # Title of the document [manual entry]
 # Uncomment and populate the next line accordingly
-title: Getting started
+title: Onboarding
 
 # Brief overview of the document (will be used in listings) [manual entry]
 # Uncomment and populate the next line and uncomment "hide-description: true".
@@ -27,12 +27,12 @@ title: Getting started
 # Authors of the document, will not be parsed [manual entry]
 # Uncomment and populate the next lines accordingly
 author_1: Aysun Urhan
-#author_2:
+author_2: Raul Ortiz Merino
 
 # Maintainers of the document, will not be parsed [manual entry]
 # Uncomment and populate the next lines accordingly
 maintainer_1: Aysun urhan
-#maintainer_2:
+maintainer_2: Raul Ortiz Merino
 
 # To whom reach out regarding the document, will not be parsed [manual entry]
 # Uncomment and populate the next line accordingly
@@ -42,34 +42,32 @@ corresponding: Aysun Urhan
 # Uncomment and populate the next line and list accordingly
 categories: 
  - Onboarding
- - RSE support
+ - RSE
 
 ---
 
-Welcome to **research support at TU Delft**.
+Welcome to the **onboarding program** developed by the TU Delft Digital Competence Centre. This documentation contains information and references that are useful to know when starting at the TU Delft as a Research Software Engineer (RSE) or a similar position. 
 
-Research support staff play a crucial role in enabling high-quality, sustainable, and reproducible research.  
-This includes roles such as:
+RSEs play a crucial role in enabling high-quality, sustainable, and reproducible research. RSE-like roles may be listed as:
 
-- Research Software Engineers (RSEs)
-- Data Stewards
-- Research IT & infrastructure specialists
-- Library research support staff
-- Open Science & FAIR specialists
-- Project and grant support staff
+- Research Data Engineer (RDE)
+- Research Engineer
+- Data Manager
+- Postdoc
 
-Although roles differ, many challenges, skills, and practices are shared.
+Although roles differ, many challenges, skills, and practices are shared. For consistancy, the name RSE is used throughout.
 
-::: callout-note
-This onboarding guide is for *all* research support staff at TU Delft, regardless of faculty or organizational unit.
+::: {.callout-note}
+## For whom?
+This onboarding guide contains information relevant for *all* RSEs at TU Delft, regardless of faculty or organizational unit.
 :::
 
 #### How to use this guide
 
 This section is designed as a **starting point and reference**, not a linear course.
 
-- New staff can use it for orientation
-- Experienced staff can use it to discover connections and shared practices
+- New RSEs can use it for orientation
+- Experienced RSEs can use it to discover connections and shared practices
 - Teams can use it to align expectations and terminology
 
 Revisit sections as your role and responsibilities evolve.
@@ -79,6 +77,24 @@ Revisit sections as your role and responsibilities evolve.
 
 ::: {.content-block}
 ::: {.features}
+
+::: {.feature}
+###  Getting started
+Resources to check first
+
+::: {.learn-more}
+[Learn more »](./getting_started.md)
+:::
+:::
+
+::: {.feature}
+###  Checklists
+Collection of onboarding checklists
+
+::: {.learn-more}
+[Learn more »](./checklists/index.md)
+:::
+:::
 
 ::: {.feature}
 ###  About Research Support at TU Delft
@@ -111,19 +127,10 @@ Shared foundations, role-specific depth, and available courses and workshops.
 ### Soft Skills for Research Support
 Communication, collaboration, and stakeholder management tailored to research contexts.
 
+::: {.learn-more}
 [Learn more »](./soft_skills.qmd)
-
 :::
 :::
 
-
-:::{.callout-important icon="true"}
-## Research support at TU Delft is guided by:
-
-- Collaboration across roles and units
-- Sustainable solutions over short-term fixes
-- FAIR and Open Science by default
-- Knowledge sharing and reuse
-
 :::
-
+:::
