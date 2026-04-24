@@ -80,7 +80,7 @@ Revisit sections as your role and responsibilities evolve.
 
 ::: {.feature}
 ###  Getting started
-Resources to check first
+Resources to check first.
 
 ::: {.learn-more}
 [Learn more »](./getting_started.md)
@@ -89,7 +89,7 @@ Resources to check first
 
 ::: {.feature}
 ###  Checklists
-Collection of onboarding checklists
+Collection of onboarding checklists.
 
 ::: {.learn-more}
 [Learn more »](./checklists/index.md)
