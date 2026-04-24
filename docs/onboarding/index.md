@@ -57,8 +57,8 @@ RSEs play a crucial role in enabling high-quality, sustainable, and reproducible
 
 Although roles differ, many challenges, skills, and practices are shared. For consistancy, the name RSE is used throughout.
 
-::: {.callout-note}
-## For whom?
+:::{.callout-note appearance="simple" icon="false"}
+## {{< fa info-circle >}} For whom?
 This onboarding guide contains information relevant for *all* RSEs at TU Delft, regardless of faculty or organizational unit.
 :::
 
