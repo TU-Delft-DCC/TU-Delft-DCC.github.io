@@ -72,11 +72,4 @@ Depending on the relationship you set with the TU Delft DCC, you might gain acce
 
 ## Upcoming events and courses
 
-A non exhaustive list of events to keep an eye out for includes:
-
-- The Carpentries
-- Code Refinery
-- SURF
-- Netherlands eScience Center
-- Delft High Performance Computing Center
-- TU Delft R-café
+A non exhaustive list of relevant organizations to keep an eye out for can be found at [Courses and Workshops](../resources/courses.md)

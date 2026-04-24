@@ -50,7 +50,7 @@ categories:
 
 Welcome to the onboarding program developed by the TU Delft Digital Competence Centre.
 
-This documentation contains information and references that are useful to know when starting at the TU Delft as a Research Software Engineer (RSE), or a similar position. 
+This documentation contains information and references that are useful to know when starting at the TU Delft as a Research Software Engineer (RSE) or a similar position. 
 
 RSEs play a crucial role in enabling high-quality, sustainable, and reproducible research. RSE-like roles may be listed as:
 
@@ -59,7 +59,7 @@ RSEs play a crucial role in enabling high-quality, sustainable, and reproducible
 - Data Manager
 - Postdoc
 
-Although roles differ, many challenges, skills, and practices are shared. RSE is therefore used throughout.
+Although roles differ, many challenges, skills, and practices are shared. For consistancy, the name RSE is therefore used throughout.
 
 ::: callout-note
 This onboarding guide is for *all* RSEs at TU Delft, regardless of faculty or organizational unit.
