@@ -111,8 +111,6 @@ website:
           href: docs/rse-onboarding/curriculum.md
         - text: Bookmarks
           href: docs/rse-onboarding/bookmarks.md
-        - text: References
-          href: docs/rse-onboarding/references.md
 #
     - title: "Staff Onboarding"
       style: "docked"
