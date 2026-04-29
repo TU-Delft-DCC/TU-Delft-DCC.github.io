@@ -93,7 +93,7 @@ website:
             - text: Checklist for mentor
               href: docs/onboarding/checklists/mentor.md
         - text: Partners
-          href: docs/onboarding/contacts.qmd
+          href: docs/onboarding/contacts.md
         - text: The role of an RSE
           href: docs/onboarding/about.qmd
         - text: Learning & Training

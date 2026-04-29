@@ -110,7 +110,7 @@ How research support is organized, how roles connect, and where RSE practices fi
 Who does what, where to ask questions, and how to navigate support structures.
 
 ::: {.learn-more}
-[Learn more »](./contacts.qmd)
+[Learn more »](./contacts.md)
 :::
 :::
 
