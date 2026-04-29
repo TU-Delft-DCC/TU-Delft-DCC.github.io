@@ -21,8 +21,8 @@ title: Onboarding checklists
 
 # Brief overview of the document (will be used in listings) [manual entry]
 # Uncomment and populate the next line and uncomment "hide-description: true".
-#description: Short description of the document
-#hide-description: true
+description: Checklists for onboarding in RSE-like roles at TU Delft
+hide-description: true
 
 # Authors of the document, will not be parsed [manual entry]
 # Uncomment and populate the next lines accordingly
@@ -40,13 +40,13 @@ corresponding: Raul Ortiz Merino
 
 # Meaningful keywords, newline separated [manual entry]
 # Uncomment and populate the next line and list accordingly
-#categories: 
-# - 
-# - 
+categories:
+  - Onboarding
+  - RSE
 
 ---
 
-We have created some checklists to help you get started. These checklists are meant to be used as a guide and are not exhaustive. If you have any questions, please ask your mentor or the DCC team.
+We have created some checklists to help you get started. These checklists are meant to be used as a guide and are not exhaustive.
 
 
 - [Checklist for new staff](./new_rse.md)
