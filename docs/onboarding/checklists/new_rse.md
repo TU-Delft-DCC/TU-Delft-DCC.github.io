@@ -49,8 +49,8 @@ categories:
 
 The following practial checklist is meant to help new staff get started. It is not meant to be exhaustive, but to provide a starting point for the onboarding process.
 
-::: {.callout-tip}
-## Checklist
+:::{.callout-tip appearance="simple" icon="false"}
+## {{< fa lightbulb >}} Checklist
 - [ ] Collect laptop and campus card
 - [ ] Check out the intranet page ["I'm a new employee"](https://intranet.tudelft.nl) 
   - [ ] Register for the TU Delft onboarding activities [Introduction programme for new staff](https://intranet.tudelft.nl/-/introduction-programme-for-new-staff)
@@ -64,8 +64,8 @@ The following practial checklist is meant to help new staff get started. It is n
 - [ ] (Optional) Sign up for Carpentries Instructor Training
 :::
 
-::: {.callout-note collapse=true} 
-## Copy to GitHub issue
+:::{.callout-note appearance="simple" icon="false" collapse="true"}
+## {{< fa info-circle >}} Copy to GitHub issue
 
 ```markdown
 ## Checklist
