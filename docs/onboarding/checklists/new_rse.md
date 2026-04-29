@@ -51,7 +51,6 @@ The following practial checklist is meant to help new staff get started. It is n
 ::: {.callout-tip}
 ## Checklist
 - [ ] Collect laptop and campus card
-- [ ] Activate TU Delft Google account by login with NetID@g-tudelft.nl
 - [ ] Check out the intranet page ["I'm a new employee"](https://intranet.tudelft.nl) 
   - [ ] Register for the TU Delft onboarding activities [Introduction programme for new staff](https://intranet.tudelft.nl/-/introduction-programme-for-new-staff)
   - [ ] Finance administration (expense claims and business trips)
@@ -70,7 +69,6 @@ The following practial checklist is meant to help new staff get started. It is n
 ```markdown
 ## Checklist
 - [ ] Collect laptop and campus card
-- [ ] Activate TU Delft Google account by login with NetID@g-tudelft.nl
 - [ ] Check out the intranet page ["I'm a new employee"](https://intranet.tudelft.nl) 
   - [ ] Register for the TU Delft onboarding activities [Introduction programme for new staff](https://intranet.tudelft.nl/-/introduction-programme-for-new-staff)
   - [ ] Finance administration (expense claims and business trips)
