@@ -63,18 +63,18 @@ Below are selected references that are good to know when for a new employee at T
 - Your **campus card** allows you to get coffee and tea, print anywhere on campus, and give you access to the TU Delft car park facilities.
 - Access your **e-mail** anywhere through [webmail](https://outlook.office.com/mail/). Log in with NetID (NOT your e-mail address) and password.
 - **Change your password** in the [Self Service Password Reset](https://password.tudelft.nl).
-- On our [Intranet](https://intranet.tudelft.nl/) you'll find a **personal landing page** that you can customize by adjusting the settings in dedicated boxes. Good for looking up how to do administrative tasks, like requesting holidays and registering working hours in [TIM](https://hours.tudelft.nl) .
+- On our [Intranet](https://intranet.tudelft.nl/) you'll find a **personal landing page** that you can customize by adjusting the settings in dedicated boxes. Good for looking up how to do administrative tasks, like requesting holidays and registering working hours in [TIM](https://hours.tudelft.nl).
 - **Administer personal data** in the [TU Delft Identity Manager](https://iam.tudelft.nl/). Here you add content to your personal page (e.g., <https://www.tudelft.nl/staff/m.w.a.kok/>). Please note: It takes some time before this page and changes to it appear.
 - You can update your photo in the [TU Delft Identity Manager](https://iam.tudelft.nl).
-- In the **self-service portal**, [TopDesk](https://tudelft.topdesk.net/), you can find practical information on facilities and services available. If you can't find what you're looking for, contact the service point (servicepunt@tudelft.nl). They may make a *call* for you, which you can follow in the self-service portal (click the tile 'My requests').
+- In the **self-service portal**, [TopDesk](https://tudelft.topdesk.net/), you can find practical information on facilities and services available. If you can't find what you're looking for, contact the [Service Desk](https://www.tudelft.nl/en/student/contact/service-desk) for help.
 - When your monthly payslip is ready, you will be notified by e-mail. Your salary will be paid on the following [dates](https://intranet.tudelft.nl/en/-/payment-dates?redirect=%2Fen%2F-%2Fdigital-payslip-and-annual-income-statement).
 
 ### Parking and getting around the campus
 - Look up for buildings, bus stops and more in the [TU Delft Campus Map](https://map.tudelftcampus.nl).
-- For general TU Delft accessibility related questions, check <https://www.tudelftcampus.nl/accessibility/>.
+- For general TU Delft accessibility related questions, check [here](https://www.tudelftcampus.nl/accessibility/).
 - TU Delft has set up a [parking policy](https://www.tudelft.nl/en/about-tu-delft/contact-and-campus/parking-policy), you can find a map that shows the [parking spots](https://map.tudelftcampus.nl/embed/faculty,building,bus-stop,parking-spot,parking-space-for-disabled,railway-station/).
-- As a TU Delft employee coming to the campus on a bike, you can park your bike in secure bike sheds at your Faculty and can usually request access through department secretaries.
-- If you need a bike to get around the campus, you can reserve a bike through [Topdesk](https://tudelft.topdesk.net/).
+- As a TU Delft employee coming to the campus on a bike, you can park your bike in secure bike sheds at your faculty and can usually request access through department secretaries.
+- If you need a bike to get around the campus, you can reserve a bike through [TopDesk](https://tudelft.topdesk.net/).
 
 ### ICT Services and Software
 - The [Research Support Portal](https://www.tudelft.nl/research-support) is a portal where researchers at TU Delft — from PhD candidates to professors — can find the services and resources they need.
