@@ -47,7 +47,7 @@ categories:
 
 ---
 
-A new RSE could be assigned a DCC mentor or buddy to support the onboarding during the first months, especially if working together in a project. The mentor should be a direct colleague or member of the DCC, but not the direct supervisor. The mentor will be responsible for the following tasks:
+A new RSE could be assigned a mentor or buddy to support the onboarding during the first months, especially if working together in a project. The mentor should be a direct colleague able to provide guidance and support. The mentor can be responsible for the following tasks:
 
 :::{.callout-tip appearance="simple" icon="false"}
 ## {{< fa lightbulb >}} Checklist
