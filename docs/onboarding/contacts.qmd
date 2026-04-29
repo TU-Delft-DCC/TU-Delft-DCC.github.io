@@ -21,8 +21,8 @@ title: Contacts & Support Landscape
 
 # Brief overview of the document (will be used in listings) [manual entry]
 # Uncomment and populate the next line and uncomment "hide-description: true".
-#description: Short description of the document
-#hide-description: true
+description: TU Delft Partners
+hide-description: true
 
 # Authors of the document, will not be parsed [manual entry]
 # Uncomment and populate the next lines accordingly
@@ -39,7 +39,8 @@ author_1: Aysun Urhan
 
 # Meaningful keywords, newline separated [manual entry]
 # Uncomment and populate the next line and list accordingly
-#categories: 
+categories:
+  - RSE
 
 
 ---
@@ -56,50 +57,49 @@ The TU Delft is a technical university with eight [faculties](https://www.tudelf
 - [About TU Delft](https://www.tudelft.nl/en/about-tu-delft)
 
 ### ICT
-All Research Software Engineers working in the DCC are employed by ICT Innovation.
+All Research Software Engineers working in the DCC are employed by ICT Innovation. The department meets regularly to coordinate activities and share expertise. 
 
-### ICT Innovation
-The Innovation department hosts a diverse group of experts and takes on projects that in the Research domain. The department meets regularly to coordinate activities and share expertise.
-
-### Cloud for Research
+#### **Cloud for Research**
 Cloud for Research (Cloud4Research) supports researchers in using cloud services for research purposes and serves as a central contact point for cloud-related questions.
 
-- Cloud4Research: [https://tu-delft-ict-innovation.github.io/Cloud4Research/](https://tu-delft-ict-innovation.github.io/Cloud4Research/)
+- [Cloud4Research](https://tu-delft-ict-innovation.github.io/Cloud4Research/)
 
 ### Library 
-All Research Data Engineers working in DCC are employed by TU Delft Library-Research Data and Software.
+All Research Data Engineers working in DCC are employed by TU Delft Library.
 
-- [About TUD library organisation](https://www.tudelft.nl/en/library/about-the-library/the-organisation)
-- [TUD Research Services governance](https://openworking.wordpress.com/2023/05/22/organisation-of-research-services-department-tu-delft-library/) 
-
-The library is a frequent host of events (trainings, meetups, etc.). If you organise a meeting open to the public, you can request a [room in a TU Delft Library](https://www.tudelft.nl/en/library/using-the-library/facilities-study-places/overview-of-rooms).  
-
-### Research Data and Software
-RDS focuses on research data management, training, and policy development. The team works closely with other research support units at TU Delft, including the 4TU.ResearchData repository.
-
-- [RDS team](https://www.tudelft.nl/library/research-data-management/r/buttons/contact)
+- [About TU Delft Library organisation](https://www.tudelft.nl/en/library/visit/about-the-library/our-organisation)
+- [TU Delft Research Services governance](https://openworking.wordpress.com/2023/05/22/organisation-of-research-services-department-tu-delft-library/) 
 - [Copyrights issues](https://www.tudelft.nl/library/copyright)
-- [Open Access Publishing](https://www.tudelft.nl/en/library/support/library-for-researchers/publishing-outreach/creating-your-publishing-strategy)
-- [TUD Open Publishing](https://www.tudelft.nl/en/library/current-topics/open-publishing)
+- [Open Access Publishing](https://www.tudelft.nl/en/library/open-access/open-access-policy-and-guidelines)
+- [TU Delft Open Publishing](https://www.tudelft.nl/en/library/current-topics/open-publishing)
+
+The library is a frequent host of events (trainings, meetups, etc.).
+
+#### **RDS team**
+RDS focuses on research data management, training, and policy development. The team works closely with other research support units at TU Delft.
 
 ### Open Science
-Open Science is a key part of TU Delft’s mission to deliver science to society by making scientific knowledge openly accessible and reusable. TU Delft supports researchers in adopting open and FAIR (Findable, Accessible, Interoperable, Reusable) practices.
+Open Science is a key part of TU Delft’s mission to deliver science to society by making scientific knowledge openly accessible and reusable. TU Delft supports researchers in adopting open and FAIR practices.
 
 The DCC was originally part of the FAIR data and software project of the Open Science Program 2020-2024.
 
 - [Organisation](https://www.tudelft.nl/open-science/about/organisation)
-- [Position DCC in Open Science](https://www.tudelft.nl/open-science/about/projects/fair-data-and-fair-software) - The DCC started as a deliverable from the Open Science Program.
+- [Position DCC in Open Science](https://www.tudelft.nl/open-science/about/projects/fair-data-and-fair-software)
+
+:::{.callout-tip appearance="simple" icon="false"}
+## {{< fa lightbulb >}} The DCC started as a deliverable from the Open Science Program!
+:::
 
 ### Open Science Community Delft
 The Open Science Community Delft supports researchers, educators, students, and support staff in working openly and collaboratively. It is part of the International Network of Open Science and Scholarship Communities (INOSC).
 
-- [Open Science community website](https://osc-delft.github.io/)
+- [Open Science Community Delft website](https://www.tudelft.nl/en/open-science/community)
 
 ### Open Hardware
 The Open Hardware project promotes open-source hardware within TU Delft by supporting researchers and students and by offering training activities and learning materials.
 
 - [Open Hardware TU Delft](https://www.tudelft.nl/open-science/about/projects/open-hardware)
-- <https://www.tudelft.nl/open-hardware>
+- [TU Delft | Open Hardware](https://www.tudelft.nl/open-hardware)
 - [Open Hardware Academy](https://www.openhardware.academy/01_Welcome.html)
 
 ### Delft High Performance Computing Center
@@ -115,9 +115,8 @@ The Delft High Performance Computing Center (DHPC) provides advanced computing i
 ### Faculty Data Stewards
 TU Delft has appointed a disciplinary data steward at each faculty and a central data stewardship coordinator. Data stewards support researchers directly, develop faculty-specific workflows, and provide training related to data and software management.
 
-- [Data stewards overview](https://www.tudelft.nl/en/library/research-data-management/r/support/data-stewardship)
+- [Data stewards overview and contact information](https://www.tudelft.nl/en/library/data-management/get-support-on-data-management/data-stewardship-at-tu-delft)
 - [Faculty data stewards](https://www.tudelft.nl/en/library/research-data-management/r/support/data-stewardship/contact)
-- Generic contact email: <datastewards@tudelft.nl>
 
 ### Faculty ICT Managers
 Faculty ICT Managers (FIM) act as relationship managers between faculties and Shared Service Center ICT. They advise on ICT-related solutions such as data storage and faculty servers.
@@ -130,7 +129,7 @@ Faculty ICT Managers (FIM) act as relationship managers between faculties and Sh
 The DCC is regularly involved in supporting data and software archiving in collaboration with data stewards and contributes to the broader 4TU.ResearchData community.
 
 - [4TU.ResearchData homepage](https://data.4tu.nl/)
-- [4TU.ResearchData community](https://community.data.4tu.nl/join-our-community/).
+- [4TU.ResearchData community](https://community.data.4tu.nl/join-our-community/)
 
 ## External Stakeholders
 
