@@ -55,9 +55,9 @@ The following practial checklist is meant to help new staff get started. It is n
 - [ ] Check out the intranet page ["I'm a new employee"](https://intranet.tudelft.nl) 
   - [ ] Register for the TU Delft onboarding activities [Introduction programme for new staff](https://intranet.tudelft.nl/-/introduction-programme-for-new-staff)
   - [ ] Finance administration (expense claims and business trips)
-  - [ ] HR admininstration (info on Leave and holidays, reporting sick)
-  - [ ] Good to know (practical info)
-  - [ ] Info for academic staff
+  - [ ] HR admininstration (information on leave and holidays, reporting sick)
+  - [ ] Good to know (practical information)
+  - [ ] Information for academic staff
 - [ ] Write an introduction text 
 - [ ] Create your email signature (you can use this [template](https://www.tudelft.nl/en/tu-delft-corporate-design/media/email-signature))
 - [ ] Write a short bio 
@@ -73,9 +73,9 @@ The following practial checklist is meant to help new staff get started. It is n
 - [ ] Check out the intranet page ["I'm a new employee"](https://intranet.tudelft.nl) 
   - [ ] Register for the TU Delft onboarding activities [Introduction programme for new staff](https://intranet.tudelft.nl/-/introduction-programme-for-new-staff)
   - [ ] Finance administration (expense claims and business trips)
-  - [ ] HR admininstration (info on Leave and holidays, reporting sick)
-  - [ ] Good to know (practical info)
-  - [ ] Info for academic staff
+  - [ ] HR admininstration (information on leave and holidays, reporting sick)
+  - [ ] Good to know (practical information)
+  - [ ] Information for academic staff
 - [ ] Write an introduction text 
 - [ ] Create your email signature (you can use this [template](https://www.tudelft.nl/en/tu-delft-corporate-design/media/email-signature))
 - [ ] Write a short bio 
