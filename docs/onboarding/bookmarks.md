@@ -40,8 +40,9 @@ corresponding: Raul Ortiz Merino
 
 # Meaningful keywords, newline separated [manual entry]
 # Uncomment and populate the next line and list accordingly
-#categories: 
-# - 
+categories: 
+ - Bookmarks
+ - Onboarding
 # - 
 
 ---
@@ -56,7 +57,6 @@ corresponding: Raul Ortiz Merino
   * MyHR
   * Catalogue of training opportunities via MyCareer
   * TimEnterprise - register project hours and leave
-* [Digiforms - Reimbursement](https://declaratietool.tudelft.nl/saml2/login/?next=/aanvragen/)
 
 ## TU Delft - General
 * [TUD Gitlab](https://gitlab.tudelft.nl)
