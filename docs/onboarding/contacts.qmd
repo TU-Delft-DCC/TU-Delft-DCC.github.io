@@ -139,21 +139,21 @@ The Netherlands eScience Center is the national centre for research software exp
 - [Training materials](https://www.esciencecenter.nl/training-materials/)
 - [Events calendar](https://www.esciencecenter.nl/events/)
 
-### RSE NL
+### NL-RSE
 NL-RSE brings together the community of people writing and contributing to research software from Dutch universities, knowledge institutes, companies and other organizations to share knowledge, to organize meetings, and raise awareness for the scientific recognition of research software. The network has been established by the eScience Center in 2017 and has 200+ members from more than 30 institutes across the country.
 
 - [NL-RSE website](https://nl-rse.org/)
 
 ### The Carpentries
-The Carpentries teach foundational coding and data science skills to researchers worldwide. DCC RSEs and data managers are trained instructors within the Carpentries community.
+The Carpentries teach foundational coding and data science skills to researchers worldwide. DCC RSEs and RDEs are trained instructors within the Carpentries community.
 
-- [Public schedule Carpentries TU Delft](https://www.tudelft.nl/library/research-data-management/r/training-evenementen/training-voor-onderzoekers/software-carpentry-workshops)
+- [Training schedule at TU Delft (including Carpentries)](https://www.tudelft.nl/library/data-management/trainingen/trainingen-voor-onderzoekers-en)
 
 
 ### Code Refinery
 Code Refinery provides training in essential software and data skills for research and operates as a collaborative training network.
 
-- [Core Lessons](https://coderefinery.org/lessons/core/)
+- [Core lessons](https://coderefinery.org/lessons/core/)
 - [Code Refinery upcoming workshops](https://coderefinery.org/workshops/upcoming/)
 
 ### SURF
