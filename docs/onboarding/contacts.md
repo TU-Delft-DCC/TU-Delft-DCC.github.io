@@ -39,8 +39,9 @@ author_1: Aysun Urhan
 
 # Meaningful keywords, newline separated [manual entry]
 # Uncomment and populate the next line and list accordingly
-categories:
-  - RSE
+categories: 
+ - Onboarding
+ - RSE
 
 
 ---
