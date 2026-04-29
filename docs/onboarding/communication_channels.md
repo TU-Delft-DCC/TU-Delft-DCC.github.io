@@ -60,6 +60,6 @@ Keep an eye out for, and request access to where appropriate:
     Access to these environments is usually provided via internal onboarding materials, intranet pages, or by contacting the relevant team or community owner. 
 
 - Mailing lists and newsletters:
-  - [TU Delft Open Science Community](https://forms.office.com/Pages/ResponsePage.aspx?id=TVJuCSlpMECM04q0LeCIe4wwCI33_kNHuAxNk1rWjfJUMkJXUUhRU1lMS0Q1QThJNTFFWkU2M05GOC4u)
+  - TU Delft Open Science Community [link missing]
 
 Subscribing to the right channels early on will help you stay informed, build your network, and engage with the wider research community across the university.
