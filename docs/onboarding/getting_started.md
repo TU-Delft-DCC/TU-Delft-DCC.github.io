@@ -66,7 +66,7 @@ Below are selected references that are good to know when for a new employee at T
 - On our [Intranet](https://intranet.tudelft.nl/) you'll find a **personal landing page** that you can customize by adjusting the settings in dedicated boxes. Good for looking up how to do administrative tasks, like requesting holidays and registering working hours in [TIM](https://hours.tudelft.nl).
 - **Administer personal data** in the [TU Delft Identity Manager](https://iam.tudelft.nl/). Here you add content to your personal page (e.g., <https://www.tudelft.nl/staff/m.w.a.kok/>). Please note: It takes some time before this page and changes to it appear.
 - You can update your photo in the [TU Delft Identity Manager](https://iam.tudelft.nl).
-- In the **self-service portal**, [TopDesk](https://tudelft.topdesk.net/), you can find practical information on facilities and services available. If you can't find what you're looking for, contact the [Service Desk](https://www.tudelft.nl/en/student/contact/service-desk) for help.
+- In the [**Self Service Portal**](https://tudelft.topdesk.net/) (TopDesk), you can find practical information on facilities and services available. If you can't find what you're looking for, contact the [Service Desk](https://www.tudelft.nl/en/student/contact/service-desk) for help.
 - When your monthly payslip is ready, you will be notified by e-mail. Your salary will be paid on the following [dates](https://intranet.tudelft.nl/en/-/payment-dates?redirect=%2Fen%2F-%2Fdigital-payslip-and-annual-income-statement).
 
 ### Parking and getting around the campus
@@ -77,16 +77,16 @@ Below are selected references that are good to know when for a new employee at T
 - If you need a bike to get around the campus, you can reserve a bike through [TopDesk](https://tudelft.topdesk.net/).
 
 ### ICT Services and Software
-- The [Research Support Portal](https://www.tudelft.nl/research-support) is a portal where researchers at TU Delft — from PhD candidates to professors — can find the services and resources they need.
-- ICT hosts a webpage that holds a large variety on [Manuals](https://www.tudelft.nl/en/it-manuals/) including Microsoft Teams, e-mail, working remotely and connecting to the TU Delft network (or on how you can provide visitors access to the network).
+- The [Research Support Portal](https://www.tudelft.nl/research-support) is a portal where researchers at TU Delft, from PhD candidates through to professors, can find the services and resources they need.
+- ICT hosts a webpage that holds a large variety on [manuals](https://www.tudelft.nl/en/it-manuals/), including Microsoft Teams, e-mail, working remotely and connecting to the TU Delft network (or on how you can provide visitors access to the network).
 - Our [Self Service Portal](https://tudelft.topdesk.net/) holds information on available ICT Services for different target groups, for example, IT workspace and IT for Researchers may be rather relevant. 
 - [SURF](https://www.surf.nl/en/about) is the IT cooperative of Dutch education and research. Through it, you have access several key resources via your NetID. For example: 
   - [SURFdrive](https://www.surf.nl/en/services/storage-data-management/surfdrive) for secure and sovereign cloud storage.
   - [SURFfilesender](
 https://www.surf.nl/en/services/storage-data-management/surffilesender) for sending (large) files securely.
-  - [SURFspot](https://www.surfspot.nl/EN/) for discounted software and hardware that is not available through TU Delft, e.g. Adobe Creative Cloud.
+  - [SURFspot](https://www.surfspot.nl) for discounted software and hardware that is not available through TU Delft (e.g., Adobe Creative Cloud, Parallels).
   - [Snellius](https://www.surf.nl/en/services/compute/snellius-the-national-supercomputer) for the largest supercomputing system in the Netherlands.
-- You have a Microsoft 365 account. You can login through SurfConext (SSO) with your NetID at <office.com>. 
-- For Latex lovers, you have an Overleaf account. [Log in through your institution](https://www.overleaf.com/institutional-login) using your TU Delft e-mail address.
-- If you need office **supplies for your home office**, you can [request supplies](https://tudelft.topdesk.net/tas/public/ssp/content/detail/service?unid=dd4567e1118a4650ba7f379258d53c22&from=b32cfc52-d71b-4164-9623-c7f9731ce4d4) such as a desk, chair, and monitor. Please discuss this first with your line manager.
+- You have a Microsoft 365 account. You can login with your NetID. 
+- For LaTeX users, you have an Overleaf account. [Log in through your institution](https://www.overleaf.com/institutional-login) using your TU Delft e-mail address.
+- If you need office supplies for your home office, you can request supplies such as a desk, chair, and monitor. Please discuss this first with your line manager.
 
