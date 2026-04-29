@@ -49,8 +49,8 @@ categories:
 
 A new RSE could be assigned a DCC mentor or buddy to support the onboarding during the first months, especially if working together in a project. The mentor should be a direct colleague or member of the DCC, but not the direct supervisor. The mentor will be responsible for the following tasks:
 
-::: {.callout-tip}
-## Checklist
+:::{.callout-tip appearance="simple" icon="false"}
+## {{< fa lightbulb >}} Checklist
 - [ ] Introduce the new RSE to local team routines, workflows, and ways of working
 - [ ] Provide a tour of relevant buildings and facilities (e.g., office spaces, library, faculty buildings)
 - [ ] Explain how to reserve rooms and shared spaces (library, faculty, or central systems)
@@ -71,8 +71,8 @@ A new RSE could be assigned a DCC mentor or buddy to support the onboarding duri
   - [ ] Training sessions and research events
 :::
 
-::: {.callout-note collapse=true} 
-## Copy to GitHub issue
+:::{.callout-note appearance="simple" icon="false" collapse="true"}
+## {{< fa info-circle >}} Copy to GitHub issue
 
 ```markdown
 ## Checklist
