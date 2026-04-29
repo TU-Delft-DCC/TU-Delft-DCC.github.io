@@ -164,8 +164,6 @@ SURF is the cooperative association of Dutch educational and research institutio
 ### NWO
 The Dutch Research Council (NWO) funds and supports scientific research and innovation in the Netherlands. Digital Competence Centers at Dutch universities were initially funded by NWO and continue to be supported through national programmes.
 
-- [NWO on Digital Competence Centers](https://www.nwo.nl/en/news/digital-competence-centers-knowledge-institutions-forging-ahead)
-
 ### Thematic Digital Competence Centers
 Thematic Digital Competence Centers (TDCCs) support cross-institutional research communities within specific domains. TU Delft participates in the Natural and Engineering Sciences (NES) domain.
 
