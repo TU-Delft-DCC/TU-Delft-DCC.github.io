@@ -88,7 +88,7 @@ In addition to self-directed learning, the following structured training opportu
 #### Software architecture & maintainability
 
 - [Code Refinery](https://coderefinery.org/) - modular design, refactoring, and sustainability
-- [Netherlands eScience Center](https://www.esciencecenter.nl/software-development-best-practices/) - software development best practices
+- [Netherlands eScience Center](https://guide.esciencecenter.nl/#/best_practices) - software development best practices
 - [The Turing Way](https://book.the-turing-way.org/) - software sustainability & design
 
 #### Testing, CI/CD, and quality assurance
