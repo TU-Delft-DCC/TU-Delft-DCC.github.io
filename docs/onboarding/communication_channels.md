@@ -3,11 +3,11 @@
 
 # We use this key to indicate the last reviewed date [manual entry, use YYYY-MM-DD]
 # Uncomment and populate the next line accordingly
-date: 2026-04-22
+date: 2026-04-30
 
 # We use this key to indicate the last modified date [manual entry, use YYYY-MM-DD]
 # Uncomment and populate the next line accordingly
-date-modified: 2026-04-22
+date-modified: 2026-04-30
 
 # Do not modify
 lang: en
@@ -46,20 +46,23 @@ corresponding: Raul Ortiz Merino
 
 ---
 
-Similar to the meetings mentioned in the previous section, make sure you are connected to the relevant communication channels for your role, faculty, and research community. These channels are typically used for announcements, discussions, and community building.
+To get the latest information, ensure you are connected to the relevant communication channels for your role, faculty, and research community. These channels are typically used for announcements, discussions, and community building.
 
-Keep an eye out for, and request access to where appropriate:
+### TU Delft Collaboration and chat platforms (e.g. Microsoft Teams or Slack)
+- University‑wide or central research support communities
+- Faculty or department communities
+- Role‑specific or career‑stage networks (e.g. PhD, postdoctoral, or RSE groups)
+- Thematic or interest‑based groups (e.g. AI, Open Science, research IT)
+- Integrated or central research services channels
 
-- Collaboration and chat platforms (e.g. Microsoft Teams or Slack)
-  - University‑wide or central research support communities
-  - Faculty or department communities
-  - Role‑specific or career‑stage networks (e.g. PhD, postdoctoral, or RSE groups)
-  - Thematic or interest‑based groups (e.g. AI, Open Science, research IT)
-  - Integrated or central research services channels
+Access to these environments is usually provided via internal onboarding materials, MS Teams, intranet pages, or by contacting the relevant team or community owner. 
 
-    Access to these environments is usually provided via internal onboarding materials, intranet pages, or by contacting the relevant team or community owner. 
-
-- Mailing lists and newsletters:
-  - TU Delft Open Science Community [link missing]
+### Mailing lists and newsletters
+- [TU Delft Open Science Community](https://www.tudelft.nl/en/open-science/community)
+- [NL-RSE newsletter](https://lists.nl-rse.org/mailman/listinfo/everyone)
+- [NL eScience Center newsletter](https://esciencecenter.us8.list-manage.com/subscribe?u=a0a563ca342f1949246a9f92f&id=31bfc2303d)
+- [EVERSE newsletter](https://everse.software/network/newsletter/)
+- [SURF news](https://www.surf.nl/en/subscribe-to-surf-news)
+- [Open Science NL newsletter](https://www.openscience.nl/en/newsletter)
 
 Subscribing to the right channels early on will help you stay informed, build your network, and engage with the wider research community across the university.
