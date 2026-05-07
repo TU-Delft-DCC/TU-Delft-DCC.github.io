@@ -134,6 +134,16 @@ The DCC is regularly involved in supporting data and software archiving in colla
 
 ## External Stakeholders
 
+### DCC Implementation Network
+All Dutch universities have established a local Digital Competence Centre, which are brought together in the [DCC Implementation Network](https://lcrdm.nl/dcc/). 
+
+:::{.callout-tip appearance="simple" icon="false" collapse="true"}
+## {{< fa lightbulb >}} Overview DCC Implementation Network
+
+![DCC-landscape](../img/DCC_in_NL.png)
+
+:::
+
 ### Netherlands eScience Center
 The Netherlands eScience Center is the national centre for research software expertise, supporting innovative software solutions and training researchers across disciplines.
 
