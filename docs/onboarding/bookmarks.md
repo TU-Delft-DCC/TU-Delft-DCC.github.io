@@ -57,6 +57,7 @@ categories:
   * MyHR
   * Catalogue of training opportunities via MyCareer
   * TimEnterprise - register project hours and leave
+  * Reimbursement of expenses
 
 ## TU Delft - General
 * [TUD Gitlab](https://gitlab.tudelft.nl)
@@ -64,10 +65,15 @@ categories:
 * [Data Stewards per faculty](https://www.tudelft.nl/en/library/data-management/get-support-on-data-management/contact-the-data-stewards)
 * [Research Support Portal](https://www.tudelft.nl/research-support/support)
 * [ICT manuals](https://www.tudelft.nl/en/it-manuals/a-z)
+* [Data and Software Policies](https://www.tudelft.nl/en/library/data-management/research-data-management/tu-delft-faculty-policies-for-research-data)
 
 ## TU Delft - Tooling
 * [eduVPN](https://www.tudelft.nl/en/it-manuals/applications/vpn)
 * [Data Storage TU Delft](https://www.tudelft.nl/library/data-management/onderzoeksdata-beheren/onderzoeksdata-opslaan-en)
 * [Downloads for SURFdrive | SURF.nl](https://www.surf.nl/en/services/storage-data-management/surfdrive)
+* [Storage Finder](https://storagefinder.tudelft.nl/)
+* [Software Finder](https://softwarefinder.tudelft.nl/)
+
+## TU Delft - DCC
 * [DCC homepage](https://dcc.tudelft.nl)
 * [DCC Guides](https://tu-delft-dcc.github.io/)
