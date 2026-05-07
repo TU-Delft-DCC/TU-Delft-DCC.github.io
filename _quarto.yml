@@ -81,8 +81,18 @@ website:
       contents:
         - text: Welcome
           href: docs/onboarding/index.md
-        - text: Getting started
+          contents: 
+            - text: The Role of RSE
+              href: docs/onboarding/role.md          
+            - text: RSE Professionalization
+              href: docs/onboarding/professionalization.md
+        - text: Getting started at TU Delft
           href: docs/onboarding/getting_started.md
+          contents:
+            - text: Useful bookmarks
+              href: docs/onboarding/bookmarks.md
+            - text: Communication channels
+              href: docs/onboarding/communication_channels.md
         - text: Onboarding checklists
           href: docs/onboarding/checklists/index.md
           contents:
@@ -92,14 +102,13 @@ website:
               href: docs/onboarding/checklists/30-60-90.md
             - text: Checklist for mentor
               href: docs/onboarding/checklists/mentor.md
-        - text: Partners
-          href: docs/onboarding/contacts.md
-        - text: The role of an RSE
-          href: docs/onboarding/about.qmd
         - text: Learning & Training
           href: docs/onboarding/learning.qmd
-        - text: Soft Skills for Research Support
-          href: docs/onboarding/soft_skills.qmd
+          contents:
+            - text: Soft Skills for Research Support
+              href: docs/onboarding/soft_skills.qmd
+        - text: Support Landscape
+          href: docs/onboarding/contacts.md
         
     - title: "Guides"
       style: "docked"

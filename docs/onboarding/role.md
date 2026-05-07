@@ -17,7 +17,7 @@ language:
 
 # Title of the document [manual entry]
 # Uncomment and populate the next line accordingly
-title: About Research Support at TU Delft
+title: The role of RSE
 
 # Brief overview of the document (will be used in listings) [manual entry]
 # Uncomment and populate the next line and uncomment "hide-description: true".
@@ -42,8 +42,8 @@ author_1: Aysun Urhan
 categories: 
  - Onboarding
  - RSE
----
 
+---
 ### What is Research Software Engineering?
 
 Research Software Engineering (RSE) refers to the practices and roles that ensure research software is:

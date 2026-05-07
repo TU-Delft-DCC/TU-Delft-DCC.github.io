@@ -17,7 +17,7 @@ language:
 
 # Title of the document [manual entry]
 # Uncomment and populate the next line accordingly
-title: Onboarding
+title: Welcome to the DCC Onboarding Guides
 
 # Brief overview of the document (will be used in listings) [manual entry]
 # Uncomment and populate the next line and uncomment "hide-description: true".
@@ -79,6 +79,15 @@ Revisit sections as your role and responsibilities evolve.
 ::: {.features}
 
 ::: {.feature}
+###  The role of RSE
+Research software engineering as a profession
+
+::: {.learn-more}
+[Learn more »](./role.md)
+:::
+:::
+
+::: {.feature}
 ###  Getting started
 Resources to check first.
 
@@ -97,24 +106,6 @@ Collection of onboarding checklists.
 :::
 
 ::: {.feature}
-###  About Research Support at TU Delft
-How research support is organized, how roles connect, and where RSE practices fit in.
-
-::: {.learn-more}
-[Learn more »](./about.qmd)
-:::
-:::
-
-::: {.feature}
-### Contacts & Support Landscape
-Who does what, where to ask questions, and how to navigate support structures.
-
-::: {.learn-more}
-[Learn more »](./contacts.md)
-:::
-:::
-
-::: {.feature}
 ### Learning & Training
 Shared foundations, role-specific depth, and available courses and workshops.
 
@@ -124,11 +115,11 @@ Shared foundations, role-specific depth, and available courses and workshops.
 :::
 
 ::: {.feature}
-### Soft Skills for Research Support
-Communication, collaboration, and stakeholder management tailored to research contexts.
+### Contacts & Support Landscape
+Who does what, where to ask questions, and how to navigate support structures.
 
 ::: {.learn-more}
-[Learn more »](./soft_skills.qmd)
+[Learn more »](./contacts.md)
 :::
 :::
 
