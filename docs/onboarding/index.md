@@ -80,7 +80,7 @@ Revisit sections as your role and responsibilities evolve.
 
 ::: {.feature}
 ###  The role of RSE
-Research software engineering as a profession
+Research software engineering as a profession.
 
 ::: {.learn-more}
 [Learn more »](./role.md)
