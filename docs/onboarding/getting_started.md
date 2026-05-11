@@ -70,7 +70,7 @@ Below are selected references that are good to know for a new employee at TU Del
 - When your monthly payslip is ready, you will be notified by e-mail. Your salary will be paid on the following [dates](https://intranet.tudelft.nl/en/-/payment-dates?redirect=%2Fen%2F-%2Fdigital-payslip-and-annual-income-statement).
 
 ### Parking and getting around the campus
-- Look up for buildings, bus stops and more in the [TU Delft Campus Map](https://map.tudelftcampus.nl).
+- Look up buildings, bus stops, and more in the [TU Delft Campus Map](https://map.tudelftcampus.nl).
 - For general TU Delft accessibility related questions, check [here](https://www.tudelftcampus.nl/accessibility/).
 - TU Delft has set up a [parking policy](https://www.tudelft.nl/en/about-tu-delft/contact-and-campus/parking-policy), you can find a map that shows the [parking spots](https://map.tudelftcampus.nl/embed/faculty,building,bus-stop,parking-spot,parking-space-for-disabled,railway-station/).
 - As a TU Delft employee coming to the campus on a bike, you can park your bike in secure bike sheds at your faculty and can usually request access through department secretaries.
