@@ -168,7 +168,7 @@ Code Refinery provides training in essential software and data skills for resear
 - [Code Refinery upcoming workshops](https://coderefinery.org/workshops/upcoming/)
 
 ### SURF
-SURF is the cooperative association of Dutch educational and research institutions providing shared digital infrastructure and services. SURF hosts the infrastucture of the Dutch supercomputers and offers compute and data services for (inter)national research and education.
+SURF is the cooperative association of Dutch educational and research institutions providing shared digital infrastructure and services. SURF hosts the infrastructure of the Dutch supercomputers and offers compute and data services for (inter)national research and education.
 
 - [SURF events and training](https://www.surf.nl/en/agenda/)
 
