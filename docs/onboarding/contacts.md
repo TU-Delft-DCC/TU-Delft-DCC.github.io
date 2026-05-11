@@ -70,7 +70,7 @@ All Research Data Engineers working in DCC are employed by TU Delft Library.
 
 - [About TU Delft Library organisation](https://www.tudelft.nl/en/library/visit/about-the-library/our-organisation)
 - [TU Delft Research Services governance](https://openworking.wordpress.com/2023/05/22/organisation-of-research-services-department-tu-delft-library/) 
-- [Copyrights issues](https://www.tudelft.nl/library/copyright)
+- [Copyright issues](https://www.tudelft.nl/library/copyright)
 - [Open Access Publishing](https://www.tudelft.nl/en/library/open-access/open-access-policy-and-guidelines)
 - [TU Delft Open Publishing](https://www.tudelft.nl/en/library/current-topics/open-publishing)
 
