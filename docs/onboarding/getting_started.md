@@ -78,7 +78,7 @@ Below are selected references that are good to know for a new employee at TU Del
 
 ### ICT Services and Software
 - The [Research Support Portal](https://www.tudelft.nl/research-support) is a portal where researchers at TU Delft, from PhD candidates through to professors, can find the services and resources they need.
-- ICT hosts a webpage that holds a large variety on [manuals](https://www.tudelft.nl/en/it-manuals/), including Microsoft Teams, e-mail, working remotely and connecting to the TU Delft network (or on how you can provide visitors access to the network).
+- ICT hosts a webpage that holds a large variety of [manuals](https://www.tudelft.nl/en/it-manuals/), including Microsoft Teams, e-mail, working remotely and connecting to the TU Delft network (or on how you can provide visitors access to the network).
 - Our [Self Service Portal](https://tudelft.topdesk.net/) holds information on available ICT Services for different target groups, for example, IT workspace and IT for Researchers may be rather relevant. 
 - [SURF](https://www.surf.nl/en/about) is the IT cooperative of Dutch education and research. Through it, you have access several key resources via your NetID. For example: 
   - [SURFdrive](https://www.surf.nl/en/services/storage-data-management/surfdrive) for secure and sovereign cloud storage.
