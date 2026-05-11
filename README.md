@@ -1,3 +1,4 @@
+[![TU Delft DCC](https://img.shields.io/badge/tu_delft-DCC-black?style=flat&label=TU%20Delft&labelColor=%23000000%20&color=%2300A6D6&link=https%3A%2F%2Fdcc.tudelft.nl%2F)](https://dcc.tudelft.nl)
 [![Quarto Publish](https://github.com/TU-Delft-DCC/TU-Delft-DCC.github.io/actions/workflows/deploy.yml/badge.svg)](https://github.com/TU-Delft-DCC/TU-Delft-DCC.github.io/actions/workflows/deploy.yml)
 [![Link Checker](https://github.com/TU-Delft-DCC/TU-Delft-DCC.github.io/actions/workflows/link_checker.yml/badge.svg)](https://github.com/TU-Delft-DCC/TU-Delft-DCC.github.io/actions/workflows/link_checker.yml)
 [![Scheduled Link Checker](https://github.com/TU-Delft-DCC/TU-Delft-DCC.github.io/actions/workflows/scheduled_link_checker.yml/badge.svg)](https://github.com/TU-Delft-DCC/TU-Delft-DCC.github.io/actions/workflows/scheduled_link_checker.yml)
