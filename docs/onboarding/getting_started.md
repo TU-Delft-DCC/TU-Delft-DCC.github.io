@@ -56,7 +56,7 @@ Being a new employee, the [TU Delft Intranet](https://intranet.tudelft.nl/en/) c
 - [Good to know](https://www.tudelft.nl/over-tu-delft/werken-bij-tu-delft/nederland-tu-delft/support-for-international-employees/at-tu-delft/good-to-know) (no NetID required)
 :::
 
-Below are selected references that are good to know when for a new employee at TU Delft:
+Below are selected references that are good to know for a new employee at TU Delft:
 
 ### Administration & Support 
 - Your **NetID** is your key to the TU Delft. Note, it is not necessarily the same as the first part of your e-mail address.
