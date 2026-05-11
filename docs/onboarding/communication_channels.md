@@ -21,8 +21,8 @@ title: Communication channels
 
 # Brief overview of the document (will be used in listings) [manual entry]
 # Uncomment and populate the next line and uncomment "hide-description: true".
-#description: Short description of the document
-#hide-description: true
+description: Communication channels relevant for new RSEs at TU Delft
+hide-description: true
 
 # Authors of the document, will not be parsed [manual entry]
 # Uncomment and populate the next lines accordingly
@@ -40,9 +40,8 @@ corresponding: Raul Ortiz Merino
 
 # Meaningful keywords, newline separated [manual entry]
 # Uncomment and populate the next line and list accordingly
-#categories: 
-# - 
-# - 
+categories: 
+  - Onboarding 
 
 ---
 
@@ -55,7 +54,7 @@ To get the latest information, ensure you are connected to the relevant communic
 - Thematic or interest‑based groups (e.g. AI, Open Science, research IT)
 - Integrated or central research services channels
 
-Access to these environments is usually provided via internal onboarding materials, MS Teams, intranet pages, or by contacting the relevant team or community owner. 
+Access to these environments is usually provided via internal onboarding materials, Microsoft Teams, intranet pages, or by contacting the relevant team or community owner. 
 
 ### Mailing lists and newsletters
 - [TU Delft Open Science Community](https://www.tudelft.nl/en/open-science/community)
