@@ -47,7 +47,7 @@ categories:
 
 ---
 
-The following practial checklist is meant to help new staff get started. It is not meant to be exhaustive, but to provide a starting point for the onboarding process.
+The following practical checklist is meant to help new staff get started. It is not meant to be exhaustive, but to provide a starting point for the onboarding process.
 
 :::{.callout-tip appearance="simple" icon="false"}
 ## {{< fa lightbulb >}} Checklist
