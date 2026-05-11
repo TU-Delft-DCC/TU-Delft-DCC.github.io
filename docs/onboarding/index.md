@@ -55,7 +55,7 @@ RSEs play a crucial role in enabling high-quality, sustainable, and reproducible
 - Data Manager
 - Postdoc
 
-Although roles differ, many challenges, skills, and practices are shared. For consistancy, the name RSE is used throughout.
+Although roles differ, many challenges, skills, and practices are shared. For consistency, the name RSE is used throughout.
 
 :::{.callout-note appearance="simple" icon="false"}
 ## {{< fa info-circle >}} For whom?
