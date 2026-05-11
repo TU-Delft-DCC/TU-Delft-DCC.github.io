@@ -47,8 +47,8 @@ categories:
 
 ---
 
-::: {.callout-tip}  
-## **Recommendation:** Add the following links as bookmarks to your browser.
+:::{.callout-tip appearance="simple" icon="false"}
+## {{< fa lightbulb >}} **Recommendation:** Add the following links as bookmarks to your browser.
 :::
 
 ## TU Delft - Personal
