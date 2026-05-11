@@ -60,10 +60,10 @@ categories:
   * Reimbursement of expenses
 
 ## TU Delft - General
-* [TUD Gitlab](https://gitlab.tudelft.nl)
-* [TU Delft color reference](https://www.tudelft.nl/en/tu-delft-corporate-design)
+* [TU Delft GitLab](https://gitlab.tudelft.nl)
+* [TU Delft colour reference](https://www.tudelft.nl/en/tu-delft-corporate-design)
 * [Data Stewards per faculty](https://www.tudelft.nl/en/library/data-management/get-support-on-data-management/contact-the-data-stewards)
-* [Research Support Portal](https://www.tudelft.nl/research-support/support)
+* [Research Support Portal](https://www.tudelft.nl/research-support)
 * [ICT manuals](https://www.tudelft.nl/en/it-manuals/a-z)
 * [Data and Software Policies](https://www.tudelft.nl/en/library/data-management/research-data-management/tu-delft-faculty-policies-for-research-data)
 
