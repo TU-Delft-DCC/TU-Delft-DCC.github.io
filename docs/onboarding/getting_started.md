@@ -82,8 +82,7 @@ Below are selected references that are good to know when for a new employee at T
 - Our [Self Service Portal](https://tudelft.topdesk.net/) holds information on available ICT Services for different target groups, for example, IT workspace and IT for Researchers may be rather relevant. 
 - [SURF](https://www.surf.nl/en/about) is the IT cooperative of Dutch education and research. Through it, you have access several key resources via your NetID. For example: 
   - [SURFdrive](https://www.surf.nl/en/services/storage-data-management/surfdrive) for secure and sovereign cloud storage.
-  - [SURFfilesender](
-https://www.surf.nl/en/services/storage-data-management/surffilesender) for sending (large) files securely.
+  - [SURFfilesender](https://www.surf.nl/en/services/storage-data-management/surffilesender) for sending (large) files securely.
   - [SURFspot](https://www.surfspot.nl) for discounted software and hardware that is not available through TU Delft (e.g., Adobe Creative Cloud, Parallels).
   - [Snellius](https://www.surf.nl/en/services/compute/snellius-the-national-supercomputer) for the largest supercomputing system in the Netherlands.
 - You have a Microsoft 365 account. You can login with your NetID. 
