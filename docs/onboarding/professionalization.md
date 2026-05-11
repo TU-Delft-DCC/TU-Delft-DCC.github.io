@@ -21,8 +21,8 @@ title: RSE Professionalization
 
 # Brief overview of the document (will be used in listings) [manual entry]
 # Uncomment and populate the next line and uncomment "hide-description: true".
-#description: Short description of the document
-#hide-description: true
+description: Role of Research Software Engineers (RSEs), job profiles, and professional communities.
+hide-description: true
 
 # Authors of the document, will not be parsed [manual entry]
 # Uncomment and populate the next lines accordingly
@@ -40,9 +40,9 @@ author_1: Maurits Kok
 
 # Meaningful keywords, newline separated [manual entry]
 # Uncomment and populate the next line and list accordingly
-#categories: 
-# - 
-# - 
+categories: 
+ - Onboarding
+ - RSE
 
 css: /themes/cards.css 
 ---
