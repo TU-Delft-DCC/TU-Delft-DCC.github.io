@@ -64,7 +64,7 @@ You can turn an existing repository into a template, so you and others can gener
 
 ### Cookiecutter for Python
 
-[Cookiecutter](https://www.cookiecutter.io/) creates Python projects from project templates. The advantage of using Cookiecutter is that new projects are set up quickly from a standardized template structure and can include everything needed to get started on a project, such as directory layouts, sample code, and even integrations with tools and services.
+[Cookiecutter](https://pypi.org/project/cookiecutter/) creates Python projects from project templates. The advantage of using Cookiecutter is that new projects are set up quickly from a standardized template structure and can include everything needed to get started on a project, such as directory layouts, sample code, and even integrations with tools and services.
 
 
 :::{.callout-tip appearance="simple" icon="false"}
