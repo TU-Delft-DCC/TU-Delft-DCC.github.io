@@ -138,7 +138,7 @@ _Recommended_
 
 _Optional_
 
-- [ ] Documentation tools ([Sphinx](https://coderefinery.github.io/documentation/sphinx/), [JupyterBook](https://jupyterbook.org/stable/), [Quarto](https://quarto.org/docs/guide/))
+- [ ] Documentation tools ([Sphinx](https://coderefinery.github.io/documentation/sphinx/), [JupyterBook](https://jupyterbook.org/), [Quarto](https://quarto.org/docs/guide/))
 - [ ] Build an [API reference](https://developer.lsst.io/python/numpydoc.html) from docstrings
 - [ ] Hosting ([GitHub Pages](https://pages.github.com/), [Readthedocs](https://readthedocs.org/))
 
@@ -156,7 +156,7 @@ _Recommended_
 - [ ] Examples and tutorials (e.g. Jupyter Notebooks)
 
 _Optional_
-- [ ] Documentation tools ([Sphinx](https://coderefinery.github.io/documentation/sphinx/), [JupyterBook](https://jupyterbook.org/intro.html), [Quarto](https://quarto.org/docs/guide/))
+- [ ] Documentation tools ([Sphinx](https://coderefinery.github.io/documentation/sphinx/), [JupyterBook](https://jupyterbook.org/), [Quarto](https://quarto.org/docs/guide/))
 - [ ] Build an [API reference](https://developer.lsst.io/python/numpydoc.html) from docstrings
 - [ ] Hosting ([GitHub Pages](https://pages.github.com/), [Readthedocs](https://readthedocs.org/))
 ```
