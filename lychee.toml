@@ -116,6 +116,7 @@ exclude = [
   '^https?://(www\.)?quarto\.org',
   '^https?://hours\.tudelft\.nl(/.*)?$',
   '^https?://book\.the-turing-way\.org(/.*)?$',
+  '^https?://jupyterbook\.org',
   
   # Test/dummy environments
   '^https?://github\.com/your_repo',
