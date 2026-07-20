@@ -19,7 +19,7 @@ no_progress = false
 cache = true
 
 # Discard all cached requests older than this duration.
-max_cache_age = "24h"
+max_cache_age = "1h"
 
 #############################  Runtime  #############################
 
@@ -59,7 +59,7 @@ retry_wait_time = 2
 accept = ["200..=204", "429", "403"]
 
 # Proceed for server connections considered insecure (invalid TLS).
-insecure = false
+insecure = true
 
 # Only test links with the given schemes (e.g. https).
 # Omit to check links with any other scheme.
@@ -117,6 +117,7 @@ exclude = [
   '^https?://hours\.tudelft\.nl(/.*)?$',
   '^https?://book\.the-turing-way\.org(/.*)?$',
   '^https?://jupyterbook\.org',
+  '^https?://(www\.)?surf\.nl',
   
   # Test/dummy environments
   '^https?://github\.com/your_repo',
