@@ -51,7 +51,7 @@ categories:
 
 Continuous Integration (CI) refers to the build and unit testing stages of the software release process. Every committed revision can trigger an automated build and test. With Continuous Delivery (CD), code changes are automatically built, tested, and prepared for a release to production.
 
-![Source: Solidstudio (solidstudio.io). [Asset path](https://cdn.sanity.io/images/lofvu8al/production/e37ce13c88889f048aa2b1acae7d6cbfeea5678f-2048x876.png).](https://solidstudio.io/_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2Flofvu8al%2Fproduction%2Fe37ce13c88889f048aa2b1acae7d6cbfeea5678f-2048x876.png&w=640&q=75){width=60%}
+![Source: Solidstudio (solidstudio.io). [Asset path](https://cdn.sanity.io/images/lofvu8al/production/e37ce13c88889f048aa2b1acae7d6cbfeea5678f-2048x876.png).](https://cdn.sanity.io/images/lofvu8al/production/e37ce13c88889f048aa2b1acae7d6cbfeea5678f-2048x876.png){width=60%}
 
 You can implement Continuous Integration and Continuous Delivery (CI/CD) workflows for your research software using either GitHub Actions or GitLab pipelines. Choose the platform that fits your project needs based on factors such as privacy and security needs, collaboration requirements, and available features.
 
