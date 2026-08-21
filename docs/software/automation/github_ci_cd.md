@@ -64,6 +64,76 @@ categories:
 - Test your workflow in a separate branch to avoid committing many small changes during debugging of the workflow.
 :::
 
+### Automating code quality checks
+Code quality tools can be integrated into a GitHub actions workflow to automatically check code whenever changes are pushed or a pull request is opened. this helps maintain a consistent coding style and catch common scripting errors before changes are merged.
+
+#### Ruff
+Ruff is a Python linter and code formatter. It can replace some commonly used tools, including Flake8 and Black depending on how you configure it. You can configure your Ruff workflow either in your project's `pyproject.toml` file or `ruff.toml`.
+
+For example, a minimal configuration in `pyproject.toml` could look like:
+
+```yaml
+[tool.ruff] 
+line-length = 88 
+
+[tool.ruff.lint] 
+select = ["E", "F", "I"]
+```
+
+You can run Ruff locally with:
+
+```bash
+ruff check .
+```
+
+and check whether files are correctly formatted with:
+
+```bash
+ruff format --check .
+```
+
+::: {.callout-note appearance="simple" icon="false" collapse="true"}
+## {{< fa circle-check >}} Running Ruff with Github actions
+A minimal worflow for running Ruff for pushes to develop and for pull requests targeting develop looks like this:
+
+
+Create `.github/workflows/ruff.yml`
+
+```yaml
+name: Ruff 
+
+on: 
+  push: 
+    branches: 
+      - develop
+  pull_request:
+    branches: 
+      - develop
+  workflow_dispatch: 
+  
+jobs: 
+  ruff: 
+    runs-on: ubuntu-latest 
+    
+    steps: 
+      - name: Check out repository 
+        uses: actions/checkout@v6
+
+      - name: Set up Python
+        uses: actions/setup-python@v6
+        with:
+          python-version: "3.13"
+
+      - name: Install Ruff
+        run: pip install ruff
+
+      - name: Run Ruff
+        run: ruff check --output-format=github .
+```
+:::
+
+Ruff can be configured further to control which linting rules are enabled, which files or directories are excluded, formatting behavior, and etc. See the [Ruff documentation](https://docs.astral.sh/ruff/configuration/)
+
 ### Automating testing
 A common usecase of automation is to trigger automatic testing when pushing changes and creating pull requests.
 
