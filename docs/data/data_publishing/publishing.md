@@ -80,5 +80,5 @@ Regardless of the repository you choose, it is important to ensure that your dat
 
 :::{.callout-note appearance="simple" icon="false"}
 ## {{< fa signs-post >}} Learn more
-For a more comprehensive list of repositories and how to select one, you can check the [Turing Way book](https://book.the-turing-way.org/reproducible-research/rdm/rdm-repository) or the [TU Delft Library Guidelines](https://www.tudelft.nl/en/library/research-data-management/r/publish/publish-research-data)
+For a more comprehensive list of repositories and how to select one, you can check the [Turing Way book](https://book.the-turing-way.org/reproducible-research/rdm/rdm-repository) or the [TU Delft Library Guidelines](https://www.tudelft.nl/en/library/data-management/research-data-management/publish-research-data)
 :::
