@@ -7,7 +7,7 @@ date: 2025-08-22
 
 # We use this key to indicate the last modified date [manual entry, use YYYY-MM-DD]
 # Uncomment and populate the next line accordingly
-date-modified: 2025-10-28
+date-modified: 2026-08-21
 
 # Do not modify
 lang: en
@@ -28,6 +28,7 @@ hide-description: true
 # Uncomment and populate the next lines accordingly
 author_1: Maurits Kok
 author_2: Elviss Dvinskis
+author_3: Aysun Urhan
 
 # Maintainers of the document, will not be parsed [manual entry]
 # Uncomment and populate the next lines accordingly
@@ -45,6 +46,7 @@ categories:
   - Automation
   - GitHub
   - CI/CD
+  - Ruff
 
 ---
 
@@ -63,6 +65,76 @@ categories:
 - Add **`workflow_dispatch`** as a trigger for your GitHub Actions workflow. With this trigger, you can [**manually run an action**](https://docs.github.com/en/actions/managing-workflow-runs/manually-running-a-workflow), instead of having to rely on external triggers. This is quite useful when testing your workflow.
 - Test your workflow in a separate branch to avoid committing many small changes during debugging of the workflow.
 :::
+
+### Automating code quality checks
+Code quality tools can be integrated into a GitHub actions workflow to automatically check code whenever changes are pushed or a pull request is opened. this helps maintain a consistent coding style and catch common scripting errors before changes are merged.
+
+#### Ruff
+Ruff is a Python linter and code formatter. It can replace some commonly used tools, including Flake8 and Black depending on how you configure it. You can configure your Ruff workflow either in your project's `pyproject.toml` file or `ruff.toml`.
+
+For example, a minimal configuration in `pyproject.toml` could look like:
+
+```toml
+[tool.ruff] 
+line-length = 88 
+
+[tool.ruff.lint] 
+select = ["E", "F", "I"]
+```
+
+You can run Ruff locally with:
+
+```bash
+ruff check .
+```
+
+and check whether files are correctly formatted with:
+
+```bash
+ruff format --check .
+```
+
+::: {.callout-note appearance="simple" icon="false" collapse="true"}
+## {{< fa circle-check >}} Running Ruff with Github Actions
+A minimal workflow for running Ruff for pushes to develop and for pull requests targeting develop looks like this:
+
+
+Create `.github/workflows/ruff.yml`
+
+```toml
+name: Ruff 
+
+on: 
+  push: 
+    branches: 
+      - develop
+  pull_request:
+    branches: 
+      - develop
+  workflow_dispatch: 
+  
+jobs: 
+  ruff: 
+    runs-on: ubuntu-latest 
+    
+    steps: 
+      - name: Check out repository 
+        uses: actions/checkout@v6
+
+      - name: Set up Python
+        uses: actions/setup-python@v6
+        with:
+          python-version: "3.13"
+
+      - name: Install Ruff
+        run: pip install ruff
+
+      - name: Run Ruff
+        run: ruff check --output-format=github .
+```
+:::
+
+Ruff can be configured further to control which linting rules are enabled, which files or directories are excluded, formatting behavior, and other settings. See the [Ruff documentation](https://docs.astral.sh/ruff/configuration/)
 
 ### Automating testing
 A common usecase of automation is to trigger automatic testing when pushing changes and creating pull requests.
