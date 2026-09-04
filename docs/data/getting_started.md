@@ -63,6 +63,6 @@ Effective research data management by following FAIR principles ensures efficien
 - [TU Delft Research Data Management landing page](https://www.tudelft.nl/en/library/research-data-management)
 - [TU Delft - The goal of data management](https://www.tudelft.nl/en/library/data-management/research-data-management/the-goal-of-research-data-management)
 - [TU Delft Research Data framework policy](http://doi.org/10.5281/zenodo.4088123)
-- [Research data management policies per faculty](https://www.tudelft.nl/en/library/research-data-management/r/policies/tu-delft-faculty-policies/)
+- [Research data management policies per faculty](https://www.tudelft.nl/en/library/data-management/research-data-management/tu-delft-faculty-policies-for-research-data)
 
 :::
