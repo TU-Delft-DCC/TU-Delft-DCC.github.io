@@ -7,7 +7,7 @@ date: 2025-08-22
 
 # We use this key to indicate the last modified date [manual entry, use YYYY-MM-DD]
 # Uncomment and populate the next line accordingly
-date-modified: 2025-10-28
+date-modified: 2026-08-21
 
 # Do not modify
 lang: en
@@ -28,6 +28,7 @@ hide-description: true
 # Uncomment and populate the next lines accordingly
 author_1: Maurits Kok
 author_2: Elviss Dvinskis
+author_3: Aysun Urhan
 
 # Maintainers of the document, will not be parsed [manual entry]
 # Uncomment and populate the next lines accordingly
@@ -45,6 +46,7 @@ categories:
   - Automation
   - GitHub
   - CI/CD
+  - Ruff
 
 ---
 
