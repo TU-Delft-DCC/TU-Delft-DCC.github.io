@@ -63,7 +63,7 @@ An electronic laboratory notebook (ELN), also called a digital lab notebook, off
 
 **For instructions on getting started with RSpace and eLabJournal, along with other essential information about ELNs, visit:**
 
-- [TU Delft Library website's Electronic Lab Notebook page](https://www.tudelft.nl/en/library/current-topics/research-data-management/r/manage/electronic-lab-notebook)
+- [TU Delft Library website's Electronic Lab Notebook page](https://www.tudelft.nl/en/library/data-management/research-data-management/electronic-lab-notebook-for-research-data-management)
 
 **Direct links:**
 
