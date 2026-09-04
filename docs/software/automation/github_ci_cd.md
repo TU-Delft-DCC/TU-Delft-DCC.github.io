@@ -96,7 +96,7 @@ ruff format --check .
 
 ::: {.callout-note appearance="simple" icon="false" collapse="true"}
 ## {{< fa circle-check >}} Running Ruff with Github Actions
-A minimal worflow for running Ruff for pushes to develop and for pull requests targeting develop looks like this:
+A minimal workflow for running Ruff for pushes to develop and for pull requests targeting develop looks like this:
 
 
 Create `.github/workflows/ruff.yml`
