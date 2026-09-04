@@ -74,7 +74,7 @@ TU Delft emphasizes the importance of data management planning and asks research
 Also, you can find more information on DMPs:
 
 - [PhD Supervisors guide - Data management plan](https://phdsupervisors.tudl.tudelft.nl/phase/data-management-plan/)
-- [TU Delft RDM page - *"Data Management Plans"*](https://www.tudelft.nl/en/library/current-topics/research-data-management/r/plan/data-management-plans)
+- [TU Delft RDM page - *"Data Management Plans"*](https://www.tudelft.nl/en/library/data-management/research-data-management/data-management-plans)
 - [TU Delft RDM page - *"DMPonline"*](https://www.tudelft.nl/en/library/current-topics/research-data-management/r/plan/dmponline/dmponline)
 - [RDM 101 course - Module 5 - DMP](https://tu-delft-library.github.io/rdm101-book/modules/module5.html#data-management-plan-dmp)
 :::
