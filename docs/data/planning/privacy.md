@@ -54,7 +54,8 @@ You might need to obtain informed consent from participants before collecting th
 
 - **Reach out to your faculty [data steward](https://www.tudelft.nl/library/research-data-management/r/support/data-stewardship/contact) for more information.**
 - Explore TU Delft privacy related resources:
-  - [**TU Delft Personal Data page**](https://www.tudelft.nl/en/library/current-topics/research-data-management/r/manage/confidential-data/personal-data)
+  - [**TU Delft Library page - Manage confidential data: Personal data**](https://www.tudelft.nl/en/library/data-management/research-data-management/manage-confidential-data-personal-data)
+  - [**TU Delft Library page - Manage confidential data: Non-personal data**](https://www.tudelft.nl/en/library/data-management/research-data-management/manage-confidential-data-non-personal-data)
   - [**TU Delft Personal Research Data Workflow Guide**](https://filelist.tudelft.nl/Library/Themaportalen/RDM/Beleid/TU%20Delph%20PRDW__v1.1_19.02.25.pdf)
   - [**TU Delft Privacy SharePoint site**](https://tud365.sharepoint.com/sites/SecurityPrivacyTUD/SitePages/en/Privacy.aspx)
   - [PhD Supervisors guide - Personal data and human subjects in research](https://phdsupervisors.tudl.tudelft.nl/phase/personal-data-and-human-subjects-in-research/)

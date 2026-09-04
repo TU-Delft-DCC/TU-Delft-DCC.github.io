@@ -56,7 +56,7 @@ Data repositories are online locations for storing research data long term. When
 :::{.callout-important appearance="simple" icon="false"}
 ## {{< fa info-circle >}} Important
 - Check the [Write & Publish](https://phdsupervisors.tudl.tudelft.nl/phase/write-publish/) section from the *TU Delft Navigating Research Data and Software: A Practical Guide for PhD Supervisors* guide for more information on publishing your data. It also includes a [list of requirements](https://phdsupervisors.tudl.tudelft.nl/knowledge-base/publishing-requirements-for-data-and-code-for-tu-delft-phd-candidates/?parent_phaseid=0&phaseid=250) for publishing data.
-- If you would like to publish your data collection in 4TU.ResearchData or in another data repository, it is advisable that you discuss the publishing process, including the reuse and [citation](https://www.tudelft.nl/en/library/research-data-management/r/publish/cite-your-data) of the original datasets and appropriate [licensing](https://data.4tu.nl/info/en/use/publish-cite/upload-your-data-in-our-data-repository/licencing) options with your faculty [data steward](https://www.tudelft.nl/library/research-data-management/r/support/data-stewardship/contact).
+- If you would like to publish your data collection in 4TU.ResearchData or in another data repository, it is advisable that you discuss the publishing process, including the reuse and [citation](https://www.tudelft.nl/en/library/data-management/research-data-management/cite-your-research-data) of the original datasets and appropriate [licensing](https://data.4tu.nl/info/en/use/publish-cite/upload-your-data-in-our-data-repository/licencing) options with your faculty [data steward](https://www.tudelft.nl/library/research-data-management/r/support/data-stewardship/contact).
 :::
 
 ## 4TU.ResearchData
@@ -80,5 +80,5 @@ Regardless of the repository you choose, it is important to ensure that your dat
 
 :::{.callout-note appearance="simple" icon="false"}
 ## {{< fa signs-post >}} Learn more
-For a more comprehensive list of repositories and how to select one, you can check the [Turing Way book](https://book.the-turing-way.org/reproducible-research/rdm/rdm-repository) or the [TU Delft Library Guidelines](https://www.tudelft.nl/en/library/research-data-management/r/publish/publish-research-data)
+For a more comprehensive list of repositories and how to select one, you can check the [Turing Way book](https://book.the-turing-way.org/reproducible-research/rdm/rdm-repository) or the [TU Delft Library Guidelines](https://www.tudelft.nl/en/library/data-management/research-data-management/publish-research-data)
 :::

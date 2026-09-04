@@ -56,7 +56,7 @@ As in other sections we would like to refer you to other TU Delft resources:
 
 
 - The [Think & Plan](https://phdsupervisors.tudl.tudelft.nl/phase/think-plan/) section from the *TU Delft Navigating Research Data and Software: A Practical Guide for PhD Supervisors* guide for more information on the planning stage of your research project.
-- [TU Delft RDM page - *Plan* section](https://www.tudelft.nl/en/library/current-topics/research-data-management/r/plan)
+- [TU Delft RDM page - *Plan* section](https://www.tudelft.nl/en/library/data-management#c1634274)
 - [RDM 101 course - Module 5 - How to plan for RDM](https://tu-delft-library.github.io/rdm101-book/modules/module5.html)
 
 :::
@@ -64,7 +64,7 @@ As in other sections we would like to refer you to other TU Delft resources:
 
 ## Data management plan
 
-TU Delft emphasizes the importance of data management planning and asks researchers to create a data management plan (DMP) at the start of their research project. In many cases this is also a formal [requirement](https://www.tudelft.nl/en/library/current-topics/research-data-management/r/policies/funders-policies). TU Delft provides a dedicated tool called [DMPonline](https://dmponline.tudelft.nl/) to help you write a DMP.
+TU Delft emphasizes the importance of data management planning and asks researchers to create a data management plan (DMP) at the start of their research project. In many cases this is also a formal [requirement](https://www.tudelft.nl/en/library/data-management/research-data-management/funders-policies-for-research-data). TU Delft provides a dedicated tool called [DMPonline](https://dmponline.tudelft.nl/) to help you write a DMP.
 
 
 :::{.callout-important appearance="simple" icon="false"}
@@ -74,8 +74,8 @@ TU Delft emphasizes the importance of data management planning and asks research
 Also, you can find more information on DMPs:
 
 - [PhD Supervisors guide - Data management plan](https://phdsupervisors.tudl.tudelft.nl/phase/data-management-plan/)
-- [TU Delft RDM page - *"Data Management Plans"*](https://www.tudelft.nl/en/library/current-topics/research-data-management/r/plan/data-management-plans)
-- [TU Delft RDM page - *"DMPonline"*](https://www.tudelft.nl/en/library/current-topics/research-data-management/r/plan/dmponline/dmponline)
+- [TU Delft RDM page - *"Data Management Plans"*](https://www.tudelft.nl/en/library/data-management/research-data-management/data-management-plans)
+- [TU Delft RDM page - *"DMPonline"*](https://www.tudelft.nl/en/library/data-management/research-data-management/dmponline-tool-for-research-data)
 - [RDM 101 course - Module 5 - DMP](https://tu-delft-library.github.io/rdm101-book/modules/module5.html#data-management-plan-dmp)
 :::
 
