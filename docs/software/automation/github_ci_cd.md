@@ -74,7 +74,7 @@ Ruff is a Python linter and code formatter. It can replace some commonly used to
 
 For example, a minimal configuration in `pyproject.toml` could look like:
 
-```yaml
+```toml
 [tool.ruff] 
 line-length = 88 
 
@@ -101,7 +101,7 @@ A minimal worflow for running Ruff for pushes to develop and for pull requests t
 
 Create `.github/workflows/ruff.yml`
 
-```yaml
+```toml
 name: Ruff 
 
 on: 
