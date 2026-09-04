@@ -134,7 +134,7 @@ jobs:
 ```
 :::
 
-Ruff can be configured further to control which linting rules are enabled, which files or directories are excluded, formatting behavior, and etc. See the [Ruff documentation](https://docs.astral.sh/ruff/configuration/)
+Ruff can be configured further to control which linting rules are enabled, which files or directories are excluded, formatting behavior, and other settings. See the [Ruff documentation](https://docs.astral.sh/ruff/configuration/)
 
 ### Automating testing
 A common usecase of automation is to trigger automatic testing when pushing changes and creating pull requests.
