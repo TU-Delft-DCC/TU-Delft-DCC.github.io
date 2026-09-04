@@ -64,7 +64,7 @@ As in other sections we would like to refer you to other TU Delft resources:
 
 ## Data management plan
 
-TU Delft emphasizes the importance of data management planning and asks researchers to create a data management plan (DMP) at the start of their research project. In many cases this is also a formal [requirement](https://www.tudelft.nl/en/library/current-topics/research-data-management/r/policies/funders-policies). TU Delft provides a dedicated tool called [DMPonline](https://dmponline.tudelft.nl/) to help you write a DMP.
+TU Delft emphasizes the importance of data management planning and asks researchers to create a data management plan (DMP) at the start of their research project. In many cases this is also a formal [requirement](https://www.tudelft.nl/en/library/data-management/research-data-management/funders-policies-for-research-data). TU Delft provides a dedicated tool called [DMPonline](https://dmponline.tudelft.nl/) to help you write a DMP.
 
 
 :::{.callout-important appearance="simple" icon="false"}
