@@ -7,7 +7,7 @@ root_dir = "_site"
 
 # Verbose program output
 # Accepts log level: "error", "warn", "info", "debug", "trace"
-verbose = "info"
+verbose = "error"
 
 # Don't show interactive progress bar while checking links.
 no_progress = false
@@ -19,7 +19,7 @@ no_progress = false
 cache = true
 
 # Discard all cached requests older than this duration.
-max_cache_age = "1h"
+max_cache_age = "2w"
 
 #############################  Runtime  #############################
 
@@ -34,13 +34,12 @@ max_redirects = 10
 max_retries = 2
 
 # Maximum number of concurrent link checks.
-max_concurrency = 3
+max_concurrency = 14
 
 #############################  Requests  ############################
 
 # User agent to send with each request.
-method = "get"
-user_agent = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
+user_agent = "curl/7.83. 1"
 
 # Website timeout from connect to response finished.
 # Increase timeout for slower networks (default is 20s)
@@ -56,7 +55,7 @@ retry_wait_time = 2
 # accept = "200..=204, 429"
 # accept = ["200", "429"]
 # accept = "200, 429"
-accept = ["200..=204", "429", "403"]
+accept = [200, 201, 202, 203, 204, 403, 429]
 
 # Proceed for server connections considered insecure (invalid TLS).
 insecure = true
@@ -70,7 +69,7 @@ insecure = true
 require_https = false
 
 # Request method
-# method = "get"
+method = "get"
 
 # Custom request headers
 # headers = []
