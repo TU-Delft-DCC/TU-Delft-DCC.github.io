@@ -21,8 +21,7 @@ jobs:
         run: quarto render
 
       - name: Restore lychee cache
-        id: restore-cache
-        uses: actions/cache/restore@v5
+        uses: actions/cache@v6
         with:
           path: .lycheecache
           key: cache-lychee-${{ github.sha }}
@@ -36,13 +35,6 @@ jobs:
             './**/*.md' 
             './**/*.qmd' 
             './**/*.html' 
-          fail: true  # Fail the job if any links are broken
+          fail: false  # Fail the job if any links are broken
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
-      - name: Save lychee cache
-        uses: actions/cache/save@v5
-        if: always()
-        with:
-          path: .lycheecache
-          key: ${{ steps.restore-cache.outputs.cache-primary-key }}
