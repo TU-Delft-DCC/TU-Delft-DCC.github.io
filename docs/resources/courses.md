@@ -80,16 +80,6 @@ The [Delft Institute for Computational Science and Engineering](https://www.tude
 :::
 
 ::: {.card}
-![](/docs/img/coderefinery.png){.card-image}
-
-[CodeRefinery](https://coderefinery.org/) teaches good practices for writing and maintaining research software, focussed on open source software. Their [**lessons**](https://coderefinery.org/lessons/) cover version control, testing, continuous integration, documentation, and more.
-
-::: {.link}
-[Upcoming workshops](https://www.tudelft.nl/library/actuele-themas/research-data-management/r/training-evenementen/training-voor-onderzoekers/coderefinery-workshop-good-practices-in-research-software-development){.btn}
-:::
-:::
-
-::: {.card}
 ![](/docs/img/REIT_logo_v2.svg){.card-image}
 
 The [Research Engineering and Infrastructure Team](https://reit.tudelft.nl/) offers support on software engineering, data science, and high-performance computing.  They offer courses on Rust for Research, Python best practices, and Working with a cluster.
@@ -135,6 +125,16 @@ SURF is the IT cooperative of Dutch education and research institutions and offe
 
 ::: {.link}
 [Upcoming events](https://www.surf.nl/en/agenda?filter=research){.btn}
+:::
+:::
+
+::: {.card}
+![](/docs/img/coderefinery.png){.card-image}
+
+[CodeRefinery](https://coderefinery.org/) teaches good practices for writing and maintaining research software, focussed on open source software. Their [**lessons**](https://coderefinery.org/lessons/) cover version control, testing, continuous integration, documentation, and more.
+
+::: {.link}
+[Upcoming workshops](https://coderefinery.org/workshops/upcoming/){.btn}
 :::
 :::
 
