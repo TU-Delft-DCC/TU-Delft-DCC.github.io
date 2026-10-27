@@ -40,6 +40,10 @@ website:
   page-footer:
     left: |
       Powered by [{{< iconify simple-icons:quarto >}} Quarto](https://quarto.org).
+      <a href="https://www.simpleanalytics.com?utm_source=tu-delft-dcc.github.io&utm_content=badge" referrerpolicy="origin" target="_blank">
+        <img class="sa-badge sa-badge-light" src="https://simpleanalyticsbadges.com/tu-delft-dcc.github.io?mode=light&counter=false&radius=10" height="28" loading="lazy" referrerpolicy="no-referrer" alt="Simple Analytics">
+        <img class="sa-badge sa-badge-dark" src="https://simpleanalyticsbadges.com/tu-delft-dcc.github.io?mode=dark&counter=false&radius=10" height="28" loading="lazy" referrerpolicy="no-referrer" alt="Simple Analytics">
+      </a>
     center: |
       &copy; 2026 [TU Delft DCC](https://www.tudelft.nl/digital-competence-centre). Licensed under [CC-BY-4.0](https://creativecommons.org/licenses/by/4.0/).
     right: 
