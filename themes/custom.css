@@ -177,3 +177,7 @@ body.quarto-dark .icon-list ol > li::before {
   background-color: #b58900;
   color: #0a0c10; /* or #ffffff */
 }
+
+.sa-badge { height: 28px; width: auto; }
+body.quarto-light .sa-badge-dark,
+body.quarto-dark .sa-badge-light { display: none; }
