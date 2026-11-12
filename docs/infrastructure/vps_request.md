@@ -61,7 +61,7 @@ Common use cases for VPSs covered in these guides include:
 * Basic knowledge of Linux (if requesting a Linux server)
 
 ## Tools/Software
-* For Windows users, you will need a programming and runtime environment like Windows Subsystem for Linux (WSL) or an SSH client like [PuTTY](https://www.putty.org/).
+* For Windows users, you will need a programming and runtime environment like Windows Subsystem for Linux (WSL) or an SSH client like [PuTTY](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html).
 
 ## Steps
 1. Navigate to the TU Delft server request form
