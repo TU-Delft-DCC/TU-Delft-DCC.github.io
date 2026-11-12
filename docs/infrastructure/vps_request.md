@@ -61,7 +61,7 @@ Common use cases for VPSs covered in these guides include:
 * Basic knowledge of Linux (if requesting a Linux server)
 
 ## Tools/Software
-* For Windows users, you will need a programming and runtime environment like Windows Subsystem for Linux (WSL) or an SSH client like [PuTTY](https://www.putty.org/).
+* For Windows users, you will need a programming and runtime environment like Windows Subsystem for Linux (WSL) or an SSH client like [PuTTY](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html).
 
 ## Steps
 1. Navigate to the TU Delft server request form
@@ -110,7 +110,7 @@ You should also be sure to check the instructions in the form and contact your f
 :::
 
 ## Initial Configuration of your VPS
-A few days after submitting the request, you will receive an email from ICT with login details. You can connect to your VPS via SSH (secure shell) using a command line interface (CLI). If you are in a Windows environment, it is recommended to install WSL or [PuTTY](https://www.putty.org/) to be able to use the ssh command in a CLI. The Unix based systems (e.g., Mac, Ubuntu) contain SSH by default in their "Terminal" application. In order to login to your VPS, you need to first SSH to the bastion server with `ssh <username>@linux-bastion-ex.tudelft.nl` and then from there login to your server `ssh <servername>`. The first thing we recommend to do after logging into the server is to update the pre-installed packages:
+A few days after submitting the request, you will receive an email from ICT with login details. You can connect to your VPS via SSH (secure shell) using a command line interface (CLI). If you are in a Windows environment, it is recommended to install WSL or [PuTTY](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html) to be able to use the ssh command in a CLI. The Unix based systems (e.g., Mac, Ubuntu) contain SSH by default in their "Terminal" application. In order to login to your VPS, you need to first SSH to the bastion server with `ssh <username>@linux-bastion-ex.tudelft.nl` and then from there login to your server `ssh <servername>`. The first thing we recommend to do after logging into the server is to update the pre-installed packages:
 
 ::: {.panel-tabset}
 
