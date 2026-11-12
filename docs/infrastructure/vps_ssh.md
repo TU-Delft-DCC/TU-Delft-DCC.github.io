@@ -84,7 +84,7 @@ The standard method for connecting to a Linux VPS is through a Secure Shell (SSH
 To establish this connection, you require an SSH client on your local computer. The tool you will use depends on the operating system of your local computer:
 
 * **macOS and Linux**: You do not need to install additional software. You can use the built-in Terminal application already available on your system.
-* **Windows**: While modern Windows versions include basic SSH support via cmd or PowerShell, it is often more user-friendly to use a dedicated application. We recommend [PuTTY](https://www.putty.org/). Alternatively, you may use the [Windows Subsystem for Linux (WSL)](https://learn.microsoft.com/en-us/windows/wsl/).
+* **Windows**: While modern Windows versions include basic SSH support via cmd or PowerShell, it is often more user-friendly to use a dedicated application. We recommend [PuTTY](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html). Alternatively, you may use the [Windows Subsystem for Linux (WSL)](https://learn.microsoft.com/en-us/windows/wsl/).
 
 Connecting to a TU Delft Linux VPS requires first accessing a [Bastion Host](https://intranet.tudelft.nl/en/ict-en/linux-bastion-host) (an intermediary server controlling access). VPS can be accessed by two types of bastion hosts: `linux-bastion-ex.tudelft.nl` which provides a local `/home` directory, and `linux-bastion.tudelft.nl` which provides access to your central university `/home` directory. In this sense, `linux-bastion-ex.tudelft.nl` is a more secure option and recommended for the steps below. 
 
@@ -208,7 +208,7 @@ If you encounter problems with the connection, use the debug mode `ssh -vvv <hos
 
 ### Connecting from Windows
 
-Connecting to your Linux VPS from Windows can be easily done using [PuTTY](https://www.putty.org/). The intermediate connection to the bastion is handled via a "remote command". This setup allows you to authenticate once with the bastion and land directly in your VPS.
+Connecting to your Linux VPS from Windows can be easily done using [PuTTY](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html). The intermediate connection to the bastion is handled via a "remote command". This setup allows you to authenticate once with the bastion and land directly in your VPS.
 
 **1. Configure the Bastion connection**  
 
