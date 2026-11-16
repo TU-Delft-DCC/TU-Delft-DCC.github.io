@@ -142,7 +142,7 @@ A common usecase of automation is to trigger automatic testing when pushing chan
 ::: {.panel-tabset}
 
 #### Python
-The example below is taken from the CodeRefinery lesson on [Continuous Integration](https://coderefinery.github.io/testing/continuous-integration/).
+The example below is adapted from the CodeRefinery lesson on [Automated testing remotely](https://coderefinery.github.io/testing/remotely/).
 
 ::: {.callout-note appearance="simple" icon="false" collapse="true"}
 ## {{< fa circle-check >}} Python testing
