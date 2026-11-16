@@ -173,7 +173,7 @@ _Recommended_
 
 - [ ] [Defensive programming](https://swcarpentry.github.io/python-novice-inflammation/10-defensive.html)
 - [ ] Test your software with [integration tests](https://book.the-turing-way.org/reproducible-research/testing/testing-integrationtest.html) and [unit tests](https://book.the-turing-way.org/reproducible-research/testing/testing-unittest/)
-- [ ] Make use of [Continuous Integration](https://coderefinery.github.io/testing/continuous-integration/) to automate testing
+- [ ] Make use of [Continuous Integration](https://coderefinery.github.io/testing/remotely/) to automate testing
 
 _Optional_
 
@@ -188,7 +188,7 @@ _Essential_
 _Recommended_
 - [ ] [Defensive programming](https://swcarpentry.github.io/python-novice-inflammation/10-defensive.html)
 - [ ] Test your software with [integration tests](https://book.the-turing-way.org/reproducible-research/testing/testing-integrationtest.html) and [unit tests](https://book.the-turing-way.org/reproducible-research/testing/testing-unittest.html)
-- [ ] Make use of [Continuous Integration](https://coderefinery.github.io/testing/continuous-integration/) to automate testing
+- [ ] Make use of [Continuous Integration](https://coderefinery.github.io/testing/remotely/) to automate testing
 
 _Optional_
 - [ ] Code coverage check (e.g. [Sonarcloud](https://sonarcloud.io/), [codecov](https://about.codecov.io))
